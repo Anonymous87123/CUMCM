@@ -1,0 +1,10 @@
+--- U-0c70247ad82e.before
++++ U-0c70247ad82e.after
+@@ -1,6 +1,6 @@
+ \subsubsection{开源代码逻辑、约束与选型边界}
+ 
+-代码流水线按下列接口拆分：
++代码流水线按下列输入输出关系拆分：
+ \begin{quote}
+ \small\ttfamily
+ geometry -> state -> rhs -> solver\\

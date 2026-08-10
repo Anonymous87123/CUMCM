@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "7feed6997459d9e0f7b3662c30ec9c70e7abccb04a7fc15fed36babba58c0c10",
+    "before_sha256": "7feed6997459d9e0f7b3662c30ec9c70e7abccb04a7fc15fed36babba58c0c10"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "40951b5f551888cb3463a30255b033cfe5bef5a80f8a73f65fca67fc587406ce",
+  "chunk_binding_sha256": "920abe4485986327fd5447f463dddb6b2cc9fa5ebf294992e810ded52f00d5d3",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-5dbb7862b9f1.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "ccf015b0a526f2bb6b8d3e438494965baa1ce54518c8ee4811c37d6209dc63fb",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "78edc9423435635dc2dbd547226b45ffd72f0e53aa4ec0969fb61e303407825e",
+        "start_line": 3
+      }
+    ],
+    "reason": "本单元承担“覆盖内容、原理与求解步骤”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "34ed440b9210b5b55d0fe220b8341b8023c78c914a3f0e3f72a81996f52d1575",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-5dbb7862b9f1"
+}

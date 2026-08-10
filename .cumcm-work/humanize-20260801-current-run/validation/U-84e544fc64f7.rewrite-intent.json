@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "6d1fe3e5368734fd759c08441496952f5aaaa99d8f7b3ff297e840300f562ca1",
+    "before_sha256": "6d1fe3e5368734fd759c08441496952f5aaaa99d8f7b3ff297e840300f562ca1"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "9cd981f110975bec9bcc46138aed1256b49d63b7da9ca5a8778bde8aa212ec69",
+  "chunk_binding_sha256": "18afbe32e303c2f17ad9ab2130462fc38a4b83bc1fed583ba8396703b33e91e3",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-84e544fc64f7.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "ed2eaba229391525122c0c721ed6895485ade3757377e99bbab990024e4fed2e",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "94e942ec0f6d2bfd48c2f641e4f4444cb2b2dc60b4651b1adcd09129dd0c0720",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“59 篇编号论文的结构与写作分析 / A/B/C 三类论文的微观文风 / B 类：变量、约束与策略必须逐项对应”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "8a119609b1d1a0aa271cc5ec5366ba25b6774f490cc723754017b3c0de89ef45",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-84e544fc64f7"
+}

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "6d1804ea900dd1e825d66dc94f83af188f4aa4d65b554e92ebb387c7c65156d5",
+    "before_sha256": "6d1804ea900dd1e825d66dc94f83af188f4aa4d65b554e92ebb387c7c65156d5"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "a0fff61b3f0162db95f83002fc072c87d4de03697bbce16c7e7ca56805867b66",
+  "chunk_binding_sha256": "614d605908d2966df805187d9ad6aab054afeb44118093e9c0eea396154ab1e6",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-50a638426323.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "a196fabef50ebcec56f77f2acf2173e161b5bc64b0a50baf6f52924790b82c22",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "0271e84571525ed9ac3e5d90778af1d41fe2a4800a802765730951ad448ad2cf",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“理论知识学习笔记 / 组员2：数据处理、评价决策与统计学习 / 数据链、算法原理与完整步骤”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "5aa5861d58c60af6518df3910ff52c28b770051e3d00aa295633d9ed71898c6b",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-50a638426323"
+}

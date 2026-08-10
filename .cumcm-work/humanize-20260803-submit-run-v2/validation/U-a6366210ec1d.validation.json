@@ -1,0 +1,906 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "candidate_assembly_exit_code": 0,
+  "candidate_assembly_status": "PASS",
+  "delivery_gate_exit_code": 2,
+  "delivery_gate_status": "REVIEW",
+  "draft_surface_source_check": {
+    "details": {},
+    "scope": [],
+    "semantic_entailment_certified": false,
+    "status": "N/A"
+  },
+  "evidence": {
+    "after_path": "validation/U-a6366210ec1d.after.tex",
+    "after_sha256": "b0d7031afffd349f2b9d1dbb6d4f1a8f03664727b45631b816548620e580fccd",
+    "before_path": "validation/U-a6366210ec1d.before.tex",
+    "before_sha256": "41b46cad416c289a068841eaa6f5c1ca68874a27d6036c9dfa55cb44ad1a7806",
+    "checker_executed": true,
+    "document_format": "tex",
+    "document_scope": "FRAGMENT",
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "08b4e88c540722085ab5130c2137c802ce2ef561f64db8a3f97660e98c12e29b",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "acf31a687e741637d1ebb82a3ab9e67039251326cfb006f45ea7dfb719641689",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "source_path_archived": false
+  },
+  "exit_code": 2,
+  "hard_invariant_layer_status": "PASS",
+  "humanize_quality_claim_allowed": false,
+  "introduced_findings": [],
+  "invariants": {
+    "advisories": [],
+    "errors": [],
+    "evidence": {
+      "document_scope": "FRAGMENT",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "speech_act_audit": {
+        "categories": {
+          "assumption": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "attribution_source": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "condition": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "definition_naming": {
+            "after": {
+              "定义": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "definition_naming",
+                "claim_id": "C0047",
+                "column": 79,
+                "end": 821,
+                "end_column": 81,
+                "end_line": 22,
+                "line": 22,
+                "marker": "定义",
+                "sentence_context": "无未定义引用",
+                "sentence_id": "T0043",
+                "side": "after",
+                "start": 819
+              }
+            ],
+            "before": {
+              "定义": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "definition_naming",
+                "claim_id": "C0045",
+                "column": 71,
+                "end": 804,
+                "end_column": 73,
+                "end_line": 22,
+                "line": 22,
+                "marker": "定义",
+                "sentence_context": "无未定义引用",
+                "sentence_id": "T0043",
+                "side": "before",
+                "start": 802
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "focus_scope": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "logical_relation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "modality_scope": {
+            "after": {
+              "只": 1,
+              "可": 4
+            },
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0020",
+                "column": 44,
+                "end": 365,
+                "end_column": 45,
+                "end_line": 17,
+                "line": 17,
+                "marker": "可",
+                "sentence_context": "另一名成员可按入口复算一张表",
+                "sentence_id": "T0019",
+                "side": "after",
+                "start": 364
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0034",
+                "column": 67,
+                "end": 619,
+                "end_column": 68,
+                "end_line": 20,
+                "line": 20,
+                "marker": "可",
+                "sentence_context": "& 参数配置、20个种子结果、收敛与可行率表",
+                "sentence_id": "T0032",
+                "side": "after",
+                "start": 618
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0037",
+                "column": 94,
+                "end": 646,
+                "end_column": 95,
+                "end_line": 20,
+                "line": 20,
+                "marker": "只",
+                "sentence_context": "报告中位数和离散程度，不只报最好一次",
+                "sentence_id": "T0034",
+                "side": "after",
+                "start": 645
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0045",
+                "column": 37,
+                "end": 778,
+                "end_column": 38,
+                "end_line": 22,
+                "line": 22,
+                "marker": "可",
+                "sentence_context": "& 可编译论文、代码入口、结果目录和复盘单",
+                "sentence_id": "T0041",
+                "side": "after",
+                "start": 777
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0046",
+                "column": 69,
+                "end": 810,
+                "end_column": 70,
+                "end_line": 22,
+                "line": 22,
+                "marker": "可",
+                "sentence_context": "& 正文中每个关键数值可追到结果文件",
+                "sentence_id": "T0042",
+                "side": "after",
+                "start": 809
+              }
+            ],
+            "before": {
+              "只": 1,
+              "可": 4
+            },
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0020",
+                "column": 44,
+                "end": 365,
+                "end_column": 45,
+                "end_line": 17,
+                "line": 17,
+                "marker": "可",
+                "sentence_context": "另一名成员可按入口复算一张表",
+                "sentence_id": "T0019",
+                "side": "before",
+                "start": 364
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0033",
+                "column": 64,
+                "end": 610,
+                "end_column": 65,
+                "end_line": 20,
+                "line": 20,
+                "marker": "可",
+                "sentence_context": "& 参数配置、20个种子结果、收敛与可行率表",
+                "sentence_id": "T0032",
+                "side": "before",
+                "start": 609
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0036",
+                "column": 91,
+                "end": 637,
+                "end_column": 92,
+                "end_line": 20,
+                "line": 20,
+                "marker": "只",
+                "sentence_context": "报告中位数和离散程度，不只报最好一次",
+                "sentence_id": "T0034",
+                "side": "before",
+                "start": 636
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0043",
+                "column": 29,
+                "end": 761,
+                "end_column": 30,
+                "end_line": 22,
+                "line": 22,
+                "marker": "可",
+                "sentence_context": "& 可编译论文、代码入口、结果目录和复盘单",
+                "sentence_id": "T0041",
+                "side": "before",
+                "start": 760
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0044",
+                "column": 61,
+                "end": 793,
+                "end_column": 62,
+                "end_line": 22,
+                "line": 22,
+                "marker": "可",
+                "sentence_context": "& 正文中每个关键数值可追到结果文件",
+                "sentence_id": "T0042",
+                "side": "before",
+                "start": 792
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "negation": {
+            "after": {
+              "不": 2,
+              "无": 1,
+              "未": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0031",
+                "column": 85,
+                "end": 540,
+                "end_column": 86,
+                "end_line": 19,
+                "line": 19,
+                "marker": "不",
+                "sentence_context": "预处理不读取验证集统计量",
+                "sentence_id": "T0029",
+                "side": "after",
+                "start": 539
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0037",
+                "column": 93,
+                "end": 645,
+                "end_column": 94,
+                "end_line": 20,
+                "line": 20,
+                "marker": "不",
+                "sentence_context": "报告中位数和离散程度，不只报最好一次",
+                "sentence_id": "T0034",
+                "side": "after",
+                "start": 644
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0047",
+                "column": 77,
+                "end": 818,
+                "end_column": 78,
+                "end_line": 22,
+                "line": 22,
+                "marker": "无",
+                "sentence_context": "无未定义引用",
+                "sentence_id": "T0043",
+                "side": "after",
+                "start": 817
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0047",
+                "column": 78,
+                "end": 819,
+                "end_column": 79,
+                "end_line": 22,
+                "line": 22,
+                "marker": "未",
+                "sentence_context": "无未定义引用",
+                "sentence_id": "T0043",
+                "side": "after",
+                "start": 818
+              }
+            ],
+            "before": {
+              "不": 2,
+              "无": 1,
+              "未": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0030",
+                "column": 80,
+                "end": 534,
+                "end_column": 81,
+                "end_line": 19,
+                "line": 19,
+                "marker": "不",
+                "sentence_context": "预处理不读取验证集统计量",
+                "sentence_id": "T0029",
+                "side": "before",
+                "start": 533
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0036",
+                "column": 90,
+                "end": 636,
+                "end_column": 91,
+                "end_line": 20,
+                "line": 20,
+                "marker": "不",
+                "sentence_context": "报告中位数和离散程度，不只报最好一次",
+                "sentence_id": "T0034",
+                "side": "before",
+                "start": 635
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0045",
+                "column": 69,
+                "end": 801,
+                "end_column": 70,
+                "end_line": 22,
+                "line": 22,
+                "marker": "无",
+                "sentence_context": "无未定义引用",
+                "sentence_id": "T0043",
+                "side": "before",
+                "start": 800
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0045",
+                "column": 70,
+                "end": 802,
+                "end_column": 71,
+                "end_line": 22,
+                "line": 22,
+                "marker": "未",
+                "sentence_context": "无未定义引用",
+                "sentence_id": "T0043",
+                "side": "before",
+                "start": 801
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "reporting_observation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          }
+        },
+        "claim_pairing": {
+          "after_claims": 58,
+          "before_claims": 55,
+          "unique_exact_pairs": 35,
+          "unpaired_after_claims": 23,
+          "unpaired_before_claims": 20
+        },
+        "protection": {
+          "after_ranges": 1,
+          "before_ranges": 1,
+          "line_column_basis": "NORMALIZED_LF_1_BASED_UNICODE_CODEPOINT",
+          "masking": "LENGTH_PRESERVING"
+        }
+      }
+    },
+    "hard_failure": false,
+    "status": "pass",
+    "summary": {
+      "advisories": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    "warnings": []
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 0,
+    "introduced_candidates": 0,
+    "unexplained_high_candidates": 0
+  },
+  "mechanical_validation_exit_code": 0,
+  "mechanical_validation_status": "PASS",
+  "mode": "REWRITE",
+  "paired_quality_clearance_granted": false,
+  "paired_quality_review_local_clearance_supported": false,
+  "paired_quality_review_request": {
+    "artifact": {
+      "after_sha256": "b0d7031afffd349f2b9d1dbb6d4f1a8f03664727b45631b816548620e580fccd",
+      "before_sha256": "41b46cad416c289a068841eaa6f5c1ca68874a27d6036c9dfa55cb44ad1a7806"
+    },
+    "changes": [
+      {
+        "after": {
+          "end_line": 16,
+          "han_chars": 23,
+          "line_count": 1,
+          "sha256": "edadfa322aae45a0dc6d9267f0de95d6625b6a26168d25cdbd82a7e411108ac7",
+          "start_line": 16
+        },
+        "before": {
+          "end_line": 16,
+          "han_chars": 23,
+          "line_count": 1,
+          "sha256": "7a09911828be082a903c761d1d13c92b7425110049b51f90f1a10689e356c849",
+          "start_line": 16
+        },
+        "change_id": "QCH-87010c33d6aa5e21177d",
+        "operation": "REPLACE",
+        "ordinal": 1
+      },
+      {
+        "after": {
+          "end_line": 20,
+          "han_chars": 186,
+          "line_count": 3,
+          "sha256": "257d46bff7a623fca0a6638d8023bb58df0a4513691a88c371b00829ee2a5c01",
+          "start_line": 18
+        },
+        "before": {
+          "end_line": 20,
+          "han_chars": 178,
+          "line_count": 3,
+          "sha256": "4c0a2ed30a73cff3925c62da67fb4a77592726876b959470a8ff4ef422b50438",
+          "start_line": 18
+        },
+        "change_id": "QCH-4e34f5a5fe6ab41a91fc",
+        "operation": "REPLACE",
+        "ordinal": 2
+      },
+      {
+        "after": {
+          "end_line": 23,
+          "han_chars": 122,
+          "line_count": 2,
+          "sha256": "5a5c6b3fbbc4d7126610b294e56774144a2c4cc6670028058b6eb90112aeaf4f",
+          "start_line": 22
+        },
+        "before": {
+          "end_line": 23,
+          "han_chars": 108,
+          "line_count": 2,
+          "sha256": "13203a5a8b95ebc9f7f09b805fddf1afb84a047ec7750dadb7450a5b3496abc3",
+          "start_line": 22
+        },
+        "change_id": "QCH-7965b4bf1a4d45817cd3",
+        "operation": "REPLACE",
+        "ordinal": 3
+      }
+    ],
+    "limitations": {
+      "academic_correctness": "NOT_EVALUATED",
+      "authorship": "NOT_EVALUATED",
+      "quality_clearance_granted": false
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "08b4e88c540722085ab5130c2137c802ce2ef561f64db8a3f97660e98c12e29b",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "acf31a687e741637d1ebb82a3ab9e67039251326cfb006f45ea7dfb719641689",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "request_sha256": "dd9ecc62e199cb32d21ff5b1299cc8ac261a9d35f7ba7cd5d2e278d3a7cf822c",
+    "review_contract": {
+      "empty_or_generic_benefit_is_clearance": false,
+      "local_model_or_caller_assertion_is_clearance": false,
+      "required_dimensions": [
+        "actionable_pathology_remaining",
+        "no_change_is_best_available_decision",
+        "problem_span_binding",
+        "independent_reading_benefit",
+        "subject_and_modifier_alignment",
+        "verb_object_collocation",
+        "logical_relation_preservation",
+        "template_field_role_and_authorization",
+        "information_density_and_rhythm",
+        "author_voice_non_regression"
+      ],
+      "required_per_change_verdicts": [
+        "ACCEPT",
+        "REVISE",
+        "REVERT"
+      ],
+      "validator_pass_is_quality_clearance": false
+    },
+    "schema": "humanize-paired-quality-review-request/v1",
+    "status": "PENDING_EXTERNAL_REVIEW",
+    "template_field_changes": [],
+    "validation_context": {
+      "artifact_relation": "CHANGED",
+      "decision": "REWRITE",
+      "decision_eligible": true,
+      "document_format": "tex",
+      "document_scope": "FRAGMENT",
+      "mechanical_validation_status": "PASS",
+      "mode": "REWRITE",
+      "scene": "RESEARCH"
+    }
+  },
+  "paired_quality_review_status": "PENDING_EXTERNAL_REVIEW",
+  "paired_style_delta_findings": [],
+  "paired_style_delta_layer_status": "NOT_APPLICABLE",
+  "paired_style_delta_summary": {
+    "authorship_inference": false,
+    "finding_count": 0,
+    "scope": "PAIRED_COURSE_VOICE_NON_REGRESSION_CANDIDATE",
+    "status": "NOT_APPLICABLE"
+  },
+  "pending_warnings": [],
+  "proposed_warning_resolutions": [],
+  "report_scope_check": {
+    "editable_range_count": 0,
+    "editable_ranges": [],
+    "extractor_replay_match": null,
+    "fragment_count": 0,
+    "outside_selection_unchanged": null,
+    "report_sha256": null,
+    "scope_path": null,
+    "scope_semantic_sha256": null,
+    "scope_sha256": null,
+    "source_sha256": null,
+    "status": "N/A"
+  },
+  "review_reasons": [
+    "paired_quality_not_evaluated"
+  ],
+  "scene": "RESEARCH",
+  "semantic_source_check": "N/A",
+  "speech_act_diagnostics": [],
+  "speech_act_layer_status": "PASS",
+  "status": "REVIEW",
+  "strict_corpus_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 0,
+    "clean_allowed_by_strict_layer": true,
+    "enabled": true,
+    "no_change_allowed": true,
+    "unexplained_candidates": 0
+  },
+  "structural_plan_check": {
+    "actual_content_changed": true,
+    "change_applied": false,
+    "invariant_baseline_sha256": "b5e72ea060a47e8cc679e7f6e566c43aed125ad52fc3cd45e0ff756523a677a6",
+    "limitations": "non-STRUCTURAL run",
+    "non_structural_paragraph_order_check": {
+      "author_paragraphs_after": 1,
+      "author_paragraphs_before": 1,
+      "authorized_topology_operations": 0,
+      "detected_paragraph_merges": [],
+      "detected_paragraph_splits": [],
+      "light_sentence_reorder": false,
+      "match_evidence": [
+        {
+          "after_index": 0,
+          "before_index": 0,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00089"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 1,
+          "before_index": 1,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00090"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 2,
+          "before_index": 2,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00091"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 3,
+          "before_index": 3,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00092",
+            "F00001-P00093",
+            "F00001-P00094"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 4,
+          "before_index": 4,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00095"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 5,
+          "before_index": 5,
+          "before_sha256": "ad6d14da86df4186b5e52c3042e6e177693a77346f4badbbfc80e33424a51c9d",
+          "kind": "AUTHOR",
+          "method": "EXACT",
+          "protected_ids": [],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 6,
+          "before_index": 6,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00097"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 7,
+          "before_index": 7,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00098"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 8,
+          "before_index": 8,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00099"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 9,
+          "before_index": 9,
+          "before_sha256": "68a4ce7e05f544a60f3eed90c017fee17879de9939218daa7b6603f8bfac89c2",
+          "kind": "AUTHOR",
+          "method": "EXACT",
+          "protected_ids": [],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 10,
+          "before_index": 10,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00101"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 11,
+          "before_index": 11,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00102"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 12,
+          "before_index": 12,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00103"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 13,
+          "before_index": 13,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00104"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 14,
+          "before_index": 14,
+          "before_sha256": "dbdb2d0c59d1db3957eeccda20091019d73f0f1dc77822368b1df0aff202d7be",
+          "kind": "AUTHOR",
+          "method": "NEAR_EXACT",
+          "protected_ids": [],
+          "similarity": 0.959331
+        },
+        {
+          "after_index": 15,
+          "before_index": 15,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00112"
+          ],
+          "similarity": 1.0
+        }
+      ],
+      "matched_author_paragraphs": 3,
+      "matched_elements": 17,
+      "matched_protected_anchors": 14,
+      "moved_paragraph_sha256": [],
+      "near_exact_reordered": false,
+      "paragraph_topology_changed": false,
+      "protected_anchor_reordered": false,
+      "reordered": false,
+      "scope": "NON_STRUCTURAL_PARAGRAPH_TOPOLOGY_AND_ORDER",
+      "status": "PASS",
+      "topology_authorization_error": "",
+      "topology_authorization_status": "NOT_REQUIRED",
+      "topology_operation_evidence": []
+    },
+    "semantic_review_status": "NOT_ISSUED",
+    "status": "NOT_APPLICABLE"
+  },
+  "style_signal_layer_status": "PASS",
+  "template_field_edit_scope_check": {
+    "authorized_edit_count": 0,
+    "authorized_edits": [],
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "provided": false,
+    "schema_version": null,
+    "scope_sha256": null,
+    "source_sha256": "41b46cad416c289a068841eaa6f5c1ca68874a27d6036c9dfa55cb44ad1a7806",
+    "status": "N/A"
+  },
+  "template_field_findings": [],
+  "template_field_layer_status": "PASS",
+  "template_field_summary": {
+    "authorized_edit_count": 0,
+    "finding_count": 0,
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "review_finding_count": 0,
+    "status": "PASS"
+  },
+  "unaccepted_warnings": [],
+  "unexplained_high_findings": [],
+  "unexplained_strict_findings": [],
+  "warning_proposal_state": {
+    "attestation_status": "NOT_PROVIDED",
+    "cross_record_reviewer_linkability": "NOT_RECORDED",
+    "identity_verified": false,
+    "proposal_source": "NOT_PROVIDED",
+    "proposed_warning_fingerprints": [],
+    "review_clearance_granted": false,
+    "reviewer_identifier_collected": false,
+    "stable_reviewer_pseudonym_recorded": false,
+    "warning_review_request_sha256": null
+  },
+  "warning_resolutions": {},
+  "warning_review_request": null,
+  "warnings_without_resolution_proposal": []
+}

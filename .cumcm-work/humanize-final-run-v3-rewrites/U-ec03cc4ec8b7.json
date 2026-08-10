@@ -1,0 +1,72 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-ec03cc4ec8b7",
+  "chunk_binding_sha256": "e27cec1af7ad2098183376e3b556455ef5ba2c1be9651e7766649ad23d8f5dc9",
+  "decision": "NO_CHANGE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "b796c80b750a63c6",
+    "prepare_integrity_sha256": "65b0841ab2a4a542aa3e14c40a777fe63e5bbc388493293534686b4903d4204e",
+    "run_metadata_sha256": "80411e0b27613649cde4fea6c84f48d15168ddbf3c9888bcddbed63a7add4449",
+    "policy_snapshot_sha256": "87656f9f0219c0ea2bb402202dc778469ce20e751d065776590fef4fcce7fd95",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "6ad0db8a5ad486366db391e61ff83f1b3bfd89185dff5fa68442dd4d6e5e6efd",
+      "unit_id": "U-ec03cc4ec8b7",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 0,
+      "end": 1566,
+      "start_line": 1,
+      "end_line": 64,
+      "source_span_sha256": "0799b21cd80a25383f227749c1f8a153158b79d188c721bf49e008061d2951be",
+      "masked_text_sha256": "0cbe6ebd1aff4318bc30e79f30c2a83662f9f101d48bd43d2ed604cf29851030",
+      "chunk_binding_sha256": "e27cec1af7ad2098183376e3b556455ef5ba2c1be9651e7766649ad23d8f5dc9"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "a41da611e04d53f3050c35dba68ba8b7beafe827c1a625f42be4a84713161d55",
+      "routing_input_sha256": "c4740eaf032c65a120a00177dda69e5106048ea0b8e25aa769d45c15ad8f816a"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "dc6d2747938bcd21baa441dc74cb9e949af4975d42901c33be62bea55fdb4636"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "reason": "本单元承担“(front-matter)”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。",
+  "evidence_spans": [
+    {
+      "id": "S1",
+      "start_line": 35,
+      "end_line": 35,
+      "sha256": "062f81ead12623bea118327d9d3c482184095e7fd2c759e8c92f1d5eb9e69c9b"
+    }
+  ]
+}

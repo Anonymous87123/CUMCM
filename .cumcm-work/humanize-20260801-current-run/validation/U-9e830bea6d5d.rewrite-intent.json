@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "1fe916cd671d381a09876c5a12e2cd1bfe9b2e26df43bba44ba1f275ebcae518",
+    "before_sha256": "1fe916cd671d381a09876c5a12e2cd1bfe9b2e26df43bba44ba1f275ebcae518"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "ef9ec3313ad7a39b3616c3620cdd513926f92ce5196477ccd6d9f1344360482a",
+  "chunk_binding_sha256": "405bfddc536460a5f126ea2772b813bd7965486bd95c4e7a1c2f9c6fe0586e90",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-9e830bea6d5d.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "24b73589f20a5f0a5e529dab4f60f8d024b0a1272361665df07400b8161388f2",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "ea2c7a4eba0ab5cd3fd1435558966d40f186379b209a128eefa8a6c53516b2ed",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“三项工具成果及迭代机制 / 双模式论文模板”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "c5e475d3f9ea580c1572609bd39bb67217457549f5e594aedb983688f027617b",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-9e830bea6d5d"
+}

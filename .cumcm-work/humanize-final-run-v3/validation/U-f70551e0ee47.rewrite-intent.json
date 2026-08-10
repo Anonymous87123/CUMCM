@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "08fbf22042e6927deed11e74f9c0fe8e8438311a41586d29b2f43b6337d488a1",
+    "before_sha256": "08fbf22042e6927deed11e74f9c0fe8e8438311a41586d29b2f43b6337d488a1"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "634fb567881685c7a49c5c1422f2b9759aed8e90e25e47e36cd11e0c5a0ea5ca",
+  "chunk_binding_sha256": "f9db994c5baf4e80c0268c21bb1caf0ce17e199ddb0089fd5d73e22328d7c842",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-f70551e0ee47.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "6e3495b0f55fdc97603489e8e7f46714adeea2ad3e302b8c6632c9ebde6c7a08",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "9efc6eb26d7c052936941030d81746559ff984ef7d34a9518d42dc9a976f3a5a",
+        "start_line": 3
+      }
+    ],
+    "reason": "本单元承担“十八道真题的训练定位”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "a6a9977bd2453c2fa7e49bb2c2e77c4cb4a7a340f4627ce9f304c8e51d2be889",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-f70551e0ee47"
+}

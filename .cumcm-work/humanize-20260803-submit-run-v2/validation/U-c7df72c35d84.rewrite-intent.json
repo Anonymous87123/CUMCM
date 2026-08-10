@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "3bdd136a2bee53a89b538eb9b8ae0fed894061464c41b1fb30865d647189f6cd",
+    "before_sha256": "3bdd136a2bee53a89b538eb9b8ae0fed894061464c41b1fb30865d647189f6cd"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "8cf336192522dc9017c872ca3f70b423c155b8012e9b299268ab1b44db2b1c1c",
+  "chunk_binding_sha256": "cb10449024a9919b531461f0baf96b9f847eaaba47481ea2177ced8e7559e65f",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-c7df72c35d84.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "149ec12576734d22a91fab2d89757b069d9062f9c351088d07721c9f050c749c",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 7,
+        "id": "S1",
+        "sha256": "90dcc281d0f904db02b108b6336718b85b396533b0aba348ed0a339632b47b10",
+        "start_line": 1
+      }
+    ],
+    "reason": "本节是模型评价与改进的三项固定指引，原句区分已有证据、适用边界与改进设想。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "fb3f98cd367340e4f394be11004138c03a0b3df4449d380ff5faaac9c3a9633d",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-c7df72c35d84"
+}

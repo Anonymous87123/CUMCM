@@ -1,0 +1,108 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-6c8626643b76",
+  "chunk_binding_sha256": "19f08e01505b7b069890d839c86795dba8fec9ee5a4adfa6b82158066a0db365",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "9e04024e371e85bd",
+    "prepare_integrity_sha256": "84e7ec1ddc3ece555e01a21c6aad72ac0ef159863d5f4cb38e8199c23b2a049e",
+    "run_metadata_sha256": "fcd49d2065b6e5e66b082364dfccd9a8ea8ce621152d3dc6f3a36536b25cd893",
+    "policy_snapshot_sha256": "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "f1e9e0b15813d25dff3a74e13e41a6187f941a4a0b322f7f46b8a94b05262235",
+      "unit_id": "U-6c8626643b76",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 66179,
+      "end": 66822,
+      "start_line": 1653,
+      "end_line": 1679,
+      "source_span_sha256": "d8cab18f43f5a9f2200d231b66fdb948005dcaf279b15400253619355c171851",
+      "masked_text_sha256": "d340829d1515fe872954a258ecdbaac4cc1269f060da3bb5af8b8aca8db873e2",
+      "chunk_binding_sha256": "19f08e01505b7b069890d839c86795dba8fec9ee5a4adfa6b82158066a0db365"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "14163a5df29f258ec56765ffe165c9ba7fbba840d4a2aafd26a3d215c64c0370",
+      "routing_input_sha256": "65bb279e631c0e882ae95d29b65a731f3f541c895844e7856745666b117826ff"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "a0b103898d7c8a732629ab2502b6e07257507e81389ec73334e9a3e0e20ece85"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P01012:db3ccbc021a2]]\n\n以[[PROTECTED:F00001-P01013:2664540b80f4]]为起点，模型、代码和写作链才是本次整理可核对的产物。三名成员分别\n承担机理连续模型、综合优化和数据决策的首责，编程、误差分析和选题判断则共同承担；\n18 道真题分别提供练习入口。论文研究以 59 篇编号语料为限，59 张可追溯的正式证据卡覆盖\n2892 页；赛题和专家评述不混入文风样本，A/B/C 三类分别完成 20/19/20 篇人工检查。\n模板与 Skill 可随本次整理 59 篇证据增量修改；四周计划把尚无实证的能力落实为代码、图表、\n论文和复现产物，并逐项核对。后续限时演练不增加算法名称，重点检验基线建立、约束书写、\n关键结果复算和文字说明能否在时限内完成。\n\n[[PROTECTED:F00001-P01014:b656bf876e76]]\n[[PROTECTED:F00001-P01015:4dc589dd2f96]]\n2020--2025 年全国大学生数学建模竞赛 A/B/C 题编号论文语料（本地归档），\n59 篇，2892 页。\n\n[[PROTECTED:F00001-P01016:a39200d3e4e1]]\n全国大学生数学建模竞赛赛题原文：2020--2025 年 A/B/C 题（本地归档）。\n\n[[PROTECTED:F00001-P01017:c432b74ddf22]]\n全国大学生数学建模竞赛专家评述：2020--2025 年相关题目（本地归档）。\n\n[[PROTECTED:F00001-P01018:ec1356a35695]]\n数学建模学习思维导图 [[PROTECTED:F00001-P01019:c0e2eccb1e8e]]（用户提供，本地文件，核验日期：\n2026-07-28）。\n[[PROTECTED:F00001-P01020:954c34b123d7]]\n\n[[PROTECTED:F00001-P01021:22453f646578]]\n",
+  "rewrite_intent": {
+    "summary": "删除工作台式词壳，保留对象、动作、条件和结论边界",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 3,
+        "end_line": 3,
+        "sha256": "46b6906bf752980425145dd4c828fb13543b8171ad54e28974c778ecf0ec590a"
+      },
+      {
+        "id": "S2",
+        "start_line": 6,
+        "end_line": 7,
+        "sha256": "1efdd127f9ccb2ade821215a8493b863222b175e5ae30ce0183e2740c24fd41e"
+      }
+    ],
+    "target_signals": [
+      "LEX-STRICT-CORPUS-DIRECT-ACTION"
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "3f20dd52f4d61706770146e188ac94dd18efeb9c895f1992a742d6978d9862c8",
+    "before_sha256": "3f20dd52f4d61706770146e188ac94dd18efeb9c895f1992a742d6978d9862c8"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "a28b6d69fde6b262dbb536484e5b5b0a7f77572367f7df39d948777dd1ed927d",
+  "chunk_binding_sha256": "4d50a894209f45c5921fdca203bbf6978d61702586430125596ab4d5fbc35545",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-f9aa3cc3f631.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "fd75d9ce84c6f12b8d9c94f6dd57db39f8c957da9af4d0b5ee79a63e479c25bc",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "d0043a4428013a12358ddd769204485f2719f449d56d04ebd6ca70b438ee1db3",
+        "start_line": 3
+      }
+    ],
+    "reason": "本单元承担“从基线到差异化模型”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "67890a646a70aaf7d9866cc37cea233abfcd957cbac61085ab6a3a4e270659db",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-f9aa3cc3f631"
+}

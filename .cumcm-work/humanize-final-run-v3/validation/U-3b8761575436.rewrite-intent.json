@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "3f4ae6b5cffaafb719838b69aebcd416ba9e176850c67b2ce9afb48233006f68",
+    "before_sha256": "3f4ae6b5cffaafb719838b69aebcd416ba9e176850c67b2ce9afb48233006f68"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "d6edc6d0f39d3c8b9c44cb7ca441150471c4eaa7740d47b21859a95a7d3cab6e",
+  "chunk_binding_sha256": "2e645691bb3a1f37ce0d968209488a67eca081424b1c542e6613a6242551b0cb",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-3b8761575436.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "16344e8b9fb103aeab740d7f73df5dd77272dd6b92e8e75b0537a37e3caca29f",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "cd4c454e32b8371d3a217617d1d05c617a4b4f6ce39ec8ed54ba2a07af6bc8af",
+        "start_line": 3
+      }
+    ],
+    "reason": "本单元承担“四块学习结构”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "09a33c16660a7bc0c8a73989982835dfaf1d901dd95a0a2b5f74ab7d302c867a",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-3b8761575436"
+}

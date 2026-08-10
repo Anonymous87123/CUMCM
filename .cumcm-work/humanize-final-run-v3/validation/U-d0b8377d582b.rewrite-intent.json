@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "e45788c2c6ea5082dab07e3261c58c835529cee824b9347aa89da76068dc20ad",
+    "before_sha256": "e45788c2c6ea5082dab07e3261c58c835529cee824b9347aa89da76068dc20ad"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "0fb77552b3738da9c3202ae7669159164eeb345f1691f041aaa0cef02bc654ea",
+  "chunk_binding_sha256": "c9e1d7a7b52d36f49cde3de0dcc8a6eddd63220a4611aca18a3bbfe84b200c72",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-d0b8377d582b.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "8e628832bcf6f583d3891ec4c49cdada00a83f40eba698c137307baf48d1bf8f",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "24be5b05e96d3b33909dc71a33e622c90e7f19808b5e5db16aabaafa1c493a06",
+        "start_line": 3
+      }
+    ],
+    "reason": "本单元承担“B 类：变量、约束与策略必须逐项对应”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "99ef72206b416b6a1a69a7d7f1bcc7208c800a061626194052afdb01bc7e247a",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-d0b8377d582b"
+}

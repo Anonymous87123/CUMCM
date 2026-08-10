@@ -1,0 +1,72 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-0c70247ad82e",
+  "chunk_binding_sha256": "6a1158d1cf71588ce92c3258f1aafc080813d9198a6d32bec4b264110ae7954f",
+  "decision": "NO_CHANGE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "8cd38067072b5191",
+    "prepare_integrity_sha256": "cda44ea18c8aa5b6b97fbc6093ba29450511f52eb3056235a675e3db78f2c630",
+    "run_metadata_sha256": "11ad09c96e88a441b112d4c840cec6236153159f10cb19e992ebfba1c8bb7f5d",
+    "policy_snapshot_sha256": "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "eba71855409d6a3c4570e3ddcb487e56ab77996bc3dde98146bf78dd30b00b94",
+      "unit_id": "U-0c70247ad82e",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 6081,
+      "end": 6567,
+      "start_line": 206,
+      "end_line": 224,
+      "source_span_sha256": "cc661b8235c81d78cb792d2f78047a4b4a7f195baf4fa7426322b18bb5218d3b",
+      "masked_text_sha256": "d849d02dca0f171421147a41570534d4bdc6eeda585b4a2f0bd726338cd1fa7b",
+      "chunk_binding_sha256": "6a1158d1cf71588ce92c3258f1aafc080813d9198a6d32bec4b264110ae7954f"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "ae4fb5858c89810cd046f74122af845720fffd651d9cdb2c73bb2e722496cd4f",
+      "routing_input_sha256": "ead50c6521564e267bbb80e3b6471d2ed4b6d68f0572a778df03b9f6641a0360"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "8c7c0afea42bd75b2f690db0cae03a8c972280e8b41b42529d9b6202d44a213d"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "reason": "理论知识学习笔记 / 队长：机理、连续模型与数值实现 / 开源代码逻辑、约束与选型边界中的定义、对象和条件承担后续对应关系，原句保持这些信息的排列与范围。",
+  "evidence_spans": [
+    {
+      "id": "E1",
+      "start_line": 1,
+      "end_line": 1,
+      "sha256": "9d816f0c2bf0d58a084e2cd33ec06b559c7bf0d4b2dc2c93724e0eeebe8d3bd2"
+    }
+  ]
+}

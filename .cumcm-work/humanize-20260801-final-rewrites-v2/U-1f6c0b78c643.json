@@ -1,0 +1,91 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-1f6c0b78c643",
+  "chunk_binding_sha256": "4b9e10f19a57b7a0d1a1818a69ae12b87ab32f8e1952d4b7cd3a6ccd2d979a9b",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "5b708ec3580c1bfc",
+    "prepare_integrity_sha256": "fc36cd909e2ec30032ca40ef8cfdacac24c9312a30f594c52aa2bf43a1983d80",
+    "run_metadata_sha256": "ed7ceaa762912d840b64d659d9c713599092033aa570c208dfd1d1da3bb6b189",
+    "policy_snapshot_sha256": "87656f9f0219c0ea2bb402202dc778469ce20e751d065776590fef4fcce7fd95",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "c1ec1b0021cfa856fa8a0a3fc49493ac63ce4bec9289c8b7b12919354bf18c58",
+      "unit_id": "U-1f6c0b78c643",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 13031,
+      "end": 13164,
+      "start_line": 426,
+      "end_line": 431,
+      "source_span_sha256": "ac393d2f2bf47f51eb359d74ad3fc61cda2a7536c035d7331d6752d3372bc7a9",
+      "masked_text_sha256": "1dfce98327760f46777bf91bb66179f0e66e724520c5cf9c0af6d4d6e8551882",
+      "chunk_binding_sha256": "4b9e10f19a57b7a0d1a1818a69ae12b87ab32f8e1952d4b7cd3a6ccd2d979a9b"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "fac88a54d02ac8f67365b0170f87a144bf4e5807fb3dc4a673cf0f1a835d1c9a",
+      "routing_input_sha256": "076a80a0d859c207621071ee16ee650f4db2bb2d2c7d14ff6ffb9a0f742887d5"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "e234790bf763b516d8a626f763d60641e9bcac6713c24499556d813440ec5a28"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00227:de0ff3d3beef]]\n\n59 篇论文的自动页级候选给出篇幅与标题统计；59 张人工证据卡确认逐篇模型链、\n章节写法、结果解释、检验和创新结论。自动候选只标出页级位置，人工卡用于判断\n段落功能和真实行文动作，两类证据不互相替代。\n\n",
+  "rewrite_intent": {
+    "summary": "让证据对象直接起句，并保留自动定位与人工判断的职责边界",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "STYLE-SECTION-ROUTE-NARRATION"
+        ],
+        "summary": "让证据对象直接起句，并保留自动定位与人工判断的职责边界"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 3,
+        "end_line": 5,
+        "sha256": "59950651ebd395ae9255077021e285d666f568baa88ffc3682350c6784152cbf"
+      }
+    ],
+    "target_signals": [
+      "STYLE-SECTION-ROUTE-NARRATION"
+    ]
+  }
+}

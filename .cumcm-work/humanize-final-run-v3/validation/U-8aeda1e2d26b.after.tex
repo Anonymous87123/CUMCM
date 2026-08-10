@@ -1,0 +1,17 @@
+\subsection{MCM-CUP-STANDARD-WRITE Skill}
+
+Skill 位于
+\texttt{C:/Users/Lenovo/.codex/skills/mcm-cup-standard-write/}，调用名为
+\texttt{\$mcm-cup-standard-write}，界面名保留
+\texttt{MCM-CUP-STANDARD-WRITE}。核心文件写入任务规定的两条第 0 条及第 1--7
+条约束，详细资料拆为论文结构、A/B/C 题型、章节句式、模型创新、质量门和证据
+更新六份 reference。公开审计接口为：
+\begin{quote}
+\small\ttfamily
+python audit\_manuscript.py MAIN.TEX\\
+\hspace*{1em}--problem-type A\textbar B\textbar C\\
+\hspace*{1em}--format text\textbar json
+\end{quote}
+脚本检查章节缺失和顺序、占位符、图表标签、交叉引用、文献引用、结果解释、
+模型检验及附录结构。它的输出是质量门线索，不能证明模型结论正确。
+

@@ -1,0 +1,66 @@
+{
+  "artifact": {
+    "after_sha256": "496fe9edb394e66f6f37d2500c8fe1a3b59362ad06df5cba9fd99afe019b2994",
+    "before_sha256": "ac393d2f2bf47f51eb359d74ad3fc61cda2a7536c035d7331d6752d3372bc7a9"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "f17d9fa1d34198b08565e96482994b22350e7104b9e61752dc1ac67299c05ae0",
+  "chunk_binding_sha256": "4b9e10f19a57b7a0d1a1818a69ae12b87ab32f8e1952d4b7cd3a6ccd2d979a9b",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-1f6c0b78c643.diff",
+    "sha256": "cdf7063f4359943fce9b15dcfeb0c372597e6d628a9784b2dc6a74a32fbfb32f"
+  },
+  "evidence_sha256": "f776d9ee92d18561a7ab00b3673b5a9ada303eee04e6bc6d829447821aea0f07",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "让证据对象直接起句，并保留自动定位与人工判断的职责边界",
+        "target_signals": [
+          "STYLE-SECTION-ROUTE-NARRATION"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 5,
+        "id": "S1",
+        "sha256": "59950651ebd395ae9255077021e285d666f568baa88ffc3682350c6784152cbf",
+        "start_line": 3
+      }
+    ],
+    "summary": "让证据对象直接起句，并保留自动定位与人工判断的职责边界",
+    "target_signals": [
+      "STYLE-SECTION-ROUTE-NARRATION"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 5,
+        "operation": "REPLACE",
+        "start_line": 3
+      }
+    ],
+    "masked_after_sha256": "771d716443b4d3994da78a376b1e97addd4f7259351f90ce19ffbd76fc33245b",
+    "masked_before_sha256": "1dfce98327760f46777bf91bb66179f0e66e724520c5cf9c0af6d4d6e8551882",
+    "source_spans_covered": 1,
+    "source_spans_total": 1,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "b9937a5bd9986065e02d73c1f43f3fbf1ede972fed5c3958c5a4860a0c09535e",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-1f6c0b78c643"
+}

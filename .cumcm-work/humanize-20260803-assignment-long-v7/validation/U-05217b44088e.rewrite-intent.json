@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "496fe9edb394e66f6f37d2500c8fe1a3b59362ad06df5cba9fd99afe019b2994",
+    "before_sha256": "496fe9edb394e66f6f37d2500c8fe1a3b59362ad06df5cba9fd99afe019b2994"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "2537a1a01a71bac43144dbd86e598ad56f3da953cd437d7cd0594886ba34f630",
+  "chunk_binding_sha256": "1e8ac48035bdccf367a1e94c23ac6be97a5efe89d9cfb6d5dee61af779fe6535",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-05217b44088e.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "36059989ee0b0c1560cb366720ac71b8467a647f281f0f46915ca2e039eb53bc",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 1,
+        "id": "S1",
+        "sha256": "969e2866c8f0816b6022c76de034e65d7f5296d091c15cf888b1e78515604d52",
+        "start_line": 1
+      }
+    ],
+    "reason": "59 篇编号论文的结构与写作分析中的定义、对象和条件承担后续对应关系，原句保持这些信息的排列与范围。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "0f4e547865ad3ec97fbcb889507cf1694cdb0c2f9af9bb2dad144017f779fab9",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-05217b44088e"
+}

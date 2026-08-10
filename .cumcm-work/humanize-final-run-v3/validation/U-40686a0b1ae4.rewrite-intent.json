@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "0064893a972a340fd8348ee1e7b6cd1a69b3e20423ca6a723d901431f58cea79",
+    "before_sha256": "0064893a972a340fd8348ee1e7b6cd1a69b3e20423ca6a723d901431f58cea79"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "8904ff12d07ab16519cddfe2f3baed95c7f7637a76a764d225c6115bf7eb7a70",
+  "chunk_binding_sha256": "601378cfd9687b8152cbb6f98dd89aaf485bcc71ea4e3eb8ef17797980586e05",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-40686a0b1ae4.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "11dbb867e626f77b65912d3e037354e6f620f8c082980702505add85444d7403",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "dd443de6e00f159642f3030e969dc6f56ada3e35f493b85d3db620eaeb4ea94f",
+        "start_line": 3
+      }
+    ],
+    "reason": "本单元承担“结论”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "3a554292005864f906f8d969a51300d598bd7c2c97879cf3065faae8cc2910b7",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-40686a0b1ae4"
+}

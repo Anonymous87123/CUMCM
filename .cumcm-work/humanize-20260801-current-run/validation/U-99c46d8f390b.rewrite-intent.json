@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "7be133fe2600040ee133b26fb333eb8bc2d043dbc91ee5ab01913458a06675f2",
+    "before_sha256": "7be133fe2600040ee133b26fb333eb8bc2d043dbc91ee5ab01913458a06675f2"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "2d7accb53b83f7453becd0b465096f20bbe828787d1c8f5ccb42ab80e4d35525",
+  "chunk_binding_sha256": "893cbfc7dc79971be31d5d273c8083be4ebc7ac05407aabcba9941ae79a45c62",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-99c46d8f390b.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "710e0c89d0b698314d004b047124e7980aa735522a076e2a5c2f0518177b1158",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "153351b9b4a7da7db938013ecf36f76df680ef7496b1ab2e48767700c89636ce",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“三项工具成果及迭代机制 / MCM-CUP-STANDARD-WRITE Skill”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "001413f89e73cdb0c1bbbe288321335bbfd517c6b4e7e2a211e3c832bdcf82c0",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-99c46d8f390b"
+}

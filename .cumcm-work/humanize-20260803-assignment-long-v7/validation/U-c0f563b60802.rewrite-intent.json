@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "7feed6997459d9e0f7b3662c30ec9c70e7abccb04a7fc15fed36babba58c0c10",
+    "before_sha256": "7feed6997459d9e0f7b3662c30ec9c70e7abccb04a7fc15fed36babba58c0c10"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "cc6dc953f2c15f94ba32f298a87ea553a60997b03524acfbb216a81feed7dfcf",
+  "chunk_binding_sha256": "8ae95e13b6513e1d716e400e71456d90bad8d678c367afb9b1b78e5654d28c3e",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-c0f563b60802.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "0f622ce0e9d9d4a1b47a39bca76dc8ea5ca37f21423e119ca0750d68cee01300",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 1,
+        "id": "S1",
+        "sha256": "12ed02633266e598353da047d4f11b60673d61057d4dcddcc0ed2f361a0dacdb",
+        "start_line": 1
+      }
+    ],
+    "reason": "理论知识学习笔记 / 组员1：规划、智能优化、图网络与仿真 / 覆盖内容、原理与求解步骤中的定义、对象和条件承担后续对应关系，原句保持这些信息的排列与范围。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "1a44c3d885c7d8b011e49e404f555966c07c059d8de51fc5de9996e2ea4ca0c3",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-c0f563b60802"
+}

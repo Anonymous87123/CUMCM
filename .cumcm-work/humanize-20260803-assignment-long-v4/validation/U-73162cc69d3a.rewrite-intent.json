@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "cc661b8235c81d78cb792d2f78047a4b4a7f195baf4fa7426322b18bb5218d3b",
+    "before_sha256": "cc661b8235c81d78cb792d2f78047a4b4a7f195baf4fa7426322b18bb5218d3b"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "f0238dcc44510b949405a1d39598650c91285f6bbebc59d731044d6bd92204da",
+  "chunk_binding_sha256": "ca6cb5263a9c4274afa33c9e812a399e0bf4fbd936565a7f7021571ff310a0de",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-73162cc69d3a.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "5f33f1808948e4e095684a9a3a395bd8ab971f156bbe60cc6430b07d5a880aa2",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 1,
+        "id": "S1",
+        "sha256": "9d816f0c2bf0d58a084e2cd33ec06b559c7bf0d4b2dc2c93724e0eeebe8d3bd2",
+        "start_line": 1
+      }
+    ],
+    "reason": "理论知识学习笔记 / 队长：机理、连续模型与数值实现 / 开源代码逻辑、约束与选型边界中的定义、对象和条件承担后续对应关系，原句保持这些信息的排列与范围。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "c3ad1edef091b1f8f94fbba2d263c5134266061684e474356ad1ba07a2cdd170",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-73162cc69d3a"
+}

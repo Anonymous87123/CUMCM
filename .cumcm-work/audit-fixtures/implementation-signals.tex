@@ -1,0 +1,47 @@
+\begin{abstract}
+针对企业数据决策问题，本文报告预测与约束决策结果。
+\keywords{数据\quad 分类\quad 优化}
+\end{abstract}
+\section{问题重述}
+由企业数据预测风险并制定方案。
+\section{问题分析}
+先清洗和提取特征，再预测并优化。
+\section{模型假设}
+假设数据口径在样本期内一致。
+\section{符号说明}
+$x$ 表示决策向量。
+\section{分问题模型建立与求解}
+模型与代码片段如下。
+\begin{lstlisting}
+alg.fit(dtrain[predictors], dtrain['违约'])
+dtrain_predictions = alg.predict(dtrain[predictors])
+[x,fval] = fmincon(@myfun,x0,[],[],[],[],lb,ub,@mycon);
+x(2*i) = x(2*i)*0.8;
+x_train, x_test, y_train, y_test = train_test_split(x, y)
+scaler = StandardScaler()
+x_scaled = scaler.fit_transform(x)
+params = {'estimator': 60, 'max_depth': 6}
+xgb = XGBClassifier(**params)
+y_pred = xgb.predict(x_test)
+auc = roc_auc_score(y_test, xgb.predict(x_test))
+logstic_1 = true;
+Y(1:61,1) = 0;
+Y(62:123,1) = 1;
+b = regress(Y,X);
+x1 = x(:,2);
+x2 = x(:,2);
+\end{lstlisting}
+\section{结果分析}
+结果满足预算约束，因此在当前假设下可执行。与基线相比，目标值提高且各项风险指标没有越过限制；分类结果按类别分别解释，策略表同时列出上下界和预算残差。由于外部时间段尚未纳入，本结论只覆盖现有样本和参数范围，后续仍需检验分布漂移及误判成本变化对决策的影响。
+\section{模型检验}
+采用 RMSE 和回代约束检验。
+\section{灵敏度分析}
+参数扰动后重新求解。
+\section{模型评价与改进}
+模型保留约束，后续将补充独立测试。
+\begin{thebibliography}{9}
+\bibitem{sample} 示例文献。
+\end{thebibliography}
+\appendix
+\section{附录}
+记录运行环境和输出。

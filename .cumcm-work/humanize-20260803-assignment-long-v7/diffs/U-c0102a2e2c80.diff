@@ -1,0 +1,11 @@
+--- U-c0102a2e2c80.before
++++ U-c0102a2e2c80.after
+@@ -10,7 +10,7 @@
+ 
+ 探索阶段采用 Pearson、Spearman、Kendall 相关，分别对应线性、单调秩和序关系；
+ 聚类比较 K-Means、DBSCAN、层次聚类和谱聚类。空间或时间缺口比较 Lagrange、
+-三次样条和 Kriging 插值。PCA 用于线性方差压缩，t-SNE 主要用于局部结构可视化，
++三次样条和 Kriging 插值。PCA 用于线性方差压缩，t-SNE 主要用于局部结构图形展示，
+ UMAP 兼顾局部与部分全局结构；后两者的二维图不直接充当预测证据。
+ 
+ 评价决策链覆盖 AHP、模糊综合评价、模糊 AHP、灰色关联、PCA、因子分析、熵权、

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "e10bc078a3502f7ed80c73f90d9360483526099719832986dfd0e91b28851f46",
+    "before_sha256": "e10bc078a3502f7ed80c73f90d9360483526099719832986dfd0e91b28851f46"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "ed68839ba4178f380b647bb3ecec30269cf01eeac030d58d337e7f59af4df97b",
+  "chunk_binding_sha256": "24a93a26774ac0fd7976da9549e6335bd74c99a89200cf28795825d21287aa71",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-19f88759c00e.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "5e2e02bdceb249be229b51b595a7e6a2483fa46acdba1019bfb8ceaeb34b0cdf",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 1,
+        "id": "S1",
+        "sha256": "3d692b1f597b98557b4813c797c818c59432b714d332c7d4ddb44a6f7d1da604",
+        "start_line": 1
+      }
+    ],
+    "reason": "理论知识学习笔记 / 队长：机理、连续模型与数值实现 / 开源代码逻辑、约束与选型边界 / 可实现代码清单中的定义、对象和条件承担后续对应关系，原句保持这些信息的排列与范围。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "705402b4a7247469da112f79e5da4d468af8a1df49bceb41ed722e387f62e0fc",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-19f88759c00e"
+}

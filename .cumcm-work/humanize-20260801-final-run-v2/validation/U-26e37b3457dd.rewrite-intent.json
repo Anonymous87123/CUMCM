@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "9ae40263e0d423b800c07d2a3dd89bde0d67659f838d503f4a6eca63fe1fe740",
+    "before_sha256": "9ae40263e0d423b800c07d2a3dd89bde0d67659f838d503f4a6eca63fe1fe740"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "ba18520c72f4e0994b895b1963d39c5a05e473b59d3589d181d72893860d61b6",
+  "chunk_binding_sha256": "2708cb23a8a65bac5a08c3b0582e3662ede01ea9bad78298f512ec9572c14122",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-26e37b3457dd.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "662643390a7725c14d76e1311bec541c1847c97391d485c50e74824e495df345",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "4ef0c2b58bd8aab6e742333bc57e1e20daa4aafaaf69044edcf890eac66f3281",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段落承担“开源代码逻辑、优缺点与边界”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "ca8d13eeed38a66fb47a419f051721833876f178c4781c1356a0ce79d3bdae80",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-26e37b3457dd"
+}

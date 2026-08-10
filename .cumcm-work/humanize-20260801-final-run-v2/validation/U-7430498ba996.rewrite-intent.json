@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "6d1fe3e5368734fd759c08441496952f5aaaa99d8f7b3ff297e840300f562ca1",
+    "before_sha256": "6d1fe3e5368734fd759c08441496952f5aaaa99d8f7b3ff297e840300f562ca1"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "fb4d264573aab64bb59d8d26e05c5146b0de468a95fa35fdc64bf2593388febf",
+  "chunk_binding_sha256": "d5695abfe236bc12c6850e0ed5d00016c6b1d4f25734e0c3e538a22a6428b02c",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-7430498ba996.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "4381a3ca927d22524f7711a10c134bfdf04f384642f0d5ed9d20c12fa105cc48",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "94e942ec0f6d2bfd48c2f641e4f4444cb2b2dc60b4651b1adcd09129dd0c0720",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段落承担“B 类：变量、约束与策略必须逐项对应”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "8a119609b1d1a0aa271cc5ec5366ba25b6774f490cc723754017b3c0de89ef45",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-7430498ba996"
+}

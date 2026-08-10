@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "731ee3b956aa9a0170a48524370cfa1dc4f6c7dce221893f9d88e1ab1cb6a1b1",
+    "before_sha256": "731ee3b956aa9a0170a48524370cfa1dc4f6c7dce221893f9d88e1ab1cb6a1b1"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "aa4d338f52ed6bd220d144b814c0ae59d45079ad24d612ded4870ccc2dca9d73",
+  "chunk_binding_sha256": "fd842178c91ed3cec09f37e91cff7af12bb8b096928464553ced0a130dd48ffb",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-88d6df6df629.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "a5bdf889ac988a204b07a5961f919906e09cce044099a9cd59f5ebba3d59783d",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 7,
+        "id": "S1",
+        "sha256": "cbefc4c73e7fe43eb0437d94cc23dae431b4c744dd1f0a59e916411351f88dad",
+        "start_line": 1
+      }
+    ],
+    "reason": "本节是结果分析与检验的三项固定指引，原句区分数值报告、机制解释与证据核对。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "c7bc116193a677f0154e87652ad8dcd95a5e72bdb3d09a90075f5bcc73cc8d01",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-88d6df6df629"
+}

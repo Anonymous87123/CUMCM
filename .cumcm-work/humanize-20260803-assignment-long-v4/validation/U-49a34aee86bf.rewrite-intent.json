@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "80ef51b01c0cadcea6fd2d8bccad67e53cf2fd89f3a6f792573c4684ca1fa390",
+    "before_sha256": "80ef51b01c0cadcea6fd2d8bccad67e53cf2fd89f3a6f792573c4684ca1fa390"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "5683243c5041a50e3f7db7727a62dab0a1b75fd531125d72d059eea7c9aa3a2f",
+  "chunk_binding_sha256": "89d60785219f5df13238b931f9079e97cc78c96cf9a756fef88710baaf3cb6ed",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-49a34aee86bf.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "f14e636f3cd8c0d267bae954454bfaf4a1a04c8803c1091a6c6153279813a6ea",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 1,
+        "id": "S1",
+        "sha256": "3ef54e40ae2cb7e8cef7aeaffc57f7da4e43f528fd68fe0a8fa442bfb664dda7",
+        "start_line": 1
+      }
+    ],
+    "reason": "研究边界、证据与处理方法 / 语料边界中的定义、对象和条件承担后续对应关系，原句保持这些信息的排列与范围。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "66c6b374de0e1a70a5060f9d27557183eab371f52a703c88de6cd8b8871983f9",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-49a34aee86bf"
+}

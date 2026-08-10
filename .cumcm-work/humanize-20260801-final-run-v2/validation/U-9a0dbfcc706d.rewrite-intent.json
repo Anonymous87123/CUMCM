@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "e6953a1e2b545b909f6842200eb2a11df0d6f8b641f4f9863f4e7a5f71b3ce46",
+    "before_sha256": "e6953a1e2b545b909f6842200eb2a11df0d6f8b641f4f9863f4e7a5f71b3ce46"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "aab2062d0501ad3d4614681f45f923d542d7486e00a19fe4c40385f0f3eb621a",
+  "chunk_binding_sha256": "372dc316296aa25f96ecb584d802c896b7aa4e860c1923883e5e53db9ff53f18",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-9a0dbfcc706d.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "fa6aa0d933af4607c1b53c373b752e980fc000a3741d33b196f19e59e7094237",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 6,
+        "id": "S1",
+        "sha256": "99f46eff2f790d506ae988c1d27eca6a248c446a6ee966fa25a360b239f14dbc",
+        "start_line": 6
+      }
+    ],
+    "reason": "该段落承担“2026 年 7 月 29 日至 8 月 25 日量化训练”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "2bbdc94c7b8c8f82a15e2972acf87301a5df934e891672523a69da4a0de93afa",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-9a0dbfcc706d"
+}

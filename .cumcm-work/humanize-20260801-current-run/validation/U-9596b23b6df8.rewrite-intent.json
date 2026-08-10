@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "0c024b7e7cac41c152b7fe80a81f8c9377360666c9e1e3b0fd5b8b6968fc0181",
+    "before_sha256": "0c024b7e7cac41c152b7fe80a81f8c9377360666c9e1e3b0fd5b8b6968fc0181"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "ef325fe86c5f4a49acf75999d191620288bb379294f29ea47bc86f0feebb6c64",
+  "chunk_binding_sha256": "17bd6d570b40535a42803580e5b1221ad8fd3e975e4703c1c7f308840221ada9",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-9596b23b6df8.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "c519d263d43dbd51adbc7aca0ef47174fce4c6296eaffd4acb698d7bd187c57f",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "4bd9a39dba0cc8b0a3bdfd91b4a02cf61c54383666b24dc5ff24c74f220edc61",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“59 篇编号论文的结构与写作分析 / A/B/C 三类论文的微观文风”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "76fa3b2cbde3e1bd30d2ba82be2af599ccbf87de36f7be62775e5c03d5857a2a",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-9596b23b6df8"
+}

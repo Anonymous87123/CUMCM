@@ -1,0 +1,72 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-9a0dbfcc706d",
+  "chunk_binding_sha256": "372dc316296aa25f96ecb584d802c896b7aa4e860c1923883e5e53db9ff53f18",
+  "decision": "NO_CHANGE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "5b708ec3580c1bfc",
+    "prepare_integrity_sha256": "fc36cd909e2ec30032ca40ef8cfdacac24c9312a30f594c52aa2bf43a1983d80",
+    "run_metadata_sha256": "ed7ceaa762912d840b64d659d9c713599092033aa570c208dfd1d1da3bb6b189",
+    "policy_snapshot_sha256": "87656f9f0219c0ea2bb402202dc778469ce20e751d065776590fef4fcce7fd95",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "c1ec1b0021cfa856fa8a0a3fc49493ac63ce4bec9289c8b7b12919354bf18c58",
+      "unit_id": "U-9a0dbfcc706d",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 11847,
+      "end": 13031,
+      "start_line": 403,
+      "end_line": 425,
+      "source_span_sha256": "e6953a1e2b545b909f6842200eb2a11df0d6f8b641f4f9863f4e7a5f71b3ce46",
+      "masked_text_sha256": "07058b2c1a36c3499ad20ea6c34d17d1bb52354f5854290502821934564e6f14",
+      "chunk_binding_sha256": "372dc316296aa25f96ecb584d802c896b7aa4e860c1923883e5e53db9ff53f18"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "0abf8f1df2dfd0ccfe2206c33f7cb5e1f3db81d9014fb95145d97d88e2317f35",
+      "routing_input_sha256": "c45bd0c3c3ad0cf4ac2aa46dbff220a0a09c8cba1272c3641333bd165537ca26"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "ad52f233980b320103b8b98ed425ebb754fef46d6e637fef90c92a17f63e34c1"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "reason": "该段落承担“2026 年 7 月 29 日至 8 月 25 日量化训练”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。",
+  "evidence_spans": [
+    {
+      "id": "S1",
+      "start_line": 6,
+      "end_line": 6,
+      "sha256": "99f46eff2f790d506ae988c1d27eca6a248c446a6ee966fa25a360b239f14dbc"
+    }
+  ]
+}

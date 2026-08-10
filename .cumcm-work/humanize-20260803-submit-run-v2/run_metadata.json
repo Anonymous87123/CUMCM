@@ -1,0 +1,97 @@
+{
+  "budgets": {
+    "max_author_chars": 7000,
+    "max_lines": 600,
+    "min_author_chars": 1200
+  },
+  "completion_claim_allowed": false,
+  "created_at": "2026-08-03T07:49:39+00:00",
+  "editable_style_wrappers": [],
+  "file_statuses": {
+    "READY": 1
+  },
+  "files_total": 1,
+  "integrity_manifest": "prepare_integrity.json",
+  "intensity": "BALANCED",
+  "next_action": "Rewrite only PENDING chunk files, then validate and finalize them.",
+  "no_editable_scope": false,
+  "policy_snapshot": {
+    "implementation_hashes": {
+      "finalize_script_sha256": "754b5d080383f658b7705645db2cf8427646a41a77424c678757cd12380d9fb9",
+      "negative_guard_loader_sha256": "79c377648afe325f94de96afe6c6d3e5c26a67a9d3539e51756530bf35ebb08e",
+      "prepare_script_sha256": "06c8dd66994d425229d3482f99d8c32015b343c707ec6d136b2767d1d1b34a04",
+      "scene_router_sha256": "23c19fe30dd8f8fb2962d9746a379f100b18ca572e7e79e4cb4916d2cf48589a",
+      "voice_profile_builder_sha256": "29afb050a055946121d232cf05e9546326b23be0c86880666ea7674c26c3b114",
+      "voice_profile_validator_sha256": "ead741fe5209ce150a7b51497d2eb3ce6cfec9e87fb052c86800607d0bb83c22"
+    },
+    "runtime": {
+      "python_cache_tag": "cpython-313",
+      "python_implementation": "cpython",
+      "python_version": [
+        3,
+        13,
+        7
+      ]
+    },
+    "schema_version": "humanize-long-document-policy-snapshot/v1",
+    "validator_policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "08b4e88c540722085ab5130c2137c802ce2ef561f64db8a3f97660e98c12e29b",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "acf31a687e741637d1ebb82a3ab9e67039251326cfb006f45ea7dfb719641689",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    }
+  },
+  "policy_snapshot_sha256": "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+  "processable_editable_units": 28,
+  "protected_spans_total": 335,
+  "scene": "RESEARCH",
+  "scene_routing_policy_revision": 5,
+  "scene_routing_policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+  "scene_routing_status": "PASS",
+  "scene_routing_summary": {
+    "EXPLICIT": 28
+  },
+  "snapshot_id": "b48ef9450b05230b",
+  "source_processing_status_summary": {
+    "AUTHORING_QUEUE_BY_CALLER_OVERRIDE": 1
+  },
+  "source_role_override_status": "APPLIED",
+  "source_role_overrides": "source_role_overrides.json",
+  "source_role_overrides_sha256": "f482d9c0efb00fae14f80cfa455775c76b78e0b4e8cd9bfd35cdd09443fb2577",
+  "source_role_summary": {
+    "AUTHOR_TEXT": 1
+  },
+  "status": "READY",
+  "structural_transaction_candidates": 0,
+  "structural_transaction_inventory": "structural_transaction_inventory.json",
+  "structural_transaction_inventory_sha256": "4fe70b944c1beb47787764167e489adf22d57d42dd76de4c701c26b52191b9bc",
+  "structural_transaction_policy_revision": "1.0.0",
+  "structural_transaction_policy_sha256": "0b9314429a8d8b7f66aa3d0db93e2840408c26fdf6b7bc1b1cdfe78c5f2ada04",
+  "structural_transaction_scope": "NONE",
+  "tool": "prepare_humanize_long_document.py",
+  "unit_statuses": {
+    "PENDING": 28,
+    "SKIPPED_PROTECTED": 3
+  },
+  "units_total": 31,
+  "voice_binding": {
+    "binding_scene": "RESEARCH",
+    "profile_binding_scene": "RESEARCH",
+    "profile_source": "SCENE_DEFAULT",
+    "requested_scene": "RESEARCH",
+    "scene_binding_status": "BOUND",
+    "source_path": "",
+    "voice_default_disclosure": true,
+    "voice_evidence_status": "DETERMINISTIC_DEFAULT",
+    "voice_profile_binding_scene": "RESEARCH",
+    "voice_profile_confidence": "DEFAULT",
+    "voice_profile_id": "scene-default-research",
+    "voice_profile_kind": "DEFAULT",
+    "voice_profile_revision": 1,
+    "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+  }
+}

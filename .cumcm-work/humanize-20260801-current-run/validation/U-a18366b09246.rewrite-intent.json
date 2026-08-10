@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "74e3b8ac61a05bdc51d6a9417498c5bdc58b163156676c1cf41b519d29d8eecc",
+    "before_sha256": "74e3b8ac61a05bdc51d6a9417498c5bdc58b163156676c1cf41b519d29d8eecc"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "2eff78c6f64101d5ed6b048323b83f97c9b8e13939c1355bfb8d7e7d40b10ec0",
+  "chunk_binding_sha256": "28514b07c5e89423254b3ec7594bc1f85cdc3756a965dae41720a79f107d5a69",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-a18366b09246.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "189a3dc7ef2e332147efd95f77b2381c61f94160720fba77efc170304f260729",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 6,
+        "id": "S1",
+        "sha256": "3e1d63d425884d25ba7192b4d95766d35bdea1bcd9b7644e60988d8b79dc3e6d",
+        "start_line": 6
+      }
+    ],
+    "reason": "该段承担“算法责任与验收总表”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "fdba67cfab87a190ef950e9b17cdff02536a13a1925e0041d0336a024edb29ef",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-a18366b09246"
+}

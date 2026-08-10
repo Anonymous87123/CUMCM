@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "2be6453b18e2ae17add18f631dce990185115befd473d1d89007aed61fdb3560",
+    "before_sha256": "2be6453b18e2ae17add18f631dce990185115befd473d1d89007aed61fdb3560"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "56e9eb018eea155e4a23007e4ffa5f782a313e06d4be7358eb32941174e6ca61",
+  "chunk_binding_sha256": "20f627054d9e979ca1583913719d198d2ea4c51638f8928e0e23e236490a59eb",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-a1df26d79969.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "fc1082c2caf8a582fcb848f0df27e874d6bee007b43afbe06c717713607bbc33",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 7,
+        "id": "S1",
+        "sha256": "21352407dd15b27bfcd0f6a3261c3b1e8ab25d270338aa8748bb98f08be6574c",
+        "start_line": 1
+      }
+    ],
+    "reason": "本节是灵敏度分析的三项固定指引，原句保持参数范围、扰动方法与结果核对的对应关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "26357ca2dc0fddaafcf19e21423bc7233d478bc4f2eba054799d81973dd3d878",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-a1df26d79969"
+}

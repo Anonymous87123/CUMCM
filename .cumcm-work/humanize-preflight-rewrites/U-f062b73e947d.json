@@ -1,0 +1,65 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-f062b73e947d",
+  "chunk_binding_sha256": "9b8f07574e210922bd4965eeb492421eb45c82f51468e1181f437971c7b4f012",
+  "decision": "NO_CHANGE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "6e431f0e89ab1e86",
+    "prepare_integrity_sha256": "eda36299f73e98ecb94f2b0e6bfce625f3c76a096020db20339a9f0aa4cbe92d",
+    "run_metadata_sha256": "608d4d0ccec33ec88b56bd68ba284ea5cc38ad73dd6a2aa82e76a66a5e147559",
+    "policy_snapshot_sha256": "87656f9f0219c0ea2bb402202dc778469ce20e751d065776590fef4fcce7fd95",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "7f6938fc417b480fc08def55a9dfdf8fbd1a02109ab04284b9b5f72b25736aeb",
+      "unit_id": "U-f062b73e947d",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 2198,
+      "end": 2942,
+      "start_line": 80,
+      "end_line": 111,
+      "source_span_sha256": "38711f3111e47dc30b53409a4a8d97eaf217ba897bbfd86e9a91bdb6bc571a8d",
+      "masked_text_sha256": "4045db1a7bc976f079ef1331fe6ca58bd2d74600da0243df21f2b42c1372f671",
+      "chunk_binding_sha256": "9b8f07574e210922bd4965eeb492421eb45c82f51468e1181f437971c7b4f012"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "1c128f30457b24368732bf0f211e765e0487b33b46df5b0a65564cbe8546e7ef",
+      "routing_input_sha256": "4503e48b0745fb6fc5059cdf64d82bac4111f4a49f5ec1124f007fe967e285c0"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "2ab19c2dbbd22cbd4e3b63eb1b0901dd789d10500b04e7218a26a9952405ad35"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "reason": "TODO: replace this placeholder with a specific function-preservation reason and add at least one hash-bound evidence_span before finalize",
+  "evidence_spans": []
+}

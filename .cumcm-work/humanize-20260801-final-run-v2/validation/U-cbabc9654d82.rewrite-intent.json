@@ -1,0 +1,66 @@
+{
+  "artifact": {
+    "after_sha256": "5eb04bf8c4eb322cc1cb54584b4f45717679b6b550529b5b1b3023e30a882895",
+    "before_sha256": "186e79dfcc334b1672a851c5a53cdb551c60c5a178e2d669ca6036ca71321f7d"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "31b5fd3d4ac3a4830f4c2380c295c496ca4bcf0ea8c6be16593da5bd041c3002",
+  "chunk_binding_sha256": "557c5f1c1159954a14a9b0575024f01cb49c250af5077fd8110c672382871584",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-cbabc9654d82.diff",
+    "sha256": "65b217530af1969260d524e66492741deaad4278c13e0f49a540852915ad6553"
+  },
+  "evidence_sha256": "b7792de05c95e7abbd8021b017a50159ee8b67a1e3d6bf3e3581e572fd5c69b9",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "删除图形不是装饰的防御壳，直接写图形承担的预测和解释作用",
+        "target_signals": [
+          "STYLE-FIGURE-DISCLAIMER"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 158,
+        "id": "S1",
+        "sha256": "1cf7f12325efc29aa7c9522b2138876a8e92841f1740f4c49049dba0fadff312",
+        "start_line": 158
+      }
+    ],
+    "summary": "删除图形不是装饰的防御壳，直接写图形承担的预测和解释作用",
+    "target_signals": [
+      "STYLE-FIGURE-DISCLAIMER"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 158,
+        "operation": "REPLACE",
+        "start_line": 158
+      }
+    ],
+    "masked_after_sha256": "1bbfdef05bfd482ce4aaa2efbf0040eeb12ed5d1f947db4b2f7a1cd13c1ae274",
+    "masked_before_sha256": "3ccf1110c70e6a7e52b197142226b2a673fdc07f4c4080cecca532852e2a10fe",
+    "source_spans_covered": 1,
+    "source_spans_total": 1,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "3c8bd7f03a69bac3c9765b166aeec14022c8b3675549774101982e131240f715",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-cbabc9654d82"
+}

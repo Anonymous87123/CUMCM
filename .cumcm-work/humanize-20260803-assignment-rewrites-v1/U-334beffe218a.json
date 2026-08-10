@@ -1,0 +1,70 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-334beffe218a",
+  "chunk_binding_sha256": "fef6e185e815f95f67f26b324aaac1aacaddfa564fa1941c42c01ff91016972a",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "598a5e1303015f05",
+    "prepare_integrity_sha256": "e5d72cbedf5144f0034d1fc6d49e26ebd417a844f2af0658fd2527a09d748307",
+    "run_metadata_sha256": "94558fbad9a54c2771f096cc107d5ebc1034e8708ba4e6cada69c488a0d39386",
+    "policy_snapshot_sha256": "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "dc0f0e379a599cd9c22874ea35bccde81a8f55a9411aa8214fcf23114a67d539",
+      "unit_id": "U-334beffe218a",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 11401,
+      "end": 11561,
+      "start_line": 386,
+      "end_line": 392,
+      "source_span_sha256": "3c591537bd751a56edb93c9123c2b7c7d6b2df5cdf0494a37a6cb825b6b6991e",
+      "masked_text_sha256": "57da159596373263e261836d3e528028a9d53dc4037e5cc0895852ed241c3e19",
+      "chunk_binding_sha256": "fef6e185e815f95f67f26b324aaac1aacaddfa564fa1941c42c01ff91016972a"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "677b1671598100d5f600b4a7cae37911b670206953eff8cf4d79536594363429",
+      "routing_input_sha256": "7fc0c01b738589f392b4ff7baddc0f5c936e2348e19d966e6e37bb89ad92e31b"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "ffe3a377bd66eb4016d01fe7a2442e5be010661471e2fbaa78f700113a506ba4"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00199:f38a41086d1b]]\n\n本轮已经形成全算法责任表、18 题训练接口、统一代码分层、模型选型边界和论文\n证据流水线。[[PROTECTED:F00001-P00200:490892b3d680]]不在本轮评价范围内；可取之处仍是每条主责线都要求基线、约束、\n独立检验和下游接口。复杂模型必须与简单模型公平比较，模型、代码和论文中的\n变量名可以追到相应结果文件。\n\n",
+  "rewrite_intent": {
+    "summary": "TODO: edit masked_text, then replace this placeholder and populate operations, source_spans, and target_signals before finalize",
+    "operations": [],
+    "source_spans": [],
+    "target_signals": []
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "392eccb75f5b71e1a804c2ac27006ad43ec22b28aa879a80d67175edc9df2054",
+    "before_sha256": "392eccb75f5b71e1a804c2ac27006ad43ec22b28aa879a80d67175edc9df2054"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "bea24b8ce22908f9c3e355c19975dc5db0c25da0b40b62e3474fe7db2c6059ce",
+  "chunk_binding_sha256": "6f5b2acc8d955811d7e8d35fd6a81f2117526ca0e6d7666d9d329e09cb71f570",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-b5c29d53498c.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "4f2c6b1cb799f9bf795d50d7e5a1f022ff343ea1c812f633e27a9a6a181dc4aa",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "9157c60a2527e84589dcd3d335dacbac7ca14b958e66cce153840d01de25fcc7",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“59 篇编号论文的结构与写作分析 / 逐篇证据摘要（59/59）”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "2fa3afc57c8710635f3f728256b755f87af59cf95bb6623fdfda030452ce3cc0",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-b5c29d53498c"
+}

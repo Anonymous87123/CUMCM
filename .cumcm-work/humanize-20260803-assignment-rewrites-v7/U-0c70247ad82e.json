@@ -1,0 +1,91 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-0c70247ad82e",
+  "chunk_binding_sha256": "6a1158d1cf71588ce92c3258f1aafc080813d9198a6d32bec4b264110ae7954f",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "e7e867d4911316eb",
+    "prepare_integrity_sha256": "a633dfcb09a3da2e2b138e5f22d1e9c1f1d3f1844b37ced5f47e90d74c0e5acd",
+    "run_metadata_sha256": "ed42a010547910b874853ea7105122ff42aa848053ac83540661647b45b06e07",
+    "policy_snapshot_sha256": "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "eba71855409d6a3c4570e3ddcb487e56ab77996bc3dde98146bf78dd30b00b94",
+      "unit_id": "U-0c70247ad82e",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 6081,
+      "end": 6567,
+      "start_line": 206,
+      "end_line": 224,
+      "source_span_sha256": "cc661b8235c81d78cb792d2f78047a4b4a7f195baf4fa7426322b18bb5218d3b",
+      "masked_text_sha256": "d849d02dca0f171421147a41570534d4bdc6eeda585b4a2f0bd726338cd1fa7b",
+      "chunk_binding_sha256": "6a1158d1cf71588ce92c3258f1aafc080813d9198a6d32bec4b264110ae7954f"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "ae4fb5858c89810cd046f74122af845720fffd651d9cdb2c73bb2e722496cd4f",
+      "routing_input_sha256": "ead50c6521564e267bbb80e3b6471d2ed4b6d68f0572a778df03b9f6641a0360"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "c5eec38bd3cb1d79d3486560437f71a33aac26fd8c1443d5d6a7abf7e5a5ea32"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00119:d954e130f92a]]\n\n代码流水线按下列输入输出关系拆分：\n[[PROTECTED:F00001-P00120:7dd80fd5ed7e]]\n[[PROTECTED:F00001-P00121:9bd6563a665b]][[PROTECTED:F00001-P00122:55668f736cc3]]\ngeometry -> state -> rhs -> solver[[PROTECTED:F00001-P00123:b11b4ca186c0]]\n-> validation -> export\n[[PROTECTED:F00001-P00124:6c1dc1fa6ece]]\nMATLAB 侧以 [[PROTECTED:F00001-P00125:b509813e33c0]]、稀疏矩阵和优化工具箱形成对照实现；Python 侧\n以 NumPy/SciPy 的数组、[[PROTECTED:F00001-P00126:77e4dcc19efe]]、稀疏线性代数和网格数据结构实现。\n每个模型提供一个可手算的小样例和一个真实规模样例，输出时间网格、状态量、\n守恒残差、收敛曲线及下游所需的 CSV。\n\n模型约束至少包括变量域、初边值、守恒关系、几何/运动学限制、参数物理范围和\n数值稳定条件。能由规则直接计算的几何关系不使用神经网络；样本驱动关系没有\n物理闭合时，不伪造微分方程。ODE 与 PDE 的边界取决于空间耦合是否不可忽略；\n有限差分与有限元的边界取决于几何和介质复杂度；RK4 与自适应/刚性求解器的\n边界取决于稳定域和尺度差异。\n\n",
+  "rewrite_intent": {
+    "summary": "删除工作台式词壳，保留对象、动作、条件和结论边界",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 3,
+        "end_line": 3,
+        "sha256": "e7c8c5dfc33cc3544372e082c14c9bf513b309ee2ea53504b74f02c0a09668b7"
+      }
+    ],
+    "target_signals": [
+      "LEX-STRICT-CORPUS-DIRECT-ACTION"
+    ]
+  }
+}

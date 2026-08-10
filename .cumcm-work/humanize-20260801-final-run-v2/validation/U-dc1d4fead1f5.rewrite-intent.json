@@ -1,0 +1,66 @@
+{
+  "artifact": {
+    "after_sha256": "3c591537bd751a56edb93c9123c2b7c7d6b2df5cdf0494a37a6cb825b6b6991e",
+    "before_sha256": "71e3a77be6d69c77ba5d63ccad96f8068459644aa0c46293b99f18cf0b8c62e1"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "2aa7e0e4ea6b93682a10be004412d87008385d4ecbf05280fc6417e44d2d7cc9",
+  "chunk_binding_sha256": "b4a5ce612261b6297c7e5de6be4888125f6c871c223650d93f36c58bcd902beb",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-dc1d4fead1f5.diff",
+    "sha256": "f063f6781f1f17dd932383791c2ce077fe503d6bd1564ad29d9a7b3b909d0419"
+  },
+  "evidence_sha256": "58b01dd4d14c71c46e0849f3362e0df53d1f2bb36f7fb999ce55eb2883fb3987",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "去掉阶段总结中的对举壳，保留责任线、比较口径和追溯关系",
+        "target_signals": [
+          "STYLE-EMPTY-CONTRAST"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 6,
+        "id": "S1",
+        "sha256": "07f26e63d1e17927bd2a695de8283c98fdd0cff7553543540b4e1c2b6fd8ad13",
+        "start_line": 4
+      }
+    ],
+    "summary": "去掉阶段总结中的对举壳，保留责任线、比较口径和追溯关系",
+    "target_signals": [
+      "STYLE-EMPTY-CONTRAST"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 6,
+        "operation": "REPLACE",
+        "start_line": 4
+      }
+    ],
+    "masked_after_sha256": "57da159596373263e261836d3e528028a9d53dc4037e5cc0895852ed241c3e19",
+    "masked_before_sha256": "9937a9547d62c9112b8d4dc3cfb5fc4326f2b72cf18c06ac6dda213ac7b15a09",
+    "source_spans_covered": 1,
+    "source_spans_total": 1,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "9f3cf13cc367d02c55fb58cd0309a9031c207d9c6527e9db08b366c44a289b9d",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-dc1d4fead1f5"
+}

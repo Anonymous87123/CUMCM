@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "3ab27546a451e7d2946e7d977ffcec42368f9237462e9a2f2e1b4c33abeec54b",
+    "before_sha256": "3ab27546a451e7d2946e7d977ffcec42368f9237462e9a2f2e1b4c33abeec54b"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "1ae9435f8c6cc0ba6b5284953e36c3fcf5e83f02e03be257391a60431335a5ed",
+  "chunk_binding_sha256": "0fcb7655c61971871eeb70d241f3dfc5d3c242855d457717f9e0b722865e4c89",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-90467d46e876.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "e5364a1ba71c3e92f5bbc336cf4ea6d5395c5e04410ceb96c11c85abf33a40f1",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "9bb71b606b5d48998e5812fa0247f50d815a20bd8b85d07b3979fe2f6f7258c9",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段落承担“可复用表达与 边界”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "dd3e3a2eec5f3b88df6269e0a59b7a6224d6697a67d0e4a84999c56c48500210",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-90467d46e876"
+}

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "9f1d4b4bba295485f943218a41732a3ca42c790f5e804d45432002c0c9c7437c",
+    "before_sha256": "9f1d4b4bba295485f943218a41732a3ca42c790f5e804d45432002c0c9c7437c"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "2ab4567c6f40f49d65927f108c4c67976d1d957f990980b93f9e4cf78a648db1",
+  "chunk_binding_sha256": "dcd089af0f10e9cab42974e3c459c588c9af9244d0fc9e37b1eebbd94dcb8623",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-438599cca761.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "ae7193f2f3146965636ef9b46778b337f442b66f5f7580b0678bda3c92c34f1c",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 1,
+        "id": "S1",
+        "sha256": "3e7a4094a013fbf76f0f1871e3dc04a502bd4a110aa7877c324070fab40094ea",
+        "start_line": 1
+      }
+    ],
+    "reason": "理论知识学习笔记 / 组员2：数据处理、评价决策与统计学习 / 开源代码逻辑、约束与选型边界 / 可实现代码清单中的定义、对象和条件承担后续对应关系，原句保持这些信息的排列与范围。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "a6dc3e5bb1b01432ab7263cc500f14f8069f450001ee3a17bbfb95e8051414e0",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-438599cca761"
+}

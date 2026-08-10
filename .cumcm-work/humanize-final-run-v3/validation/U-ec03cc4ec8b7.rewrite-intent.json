@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "0799b21cd80a25383f227749c1f8a153158b79d188c721bf49e008061d2951be",
+    "before_sha256": "0799b21cd80a25383f227749c1f8a153158b79d188c721bf49e008061d2951be"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "cbcbab16a607ef71a9ab68817458fc83912b9b5e5b6de2cf8e56676989437aa6",
+  "chunk_binding_sha256": "e27cec1af7ad2098183376e3b556455ef5ba2c1be9651e7766649ad23d8f5dc9",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-ec03cc4ec8b7.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "f20baf4bd41e9b5c2f5c58abcf5154cb7c7aa7443ee5f072c788dc89d228f15b",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 35,
+        "id": "S1",
+        "sha256": "062f81ead12623bea118327d9d3c482184095e7fd2c759e8c92f1d5eb9e69c9b",
+        "start_line": 35
+      }
+    ],
+    "reason": "本单元承担“(front-matter)”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "fd7919bdf4c83c2fe996891645d2c1be257331d083b39a8689363dd1636ad7a8",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-ec03cc4ec8b7"
+}

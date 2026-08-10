@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "1fe916cd671d381a09876c5a12e2cd1bfe9b2e26df43bba44ba1f275ebcae518",
+    "before_sha256": "1fe916cd671d381a09876c5a12e2cd1bfe9b2e26df43bba44ba1f275ebcae518"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "a8b7aab4c8c0fcc4b19f8608890344d736069c7cd5c3435b3f07b14e124c38ab",
+  "chunk_binding_sha256": "31fc534e29b82ce1b7fa65657e30e11cf2cdd1e05d201b430557266adf30c7c8",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-d55226c57d4a.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "5916751b736919d5ffa3ae9da0e72a964defbcb9a1c1aa6db47bd7c4ee5f720d",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "67c6b43ed02415243b64f4b35e8a61bd76cc8a8de3072b7ea770198593d35434",
+        "start_line": 3
+      }
+    ],
+    "reason": "本单元承担“双模式论文模板”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "c5e475d3f9ea580c1572609bd39bb67217457549f5e594aedb983688f027617b",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-d55226c57d4a"
+}

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "acacef343549d79060a4dc199376bf5a6fa5ecc81bfba66559129ecfe99988f4",
+    "before_sha256": "acacef343549d79060a4dc199376bf5a6fa5ecc81bfba66559129ecfe99988f4"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "54e42dd3d242e7945c5d3e59b8da95d1e9fb3fb9ee95c843c872324eae952418",
+  "chunk_binding_sha256": "1f033e36c46683e249589ed140b46dcd2e0d78bcd6546a5065c3d56cfd07fd5f",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-32f63fa253a0.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "92208f2779720a44cc48d874672b47e53ad25f31c85bde86d463c346a58cf86d",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 7,
+        "id": "S1",
+        "sha256": "a7f12d8583b7f2914e5d2a7d103c954fd6d273a80ffd99973b153e003a0efc57",
+        "start_line": 1
+      }
+    ],
+    "reason": "本节是问题重述的三项固定指引，原句保持题意范围、写作步骤与核对职责的对应关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "52e59632401da30f5390c08f78038fb2b88d43b7eeb73b244c339d549ad8e19d",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-32f63fa253a0"
+}

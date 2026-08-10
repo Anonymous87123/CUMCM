@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "745ec1ad1524f0de280b516165e7f2ca3ab843928aff937bd086baf164e43918",
+    "before_sha256": "745ec1ad1524f0de280b516165e7f2ca3ab843928aff937bd086baf164e43918"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "fdbb9441a928613ea2fb6411e0bf9823bff27e88edb0a40f2fc8b37ff1ba37e8",
+  "chunk_binding_sha256": "5766fc84603490c7b71d47c02a7243fb2e4d2939dbf589bc45c8669605a98dca",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-d0cbb9bb18c5.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "b96a9ba0615ae22e023992b0767bf63894a0939e416b951f586fc5b280ca1040",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "bd0e3a989b1abf3e64aa3dd3165f8cd52dc19d7d810a6c93c9928480b91448a3",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“理论知识学习笔记 / 三人交叉学习与代码集成”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "226ac37a940949ad2944dd4aa6197e05ddb9939a3d8cfaebfef9bbda791e9e1d",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-d0cbb9bb18c5"
+}

@@ -1,0 +1,20 @@
+\subsubsection{开源代码逻辑、约束与选型边界}
+
+代码流水线为：
+\begin{quote}
+\small\ttfamily
+schema -> audit -> split -> preprocess -> baseline\\
+-> fit -> validate -> explain -> export
+\end{quote}
+Python 侧使用 pandas、scikit-learn、
+statsmodels 及主流梯度提升输入输出关系；MATLAB 侧建立读表、缺失处理、回归分类和时序
+对照。所有随机切分记录种子，时间序列禁止随机打乱，分组样本按主体隔离。
+评价模型在正向化、无量纲化和权重确定后再计算排序，并做权重扰动和秩相关检验。
+
+K-Means 假定近似球形且需预设簇数，DBSCAN 能识别噪声和任意形状但依赖密度尺度；
+层次聚类便于解释树状结构但大样本代价高；谱聚类适合非凸簇但需构图。Lasso 可
+稀疏选择，Ridge 对共线性更稳定；SVR 适合中小样本但调参和扩展性受限；随机森林
+稳健易用但外推弱；梯度提升精度高但要防泄漏和过拟合。ARIMA/SARIMA 要检验
+平稳和季节性，VAR 要控制维数和滞后，GM(1,1) 只适合小样本单调趋势，深度时序
+模型不能替代滚动窗口基线。
+

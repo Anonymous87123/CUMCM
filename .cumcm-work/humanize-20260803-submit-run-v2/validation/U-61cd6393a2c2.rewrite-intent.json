@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "77597cad98bf8e0f4149a3591847963c58e3a62233f35bce78d05d24eac759f6",
+    "before_sha256": "77597cad98bf8e0f4149a3591847963c58e3a62233f35bce78d05d24eac759f6"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "fcade0f667611f5e1d5508554defb9253e39f90132c08d44e221bf4dc88a3818",
+  "chunk_binding_sha256": "5e8c067ae5391663ba62e5f8d26274576a725389c5ebdaed5e001f5c439c81e3",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-61cd6393a2c2.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "7cc663029daf346de662195e0d2368d0b20df92c896f1a47e4b981a52aeb6e77",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 8,
+        "id": "S1",
+        "sha256": "4cfecec9797744b9456921a16d695a842b24f8e2527e8df79b51b66e15049d34",
+        "start_line": 1
+      }
+    ],
+    "reason": "本节是附录的三项固定指引，原句保持文件入口、运行顺序与复现检查的职责关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "d4491748594376c563987a9efa6f4612c18e791ed7f14e5476ae576acfb2612d",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-61cd6393a2c2"
+}

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "e10bc078a3502f7ed80c73f90d9360483526099719832986dfd0e91b28851f46",
+    "before_sha256": "e10bc078a3502f7ed80c73f90d9360483526099719832986dfd0e91b28851f46"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "9ec8511d2439436e3e08fe44eb4cc2c06592f43f00154be610cd313c8e0392a5",
+  "chunk_binding_sha256": "82ee88e2704951deb5a873aa6333fab05aecdc102987795841b81b1e2cbd75ae",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-c8ea003d42a0.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "7ecf2dbfc3bd9d4aca6376de599701c460b219e20c83eaee881a5cd9d9894ada",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 1,
+        "id": "S1",
+        "sha256": "3d692b1f597b98557b4813c797c818c59432b714d332c7d4ddb44a6f7d1da604",
+        "start_line": 1
+      }
+    ],
+    "reason": "该段承担“理论知识学习笔记 / 队长：机理、连续模型与数值实现 / 开源代码逻辑、约束与选型边界 / 可实现代码清单”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "aa8f77d4259ff1b3e9696313b50918ec545f51b1c25fde6f1578ce4ad1f911cd",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-c8ea003d42a0"
+}

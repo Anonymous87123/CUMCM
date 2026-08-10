@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "4fac80edb486235302e9377f0ddcf828fb79ad14478e833d00e1ebebcc392158",
+    "before_sha256": "4fac80edb486235302e9377f0ddcf828fb79ad14478e833d00e1ebebcc392158"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "0d5ff141aae14c98a583dcf6d72d68bf10850008653069ffec54e68c44e4f6eb",
+  "chunk_binding_sha256": "6d84ebd60f4a34136618b84c176a580a7745ca02399886c0e23e3f732e9eb752",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-4acad627ff79.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "27d13a9cebad88b28ac1035cad03fef41baed077b3e366057a6231c1c5c084c8",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "bea6388d7be80b5e5ca45b7777fc31e5de4dc684258f33b4f62803e410533e43",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段落承担“高分写作策略与冻结节奏”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "c18e591d4799b55a4bffdb69cb1475f511a92824ac5ed661c7e99fd9691cfe58",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-4acad627ff79"
+}

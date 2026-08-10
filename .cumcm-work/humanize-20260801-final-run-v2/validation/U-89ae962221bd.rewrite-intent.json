@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "74e3b8ac61a05bdc51d6a9417498c5bdc58b163156676c1cf41b519d29d8eecc",
+    "before_sha256": "74e3b8ac61a05bdc51d6a9417498c5bdc58b163156676c1cf41b519d29d8eecc"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "c31b3d9bcaf65b0690601f678669a949e65d90b5a2a45d0879e5e302e34457c4",
+  "chunk_binding_sha256": "4e7e752a38cecab0da39e7a488b6c29a80a805d09136033f6732c32620d3ea20",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-89ae962221bd.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "414ccf1d2e32508f3d4743835c7289f661e964495a79f5e4418eb6710b41f559",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 6,
+        "id": "S1",
+        "sha256": "add13b351390c2ec1e97b4e7a9a2567f18f2983c62a68437c2ab49727359d10d",
+        "start_line": 6
+      }
+    ],
+    "reason": "该段落承担“算法责任与验收总表”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "fdba67cfab87a190ef950e9b17cdff02536a13a1925e0041d0336a024edb29ef",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-89ae962221bd"
+}

@@ -1,0 +1,268 @@
+{
+  "action_catalog_sha256": "1a63b106a03bec4d30da50e4ca61031b8a713e0b3e9508986ec403c42c81dc47",
+  "action_profile_sha256": "d4b9a969679878bdef250727c3be239a73e06353ae2cd7be8ed86d54d179c68c",
+  "action_profile_status": "PASS",
+  "active_detector_definition_sha256": [
+    "41093627534731dd0dc6b5125b5d1c9b4e8a050e8cade4b4da7e5c26f4c6eb20",
+    "dd2b8ec37beb5116792eca111f4899bdecf6747bb63e9d988c3a6672b23f82f8",
+    "dff1ba4363a0b94fa3a2f0cac0767e4c43e87961636c9ddac743d9057e9ece7a"
+  ],
+  "after_blocks": 805,
+  "before_blocks": 806,
+  "before_logical_document_sha256": "2dc90b3dc435fd0764123234f843eb433038dbbf925feb23e55147290f9fa591",
+  "blocking_unit_ids": [],
+  "candidate_logical_document_sha256": "cf64b3f57a6b685d69964ca0aa6bce9656a03e547197908d256e493ef9c8d483",
+  "evaluated_units": 39,
+  "evaluation_partitions": [
+    {
+      "before_sha256": "285f878f453fb71aa1959caa30b5e52be0bcd215bfe81b7a4f2f87ea4f0d678e",
+      "candidate_sha256": "311bb568e2798d98192cc94bd60a2b7956caf5fff92803264913841e0fd9bcc3",
+      "document_id": "F00001",
+      "resolved_scene": "RESEARCH",
+      "unit_ids": [
+        "U-b5c30d3ca9bd",
+        "U-49a34aee86bf",
+        "U-94a28b23042d",
+        "U-48cb61020967",
+        "U-24139d897c83",
+        "U-17d432b80a9c",
+        "U-73162cc69d3a",
+        "U-19f88759c00e",
+        "U-c0f563b60802",
+        "U-04a1ce9a4611",
+        "U-952fb6df090b",
+        "U-c0102a2e2c80",
+        "U-b17329da3240",
+        "U-438599cca761",
+        "U-5195cb2b3059",
+        "U-d11c94ad8311",
+        "U-213fa09c88f5",
+        "U-580969dafb9e",
+        "U-05217b44088e",
+        "U-25a0c095fd90",
+        "U-39c3b2a09800",
+        "U-0ebb8684a53b",
+        "U-fc5240811f30",
+        "U-5d857e2f67a2",
+        "U-cdba9d7c0739",
+        "U-abbfb6c359b1",
+        "U-83e9d804292c",
+        "U-dcc3af27e48a",
+        "U-8e230eef625d",
+        "U-fba4919d96ca",
+        "U-afdbbfd593b5",
+        "U-b7d2b1d1bb43",
+        "U-abffe16d1397",
+        "U-80f2f63f7c33",
+        "U-9e0e95a33034",
+        "U-eebfee034c08",
+        "U-cbd181bfa3d9",
+        "U-460624f13521",
+        "U-16a976e31357"
+      ]
+    }
+  ],
+  "evaluation_scope": "FULL",
+  "expected_units": 39,
+  "finding_count": 0,
+  "findings": [],
+  "inherited_finding_count": 1,
+  "inherited_findings": [
+    {
+      "after": {
+        "group_results": [
+          {
+            "id": "future_bridge",
+            "minimum_occurrences": 1,
+            "occurrences": 0,
+            "triggered": false,
+            "units": []
+          },
+          {
+            "id": "repeated_forced_contrast",
+            "minimum_occurrences": 2,
+            "occurrences": 26,
+            "triggered": true,
+            "units": [
+              "U-5d857e2f67a2",
+              "U-cdba9d7c0739",
+              "U-dcc3af27e48a",
+              "U-fc5240811f30"
+            ]
+          }
+        ],
+        "matched_units": [
+          "U-5d857e2f67a2",
+          "U-cdba9d7c0739",
+          "U-dcc3af27e48a",
+          "U-fc5240811f30"
+        ],
+        "triggered": true
+      },
+      "attribution_status": "INHERITED_BEFORE_THRESHOLD",
+      "before": {
+        "group_results": [
+          {
+            "id": "future_bridge",
+            "minimum_occurrences": 1,
+            "occurrences": 0,
+            "triggered": false,
+            "units": []
+          },
+          {
+            "id": "repeated_forced_contrast",
+            "minimum_occurrences": 2,
+            "occurrences": 26,
+            "triggered": true,
+            "units": [
+              "U-5d857e2f67a2",
+              "U-cdba9d7c0739",
+              "U-dcc3af27e48a",
+              "U-fc5240811f30"
+            ]
+          }
+        ],
+        "matched_units": [
+          "U-5d857e2f67a2",
+          "U-cdba9d7c0739",
+          "U-dcc3af27e48a",
+          "U-fc5240811f30"
+        ],
+        "triggered": true
+      },
+      "card_id": "NEGATIVE-TEMPLATE-01",
+      "definition_sha256": "dd2b8ec37beb5116792eca111f4899bdecf6747bb63e9d988c3a6672b23f82f8",
+      "detector_type": "regex_groups/v1",
+      "document_id": "F00001",
+      "evaluated_scene": "RESEARCH",
+      "finding_fingerprint": "8fc7719a8b4a1d4f3b6d32ce15b1b80b932811a40cf6375a0be0a6d4a4d9426f",
+      "kind": "CORPUS_NEGATIVE_GUARD",
+      "scene": "ALL",
+      "units": [
+        "U-04a1ce9a4611",
+        "U-05217b44088e",
+        "U-0ebb8684a53b",
+        "U-16a976e31357",
+        "U-17d432b80a9c",
+        "U-19f88759c00e",
+        "U-213fa09c88f5",
+        "U-24139d897c83",
+        "U-25a0c095fd90",
+        "U-39c3b2a09800",
+        "U-438599cca761",
+        "U-460624f13521",
+        "U-48cb61020967",
+        "U-49a34aee86bf",
+        "U-5195cb2b3059",
+        "U-580969dafb9e",
+        "U-5d857e2f67a2",
+        "U-73162cc69d3a",
+        "U-80f2f63f7c33",
+        "U-83e9d804292c",
+        "U-8e230eef625d",
+        "U-94a28b23042d",
+        "U-952fb6df090b",
+        "U-9e0e95a33034",
+        "U-abbfb6c359b1",
+        "U-abffe16d1397",
+        "U-afdbbfd593b5",
+        "U-b17329da3240",
+        "U-b5c30d3ca9bd",
+        "U-b7d2b1d1bb43",
+        "U-c0102a2e2c80",
+        "U-c0f563b60802",
+        "U-cbd181bfa3d9",
+        "U-cdba9d7c0739",
+        "U-d11c94ad8311",
+        "U-dcc3af27e48a",
+        "U-eebfee034c08",
+        "U-fba4919d96ca",
+        "U-fc5240811f30"
+      ]
+    }
+  ],
+  "lexical_policy_sha256": "08b4e88c540722085ab5130c2137c802ce2ef561f64db8a3f97660e98c12e29b",
+  "logical_document_hashes": [
+    {
+      "before_sha256": "285f878f453fb71aa1959caa30b5e52be0bcd215bfe81b7a4f2f87ea4f0d678e",
+      "candidate_sha256": "311bb568e2798d98192cc94bd60a2b7956caf5fff92803264913841e0fd9bcc3",
+      "document_id": "F00001",
+      "unit_ids": [
+        "U-b5c30d3ca9bd",
+        "U-49a34aee86bf",
+        "U-94a28b23042d",
+        "U-48cb61020967",
+        "U-24139d897c83",
+        "U-17d432b80a9c",
+        "U-73162cc69d3a",
+        "U-19f88759c00e",
+        "U-c0f563b60802",
+        "U-04a1ce9a4611",
+        "U-952fb6df090b",
+        "U-c0102a2e2c80",
+        "U-b17329da3240",
+        "U-438599cca761",
+        "U-5195cb2b3059",
+        "U-d11c94ad8311",
+        "U-213fa09c88f5",
+        "U-580969dafb9e",
+        "U-05217b44088e",
+        "U-25a0c095fd90",
+        "U-39c3b2a09800",
+        "U-0ebb8684a53b",
+        "U-fc5240811f30",
+        "U-5d857e2f67a2",
+        "U-cdba9d7c0739",
+        "U-abbfb6c359b1",
+        "U-83e9d804292c",
+        "U-dcc3af27e48a",
+        "U-8e230eef625d",
+        "U-fba4919d96ca",
+        "U-afdbbfd593b5",
+        "U-b7d2b1d1bb43",
+        "U-abffe16d1397",
+        "U-80f2f63f7c33",
+        "U-9e0e95a33034",
+        "U-eebfee034c08",
+        "U-cbd181bfa3d9",
+        "U-460624f13521",
+        "U-16a976e31357"
+      ]
+    }
+  ],
+  "negative_guard_loader_version": "2.0.0",
+  "negative_guard_registry_sha256": "d4b9a969679878bdef250727c3be239a73e06353ae2cd7be8ed86d54d179c68c",
+  "negative_guard_registry_source_format": "FULL_AUDIT_CATALOG",
+  "negative_guard_registry_source_sha256": "1a63b106a03bec4d30da50e4ca61031b8a713e0b3e9508986ec403c42c81dc47",
+  "negative_guard_registry_status": "PASS",
+  "policy": {
+    "author_view": "masked_text_without_protected_payload",
+    "boundary_minimum_units": 3,
+    "boundary_opening_han_chars": 6,
+    "comparison": "after must not introduce additional cross-unit coverage",
+    "corpus_negative_guards": [
+      "regex_groups/v1",
+      "structured_repeated_list/v1"
+    ],
+    "partition_key": [
+      "logical_document_id",
+      "resolved_scene"
+    ],
+    "repair_signal_categories": [
+      "repair-template-repetition"
+    ],
+    "scene_all_semantics": "evaluate_each_resolved_scene_separately",
+    "structured_tex_projection": [
+      "LIST_BEGIN",
+      "LIST_ITEM",
+      "LIST_END"
+    ],
+    "template_normalization": "NFKC+remove-zero-width+remove-Han-internal-space",
+    "version": "cross-unit-repetition/v3"
+  },
+  "policy_sha256": "cadd752b9716d0664de8ef48a1205e870a3b080eafdd93a4fda3a588963ff403",
+  "review_reasons": [],
+  "schema_version": "humanize-cross-unit-repetition/v3",
+  "status": "PASS",
+  "unit_inventory_sha256": "3399e28d5a4d36382d344d2681a2162a5a618307a76bfc95d47ee3ee848e74e3"
+}

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "1de8f0ba6b044b0afbfc2002ad0217827122031201367c05c5ea0b491f885311",
+    "before_sha256": "1de8f0ba6b044b0afbfc2002ad0217827122031201367c05c5ea0b491f885311"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "6edf3feb3851bbc5e145e77163c4ff5a6b89f773ba7c752e51159aa8eda7b24b",
+  "chunk_binding_sha256": "ec1680358c77ca989c872fe524e697e97d312493e1af6e57cd8336358a49439f",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-5171b9294d02.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "948b4230db801bdc12b4c6a457cea0f5f0e1aec85f807090f4b63fdadd93c5e5",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 7,
+        "id": "S1",
+        "sha256": "fd2e8c68ebafff82d9359522b05158c155e4459dcbfedbbe15dcbfac4e6a57ad",
+        "start_line": 1
+      }
+    ],
+    "reason": "本节是符号说明的三项固定指引，原句维持收录范围、制表规则与一致性核对。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "d49c1e7be181c145639e2fa201ae35e72c587f04686775c8fe5f5c37bc89bb44",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-5171b9294d02"
+}

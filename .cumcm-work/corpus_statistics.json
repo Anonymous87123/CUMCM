@@ -1,0 +1,2286 @@
+{
+  "scope": {
+    "years": [
+      2020,
+      2021,
+      2022,
+      2023,
+      2024,
+      2025
+    ],
+    "problem_types": [
+      "A",
+      "B",
+      "C"
+    ],
+    "papers": 59,
+    "pages": 2892,
+    "excludes": [
+      "D",
+      "E",
+      "赛题原文文风统计",
+      "专家评述文风统计"
+    ]
+  },
+  "paper_pages": {
+    "ALL": {
+      "n": 59,
+      "q1": 37.0,
+      "median": 45.0,
+      "q3": 58.5,
+      "min": 26,
+      "max": 104
+    },
+    "A": {
+      "n": 20,
+      "q1": 36.5,
+      "median": 44.5,
+      "q3": 58.0,
+      "min": 26,
+      "max": 89
+    },
+    "B": {
+      "n": 19,
+      "q1": 34.0,
+      "median": 42.0,
+      "q3": 55.0,
+      "min": 26,
+      "max": 104
+    },
+    "C": {
+      "n": 20,
+      "q1": 43.25,
+      "median": 52.0,
+      "q3": 60.25,
+      "min": 26,
+      "max": 77
+    }
+  },
+  "text_line_density": {
+    "ALL": {
+      "n": 59,
+      "q1": 33.0,
+      "median": 38.0,
+      "q3": 41.25,
+      "min": 25.5,
+      "max": 60.0
+    },
+    "A": {
+      "n": 20,
+      "q1": 32.0,
+      "median": 35.75,
+      "q3": 39.0,
+      "min": 28,
+      "max": 48.5
+    },
+    "B": {
+      "n": 19,
+      "q1": 33.25,
+      "median": 36.5,
+      "q3": 42.0,
+      "min": 25.5,
+      "max": 53.0
+    },
+    "C": {
+      "n": 20,
+      "q1": 36.5,
+      "median": 39.0,
+      "q3": 41.88,
+      "min": 26.5,
+      "max": 60.0
+    }
+  },
+  "paragraph_candidate_density": {
+    "ALL": {
+      "n": 59,
+      "q1": 4.5,
+      "median": 6.0,
+      "q3": 7.0,
+      "min": 0,
+      "max": 9
+    },
+    "A": {
+      "n": 20,
+      "q1": 3.75,
+      "median": 6.0,
+      "q3": 6.0,
+      "min": 0,
+      "max": 8.0
+    },
+    "B": {
+      "n": 19,
+      "q1": 2.75,
+      "median": 6.0,
+      "q3": 7.25,
+      "min": 0,
+      "max": 9
+    },
+    "C": {
+      "n": 20,
+      "q1": 6.0,
+      "median": 6.0,
+      "q3": 7.0,
+      "min": 0.0,
+      "max": 9.0
+    }
+  },
+  "section_statistics": {
+    "ALL": {
+      "摘要": {
+        "detected": 58,
+        "prevalence": 0.9831,
+        "start_fraction": {
+          "n": 58,
+          "q1": 0.017,
+          "median": 0.0215,
+          "q3": 0.0268,
+          "min": 0.0096,
+          "max": 0.4231
+        },
+        "page_span": {
+          "n": 58,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 8
+        },
+        "span_fraction": {
+          "n": 58,
+          "q1": 0.017,
+          "median": 0.0215,
+          "q3": 0.0268,
+          "min": 0.0096,
+          "max": 0.3077
+        }
+      },
+      "问题重述": {
+        "detected": 57,
+        "prevalence": 0.9661,
+        "start_fraction": {
+          "n": 57,
+          "q1": 0.0345,
+          "median": 0.0444,
+          "q3": 0.0541,
+          "min": 0.0192,
+          "max": 0.7308
+        },
+        "page_span": {
+          "n": 57,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 2
+        },
+        "span_fraction": {
+          "n": 57,
+          "q1": 0.0172,
+          "median": 0.0222,
+          "q3": 0.0286,
+          "min": 0.0112,
+          "max": 0.0714
+        }
+      },
+      "问题分析": {
+        "detected": 57,
+        "prevalence": 0.9661,
+        "start_fraction": {
+          "n": 57,
+          "q1": 0.0417,
+          "median": 0.0526,
+          "q3": 0.0732,
+          "min": 0.026,
+          "max": 0.7308
+        },
+        "page_span": {
+          "n": 57,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 26
+        },
+        "span_fraction": {
+          "n": 57,
+          "q1": 0.0172,
+          "median": 0.0244,
+          "q3": 0.0357,
+          "min": 0.0112,
+          "max": 0.6341
+        }
+      },
+      "模型假设": {
+        "detected": 48,
+        "prevalence": 0.8136,
+        "start_fraction": {
+          "n": 48,
+          "q1": 0.0562,
+          "median": 0.0735,
+          "q3": 0.106,
+          "min": 0.0238,
+          "max": 0.7692
+        },
+        "page_span": {
+          "n": 48,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 9
+        },
+        "span_fraction": {
+          "n": 48,
+          "q1": 0.0172,
+          "median": 0.0225,
+          "q3": 0.0286,
+          "min": 0.013,
+          "max": 0.2
+        }
+      },
+      "符号说明": {
+        "detected": 58,
+        "prevalence": 0.9831,
+        "start_fraction": {
+          "n": 58,
+          "q1": 0.0661,
+          "median": 0.0808,
+          "q3": 0.1143,
+          "min": 0.027,
+          "max": 0.7692
+        },
+        "page_span": {
+          "n": 58,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 3.75,
+          "min": 1,
+          "max": 22
+        },
+        "span_fraction": {
+          "n": 58,
+          "q1": 0.0205,
+          "median": 0.029,
+          "q3": 0.0749,
+          "min": 0.0135,
+          "max": 0.5357
+        }
+      },
+      "模型建立": {
+        "detected": 58,
+        "prevalence": 0.9831,
+        "start_fraction": {
+          "n": 58,
+          "q1": 0.0489,
+          "median": 0.0825,
+          "q3": 0.1329,
+          "min": 0.0167,
+          "max": 0.3235
+        },
+        "page_span": {
+          "n": 58,
+          "q1": 1.0,
+          "median": 2.0,
+          "q3": 6.0,
+          "min": 1,
+          "max": 23
+        },
+        "span_fraction": {
+          "n": 58,
+          "q1": 0.0245,
+          "median": 0.045,
+          "q3": 0.1681,
+          "min": 0.0112,
+          "max": 0.4773
+        }
+      },
+      "模型求解": {
+        "detected": 55,
+        "prevalence": 0.9322,
+        "start_fraction": {
+          "n": 55,
+          "q1": 0.0286,
+          "median": 0.1077,
+          "q3": 0.2319,
+          "min": 0.0139,
+          "max": 0.9286
+        },
+        "page_span": {
+          "n": 55,
+          "q1": 1.0,
+          "median": 2.0,
+          "q3": 6.0,
+          "min": 1,
+          "max": 24
+        },
+        "span_fraction": {
+          "n": 55,
+          "q1": 0.0206,
+          "median": 0.0385,
+          "q3": 0.1562,
+          "min": 0.0139,
+          "max": 0.6471
+        }
+      },
+      "结果分析": {
+        "detected": 47,
+        "prevalence": 0.7966,
+        "start_fraction": {
+          "n": 47,
+          "q1": 0.0639,
+          "median": 0.1795,
+          "q3": 0.3107,
+          "min": 0.013,
+          "max": 0.5385
+        },
+        "page_span": {
+          "n": 47,
+          "q1": 1.0,
+          "median": 7.0,
+          "q3": 12.0,
+          "min": 1,
+          "max": 22
+        },
+        "span_fraction": {
+          "n": 47,
+          "q1": 0.0278,
+          "median": 0.1282,
+          "q3": 0.25,
+          "min": 0.0112,
+          "max": 0.5
+        }
+      },
+      "模型检验": {
+        "detected": 22,
+        "prevalence": 0.3729,
+        "start_fraction": {
+          "n": 22,
+          "q1": 0.0564,
+          "median": 0.2294,
+          "q3": 0.4821,
+          "min": 0.0244,
+          "max": 0.625
+        },
+        "page_span": {
+          "n": 22,
+          "q1": 1.0,
+          "median": 1.5,
+          "q3": 7.0,
+          "min": 1,
+          "max": 21
+        },
+        "span_fraction": {
+          "n": 22,
+          "q1": 0.0249,
+          "median": 0.0335,
+          "q3": 0.1889,
+          "min": 0.0169,
+          "max": 0.2917
+        }
+      },
+      "灵敏度分析": {
+        "detected": 25,
+        "prevalence": 0.4237,
+        "start_fraction": {
+          "n": 25,
+          "q1": 0.02,
+          "median": 0.0357,
+          "q3": 0.3929,
+          "min": 0.0096,
+          "max": 0.5556
+        },
+        "page_span": {
+          "n": 25,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 2.0,
+          "min": 1,
+          "max": 16
+        },
+        "span_fraction": {
+          "n": 25,
+          "q1": 0.0179,
+          "median": 0.0256,
+          "q3": 0.0385,
+          "min": 0.0096,
+          "max": 0.2462
+        }
+      },
+      "模型评价": {
+        "detected": 51,
+        "prevalence": 0.8644,
+        "start_fraction": {
+          "n": 51,
+          "q1": 0.396,
+          "median": 0.5111,
+          "q3": 0.6186,
+          "min": 0.0167,
+          "max": 0.9706
+        },
+        "page_span": {
+          "n": 51,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 33
+        },
+        "span_fraction": {
+          "n": 51,
+          "q1": 0.0172,
+          "median": 0.0227,
+          "q3": 0.0294,
+          "min": 0.0112,
+          "max": 0.569
+        }
+      },
+      "改进方案": {
+        "detected": 19,
+        "prevalence": 0.322,
+        "start_fraction": {
+          "n": 19,
+          "q1": 0.3707,
+          "median": 0.4667,
+          "q3": 0.5928,
+          "min": 0.0189,
+          "max": 0.7143
+        },
+        "page_span": {
+          "n": 19,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 8
+        },
+        "span_fraction": {
+          "n": 19,
+          "q1": 0.0194,
+          "median": 0.0263,
+          "q3": 0.0345,
+          "min": 0.0143,
+          "max": 0.1778
+        }
+      },
+      "参考文献": {
+        "detected": 57,
+        "prevalence": 0.9661,
+        "start_fraction": {
+          "n": 57,
+          "q1": 0.4151,
+          "median": 0.5424,
+          "q3": 0.6667,
+          "min": 0.069,
+          "max": 0.9706
+        },
+        "page_span": {
+          "n": 57,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 11.0,
+          "min": 1,
+          "max": 49
+        },
+        "span_fraction": {
+          "n": 57,
+          "q1": 0.0222,
+          "median": 0.0333,
+          "q3": 0.2941,
+          "min": 0.0096,
+          "max": 0.7
+        }
+      },
+      "附录": {
+        "detected": 48,
+        "prevalence": 0.8136,
+        "start_fraction": {
+          "n": 48,
+          "q1": 0.4427,
+          "median": 0.5574,
+          "q3": 0.7079,
+          "min": 0.0143,
+          "max": 1.0
+        },
+        "page_span": {
+          "n": 48,
+          "q1": 6.0,
+          "median": 16.0,
+          "q3": 28.0,
+          "min": 1,
+          "max": 76
+        },
+        "span_fraction": {
+          "n": 48,
+          "q1": 0.1865,
+          "median": 0.3779,
+          "q3": 0.4926,
+          "min": 0.0143,
+          "max": 0.7432
+        }
+      }
+    },
+    "A": {
+      "摘要": {
+        "detected": 20,
+        "prevalence": 1.0,
+        "start_fraction": {
+          "n": 20,
+          "q1": 0.0172,
+          "median": 0.0225,
+          "q3": 0.0274,
+          "min": 0.0112,
+          "max": 0.0385
+        },
+        "page_span": {
+          "n": 20,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 1
+        },
+        "span_fraction": {
+          "n": 20,
+          "q1": 0.0172,
+          "median": 0.0225,
+          "q3": 0.0274,
+          "min": 0.0112,
+          "max": 0.0385
+        }
+      },
+      "问题重述": {
+        "detected": 19,
+        "prevalence": 0.95,
+        "start_fraction": {
+          "n": 19,
+          "q1": 0.0345,
+          "median": 0.0444,
+          "q3": 0.0556,
+          "min": 0.0225,
+          "max": 0.0769
+        },
+        "page_span": {
+          "n": 19,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 2
+        },
+        "span_fraction": {
+          "n": 19,
+          "q1": 0.0172,
+          "median": 0.0222,
+          "q3": 0.029,
+          "min": 0.0112,
+          "max": 0.0455
+        }
+      },
+      "问题分析": {
+        "detected": 20,
+        "prevalence": 1.0,
+        "start_fraction": {
+          "n": 20,
+          "q1": 0.0502,
+          "median": 0.0533,
+          "q3": 0.0863,
+          "min": 0.0337,
+          "max": 0.1154
+        },
+        "page_span": {
+          "n": 20,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 5
+        },
+        "span_fraction": {
+          "n": 20,
+          "q1": 0.0175,
+          "median": 0.026,
+          "q3": 0.0304,
+          "min": 0.0112,
+          "max": 0.0847
+        }
+      },
+      "模型假设": {
+        "detected": 17,
+        "prevalence": 0.85,
+        "start_fraction": {
+          "n": 17,
+          "q1": 0.0678,
+          "median": 0.0811,
+          "q3": 0.1143,
+          "min": 0.0377,
+          "max": 0.1538
+        },
+        "page_span": {
+          "n": 17,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 1
+        },
+        "span_fraction": {
+          "n": 17,
+          "q1": 0.0189,
+          "median": 0.0238,
+          "q3": 0.0286,
+          "min": 0.0169,
+          "max": 0.0385
+        }
+      },
+      "符号说明": {
+        "detected": 20,
+        "prevalence": 1.0,
+        "start_fraction": {
+          "n": 20,
+          "q1": 0.061,
+          "median": 0.0781,
+          "q3": 0.1127,
+          "min": 0.0449,
+          "max": 0.1538
+        },
+        "page_span": {
+          "n": 20,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 4.25,
+          "min": 1,
+          "max": 10
+        },
+        "span_fraction": {
+          "n": 20,
+          "q1": 0.0203,
+          "median": 0.0267,
+          "q3": 0.0729,
+          "min": 0.0161,
+          "max": 0.3846
+        }
+      },
+      "模型建立": {
+        "detected": 20,
+        "prevalence": 1.0,
+        "start_fraction": {
+          "n": 20,
+          "q1": 0.0481,
+          "median": 0.087,
+          "q3": 0.1371,
+          "min": 0.0169,
+          "max": 0.3235
+        },
+        "page_span": {
+          "n": 20,
+          "q1": 1.0,
+          "median": 2.0,
+          "q3": 4.5,
+          "min": 1,
+          "max": 21
+        },
+        "span_fraction": {
+          "n": 20,
+          "q1": 0.0285,
+          "median": 0.045,
+          "q3": 0.1216,
+          "min": 0.0112,
+          "max": 0.4773
+        }
+      },
+      "模型求解": {
+        "detected": 19,
+        "prevalence": 0.95,
+        "start_fraction": {
+          "n": 19,
+          "q1": 0.0406,
+          "median": 0.1348,
+          "q3": 0.251,
+          "min": 0.0172,
+          "max": 0.3529
+        },
+        "page_span": {
+          "n": 19,
+          "q1": 1.0,
+          "median": 2.0,
+          "q3": 4.5,
+          "min": 1,
+          "max": 21
+        },
+        "span_fraction": {
+          "n": 19,
+          "q1": 0.0254,
+          "median": 0.0444,
+          "q3": 0.0811,
+          "min": 0.0172,
+          "max": 0.339
+        }
+      },
+      "结果分析": {
+        "detected": 16,
+        "prevalence": 0.8,
+        "start_fraction": {
+          "n": 16,
+          "q1": 0.1239,
+          "median": 0.2552,
+          "q3": 0.3303,
+          "min": 0.0161,
+          "max": 0.5385
+        },
+        "page_span": {
+          "n": 16,
+          "q1": 1.75,
+          "median": 5.5,
+          "q3": 14.0,
+          "min": 1,
+          "max": 22
+        },
+        "span_fraction": {
+          "n": 16,
+          "q1": 0.0326,
+          "median": 0.1556,
+          "q3": 0.3709,
+          "min": 0.0112,
+          "max": 0.5
+        }
+      },
+      "模型检验": {
+        "detected": 11,
+        "prevalence": 0.55,
+        "start_fraction": {
+          "n": 11,
+          "q1": 0.1335,
+          "median": 0.375,
+          "q3": 0.4987,
+          "min": 0.027,
+          "max": 0.5526
+        },
+        "page_span": {
+          "n": 11,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 7.5,
+          "min": 1,
+          "max": 14
+        },
+        "span_fraction": {
+          "n": 11,
+          "q1": 0.0236,
+          "median": 0.0294,
+          "q3": 0.1629,
+          "min": 0.0169,
+          "max": 0.2857
+        }
+      },
+      "灵敏度分析": {
+        "detected": 7,
+        "prevalence": 0.35,
+        "start_fraction": {
+          "n": 7,
+          "q1": 0.0271,
+          "median": 0.1798,
+          "q3": 0.4214,
+          "min": 0.0161,
+          "max": 0.5085
+        },
+        "page_span": {
+          "n": 7,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 2.0,
+          "min": 1,
+          "max": 9
+        },
+        "span_fraction": {
+          "n": 7,
+          "q1": 0.0213,
+          "median": 0.0286,
+          "q3": 0.0467,
+          "min": 0.0161,
+          "max": 0.1011
+        }
+      },
+      "模型评价": {
+        "detected": 18,
+        "prevalence": 0.9,
+        "start_fraction": {
+          "n": 18,
+          "q1": 0.3884,
+          "median": 0.5319,
+          "q3": 0.6259,
+          "min": 0.0222,
+          "max": 0.9706
+        },
+        "page_span": {
+          "n": 18,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 32
+        },
+        "span_fraction": {
+          "n": 18,
+          "q1": 0.0173,
+          "median": 0.0225,
+          "q3": 0.0292,
+          "min": 0.0112,
+          "max": 0.5517
+        }
+      },
+      "改进方案": {
+        "detected": 7,
+        "prevalence": 0.35,
+        "start_fraction": {
+          "n": 7,
+          "q1": 0.4622,
+          "median": 0.5789,
+          "q3": 0.614,
+          "min": 0.0385,
+          "max": 0.7059
+        },
+        "page_span": {
+          "n": 7,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 1
+        },
+        "span_fraction": {
+          "n": 7,
+          "q1": 0.026,
+          "median": 0.027,
+          "q3": 0.0314,
+          "min": 0.0175,
+          "max": 0.0385
+        }
+      },
+      "参考文献": {
+        "detected": 20,
+        "prevalence": 1.0,
+        "start_fraction": {
+          "n": 20,
+          "q1": 0.4792,
+          "median": 0.5804,
+          "q3": 0.6552,
+          "min": 0.1379,
+          "max": 0.9706
+        },
+        "page_span": {
+          "n": 20,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 12.25,
+          "min": 1,
+          "max": 40
+        },
+        "span_fraction": {
+          "n": 20,
+          "q1": 0.0223,
+          "median": 0.029,
+          "q3": 0.3053,
+          "min": 0.0112,
+          "max": 0.678
+        }
+      },
+      "附录": {
+        "detected": 15,
+        "prevalence": 0.75,
+        "start_fraction": {
+          "n": 15,
+          "q1": 0.4807,
+          "median": 0.5641,
+          "q3": 0.6581,
+          "min": 0.0172,
+          "max": 1.0
+        },
+        "page_span": {
+          "n": 15,
+          "q1": 9.5,
+          "median": 16.0,
+          "q3": 24.0,
+          "min": 1,
+          "max": 63
+        },
+        "span_fraction": {
+          "n": 15,
+          "q1": 0.3397,
+          "median": 0.3774,
+          "q3": 0.4721,
+          "min": 0.0172,
+          "max": 0.7079
+        }
+      }
+    },
+    "B": {
+      "摘要": {
+        "detected": 18,
+        "prevalence": 0.9474,
+        "start_fraction": {
+          "n": 18,
+          "q1": 0.0176,
+          "median": 0.023,
+          "q3": 0.0288,
+          "min": 0.0096,
+          "max": 0.4231
+        },
+        "page_span": {
+          "n": 18,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 8
+        },
+        "span_fraction": {
+          "n": 18,
+          "q1": 0.0176,
+          "median": 0.023,
+          "q3": 0.0288,
+          "min": 0.0096,
+          "max": 0.3077
+        }
+      },
+      "问题重述": {
+        "detected": 19,
+        "prevalence": 1.0,
+        "start_fraction": {
+          "n": 19,
+          "q1": 0.0366,
+          "median": 0.0476,
+          "q3": 0.0588,
+          "min": 0.0192,
+          "max": 0.7308
+        },
+        "page_span": {
+          "n": 19,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 2
+        },
+        "span_fraction": {
+          "n": 19,
+          "q1": 0.0194,
+          "median": 0.0238,
+          "q3": 0.0294,
+          "min": 0.0139,
+          "max": 0.0385
+        }
+      },
+      "问题分析": {
+        "detected": 18,
+        "prevalence": 0.9474,
+        "start_fraction": {
+          "n": 18,
+          "q1": 0.04,
+          "median": 0.0607,
+          "q3": 0.076,
+          "min": 0.0278,
+          "max": 0.7308
+        },
+        "page_span": {
+          "n": 18,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 2
+        },
+        "span_fraction": {
+          "n": 18,
+          "q1": 0.0197,
+          "median": 0.0241,
+          "q3": 0.0294,
+          "min": 0.0139,
+          "max": 0.0714
+        }
+      },
+      "模型假设": {
+        "detected": 17,
+        "prevalence": 0.8947,
+        "start_fraction": {
+          "n": 17,
+          "q1": 0.0588,
+          "median": 0.0678,
+          "q3": 0.1081,
+          "min": 0.0238,
+          "max": 0.7692
+        },
+        "page_span": {
+          "n": 17,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 1
+        },
+        "span_fraction": {
+          "n": 17,
+          "q1": 0.0196,
+          "median": 0.0238,
+          "q3": 0.0294,
+          "min": 0.0139,
+          "max": 0.0385
+        }
+      },
+      "符号说明": {
+        "detected": 18,
+        "prevalence": 0.9474,
+        "start_fraction": {
+          "n": 18,
+          "q1": 0.0687,
+          "median": 0.0989,
+          "q3": 0.1209,
+          "min": 0.0385,
+          "max": 0.7692
+        },
+        "page_span": {
+          "n": 18,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 3.0,
+          "min": 1,
+          "max": 22
+        },
+        "span_fraction": {
+          "n": 18,
+          "q1": 0.024,
+          "median": 0.0296,
+          "q3": 0.056,
+          "min": 0.0143,
+          "max": 0.5357
+        }
+      },
+      "模型建立": {
+        "detected": 18,
+        "prevalence": 0.9474,
+        "start_fraction": {
+          "n": 18,
+          "q1": 0.0736,
+          "median": 0.1053,
+          "q3": 0.1212,
+          "min": 0.0169,
+          "max": 0.1786
+        },
+        "page_span": {
+          "n": 18,
+          "q1": 1.0,
+          "median": 4.0,
+          "q3": 6.0,
+          "min": 1,
+          "max": 15
+        },
+        "span_fraction": {
+          "n": 18,
+          "q1": 0.0266,
+          "median": 0.0647,
+          "q3": 0.1681,
+          "min": 0.0149,
+          "max": 0.3659
+        }
+      },
+      "模型求解": {
+        "detected": 18,
+        "prevalence": 0.9474,
+        "start_fraction": {
+          "n": 18,
+          "q1": 0.0418,
+          "median": 0.1069,
+          "q3": 0.2675,
+          "min": 0.0139,
+          "max": 0.9286
+        },
+        "page_span": {
+          "n": 18,
+          "q1": 1.0,
+          "median": 2.5,
+          "q3": 10.0,
+          "min": 1,
+          "max": 22
+        },
+        "span_fraction": {
+          "n": 18,
+          "q1": 0.0251,
+          "median": 0.0422,
+          "q3": 0.2865,
+          "min": 0.0139,
+          "max": 0.6471
+        }
+      },
+      "结果分析": {
+        "detected": 16,
+        "prevalence": 0.8421,
+        "start_fraction": {
+          "n": 16,
+          "q1": 0.0486,
+          "median": 0.1181,
+          "q3": 0.1886,
+          "min": 0.0196,
+          "max": 0.5312
+        },
+        "page_span": {
+          "n": 16,
+          "q1": 1.0,
+          "median": 5.5,
+          "q3": 11.25,
+          "min": 1,
+          "max": 16
+        },
+        "span_fraction": {
+          "n": 16,
+          "q1": 0.0288,
+          "median": 0.107,
+          "q3": 0.225,
+          "min": 0.0139,
+          "max": 0.4286
+        }
+      },
+      "模型检验": {
+        "detected": 6,
+        "prevalence": 0.3158,
+        "start_fraction": {
+          "n": 6,
+          "q1": 0.0404,
+          "median": 0.0895,
+          "q3": 0.2111,
+          "min": 0.0244,
+          "max": 0.4902
+        },
+        "page_span": {
+          "n": 6,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 5.5,
+          "min": 1,
+          "max": 21
+        },
+        "span_fraction": {
+          "n": 6,
+          "q1": 0.0208,
+          "median": 0.0278,
+          "q3": 0.1245,
+          "min": 0.0169,
+          "max": 0.2917
+        }
+      },
+      "灵敏度分析": {
+        "detected": 6,
+        "prevalence": 0.3158,
+        "start_fraction": {
+          "n": 6,
+          "q1": 0.0161,
+          "median": 0.0198,
+          "q3": 0.0253,
+          "min": 0.0096,
+          "max": 0.4889
+        },
+        "page_span": {
+          "n": 6,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 1
+        },
+        "span_fraction": {
+          "n": 6,
+          "q1": 0.0161,
+          "median": 0.0198,
+          "q3": 0.0217,
+          "min": 0.0096,
+          "max": 0.027
+        }
+      },
+      "模型评价": {
+        "detected": 17,
+        "prevalence": 0.8947,
+        "start_fraction": {
+          "n": 17,
+          "q1": 0.403,
+          "median": 0.5,
+          "q3": 0.5952,
+          "min": 0.3,
+          "max": 0.8214
+        },
+        "page_span": {
+          "n": 17,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 2
+        },
+        "span_fraction": {
+          "n": 17,
+          "q1": 0.02,
+          "median": 0.0244,
+          "q3": 0.0294,
+          "min": 0.0143,
+          "max": 0.0385
+        }
+      },
+      "改进方案": {
+        "detected": 6,
+        "prevalence": 0.3158,
+        "start_fraction": {
+          "n": 6,
+          "q1": 0.325,
+          "median": 0.4203,
+          "q3": 0.6102,
+          "min": 0.02,
+          "max": 0.7143
+        },
+        "page_span": {
+          "n": 6,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.75,
+          "min": 1,
+          "max": 2
+        },
+        "span_fraction": {
+          "n": 6,
+          "q1": 0.0177,
+          "median": 0.0279,
+          "q3": 0.0423,
+          "min": 0.0143,
+          "max": 0.0513
+        }
+      },
+      "参考文献": {
+        "detected": 19,
+        "prevalence": 1.0,
+        "start_fraction": {
+          "n": 19,
+          "q1": 0.4242,
+          "median": 0.5098,
+          "q3": 0.6698,
+          "min": 0.2788,
+          "max": 0.8571
+        },
+        "page_span": {
+          "n": 19,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 6.0,
+          "min": 1,
+          "max": 49
+        },
+        "span_fraction": {
+          "n": 19,
+          "q1": 0.0211,
+          "median": 0.0294,
+          "q3": 0.1013,
+          "min": 0.0096,
+          "max": 0.7
+        }
+      },
+      "附录": {
+        "detected": 16,
+        "prevalence": 0.8421,
+        "start_fraction": {
+          "n": 16,
+          "q1": 0.4543,
+          "median": 0.5425,
+          "q3": 0.7541,
+          "min": 0.2788,
+          "max": 0.8929
+        },
+        "page_span": {
+          "n": 16,
+          "q1": 6.75,
+          "median": 15.5,
+          "q3": 29.25,
+          "min": 1,
+          "max": 76
+        },
+        "span_fraction": {
+          "n": 16,
+          "q1": 0.2233,
+          "median": 0.4056,
+          "q3": 0.5148,
+          "min": 0.0357,
+          "max": 0.7308
+        }
+      }
+    },
+    "C": {
+      "摘要": {
+        "detected": 20,
+        "prevalence": 1.0,
+        "start_fraction": {
+          "n": 20,
+          "q1": 0.0166,
+          "median": 0.0192,
+          "q3": 0.0231,
+          "min": 0.013,
+          "max": 0.0385
+        },
+        "page_span": {
+          "n": 20,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 1
+        },
+        "span_fraction": {
+          "n": 20,
+          "q1": 0.0166,
+          "median": 0.0192,
+          "q3": 0.0231,
+          "min": 0.013,
+          "max": 0.0385
+        }
+      },
+      "问题重述": {
+        "detected": 19,
+        "prevalence": 0.95,
+        "start_fraction": {
+          "n": 19,
+          "q1": 0.0339,
+          "median": 0.0392,
+          "q3": 0.0471,
+          "min": 0.027,
+          "max": 0.0769
+        },
+        "page_span": {
+          "n": 19,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 2
+        },
+        "span_fraction": {
+          "n": 19,
+          "q1": 0.017,
+          "median": 0.0204,
+          "q3": 0.0247,
+          "min": 0.0135,
+          "max": 0.0714
+        }
+      },
+      "问题分析": {
+        "detected": 19,
+        "prevalence": 0.95,
+        "start_fraction": {
+          "n": 19,
+          "q1": 0.041,
+          "median": 0.0462,
+          "q3": 0.0673,
+          "min": 0.026,
+          "max": 0.1429
+        },
+        "page_span": {
+          "n": 19,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 2.0,
+          "min": 1,
+          "max": 26
+        },
+        "span_fraction": {
+          "n": 19,
+          "q1": 0.017,
+          "median": 0.0227,
+          "q3": 0.0388,
+          "min": 0.013,
+          "max": 0.6341
+        }
+      },
+      "模型假设": {
+        "detected": 14,
+        "prevalence": 0.7,
+        "start_fraction": {
+          "n": 14,
+          "q1": 0.0494,
+          "median": 0.0722,
+          "q3": 0.0889,
+          "min": 0.027,
+          "max": 0.125
+        },
+        "page_span": {
+          "n": 14,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 9
+        },
+        "span_fraction": {
+          "n": 14,
+          "q1": 0.0165,
+          "median": 0.0184,
+          "q3": 0.0244,
+          "min": 0.013,
+          "max": 0.2
+        }
+      },
+      "符号说明": {
+        "detected": 20,
+        "prevalence": 1.0,
+        "start_fraction": {
+          "n": 20,
+          "q1": 0.0681,
+          "median": 0.0762,
+          "q3": 0.0889,
+          "min": 0.027,
+          "max": 0.1429
+        },
+        "page_span": {
+          "n": 20,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 3.5,
+          "min": 1,
+          "max": 20
+        },
+        "span_fraction": {
+          "n": 20,
+          "q1": 0.0192,
+          "median": 0.0276,
+          "q3": 0.1158,
+          "min": 0.0135,
+          "max": 0.5
+        }
+      },
+      "模型建立": {
+        "detected": 20,
+        "prevalence": 1.0,
+        "start_fraction": {
+          "n": 20,
+          "q1": 0.0481,
+          "median": 0.0732,
+          "q3": 0.1028,
+          "min": 0.0167,
+          "max": 0.2308
+        },
+        "page_span": {
+          "n": 20,
+          "q1": 1.0,
+          "median": 2.0,
+          "q3": 7.25,
+          "min": 1,
+          "max": 23
+        },
+        "span_fraction": {
+          "n": 20,
+          "q1": 0.0226,
+          "median": 0.0297,
+          "q3": 0.2258,
+          "min": 0.013,
+          "max": 0.451
+        }
+      },
+      "模型求解": {
+        "detected": 18,
+        "prevalence": 0.9,
+        "start_fraction": {
+          "n": 18,
+          "q1": 0.0242,
+          "median": 0.0883,
+          "q3": 0.1544,
+          "min": 0.0172,
+          "max": 0.8302
+        },
+        "page_span": {
+          "n": 18,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 4.0,
+          "min": 1,
+          "max": 24
+        },
+        "span_fraction": {
+          "n": 18,
+          "q1": 0.0183,
+          "median": 0.0239,
+          "q3": 0.1294,
+          "min": 0.0154,
+          "max": 0.3934
+        }
+      },
+      "结果分析": {
+        "detected": 15,
+        "prevalence": 0.75,
+        "start_fraction": {
+          "n": 15,
+          "q1": 0.0747,
+          "median": 0.15,
+          "q3": 0.3286,
+          "min": 0.013,
+          "max": 0.4754
+        },
+        "page_span": {
+          "n": 15,
+          "q1": 1.0,
+          "median": 8.0,
+          "q3": 12.5,
+          "min": 1,
+          "max": 17
+        },
+        "span_fraction": {
+          "n": 15,
+          "q1": 0.022,
+          "median": 0.1081,
+          "q3": 0.2569,
+          "min": 0.013,
+          "max": 0.3571
+        }
+      },
+      "模型检验": {
+        "detected": 5,
+        "prevalence": 0.25,
+        "start_fraction": {
+          "n": 5,
+          "q1": 0.0676,
+          "median": 0.1231,
+          "q3": 0.4615,
+          "min": 0.0357,
+          "max": 0.625
+        },
+        "page_span": {
+          "n": 5,
+          "q1": 2.0,
+          "median": 3.0,
+          "q3": 7.0,
+          "min": 1,
+          "max": 8
+        },
+        "span_fraction": {
+          "n": 5,
+          "q1": 0.0357,
+          "median": 0.0462,
+          "q3": 0.2,
+          "min": 0.027,
+          "max": 0.2692
+        }
+      },
+      "灵敏度分析": {
+        "detected": 12,
+        "prevalence": 0.6,
+        "start_fraction": {
+          "n": 12,
+          "q1": 0.0234,
+          "median": 0.1231,
+          "q3": 0.3607,
+          "min": 0.0164,
+          "max": 0.5556
+        },
+        "page_span": {
+          "n": 12,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 3.25,
+          "min": 1,
+          "max": 16
+        },
+        "span_fraction": {
+          "n": 12,
+          "q1": 0.0198,
+          "median": 0.0321,
+          "q3": 0.0625,
+          "min": 0.0164,
+          "max": 0.2462
+        }
+      },
+      "模型评价": {
+        "detected": 16,
+        "prevalence": 0.8,
+        "start_fraction": {
+          "n": 16,
+          "q1": 0.3895,
+          "median": 0.5171,
+          "q3": 0.6303,
+          "min": 0.0167,
+          "max": 0.825
+        },
+        "page_span": {
+          "n": 16,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.0,
+          "min": 1,
+          "max": 33
+        },
+        "span_fraction": {
+          "n": 16,
+          "q1": 0.0166,
+          "median": 0.0205,
+          "q3": 0.0304,
+          "min": 0.013,
+          "max": 0.569
+        }
+      },
+      "改进方案": {
+        "detected": 6,
+        "prevalence": 0.3,
+        "start_fraction": {
+          "n": 6,
+          "q1": 0.3672,
+          "median": 0.4222,
+          "q3": 0.5238,
+          "min": 0.0189,
+          "max": 0.5909
+        },
+        "page_span": {
+          "n": 6,
+          "q1": 1.0,
+          "median": 1.0,
+          "q3": 1.75,
+          "min": 1,
+          "max": 8
+        },
+        "span_fraction": {
+          "n": 6,
+          "q1": 0.0198,
+          "median": 0.0244,
+          "q3": 0.0279,
+          "min": 0.0167,
+          "max": 0.1778
+        }
+      },
+      "参考文献": {
+        "detected": 18,
+        "prevalence": 0.9,
+        "start_fraction": {
+          "n": 18,
+          "q1": 0.3949,
+          "median": 0.5407,
+          "q3": 0.704,
+          "min": 0.069,
+          "max": 0.85
+        },
+        "page_span": {
+          "n": 18,
+          "q1": 1.0,
+          "median": 4.5,
+          "q3": 14.5,
+          "min": 1,
+          "max": 48
+        },
+        "span_fraction": {
+          "n": 18,
+          "q1": 0.0245,
+          "median": 0.0788,
+          "q3": 0.347,
+          "min": 0.0135,
+          "max": 0.6234
+        }
+      },
+      "附录": {
+        "detected": 17,
+        "prevalence": 0.85,
+        "start_fraction": {
+          "n": 17,
+          "q1": 0.3966,
+          "median": 0.5538,
+          "q3": 0.7541,
+          "min": 0.0143,
+          "max": 0.875
+        },
+        "page_span": {
+          "n": 17,
+          "q1": 6.0,
+          "median": 16.0,
+          "q3": 29.0,
+          "min": 1,
+          "max": 55
+        },
+        "span_fraction": {
+          "n": 17,
+          "q1": 0.1786,
+          "median": 0.2927,
+          "q3": 0.4902,
+          "min": 0.0143,
+          "max": 0.7432
+        }
+      }
+    }
+  },
+  "layout_candidates": {
+    "captions": 1167,
+    "equation_lines": 24563,
+    "headings": 15260,
+    "by_problem_type": {
+      "ALL": {
+        "caption_candidates_per_paper": {
+          "n": 59,
+          "q1": 14.0,
+          "median": 17.0,
+          "q3": 23.0,
+          "min": 8,
+          "max": 60
+        },
+        "equation_line_candidates_per_paper": {
+          "n": 59,
+          "q1": 228.5,
+          "median": 420.0,
+          "q3": 511.5,
+          "min": 64,
+          "max": 1272
+        },
+        "heading_candidates_per_paper": {
+          "n": 59,
+          "q1": 66.0,
+          "median": 95.0,
+          "q3": 173.0,
+          "min": 35,
+          "max": 2065
+        },
+        "caption_page_fraction": {
+          "n": 794,
+          "q1": 0.1714,
+          "median": 0.2984,
+          "q3": 0.4411,
+          "min": 0.0189,
+          "max": 1.0
+        },
+        "equation_page_fraction": {
+          "n": 2242,
+          "q1": 0.3077,
+          "median": 0.5688,
+          "q3": 0.8,
+          "min": 0.0112,
+          "max": 1.0
+        }
+      },
+      "A": {
+        "caption_candidates_per_paper": {
+          "n": 20,
+          "q1": 14.0,
+          "median": 17.5,
+          "q3": 22.25,
+          "min": 9,
+          "max": 44
+        },
+        "equation_line_candidates_per_paper": {
+          "n": 20,
+          "q1": 368.0,
+          "median": 440.5,
+          "q3": 521.5,
+          "min": 164,
+          "max": 1272
+        },
+        "heading_candidates_per_paper": {
+          "n": 20,
+          "q1": 60.5,
+          "median": 71.0,
+          "q3": 142.5,
+          "min": 40,
+          "max": 2065
+        },
+        "caption_page_fraction": {
+          "n": 283,
+          "q1": 0.1676,
+          "median": 0.3,
+          "q3": 0.4443,
+          "min": 0.0189,
+          "max": 1.0
+        },
+        "equation_page_fraction": {
+          "n": 785,
+          "q1": 0.2931,
+          "median": 0.5614,
+          "q3": 0.7941,
+          "min": 0.0112,
+          "max": 1.0
+        }
+      },
+      "B": {
+        "caption_candidates_per_paper": {
+          "n": 19,
+          "q1": 15.0,
+          "median": 17.0,
+          "q3": 22.0,
+          "min": 8,
+          "max": 29
+        },
+        "equation_line_candidates_per_paper": {
+          "n": 19,
+          "q1": 177.0,
+          "median": 339.0,
+          "q3": 549.0,
+          "min": 64,
+          "max": 1130
+        },
+        "heading_candidates_per_paper": {
+          "n": 19,
+          "q1": 53.0,
+          "median": 95.0,
+          "q3": 130.5,
+          "min": 35,
+          "max": 1169
+        },
+        "caption_page_fraction": {
+          "n": 236,
+          "q1": 0.18,
+          "median": 0.2903,
+          "q3": 0.4073,
+          "min": 0.0385,
+          "max": 1.0
+        },
+        "equation_page_fraction": {
+          "n": 736,
+          "q1": 0.3199,
+          "median": 0.5738,
+          "q3": 0.7943,
+          "min": 0.0286,
+          "max": 1.0
+        }
+      },
+      "C": {
+        "caption_candidates_per_paper": {
+          "n": 20,
+          "q1": 14.75,
+          "median": 19.0,
+          "q3": 25.0,
+          "min": 8,
+          "max": 60
+        },
+        "equation_line_candidates_per_paper": {
+          "n": 20,
+          "q1": 228.75,
+          "median": 351.0,
+          "q3": 480.5,
+          "min": 70,
+          "max": 678
+        },
+        "heading_candidates_per_paper": {
+          "n": 20,
+          "q1": 90.25,
+          "median": 117.0,
+          "q3": 349.5,
+          "min": 55,
+          "max": 2032
+        },
+        "caption_page_fraction": {
+          "n": 275,
+          "q1": 0.1698,
+          "median": 0.3036,
+          "q3": 0.4655,
+          "min": 0.027,
+          "max": 1.0
+        },
+        "equation_page_fraction": {
+          "n": 721,
+          "q1": 0.3103,
+          "median": 0.5714,
+          "q3": 0.8167,
+          "min": 0.0196,
+          "max": 1.0
+        }
+      }
+    }
+  },
+  "ocr": {
+    "page_methods": {
+      "rapidocr-120dpi": 1281,
+      "tesseract-chi_sim+eng-220dpi": 1583,
+      "pdftotext": 28
+    },
+    "fallback_pages": 2232,
+    "unconfirmed_pages": 1770
+  },
+  "style_connectors": {
+    "ALL": {
+      "首先": 414,
+      "其次": 60,
+      "进一步": 161,
+      "由此": 50,
+      "可知": 98,
+      "表明": 98,
+      "说明": 170,
+      "验证": 171,
+      "相比": 24,
+      "为了": 142,
+      "从而": 116,
+      "因此": 543
+    },
+    "A": {
+      "首先": 148,
+      "其次": 18,
+      "进一步": 42,
+      "由此": 21,
+      "可知": 32,
+      "表明": 9,
+      "说明": 55,
+      "验证": 58,
+      "相比": 2,
+      "为了": 38,
+      "从而": 44,
+      "因此": 183
+    },
+    "B": {
+      "首先": 117,
+      "其次": 18,
+      "进一步": 38,
+      "由此": 21,
+      "可知": 27,
+      "表明": 17,
+      "说明": 40,
+      "验证": 61,
+      "相比": 9,
+      "为了": 57,
+      "从而": 40,
+      "因此": 178
+    },
+    "C": {
+      "首先": 149,
+      "其次": 24,
+      "进一步": 81,
+      "由此": 8,
+      "可知": 39,
+      "表明": 72,
+      "说明": 75,
+      "验证": 52,
+      "相比": 13,
+      "为了": 47,
+      "从而": 32,
+      "因此": 182
+    }
+  },
+  "model_term_paper_counts": {
+    "ALL": {
+      "ODE": 32,
+      "0-1": 26,
+      "VAR": 21,
+      "回归": 20,
+      "多目标": 14,
+      "遗传算法": 12,
+      "线性规划": 12,
+      "微分方程": 9,
+      "蒙特卡洛": 8,
+      "非线性规划": 7,
+      "Logistic": 6,
+      "粒子群": 6,
+      "模拟退火": 5,
+      "最短路": 5,
+      "聚类": 5,
+      "主成分": 4,
+      "PCA": 4,
+      "RNN": 4,
+      "有限差分": 3,
+      "守恒": 3,
+      "TOPSIS": 3,
+      "有限元": 2,
+      "PDE": 2,
+      "Floyd": 2,
+      "层次分析": 2,
+      "XGBoost": 2,
+      "随机森林": 2,
+      "整数规划": 2,
+      "龙格库塔": 2,
+      "NSGA": 2,
+      "灰色关联": 2,
+      "K-Means": 2,
+      "LSTM": 2,
+      "偏微分方程": 1,
+      "AHP": 1,
+      "熵权": 1,
+      "MOPSO": 1,
+      "灰色预测": 1,
+      "交叉验证": 1,
+      "支持向量": 1,
+      "VIKOR": 1,
+      "ARIMA": 1,
+      "Prophet": 1,
+      "蚁群": 1,
+      "LightGBM": 1
+    },
+    "A": {
+      "微分方程": 9,
+      "0-1": 8,
+      "ODE": 8,
+      "多目标": 5,
+      "蒙特卡洛": 5,
+      "守恒": 3,
+      "遗传算法": 3,
+      "VAR": 3,
+      "粒子群": 3,
+      "有限元": 2,
+      "有限差分": 2,
+      "模拟退火": 2,
+      "线性规划": 2,
+      "非线性规划": 2,
+      "龙格库塔": 2,
+      "PDE": 1,
+      "偏微分方程": 1,
+      "PCA": 1,
+      "NSGA": 1,
+      "回归": 1
+    },
+    "B": {
+      "ODE": 11,
+      "回归": 6,
+      "最短路": 5,
+      "0-1": 5,
+      "VAR": 4,
+      "蒙特卡洛": 2,
+      "Floyd": 2,
+      "遗传算法": 2,
+      "模拟退火": 2,
+      "多目标": 2,
+      "RNN": 2,
+      "聚类": 1,
+      "Logistic": 1,
+      "主成分": 1,
+      "线性规划": 1,
+      "非线性规划": 1,
+      "PDE": 1,
+      "PCA": 1,
+      "粒子群": 1,
+      "随机森林": 1,
+      "支持向量": 1,
+      "蚁群": 1,
+      "有限差分": 1
+    },
+    "C": {
+      "VAR": 14,
+      "回归": 13,
+      "0-1": 13,
+      "ODE": 13,
+      "线性规划": 9,
+      "多目标": 7,
+      "遗传算法": 7,
+      "Logistic": 5,
+      "非线性规划": 4,
+      "聚类": 4,
+      "主成分": 3,
+      "TOPSIS": 3,
+      "层次分析": 2,
+      "XGBoost": 2,
+      "PCA": 2,
+      "整数规划": 2,
+      "RNN": 2,
+      "粒子群": 2,
+      "灰色关联": 2,
+      "K-Means": 2,
+      "LSTM": 2,
+      "AHP": 1,
+      "熵权": 1,
+      "随机森林": 1,
+      "MOPSO": 1,
+      "灰色预测": 1,
+      "交叉验证": 1,
+      "模拟退火": 1,
+      "NSGA": 1,
+      "VIKOR": 1,
+      "ARIMA": 1,
+      "Prophet": 1,
+      "蒙特卡洛": 1,
+      "LightGBM": 1
+    }
+  },
+  "model_group_paper_counts": {
+    "ALL": {
+      "机理与数值": 40,
+      "规划与智能优化": 40,
+      "时序预测": 24,
+      "统计学习": 21,
+      "评价决策": 12,
+      "图与网络": 5
+    },
+    "A": {
+      "机理与数值": 15,
+      "规划与智能优化": 13,
+      "时序预测": 3,
+      "统计学习": 2
+    },
+    "B": {
+      "机理与数值": 12,
+      "规划与智能优化": 10,
+      "统计学习": 6,
+      "图与网络": 5,
+      "时序预测": 4,
+      "评价决策": 1
+    },
+    "C": {
+      "规划与智能优化": 17,
+      "时序预测": 17,
+      "统计学习": 13,
+      "机理与数值": 13,
+      "评价决策": 11
+    }
+  },
+  "section_sequence_patterns": {
+    "ALL": [
+      {
+        "sequence": "摘要 -> 模型检验 -> 问题重述 -> 问题分析 -> 模型假设 -> 符号说明 -> 模型建立 -> 模型求解 -> 结果分析 -> 模型评价 -> 改进方案 -> 参考文献",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 问题重述 -> 问题分析 -> 模型建立 -> 符号说明 -> 模型求解 -> 结果分析 -> 灵敏度分析 -> 模型评价 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 模型求解 -> 问题重述 -> 模型假设 -> 符号说明 -> 问题分析 -> 模型建立 -> 模型检验 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 模型建立 -> 模型评价 -> 改进方案 -> 问题重述 -> 问题分析 -> 模型求解 -> 模型假设 -> 符号说明 -> 结果分析 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 灵敏度分析 -> 改进方案 -> 问题重述 -> 问题分析 -> 模型求解 -> 模型假设 -> 符号说明 -> 模型建立 -> 结果分析 -> 模型评价 -> 参考文献",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 灵敏度分析 -> 问题重述 -> 符号说明 -> 模型求解 -> 结果分析 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 问题重述 -> 问题分析 -> 符号说明 -> 模型建立 -> 模型求解 -> 模型评价 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 问题重述 -> 问题分析 -> 模型假设 -> 模型建立 -> 符号说明 -> 结果分析 -> 模型求解 -> 改进方案 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 结果分析 -> 问题分析 -> 模型建立 -> 模型假设 -> 符号说明 -> 模型求解 -> 模型评价 -> 改进方案 -> 参考文献",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 模型建立 -> 问题重述 -> 问题分析 -> 符号说明 -> 模型假设 -> 模型求解 -> 改进方案 -> 灵敏度分析 -> 模型评价 -> 参考文献 -> 附录",
+        "papers": 1
+      }
+    ],
+    "A": [
+      {
+        "sequence": "摘要 -> 模型检验 -> 问题重述 -> 问题分析 -> 模型假设 -> 符号说明 -> 模型建立 -> 模型求解 -> 结果分析 -> 模型评价 -> 改进方案 -> 参考文献",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 问题重述 -> 问题分析 -> 模型建立 -> 符号说明 -> 模型求解 -> 结果分析 -> 灵敏度分析 -> 模型评价 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 模型求解 -> 问题重述 -> 模型假设 -> 符号说明 -> 问题分析 -> 模型建立 -> 模型检验 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 模型建立 -> 模型评价 -> 改进方案 -> 问题重述 -> 问题分析 -> 模型求解 -> 模型假设 -> 符号说明 -> 结果分析 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 问题重述 -> 问题分析 -> 模型求解 -> 符号说明 -> 模型假设 -> 模型建立 -> 结果分析 -> 模型检验 -> 模型评价 -> 改进方案 -> 参考文献",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 模型求解 -> 结果分析 -> 灵敏度分析 -> 问题重述 -> 问题分析 -> 模型假设 -> 符号说明 -> 模型建立 -> 模型评价 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 问题重述 -> 模型建立 -> 符号说明 -> 问题分析 -> 模型求解 -> 结果分析 -> 模型评价 -> 参考文献",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 模型检验 -> 模型求解 -> 问题重述 -> 问题分析 -> 模型假设 -> 符号说明 -> 模型建立 -> 结果分析 -> 改进方案 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 问题重述 -> 问题分析 -> 模型假设 -> 符号说明 -> 模型建立 -> 模型求解 -> 结果分析 -> 模型检验 -> 模型评价 -> 改进方案 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 问题重述 -> 问题分析 -> 模型检验 -> 模型求解 -> 模型假设 -> 符号说明 -> 模型建立 -> 模型评价 -> 改进方案 -> 参考文献",
+        "papers": 1
+      }
+    ],
+    "B": [
+      {
+        "sequence": "摘要 -> 灵敏度分析 -> 改进方案 -> 问题重述 -> 问题分析 -> 模型求解 -> 模型假设 -> 符号说明 -> 模型建立 -> 结果分析 -> 模型评价 -> 参考文献",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 灵敏度分析 -> 问题重述 -> 符号说明 -> 模型求解 -> 结果分析 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 问题重述 -> 问题分析 -> 符号说明 -> 模型建立 -> 模型求解 -> 模型评价 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 问题重述 -> 问题分析 -> 模型假设 -> 模型建立 -> 符号说明 -> 结果分析 -> 模型求解 -> 改进方案 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 问题重述 -> 问题分析 -> 模型假设 -> 符号说明 -> 模型建立 -> 结果分析 -> 模型检验 -> 改进方案 -> 模型求解 -> 灵敏度分析 -> 模型评价 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "模型求解 -> 结果分析 -> 模型建立 -> 模型评价 -> 参考文献 -> 附录 -> 摘要 -> 问题重述 -> 问题分析 -> 模型假设 -> 符号说明",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 模型建立 -> 问题重述 -> 问题分析 -> 结果分析 -> 模型检验 -> 模型假设 -> 符号说明 -> 模型求解 -> 模型评价 -> 改进方案 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "模型求解 -> 问题重述 -> 问题分析 -> 结果分析 -> 模型假设 -> 模型建立 -> 符号说明 -> 模型评价 -> 改进方案 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 模型假设 -> 模型求解 -> 问题重述 -> 问题分析 -> 符号说明 -> 模型建立 -> 结果分析 -> 模型评价 -> 参考文献",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 模型检验 -> 问题重述 -> 问题分析 -> 模型假设 -> 符号说明 -> 模型建立 -> 附录 -> 模型评价 -> 参考文献",
+        "papers": 1
+      }
+    ],
+    "C": [
+      {
+        "sequence": "摘要 -> 结果分析 -> 问题分析 -> 模型建立 -> 模型假设 -> 符号说明 -> 模型求解 -> 模型评价 -> 改进方案 -> 参考文献",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 模型建立 -> 问题重述 -> 问题分析 -> 符号说明 -> 模型假设 -> 模型求解 -> 改进方案 -> 灵敏度分析 -> 模型评价 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 问题重述 -> 模型建立 -> 问题分析 -> 模型求解 -> 模型假设 -> 符号说明 -> 模型检验 -> 模型评价 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 模型求解 -> 问题重述 -> 问题分析 -> 模型假设 -> 符号说明 -> 模型建立 -> 模型评价 -> 改进方案 -> 参考文献",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 附录 -> 改进方案 -> 问题重述 -> 问题分析 -> 模型假设 -> 模型建立 -> 符号说明 -> 结果分析 -> 模型评价 -> 参考文献 -> 模型求解",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 模型建立 -> 模型评价 -> 问题重述 -> 问题分析 -> 模型假设 -> 符号说明 -> 参考文献 -> 模型求解 -> 结果分析 -> 灵敏度分析 -> 改进方案 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 问题重述 -> 问题分析 -> 模型求解 -> 模型假设 -> 符号说明 -> 模型建立 -> 结果分析 -> 模型评价 -> 灵敏度分析 -> 参考文献 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 模型求解 -> 结果分析 -> 问题重述 -> 问题分析 -> 符号说明 -> 模型建立 -> 附录",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 模型求解 -> 问题重述 -> 符号说明 -> 问题分析 -> 参考文献 -> 附录 -> 模型建立 -> 结果分析 -> 灵敏度分析 -> 模型评价",
+        "papers": 1
+      },
+      {
+        "sequence": "摘要 -> 结果分析 -> 灵敏度分析 -> 问题重述 -> 模型建立 -> 符号说明 -> 问题分析 -> 参考文献 -> 附录",
+        "papers": 1
+      }
+    ]
+  },
+  "limitations": [
+    "章节页数来自标题首次命中到下一标题首次命中的页级跨度，跨页标题与 OCR 误差会造成边界偏差。",
+    "文本行密度使用 OCR 文本行块/页的中位数，不把它等同于排版软件中的自然段数。",
+    "段落候选由正文行的首行缩进和垂直间距估计，复杂公式、表格及多栏页面会造成偏差。",
+    "图表、公式为候选行计数；涉及小字号、公式和表格内容的结论须回看原始栅格裁剪。"
+  ]
+}

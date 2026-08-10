@@ -1,0 +1,78 @@
+{
+    "schema_version":  "humanize-unit-rewrite-bundle/v4",
+    "unit_id":  "U-404f050b5eb9",
+    "chunk_binding_sha256":  "71996ace6c08e61789cd4ae0e8511f0409b54b6a33bba536d28c14499984dfeb",
+    "decision":  "NO_CHANGE",
+    "voice_profile_sha256":  "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+    "authoring_binding":  {
+                              "schema_version":  "humanize-long-authoring-binding/v1",
+                              "integrity_scope":  "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+                              "snapshot_id":  "b48ef9450b05230b",
+                              "prepare_integrity_sha256":  "08d8d35f9bd43257bbfc5c931659c168f2106c243f412dfc62528b7847c32149",
+                              "run_metadata_sha256":  "697c2507466cf5cde0e99810c211ce52bc6884c88736ebc99741cea022da3217",
+                              "policy_snapshot_sha256":  "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+                              "source_binding":  {
+                                                     "file_id":  "F00001",
+                                                     "source_file_sha256":  "da6925eb091af9d09d1f22b972b450ea0c6aa035703baafa84910bb5318754d9",
+                                                     "unit_id":  "U-404f050b5eb9",
+                                                     "offset_unit":  "PYTHON_UNICODE_CODEPOINT_INDEX",
+                                                     "start":  8911,
+                                                     "end":  9246,
+                                                     "start_line":  333,
+                                                     "end_line":  339,
+                                                     "source_span_sha256":  "d5ded4e0f76de937db16b50b3fdab21ef998feb809064a8355d5c1263b65efb6",
+                                                     "masked_text_sha256":  "1939fb58dab3a8a378f734814713f27a3a5ee4925d1bfb4c67c09941be9422fb",
+                                                     "chunk_binding_sha256":  "71996ace6c08e61789cd4ae0e8511f0409b54b6a33bba536d28c14499984dfeb"
+                                                 },
+                              "scene_route":  {
+                                                  "requested_scene":  "RESEARCH",
+                                                  "resolved_scene":  "RESEARCH",
+                                                  "status":  "EXPLICIT",
+                                                  "reason_code":  "USER_EXPLICIT_SCENE",
+                                                  "document_prior_scene":  "",
+                                                  "scores":  {
+                                                                 "COURSE":  0,
+                                                                 "MODELING":  0,
+                                                                 "RESEARCH":  0
+                                                             },
+                                                  "top_score":  0,
+                                                  "margin":  0,
+                                                  "ambiguous_scenes":  [
+
+                                                                       ],
+                                                  "evidence":  [
+
+                                                               ],
+                                                  "policy_sha256":  "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+                                                  "policy_revision":  5,
+                                                  "heading_path_sha256":  "a1345c151bf88d31cd25130d14b0a9f21ca6665b84a3292f1e833254711b2720",
+                                                  "routing_input_sha256":  "1c4649f4fb750a2812241e615eb15005017dbbd0468c5031034200c4b0ba23f5"
+                                              },
+                              "voice_binding":  {
+                                                    "profile_id":  "scene-default-research",
+                                                    "profile_revision":  1,
+                                                    "profile_kind":  "DEFAULT",
+                                                    "binding_scene":  "RESEARCH",
+                                                    "profile_sha256":  "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+                                                },
+                              "mode":  "REWRITE",
+                              "intensity":  "BALANCED",
+                              "authoring_allowed":  true,
+                              "completion_claim_allowed":  false,
+                              "humanize_quality_claim_allowed":  false,
+                              "authoring_binding_sha256":  "d655112ec3a59d2cf6cb6d67b46cf3f3e0920b7b064f7b7e350dfbe25effac52"
+                          },
+    "keep_reasons":  {
+
+                     },
+    "template_field_edit_scope":  null,
+    "reason":  "本节是摘要写作的三项固定指引，原句分别承担内容、步骤与核对职责，改动会破坏quote清单边界。",
+    "evidence_spans":  [
+                           {
+                               "id":  "S1",
+                               "start_line":  1,
+                               "end_line":  7,
+                               "sha256":  "1939fb58dab3a8a378f734814713f27a3a5ee4925d1bfb4c67c09941be9422fb"
+                           }
+                       ]
+}

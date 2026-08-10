@@ -1,0 +1,1644 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "candidate_assembly_exit_code": 2,
+  "candidate_assembly_status": "REVIEW",
+  "delivery_gate_exit_code": 2,
+  "delivery_gate_status": "REVIEW",
+  "draft_surface_source_check": {
+    "details": {},
+    "scope": [],
+    "semantic_entailment_certified": false,
+    "status": "N/A"
+  },
+  "evidence": {
+    "after_path": "validation/U-cd8c684728df.after.tex",
+    "after_sha256": "2dbfed7b053d05bea3d5356df83bdc1ccaff7b88214a6069503227f68ce68105",
+    "before_path": "validation/U-cd8c684728df.before.tex",
+    "before_sha256": "e6953a1e2b545b909f6842200eb2a11df0d6f8b641f4f9863f4e7a5f71b3ce46",
+    "checker_executed": true,
+    "document_format": "tex",
+    "document_scope": "FRAGMENT",
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "08b4e88c540722085ab5130c2137c802ce2ef561f64db8a3f97660e98c12e29b",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "acf31a687e741637d1ebb82a3ab9e67039251326cfb006f45ea7dfb719641689",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "source_path_archived": false
+  },
+  "exit_code": 2,
+  "hard_invariant_layer_status": "PASS",
+  "humanize_quality_claim_allowed": false,
+  "introduced_findings": [],
+  "invariants": {
+    "advisories": [],
+    "errors": [],
+    "evidence": {
+      "document_scope": "FRAGMENT",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "speech_act_audit": {
+        "categories": {
+          "assumption": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "attribution_source": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "condition": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "definition_naming": {
+            "after": {
+              "定义": 2
+            },
+            "after_occurrences": [
+              {
+                "category": "definition_naming",
+                "claim_id": "C0029",
+                "column": 101,
+                "end": 604,
+                "end_column": 103,
+                "end_line": 15,
+                "line": 15,
+                "marker": "定义",
+                "sentence_context": "至少三类基线同统计定义比较",
+                "sentence_id": "T0029",
+                "side": "after",
+                "start": 602
+              },
+              {
+                "category": "definition_naming",
+                "claim_id": "C0053",
+                "column": 94,
+                "end": 1021,
+                "end_column": 96,
+                "end_line": 19,
+                "line": 19,
+                "marker": "定义",
+                "sentence_context": "无未定义引用",
+                "sentence_id": "T0052",
+                "side": "after",
+                "start": 1019
+              }
+            ],
+            "before": {
+              "定义": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "definition_naming",
+                "claim_id": "C0053",
+                "column": 94,
+                "end": 1010,
+                "end_column": 96,
+                "end_line": 19,
+                "line": 19,
+                "marker": "定义",
+                "sentence_context": "无未定义引用",
+                "sentence_id": "T0052",
+                "side": "before",
+                "start": 1008
+              }
+            ],
+            "raw_delta": {
+              "added": {
+                "定义": 1
+              },
+              "removed": {}
+            },
+            "residual_delta": [
+              {
+                "added": {
+                  "定义": 1
+                },
+                "after_claim_id": null,
+                "after_occurrences": [
+                  {
+                    "category": "definition_naming",
+                    "claim_id": "C0029",
+                    "column": 101,
+                    "end": 604,
+                    "end_column": 103,
+                    "end_line": 15,
+                    "line": 15,
+                    "marker": "定义",
+                    "sentence_context": "至少三类基线同统计定义比较",
+                    "sentence_id": "T0029",
+                    "side": "after",
+                    "start": 602
+                  }
+                ],
+                "before_claim_id": null,
+                "before_occurrences": [],
+                "removed": {},
+                "scope": "UNALIGNED_POOL"
+              }
+            ],
+            "safe_compression_allowances": []
+          },
+          "focus_scope": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "logical_relation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "modality_scope": {
+            "after": {
+              "只": 1,
+              "可": 7
+            },
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0016",
+                "column": 104,
+                "end": 377,
+                "end_column": 105,
+                "end_line": 13,
+                "line": 13,
+                "marker": "可",
+                "sentence_context": "关键结果可复算",
+                "sentence_id": "T0016",
+                "side": "after",
+                "start": 376
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0020",
+                "column": 66,
+                "end": 462,
+                "end_column": 67,
+                "end_line": 14,
+                "line": 14,
+                "marker": "可",
+                "sentence_context": "& 决策树、模型文件、枚举核验、不可行情形清单",
+                "sentence_id": "T0020",
+                "side": "after",
+                "start": 461
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0027",
+                "column": 76,
+                "end": 578,
+                "end_column": 77,
+                "end_line": 15,
+                "line": 15,
+                "marker": "只",
+                "sentence_context": "& 预处理只在训练集拟合",
+                "sentence_id": "T0027",
+                "side": "after",
+                "start": 577
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0028",
+                "column": 88,
+                "end": 590,
+                "end_column": 89,
+                "end_line": 15,
+                "line": 15,
+                "marker": "可",
+                "sentence_context": "异常处理可追溯",
+                "sentence_id": "T0028",
+                "side": "after",
+                "start": 589
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0038",
+                "column": 64,
+                "end": 775,
+                "end_column": 65,
+                "end_line": 17,
+                "line": 17,
+                "marker": "可",
+                "sentence_context": "& 基线求解器、随机算法报告、可行性修复测试",
+                "sentence_id": "T0038",
+                "side": "after",
+                "start": 774
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0041",
+                "column": 104,
+                "end": 815,
+                "end_column": 105,
+                "end_line": 17,
+                "line": 17,
+                "marker": "可",
+                "sentence_context": "报告中位数、离散度、时间和可行率",
+                "sentence_id": "T0041",
+                "side": "after",
+                "start": 814
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0051",
+                "column": 56,
+                "end": 982,
+                "end_column": 57,
+                "end_line": 19,
+                "line": 19,
+                "marker": "可",
+                "sentence_context": "& 可编译论文、运行入口、结果清单、复盘表",
+                "sentence_id": "T0050",
+                "side": "after",
+                "start": 981
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0052",
+                "column": 85,
+                "end": 1011,
+                "end_column": 86,
+                "end_line": 19,
+                "line": 19,
+                "marker": "可",
+                "sentence_context": "& 所有正文数字可定位到输出",
+                "sentence_id": "T0051",
+                "side": "after",
+                "start": 1010
+              }
+            ],
+            "before": {
+              "只": 1,
+              "可": 7
+            },
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0016",
+                "column": 104,
+                "end": 377,
+                "end_column": 105,
+                "end_line": 13,
+                "line": 13,
+                "marker": "可",
+                "sentence_context": "关键结果可复算",
+                "sentence_id": "T0016",
+                "side": "before",
+                "start": 376
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0020",
+                "column": 66,
+                "end": 458,
+                "end_column": 67,
+                "end_line": 14,
+                "line": 14,
+                "marker": "可",
+                "sentence_context": "& 决策树、模型文件、枚举核验、不可行情形清单",
+                "sentence_id": "T0020",
+                "side": "before",
+                "start": 457
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0027",
+                "column": 75,
+                "end": 573,
+                "end_column": 76,
+                "end_line": 15,
+                "line": 15,
+                "marker": "只",
+                "sentence_context": "& 预处理只在训练集拟合",
+                "sentence_id": "T0027",
+                "side": "before",
+                "start": 572
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0028",
+                "column": 87,
+                "end": 585,
+                "end_column": 88,
+                "end_line": 15,
+                "line": 15,
+                "marker": "可",
+                "sentence_context": "异常处理可追溯",
+                "sentence_id": "T0028",
+                "side": "before",
+                "start": 584
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0038",
+                "column": 64,
+                "end": 768,
+                "end_column": 65,
+                "end_line": 17,
+                "line": 17,
+                "marker": "可",
+                "sentence_context": "& 基线求解器、随机算法报告、可行性修复测试",
+                "sentence_id": "T0038",
+                "side": "before",
+                "start": 767
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0041",
+                "column": 104,
+                "end": 808,
+                "end_column": 105,
+                "end_line": 17,
+                "line": 17,
+                "marker": "可",
+                "sentence_context": "报告中位数、离散度、时间和可行率",
+                "sentence_id": "T0041",
+                "side": "before",
+                "start": 807
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0051",
+                "column": 56,
+                "end": 971,
+                "end_column": 57,
+                "end_line": 19,
+                "line": 19,
+                "marker": "可",
+                "sentence_context": "& 可编译论文、运行入口、结果清单、复盘表",
+                "sentence_id": "T0050",
+                "side": "before",
+                "start": 970
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0052",
+                "column": 85,
+                "end": 1000,
+                "end_column": 86,
+                "end_line": 19,
+                "line": 19,
+                "marker": "可",
+                "sentence_context": "& 所有正文数字可定位到输出",
+                "sentence_id": "T0051",
+                "side": "before",
+                "start": 999
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "negation": {
+            "after": {
+              "不": 2,
+              "无": 2,
+              "未": 2
+            },
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0020",
+                "column": 65,
+                "end": 461,
+                "end_column": 66,
+                "end_line": 14,
+                "line": 14,
+                "marker": "不",
+                "sentence_context": "& 决策树、模型文件、枚举核验、不可行情形清单",
+                "sentence_id": "T0020",
+                "side": "after",
+                "start": 460
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0039",
+                "column": 75,
+                "end": 786,
+                "end_column": 76,
+                "end_line": 17,
+                "line": 17,
+                "marker": "不",
+                "sentence_context": "& 不少于 20 个种子",
+                "sentence_id": "T0039",
+                "side": "after",
+                "start": 785
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0045",
+                "column": 76,
+                "end": 897,
+                "end_column": 77,
+                "end_line": 18,
+                "line": 18,
+                "marker": "无",
+                "sentence_context": "& 无未来信息泄漏",
+                "sentence_id": "T0045",
+                "side": "after",
+                "start": 896
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0045",
+                "column": 77,
+                "end": 898,
+                "end_column": 78,
+                "end_line": 18,
+                "line": 18,
+                "marker": "未",
+                "sentence_context": "& 无未来信息泄漏",
+                "sentence_id": "T0045",
+                "side": "after",
+                "start": 897
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0053",
+                "column": 92,
+                "end": 1018,
+                "end_column": 93,
+                "end_line": 19,
+                "line": 19,
+                "marker": "无",
+                "sentence_context": "无未定义引用",
+                "sentence_id": "T0052",
+                "side": "after",
+                "start": 1017
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0053",
+                "column": 93,
+                "end": 1019,
+                "end_column": 94,
+                "end_line": 19,
+                "line": 19,
+                "marker": "未",
+                "sentence_context": "无未定义引用",
+                "sentence_id": "T0052",
+                "side": "after",
+                "start": 1018
+              }
+            ],
+            "before": {
+              "不": 2,
+              "无": 2,
+              "未": 2
+            },
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0020",
+                "column": 65,
+                "end": 457,
+                "end_column": 66,
+                "end_line": 14,
+                "line": 14,
+                "marker": "不",
+                "sentence_context": "& 决策树、模型文件、枚举核验、不可行情形清单",
+                "sentence_id": "T0020",
+                "side": "before",
+                "start": 456
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0039",
+                "column": 75,
+                "end": 779,
+                "end_column": 76,
+                "end_line": 17,
+                "line": 17,
+                "marker": "不",
+                "sentence_context": "& 不少于 20 个种子",
+                "sentence_id": "T0039",
+                "side": "before",
+                "start": 778
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0045",
+                "column": 72,
+                "end": 886,
+                "end_column": 73,
+                "end_line": 18,
+                "line": 18,
+                "marker": "无",
+                "sentence_context": "& 无未来信息泄漏",
+                "sentence_id": "T0045",
+                "side": "before",
+                "start": 885
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0045",
+                "column": 73,
+                "end": 887,
+                "end_column": 74,
+                "end_line": 18,
+                "line": 18,
+                "marker": "未",
+                "sentence_context": "& 无未来信息泄漏",
+                "sentence_id": "T0045",
+                "side": "before",
+                "start": 886
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0053",
+                "column": 92,
+                "end": 1007,
+                "end_column": 93,
+                "end_line": 19,
+                "line": 19,
+                "marker": "无",
+                "sentence_context": "无未定义引用",
+                "sentence_id": "T0052",
+                "side": "before",
+                "start": 1006
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0053",
+                "column": 93,
+                "end": 1008,
+                "end_column": 94,
+                "end_line": 19,
+                "line": 19,
+                "marker": "未",
+                "sentence_context": "无未定义引用",
+                "sentence_id": "T0052",
+                "side": "before",
+                "start": 1007
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "reporting_observation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          }
+        },
+        "claim_pairing": {
+          "after_claims": 64,
+          "before_claims": 64,
+          "unique_exact_pairs": 46,
+          "unpaired_after_claims": 18,
+          "unpaired_before_claims": 18
+        },
+        "protection": {
+          "after_ranges": 1,
+          "before_ranges": 1,
+          "line_column_basis": "NORMALIZED_LF_1_BASED_UNICODE_CODEPOINT",
+          "masking": "LENGTH_PRESERVING"
+        }
+      }
+    },
+    "hard_failure": false,
+    "status": "pass",
+    "summary": {
+      "advisories": 0,
+      "errors": 0,
+      "warnings": 1
+    },
+    "warnings": [
+      {
+        "code": "SPEECH_ACT_DEFINITION_NAMING_CHANGED",
+        "details": {
+          "after": {
+            "定义": 2
+          },
+          "after_occurrences": [
+            {
+              "category": "definition_naming",
+              "claim_id": "C0029",
+              "column": 101,
+              "end": 604,
+              "end_column": 103,
+              "end_line": 15,
+              "line": 15,
+              "marker": "定义",
+              "sentence_context": "至少三类基线同统计定义比较",
+              "sentence_id": "T0029",
+              "side": "after",
+              "start": 602
+            },
+            {
+              "category": "definition_naming",
+              "claim_id": "C0053",
+              "column": 94,
+              "end": 1021,
+              "end_column": 96,
+              "end_line": 19,
+              "line": 19,
+              "marker": "定义",
+              "sentence_context": "无未定义引用",
+              "sentence_id": "T0052",
+              "side": "after",
+              "start": 1019
+            }
+          ],
+          "before": {
+            "定义": 1
+          },
+          "before_occurrences": [
+            {
+              "category": "definition_naming",
+              "claim_id": "C0053",
+              "column": 94,
+              "end": 1010,
+              "end_column": 96,
+              "end_line": 19,
+              "line": 19,
+              "marker": "定义",
+              "sentence_context": "无未定义引用",
+              "sentence_id": "T0052",
+              "side": "before",
+              "start": 1008
+            }
+          ],
+          "raw_delta": {
+            "added": {
+              "定义": 1
+            },
+            "removed": {}
+          },
+          "residual_delta": [
+            {
+              "added": {
+                "定义": 1
+              },
+              "after_claim_id": null,
+              "after_occurrences": [
+                {
+                  "category": "definition_naming",
+                  "claim_id": "C0029",
+                  "column": 101,
+                  "end": 604,
+                  "end_column": 103,
+                  "end_line": 15,
+                  "line": 15,
+                  "marker": "定义",
+                  "sentence_context": "至少三类基线同统计定义比较",
+                  "sentence_id": "T0029",
+                  "side": "after",
+                  "start": 602
+                }
+              ],
+              "before_claim_id": null,
+              "before_occurrences": [],
+              "removed": {},
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'definition_naming'; review semantic force manually.",
+        "severity": "warning"
+      }
+    ]
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 1,
+    "before_candidates": 7,
+    "introduced_candidates": 0,
+    "unexplained_high_candidates": 1
+  },
+  "mechanical_validation_exit_code": 2,
+  "mechanical_validation_status": "REVIEW",
+  "mode": "REWRITE",
+  "paired_quality_clearance_granted": false,
+  "paired_quality_review_local_clearance_supported": false,
+  "paired_quality_review_request": {
+    "artifact": {
+      "after_sha256": "2dbfed7b053d05bea3d5356df83bdc1ccaff7b88214a6069503227f68ce68105",
+      "before_sha256": "e6953a1e2b545b909f6842200eb2a11df0d6f8b641f4f9863f4e7a5f71b3ce46"
+    },
+    "changes": [
+      {
+        "after": {
+          "end_line": 6,
+          "han_chars": 15,
+          "line_count": 1,
+          "sha256": "37a13514e3c36e3be9b26d62a112a1fbecaa6011a584971dd7d4bc77b66db153",
+          "start_line": 6
+        },
+        "before": {
+          "end_line": 6,
+          "han_chars": 15,
+          "line_count": 1,
+          "sha256": "07fe2849cfd0653e02896ca182467d990d051997fe223c50122751feff7eded8",
+          "start_line": 6
+        },
+        "change_id": "QCH-80abfea1bd64d4c65cd2",
+        "operation": "REPLACE",
+        "ordinal": 1
+      },
+      {
+        "after": {
+          "end_line": 10,
+          "han_chars": 15,
+          "line_count": 1,
+          "sha256": "37a13514e3c36e3be9b26d62a112a1fbecaa6011a584971dd7d4bc77b66db153",
+          "start_line": 10
+        },
+        "before": {
+          "end_line": 10,
+          "han_chars": 15,
+          "line_count": 1,
+          "sha256": "07fe2849cfd0653e02896ca182467d990d051997fe223c50122751feff7eded8",
+          "start_line": 10
+        },
+        "change_id": "QCH-8a6c61820b1400768ff2",
+        "operation": "REPLACE",
+        "ordinal": 2
+      },
+      {
+        "after": {
+          "end_line": 13,
+          "han_chars": 72,
+          "line_count": 1,
+          "sha256": "681f292ac9593d01a3c12d850d76f6e25858449072c6084988f8884638861948",
+          "start_line": 13
+        },
+        "before": {
+          "end_line": 13,
+          "han_chars": 68,
+          "line_count": 1,
+          "sha256": "0c11baa11f6a63fd1c01da8576b64baad98fde03c688140d7b2f888cedb620a7",
+          "start_line": 13
+        },
+        "change_id": "QCH-62bcbc1492610f2c8c20",
+        "operation": "REPLACE",
+        "ordinal": 3
+      },
+      {
+        "after": {
+          "end_line": 15,
+          "han_chars": 59,
+          "line_count": 1,
+          "sha256": "df4193d3ad6a45753cbd14aee24a01a5b1eb4dd8d913db953febdb2b2681a330",
+          "start_line": 15
+        },
+        "before": {
+          "end_line": 15,
+          "han_chars": 56,
+          "line_count": 1,
+          "sha256": "972c3314a7d41e5180e45e5b4057856aa7103d45fc2f40f50303aad90b3053b5",
+          "start_line": 15
+        },
+        "change_id": "QCH-64c081962cb33343bab2",
+        "operation": "REPLACE",
+        "ordinal": 4
+      },
+      {
+        "after": {
+          "end_line": 18,
+          "han_chars": 59,
+          "line_count": 1,
+          "sha256": "31bae26936d11fbf390083324f1da39a774ef4a0bd113096b30d4c31828c163e",
+          "start_line": 18
+        },
+        "before": {
+          "end_line": 18,
+          "han_chars": 55,
+          "line_count": 1,
+          "sha256": "ac89eec935434a0b4242888d40ef55919a329b8eab284a902ee2b83f686bc2ec",
+          "start_line": 18
+        },
+        "change_id": "QCH-f21526553a0d20b7ecf4",
+        "operation": "REPLACE",
+        "ordinal": 5
+      }
+    ],
+    "limitations": {
+      "academic_correctness": "NOT_EVALUATED",
+      "authorship": "NOT_EVALUATED",
+      "quality_clearance_granted": false
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "08b4e88c540722085ab5130c2137c802ce2ef561f64db8a3f97660e98c12e29b",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "acf31a687e741637d1ebb82a3ab9e67039251326cfb006f45ea7dfb719641689",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "request_sha256": "45e47b5bc7e42993ebe4190eabc5258ee340ff103ba2feab93e952e8f97f1eca",
+    "review_contract": {
+      "empty_or_generic_benefit_is_clearance": false,
+      "local_model_or_caller_assertion_is_clearance": false,
+      "required_dimensions": [
+        "actionable_pathology_remaining",
+        "no_change_is_best_available_decision",
+        "problem_span_binding",
+        "independent_reading_benefit",
+        "subject_and_modifier_alignment",
+        "verb_object_collocation",
+        "logical_relation_preservation",
+        "template_field_role_and_authorization",
+        "information_density_and_rhythm",
+        "author_voice_non_regression"
+      ],
+      "required_per_change_verdicts": [
+        "ACCEPT",
+        "REVISE",
+        "REVERT"
+      ],
+      "validator_pass_is_quality_clearance": false
+    },
+    "schema": "humanize-paired-quality-review-request/v1",
+    "status": "BLOCKED_BY_MECHANICAL_GATE",
+    "template_field_changes": [],
+    "validation_context": {
+      "artifact_relation": "CHANGED",
+      "decision": "REWRITE",
+      "decision_eligible": false,
+      "document_format": "tex",
+      "document_scope": "FRAGMENT",
+      "mechanical_validation_status": "REVIEW",
+      "mode": "REWRITE",
+      "scene": "RESEARCH"
+    }
+  },
+  "paired_quality_review_status": "BLOCKED_BY_MECHANICAL_GATE",
+  "paired_style_delta_findings": [],
+  "paired_style_delta_layer_status": "NOT_APPLICABLE",
+  "paired_style_delta_summary": {
+    "authorship_inference": false,
+    "finding_count": 0,
+    "scope": "PAIRED_COURSE_VOICE_NON_REGRESSION_CANDIDATE",
+    "status": "NOT_APPLICABLE"
+  },
+  "pending_warnings": [
+    {
+      "code": "SPEECH_ACT_DEFINITION_NAMING_CHANGED",
+      "details": {
+        "after": {
+          "定义": 2
+        },
+        "after_occurrences": [
+          {
+            "category": "definition_naming",
+            "claim_id": "C0029",
+            "column": 101,
+            "end": 604,
+            "end_column": 103,
+            "end_line": 15,
+            "line": 15,
+            "marker": "定义",
+            "sentence_context": "至少三类基线同统计定义比较",
+            "sentence_id": "T0029",
+            "side": "after",
+            "start": 602
+          },
+          {
+            "category": "definition_naming",
+            "claim_id": "C0053",
+            "column": 94,
+            "end": 1021,
+            "end_column": 96,
+            "end_line": 19,
+            "line": 19,
+            "marker": "定义",
+            "sentence_context": "无未定义引用",
+            "sentence_id": "T0052",
+            "side": "after",
+            "start": 1019
+          }
+        ],
+        "before": {
+          "定义": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "definition_naming",
+            "claim_id": "C0053",
+            "column": 94,
+            "end": 1010,
+            "end_column": 96,
+            "end_line": 19,
+            "line": 19,
+            "marker": "定义",
+            "sentence_context": "无未定义引用",
+            "sentence_id": "T0052",
+            "side": "before",
+            "start": 1008
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "定义": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "定义": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "definition_naming",
+                "claim_id": "C0029",
+                "column": 101,
+                "end": 604,
+                "end_column": 103,
+                "end_line": 15,
+                "line": 15,
+                "marker": "定义",
+                "sentence_context": "至少三类基线同统计定义比较",
+                "sentence_id": "T0029",
+                "side": "after",
+                "start": 602
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'definition_naming'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "46f8377b1030ff38230524903f857ec6fec315074d4e0be0c242a61c6ddb18ff"
+    }
+  ],
+  "proposed_warning_resolutions": [],
+  "report_scope_check": {
+    "editable_range_count": 0,
+    "editable_ranges": [],
+    "extractor_replay_match": null,
+    "fragment_count": 0,
+    "outside_selection_unchanged": null,
+    "report_sha256": null,
+    "scope_path": null,
+    "scope_semantic_sha256": null,
+    "scope_sha256": null,
+    "source_sha256": null,
+    "status": "N/A"
+  },
+  "review_reasons": [
+    "speech_act_warning",
+    "unexplained_high_severity_signal",
+    "unexplained_strict_corpus_signal"
+  ],
+  "scene": "RESEARCH",
+  "semantic_source_check": "N/A",
+  "speech_act_diagnostics": [],
+  "speech_act_layer_status": "REVIEW",
+  "status": "REVIEW",
+  "strict_corpus_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 1,
+    "before_candidates": 4,
+    "clean_allowed_by_strict_layer": false,
+    "enabled": true,
+    "no_change_allowed": false,
+    "unexplained_candidates": 1
+  },
+  "structural_plan_check": {
+    "actual_content_changed": true,
+    "change_applied": false,
+    "invariant_baseline_sha256": "07058b2c1a36c3499ad20ea6c34d17d1bb52354f5854290502821934564e6f14",
+    "limitations": "non-STRUCTURAL run",
+    "non_structural_paragraph_order_check": {
+      "author_paragraphs_after": 1,
+      "author_paragraphs_before": 1,
+      "authorized_topology_operations": 0,
+      "detected_paragraph_merges": [],
+      "detected_paragraph_splits": [],
+      "light_sentence_reorder": false,
+      "match_evidence": [
+        {
+          "after_index": 0,
+          "before_index": 0,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00204"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 1,
+          "before_index": 1,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00205"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 2,
+          "before_index": 2,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00206",
+            "F00001-P00207",
+            "F00001-P00208"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 3,
+          "before_index": 3,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00209"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 4,
+          "before_index": 4,
+          "before_sha256": "96708b2434ee2def3360d2e6b19c8391e288950da48a1a36ac08fafe58503cb5",
+          "kind": "AUTHOR",
+          "method": "NEAR_EXACT",
+          "protected_ids": [],
+          "similarity": 0.970149
+        },
+        {
+          "after_index": 5,
+          "before_index": 5,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00211"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 6,
+          "before_index": 6,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00212"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 7,
+          "before_index": 7,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00213"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 8,
+          "before_index": 8,
+          "before_sha256": "1e2673fe1bd608fef6a27e59c62b849d99646c86cb0359af1bc1e38a818480dc",
+          "kind": "AUTHOR",
+          "method": "NEAR_EXACT",
+          "protected_ids": [],
+          "similarity": 0.970149
+        },
+        {
+          "after_index": 9,
+          "before_index": 9,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00215"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 10,
+          "before_index": 10,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00216"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 11,
+          "before_index": 11,
+          "before_sha256": "0f4a433b381f0f816c249c4b3cd0defefd98a104e38d2ace9d86595d156c1b74",
+          "kind": "AUTHOR",
+          "method": "NEAR_EXACT",
+          "protected_ids": [],
+          "similarity": 0.98782
+        },
+        {
+          "after_index": 12,
+          "before_index": 12,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00225"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 13,
+          "before_index": 13,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00226"
+          ],
+          "similarity": 1.0
+        }
+      ],
+      "matched_author_paragraphs": 3,
+      "matched_elements": 14,
+      "matched_protected_anchors": 11,
+      "moved_paragraph_sha256": [],
+      "near_exact_reordered": false,
+      "paragraph_topology_changed": false,
+      "protected_anchor_reordered": false,
+      "reordered": false,
+      "scope": "NON_STRUCTURAL_PARAGRAPH_TOPOLOGY_AND_ORDER",
+      "status": "PASS",
+      "topology_authorization_error": "",
+      "topology_authorization_status": "NOT_REQUIRED",
+      "topology_operation_evidence": []
+    },
+    "semantic_review_status": "NOT_ISSUED",
+    "status": "NOT_APPLICABLE"
+  },
+  "style_signal_layer_status": "REVIEW",
+  "template_field_edit_scope_check": {
+    "authorized_edit_count": 0,
+    "authorized_edits": [],
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "provided": false,
+    "schema_version": null,
+    "scope_sha256": null,
+    "source_sha256": "e6953a1e2b545b909f6842200eb2a11df0d6f8b641f4f9863f4e7a5f71b3ce46",
+    "status": "N/A"
+  },
+  "template_field_findings": [],
+  "template_field_layer_status": "PASS",
+  "template_field_summary": {
+    "authorized_edit_count": 0,
+    "finding_count": 0,
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "review_finding_count": 0,
+    "status": "PASS"
+  },
+  "unaccepted_warnings": [
+    {
+      "code": "SPEECH_ACT_DEFINITION_NAMING_CHANGED",
+      "details": {
+        "after": {
+          "定义": 2
+        },
+        "after_occurrences": [
+          {
+            "category": "definition_naming",
+            "claim_id": "C0029",
+            "column": 101,
+            "end": 604,
+            "end_column": 103,
+            "end_line": 15,
+            "line": 15,
+            "marker": "定义",
+            "sentence_context": "至少三类基线同统计定义比较",
+            "sentence_id": "T0029",
+            "side": "after",
+            "start": 602
+          },
+          {
+            "category": "definition_naming",
+            "claim_id": "C0053",
+            "column": 94,
+            "end": 1021,
+            "end_column": 96,
+            "end_line": 19,
+            "line": 19,
+            "marker": "定义",
+            "sentence_context": "无未定义引用",
+            "sentence_id": "T0052",
+            "side": "after",
+            "start": 1019
+          }
+        ],
+        "before": {
+          "定义": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "definition_naming",
+            "claim_id": "C0053",
+            "column": 94,
+            "end": 1010,
+            "end_column": 96,
+            "end_line": 19,
+            "line": 19,
+            "marker": "定义",
+            "sentence_context": "无未定义引用",
+            "sentence_id": "T0052",
+            "side": "before",
+            "start": 1008
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "定义": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "定义": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "definition_naming",
+                "claim_id": "C0029",
+                "column": 101,
+                "end": 604,
+                "end_column": 103,
+                "end_line": 15,
+                "line": 15,
+                "marker": "定义",
+                "sentence_context": "至少三类基线同统计定义比较",
+                "sentence_id": "T0029",
+                "side": "after",
+                "start": 602
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'definition_naming'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "46f8377b1030ff38230524903f857ec6fec315074d4e0be0c242a61c6ddb18ff"
+    }
+  ],
+  "unexplained_high_findings": [
+    {
+      "action": "REWRITE",
+      "column": 17,
+      "context": "longtable}{p{1.4cm}p{1.55cm}p{3.1cm}p{4.6cm}p{3.4cm}} \\caption{四周训练计划与验收标准}\\label{tab:four-weeks}\\\\ \\toprule 时间 & 负责人 & 训练任务 & 产物 & 核对标准\\\\ \\mi",
+      "count": 1,
+      "file": "after",
+      "finding_hash": "b20cc74f00bddaf5584ecae4055ac4e121154e4c1e148058989622c358452a36",
+      "line": 4,
+      "matched": "验收",
+      "rationale": "删除无证据的完成态和验收封口，改写为可见结果或保留原有未决状态。",
+      "severity": "high",
+      "signal_id": "LEX-STRICT-CORPUS-CLOSURE-01"
+    }
+  ],
+  "unexplained_strict_findings": [
+    {
+      "action": "REWRITE",
+      "column": 17,
+      "context": "longtable}{p{1.4cm}p{1.55cm}p{3.1cm}p{4.6cm}p{3.4cm}} \\caption{四周训练计划与验收标准}\\label{tab:four-weeks}\\\\ \\toprule 时间 & 负责人 & 训练任务 & 产物 & 核对标准\\\\ \\mi",
+      "count": 1,
+      "file": "after",
+      "finding_hash": "b20cc74f00bddaf5584ecae4055ac4e121154e4c1e148058989622c358452a36",
+      "line": 4,
+      "matched": "验收",
+      "rationale": "删除无证据的完成态和验收封口，改写为可见结果或保留原有未决状态。",
+      "severity": "high",
+      "signal_id": "LEX-STRICT-CORPUS-CLOSURE-01"
+    }
+  ],
+  "warning_proposal_state": {
+    "attestation_status": "NOT_PROVIDED",
+    "cross_record_reviewer_linkability": "NOT_RECORDED",
+    "identity_verified": false,
+    "proposal_source": "NOT_PROVIDED",
+    "proposed_warning_fingerprints": [],
+    "review_clearance_granted": false,
+    "reviewer_identifier_collected": false,
+    "stable_reviewer_pseudonym_recorded": false,
+    "warning_review_request_sha256": null
+  },
+  "warning_resolutions": {},
+  "warning_review_request": {
+    "artifact": {
+      "after_sha256": "2dbfed7b053d05bea3d5356df83bdc1ccaff7b88214a6069503227f68ce68105",
+      "before_sha256": "e6953a1e2b545b909f6842200eb2a11df0d6f8b641f4f9863f4e7a5f71b3ce46"
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "08b4e88c540722085ab5130c2137c802ce2ef561f64db8a3f97660e98c12e29b",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "acf31a687e741637d1ebb82a3ab9e67039251326cfb006f45ea7dfb719641689",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "request_sha256": "dd9456c2f67fa90fb5aedbf3120412e681ac4c3cd67fdc93540074abe6129865",
+    "schema": "humanize-warning-review-request/v1",
+    "validation_context": {
+      "document_format": "tex",
+      "document_scope": "FRAGMENT",
+      "mode": "REWRITE",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "scene": "RESEARCH",
+      "strict_speech_acts": false
+    },
+    "warnings": [
+      {
+        "code": "SPEECH_ACT_DEFINITION_NAMING_CHANGED",
+        "details": {
+          "after": {
+            "定义": 2
+          },
+          "after_occurrences": [
+            {
+              "category": "definition_naming",
+              "claim_id": "C0029",
+              "column": 101,
+              "end": 604,
+              "end_column": 103,
+              "end_line": 15,
+              "line": 15,
+              "marker": "定义",
+              "sentence_context": "至少三类基线同统计定义比较",
+              "sentence_id": "T0029",
+              "side": "after",
+              "start": 602
+            },
+            {
+              "category": "definition_naming",
+              "claim_id": "C0053",
+              "column": 94,
+              "end": 1021,
+              "end_column": 96,
+              "end_line": 19,
+              "line": 19,
+              "marker": "定义",
+              "sentence_context": "无未定义引用",
+              "sentence_id": "T0052",
+              "side": "after",
+              "start": 1019
+            }
+          ],
+          "before": {
+            "定义": 1
+          },
+          "before_occurrences": [
+            {
+              "category": "definition_naming",
+              "claim_id": "C0053",
+              "column": 94,
+              "end": 1010,
+              "end_column": 96,
+              "end_line": 19,
+              "line": 19,
+              "marker": "定义",
+              "sentence_context": "无未定义引用",
+              "sentence_id": "T0052",
+              "side": "before",
+              "start": 1008
+            }
+          ],
+          "raw_delta": {
+            "added": {
+              "定义": 1
+            },
+            "removed": {}
+          },
+          "residual_delta": [
+            {
+              "added": {
+                "定义": 1
+              },
+              "after_claim_id": null,
+              "after_occurrences": [
+                {
+                  "category": "definition_naming",
+                  "claim_id": "C0029",
+                  "column": 101,
+                  "end": 604,
+                  "end_column": 103,
+                  "end_line": 15,
+                  "line": 15,
+                  "marker": "定义",
+                  "sentence_context": "至少三类基线同统计定义比较",
+                  "sentence_id": "T0029",
+                  "side": "after",
+                  "start": 602
+                }
+              ],
+              "before_claim_id": null,
+              "before_occurrences": [],
+              "removed": {},
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'definition_naming'; review semantic force manually.",
+        "severity": "warning",
+        "warning_fingerprint": "46f8377b1030ff38230524903f857ec6fec315074d4e0be0c242a61c6ddb18ff"
+      }
+    ]
+  },
+  "warnings_without_resolution_proposal": [
+    {
+      "code": "SPEECH_ACT_DEFINITION_NAMING_CHANGED",
+      "details": {
+        "after": {
+          "定义": 2
+        },
+        "after_occurrences": [
+          {
+            "category": "definition_naming",
+            "claim_id": "C0029",
+            "column": 101,
+            "end": 604,
+            "end_column": 103,
+            "end_line": 15,
+            "line": 15,
+            "marker": "定义",
+            "sentence_context": "至少三类基线同统计定义比较",
+            "sentence_id": "T0029",
+            "side": "after",
+            "start": 602
+          },
+          {
+            "category": "definition_naming",
+            "claim_id": "C0053",
+            "column": 94,
+            "end": 1021,
+            "end_column": 96,
+            "end_line": 19,
+            "line": 19,
+            "marker": "定义",
+            "sentence_context": "无未定义引用",
+            "sentence_id": "T0052",
+            "side": "after",
+            "start": 1019
+          }
+        ],
+        "before": {
+          "定义": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "definition_naming",
+            "claim_id": "C0053",
+            "column": 94,
+            "end": 1010,
+            "end_column": 96,
+            "end_line": 19,
+            "line": 19,
+            "marker": "定义",
+            "sentence_context": "无未定义引用",
+            "sentence_id": "T0052",
+            "side": "before",
+            "start": 1008
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "定义": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "定义": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "definition_naming",
+                "claim_id": "C0029",
+                "column": 101,
+                "end": 604,
+                "end_column": 103,
+                "end_line": 15,
+                "line": 15,
+                "marker": "定义",
+                "sentence_context": "至少三类基线同统计定义比较",
+                "sentence_id": "T0029",
+                "side": "after",
+                "start": 602
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'definition_naming'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "46f8377b1030ff38230524903f857ec6fec315074d4e0be0c242a61c6ddb18ff"
+    }
+  ]
+}

@@ -1,0 +1,533 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-cdba9d7c0739",
+  "chunk_binding_sha256": "880a84c7efcd4fcf038b0295a29c98904a425297778de873939be8569e99e56e",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "076f68ce372327a7",
+    "prepare_integrity_sha256": "8f97c89de72845dd0773e19976987f925b059c3713ff6674aff16dbb18eae5a4",
+    "run_metadata_sha256": "6e9ac6fe3ed78d0bd91cc4f918384e779c45c7fc167106e797d868a4d2cd96bb",
+    "policy_snapshot_sha256": "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "54c7b230c8146c982ccc9c4547f4a5bea96d6fea556c12fb60aad7919254833e",
+      "unit_id": "U-cdba9d7c0739",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 36328,
+      "end": 44455,
+      "start_line": 909,
+      "end_line": 1126,
+      "source_span_sha256": "07f6ca1733cae370cacb6d40df03029c378d504aaa70ccdeaeb0f2d55eeb112b",
+      "masked_text_sha256": "618e6a3dc3ab2ebace17af38889f4d0dc1dbefa69bca15c756fcb5c2e194da5e",
+      "chunk_binding_sha256": "880a84c7efcd4fcf038b0295a29c98904a425297778de873939be8569e99e56e"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "d116df3ab8dcafd7e1b4cbf52cce0a69a3c4b58c6370fd439c823e9942b7d958",
+      "routing_input_sha256": "f3ace95dce83a4e095f6658e0835f4b6c6a8fcc03cb5fde5af9aea009ef7e218"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "976567cad062e433f9cece6b5272a82b5bf437d20032ec8a52b82dce7f7e0231"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00571:61de6f05d7b6]]\n\nC 类从字段、样本单位、时间范围、缺失异常和训练/验证边界写起。有效表达包括\n[[PROTECTED:F00001-P00572:cf7b72f5272e]][[PROTECTED:F00001-P00573:3be09333ce7d]][[PROTECTED:F00001-P00574:ca060e03e7f8]][[PROTECTED:F00001-P00575:3759d1b20811]]。评价排序需解释指标正向化、权重来源和排序稳定性；\n预测需把误差转换为补货、时点或风险决策的影响。\n\n需要避开的是全数据清洗后再切分、用随机切分检验未来预测、把相关性写成因果、\n只报告最优模型以及用二维降维图证明分类性能。图表以数据质量、分布与相关、\n验证协议、残差/校准、特征影响和决策结果为主。\n\nC006、C085、C169、C283、C155、C229、C050、C126、C228、C109、C142、C170、C227、\nC305、C038、C063、C094、C234、C023 与 C132 共二十篇 C 题均已通过人工检查。以下归纳\n同时覆盖业务统计、规划决策和医学筛查，但每种句式仍须回到本题的样本单位、时间口径和\n决策对象，不能把不同应用中的模型名机械拼接。\nC006 的正向价值首先体现在[[PROTECTED:F00001-P00576:cae60d007a16]]的过程。论文没有直接把[[PROTECTED:F00001-P00577:da9c7eb7e834]]当成一个无来由的分数，而是拆成间隔次数、平均间隔周数和平均连续供货周数，\n再说明各指标的成本/效益方向、归一化和熵权。这里可迁移的不是熵权--TOPSIS 这个名称，\n而是[[PROTECTED:F00001-P00578:0733468d2016]]的完整段落。\n\n该篇在周供货能力处还主动拒绝了看似省事的历史均值：均值会把不同周次抹平，经济作物的\n产量又具有周期性，故改为在十个 24 周周期中取相同周次的历史位置，再用 GP 估计订货量\n对应的供货误差。逐周订购时，上周库存、实际供货和消耗量共同形成下一周初始状态；\n二元供应商筛选与逐周订购使用遗传算法，而转运环节按损耗率、整批供应、剩余运力和 A 类\n优先等规则分配。这样的写法把三个求解角色分开，避免只因同属一条业务链便统称[[PROTECTED:F00001-P00579:c99737dee0d5]]。\n\n结果解释也保留了人的判断痕迹。作者先给 24 周总体方案，再选第 3 周和第 13 周说明库存、\n供货与转运怎样在具体周次闭合；发现原方案没有表现出材料偏好后，先诊断成本系数所对应的\n替代机制，再只调整 A/C 原料的等产能约束。调整后的成本最大约降 [[PROTECTED:F00001-P00580:8a464c4ec095]]、平均仅降\n[[PROTECTED:F00001-P00581:d78b788cfcf3]]，论文承认改善并不显著，并把原因落到供应商数量少、供货能力贴近需求和可行域\n狭窄，而不是把正向变化包装成[[PROTECTED:F00001-P00582:d2b0471b7fe6]]。问题四沿用转运模型时，又说明输入、输出和\n优化目标均未改变；这比一句[[PROTECTED:F00001-P00583:9cecd30073e2]]更能说明模块为何可复用。\n\nC085 把另一类业务判断写得具体。四个供应商指标不是只给名称和权重，而是逐项解释\n[[PROTECTED:F00001-P00584:67a0c31fe48d]]；稳定供货量又先受两条\n规则筛选：供货/订货超过 [[PROTECTED:F00001-P00585:d01ad7c982c9]]，且供货量不超过同周期位置均值的三倍，只有同时满足时\n才取最大候选值。这样的段落先让阈值承担稳定性与异常排除作用，再给期望量，不以\n[[PROTECTED:F00001-P00586:e3f60725374b]]省略判断过程。\n\n算法改进也由可指认的失败触发。固定周权重可能使总体供货看似充足，却让个别周严重\n缺货，所以作者按照当前供货与期望产能的缺口更新下一轮权重；第 7、8 周在数据中连续处于\n淡季，因而前视窗口取两周并提前备料。转运部分则先拆分超过单个转运商容量的大项，再按\n可靠性和材料价值做 0--1 背包，最后对未装入项贪心补救。结果比较时，历史采购成本虽低，\n但历史平均产能没有达到 28200，故改用采购成本/产能比较 [[PROTECTED:F00001-P00587:83130079fee2]] 与 [[PROTECTED:F00001-P00588:19e7c8f74a73]]。\n这几处都先写[[PROTECTED:F00001-P00589:75fb00554781]]，再给修正动作；比[[PROTECTED:F00001-P00590:20b3f6446e68]]贴近人类作者的真实推理。\n\nC169 展示了另一种容易被 AI 文本抹掉的动作：作者会说明哪些观察[[PROTECTED:F00001-P00591:d83c07578746]]模型。\n前 50 家供应商的序列中既有周期性异常，也有非周期尖峰；论文先解释两类现象的可能成因，\n随后用[[PROTECTED:F00001-P00592:3283de0b1d43]]和[[PROTECTED:F00001-P00593:34f4f1dea78a]]两个理由，明确下文不另行建模。\n类似地，初始库存没有方便地设为 0，而是以[[PROTECTED:F00001-P00594:2c185402bb8f]]为起点，回到历史 24 周\n周期的同位状态估计。转运模型也先判断损耗无记忆，确认过去损耗不影响本周后，才按周拆分；\n这种次序比[[PROTECTED:F00001-P00595:fcb62eadf449]]更可信。\n\n该篇还把业务后果直接塑造成数学结构。缺供对生产的危害重于超供，作者先列分段函数应满足\n的符号、曲率和两侧大小条件，再构造 [[PROTECTED:F00001-P00596:ecfff7f085a2]] 与 [[PROTECTED:F00001-P00597:d8bb404c7872]]，而不是先选函数再补解释。\n候选集的前 50 家又由[[PROTECTED:F00001-P00598:274a74ca95a8]]共同\n限定。跨周聚合时，最少供应商取 24 个逐周最小数的最大值，最大产能取 24 个逐周上界的\n最小值；聚合方向不同，是因为前者要找统一可用的供应商数，后者要保证每周都能达到产能。\n\nC283 把评价指标进一步写成附件上的实际操作。忙期均量并非对 240 周直接求平均，而是先去掉\n无订单形成的零周；信誉度又让相对订供偏差乘以订货量的对数，使大额且按量履约的订单提供更多\n证据。熵权结果出现供给弹性等业务重要指标权重过低的情形后，作者没有用一句[[PROTECTED:F00001-P00599:f854c4d12ceb]]\n带过，而是先将指标归到绩效、战略意义和潜力，再在适度范围内用 AHP 修正并通过一致性门。\n这形成[[PROTECTED:F00001-P00600:4eb400e2ff0c]]的完整段落。\n\n双层贪心的选型和停止也保留了真实取舍。论文先写线性规划的变量/约束关系，随后指出动态规划的\n状态空间约为 [[PROTECTED:F00001-P00601:cd82717a6e23]]，随后利用供应商和转运商已有排序构造两层贪心。库存达到\n两周需求后立即停止，不是因为程序[[PROTECTED:F00001-P00602:1220fe6da438]]，而是继续下单会转向较差供应方或运输方并增加存运\n成本。四个关键订货式共用历史忙期均量，再按约束、成本、初期稳健性和现实含义逐个淘汰；随机\n运行则明确只取[[PROTECTED:F00001-P00603:8bec3105016e]]的典型代表，不把一次输出包装成唯一最优。\n\n问题三的类别权重同时写了上下边界：过小不能突出 A/C 的存储差异，过大又会牺牲采购经济性和\n合作可靠性。到问题四，目标由成本/损耗最小转为产能最大，先前排名靠后的供应商也可能贡献供货，\n所以候选从前 50 家扩到全部 176 家。结果段发现实际停止条件与预期瓶颈不一致时，作者保留\n疑问并给出[[PROTECTED:F00001-P00604:e52ada59c50a]]或[[PROTECTED:F00001-P00605:51455960254f]]两种解释；生产曲线与接收曲线同向、约滞后 3 周，\n则把库存传导写成了可读的时间关系。\n\nC155 先处理[[PROTECTED:F00001-P00606:5a77898784af]]，而不是把所有空格交给同一种插补。化学成分空白按题意表示\n未检出，故填为 0；颜色字段却不能照此处理，因为相同已知条件仍可能对应多种颜色，且表面随机\n取样不足以代表整件文物。论文据此拒绝猜测性填补，只在涉及颜色的分析中忽略 19、40、48、\n58 号样品。类似地，成分总和低于 [[PROTECTED:F00001-P00607:11d094311671]] 的 15、17 号点先由题面阈值判为无效，再剔除；其余\n样本闭合到 [[PROTECTED:F00001-P00608:37da10768207]] 后才作中心化对数比变换。这种[[PROTECTED:F00001-P00609:dec202c25001]]\n比一句[[PROTECTED:F00001-P00610:e61d4d19c780]]更能使读者知道数据发生了什么。\n\n统计方法也由前提而不是方法名分流。作者先列联表和期望计数，满足 Pearson 卡方检验前提的组\n直接使用 Pearson，不满足的组改用 Yates 校正；风化与类型的 [[PROTECTED:F00001-P00611:cb04d51c78fd]]，与颜色、纹饰的\n[[PROTECTED:F00001-P00612:ea6649a9e145]] 分别为 [[PROTECTED:F00001-P00613:bfdca3c2c22d]]、[[PROTECTED:F00001-P00614:1e034ea74811]]。随后 [[PROTECTED:F00001-P00615:e22bf0af9aea]] 的 Q 型聚类借助前问趋势和已知标签命名风化/未风化\n簇，又用聚类结果反向核对前问判断；[[PROTECTED:F00001-P00616:fab994b19469]] 随后将风化展开为未风化、轻度、中度和重度四阶段。\n同一条证据在前后问题之间双向使用，使各问不是互不相干的算法堆叠。\n\n预测段先逐成分比较二次回归的 [[PROTECTED:F00001-P00617:fb745b338a46]]，只预测拟合较好的成分，对较低者采取不变策略；若异常点\n使[[PROTECTED:F00001-P00618:6e0c2fd83705]]被放大，则只对这个唯一敏感量作单调压缩，再经逆对数比和闭合约束恢复\n总和为 [[PROTECTED:F00001-P00619:37da10768207]] 的成分向量。分类段又把 R 型和 Q 型聚类的职责拆开：R 型先将十四个相关成分\n变量分组并选代表量，Q 型再用代表量划分样品亚类。未知样品由两棵按风化状态分层的 PbO 决策树\n分类，并以 Q 聚类交叉核对；最后固定每一种成分为灰色关联母序列，再比较两类玻璃的最大、最小\n关联及分布集中程度。这里可迁移的是[[PROTECTED:F00001-P00620:30512002fd4b]][[PROTECTED:F00001-P00621:2eeba2496ed0]]\n以及[[PROTECTED:F00001-P00622:eb3f0269caae]]，不是把所有方法名称并列到摘要中。\n\nC229 进一步说明，即使缺失的是同一个颜色字段，填补方法也不必一刀切。论文先用纹饰、表面\n风化与玻璃类型组成匹配条件，再逐个核对候选样品的参考质量。40、58 号分别能找到成分相近且\n可参照的 39、11 号，因此用热卡填为深绿、浅蓝；19、48 号所在组虽有匹配对象，但多数化学\n样本来自未风化采样点，参考性较低，故转用众数并填为浅蓝。正文把[[PROTECTED:F00001-P00623:2a75432d82cd]]连续写出，比笼统声称[[PROTECTED:F00001-P00624:9492af03e1f8]]更可信。\n\n化学成分的空白与数值 0 也先按数据生成过程解释：前者来自低于检测限，后者可能是保留位数后的\n舍入结果，二者都不能当作普通零值进入对数比。作者以列最小正值近似检测限，取\n[[PROTECTED:F00001-P00625:4aae502acca7]] 作乘法替换，随后将向量闭合到 [[PROTECTED:F00001-P00626:37da10768207]]。SiO2 占比过大而遮蔽其他成分时，\n论文保留全部成分图，又补一张去除 SiO2 的图，最后写[[PROTECTED:F00001-P00627:9d94efa41bc2]]。这种做法没有为了\n看清小量而删掉主量证据，也没有让一张比例失衡的图承担全部结论。\n\n分类段先用决策树给出可供核查的 PbO=1.5 阈值，在 47 个训练样品和 20 个测试样品上报告\n测试准确率 [[PROTECTED:F00001-P00628:37da10768207]]；随后 PLS-DA 以 PbO、K2O、BaO、SrO 的 VIP 值复核多变量差异。亚类\n没有已知标签，作者据此明确把任务判为无监督学习，再由 WSS 曲线选 [[PROTECTED:F00001-P00629:4653d798b64b]]。铅钡类三簇界限清楚，\n高钾类没有明显分界，正文只写[[PROTECTED:F00001-P00630:0bf958cf68e6]]。这里可迁移的是[[PROTECTED:F00001-P00631:19f4881ad77b]]和[[PROTECTED:F00001-P00632:8e7aa5010e7a]]，而不是把两种模型或两类图统一包装成效果良好。\n\n未知样品的 PLS 维数同时比较十折随机段交叉验证误差与累计解释率：三个成分时 CV RMSEP 为\n[[PROTECTED:F00001-P00633:817bbff1df1e]]，增加到四个成分也只到 [[PROTECTED:F00001-P00634:16099c59c4f0]]，而 X 与类别累计解释率已达 [[PROTECTED:F00001-P00635:7fd3d9ac7deb]] 与\n[[PROTECTED:F00001-P00636:75f36850a306]]，故停止在三维。A1、A6、A7 判为高钾，其余五件判为铅钡，树与 PLS 结论一致。\n问题四又从数据结构推出检验：相关矩阵对称，故只取上三角；相同成分对一一对应，故用配对\nWilcoxon，[[PROTECTED:F00001-P00637:4032aca82d6c]]。参数选择和检验选择都由可检查的两层理由推进，而非由方法名称代替判断。\n\nC050 把数据侧写写成模型入口，而不是把探索性图表集中摆放后便不再使用。论文先从品种丰富度、\n季度销量、损耗、描述统计和时序变化观察附件，并在负价记录的业务含义明确后剔除退货数据；后续\n相关分析、半年预测窗口、可售单品范围和优化约束都能回指这些观察。单品数量过多时，作者也不是\n随手挑几条曲线，而是先规定各类展示总销量最高者，以及总销量最低但不少于 [[PROTECTED:F00001-P00638:c8f8d35d749f]]\n者，其余结果转入附件。这样的顺序形成[[PROTECTED:F00001-P00639:aee7e3fa494e]]和[[PROTECTED:F00001-P00640:aa089578604e]]的双重接口，使图表选择本身可以复核。\n\n回归和人工特征的解释继续落回业务口径。论文没有停在相关系数、显著性或线性方程，而是逐类说明\n销量每增加 [[PROTECTED:F00001-P00641:c5056ad3eaf5]] 时成本加成定价相应增加或减少多少元。问题四又分别以品类单品种数、\n季度中心附近的节气和主要节日构造丰富度、季节与节日指标，并先说明代表对象、计算口径及其所代理\n的经营现象，再进入灰色关联。可迁移的是[[PROTECTED:F00001-P00642:f4582af5d802]]和[[PROTECTED:F00001-P00643:e04b37807bb6]]，不是在结果段重复一遍公式或把所有人工指标笼统称为特征工程。\n\n该篇还把现有附件能够支持的结论与尚待采集的信息分开。附件内的销量、价格和日期先完成三项关联\n分析；客流、竞品、反馈、天气、供应链等信息则另设段落，按[[PROTECTED:F00001-P00644:e68a9a185b1b]]展开。打折频率较低既可能表示商品受欢迎或供不应求，也可能只是促销必要性较弱；\n频率较高则可能来自销售乏力或保鲜期较短，故需联查销量、反馈和竞争情况后再决定定价或促销。\n这里的关键不是列更多外部变量，而是保留[[PROTECTED:F00001-P00645:debd33e755ff]]的推理过程。\n正文只保留代表图表、关键数值、选择规则和解释，完整单品表、补充图与代码进入附录，使证据分流与\n版面分工保持一致。\n\nC126 的第一条写作价值，是把方法切换前的压力写全。日销售量不服从正态、零值多、三年序列有\n季节结构，OpenBUGS 的 MCMC 又有实际计算负担；作者因此不是直接宣布[[PROTECTED:F00001-P00646:2a9e0e1a5f2d]]，\n而是先用同期平均把三年数据压成一年，再交代新口径怎样进入先验、迭代、燃烧期和后验诊断。\n可迁移的结构是[[PROTECTED:F00001-P00647:1e2bd3160c40]]，它允许读者看见\n为什么换模型，而不是用[[PROTECTED:F00001-P00648:14a008558e8f]]两个空泛评价代替选择过程。\n\n第二条价值来自业务事实对模型结构的授权。论文先写蔬菜当日未售后隔日大多难以原价销售，由此\n把有效记忆限定为两天，再选择二阶 VAR；模型阶数不是孤立的调参结果。预测出现负数时，作者也没有\n机械删去，而把它解释为未售且未退的余货、次日可折价以及当日无需补货。这样，[[PROTECTED:F00001-P00649:d53a6fd3605c]]和[[PROTECTED:F00001-P00650:43dbded54d36]]各自形成完整自然段，比[[PROTECTED:F00001-P00651:74861ce02e6b]]\n更能留下人的判断痕迹。\n\n第三条价值是信息压缩和证据分流。相关系数、阈值与显著性先被压成 T/F 判断矩阵；13 维或更大的\n结果难以放入正文时，作者明确以花叶类或 7 个水生根茎类为例，正文保留判断规则、代表参数表、\nMCMC 诊断和模型评价，完整图表、四组 BUGS 数据块、EViews 工程、R 检验与两问 LINGO 代码进入\n支撑材料。VAR 路线筛得 29 个单品后，又从半小时销售频率独立筛选并得到近似名单；这一动作只称\n有限交叉核对。预测量随后进入利润收入项，成本、损耗和利润率进入约束，问题三随后将最近 7 日反推\n进货量、平均计划量、前日余货、新补货和 [[PROTECTED:F00001-P00652:76cac2829964]] 陈列下限逐项接起。模型之间因此有\n可见中间量，而不是几个算法名称排成一条箭头。\n\nC228 把开放任务的第一步写成[[PROTECTED:F00001-P00653:1b7eb2c5a03e]]。题目没有指定具体探究方向，作者没有用[[PROTECTED:F00001-P00654:67ca6462c203]]一笔带过，而是把品类和单品分别放到时间分布、销售分布及相互关系三个观察面上，\n并说明这些角度合在一起怎样覆盖销售规律。年、周、日周期的统计读数之后又接上采收季、春节、\n周末采购和上下班节奏；图形不作孤立展示，随后用于确定预测窗口，并解释相应的经营现象。\n\n同篇还保留了两次不同性质的方法退让。第一次是试过 ARIMA、回归和灰色预测后，写明当前\n序列上的效果不理想，再改用 LSTM；第二次是面对近七日单品的缺失、短时无明显趋势和随机波动，\n反而不再强行使用复杂预测，而以加权平均给出当前时窗内的估计。前者是[[PROTECTED:F00001-P00655:5b0dcc370795]]，\n后者是[[PROTECTED:F00001-P00656:d7a640771366]]，两种取舍都比事后罗列算法优点贴近\n真实建模过程。\n\n预测到优化的接口也没有被一句[[PROTECTED:F00001-P00657:4e22a9b7dfa7]]吞掉。LSTM 先给基线销量，双对数弹性再按价格变化\n修正需求，修正量进入收入项，成本、损耗和补货量分别进入目标或约束；问题三新增是否进货的\n[[PROTECTED:F00001-P00658:8bfd5c853457]] 变量、连续加成率和补货量以及双目标，作者因变量结构改变才从连续 PSO 转向混合编码的\nNSGA-II。结果段又把方案放回同季历史日利润区间比较。最后的补采建议从成本导向定价的边界长出，\n具体指向竞品价格、消费者预期和收入，而不是另列一份与前文无关的[[PROTECTED:F00001-P00659:594648989252]]。\n\nC109、C142、C170、C227 与 C305 都把企业画像、风险估计和信贷方案串在一条决策链上。\n这组论文最值得保留的不是某个分类器名称，而是分问之间的接口意识：发票先整理成企业级特征，\n特征产生风险或等级，风险再进入准入、额度、利率和冲击重算。写作时应逐项说明[[PROTECTED:F00001-P00660:8064aca0df84]]，并让长表和附录代码承担逐企业追踪，正文只保留规则、代表结果和解释。\n\n这五篇的自然行文还体现在业务量会被重新翻译。交易连续性不是抽象分数，而具体到交易次数、\n金额、波动或中断；外部冲击不是一句[[PROTECTED:F00001-P00661:d5be60499716]]，而具体到行业、地区、需求或偿付能力的\n参数变化。段落宜写成[[PROTECTED:F00001-P00662:173421fa4e2e]]。\n如果只能给单一情景，就把结论限定在该情景，不用[[PROTECTED:F00001-P00663:d5a2bdac82dd]]之类空泛结尾。\n\nC038、C063、C094 与 C234 展示了种植规划中四种互补的表达。C038 把七年规划先写成明确的\n地块、季次、作物和轮作约束，再用 CVaR 讨论尾部风险；C063 让典型情景负责展示候选差异，\n却把最终裁决放到共同随机环境中；C094 将[[PROTECTED:F00001-P00664:4d35efa93a81]]翻译为管理参数\n[[PROTECTED:F00001-P00665:4533d38c4986]]；C234 先从数据表确定索引，随后将三类真实邻接关系写进染色体和修复算子。共同环境复评、\n管理语言参数化和可行编码，都是[[PROTECTED:F00001-P00666:eaa28233bef9]]的具体答案。\n\n这组规划论文的结果段也不把[[PROTECTED:F00001-P00667:cc4244ab014f]]单独拿出来。作者会同时写期望收益、最坏情形或尾部\n风险，说明为了稳健性牺牲了多少利润；候选差别很小时，回到活跃约束、种植集中度和实际执行\n难度裁决。适合复用的句序是：[[PROTECTED:F00001-P00668:ad2b5a03eaa6]]三个省略处都必须填入本题对象和读数。\n\nC023 把医学筛查中的统计模型与行动后果分开。文章先用混合效应模型处理重复测量，随后将达标概率\n送入分组和检测时点决策；安全、及时与可执行分别对应不同损失，概率拟合好并不自动等于决策好。\n[[PROTECTED:F00001-P00669:20add3a23cc4]]也被翻译为复测或升级处置。这里可照搬的组织是[[PROTECTED:F00001-P00670:24d8b9068c51]]，而不是把 Logit、动态规划和 FDR 并排罗列。\n\nC132 先将多次检测记录从[[PROTECTED:F00001-P00671:38b2c872a922]]还原为[[PROTECTED:F00001-P00672:6fc0a8ea547a]]，再定义最早达标时点，这是其全文最关键的口径\n转换。缺测时按实测证据、保守估计和无法判断三级回退；首次就诊即可获得的静态特征交给 MLP，\n随孕周变化的序列交给 LSTM，存在右删失的时点风险交给 DeepHit。作者没有用[[PROTECTED:F00001-P00673:606c49139af5]]\n概括这些角色，而是逐一说明各模型接住哪类信息和哪种缺失。\n\n该篇对结果突变的解释也值得保留：当达标概率接近 [[PROTECTED:F00001-P00674:91e79ca00b1a]] 阈值时，延后检测的边际代价突然增大，\n于是曲线变陡；最终融合不是把各专家在全数据上的输出直接重用，而以折外概率作为元分类器输入。\n结果段同时报告总体表现、关键少数类召回和对应样本数，使[[PROTECTED:F00001-P00675:f145991fd9ed]]不会遮住真正需要识别的\n高风险人群。\n",
+  "rewrite_intent": {
+    "summary": "删除工作台式词壳，保留对象、动作、条件和结论边界",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O3",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S3"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O4",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S4"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O5",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S5"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O6",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S6"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O7",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S7"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O8",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S8"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O9",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S9"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O10",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S10"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O11",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S11"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O12",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S12"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O13",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S13"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O14",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S14"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O15",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S15"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O16",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S16"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O17",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S17"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O18",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S18"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O19",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S19"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O20",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S20"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O21",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S21"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O22",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S22"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O23",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S23"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O24",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S24"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O25",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S25"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O26",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S26"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O27",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S27"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 12,
+        "end_line": 12,
+        "sha256": "3fe62eb97f85f6d1de8ca38ca2d385649ca3b37174349a2a8945dc5c051b173d"
+      },
+      {
+        "id": "S2",
+        "start_line": 19,
+        "end_line": 19,
+        "sha256": "269da109119a28b950b4178b1697ef93ce02c9bcdc366291a104647b96b9a4a5"
+      },
+      {
+        "id": "S3",
+        "start_line": 28,
+        "end_line": 29,
+        "sha256": "51e7ecfb70d8a5650481089b362c0930fa76e75202992c9fcef038a6d2301c94"
+      },
+      {
+        "id": "S4",
+        "start_line": 32,
+        "end_line": 32,
+        "sha256": "c9b583af3bc1f51656696ff9457a6be18427a8ebbadfa860158996a3256bdb27"
+      },
+      {
+        "id": "S5",
+        "start_line": 39,
+        "end_line": 39,
+        "sha256": "1df816b5506ddeee0726945db47a8b7248d89cc9b1d9bb0d3de4e7b464183891"
+      },
+      {
+        "id": "S6",
+        "start_line": 43,
+        "end_line": 43,
+        "sha256": "eb9405d889cfc799bb42dafd51e494c98b0f25782b7513ef352740b925db195e"
+      },
+      {
+        "id": "S7",
+        "start_line": 47,
+        "end_line": 47,
+        "sha256": "ed53bc8d8d6ab27434026c881fec55b28e22fe01553625a2728c9eea53c43b05"
+      },
+      {
+        "id": "S8",
+        "start_line": 61,
+        "end_line": 61,
+        "sha256": "b19be29b67213bd1aa9bdfaf2bd6a47300761eb67631a74af1559aaf808473c3"
+      },
+      {
+        "id": "S9",
+        "start_line": 64,
+        "end_line": 64,
+        "sha256": "9d91157135d9086b5d3c9427d17d7f9bf2cf0cc33db2c5ad57c20714520267df"
+      },
+      {
+        "id": "S10",
+        "start_line": 72,
+        "end_line": 72,
+        "sha256": "87d32ddc9ac63d61b3c41b94791ab691eacd886399491eb35aa343b09bc2a7c6"
+      },
+      {
+        "id": "S11",
+        "start_line": 78,
+        "end_line": 78,
+        "sha256": "6eab51e69644cf76661db9de171136d3400aa52f072d75ca00fc6159f26ce34b"
+      },
+      {
+        "id": "S12",
+        "start_line": 81,
+        "end_line": 81,
+        "sha256": "67d513baf9045b98d0c20fc13b4bea5ddcec70a1a68e19491316e6e9b172f3c7"
+      },
+      {
+        "id": "S13",
+        "start_line": 86,
+        "end_line": 86,
+        "sha256": "362202f6f4f5d4ebbeb1eb66681250ad385f483829a85c7939b826f24f27d54b"
+      },
+      {
+        "id": "S14",
+        "start_line": 104,
+        "end_line": 105,
+        "sha256": "15836a4e1b489e885df513b93fab591fd9cc6bdbedc51531b19beac6405c7ad1"
+      },
+      {
+        "id": "S15",
+        "start_line": 108,
+        "end_line": 108,
+        "sha256": "a61c037b4b39edada9c21de4f38c708c2f528b21d7a588bc135d72be40f41ce1"
+      },
+      {
+        "id": "S16",
+        "start_line": 110,
+        "end_line": 110,
+        "sha256": "f243ffbbcb05b82df6da2156121a16de0ea1619696d8906f220ad21e401fad7b"
+      },
+      {
+        "id": "S17",
+        "start_line": 114,
+        "end_line": 114,
+        "sha256": "a8f3a6047d13df9c859f3de14a9e7636970739051ff87960a5eccbb389f299d1"
+      },
+      {
+        "id": "S18",
+        "start_line": 152,
+        "end_line": 152,
+        "sha256": "468743eb1c90b0432a7275a7fde58dfa3cb39c8cb3bb8bfb286aa6a76becca44"
+      },
+      {
+        "id": "S19",
+        "start_line": 160,
+        "end_line": 160,
+        "sha256": "db31c441987033a3903afd3f7426685b9ee8f17da60d8211a3981ef5ee22f143"
+      },
+      {
+        "id": "S20",
+        "start_line": 163,
+        "end_line": 163,
+        "sha256": "f5481cd4a6fddaebcb12ba87977ffd357109b125f65e49c188c8b1427e81c67f"
+      },
+      {
+        "id": "S21",
+        "start_line": 176,
+        "end_line": 177,
+        "sha256": "7d91bdc9e0b0acc509ebae6023d372f3c7cc8217d59f7e96b5c5dd31b705771f"
+      },
+      {
+        "id": "S22",
+        "start_line": 179,
+        "end_line": 179,
+        "sha256": "32a2bbf74b96f0dfff03e4f66ebac251b6a96d2c3f3ac61a2a682f1f719833c8"
+      },
+      {
+        "id": "S23",
+        "start_line": 184,
+        "end_line": 184,
+        "sha256": "39602014d3c79e172925f49d2719ef72f844dfda480697bd4961ee077ab4a311"
+      },
+      {
+        "id": "S24",
+        "start_line": 188,
+        "end_line": 188,
+        "sha256": "1c2da6367506b68bba635d9d8600279cb067b28e306b664277c744bd4842432a"
+      },
+      {
+        "id": "S25",
+        "start_line": 191,
+        "end_line": 191,
+        "sha256": "02eda8f1cf2777f8ae8400211cbcb970bf48f8f22a24cc9a250cd2f0b9eb5077"
+      },
+      {
+        "id": "S26",
+        "start_line": 193,
+        "end_line": 195,
+        "sha256": "f32532f31c77ce3ff46e7bcd059a9d518b7e25c69ea711a7a1a3180e8e5b6e56"
+      },
+      {
+        "id": "S27",
+        "start_line": 200,
+        "end_line": 200,
+        "sha256": "34e4f56803625a710164e464043d388ccf776b2873efc6655ae10fdc84268633"
+      }
+    ],
+    "target_signals": [
+      "LEX-STRICT-CORPUS-DIRECT-ACTION"
+    ]
+  }
+}

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "21c9e20a58b60e20cb0ea1c33834026c0bf72e0954f363c9a6ebe259633466a1",
+    "before_sha256": "21c9e20a58b60e20cb0ea1c33834026c0bf72e0954f363c9a6ebe259633466a1"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "318ce9c7161de02bb25ece644702fc188d0bd7dc6e57f7fbb77bbe8e1b1ca9d7",
+  "chunk_binding_sha256": "dbd0df00961ac9e98e4e9f47f5f2ae5475cf435868bd711f520bc0cfab964141",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-68ebde6fa93d.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "2e9421dba14be8885e9ff0067f465175e1b0393f4a667b31ed9ca9f772fe4bfe",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "ce66ad221a4aa49d46db760e6fada8e6cd059a8a44e6a7132355f4c8d4baf7da",
+        "start_line": 3
+      }
+    ],
+    "reason": "本单元承担“宏观框架与版面组织”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "121dd101555d7e04d63a8e32729673dc2532ea09caf5d6caca0e6d4c43946e66",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-68ebde6fa93d"
+}

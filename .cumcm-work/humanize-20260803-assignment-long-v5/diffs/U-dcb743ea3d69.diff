@@ -1,0 +1,14 @@
+--- U-dcb743ea3d69.before
++++ U-dcb743ea3d69.after
+@@ -12,9 +12,9 @@
+ \endhead
+ 缺失与异常 & 均值/中位数、插值、KNN、删除；$3\sigma$、箱线图、Isolation Forest；重复样本删除/合并 & 组员2 & 处理前后审计表、规则理由、下游敏感性\\
+ 尺度与编码 & Z-score、Min--Max、one-hot、label、等宽/等频分箱 & 组员2 & 训练折拟合、逆变换或字段映射测试\\
+-探索与相关 & Pearson、Spearman、Kendall、分布和关联可视化 & 组员2 & 假设条件、显著性/效应量和非因果声明\\
++探索与相关 & Pearson、Spearman、Kendall、分布和关联图形展示 & 组员2 & 假设条件、显著性/效应量和非因果声明\\
+ 聚类 & K-Means、DBSCAN、层次聚类、谱聚类 & 组员2 & 合成样例、簇稳定性和业务解释\\
+-插值与降维 & Lagrange、三次样条、Kriging；PCA、t-SNE、UMAP & 组员2 & 留点误差、解释方差、可视化边界\\
++插值与降维 & Lagrange、三次样条、Kriging；PCA、t-SNE、UMAP & 组员2 & 留点误差、解释方差、图形展示边界\\
+ 样本筛选 & Monte Carlo 随机抽样 & 组员2（与组员1共享接口） & 固定种子、抽样分布、覆盖率和偏差审计\\
+ 力学与物理 & Newton、弹簧阻尼、刚体平衡、摩擦、重力、Ohm/Kirchhoff、Bernoulli/质量守恒、理想气体 & 队长 & 受力/系统图、量纲、守恒/回代检查\\
+ ODE 模型 & Logistic、捕食—被捕食、Newton 冷却、药物代谢、SIR/SIS & 队长 & 初值、参数、解析/小样例和积分误差\\

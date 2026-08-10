@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "07f48a140ba64a4d10538303bea665cdb4c3a636ef96a226e416d266f93f3cda",
+    "before_sha256": "07f48a140ba64a4d10538303bea665cdb4c3a636ef96a226e416d266f93f3cda"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "54c017fc206b8c60fe86a849b4f4d39b7356e6dd6e9d1d83d4c1a1ac049cd9ab",
+  "chunk_binding_sha256": "74067faa94f046fd9a518578e4d004cca6f60efb3a190446374f0b9d6e3c6fd1",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-ca4099b735aa.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "064ba14e5590b5d61fc44f4e53bb0e6ef7ad027a7bc93ea76c836ebe762e2b99",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 16,
+        "id": "S1",
+        "sha256": "ed725ddcc277c400f0839db20d4b28e7fe004faff354882735120c60d2ccb6ed",
+        "start_line": 1
+      }
+    ],
+    "reason": "本节承担材料来源、阅读范围与复算边界说明，保留原句可避免改变资料责任范围。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "e46739379b795cdf4ea0a89e497905453909880ffd95827ca2d06c0a4bd29484",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-ca4099b735aa"
+}

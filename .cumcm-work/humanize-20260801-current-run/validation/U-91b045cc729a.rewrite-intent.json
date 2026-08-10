@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "733e6a9773e42ac1cba828f61ece1dac80053467f0959c31724f2b015bb4b174",
+    "before_sha256": "733e6a9773e42ac1cba828f61ece1dac80053467f0959c31724f2b015bb4b174"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "1eae9c815e9255b7207e556b4587b1b8dae18bf1bdd4701fe93526b28c0523a7",
+  "chunk_binding_sha256": "72b4e78cc24425ae6727b0765b60e570ad01a7d58636581fedfe6d8582af0419",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-91b045cc729a.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "8d0b7302c42c8e3d437a0405e78dc6b5381118afbef2be5114cc7c9ac3cc09fb",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "4ef0c2b58bd8aab6e742333bc57e1e20daa4aafaaf69044edcf890eac66f3281",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“理论知识学习笔记 / 组员2：数据处理、评价决策与统计学习 / 开源代码逻辑、约束与选型边界”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "f5a34185d1a237f3956701edff262832397dee522337c462f405782662b116fc",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-91b045cc729a"
+}

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "7feed6997459d9e0f7b3662c30ec9c70e7abccb04a7fc15fed36babba58c0c10",
+    "before_sha256": "7feed6997459d9e0f7b3662c30ec9c70e7abccb04a7fc15fed36babba58c0c10"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "cbdb1d1e252fd21d245be3ca3343b1eceaca189f9b75b634767f7254c72dbda5",
+  "chunk_binding_sha256": "65d0c0b303d05e107d4d13c87bf366882df5da432bcb4b8c4cc6707458ec5769",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-aaa35b949121.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "8d4fd2408d5958196a5da87fc8ae70a11c0f9706fbddc75ea0d161770c12c647",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "78edc9423435635dc2dbd547226b45ffd72f0e53aa4ec0969fb61e303407825e",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“理论知识学习笔记 / 组员1：规划、智能优化、图网络与仿真 / 覆盖内容、原理与求解步骤”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "34ed440b9210b5b55d0fe220b8341b8023c78c914a3f0e3f72a81996f52d1575",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-aaa35b949121"
+}

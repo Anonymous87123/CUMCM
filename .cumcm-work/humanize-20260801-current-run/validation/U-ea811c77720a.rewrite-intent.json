@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "4fbdac16d79e9ed043242be9b3595d7dcf3e02fb697f7acb096e6ea1e4e38136",
+    "before_sha256": "4fbdac16d79e9ed043242be9b3595d7dcf3e02fb697f7acb096e6ea1e4e38136"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "ab7698638957a5ce2a8b56585c2bc498618d0e34d2978b23c4ca55312ef463d1",
+  "chunk_binding_sha256": "3f2226a615b81ff8496be0c2f9b6741f99629460c16b38dd8c0915f4f57c0a82",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-ea811c77720a.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "4e7cb9bee5e7f08e5a205bdd43a6bbe7e48fd04bf2178ba64072bb192b126831",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "31801db215861a2f2a15e67b76a7ef7c32a7133a16ba6e7b472f32daa7ca833b",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“研究边界、证据与处理方法 / 页面识别与证据台账”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "3e5aabc7e700693ff428fe8d8314a2c4d1dce992b3e6b6aa107846a399ad77ff",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-ea811c77720a"
+}

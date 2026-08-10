@@ -1,0 +1,269 @@
+{
+  "action_catalog_sha256": "1a63b106a03bec4d30da50e4ca61031b8a713e0b3e9508986ec403c42c81dc47",
+  "action_profile_sha256": "d4b9a969679878bdef250727c3be239a73e06353ae2cd7be8ed86d54d179c68c",
+  "action_profile_status": "PASS",
+  "active_detector_definition_sha256": [
+    "41093627534731dd0dc6b5125b5d1c9b4e8a050e8cade4b4da7e5c26f4c6eb20",
+    "dd2b8ec37beb5116792eca111f4899bdecf6747bb63e9d988c3a6672b23f82f8",
+    "dff1ba4363a0b94fa3a2f0cac0767e4c43e87961636c9ddac743d9057e9ece7a"
+  ],
+  "after_blocks": 793,
+  "before_blocks": 794,
+  "before_logical_document_sha256": "eb680888ac154c55e4b43b789d0a045a9233b9e8fac0678dda9da2fbe805a7f5",
+  "blocking_unit_ids": [],
+  "candidate_logical_document_sha256": "29dff1d4bee9b5e1fe60d402dc55db9f964b31602fd3c67616df5ce201d556ae",
+  "evaluated_units": 38,
+  "evaluation_partitions": [
+    {
+      "before_sha256": "d3cc9e3dabc429e5fdba86542af021cfb5edf0ee99cef3eb5edb45e6c1592c4a",
+      "candidate_sha256": "70852374bcd755ba7ee4ab73cd8c22294b0c221448ecc83378796a66fb4ec244",
+      "document_id": "F00001",
+      "resolved_scene": "RESEARCH",
+      "unit_ids": [
+        "U-b5c30d3ca9bd",
+        "U-49a34aee86bf",
+        "U-94a28b23042d",
+        "U-48cb61020967",
+        "U-24139d897c83",
+        "U-17d432b80a9c",
+        "U-73162cc69d3a",
+        "U-19f88759c00e",
+        "U-c0f563b60802",
+        "U-04a1ce9a4611",
+        "U-952fb6df090b",
+        "U-c0102a2e2c80",
+        "U-b17329da3240",
+        "U-438599cca761",
+        "U-5195cb2b3059",
+        "U-d11c94ad8311",
+        "U-213fa09c88f5",
+        "U-580969dafb9e",
+        "U-05217b44088e",
+        "U-25a0c095fd90",
+        "U-39c3b2a09800",
+        "U-0ebb8684a53b",
+        "U-fc5240811f30",
+        "U-5d857e2f67a2",
+        "U-cdba9d7c0739",
+        "U-abbfb6c359b1",
+        "U-83e9d804292c",
+        "U-dcc3af27e48a",
+        "U-f8365a0d256a",
+        "U-2500822a84d1",
+        "U-7fe63d9c20ab",
+        "U-6d34bc503294",
+        "U-f48850e10344",
+        "U-be95b492b530",
+        "U-5ce645571b55",
+        "U-8769e2842306",
+        "U-6c8626643b76",
+        "U-dcb743ea3d69",
+        "U-aa93899f2928"
+      ]
+    }
+  ],
+  "evaluation_scope": "PARTIAL",
+  "expected_units": 39,
+  "finding_count": 0,
+  "findings": [],
+  "inherited_finding_count": 1,
+  "inherited_findings": [
+    {
+      "after": {
+        "group_results": [
+          {
+            "id": "future_bridge",
+            "minimum_occurrences": 1,
+            "occurrences": 0,
+            "triggered": false,
+            "units": []
+          },
+          {
+            "id": "repeated_forced_contrast",
+            "minimum_occurrences": 2,
+            "occurrences": 26,
+            "triggered": true,
+            "units": [
+              "U-5d857e2f67a2",
+              "U-cdba9d7c0739",
+              "U-dcc3af27e48a",
+              "U-fc5240811f30"
+            ]
+          }
+        ],
+        "matched_units": [
+          "U-5d857e2f67a2",
+          "U-cdba9d7c0739",
+          "U-dcc3af27e48a",
+          "U-fc5240811f30"
+        ],
+        "triggered": true
+      },
+      "attribution_status": "INHERITED_BEFORE_THRESHOLD",
+      "before": {
+        "group_results": [
+          {
+            "id": "future_bridge",
+            "minimum_occurrences": 1,
+            "occurrences": 0,
+            "triggered": false,
+            "units": []
+          },
+          {
+            "id": "repeated_forced_contrast",
+            "minimum_occurrences": 2,
+            "occurrences": 26,
+            "triggered": true,
+            "units": [
+              "U-5d857e2f67a2",
+              "U-cdba9d7c0739",
+              "U-dcc3af27e48a",
+              "U-fc5240811f30"
+            ]
+          }
+        ],
+        "matched_units": [
+          "U-5d857e2f67a2",
+          "U-cdba9d7c0739",
+          "U-dcc3af27e48a",
+          "U-fc5240811f30"
+        ],
+        "triggered": true
+      },
+      "card_id": "NEGATIVE-TEMPLATE-01",
+      "definition_sha256": "dd2b8ec37beb5116792eca111f4899bdecf6747bb63e9d988c3a6672b23f82f8",
+      "detector_type": "regex_groups/v1",
+      "document_id": "F00001",
+      "evaluated_scene": "RESEARCH",
+      "finding_fingerprint": "2e244db21b117f814f4a2e88cf8eec4f83282a6a2564d326977e688ff39fe7b6",
+      "kind": "CORPUS_NEGATIVE_GUARD",
+      "scene": "ALL",
+      "units": [
+        "U-04a1ce9a4611",
+        "U-05217b44088e",
+        "U-0ebb8684a53b",
+        "U-17d432b80a9c",
+        "U-19f88759c00e",
+        "U-213fa09c88f5",
+        "U-24139d897c83",
+        "U-2500822a84d1",
+        "U-25a0c095fd90",
+        "U-39c3b2a09800",
+        "U-438599cca761",
+        "U-48cb61020967",
+        "U-49a34aee86bf",
+        "U-5195cb2b3059",
+        "U-580969dafb9e",
+        "U-5ce645571b55",
+        "U-5d857e2f67a2",
+        "U-6c8626643b76",
+        "U-6d34bc503294",
+        "U-73162cc69d3a",
+        "U-7fe63d9c20ab",
+        "U-83e9d804292c",
+        "U-8769e2842306",
+        "U-94a28b23042d",
+        "U-952fb6df090b",
+        "U-aa93899f2928",
+        "U-abbfb6c359b1",
+        "U-b17329da3240",
+        "U-b5c30d3ca9bd",
+        "U-be95b492b530",
+        "U-c0102a2e2c80",
+        "U-c0f563b60802",
+        "U-cdba9d7c0739",
+        "U-d11c94ad8311",
+        "U-dcb743ea3d69",
+        "U-dcc3af27e48a",
+        "U-f48850e10344",
+        "U-fc5240811f30"
+      ]
+    }
+  ],
+  "lexical_policy_sha256": "08b4e88c540722085ab5130c2137c802ce2ef561f64db8a3f97660e98c12e29b",
+  "logical_document_hashes": [
+    {
+      "before_sha256": "d3cc9e3dabc429e5fdba86542af021cfb5edf0ee99cef3eb5edb45e6c1592c4a",
+      "candidate_sha256": "70852374bcd755ba7ee4ab73cd8c22294b0c221448ecc83378796a66fb4ec244",
+      "document_id": "F00001",
+      "unit_ids": [
+        "U-b5c30d3ca9bd",
+        "U-49a34aee86bf",
+        "U-94a28b23042d",
+        "U-48cb61020967",
+        "U-24139d897c83",
+        "U-17d432b80a9c",
+        "U-73162cc69d3a",
+        "U-19f88759c00e",
+        "U-c0f563b60802",
+        "U-04a1ce9a4611",
+        "U-952fb6df090b",
+        "U-c0102a2e2c80",
+        "U-b17329da3240",
+        "U-438599cca761",
+        "U-5195cb2b3059",
+        "U-d11c94ad8311",
+        "U-213fa09c88f5",
+        "U-580969dafb9e",
+        "U-05217b44088e",
+        "U-25a0c095fd90",
+        "U-39c3b2a09800",
+        "U-0ebb8684a53b",
+        "U-fc5240811f30",
+        "U-5d857e2f67a2",
+        "U-cdba9d7c0739",
+        "U-abbfb6c359b1",
+        "U-83e9d804292c",
+        "U-dcc3af27e48a",
+        "U-f8365a0d256a",
+        "U-2500822a84d1",
+        "U-7fe63d9c20ab",
+        "U-6d34bc503294",
+        "U-f48850e10344",
+        "U-be95b492b530",
+        "U-5ce645571b55",
+        "U-8769e2842306",
+        "U-6c8626643b76",
+        "U-dcb743ea3d69",
+        "U-aa93899f2928"
+      ]
+    }
+  ],
+  "negative_guard_loader_version": "2.0.0",
+  "negative_guard_registry_sha256": "d4b9a969679878bdef250727c3be239a73e06353ae2cd7be8ed86d54d179c68c",
+  "negative_guard_registry_source_format": "FULL_AUDIT_CATALOG",
+  "negative_guard_registry_source_sha256": "1a63b106a03bec4d30da50e4ca61031b8a713e0b3e9508986ec403c42c81dc47",
+  "negative_guard_registry_status": "PASS",
+  "policy": {
+    "author_view": "masked_text_without_protected_payload",
+    "boundary_minimum_units": 3,
+    "boundary_opening_han_chars": 6,
+    "comparison": "after must not introduce additional cross-unit coverage",
+    "corpus_negative_guards": [
+      "regex_groups/v1",
+      "structured_repeated_list/v1"
+    ],
+    "partition_key": [
+      "logical_document_id",
+      "resolved_scene"
+    ],
+    "repair_signal_categories": [
+      "repair-template-repetition"
+    ],
+    "scene_all_semantics": "evaluate_each_resolved_scene_separately",
+    "structured_tex_projection": [
+      "LIST_BEGIN",
+      "LIST_ITEM",
+      "LIST_END"
+    ],
+    "template_normalization": "NFKC+remove-zero-width+remove-Han-internal-space",
+    "version": "cross-unit-repetition/v3"
+  },
+  "policy_sha256": "cadd752b9716d0664de8ef48a1205e870a3b080eafdd93a4fda3a588963ff403",
+  "review_reasons": [
+    "INCOMPLETE_EDITABLE_UNITS"
+  ],
+  "schema_version": "humanize-cross-unit-repetition/v3",
+  "status": "REVIEW",
+  "unit_inventory_sha256": "132132f4fdc94fb8e5d71994bffd8cd2a252aedf4dad8f8d5923bb80d27d8ff5"
+}

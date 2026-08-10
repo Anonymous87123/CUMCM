@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "b98a646e73554d80a88f6163f3d51911ad1a847195e6d3560991028b0fb100c2",
+    "before_sha256": "b98a646e73554d80a88f6163f3d51911ad1a847195e6d3560991028b0fb100c2"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "3a6eef653ed3cb169bb420f9590957fefe4de1e59e17739f49cae83c837c040f",
+  "chunk_binding_sha256": "43abe4cf6040d2741ff98bee8ba4a1d3bf71485625dfa51ee46990999e1d3725",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-fdb9c9998d0c.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "fa23c7e8a84b00a4de1225f4a3e5cba4b24da945d565367e55d7f4387f218a38",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "31801db215861a2f2a15e67b76a7ef7c32a7133a16ba6e7b472f32daa7ca833b",
+        "start_line": 3
+      }
+    ],
+    "reason": "本单元承担“页面识别与证据台账”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "1fe06fab48896a10ea4db94fa859cb6d81248bd8ba5edad592c8c3db2bb61a87",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-fdb9c9998d0c"
+}

@@ -1,0 +1,99 @@
+{
+    "schema_version":  "humanize-unit-rewrite-bundle/v4",
+    "unit_id":  "U-1f988cbd8462",
+    "chunk_binding_sha256":  "9963490a7b653d263644bd996a30c7f70772fe70640edffb5934cb1261ce0bfb",
+    "decision":  "REWRITE",
+    "voice_profile_sha256":  "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+    "authoring_binding":  {
+                              "schema_version":  "humanize-long-authoring-binding/v1",
+                              "integrity_scope":  "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+                              "snapshot_id":  "b48ef9450b05230b",
+                              "prepare_integrity_sha256":  "08d8d35f9bd43257bbfc5c931659c168f2106c243f412dfc62528b7847c32149",
+                              "run_metadata_sha256":  "697c2507466cf5cde0e99810c211ce52bc6884c88736ebc99741cea022da3217",
+                              "policy_snapshot_sha256":  "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+                              "source_binding":  {
+                                                     "file_id":  "F00001",
+                                                     "source_file_sha256":  "da6925eb091af9d09d1f22b972b450ea0c6aa035703baafa84910bb5318754d9",
+                                                     "unit_id":  "U-1f988cbd8462",
+                                                     "offset_unit":  "PYTHON_UNICODE_CODEPOINT_INDEX",
+                                                     "start":  1499,
+                                                     "end":  4302,
+                                                     "start_line":  68,
+                                                     "end_line":  167,
+                                                     "source_span_sha256":  "1c87882aaf56015e3d369f213705b24889211c284dd9724c300b91e68509f4e9",
+                                                     "masked_text_sha256":  "e166af7540aa4014b8b06418bf73908ca86fbf556267d14cf1f3e4ea0ee104c0",
+                                                     "chunk_binding_sha256":  "9963490a7b653d263644bd996a30c7f70772fe70640edffb5934cb1261ce0bfb"
+                                                 },
+                              "scene_route":  {
+                                                  "requested_scene":  "RESEARCH",
+                                                  "resolved_scene":  "RESEARCH",
+                                                  "status":  "EXPLICIT",
+                                                  "reason_code":  "USER_EXPLICIT_SCENE",
+                                                  "document_prior_scene":  "",
+                                                  "scores":  {
+                                                                 "COURSE":  0,
+                                                                 "MODELING":  0,
+                                                                 "RESEARCH":  0
+                                                             },
+                                                  "top_score":  0,
+                                                  "margin":  0,
+                                                  "ambiguous_scenes":  [
+
+                                                                       ],
+                                                  "evidence":  [
+
+                                                               ],
+                                                  "policy_sha256":  "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+                                                  "policy_revision":  5,
+                                                  "heading_path_sha256":  "273857c89bb912ee2ae0d951b7d407e4a3d984ae87e3d51302b56a66df84a2f6",
+                                                  "routing_input_sha256":  "4c1c3f1651b79a1c8c713afa623fc8b72fe6e3faae8e018c759f2a9f2788776a"
+                                              },
+                              "voice_binding":  {
+                                                    "profile_id":  "scene-default-research",
+                                                    "profile_revision":  1,
+                                                    "profile_kind":  "DEFAULT",
+                                                    "binding_scene":  "RESEARCH",
+                                                    "profile_sha256":  "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+                                                },
+                              "mode":  "REWRITE",
+                              "intensity":  "BALANCED",
+                              "authoring_allowed":  true,
+                              "completion_claim_allowed":  false,
+                              "humanize_quality_claim_allowed":  false,
+                              "authoring_binding_sha256":  "0c5d2f7dbe91d15e32c039029ce7fe22d020c8bdcb58bf3f67c9c21238be062d"
+                          },
+    "keep_reasons":  {
+
+                     },
+    "template_field_edit_scope":  null,
+    "masked_text":  "[[PROTECTED:F00001-P00035:46b35034d4be]]\n\n[[PROTECTED:F00001-P00036:3c04a9ba8a92]]\n[[PROTECTED:F00001-P00037:9bd6563a665b]]\n[[PROTECTED:F00001-P00038:1f1446cb9574]]\n[[PROTECTED:F00001-P00039:d650a424d912]][[PROTECTED:F00001-P00040:5d6264547874]][[PROTECTED:F00001-P00041:b11b4ca186c0]]\n[[PROTECTED:F00001-P00042:3000c3bd47e8]]\n成员 \u0026 算法或模型 \u0026 基本原理、步骤与代码逻辑 \u0026 适用问题、优缺点和限制[[PROTECTED:F00001-P00043:b11b4ca186c0]]\n[[PROTECTED:F00001-P00044:3f9db2ae5742]]\n[[PROTECTED:F00001-P00045:6c327e891740]]\n[[PROTECTED:F00001-P00046:3000c3bd47e8]]\n成员 \u0026 算法或模型 \u0026 基本原理、步骤与代码逻辑 \u0026 适用问题、优缺点和限制[[PROTECTED:F00001-P00047:b11b4ca186c0]]\n[[PROTECTED:F00001-P00048:3f9db2ae5742]]\n[[PROTECTED:F00001-P00049:7cf754fef645]]\n[[PROTECTED:F00001-P00050:76ac79294e9f]]\n[[PROTECTED:F00001-P00051:143255477a71]]\n\n队长 \u0026 ODE与RK4\n\u0026 先从受力、守恒或状态转移关系写出 [[PROTECTED:F00001-P00052:5a5427c08b1c]]，，再由初值出发，用四个斜率的加权值向前推进。\n代码入口为 [[PROTECTED:F00001-P00053:1dae631dced9]] 和 [[PROTECTED:F00001-P00054:a3fc4b04af2d]]；用Euler法和\n[[PROTECTED:F00001-P00055:77e4dcc19efe]]/[[PROTECTED:F00001-P00056:b509813e33c0]]作对照，并保存步长误差。\n\u0026 可用于状态随时间连续变化的力学、传热、种群和传播过程。RK4在精度与实现难度之间较为均衡，\n但刚性方程会受稳定域限制；此时应改用刚性求解器，不靠缩小一步掩盖问题。[[PROTECTED:F00001-P00057:b11b4ca186c0]]\n\n队长 \u0026 PDE与有限差分\n\u0026 空间区域、初始条件和边界条件先落到网格上，再将时间、空间导数换成差分格式。程序依次生成\n网格、装配差分矩阵、推进时间层，并比较三档网格的同一观测量。\n\u0026 适合规则区域上的热、波和扩散问题。公式与网格位置对应直观，代价是复杂边界难处理，\n显式格式还须核对稳定条件。[[PROTECTED:F00001-P00058:b11b4ca186c0]]\n\n队长 \u0026 有限元模型\n\u0026 这部分从PDE的弱形式入手：划分单元，计算局部矩阵，装配全局稀疏矩阵，施加\n边界后求节点量。代码模块依次为 [[PROTECTED:F00001-P00059:979730c4ba48]]、[[PROTECTED:F00001-P00060:8769c9b9aed7]]、[[PROTECTED:F00001-P00061:0869d50c07c6]]、\n[[PROTECTED:F00001-P00062:1e3708361c03]] 和 [[PROTECTED:F00001-P00063:1e7f2616b0d9]]。\n\u0026 适合不规则几何、变系数介质和混合边界。几何适应性强，但网格质量、形函数和边界\n装配都容易引入错误；规则区域的入门题先用有限差分作基线。[[PROTECTED:F00001-P00064:b11b4ca186c0]]\n\n队长 \u0026 几何递推与事件判定\n\u0026 已知龙头位置后，先列相邻把手的定长方程；候选根须经过构件次序和运动方向筛选，随后逐节\n递推。碰撞用矩形顶点和分离轴判定，时间推进遇到第一次触发即停。代码保留\n[[PROTECTED:F00001-P00065:a6214fbc7d21]]、[[PROTECTED:F00001-P00066:457e8435fdcf]] 和状态码。\n\u0026 适合链式刚体、轨迹跟随和首达事件。优点是公式、程序循环和物理对象能对读；缺点是\n多根、步长和漏检风险要另列检查，不能只写[[PROTECTED:F00001-P00067:736950ec6c35]]。[[PROTECTED:F00001-P00068:b11b4ca186c0]]\n\n组员1 \u0026 LP与MILP\n\u0026 先逐项定义决策变量，再写线性目标与约束；遇到启停、选择或分配，才引入0--1变量。程序先算出\n小规模枚举答案，再调用PuLP/Pyomo或MATLAB求解器，读取可行性、目标值和最优间隙。\n\u0026 适合资源分配、排程、选址和生产决策。线性模型便于解释并能给最优性信息；整数规模\n大时计算量上升，Big--M须来自实际上界，不能任意指定过大的常数。[[PROTECTED:F00001-P00069:b11b4ca186c0]]\n\n组员1 \u0026 多目标与NSGA--II\n\u0026 各项目标先分别保留，不急着揉成一个总分。染色体经可行性修复后，再按非支配排序和拥挤\n距离选择，输出Pareto解集。代码记录种群、代数、随机种子和每个候选的原始指标。\n\u0026 适合成本、收益、风险等目标互相冲突的问题。它能展示取舍，但不替参赛者选最终方案；\n变量少且约束凸时，[[PROTECTED:F00001-P00070:47bb31ac2552]]约束法可直接呈现取舍边界。[[PROTECTED:F00001-P00071:b11b4ca186c0]]\n\n组员1 \u0026 粒子群优化\n\u0026 每个粒子都保留位置、速度、个体最好解和群体最好解；迭代时包含速度更新、越界处理和重新\n评价。代码把目标函数、约束罚项、种子和停止阈值分开，至少做多次独立运行。\n\u0026 适合连续、非光滑或难求导的参数搜索，编码简短；它没有连续全局最优证书，结果会受\n边界、罚项和随机种子影响。若变量只有一维且单调，可改用遍历或二分。[[PROTECTED:F00001-P00072:b11b4ca186c0]]\n\n组员1 \u0026 图论与网络优化\n\u0026 建模时把对象落成节点、关系落成带权边。非负单源最短路用Dijkstra；容量与费用同时出现时\n用最小费用流。代码先建图，再运行算法，最后把路径或流量映射回现实对象并核对容量。\n\u0026 适合运输、路径、匹配和网络资源配置。结构清楚、结果易复算；动态图、负权边和多目标\n路线要另行处理，最小生成树也不能代替两点间最短路。[[PROTECTED:F00001-P00073:b11b4ca186c0]]\n\n组员2 \u0026 缺失、异常与重复处理\n\u0026 拿到附件后先建数据字典和主键，并把未检出、未知、未采样分开记录；随后才按成因决定删除、插值或KNN，\n异常值用箱线图、[[PROTECTED:F00001-P00074:02602face829]]和业务范围复核。代码以训练集拟合清洗参数并输出处理记录。\n\u0026 适合一切附件数据题。它决定后续样本是否可信，但不能把业务极值自动删除，也不能在\n划分训练集前用全体数据估计均值或尺度。[[PROTECTED:F00001-P00075:b11b4ca186c0]]\n\n组员2 \u0026 PCA与K--Means\n\u0026 数据标准化后，对协方差矩阵作特征分解并按解释率选取主成分；降维结果再送入K--Means，\n比较不同簇数的轮廓系数。代码输出载荷、解释率、簇中心和原样本编号。\n\u0026 PCA适合线性降维，K--Means适合近似球形簇。两者速度快、图形直观，但主成分未必有\n直接业务含义，密度不均或非凸簇应比较DBSCAN或谱聚类。[[PROTECTED:F00001-P00076:b11b4ca186c0]]\n\n组员2 \u0026 熵权与TOPSIS\n\u0026 指标须先统一方向并消除量纲。熵权刻画样本差异，TOPSIS据此计算对象到正、负理想解的距离。\n代码逐步导出标准矩阵、权重、距离和排序，并对权重作扰动。\n\u0026 适合多指标评价与方案排序。计算过程清楚，但[[PROTECTED:F00001-P00077:9aaacd4b5ffb]]不等于[[PROTECTED:F00001-P00078:955069d56862]]；指标\n方向、相关重复和权重敏感性都要说明，不能只给最终名次。[[PROTECTED:F00001-P00079:b11b4ca186c0]]\n\n组员2 \u0026 回归与分类基线\n\u0026 连续响应以线性、Ridge和Lasso为基线；类别响应以Logistic为基线。保持同一训练/验证划分，再与\n随机森林或XGBoost比较。代码用pipeline串起预处理、拟合、预测和指标，保存系数或特征贡献。\n\u0026 适合关系估计、风险评分和类别判断。线性模型可解释，树模型能处理非线性；后者容易\n过拟合且外推较弱。相关或高准确率都不构成因果证据。[[PROTECTED:F00001-P00080:b11b4ca186c0]]\n\n组员2 \u0026 ARIMA与滚动验证\n\u0026 先画出序列，辨认趋势和季节性，再检查差分后的平稳性并选择ARIMA/SARIMA阶数。每次预测只读取当前\n时点以前的数据，按滚动窗口计算MAE、RMSE和MAPE。代码保存每个预测起点和误差。\n\u0026 适合有时间顺序的需求、价格和状态预测。统计模型对中小样本友好，但结构突变会使历史\n规律失效；时间序列不能随机打乱做普通K折。[[PROTECTED:F00001-P00081:b11b4ca186c0]]\n[[PROTECTED:F00001-P00082:20f5534ac79d]]\n[[PROTECTED:F00001-P00083:a67d86cbf941]]\n\n",
+    "rewrite_intent":  {
+                           "summary":  "调整目录式、均匀并列式表达，保留具体判断、程序动作与使用边界",
+                           "operations":  [
+                                              {
+                                                  "id":  "O1",
+                                                  "kind":  "REWRITE_STYLE_SHELL",
+                                                  "source_span_ids":  [
+                                                                          "S1"
+                                                                      ],
+                                                  "target_signals":  [
+                                                                         "HUM-JUDGMENT-TRACE",
+                                                                         "RHYTHM-UNIFORM-SEQUENCE"
+                                                                     ],
+                                                  "summary":  "调整目录式、均匀并列式表达，保留具体判断、程序动作与使用边界"
+                                              }
+                                          ],
+                           "source_spans":  [
+                                                {
+                                                    "id":  "S1",
+                                                    "start_line":  1,
+                                                    "end_line":  100,
+                                                    "sha256":  "e166af7540aa4014b8b06418bf73908ca86fbf556267d14cf1f3e4ea0ee104c0"
+                                                }
+                                            ],
+                           "target_signals":  [
+                                                  "HUM-JUDGMENT-TRACE",
+                                                  "RHYTHM-UNIFORM-SEQUENCE"
+                                              ]
+                       }
+}

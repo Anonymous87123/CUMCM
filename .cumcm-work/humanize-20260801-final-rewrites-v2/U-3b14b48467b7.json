@@ -1,0 +1,72 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-3b14b48467b7",
+  "chunk_binding_sha256": "2461d0bcff341e061f5fa803f051ad51e965f5476985957c351369fa4ea8d2ff",
+  "decision": "NO_CHANGE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "5b708ec3580c1bfc",
+    "prepare_integrity_sha256": "fc36cd909e2ec30032ca40ef8cfdacac24c9312a30f594c52aa2bf43a1983d80",
+    "run_metadata_sha256": "ed7ceaa762912d840b64d659d9c713599092033aa570c208dfd1d1da3bb6b189",
+    "policy_snapshot_sha256": "87656f9f0219c0ea2bb402202dc778469ce20e751d065776590fef4fcce7fd95",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "c1ec1b0021cfa856fa8a0a3fc49493ac63ce4bec9289c8b7b12919354bf18c58",
+      "unit_id": "U-3b14b48467b7",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 44446,
+      "end": 45993,
+      "start_line": 1127,
+      "end_line": 1155,
+      "source_span_sha256": "602e49bb6b1de65c293d25d31b7ae04afdf67d8599d265ff124c37f02cd764b8",
+      "masked_text_sha256": "31d842fe8c9106b38f6323967cd7519da9b524de8ab3197f055b3040805d68f2",
+      "chunk_binding_sha256": "2461d0bcff341e061f5fa803f051ad51e965f5476985957c351369fa4ea8d2ff"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "cf66fda73eddfe47ee73f42c989522d5c7a21f64e98a841a4cb79c36feaa41a8",
+      "routing_input_sha256": "17847b57981bc81a153cfa2cb909f4a57170bd935fb37652832fedc95348f1ff"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "c1f6fb7d5c965c7445cdfea5eda48aedb1386fa3fc4957bb3138b86efad5d5b1"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "reason": "该段落承担“十四类章节的写法”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。",
+  "evidence_spans": [
+    {
+      "id": "S1",
+      "start_line": 6,
+      "end_line": 6,
+      "sha256": "c271c222242bcd514fecfe490eb2f92a7da19d527e9ffafa66aea4c111fadb5a"
+    }
+  ]
+}

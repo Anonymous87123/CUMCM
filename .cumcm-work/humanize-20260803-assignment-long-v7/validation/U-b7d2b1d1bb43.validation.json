@@ -1,0 +1,1199 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "candidate_assembly_exit_code": 0,
+  "candidate_assembly_status": "PASS",
+  "delivery_gate_exit_code": 2,
+  "delivery_gate_status": "REVIEW",
+  "draft_surface_source_check": {
+    "details": {},
+    "scope": [],
+    "semantic_entailment_certified": false,
+    "status": "N/A"
+  },
+  "evidence": {
+    "after_path": "validation/U-b7d2b1d1bb43.after.tex",
+    "after_sha256": "3518d6f27d4386989d3c53bef1415e16ff03728baee989e302de73239d3c5755",
+    "before_path": "validation/U-b7d2b1d1bb43.before.tex",
+    "before_sha256": "5ad9d138c3d476a6fa3705538f594e350b49ee98085e3c611d6d506c59822e50",
+    "checker_executed": true,
+    "document_format": "tex",
+    "document_scope": "FRAGMENT",
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "08b4e88c540722085ab5130c2137c802ce2ef561f64db8a3f97660e98c12e29b",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "acf31a687e741637d1ebb82a3ab9e67039251326cfb006f45ea7dfb719641689",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "source_path_archived": false
+  },
+  "exit_code": 2,
+  "hard_invariant_layer_status": "PASS",
+  "humanize_quality_claim_allowed": false,
+  "introduced_findings": [],
+  "invariants": {
+    "advisories": [],
+    "errors": [],
+    "evidence": {
+      "document_scope": "FRAGMENT",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "speech_act_audit": {
+        "categories": {
+          "assumption": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "attribution_source": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "condition": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "definition_naming": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "focus_scope": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "logical_relation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "modality_scope": {
+            "after": {
+              "只": 2,
+              "可": 4,
+              "应": 5,
+              "需要": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0004",
+                "column": 39,
+                "end": 60,
+                "end_column": 41,
+                "end_line": 3,
+                "line": 3,
+                "marker": "需要",
+                "sentence_context": "以下八项来自 59 篇优秀论文中反复需要闭合的写作",
+                "sentence_id": "T0003",
+                "side": "after",
+                "start": 58
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0007",
+                "column": 30,
+                "end": 96,
+                "end_column": 31,
+                "end_line": 4,
+                "line": 4,
+                "marker": "只",
+                "sentence_context": "检查时只判断自己的稿件是否闭合",
+                "sentence_id": "T0005",
+                "side": "after",
+                "start": 95
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0010",
+                "column": 42,
+                "end": 170,
+                "end_column": 43,
+                "end_line": 7,
+                "line": 7,
+                "marker": "应",
+                "sentence_context": "}摘要、问题分析、模型、结果表和附件应逐问对应",
+                "sentence_id": "T0008",
+                "side": "after",
+                "start": 169
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0012",
+                "column": 21,
+                "end": 203,
+                "end_column": 22,
+                "end_line": 8,
+                "line": 8,
+                "marker": "可",
+                "sentence_context": "四个可核对位置",
+                "sentence_id": "T0010",
+                "side": "after",
+                "start": 202
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0016",
+                "column": 3,
+                "end": 266,
+                "end_column": 4,
+                "end_line": 10,
+                "line": 10,
+                "marker": "可",
+                "sentence_context": "可行域规模或误差目标",
+                "sentence_id": "T0013",
+                "side": "after",
+                "start": 265
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0017",
+                "column": 32,
+                "end": 295,
+                "end_column": 33,
+                "end_line": 10,
+                "line": 10,
+                "marker": "应",
+                "sentence_context": "删掉 后仍应看得懂为何换法",
+                "sentence_id": "T0014",
+                "side": "after",
+                "start": 294
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0019",
+                "column": 44,
+                "end": 348,
+                "end_column": 45,
+                "end_line": 11,
+                "line": 11,
+                "marker": "应",
+                "sentence_context": "}变量、索引、单位、边界和约束都应能翻译回真实对象",
+                "sentence_id": "T0016",
+                "side": "after",
+                "start": 347
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0022",
+                "column": 22,
+                "end": 410,
+                "end_column": 23,
+                "end_line": 13,
+                "line": 13,
+                "marker": "可",
+                "sentence_context": "\\item \\textbf{求解过程不可复现",
+                "sentence_id": "T0018",
+                "side": "after",
+                "start": 409
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0026",
+                "column": 24,
+                "end": 466,
+                "end_column": 25,
+                "end_line": 14,
+                "line": 14,
+                "marker": "可",
+                "sentence_context": "预算、种子或重复统计，精确算法给界、间隙或可手算小例",
+                "sentence_id": "T0021",
+                "side": "after",
+                "start": 465
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0027",
+                "column": 19,
+                "end": 491,
+                "end_column": 20,
+                "end_line": 15,
+                "line": 15,
+                "marker": "只",
+                "sentence_context": "\\item \\textbf{结果只有数字没有判断",
+                "sentence_id": "T0022",
+                "side": "after",
+                "start": 490
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0040",
+                "column": 50,
+                "end": 720,
+                "end_column": 51,
+                "end_line": 19,
+                "line": 19,
+                "marker": "应",
+                "sentence_context": "}参数扰动、预测概率、情景分布和中间分类误差应进入",
+                "sentence_id": "T0032",
+                "side": "after",
+                "start": 719
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0053",
+                "column": 31,
+                "end": 904,
+                "end_column": 32,
+                "end_line": 25,
+                "line": 25,
+                "marker": "应",
+                "sentence_context": "真正应模仿的仍是作者如何把观察写成",
+                "sentence_id": "T0041",
+                "side": "after",
+                "start": 903
+              }
+            ],
+            "before": {
+              "只": 2,
+              "可": 4,
+              "应": 5,
+              "需要": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0004",
+                "column": 39,
+                "end": 60,
+                "end_column": 41,
+                "end_line": 3,
+                "line": 3,
+                "marker": "需要",
+                "sentence_context": "以下八项来自 59 篇优秀论文中反复需要闭合的写作",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 58
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0007",
+                "column": 30,
+                "end": 96,
+                "end_column": 31,
+                "end_line": 4,
+                "line": 4,
+                "marker": "只",
+                "sentence_context": "检查时只判断自己的稿件是否闭合",
+                "sentence_id": "T0005",
+                "side": "before",
+                "start": 95
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0010",
+                "column": 42,
+                "end": 170,
+                "end_column": 43,
+                "end_line": 7,
+                "line": 7,
+                "marker": "应",
+                "sentence_context": "}摘要、问题分析、模型、结果表和附件应逐问对应",
+                "sentence_id": "T0008",
+                "side": "before",
+                "start": 169
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0012",
+                "column": 21,
+                "end": 203,
+                "end_column": 22,
+                "end_line": 8,
+                "line": 8,
+                "marker": "可",
+                "sentence_context": "四个可核对位置",
+                "sentence_id": "T0010",
+                "side": "before",
+                "start": 202
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0016",
+                "column": 3,
+                "end": 266,
+                "end_column": 4,
+                "end_line": 10,
+                "line": 10,
+                "marker": "可",
+                "sentence_context": "可行域规模或误差目标",
+                "sentence_id": "T0013",
+                "side": "before",
+                "start": 265
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0017",
+                "column": 32,
+                "end": 295,
+                "end_column": 33,
+                "end_line": 10,
+                "line": 10,
+                "marker": "应",
+                "sentence_context": "删掉 后仍应看得懂为何换法",
+                "sentence_id": "T0014",
+                "side": "before",
+                "start": 294
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0019",
+                "column": 44,
+                "end": 348,
+                "end_column": 45,
+                "end_line": 11,
+                "line": 11,
+                "marker": "应",
+                "sentence_context": "}变量、索引、单位、边界和约束都应能翻译回真实对象",
+                "sentence_id": "T0016",
+                "side": "before",
+                "start": 347
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0022",
+                "column": 22,
+                "end": 410,
+                "end_column": 23,
+                "end_line": 13,
+                "line": 13,
+                "marker": "可",
+                "sentence_context": "\\item \\textbf{求解过程不可复现",
+                "sentence_id": "T0018",
+                "side": "before",
+                "start": 409
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0026",
+                "column": 24,
+                "end": 466,
+                "end_column": 25,
+                "end_line": 14,
+                "line": 14,
+                "marker": "可",
+                "sentence_context": "预算、种子或重复统计，精确算法给界、间隙或可手算小例",
+                "sentence_id": "T0021",
+                "side": "before",
+                "start": 465
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0027",
+                "column": 19,
+                "end": 491,
+                "end_column": 20,
+                "end_line": 15,
+                "line": 15,
+                "marker": "只",
+                "sentence_context": "\\item \\textbf{结果只有数字没有判断",
+                "sentence_id": "T0022",
+                "side": "before",
+                "start": 490
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0040",
+                "column": 50,
+                "end": 720,
+                "end_column": 51,
+                "end_line": 19,
+                "line": 19,
+                "marker": "应",
+                "sentence_context": "}参数扰动、预测概率、情景分布和中间分类误差应进入",
+                "sentence_id": "T0032",
+                "side": "before",
+                "start": 719
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0053",
+                "column": 31,
+                "end": 904,
+                "end_column": 32,
+                "end_line": 25,
+                "line": 25,
+                "marker": "应",
+                "sentence_context": "真正应模仿的仍是作者如何把观察写成",
+                "sentence_id": "T0041",
+                "side": "before",
+                "start": 903
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "negation": {
+            "after": {
+              "不": 6,
+              "不再": 1,
+              "没有": 5
+            },
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0002",
+                "column": 3,
+                "end": 24,
+                "end_column": 5,
+                "end_line": 3,
+                "line": 3,
+                "marker": "不再",
+                "sentence_context": "本节不再逐篇搜集疏漏，也不虚构出现频数",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 22
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0003",
+                "column": 13,
+                "end": 33,
+                "end_column": 14,
+                "end_line": 3,
+                "line": 3,
+                "marker": "不",
+                "sentence_context": "本节不再逐篇搜集疏漏，也不虚构出现频数",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 32
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0009",
+                "column": 19,
+                "end": 148,
+                "end_column": 21,
+                "end_line": 7,
+                "line": 7,
+                "marker": "没有",
+                "sentence_context": "\\item \\textbf{题问没有闭合",
+                "sentence_id": "T0007",
+                "side": "after",
+                "start": 146
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0013",
+                "column": 19,
+                "end": 229,
+                "end_column": 21,
+                "end_line": 9,
+                "line": 9,
+                "marker": "没有",
+                "sentence_context": "\\item \\textbf{选择没有来由",
+                "sentence_id": "T0011",
+                "side": "after",
+                "start": 227
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0015",
+                "column": 51,
+                "end": 260,
+                "end_column": 52,
+                "end_line": 9,
+                "line": 9,
+                "marker": "不",
+                "sentence_context": "}写出模型或算法前，先说明观察到的结构、上一方法的具体不足、",
+                "sentence_id": "T0012",
+                "side": "after",
+                "start": 259
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0018",
+                "column": 21,
+                "end": 326,
+                "end_column": 23,
+                "end_line": 11,
+                "line": 11,
+                "marker": "没有",
+                "sentence_context": "\\item \\textbf{数学对象没有落到题意",
+                "sentence_id": "T0015",
+                "side": "after",
+                "start": 324
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0022",
+                "column": 21,
+                "end": 409,
+                "end_column": 22,
+                "end_line": 13,
+                "line": 13,
+                "marker": "不",
+                "sentence_context": "\\item \\textbf{求解过程不可复现",
+                "sentence_id": "T0018",
+                "side": "after",
+                "start": 408
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0027",
+                "column": 23,
+                "end": 496,
+                "end_column": 25,
+                "end_line": 15,
+                "line": 15,
+                "marker": "没有",
+                "sentence_context": "\\item \\textbf{结果只有数字没有判断",
+                "sentence_id": "T0022",
+                "side": "after",
+                "start": 494
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0032",
+                "column": 31,
+                "end": 563,
+                "end_column": 32,
+                "end_line": 16,
+                "line": 16,
+                "marker": "不",
+                "sentence_context": "异常时段或反直觉排序，先查事件对象、局部结构和口径变化，不用 结尾",
+                "sentence_id": "T0025",
+                "side": "after",
+                "start": 562
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0039",
+                "column": 17,
+                "end": 687,
+                "end_column": 18,
+                "end_line": 19,
+                "line": 19,
+                "marker": "不",
+                "sentence_context": "\\item \\textbf{不确定性没有传到决策",
+                "sentence_id": "T0031",
+                "side": "after",
+                "start": 686
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0039",
+                "column": 21,
+                "end": 692,
+                "end_column": 23,
+                "end_line": 19,
+                "line": 19,
+                "marker": "没有",
+                "sentence_context": "\\item \\textbf{不确定性没有传到决策",
+                "sentence_id": "T0031",
+                "side": "after",
+                "start": 690
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0052",
+                "column": 16,
+                "end": 889,
+                "end_column": 17,
+                "end_line": 25,
+                "line": 25,
+                "marker": "不",
+                "sentence_context": "这些门的用途是约束自己的稿件，不是给 59 篇论文排错",
+                "sentence_id": "T0040",
+                "side": "after",
+                "start": 888
+              }
+            ],
+            "before": {
+              "不": 6,
+              "不再": 1,
+              "没有": 5
+            },
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0002",
+                "column": 3,
+                "end": 24,
+                "end_column": 5,
+                "end_line": 3,
+                "line": 3,
+                "marker": "不再",
+                "sentence_context": "本节不再逐篇搜集疏漏，也不虚构出现频数",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 22
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0003",
+                "column": 13,
+                "end": 33,
+                "end_column": 14,
+                "end_line": 3,
+                "line": 3,
+                "marker": "不",
+                "sentence_context": "本节不再逐篇搜集疏漏，也不虚构出现频数",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 32
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0009",
+                "column": 19,
+                "end": 148,
+                "end_column": 21,
+                "end_line": 7,
+                "line": 7,
+                "marker": "没有",
+                "sentence_context": "\\item \\textbf{题问没有闭合",
+                "sentence_id": "T0007",
+                "side": "before",
+                "start": 146
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0013",
+                "column": 19,
+                "end": 229,
+                "end_column": 21,
+                "end_line": 9,
+                "line": 9,
+                "marker": "没有",
+                "sentence_context": "\\item \\textbf{选择没有来由",
+                "sentence_id": "T0011",
+                "side": "before",
+                "start": 227
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0015",
+                "column": 51,
+                "end": 260,
+                "end_column": 52,
+                "end_line": 9,
+                "line": 9,
+                "marker": "不",
+                "sentence_context": "}写出模型或算法前，先交代观察到的结构、上一方法的具体不足、",
+                "sentence_id": "T0012",
+                "side": "before",
+                "start": 259
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0018",
+                "column": 21,
+                "end": 326,
+                "end_column": 23,
+                "end_line": 11,
+                "line": 11,
+                "marker": "没有",
+                "sentence_context": "\\item \\textbf{数学对象没有落到题意",
+                "sentence_id": "T0015",
+                "side": "before",
+                "start": 324
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0022",
+                "column": 21,
+                "end": 409,
+                "end_column": 22,
+                "end_line": 13,
+                "line": 13,
+                "marker": "不",
+                "sentence_context": "\\item \\textbf{求解过程不可复现",
+                "sentence_id": "T0018",
+                "side": "before",
+                "start": 408
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0027",
+                "column": 23,
+                "end": 496,
+                "end_column": 25,
+                "end_line": 15,
+                "line": 15,
+                "marker": "没有",
+                "sentence_context": "\\item \\textbf{结果只有数字没有判断",
+                "sentence_id": "T0022",
+                "side": "before",
+                "start": 494
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0032",
+                "column": 31,
+                "end": 563,
+                "end_column": 32,
+                "end_line": 16,
+                "line": 16,
+                "marker": "不",
+                "sentence_context": "异常时段或反直觉排序，先查事件对象、局部结构和口径变化，不用 收尾",
+                "sentence_id": "T0025",
+                "side": "before",
+                "start": 562
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0039",
+                "column": 17,
+                "end": 687,
+                "end_column": 18,
+                "end_line": 19,
+                "line": 19,
+                "marker": "不",
+                "sentence_context": "\\item \\textbf{不确定性没有传到决策",
+                "sentence_id": "T0031",
+                "side": "before",
+                "start": 686
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0039",
+                "column": 21,
+                "end": 692,
+                "end_column": 23,
+                "end_line": 19,
+                "line": 19,
+                "marker": "没有",
+                "sentence_context": "\\item \\textbf{不确定性没有传到决策",
+                "sentence_id": "T0031",
+                "side": "before",
+                "start": 690
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0052",
+                "column": 16,
+                "end": 889,
+                "end_column": 17,
+                "end_line": 25,
+                "line": 25,
+                "marker": "不",
+                "sentence_context": "这些门的用途是约束自己的稿件，不是给 59 篇论文排错",
+                "sentence_id": "T0040",
+                "side": "before",
+                "start": 888
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "reporting_observation": {
+            "after": {
+              "观察到": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "reporting_observation",
+                "claim_id": "C0015",
+                "column": 37,
+                "end": 248,
+                "end_column": 40,
+                "end_line": 9,
+                "line": 9,
+                "marker": "观察到",
+                "sentence_context": "}写出模型或算法前，先说明观察到的结构、上一方法的具体不足、",
+                "sentence_id": "T0012",
+                "side": "after",
+                "start": 245
+              }
+            ],
+            "before": {
+              "观察到": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "reporting_observation",
+                "claim_id": "C0015",
+                "column": 37,
+                "end": 248,
+                "end_column": 40,
+                "end_line": 9,
+                "line": 9,
+                "marker": "观察到",
+                "sentence_context": "}写出模型或算法前，先交代观察到的结构、上一方法的具体不足、",
+                "sentence_id": "T0012",
+                "side": "before",
+                "start": 245
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          }
+        },
+        "claim_pairing": {
+          "after_claims": 55,
+          "before_claims": 55,
+          "unique_exact_pairs": 53,
+          "unpaired_after_claims": 2,
+          "unpaired_before_claims": 2
+        },
+        "protection": {
+          "after_ranges": 4,
+          "before_ranges": 4,
+          "line_column_basis": "NORMALIZED_LF_1_BASED_UNICODE_CODEPOINT",
+          "masking": "LENGTH_PRESERVING"
+        }
+      }
+    },
+    "hard_failure": false,
+    "status": "pass",
+    "summary": {
+      "advisories": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    "warnings": []
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 2,
+    "introduced_candidates": 0,
+    "unexplained_high_candidates": 0
+  },
+  "mechanical_validation_exit_code": 0,
+  "mechanical_validation_status": "PASS",
+  "mode": "REWRITE",
+  "paired_quality_clearance_granted": false,
+  "paired_quality_review_local_clearance_supported": false,
+  "paired_quality_review_request": {
+    "artifact": {
+      "after_sha256": "3518d6f27d4386989d3c53bef1415e16ff03728baee989e302de73239d3c5755",
+      "before_sha256": "5ad9d138c3d476a6fa3705538f594e350b49ee98085e3c611d6d506c59822e50"
+    },
+    "changes": [
+      {
+        "after": {
+          "end_line": 9,
+          "han_chars": 32,
+          "line_count": 1,
+          "sha256": "6f8207b3c634a6f54f12c39b6d0f6dba3121c31c4d223fd4803fe223728bcd5a",
+          "start_line": 9
+        },
+        "before": {
+          "end_line": 9,
+          "han_chars": 32,
+          "line_count": 1,
+          "sha256": "16f8436822849fa0d68c6c3457dad7f2c0ea18064fd2cc22214eb2010c6146fb",
+          "start_line": 9
+        },
+        "change_id": "QCH-fb380b09f0c8d726c1cc",
+        "operation": "REPLACE",
+        "ordinal": 1
+      },
+      {
+        "after": {
+          "end_line": 16,
+          "han_chars": 33,
+          "line_count": 1,
+          "sha256": "6fe36632a21c76e36fa8766b62b8ae8e4112b4a8ff17e3f4a0c613aaa79e6e93",
+          "start_line": 16
+        },
+        "before": {
+          "end_line": 16,
+          "han_chars": 33,
+          "line_count": 1,
+          "sha256": "d4f22d3be9c208876a6ec7eb19507800457ccf46cdd8d2d76c2aa9222b860110",
+          "start_line": 16
+        },
+        "change_id": "QCH-931f881020926e104745",
+        "operation": "REPLACE",
+        "ordinal": 2
+      }
+    ],
+    "limitations": {
+      "academic_correctness": "NOT_EVALUATED",
+      "authorship": "NOT_EVALUATED",
+      "quality_clearance_granted": false
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "08b4e88c540722085ab5130c2137c802ce2ef561f64db8a3f97660e98c12e29b",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "acf31a687e741637d1ebb82a3ab9e67039251326cfb006f45ea7dfb719641689",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "request_sha256": "2b61679351bab5f0ad496df3a11fec51520e27073c2b84b1d5782aec1bd2deda",
+    "review_contract": {
+      "empty_or_generic_benefit_is_clearance": false,
+      "local_model_or_caller_assertion_is_clearance": false,
+      "required_dimensions": [
+        "actionable_pathology_remaining",
+        "no_change_is_best_available_decision",
+        "problem_span_binding",
+        "independent_reading_benefit",
+        "subject_and_modifier_alignment",
+        "verb_object_collocation",
+        "logical_relation_preservation",
+        "template_field_role_and_authorization",
+        "information_density_and_rhythm",
+        "author_voice_non_regression"
+      ],
+      "required_per_change_verdicts": [
+        "ACCEPT",
+        "REVISE",
+        "REVERT"
+      ],
+      "validator_pass_is_quality_clearance": false
+    },
+    "schema": "humanize-paired-quality-review-request/v1",
+    "status": "PENDING_EXTERNAL_REVIEW",
+    "template_field_changes": [],
+    "validation_context": {
+      "artifact_relation": "CHANGED",
+      "decision": "REWRITE",
+      "decision_eligible": true,
+      "document_format": "tex",
+      "document_scope": "FRAGMENT",
+      "mechanical_validation_status": "PASS",
+      "mode": "REWRITE",
+      "scene": "RESEARCH"
+    }
+  },
+  "paired_quality_review_status": "PENDING_EXTERNAL_REVIEW",
+  "paired_style_delta_findings": [],
+  "paired_style_delta_layer_status": "NOT_APPLICABLE",
+  "paired_style_delta_summary": {
+    "authorship_inference": false,
+    "finding_count": 0,
+    "scope": "PAIRED_COURSE_VOICE_NON_REGRESSION_CANDIDATE",
+    "status": "NOT_APPLICABLE"
+  },
+  "pending_warnings": [],
+  "proposed_warning_resolutions": [],
+  "report_scope_check": {
+    "editable_range_count": 0,
+    "editable_ranges": [],
+    "extractor_replay_match": null,
+    "fragment_count": 0,
+    "outside_selection_unchanged": null,
+    "report_sha256": null,
+    "scope_path": null,
+    "scope_semantic_sha256": null,
+    "scope_sha256": null,
+    "source_sha256": null,
+    "status": "N/A"
+  },
+  "review_reasons": [
+    "paired_quality_not_evaluated"
+  ],
+  "scene": "RESEARCH",
+  "semantic_source_check": "N/A",
+  "speech_act_diagnostics": [],
+  "speech_act_layer_status": "PASS",
+  "status": "REVIEW",
+  "strict_corpus_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 2,
+    "clean_allowed_by_strict_layer": true,
+    "enabled": true,
+    "no_change_allowed": true,
+    "unexplained_candidates": 0
+  },
+  "structural_plan_check": {
+    "actual_content_changed": true,
+    "change_applied": false,
+    "invariant_baseline_sha256": "3d8e87d8a434353b11da6ce950e13687aec0841f169b84190b885b5c5e2ff4c9",
+    "limitations": "non-STRUCTURAL run",
+    "non_structural_paragraph_order_check": {
+      "author_paragraphs_after": 3,
+      "author_paragraphs_before": 3,
+      "authorized_topology_operations": 0,
+      "detected_paragraph_merges": [],
+      "detected_paragraph_splits": [],
+      "light_sentence_reorder": false,
+      "match_evidence": [
+        {
+          "after_index": 0,
+          "before_index": 0,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00959"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 1,
+          "before_index": 1,
+          "before_sha256": "1370f246fa60e0fe710efca90aa5a7fe83ed99391149e4c5b538c71f44f6b216",
+          "kind": "AUTHOR",
+          "method": "EXACT",
+          "protected_ids": [],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 2,
+          "before_index": 2,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00960"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 3,
+          "before_index": 3,
+          "before_sha256": "9474529470fac4f0ea0f6eedaf17ea4d4921f892290cd3230ebe9c27e12cd997",
+          "kind": "AUTHOR",
+          "method": "NEAR_EXACT",
+          "protected_ids": [],
+          "similarity": 0.997682
+        },
+        {
+          "after_index": 4,
+          "before_index": 4,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00982"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 5,
+          "before_index": 5,
+          "before_sha256": "70bac4e3bbfacdd7336d40d00f0685445f360353d488260e6541e8bcacba9e72",
+          "kind": "AUTHOR",
+          "method": "EXACT",
+          "protected_ids": [],
+          "similarity": 1.0
+        }
+      ],
+      "matched_author_paragraphs": 3,
+      "matched_elements": 6,
+      "matched_protected_anchors": 3,
+      "moved_paragraph_sha256": [],
+      "near_exact_reordered": false,
+      "paragraph_topology_changed": false,
+      "protected_anchor_reordered": false,
+      "reordered": false,
+      "scope": "NON_STRUCTURAL_PARAGRAPH_TOPOLOGY_AND_ORDER",
+      "status": "PASS",
+      "topology_authorization_error": "",
+      "topology_authorization_status": "NOT_REQUIRED",
+      "topology_operation_evidence": []
+    },
+    "semantic_review_status": "NOT_ISSUED",
+    "status": "NOT_APPLICABLE"
+  },
+  "style_signal_layer_status": "PASS",
+  "template_field_edit_scope_check": {
+    "authorized_edit_count": 0,
+    "authorized_edits": [],
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "provided": false,
+    "schema_version": null,
+    "scope_sha256": null,
+    "source_sha256": "5ad9d138c3d476a6fa3705538f594e350b49ee98085e3c611d6d506c59822e50",
+    "status": "N/A"
+  },
+  "template_field_findings": [],
+  "template_field_layer_status": "PASS",
+  "template_field_summary": {
+    "authorized_edit_count": 0,
+    "finding_count": 0,
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "review_finding_count": 0,
+    "status": "PASS"
+  },
+  "unaccepted_warnings": [],
+  "unexplained_high_findings": [],
+  "unexplained_strict_findings": [],
+  "warning_proposal_state": {
+    "attestation_status": "NOT_PROVIDED",
+    "cross_record_reviewer_linkability": "NOT_RECORDED",
+    "identity_verified": false,
+    "proposal_source": "NOT_PROVIDED",
+    "proposed_warning_fingerprints": [],
+    "review_clearance_granted": false,
+    "reviewer_identifier_collected": false,
+    "stable_reviewer_pseudonym_recorded": false,
+    "warning_review_request_sha256": null
+  },
+  "warning_resolutions": {},
+  "warning_review_request": null,
+  "warnings_without_resolution_proposal": []
+}

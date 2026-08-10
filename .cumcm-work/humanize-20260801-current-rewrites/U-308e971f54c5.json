@@ -1,0 +1,78 @@
+{
+    "schema_version":  "humanize-unit-rewrite-bundle/v4",
+    "unit_id":  "U-308e971f54c5",
+    "chunk_binding_sha256":  "c1b8fa0f453eb9bea08c4941ea3213b31a5a60e1c4c4cfd7bd9ae71dd09eb50c",
+    "decision":  "NO_CHANGE",
+    "voice_profile_sha256":  "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+    "authoring_binding":  {
+                              "schema_version":  "humanize-long-authoring-binding/v1",
+                              "integrity_scope":  "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+                              "snapshot_id":  "598a5e1303015f05",
+                              "prepare_integrity_sha256":  "613cc9ff09132c442cf1ba22f40492e56441e0f883bf82c86c099ff87fa3e1e0",
+                              "run_metadata_sha256":  "562e269a388588be545e1e831bf5f797a4a46970d3cfcf405eeac42ad6762460",
+                              "policy_snapshot_sha256":  "87656f9f0219c0ea2bb402202dc778469ce20e751d065776590fef4fcce7fd95",
+                              "source_binding":  {
+                                                     "file_id":  "F00001",
+                                                     "source_file_sha256":  "dc0f0e379a599cd9c22874ea35bccde81a8f55a9411aa8214fcf23114a67d539",
+                                                     "unit_id":  "U-308e971f54c5",
+                                                     "offset_unit":  "PYTHON_UNICODE_CODEPOINT_INDEX",
+                                                     "start":  13168,
+                                                     "end":  15347,
+                                                     "start_line":  432,
+                                                     "end_line":  480,
+                                                     "source_span_sha256":  "2241de72ab629cb0966fc70c86ef0a5e6e65a36b03def6fe41be4159a53f6261",
+                                                     "masked_text_sha256":  "d6cdebb21e246765c01fc6147c64f1dc2e625d0878b8fc3c8733d8075b119046",
+                                                     "chunk_binding_sha256":  "c1b8fa0f453eb9bea08c4941ea3213b31a5a60e1c4c4cfd7bd9ae71dd09eb50c"
+                                                 },
+                              "scene_route":  {
+                                                  "requested_scene":  "RESEARCH",
+                                                  "resolved_scene":  "RESEARCH",
+                                                  "status":  "EXPLICIT",
+                                                  "reason_code":  "USER_EXPLICIT_SCENE",
+                                                  "document_prior_scene":  "",
+                                                  "scores":  {
+                                                                 "COURSE":  0,
+                                                                 "MODELING":  0,
+                                                                 "RESEARCH":  0
+                                                             },
+                                                  "top_score":  0,
+                                                  "margin":  0,
+                                                  "ambiguous_scenes":  [
+
+                                                                       ],
+                                                  "evidence":  [
+
+                                                               ],
+                                                  "policy_sha256":  "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+                                                  "policy_revision":  5,
+                                                  "heading_path_sha256":  "3272163b0b290c6cf138ae552d80b6335d574d6764f7bc17453a09c06dcbc704",
+                                                  "routing_input_sha256":  "33afd5ebb432640c9918a238cb93c064eedc57b922f69fa1afa0b64c347359c0"
+                                              },
+                              "voice_binding":  {
+                                                    "profile_id":  "scene-default-research",
+                                                    "profile_revision":  1,
+                                                    "profile_kind":  "DEFAULT",
+                                                    "binding_scene":  "RESEARCH",
+                                                    "profile_sha256":  "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+                                                },
+                              "mode":  "REWRITE",
+                              "intensity":  "BALANCED",
+                              "authoring_allowed":  true,
+                              "completion_claim_allowed":  false,
+                              "humanize_quality_claim_allowed":  false,
+                              "authoring_binding_sha256":  "7a804a9b9a8936c99c3119bdcac072a9dc833a64a5979ba977783601156850fe"
+                          },
+    "keep_reasons":  {
+
+                     },
+    "template_field_edit_scope":  null,
+    "reason":  "该段承担“59 篇编号论文的结构与写作分析 / 宏观框架与版面组织”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。",
+    "evidence_spans":  [
+                           {
+                               "id":  "S1",
+                               "start_line":  3,
+                               "end_line":  3,
+                               "sha256":  "ce66ad221a4aa49d46db760e6fada8e6cd059a8a44e6a7132355f4c8d4baf7da"
+                           }
+                       ]
+}

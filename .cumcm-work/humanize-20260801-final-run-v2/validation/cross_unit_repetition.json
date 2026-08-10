@@ -1,0 +1,270 @@
+{
+  "action_catalog_sha256": "1a63b106a03bec4d30da50e4ca61031b8a713e0b3e9508986ec403c42c81dc47",
+  "action_profile_sha256": "d4b9a969679878bdef250727c3be239a73e06353ae2cd7be8ed86d54d179c68c",
+  "action_profile_status": "PASS",
+  "active_detector_definition_sha256": [
+    "41093627534731dd0dc6b5125b5d1c9b4e8a050e8cade4b4da7e5c26f4c6eb20",
+    "dd2b8ec37beb5116792eca111f4899bdecf6747bb63e9d988c3a6672b23f82f8",
+    "dff1ba4363a0b94fa3a2f0cac0767e4c43e87961636c9ddac743d9057e9ece7a"
+  ],
+  "after_blocks": 802,
+  "before_blocks": 803,
+  "before_logical_document_sha256": "bbd92d25dbf0b394b2f4ebb38e802fb5315aa9c0d2d17f2b4440dc1e231121c4",
+  "blocking_unit_ids": [],
+  "candidate_logical_document_sha256": "679698afffc25a620aa1ebbf52b48e7ff4ff5ce84aa360f2b4dfdce577641024",
+  "evaluated_units": 39,
+  "evaluation_partitions": [
+    {
+      "before_sha256": "48231ff56b2a29a2b2319d01c20a97c15a97f46cd6baf377e184d215a5948c1d",
+      "candidate_sha256": "3ce5d674bb8618240c8f4161615c704b9955bab9aaa6130173e36941f267fb2b",
+      "document_id": "F00001",
+      "resolved_scene": "RESEARCH",
+      "unit_ids": [
+        "U-99abf63c5cd0",
+        "U-2df268f6ceff",
+        "U-ea811c77720a",
+        "U-8597649b56ec",
+        "U-f6b92109b98a",
+        "U-93449d7ff25a",
+        "U-6e047f2d8820",
+        "U-c8ea003d42a0",
+        "U-aaa35b949121",
+        "U-26e37b3457dd",
+        "U-1ac43ff444aa",
+        "U-50a638426323",
+        "U-91b045cc729a",
+        "U-4fc7e20dda04",
+        "U-d0cbb9bb18c5",
+        "U-dc1d4fead1f5",
+        "U-f3cd34d8bc76",
+        "U-9a0dbfcc706d",
+        "U-1f6c0b78c643",
+        "U-bf86ab4f8ae1",
+        "U-16932070718e",
+        "U-cdb20eb80c0b",
+        "U-6dc12cef7031",
+        "U-7430498ba996",
+        "U-cbabc9654d82",
+        "U-3b14b48467b7",
+        "U-90467d46e876",
+        "U-52e7570c6ded",
+        "U-027e4e14e43b",
+        "U-7fb8cf2df4b6",
+        "U-57cb7ba92ead",
+        "U-867293a569a0",
+        "U-4acad627ff79",
+        "U-5e59ed41ecbc",
+        "U-b12f509db546",
+        "U-fd4d6f6d314f",
+        "U-50a463208c00",
+        "U-89ae962221bd",
+        "U-cd1f3b065a78"
+      ]
+    }
+  ],
+  "evaluation_scope": "FULL",
+  "expected_units": 39,
+  "finding_count": 0,
+  "findings": [],
+  "inherited_finding_count": 1,
+  "inherited_findings": [
+    {
+      "after": {
+        "group_results": [
+          {
+            "id": "future_bridge",
+            "minimum_occurrences": 1,
+            "occurrences": 0,
+            "triggered": false,
+            "units": []
+          },
+          {
+            "id": "repeated_forced_contrast",
+            "minimum_occurrences": 2,
+            "occurrences": 26,
+            "triggered": true,
+            "units": [
+              "U-52e7570c6ded",
+              "U-6dc12cef7031",
+              "U-7430498ba996",
+              "U-cbabc9654d82"
+            ]
+          }
+        ],
+        "matched_units": [
+          "U-52e7570c6ded",
+          "U-6dc12cef7031",
+          "U-7430498ba996",
+          "U-cbabc9654d82"
+        ],
+        "triggered": true
+      },
+      "attribution_status": "INHERITED_BEFORE_THRESHOLD",
+      "before": {
+        "group_results": [
+          {
+            "id": "future_bridge",
+            "minimum_occurrences": 1,
+            "occurrences": 0,
+            "triggered": false,
+            "units": []
+          },
+          {
+            "id": "repeated_forced_contrast",
+            "minimum_occurrences": 2,
+            "occurrences": 28,
+            "triggered": true,
+            "units": [
+              "U-50a463208c00",
+              "U-52e7570c6ded",
+              "U-6dc12cef7031",
+              "U-7430498ba996",
+              "U-cbabc9654d82"
+            ]
+          }
+        ],
+        "matched_units": [
+          "U-50a463208c00",
+          "U-52e7570c6ded",
+          "U-6dc12cef7031",
+          "U-7430498ba996",
+          "U-cbabc9654d82"
+        ],
+        "triggered": true
+      },
+      "card_id": "NEGATIVE-TEMPLATE-01",
+      "definition_sha256": "dd2b8ec37beb5116792eca111f4899bdecf6747bb63e9d988c3a6672b23f82f8",
+      "detector_type": "regex_groups/v1",
+      "document_id": "F00001",
+      "evaluated_scene": "RESEARCH",
+      "finding_fingerprint": "aef33cd1d518b30c68d1b90697d828c31a40a605a278075c4d4170d91b7cc16c",
+      "kind": "CORPUS_NEGATIVE_GUARD",
+      "scene": "ALL",
+      "units": [
+        "U-027e4e14e43b",
+        "U-16932070718e",
+        "U-1ac43ff444aa",
+        "U-1f6c0b78c643",
+        "U-26e37b3457dd",
+        "U-2df268f6ceff",
+        "U-3b14b48467b7",
+        "U-4acad627ff79",
+        "U-4fc7e20dda04",
+        "U-50a463208c00",
+        "U-50a638426323",
+        "U-52e7570c6ded",
+        "U-57cb7ba92ead",
+        "U-5e59ed41ecbc",
+        "U-6dc12cef7031",
+        "U-6e047f2d8820",
+        "U-7430498ba996",
+        "U-7fb8cf2df4b6",
+        "U-8597649b56ec",
+        "U-867293a569a0",
+        "U-89ae962221bd",
+        "U-90467d46e876",
+        "U-91b045cc729a",
+        "U-93449d7ff25a",
+        "U-99abf63c5cd0",
+        "U-9a0dbfcc706d",
+        "U-aaa35b949121",
+        "U-b12f509db546",
+        "U-bf86ab4f8ae1",
+        "U-c8ea003d42a0",
+        "U-cbabc9654d82",
+        "U-cd1f3b065a78",
+        "U-cdb20eb80c0b",
+        "U-d0cbb9bb18c5",
+        "U-dc1d4fead1f5",
+        "U-ea811c77720a",
+        "U-f3cd34d8bc76",
+        "U-f6b92109b98a",
+        "U-fd4d6f6d314f"
+      ]
+    }
+  ],
+  "lexical_policy_sha256": "d8b73b0b9fa21ae32c13270641c3f42d747ef4fcacd47faf22a48ef1558db85c",
+  "logical_document_hashes": [
+    {
+      "before_sha256": "48231ff56b2a29a2b2319d01c20a97c15a97f46cd6baf377e184d215a5948c1d",
+      "candidate_sha256": "3ce5d674bb8618240c8f4161615c704b9955bab9aaa6130173e36941f267fb2b",
+      "document_id": "F00001",
+      "unit_ids": [
+        "U-99abf63c5cd0",
+        "U-2df268f6ceff",
+        "U-ea811c77720a",
+        "U-8597649b56ec",
+        "U-f6b92109b98a",
+        "U-93449d7ff25a",
+        "U-6e047f2d8820",
+        "U-c8ea003d42a0",
+        "U-aaa35b949121",
+        "U-26e37b3457dd",
+        "U-1ac43ff444aa",
+        "U-50a638426323",
+        "U-91b045cc729a",
+        "U-4fc7e20dda04",
+        "U-d0cbb9bb18c5",
+        "U-dc1d4fead1f5",
+        "U-f3cd34d8bc76",
+        "U-9a0dbfcc706d",
+        "U-1f6c0b78c643",
+        "U-bf86ab4f8ae1",
+        "U-16932070718e",
+        "U-cdb20eb80c0b",
+        "U-6dc12cef7031",
+        "U-7430498ba996",
+        "U-cbabc9654d82",
+        "U-3b14b48467b7",
+        "U-90467d46e876",
+        "U-52e7570c6ded",
+        "U-027e4e14e43b",
+        "U-7fb8cf2df4b6",
+        "U-57cb7ba92ead",
+        "U-867293a569a0",
+        "U-4acad627ff79",
+        "U-5e59ed41ecbc",
+        "U-b12f509db546",
+        "U-fd4d6f6d314f",
+        "U-50a463208c00",
+        "U-89ae962221bd",
+        "U-cd1f3b065a78"
+      ]
+    }
+  ],
+  "negative_guard_loader_version": "2.0.0",
+  "negative_guard_registry_sha256": "d4b9a969679878bdef250727c3be239a73e06353ae2cd7be8ed86d54d179c68c",
+  "negative_guard_registry_source_format": "FULL_AUDIT_CATALOG",
+  "negative_guard_registry_source_sha256": "1a63b106a03bec4d30da50e4ca61031b8a713e0b3e9508986ec403c42c81dc47",
+  "negative_guard_registry_status": "PASS",
+  "policy": {
+    "author_view": "masked_text_without_protected_payload",
+    "boundary_minimum_units": 3,
+    "boundary_opening_han_chars": 6,
+    "comparison": "after must not introduce additional cross-unit coverage",
+    "corpus_negative_guards": [
+      "regex_groups/v1",
+      "structured_repeated_list/v1"
+    ],
+    "partition_key": [
+      "logical_document_id",
+      "resolved_scene"
+    ],
+    "repair_signal_categories": [
+      "repair-template-repetition"
+    ],
+    "scene_all_semantics": "evaluate_each_resolved_scene_separately",
+    "structured_tex_projection": [
+      "LIST_BEGIN",
+      "LIST_ITEM",
+      "LIST_END"
+    ],
+    "template_normalization": "NFKC+remove-zero-width+remove-Han-internal-space",
+    "version": "cross-unit-repetition/v3"
+  },
+  "policy_sha256": "cadd752b9716d0664de8ef48a1205e870a3b080eafdd93a4fda3a588963ff403",
+  "review_reasons": [],
+  "schema_version": "humanize-cross-unit-repetition/v3",
+  "status": "PASS",
+  "unit_inventory_sha256": "db76038ed429bfb76f1cd9cf83e7071b7da070c9a2614d3bceebe45230e531c5"
+}

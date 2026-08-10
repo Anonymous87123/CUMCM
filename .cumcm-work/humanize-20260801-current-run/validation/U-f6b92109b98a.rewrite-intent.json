@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "3f4ae6b5cffaafb719838b69aebcd416ba9e176850c67b2ce9afb48233006f68",
+    "before_sha256": "3f4ae6b5cffaafb719838b69aebcd416ba9e176850c67b2ce9afb48233006f68"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "5ce72d7093033337e75dedac9686c129eeee2900f733df14c0bc0ddbc1e26da6",
+  "chunk_binding_sha256": "a1bbc623d26543805a7422fbb232e63e1f60202627360c2f207cab0aef45004f",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-f6b92109b98a.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "0e89a8cdd611cf6473ad68f188193bf2846e6e9364f94bf3d49318fe65c1825e",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "a6a7f4dc76f85a03401f10ebdb93e8d2eaf9a22cae85cd1c94e99cf7b6af0cf8",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“六年真题任务图谱与人员分工 / 四块学习结构”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "09a33c16660a7bc0c8a73989982835dfaf1d901dd95a0a2b5f74ab7d302c867a",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-f6b92109b98a"
+}

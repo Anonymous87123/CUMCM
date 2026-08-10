@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "d5ded4e0f76de937db16b50b3fdab21ef998feb809064a8355d5c1263b65efb6",
+    "before_sha256": "d5ded4e0f76de937db16b50b3fdab21ef998feb809064a8355d5c1263b65efb6"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "c87164b70e22ecc0ea309e6afb5d6dd213a1b66e86acc7534973005f1ee50182",
+  "chunk_binding_sha256": "71996ace6c08e61789cd4ae0e8511f0409b54b6a33bba536d28c14499984dfeb",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-404f050b5eb9.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "20cc9b4d9b38b5c2b6c269d82723573a38f7e1683f1456a02ff9f261924afcfc",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 7,
+        "id": "S1",
+        "sha256": "1939fb58dab3a8a378f734814713f27a3a5ee4925d1bfb4c67c09941be9422fb",
+        "start_line": 1
+      }
+    ],
+    "reason": "本节是摘要写作的三项固定指引，原句分别承担内容、步骤与核对职责，改动会破坏quote清单边界。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "2145021154191a8e68f5b8f2ff705bc13b37c3020723e5eef533fb340bdfbd1c",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-404f050b5eb9"
+}

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "08fbf22042e6927deed11e74f9c0fe8e8438311a41586d29b2f43b6337d488a1",
+    "before_sha256": "08fbf22042e6927deed11e74f9c0fe8e8438311a41586d29b2f43b6337d488a1"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "3c24d8e335d5282b0010c8159fbcecb331c73ea183b43f6a51ba47436a8c8900",
+  "chunk_binding_sha256": "e8c7bf248d830b73321f8dd06e96aa6378bd4a79aeb7957b07cc206e2a870e63",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-8597649b56ec.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "768006d9e4bb74af8485b9ab84213c7f212a0f8373fbfb798eb974ad7bc47f5f",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "d98855fcb191abda4178d448b09f8d709a1fd6b7a4e839e0bf544caf1816586f",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“六年真题任务图谱与人员分工 / 十八道真题的训练定位”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "a6a9977bd2453c2fa7e49bb2c2e77c4cb4a7a340f4627ce9f304c8e51d2be889",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-8597649b56ec"
+}

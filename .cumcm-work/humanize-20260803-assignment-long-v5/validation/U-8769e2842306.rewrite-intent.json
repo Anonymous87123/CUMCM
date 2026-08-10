@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "7be133fe2600040ee133b26fb333eb8bc2d043dbc91ee5ab01913458a06675f2",
+    "before_sha256": "7be133fe2600040ee133b26fb333eb8bc2d043dbc91ee5ab01913458a06675f2"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "8f1c38c3f01ab974d6c867ab24dc4900be49faa221d020d5db4867d87cbe2125",
+  "chunk_binding_sha256": "db2909e222a4773d4fb1374c93c99130b38e13f99b19e4758db05f0e51b9ec50",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-8769e2842306.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "d2937b53f53fe21efdf07feb0d920f4412e331fb5f911de4c0fffdb7248dea69",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 1,
+        "id": "S1",
+        "sha256": "3ae51f36bec69bf57a01cc85e15d492a204ef3ee88777801a078941effc96291",
+        "start_line": 1
+      }
+    ],
+    "reason": "三项工具成果及迭代机制 / MCM-CUP-STANDARD-WRITE Skill中的定义、对象和条件承担后续对应关系，原句保持这些信息的排列与范围。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "a4994fb76a130f8d9f43d2661dc63511c41deef3f996684f0895a08a9c44e93d",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-8769e2842306"
+}

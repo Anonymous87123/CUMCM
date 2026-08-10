@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "5a1467a4bdcda0b673888fb0e9f62acedfd96f625824555db73eb6942d983766",
+    "before_sha256": "5a1467a4bdcda0b673888fb0e9f62acedfd96f625824555db73eb6942d983766"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "513686111dd64eb66cb985100531da9d4f1858b26a90544ed1a7112d0015712b",
+  "chunk_binding_sha256": "d5101edd8364c49e1ed84d49997b5455e909a509c91a906486622849998a016d",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-543412fefa1e.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "283a938703647dfc33484b04311b57996574219be72de0e998efddbd7063ab83",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 4,
+        "id": "S1",
+        "sha256": "96a687faca5ff87867f4b9d7fcb8ff24ac65c48b4b4309543b03cf68ebd927fc",
+        "start_line": 4
+      }
+    ],
+    "reason": "本单元承担“高频失分点”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "ef7733f0a65d43dc26fc01ad384f1d98bc5ad003d7b7f103cda48bb3abd24a3f",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-543412fefa1e"
+}

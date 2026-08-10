@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "0c024b7e7cac41c152b7fe80a81f8c9377360666c9e1e3b0fd5b8b6968fc0181",
+    "before_sha256": "0c024b7e7cac41c152b7fe80a81f8c9377360666c9e1e3b0fd5b8b6968fc0181"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "c57bca55c4bbe5d701b62ee8709a6bfb2b31d3f20150bd8329f5b574c3c26ecc",
+  "chunk_binding_sha256": "fc4b9c10314786a67bc103628e3a3eec69d389d620cae166350e5057f0d00a57",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-cdb20eb80c0b.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "41d4ed381061c6ad0a27433f61966ea45aaada01c1602d614d93ad67b46aaf12",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "4bd9a39dba0cc8b0a3bdfd91b4a02cf61c54383666b24dc5ff24c74f220edc61",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段落承担“A/B/C 三类论文的微观文风”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "76fa3b2cbde3e1bd30d2ba82be2af599ccbf87de36f7be62775e5c03d5857a2a",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-cdb20eb80c0b"
+}

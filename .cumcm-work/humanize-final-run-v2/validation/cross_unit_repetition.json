@@ -1,0 +1,247 @@
+{
+  "action_catalog_sha256": "1a63b106a03bec4d30da50e4ca61031b8a713e0b3e9508986ec403c42c81dc47",
+  "action_profile_sha256": "d4b9a969679878bdef250727c3be239a73e06353ae2cd7be8ed86d54d179c68c",
+  "action_profile_status": "PASS",
+  "active_detector_definition_sha256": [
+    "41093627534731dd0dc6b5125b5d1c9b4e8a050e8cade4b4da7e5c26f4c6eb20",
+    "dd2b8ec37beb5116792eca111f4899bdecf6747bb63e9d988c3a6672b23f82f8",
+    "dff1ba4363a0b94fa3a2f0cac0767e4c43e87961636c9ddac743d9057e9ece7a"
+  ],
+  "after_blocks": 252,
+  "before_blocks": 252,
+  "before_logical_document_sha256": "3b7b07af145dcffcc18895a44535f24ec790842fd7966f19e9dc33308b5fae12",
+  "blocking_unit_ids": [],
+  "candidate_logical_document_sha256": "fbfeedac68df2751e1c84f48c05fa11bc2e34ca084ace34cda1299d14d482db5",
+  "evaluated_units": 34,
+  "evaluation_partitions": [
+    {
+      "before_sha256": "1d065d7df28f110c26090243f944469af8c269db5a5038868cd75757e2db12a2",
+      "candidate_sha256": "e76ad05313d9af3787deed68c5a6dcaf57f18f89211f58a4ffab97b66b897aa0",
+      "document_id": "F00001",
+      "resolved_scene": "RESEARCH",
+      "unit_ids": [
+        "U-ec03cc4ec8b7",
+        "U-d8bb6329ccc8",
+        "U-dad2eee78f05",
+        "U-7847e1111c3b",
+        "U-46bf8fee300e",
+        "U-b9a3ba39c069",
+        "U-aff18ffcc51b",
+        "U-8c79b010d6ee",
+        "U-3630c118b5e3",
+        "U-0b3493a0e526",
+        "U-3ca78f022ad2",
+        "U-1ab716124e61",
+        "U-f3fe89de5dca",
+        "U-db39f30af41a",
+        "U-9524b9ca5350",
+        "U-59d238ee7aec",
+        "U-2a0367ca726e",
+        "U-f7aca69b420f",
+        "U-67e9b34c6ed2",
+        "U-86e1d10a430b",
+        "U-45a9b08e94f1",
+        "U-42ca595bc09f",
+        "U-53daacbc4895",
+        "U-2557530ab91f",
+        "U-fd038779e434",
+        "U-e09a9e088999",
+        "U-d8a1d5dc6324",
+        "U-2c14a7d3d351",
+        "U-77f2981e2ebf",
+        "U-dd9b62f4758a",
+        "U-da22e5cd0d94",
+        "U-372f3fc004fd",
+        "U-a630a9d346d9",
+        "U-bad1d72593e2"
+      ]
+    }
+  ],
+  "evaluation_scope": "FULL",
+  "expected_units": 34,
+  "finding_count": 0,
+  "findings": [],
+  "inherited_finding_count": 1,
+  "inherited_findings": [
+    {
+      "after": {
+        "group_results": [
+          {
+            "id": "future_bridge",
+            "minimum_occurrences": 1,
+            "occurrences": 0,
+            "triggered": false,
+            "units": []
+          },
+          {
+            "id": "repeated_forced_contrast",
+            "minimum_occurrences": 2,
+            "occurrences": 2,
+            "triggered": true,
+            "units": [
+              "U-372f3fc004fd",
+              "U-45a9b08e94f1"
+            ]
+          }
+        ],
+        "matched_units": [
+          "U-372f3fc004fd",
+          "U-45a9b08e94f1"
+        ],
+        "triggered": true
+      },
+      "attribution_status": "INHERITED_BEFORE_THRESHOLD",
+      "before": {
+        "group_results": [
+          {
+            "id": "future_bridge",
+            "minimum_occurrences": 1,
+            "occurrences": 0,
+            "triggered": false,
+            "units": []
+          },
+          {
+            "id": "repeated_forced_contrast",
+            "minimum_occurrences": 2,
+            "occurrences": 3,
+            "triggered": true,
+            "units": [
+              "U-372f3fc004fd",
+              "U-45a9b08e94f1",
+              "U-67e9b34c6ed2"
+            ]
+          }
+        ],
+        "matched_units": [
+          "U-372f3fc004fd",
+          "U-45a9b08e94f1",
+          "U-67e9b34c6ed2"
+        ],
+        "triggered": true
+      },
+      "card_id": "NEGATIVE-TEMPLATE-01",
+      "definition_sha256": "dd2b8ec37beb5116792eca111f4899bdecf6747bb63e9d988c3a6672b23f82f8",
+      "detector_type": "regex_groups/v1",
+      "document_id": "F00001",
+      "evaluated_scene": "RESEARCH",
+      "finding_fingerprint": "90fd4bc3b4219fc630e24b34602c3f65515682536650886112145d322a6288b0",
+      "kind": "CORPUS_NEGATIVE_GUARD",
+      "scene": "ALL",
+      "units": [
+        "U-0b3493a0e526",
+        "U-1ab716124e61",
+        "U-2557530ab91f",
+        "U-2a0367ca726e",
+        "U-2c14a7d3d351",
+        "U-3630c118b5e3",
+        "U-372f3fc004fd",
+        "U-3ca78f022ad2",
+        "U-42ca595bc09f",
+        "U-45a9b08e94f1",
+        "U-46bf8fee300e",
+        "U-53daacbc4895",
+        "U-59d238ee7aec",
+        "U-67e9b34c6ed2",
+        "U-77f2981e2ebf",
+        "U-7847e1111c3b",
+        "U-86e1d10a430b",
+        "U-8c79b010d6ee",
+        "U-9524b9ca5350",
+        "U-a630a9d346d9",
+        "U-aff18ffcc51b",
+        "U-b9a3ba39c069",
+        "U-bad1d72593e2",
+        "U-d8a1d5dc6324",
+        "U-d8bb6329ccc8",
+        "U-da22e5cd0d94",
+        "U-dad2eee78f05",
+        "U-db39f30af41a",
+        "U-dd9b62f4758a",
+        "U-e09a9e088999",
+        "U-ec03cc4ec8b7",
+        "U-f3fe89de5dca",
+        "U-f7aca69b420f",
+        "U-fd038779e434"
+      ]
+    }
+  ],
+  "lexical_policy_sha256": "d8b73b0b9fa21ae32c13270641c3f42d747ef4fcacd47faf22a48ef1558db85c",
+  "logical_document_hashes": [
+    {
+      "before_sha256": "1d065d7df28f110c26090243f944469af8c269db5a5038868cd75757e2db12a2",
+      "candidate_sha256": "e76ad05313d9af3787deed68c5a6dcaf57f18f89211f58a4ffab97b66b897aa0",
+      "document_id": "F00001",
+      "unit_ids": [
+        "U-ec03cc4ec8b7",
+        "U-d8bb6329ccc8",
+        "U-dad2eee78f05",
+        "U-7847e1111c3b",
+        "U-46bf8fee300e",
+        "U-b9a3ba39c069",
+        "U-aff18ffcc51b",
+        "U-8c79b010d6ee",
+        "U-3630c118b5e3",
+        "U-0b3493a0e526",
+        "U-3ca78f022ad2",
+        "U-1ab716124e61",
+        "U-f3fe89de5dca",
+        "U-db39f30af41a",
+        "U-9524b9ca5350",
+        "U-59d238ee7aec",
+        "U-2a0367ca726e",
+        "U-f7aca69b420f",
+        "U-67e9b34c6ed2",
+        "U-86e1d10a430b",
+        "U-45a9b08e94f1",
+        "U-42ca595bc09f",
+        "U-53daacbc4895",
+        "U-2557530ab91f",
+        "U-fd038779e434",
+        "U-e09a9e088999",
+        "U-d8a1d5dc6324",
+        "U-2c14a7d3d351",
+        "U-77f2981e2ebf",
+        "U-dd9b62f4758a",
+        "U-da22e5cd0d94",
+        "U-372f3fc004fd",
+        "U-a630a9d346d9",
+        "U-bad1d72593e2"
+      ]
+    }
+  ],
+  "negative_guard_loader_version": "2.0.0",
+  "negative_guard_registry_sha256": "d4b9a969679878bdef250727c3be239a73e06353ae2cd7be8ed86d54d179c68c",
+  "negative_guard_registry_source_format": "FULL_AUDIT_CATALOG",
+  "negative_guard_registry_source_sha256": "1a63b106a03bec4d30da50e4ca61031b8a713e0b3e9508986ec403c42c81dc47",
+  "negative_guard_registry_status": "PASS",
+  "policy": {
+    "author_view": "masked_text_without_protected_payload",
+    "boundary_minimum_units": 3,
+    "boundary_opening_han_chars": 6,
+    "comparison": "after must not introduce additional cross-unit coverage",
+    "corpus_negative_guards": [
+      "regex_groups/v1",
+      "structured_repeated_list/v1"
+    ],
+    "partition_key": [
+      "logical_document_id",
+      "resolved_scene"
+    ],
+    "repair_signal_categories": [
+      "repair-template-repetition"
+    ],
+    "scene_all_semantics": "evaluate_each_resolved_scene_separately",
+    "structured_tex_projection": [
+      "LIST_BEGIN",
+      "LIST_ITEM",
+      "LIST_END"
+    ],
+    "template_normalization": "NFKC+remove-zero-width+remove-Han-internal-space",
+    "version": "cross-unit-repetition/v3"
+  },
+  "policy_sha256": "cadd752b9716d0664de8ef48a1205e870a3b080eafdd93a4fda3a588963ff403",
+  "review_reasons": [],
+  "schema_version": "humanize-cross-unit-repetition/v3",
+  "status": "PASS",
+  "unit_inventory_sha256": "dcf2ca6016ec670ac12f1a8ecb56c73b1821fed8f669b2ef0f6e85f3746a6cba"
+}

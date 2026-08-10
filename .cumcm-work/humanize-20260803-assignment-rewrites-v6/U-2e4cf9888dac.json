@@ -1,0 +1,91 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-2e4cf9888dac",
+  "chunk_binding_sha256": "e705320a86ecb68315ef8ba7a639b19912ad1707bc9c46b7ff8d7f7d7a30f20c",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "e7e867d4911316eb",
+    "prepare_integrity_sha256": "a633dfcb09a3da2e2b138e5f22d1e9c1f1d3f1844b37ced5f47e90d74c0e5acd",
+    "run_metadata_sha256": "ed42a010547910b874853ea7105122ff42aa848053ac83540661647b45b06e07",
+    "policy_snapshot_sha256": "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "eba71855409d6a3c4570e3ddcb487e56ab77996bc3dde98146bf78dd30b00b94",
+      "unit_id": "U-2e4cf9888dac",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 24421,
+      "end": 24751,
+      "start_line": 629,
+      "end_line": 638,
+      "source_span_sha256": "0c024b7e7cac41c152b7fe80a81f8c9377360666c9e1e3b0fd5b8b6968fc0181",
+      "masked_text_sha256": "229180541badfde1e652ea7d06e8ec68a44cd8c2baec97f4c9248559e8061b0d",
+      "chunk_binding_sha256": "e705320a86ecb68315ef8ba7a639b19912ad1707bc9c46b7ff8d7f7d7a30f20c"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "5dbd7ba6854ffff043b5ecd351903c4f5c5b14467db67e10232f971a924a1218",
+      "routing_input_sha256": "000bf1dadc4676a68e9b389e4342860e8a337b95d9a25b6dfae4d6c9f97750b5"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "24cee6f90f1011456efcf793fe647a87153372e82577f524b279dd022918f11e"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00380:ca37a1f0f47d]]\n\n分题型比较采用各类论文内部的章节、连接词和模型组论文检出数，不将某个模型词\n出现次数直接解释为模型质量。A 类总页数中位数和四分位范围为 44.5 [36.5, 58]\n页，模型组检出前三项为机理与数值 15 篇、规划与智能优化 13 篇、时序预测 3 篇；\nB 类为 42 [34, 55] 页，前三项为机理与数值 12 篇、规划与智能优化 10 篇、统计\n学习 6 篇；C 类为 52 [43.25, 60.25] 页，前三项为时序预测 17 篇、规划与智能\n优化 17 篇、统计学习 13 篇。模型词或来自摘要、比较方法或参考文献，这里只报告\n[[PROTECTED:F00001-P00381:a42cbfd3ea96]]，不把它直接解释为论文主模型。\n\n",
+  "rewrite_intent": {
+    "summary": "删除工作台式词壳，保留对象、动作、条件和结论边界",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 8,
+        "end_line": 8,
+        "sha256": "ea83c18264a0d672ab928715e6be7b66d0e999d8c6f522b093822cd7e46b2a9c"
+      }
+    ],
+    "target_signals": [
+      "LEX-STRICT-CORPUS-DIRECT-ACTION"
+    ]
+  }
+}

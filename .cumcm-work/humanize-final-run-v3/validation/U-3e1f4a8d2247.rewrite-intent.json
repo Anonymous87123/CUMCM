@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "f0ec2e7b8e3b2ddcd36a6f75109c59fccc900411101432fa60bedcbf47d51818",
+    "before_sha256": "f0ec2e7b8e3b2ddcd36a6f75109c59fccc900411101432fa60bedcbf47d51818"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "ce200f91b41aa3b23fabba8468e604a5ee04cf2c15b56bd15de91dba0541c9b3",
+  "chunk_binding_sha256": "50b23e640f603f32ca106f80272e6438fac73e7374d8307f8e526e303b8ec286",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-3e1f4a8d2247.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "db83df7a886e2f3ae215c1b4d4f062cdbe3258fb5ce9aafc5aba85eed5a76b26",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "1c8b9bbceae7266febb95bde68209a7e3c3c61e3b23fbc7f8f81f29f0687a667",
+        "start_line": 3
+      }
+    ],
+    "reason": "本单元承担“学习报告”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "bab774348cf1105cb2309c2799b50e7fcb118880e98e60138f94f480161a298f",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-3e1f4a8d2247"
+}

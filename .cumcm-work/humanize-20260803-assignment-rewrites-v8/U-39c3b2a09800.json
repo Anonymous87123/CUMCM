@@ -1,0 +1,482 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-39c3b2a09800",
+  "chunk_binding_sha256": "fa8069b66c151d2e2ffe5ee1313cfaf21fc370050b6cc457e61336de8ce97d4b",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "7bdc914cd195ce3c",
+    "prepare_integrity_sha256": "a00dc59b6117cfc212f631f84843b51a0c61191e5e2dfb8b4878ffe166d7f494",
+    "run_metadata_sha256": "4cd475055916c2b477e77093a300926dd661f3a1e3c88848550a22d3042a493e",
+    "policy_snapshot_sha256": "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "ac6e4224f3a4335df76bee7b10f54554686f551cc337426cdbb593b512ad73fb",
+      "unit_id": "U-39c3b2a09800",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 15348,
+      "end": 24420,
+      "start_line": 481,
+      "end_line": 628,
+      "source_span_sha256": "392eccb75f5b71e1a804c2ac27006ad43ec22b28aa879a80d67175edc9df2054",
+      "masked_text_sha256": "56005f7335b348f4a5a5bb540216b30330b085c412d4ef92b594c4d180e196a9",
+      "chunk_binding_sha256": "fa8069b66c151d2e2ffe5ee1313cfaf21fc370050b6cc457e61336de8ce97d4b"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "37530d7d28559eed531751e28097c0092b6a9abffc5cc96023fbb0413896b87b",
+      "routing_input_sha256": "57f63af0f24744bc34ffe8d6d7c2bb8b14074d0acd80ebff59d63867287d95af"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "79a35fef5e0fa1a73d2573d5f0f68f83f35d354c1555e99e7ec262686e974c8c"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00274:674d458d43f8]]\n\n表~[[PROTECTED:F00001-P00275:82b81266081b]] 压缩全部已经全文通读并核验关键栅格的五十九篇论文；\n每行只保留模型链、论证次序和可迁移的人类作者表达。需要限制结论强度的事实仍记在\n单篇证据卡中，不在汇总表内追错，也不把个别现象解释为 59 篇中的出现频率。\n每篇完整的十四类章节证据、页码定位、结果摘录和撤回记录保存在 Skill 的\n[[PROTECTED:F00001-P00276:f03bdb9554ce]]，报告随人工检查进度逐篇增量更新。\n\n[[PROTECTED:F00001-P00277:4680c5fbaaa0]]\n[[PROTECTED:F00001-P00278:0699c4dfe6ca]][[PROTECTED:F00001-P00279:7b6602b9484f]][[PROTECTED:F00001-P00280:b11b4ca186c0]]\n[[PROTECTED:F00001-P00281:3000c3bd47e8]]\n论文 & 模型链 & 可迁移写法[[PROTECTED:F00001-P00282:b11b4ca186c0]]\n[[PROTECTED:F00001-P00283:3f9db2ae5742]]\n[[PROTECTED:F00001-P00284:6c327e891740]]\n[[PROTECTED:F00001-P00285:3000c3bd47e8]]\n论文 & 模型链 & 可迁移写法[[PROTECTED:F00001-P00286:b11b4ca186c0]]\n[[PROTECTED:F00001-P00287:3f9db2ae5742]]\n[[PROTECTED:F00001-P00288:7cf754fef645]]\nA070 & 热传导 PDE 候选、有限差分与识参、集总 ODE 降阶、制程约束优化。 &\n先保留高保真候选，再用误差和计算成本说明降阶；摘要与各问结果逐项闭合。[[PROTECTED:F00001-P00289:b11b4ca186c0]]\nA147 & 一维热传导 PDE、有限差分、四参数拟合、爬山热启动的限时队列搜索。 &\n以已得可行解热启动后续搜索，并把模型、搜索和制程读数串成一条实现链。[[PROTECTED:F00001-P00290:b11b4ca186c0]]\nA195 & 环境温度插值、热传导 PDE、Crank--Nicolson 型离散、标定、粗细搜索、7 次 GA、分层种群接力。 &\n把边界写入离散系统；利用单调性缩小范围；跨层保留末代种群并报告多次随机运行。[[PROTECTED:F00001-P00291:b11b4ca186c0]]\nA212 & 线性环境温度场、集总指数升温与牛顿冷却、残差驱动分段修正、参数扫描、粗细网格、退火与加权。 &\n先建低阶可计算基线，再按残差时段提出机制修正；逐问报告制程硬指标，并提供从状态更新到目标函数的附录链。[[PROTECTED:F00001-P00292:b11b4ca186c0]]\nA028 & 理想抛物面参数化、三维旋转、节点/球面弧中点 RMS 微调、面板蒙特卡洛接收比与球面基线。 &\n保留 300.4 m 实际半径和球面面板，按[[PROTECTED:F00001-P00293:27dda8a9c40a]]逐层组织，并同时报告微调前后 RMS 和原始球面基线。[[PROTECTED:F00001-P00294:b11b4ca186c0]]\nA115 & 理想抛物面可行性试算、变步长极小极大搜索、偏轴截面样条映射、面积比接收估计与单参数扫描。 &\n先报告最大邻距变化率与通过阈值的节点比例；把偏轴几何的[[PROTECTED:F00001-P00295:d7e7fd5e02f6]]状态分开；用基准接收率和扰动曲线暴露代理模型的待检验环节。[[PROTECTED:F00001-P00296:b11b4ca186c0]]\nA217 & 轴对称抛物面机理、焦距一维驻点、坐标旋转、带结构约束的高维最小二乘、三角面板射线追迹与蒙特卡洛积分。 &\n先抓住焦距这一低维自由度；第二问通过坐标旋转复用径向关系，第三问随后将相交、法向、反射、目标平面和圆盘命中逐层闭合。摘要一问一段，成对图分别解释形面、执行器、误差和基准。[[PROTECTED:F00001-P00297:b11b4ca186c0]]\nA001 & 波浪激励下浮子/振子垂荡和纵摇受力平衡、一阶状态 RK4、稳定窗口平均功率、阻尼粗搜到 GA 精求、双阻尼与周期检验。 &\n先从坐标和受力写出状态，公式后紧跟物理解释；由前期不稳定观测确定 100--180 s 稳定窗口，先粗略遍历再用 GA 求精。[[PROTECTED:F00001-P00298:b11b4ca186c0]]\nA022 & 波浪能装置平衡水平、振动方程、恒定/幂律阻尼、垂荡--纵摇耦合、稳态积分、阻尼粗搜与局部精化。 &\n先用平衡高度排除浸没边界，再由第一问数值结果授权复杂耦合；恒定阻尼先给复数解再用 trapz，阻尼和功率按粗搜、局部加密和排序归结。[[PROTECTED:F00001-P00299:b11b4ca186c0]]\nA171 & 浮子/振子平衡与分段浮力、常系数拉普拉斯解、幂律阻尼 RK4、力电比拟、稳定窗口功率、垂荡--纵摇八状态模型与双阻尼优化。 &\n先写平衡位置和浸没边界，再按方程性质切换解析解与 RK4；功率先定义稳定窗口，结果表沿用同一组时刻，检验把瞬态误差和稳态误差分开判断。[[PROTECTED:F00001-P00300:b11b4ca186c0]]\nA0127 & 双坐标反射几何、五类光学效率、塔影中心判据、镜面无效点与锥形射线追迹、分区同心圆布场、单位面积输出优化、二分/变步长搜索和灵敏度。 &\n先将三问写成正向计算、反问题和放宽约束，再由题面已知量隔离五类关键效率；工程简化按计算负担、数量占优、中心对称与统计补偿给依据，云图直接转成塔址和布场方向，搜索按计算预算分粗细两级。[[PROTECTED:F00001-P00301:b11b4ca186c0]]\nA0165 & 矩形点判定、太阳位置与镜面法向、六近邻遮挡栅格、锥形光斑截断、五类效率、空间图选向、固定变量降维、三分搜索和按圈高度蒙特卡洛。 &\n摘要按光传播过程分段；把矩形判定化为两个三角形；先用 [[PROTECTED:F00001-P00302:4aa0372a95ef]] 快速核并报告不足 [[PROTECTED:F00001-P00303:7e3e39c950ed]] 的偏差，再固定其余变量读单峰响应；空间图直接触发塔向南移动，问题三则冻结宽度、塔位和布场，只开放各圈高度。[[PROTECTED:F00001-P00304:b11b4ca186c0]]\nA0175 & 三坐标系与锥形光束、塔影/入射阴影/反射遮挡、20 m 邻接矩阵、集热器接收、蜂窝布局、整体旋转、两级镜面抽样和外圈高度调整。 &\n把程序短路写成[[PROTECTED:F00001-P00305:40056485cc3c]]；先给全对全计算量再引出邻接候选；用六档步长的增幅趋缓选择 1.5 m；以固定基线试算后冻结旋转角和高度；写明 [[PROTECTED:F00001-P00306:597c297a2edf]] 粗评与 [[PROTECTED:F00001-P00307:71df9d368436]] 细评，并在超过 60 MW 后继续讨论删去高遮挡镜面。[[PROTECTED:F00001-P00308:b11b4ca186c0]]\nA092 & 太阳与镜面坐标变换、入射/反射遮挡投影、重叠区域离散并集、万次锥束蒙特卡洛、空间方向试算、统一规格 GA 与按圈变步长优化。 &\n先逐项排除可直接计算量，只把唯一不能径直求得的截断效率交给随机估计；由环序号曲线提出北侧高效猜想，再选代表时刻二维图复核；东西方向关于原点近似对称且上午、下午变化抵消后冻结横向坐标；第三问由前问同心圆结构和各向同性把逐镜变量压为逐圈变量。[[PROTECTED:F00001-P00309:b11b4ca186c0]]\nA016 & 等距螺线弧长、相邻把手定长与速度递推、矩形投影碰撞、首次事件搜索、最小螺距回退、两圆弧调头几何、四区域状态矩阵和速度齐次缩放。 &\n先将全局运动压成相邻把手递推；多根由物理排列顺序和局部小角度裁决；由轨迹继承把首发碰撞对象缩到龙头/第二板凳的少量顶点；搜索保留越界、回退、折半和误差界；题设的缩短目标若被几何不变量锁死，先证明不可实现，再继续指定方案。[[PROTECTED:F00001-P00310:b11b4ca186c0]]\nB078 & 动作剪枝、资源/现金状态递推、已知天气图搜索、未知天气期望决策、候选路线支付矩阵与多人动态定义。 &\n按已知/未知天气、单人/多人拆分信息结构；将移动、停留、挖矿和补给写成可对照代码的状态转移，并逐问给出结果表和附录入口。[[PROTECTED:F00001-P00311:b11b4ca186c0]]\nB108 & 游戏引擎与图预处理、动态规划状态/价值压缩、1024 种未来天气枚举、统计规则、蒙特卡洛评估、天气等价换算、候选路径与局部日博弈。 &\n把现金作为同资源状态下的价值并做支配压缩；分开报告失败率、成功条件均值和失败记零的无条件均值；由支付矩阵逐项核对最佳反应与均衡。[[PROTECTED:F00001-P00312:b11b4ca186c0]]\nB125 & Floyd 图约简、资源状态动态规划、天气马尔可夫链、完整天气情景 DP、人工势场/拥挤收益与静态支配判定。 &\n把功能节点最短路和资源状态转移分层；将完整未来情景 DP 限定为离线 oracle，再以同一非预见策略在留出情景上评估遗憾与库存风险。[[PROTECTED:F00001-P00313:b11b4ca186c0]]\nB175 & 关键节点最短路、确定天气多阶段策略、位置状态 MDP、天气马尔可夫链、单路径模拟与多人协作目标。 &\n逐层区分确定天气、未知天气和多人信息结构；把效率与公平写明成两个目标，并由附录反查报告值的计算来源。[[PROTECTED:F00001-P00314:b11b4ca186c0]]\nB007 & 受控条件分组、Pearson/二项式拟合、Q 型聚类、多元回归与偏最小二乘比较、交互收率优化、均匀设计。 &\n四问按[[PROTECTED:F00001-P00315:4e7c5d164f72]]递进；先写旧模型遗漏，再加入直接收率回归和温度交互项；实验预算、安全修正、备选方法与舍弃理由均明确出现。[[PROTECTED:F00001-P00316:b11b4ca186c0]]\nB026 & 三次样条统一温度水平；散点与转化率上界引出 Logistic；一次/二次曲线与分段函数描述选择性和时间变化；双因素方差分析、多重比较；五元/三元二次回归及分情景优化；五次针对缺口的新增实验。 &\n先写数据整理的麻烦，再用散点形态和机理边界共同决定模型；每次实验都交代缺口、保持条件、改变因素、观测量和裁决用途；无温度限制与受限结果成对呈现。[[PROTECTED:F00001-P00317:b11b4ca186c0]]\nB050 & 42 张散点分类与线性/指数、三/四次多项式裁决；反应时间过程；六变量递进回归；BP 收率优化；加权欧氏距离与五次分角色实验。 &\n用样本点数解释为何舍弃 [[PROTECTED:F00001-P00318:eee6e3f2c046]] 的四次插值；每轮回归以新旧指标推进；先写规划方案的具体不足再切换 BP；实验先分探索与确认。[[PROTECTED:F00001-P00319:b11b4ca186c0]]\nB160 & 每组一元二次回归、控制变量双响应比较、混合水平正交极差、七变量二次交互回归、逐步回归、收率回归、[[PROTECTED:F00001-P00320:413b89253149]] 与五次分角色补测。 &\n曲线选型同时写明线性不足与高阶边界；控制变量写全保持量、改变量和组别；诊断点名共线性后再修模；回归按相对、绝对和方差分析三层解释。[[PROTECTED:F00001-P00321:b11b4ca186c0]]\nB030 & 极坐标下三类九形态、旋转对称压缩、六个正弦定理定位分支、误差遍历、发射机编号识别、三步队形调整与锥形编队圆形化。 &\n先穷尽情形再由可见对称关系压缩；算法段写明固定量、遍历量、范围和输出；旧模型复用先说明授权，结果按读数、原因和整体对照推进。[[PROTECTED:F00001-P00322:b11b4ca186c0]]\nB035 & 极坐标正弦模型、定弦定角两圆轨迹、分层编号解码、短弧与角度区间穷举、三/四机定位、[[PROTECTED:F00001-P00323:d7f61550c738]] 前视启发式搜索、退化处理与随机误差仿真。 &\n先写分类方程的可见负担再换几何轨迹；证明按数值例、区域交叠、端点界和区间表推进；算法比较允许局部让步；数值极限与实际停止分开说明。[[PROTECTED:F00001-P00324:b11b4ca186c0]]\nB086 & 极坐标正弦定位、解析双解唯一化、正九边形角集合判号、径向预处理、两类局部平方角误差搜索、三引理锥形调整、平面拟合与高斯扰动。 &\n把局部可见信息与事后全局评价分栏；证明误差界后继续解释搜索与通信收益；方案按收敛、稳态误差和资源代理裁决；几何引理由控制量映射到具体机群。[[PROTECTED:F00001-P00325:b11b4ca186c0]]\nB226 & 正弦定理覆盖几何、三维线面夹角、同长度覆盖面积证明、边界锚定贪心、模拟退火对照、等深线分区、最小二乘局部平面、PSO 与残差驱动再分区。 &\n先将三维问题归约为水深和线面夹角两个缺失量；命名平面后推导向量；规范只作动机并另给命题证明；贪心写清东边界首线、1 m 步长和最低可行重叠率；拟合残差只触发失败区域再分；按异常区域分别解释线数与漏测。[[PROTECTED:F00001-P00326:b11b4ca186c0]]\nB311 & 两种重叠定义与 CAD 裁决、任意方位线面几何、长尺度累积、边界递推和真实海域最不利位置覆盖。 &\n定义有歧义时保留两套解释，以同一数值例和可观察图形裁决；跨问只改水深与夹角输入；小坡度先放到 2 海里尺度计算；题内定量判断先于规范印证；递推写到对边闭合并舍弃额外候选。[[PROTECTED:F00001-P00327:b11b4ca186c0]]\nB477 & 投影重叠率修正、二维关系升维、平行测线递推、随机森林地形接口、局部梯度搜索与等深线分区修复。 &\n先用共同输入下的反直觉排序迫使定义修正；航向固定时先证明坡度唯一再升维；离散加密按精度、失效、误差累积和耗时列出负担；初始搜索暴露起点依赖与漏测后，只修浅缓失败区；主文示意、附件坐标和分区总量各司其职。[[PROTECTED:F00001-P00328:b11b4ca186c0]]\nC050 & 数据侧写、负价退货剔除、相关与四级分群、成本加成回归、半年窗口季节预测、品类/单品两级模拟退火、语义特征灰色关联和外部数据分流。 &\n每张侧写图说明后续用途；代表单品先给排序量与阈值；回归斜率译成每增加 [[PROTECTED:F00001-P00329:c5056ad3eaf5]] 的定价变化；丰富度、节气和节日指标写明代理语义；附件内证据与待采数据分开，打折频率按竞争机制、追加证据和分情形动作解释。[[PROTECTED:F00001-P00330:b11b4ca186c0]]\nC126 & 日销售透视、同期平均、T/F 相关矩阵、正态/对数正态 Bayesian 销量模型与 MCMC 诊断、二阶 VAR、两路单品筛选、利润优化和两步 LINGO 补货定价。 &\n先以不正态、大量零值、季节性和计算负担授权数据变换；由隔日难售的经营事实确定两天记忆和 VAR(2)；把负预测译成余货、折价与不补货；正文保留代表规则和关键诊断，完整 BUGS、R、EViews、LINGO 入口转入支撑材料。[[PROTECTED:F00001-P00331:b11b4ca186c0]]\nC228 & 数据连接与侧写、时间/销售/关系三路聚焦、偏相关与 FP-Growth、双对数价格弹性、候选预测比较、LSTM、弹性修正、GBest-PSO、VIKOR 与 NSGA-II 多目标单品决策。 &\n开放题先说明未指定探究方向，随后将观察面收窄为互补问题；统计周期后接节日、作息和供给季节机制；ARIMA、回归和灰色预测效果不佳后才改用 LSTM；缺失、短窗无趋势和随机波动又触发加权平均；变量变为 [[PROTECTED:F00001-P00332:8bfd5c853457]] 与连续混合后再说明 NSGA-II 和混合编码。[[PROTECTED:F00001-P00333:b11b4ca186c0]]\nC006 & 六指标熵权--TOPSIS、二元双目标筛选、GP 供货误差、动态库存/成本规划、逐周订购 GA、规则式转运、A/C 原料结构调整与扩产。 &\n把潜变量代理、拒绝历史均值、状态传递、宏观/微观解释、有限改进和模块沿用写出完整理由。[[PROTECTED:F00001-P00334:b11b4ca186c0]]\nC085 & 四指标熵权--TOPSIS、稳定供货筛样、动态权重贪心/动态规划、分阶段订购与转运、偏差变量规划、二分产能上界与窗口灵敏度。 &\n先将指标方向接到业务能力；由固定权重的单周缺货风险改权重，由连续淡季定两周窗口；原始成本不可比时改用成本/产能；求解器按预拆、背包和残项补救接力。[[PROTECTED:F00001-P00335:b11b4ca186c0]]\nC169 & 八指标投影寻踪与加速遗传优化、逐周 0--1/线性规划、MOPSO、多阶段订购转运和相邻周恢复约束的产能规划。 &\n把业务后果的不对称性先写成函数条件；观察到规律后说明为何不纳模；用历史同周期位置确定初值；先判时间记忆再拆周；按任务语义对 24 个周结果取最大或最小。[[PROTECTED:F00001-P00336:b11b4ca186c0]]\nC283 & 九指标熵权与 AHP 有限修正、等效产能库存、随机供货/损耗双目标、双层贪心、候选订货式比较、定向材料替换和扩围产能。 &\n指标写到具体数据操作；客观权重出现业务异常后才修正；用 LP/DP 边界说明贪心选型；停止规则写明继续下单的代价；随机运行只选高频较优代表；目标逆转时同时调整变候选范围。[[PROTECTED:F00001-P00337:b11b4ca186c0]]\nC155 & 成分闭合与中心化对数比、Pearson/Yates 前提分流、风化阶段 Q 聚类、逐成分二次回归与逆变换、分层 PbO 决策树、R 型变量聚类、Q 型样本聚类和灰色关联。 &\n先按缺失字段语义决定剔除、置零或不填补；检验前查看期望计数；用前问结论命名聚类并反向核对；按 [[PROTECTED:F00001-P00338:fb745b338a46]] 分流预测与不变策略；变量聚类和样本聚类分别承担降相关与分组。[[PROTECTED:F00001-P00339:b11b4ca186c0]]\nC229 & 条件化颜色填补、近似零值乘法替换、闭合与 clr、Spearman/卡方、Aitchison 均值、Dirichlet 回归、决策树--PLS-DA 复核、WSS--K-means、交叉验证 PLS 和配对 Wilcoxon。 &\n同一字段先按候选样品参考质量分流热卡与众数；主导成分遮蔽时保留全图并补画去除图；先用 PbO 阈值给直观规则，再以 PLS-DA/VIP 复核；没有亚类标签便说明无监督身份，聚类不清时只称粗略三分；潜变量由 RMSEP 与解释率共同裁决。[[PROTECTED:F00001-P00340:b11b4ca186c0]]\nC109 & 发票清洗与年度补全、七项企业特征、XGBoost 违约风险、评级--风险级联、信贷规划及宏微观疫情调整。 &\n把交易数据、可解释特征、风险概率和逐企业额度/利率串成决策链；摘要逐问报硬结果，长表与代码提供追踪入口。[[PROTECTED:F00001-P00341:b11b4ca186c0]]\nC142 & 发票清洗、七指标、PCA 安全指数、违约/流失函数、遗传算法、两级 BP、行业/事件冲击矩阵与重新优化。 &\n将有信用记录与无记录企业接入同一策略链，并对贷款总额、违约函数方差和冲击比例做三组敏感性；附录覆盖指标、预测和优化实现。[[PROTECTED:F00001-P00342:b11b4ca186c0]]\nC170 & 发票清洗、十一指标、熵权/TOPSIS 风险、经验阈值、RAROC 式额度规划、Logit、BP 与三类事件因子。 &\n把企业画像、风险标签补全、放贷筛选、额度分配和事件重求解按三问串联；附录公开指标汇总、权重、利率分组和行业分类代码。[[PROTECTED:F00001-P00343:b11b4ca186c0]]\nC227 & 四层 20 特征、五分类器 SoftVoting、评级风险聚合、多目标信贷规划、XGBoost 评级、层次聚类与疫情风险乘数。 &\n按[[PROTECTED:F00001-P00344:78aea15d62ac]]连接三问；同一金额口径下组合收益、违约损失和客户流失，并公开预测与规划代码片段。[[PROTECTED:F00001-P00345:b11b4ca186c0]]\nC305 & 六指标 Logistic 守约概率、等级均值最近距离、单/多目标贷款规划与外部冲击折减。 &\n将企业特征、守约概率、等级、额度、利率和冲击后重规划串成三问，并公开清洗、分类和规划代码。[[PROTECTED:F00001-P00346:b11b4ca186c0]]\nA053 & 螺线弧长、定长递推、首次碰撞反证、矩形分离轴、变步长螺距搜索、相切圆弧、四路径状态与 PSO 限速。 &\n多根筛选写成[[PROTECTED:F00001-P00347:655bdc3fdd44]]；由首次事件对象切换解释参数微变后的跃变，并以[[PROTECTED:F00001-P00348:9e2ac7de083c]]的现实后果推出半径下界。[[PROTECTED:F00001-P00349:b11b4ca186c0]]\nA163 & 螺线速度递推、碰撞域缩减、四角点判定、步长搜索、圆弧不变量、四路径状态与速度比。 &\n先证明几何自由度，再从全局轨迹图缩到局部搜索；算法段按状态类别、运动方向和推进步长交代递推。[[PROTECTED:F00001-P00350:b11b4ca186c0]]\nA178 & 代理圆预筛、四角点精判、螺距二分、圆弧不变量、四时段递推、曲率猜想、多速度核查与局部二分。 &\n代理模型只负责夹住区间，精确几何负责最终裁决；提出机制猜想，再跨条件核验，不把单幅图形改写为规律。[[PROTECTED:F00001-P00351:b11b4ca186c0]]\nA242 & 首次碰撞缩域、点线距离、螺距 PSO、盘入盘出路径、齐次速度传递与粗搜--三分求界。 &\n优化区间由物理下界和先验可行上界共同给出；仿真、几何判定和速度约束各承担不同验证任务。[[PROTECTED:F00001-P00352:b11b4ca186c0]]\nA196 & 视线球面布尔积分、连通区间证明、凸截面、圆周离散、二分、误差界、多初值、差分进化与整数分配。 &\n先证明[[PROTECTED:F00001-P00353:6ed2c29babe3]]再授权二分；理论误差界与最终输出精度分开，近似方案只提供初值而不视为最终解。[[PROTECTED:F00001-P00354:b11b4ca186c0]]\nB159 & 检验假设反向、功效与成本定样本、16 种检测方案、互斥成本核算、动态规划与 Beta 后验积分。 &\n先由企业对风险的态度确定原假设与备择假设；复杂度增加时说明明为何换模型，后问只替换不确定性输入而保留决策骨架。[[PROTECTED:F00001-P00355:b11b4ca186c0]]\nB195 & 无实测样本下的模拟器、[[PROTECTED:F00001-P00356:f20cb75cf89c]] 抽检、跨轮状态、重复步骤压缩、长短流程权衡与后验区间。 &\n先如实交代数据缺口，随后将时间和费用核算闭合；公开[[PROTECTED:F00001-P00357:ea4801f5ed63]]的修正过程，保留长期与短期偏好的真实取舍。[[PROTECTED:F00001-P00358:b11b4ca186c0]]\nB196 & 节点与反馈计数、两级成本、蒙特卡洛/蚁群、遗传算法和节点扰动分析。 &\n先用结构规模授权搜索方法切换；由高频节点落到具体执行次序，再按[[PROTECTED:F00001-P00359:46c3af63f24c]]解释敏感性。[[PROTECTED:F00001-P00360:b11b4ca186c0]]\nB060 & 复折射率与 Fresnel 方程、局部/全曲线反演、网格与 Gauss--Newton、Airy 公式、判据和误差传播。 &\n预处理的两个目的分别交代；局部路线与全曲线路线按证据范围分工，中间谱差必须再次传入厚度模型后才解释最终影响。[[PROTECTED:F00001-P00361:b11b4ca186c0]]\nB157 & 双角度共享物理量与独立标定、内层闭式解、外层非线性拟合、残差触发的 [[PROTECTED:F00001-P00362:f78ea3eeb811]] 分段与 Airy 修正。 &\n先说明频率干扰会怎样伤害下游反演，再决定是否去除；主结果基本不变而局部残差下降时，只把修正限定为局部作用。[[PROTECTED:F00001-P00363:b11b4ca186c0]]\nC038 & 七年种植规划、十四类约束、DEGA、1000 情景与 95[[PROTECTED:F00001-P00364:fed3f9917a84]] CVaR、分布/相关检验和联合扰动。 &\n图表观察进入入变量和约束；风险下降与利润牺牲同时报告，先说明样本量和检验前提，再给方法；联合不利情景与单因素扰动分开写。[[PROTECTED:F00001-P00365:b11b4ca186c0]]\nC063 & 基准规划、随机状态、典型候选、共同环境复评、收益矩阵、风险准则与替代互补关系。 &\n典型情景用于解释，共同随机环境用于裁决；先写最坏后果再给极大极小选择，表后按幅度与优先级解释方案差异。[[PROTECTED:F00001-P00366:b11b4ca186c0]]\nC094 & 决策量 [[PROTECTED:F00001-P00367:32385b8a8bc4]]、管理参数 [[PROTECTED:F00001-P00368:4533d38c4986]]、Gurobi/贪心、共同环境复评和替代互补扩展。 &\n把管理口号落实为 [[PROTECTED:F00001-P00369:4533d38c4986]] 参数；候选方案先生成，再放入同一环境比较；只有需求关系和目标响应都成立时才引入替代性。[[PROTECTED:F00001-P00370:b11b4ca186c0]]\nC234 & 参数索引、十四类约束、染色体可行生成与修复、灾害链和供需联动。 &\n先用数据表决定索引，随后将地块、季次与作物三类邻接关系写进编码；按收敛、约束形状和极端基线三条证据说明结果可信度。[[PROTECTED:F00001-P00371:b11b4ca186c0]]\nC023 & Logit 混合效应、阈值概率、动态规划分组与时点、连续/阶梯损失、稳健空值与 FDR、三级风险判别。 &\n先将安全、及时和可执行三种损失说清，再区分概率校准与决策效果；[[PROTECTED:F00001-P00372:20add3a23cc4]]在流程中被翻译为复测，而不是一句模糊警告。[[PROTECTED:F00001-P00373:b11b4ca186c0]]\nC132 & 重复测量混合模型、个体 GPR 与三级回退、BMI 遗传分组、MLP/LSTM/DeepHit、生存风险和 OOF 专家融合。 &\n先将多行检测转换为孕妇级时点；模型分工按首次就诊特征、时序变化和删失风险展开，最终同时报告总体表现、少数类召回和样本数。[[PROTECTED:F00001-P00374:b11b4ca186c0]]\n[[PROTECTED:F00001-P00375:76ac79294e9f]]\n[[PROTECTED:F00001-P00376:20f5534ac79d]]\n\n段落组织以[[PROTECTED:F00001-P00377:6b2e0784d609]]为单位。建模段通常先说明关系来源，再定义变量\n并列方程，公式后解释每一项的作用；求解段按输入、初始化、迭代、停止和输出展开；\n结果段按读数、比较、原因和决策含义展开。图表应在首次讨论附近出现，正文必须\n引用并解释，完整中间矩阵和长代码移至附录。公式、表格和图注的数量只能用于\n页面候选统计，最终含义以原始页面裁剪核验为准。每篇图表标题候选数的中位数及\n四分位范围为 17 [14, 23]，公式行候选对应为 420 [228.5, 511.5]；两类候选页在\n全文相对位置的中位数分别为 29.8[[PROTECTED:F00001-P00378:fed3f9917a84]] 和 56.9[[PROTECTED:F00001-P00379:fed3f9917a84]]。这些计数用于判断版面节奏，不表示\n精确的图表或公式数量。\n\n",
+  "rewrite_intent": {
+    "summary": "删除工作台式词壳，保留对象、动作、条件和结论边界",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O3",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S3"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O4",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S4"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O5",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S5"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O6",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S6"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O7",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S7"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O8",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S8"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O9",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S9"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O10",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S10"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O11",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S11"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O12",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S12"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O13",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S13"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O14",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S14"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O15",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S15"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O16",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S16"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O17",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S17"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O18",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S18"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O19",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S19"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O20",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S20"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O21",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S21"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O22",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S22"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O23",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S23"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O24",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S24"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 7,
+        "end_line": 7,
+        "sha256": "708a6822b6b2b221ac19454a096ec4474fef4e8349f0285ed4132f2e61139d46"
+      },
+      {
+        "id": "S2",
+        "start_line": 32,
+        "end_line": 32,
+        "sha256": "b1f78dba2e4bf4a04ee5edef01b226b87ca07e042ea06e04f857be1201f8ed70"
+      },
+      {
+        "id": "S3",
+        "start_line": 36,
+        "end_line": 36,
+        "sha256": "2681e788669dc1bf89e7c759ca768651a9c42747db09b86710d97601a4e42750"
+      },
+      {
+        "id": "S4",
+        "start_line": 40,
+        "end_line": 40,
+        "sha256": "02f1c55acfb5bec166fb2bc020d2f4c46c912d55e870ce6659d7d99b35ac0c89"
+      },
+      {
+        "id": "S5",
+        "start_line": 44,
+        "end_line": 44,
+        "sha256": "3f8fd5f762c035b3c34dc07e5b73aba5cf3bdeed51db77bcc4ca9f7af8caedb1"
+      },
+      {
+        "id": "S6",
+        "start_line": 46,
+        "end_line": 46,
+        "sha256": "67a61ae02f81a0621faf2d1a08f66f457202207890eec35114b8168e4bf881ce"
+      },
+      {
+        "id": "S7",
+        "start_line": 48,
+        "end_line": 48,
+        "sha256": "bf3548d9ab3deff5bd2740b733bef566a275e954c13932b32c797e0971decd63"
+      },
+      {
+        "id": "S8",
+        "start_line": 56,
+        "end_line": 56,
+        "sha256": "3883e562b264c7d3eee9f0a82f4e12c86bdfe1f9af6918317c9cc7c643b21493"
+      },
+      {
+        "id": "S9",
+        "start_line": 66,
+        "end_line": 66,
+        "sha256": "4c69ebe6253062f005695a675037a58fcdfd5fa07e00a1470a11451fdb999b8b"
+      },
+      {
+        "id": "S10",
+        "start_line": 72,
+        "end_line": 72,
+        "sha256": "e8abe55aa9495cf7722bf426602144ee26cf4a9fb7c266073929be380ed6dfd9"
+      },
+      {
+        "id": "S11",
+        "start_line": 82,
+        "end_line": 82,
+        "sha256": "15ed812f1110a506336127cefd77fb379267010c69cfeaf806beda72b6f9ac6f"
+      },
+      {
+        "id": "S12",
+        "start_line": 86,
+        "end_line": 86,
+        "sha256": "a53f4c9d69c220f40e63e0e97464fc4e44799c202918c9c35a30cda9e7fa638b"
+      },
+      {
+        "id": "S13",
+        "start_line": 90,
+        "end_line": 90,
+        "sha256": "a0528a450035b9f2ebe45fb0986484babf435635b571df31d6689b5d63a4d861"
+      },
+      {
+        "id": "S14",
+        "start_line": 92,
+        "end_line": 92,
+        "sha256": "4962e32a4c9ad0a74fa4a540e7d64405e0829851e428f1a6e5f15949cf9d56b3"
+      },
+      {
+        "id": "S15",
+        "start_line": 110,
+        "end_line": 110,
+        "sha256": "76c1d3fe916c8ddb1e7047b895b32e81b739dc3953a5da43b47d845401fd645c"
+      },
+      {
+        "id": "S16",
+        "start_line": 114,
+        "end_line": 114,
+        "sha256": "1ba645510ac01e914b295d9557102c67be9fa7152647ba4b44bd4c6c0ec6df65"
+      },
+      {
+        "id": "S17",
+        "start_line": 116,
+        "end_line": 116,
+        "sha256": "6363ae8cfd4ec3e82f65d8d7dde6922a560b8a8906fb24bc4af1d8a657c93514"
+      },
+      {
+        "id": "S18",
+        "start_line": 118,
+        "end_line": 118,
+        "sha256": "8b4a8c88c790d906b9a619dfacc799232814462b7ad64ff47d86bb8047edf057"
+      },
+      {
+        "id": "S19",
+        "start_line": 122,
+        "end_line": 122,
+        "sha256": "6ac6839df1bea6515cb9295de3dd11217b027101baa73fbc0ea4dc2c67ad3b61"
+      },
+      {
+        "id": "S20",
+        "start_line": 126,
+        "end_line": 126,
+        "sha256": "9b59a6248305a08648a6fd302d06dc946b6bdf48193a1b01af980e9319fc34e3"
+      },
+      {
+        "id": "S21",
+        "start_line": 132,
+        "end_line": 132,
+        "sha256": "5e5722f51cc22341be0d3c6f29ee6ec8079d876c768e9fa6117e0293e1cbeffb"
+      },
+      {
+        "id": "S22",
+        "start_line": 134,
+        "end_line": 134,
+        "sha256": "8f8e12f88ac28695e724a106343229eb1c94e26be5aa38a2cf524070170c7204"
+      },
+      {
+        "id": "S23",
+        "start_line": 136,
+        "end_line": 136,
+        "sha256": "aed38a6cb05022d1a0df4785c51111af8e15df965a57f5c4baee43e836149025"
+      },
+      {
+        "id": "S24",
+        "start_line": 143,
+        "end_line": 143,
+        "sha256": "46a051df72634beb75ece6331e1f43b57e4b97a74447e1889974f7a772555950"
+      }
+    ],
+    "target_signals": [
+      "LEX-STRICT-CORPUS-DIRECT-ACTION"
+    ]
+  }
+}

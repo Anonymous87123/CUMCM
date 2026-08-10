@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "908e2608292fd6aa74e3cc63a2deed6c727d68184819cbbc2ffa325bd1c947f5",
+    "before_sha256": "908e2608292fd6aa74e3cc63a2deed6c727d68184819cbbc2ffa325bd1c947f5"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "def5ca3bf162c6dfa6dea9017f6e986b475175cdd0f256a0649c5f61e12a19a1",
+  "chunk_binding_sha256": "85b479c78af9b73dbd3289e5bc671c9a9c3ef0414ba865b0e503d6c0bed691c2",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-1552edab1700.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "2737d8ad13516086353f43f2b161471a383338d193a774faf6367a9b3eaa7f90",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "bbe0cfb112bbb1d720c955a8af5bd7efea27f85d617feda6615c5cf1938149ee",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“结论”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "cfa09e662ad913bb625fdb468101dfc1b6f76acafdc6c6571d19d90ac8f923e8",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-1552edab1700"
+}

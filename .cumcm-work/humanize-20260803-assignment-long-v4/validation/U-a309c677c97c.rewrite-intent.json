@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "f0ec2e7b8e3b2ddcd36a6f75109c59fccc900411101432fa60bedcbf47d51818",
+    "before_sha256": "f0ec2e7b8e3b2ddcd36a6f75109c59fccc900411101432fa60bedcbf47d51818"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "f59a9fa260352f8b21863ef283d10c2d6fad07944d65e5a1f78fafb0faee510c",
+  "chunk_binding_sha256": "be49b7c41537dc306c23fb0bd7a060baa8096d4456f85412051076d447c49080",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-a309c677c97c.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "850d6c08ab9fc97f212117f28c1642479a5ba9fc73fc3f3df40b3d72e4e57615",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 1,
+        "id": "S1",
+        "sha256": "218fa3bdfe29f3408f14262b28977c481c850d58a04e1c7d4f2d79f87a44dc5a",
+        "start_line": 1
+      }
+    ],
+    "reason": "三项工具成果及迭代机制 / 学习报告中的定义、对象和条件承担后续对应关系，原句保持这些信息的排列与范围。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "f4611effcfec5aa4d26e721e46374346d61a4fc556a272f9d2562873ed8d789e",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-a309c677c97c"
+}

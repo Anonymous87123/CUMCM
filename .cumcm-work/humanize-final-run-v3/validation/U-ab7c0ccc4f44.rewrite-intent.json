@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "4fac80edb486235302e9377f0ddcf828fb79ad14478e833d00e1ebebcc392158",
+    "before_sha256": "4fac80edb486235302e9377f0ddcf828fb79ad14478e833d00e1ebebcc392158"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "1a8987c8369fccd4f1a94c57a90b1581196300601c0189ab24444a106becf1bd",
+  "chunk_binding_sha256": "c9bf8e6be3830386e080c81848c042a6287edbcb78ee8b1e635659b85d28682a",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-ab7c0ccc4f44.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "c10a350045e4194c42d0216a5428e8bb21cc35d01a72557f90116c6b8e3fd61d",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "bea6388d7be80b5e5ca45b7777fc31e5de4dc684258f33b4f62803e410533e43",
+        "start_line": 3
+      }
+    ],
+    "reason": "本单元承担“高分写作策略与冻结节奏”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "c18e591d4799b55a4bffdb69cb1475f511a92824ac5ed661c7e99fd9691cfe58",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-ab7c0ccc4f44"
+}

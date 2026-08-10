@@ -1,0 +1,16 @@
+\documentclass{ctexart}
+\usepackage{booktabs,longtable,hyperref,float}
+\hypersetup{hypertexnames=false}
+\begin{document}
+\begin{table}[htbp]
+\centering
+\caption{测试表}\label{tab:test}
+\begin{tabular}{cc}\toprule 甲&乙\\\bottomrule\end{tabular}
+\end{table}
+\begin{longtable}{cc}
+\caption{长表}\label{tab:long}\\
+\toprule 甲&乙\\
+\bottomrule
+\end{longtable}
+表~\ref{tab:test}，表~\ref{tab:long}。
+\end{document}

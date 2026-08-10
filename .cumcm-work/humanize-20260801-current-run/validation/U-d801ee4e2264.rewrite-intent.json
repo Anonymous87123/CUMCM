@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "4d5e8662ecfe8a13cc8935345e2def77079b1ababc59b39854770850ef41b7d4",
+    "before_sha256": "4d5e8662ecfe8a13cc8935345e2def77079b1ababc59b39854770850ef41b7d4"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "3cbf75d2f47bfe1e356fdb91f382ec94c0d52b9141ad7a08281b7fd539211e3c",
+  "chunk_binding_sha256": "158b890a51affecad3ef56fa6804226db3ff551e3e75a1a24b9b877482d60677",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-d801ee4e2264.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "33c746286a755ca2835419341da2a2c5a43f60ea5206645843bb46a37fb2e5b6",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "8956f9c2c5d63b125aca439ebdf6bde9dd8ba14cda1f3d5bc6d708dde6c6ebc9",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“创新切入、高频失分与高分策略 / 从基线到差异化模型”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "0dbc594b16a376bfc2eb7a39b2040fa522893891b06fba6ae314b9a2243d2aaa",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-d801ee4e2264"
+}

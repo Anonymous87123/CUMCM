@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "b7dd4e8211f6777328b329a71bbd20124fe1f226b5d356e3e3e06e7e2e537dc0",
+    "before_sha256": "b7dd4e8211f6777328b329a71bbd20124fe1f226b5d356e3e3e06e7e2e537dc0"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "f720a7bf069c55b1e2b986ff99f6c2703479033d86989db3308974323f0797e6",
+  "chunk_binding_sha256": "614a813964a64c421617caa67324021ad0980ee067a8d96833ec75215f04c90d",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-04f39778ea23.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "ec2b5998aac7ba2bf8070991511dfa5e41fc291d12d2a712ca391f9fd1d2f5e0",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 7,
+        "id": "S1",
+        "sha256": "8562de24f3dbad2ef408ef60bc470fb3df15e67cd85f478ff717cf7f61ce0b7d",
+        "start_line": 1
+      }
+    ],
+    "reason": "本节是模型建立与求解的三项固定指引，原句完整覆盖输入、模型、算法步骤和交稿检查。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "4a3d83fd2b02255443bbf2ee13936aaf97849ebefe02c4dd4d86fd6b54773e28",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-04f39778ea23"
+}

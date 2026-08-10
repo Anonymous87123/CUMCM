@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "74e3b8ac61a05bdc51d6a9417498c5bdc58b163156676c1cf41b519d29d8eecc",
+    "before_sha256": "74e3b8ac61a05bdc51d6a9417498c5bdc58b163156676c1cf41b519d29d8eecc"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "d00ba829267279d2d72f168584c801fa8730f52dae05de7d656038849d5de769",
+  "chunk_binding_sha256": "fa060d639433868af83e29c600e1b6f8b42dd66cec810305dc0b2155d5ee45f8",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-b3269c109fea.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "e3e011ce9b304cf63d00acddda9f4d68e6e9e0170e6e5b3fa2aca52aa828d35f",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 6,
+        "id": "S1",
+        "sha256": "0b244e65b6de467621200d35733a49cfd5d50fae9158e860dac29d68edd07747",
+        "start_line": 6
+      }
+    ],
+    "reason": "本单元承担“算法责任与验收总表”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "fdba67cfab87a190ef950e9b17cdff02536a13a1925e0041d0336a024edb29ef",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-b3269c109fea"
+}

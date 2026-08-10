@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "4d5e8662ecfe8a13cc8935345e2def77079b1ababc59b39854770850ef41b7d4",
+    "before_sha256": "4d5e8662ecfe8a13cc8935345e2def77079b1ababc59b39854770850ef41b7d4"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "2ef4404dce14073f46013fdbe600d89dd14a202ab9ae38408598c44f2f096e8d",
+  "chunk_binding_sha256": "b00d17272fe6da7a6dbe2f07071adc0e10e2420d51139274459bd1ffd0e37368",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-7fe63d9c20ab.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "0761e77aa338f673b64e4a857abb816cc8281a473b32ddabbb6e18a3938e8f46",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 1,
+        "id": "S1",
+        "sha256": "f513f7bd92d479751fb0e3068a3ff4d5cd94fc4ca3faaca7686c44673d709985",
+        "start_line": 1
+      }
+    ],
+    "reason": "创新切入、高频失分与高分策略 / 从基线到差异化模型中的定义、对象和条件承担后续对应关系，原句保持这些信息的排列与范围。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "de7d0399e69143529cf02194ca40f32d8c3be26f7cbcf233e822a741c75137cc",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-7fe63d9c20ab"
+}

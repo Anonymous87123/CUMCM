@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "602e49bb6b1de65c293d25d31b7ae04afdf67d8599d265ff124c37f02cd764b8",
+    "before_sha256": "602e49bb6b1de65c293d25d31b7ae04afdf67d8599d265ff124c37f02cd764b8"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "dffd0f826a2e7b46b4103fa9de9533ccaa37590f8c0c2717e99df70702141048",
+  "chunk_binding_sha256": "2461d0bcff341e061f5fa803f051ad51e965f5476985957c351369fa4ea8d2ff",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-3b14b48467b7.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "ab1d6f0aa0948d3033006db53ddfc2f269221d2f4d1f02f2080ab1baa0eea486",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 6,
+        "id": "S1",
+        "sha256": "c271c222242bcd514fecfe490eb2f92a7da19d527e9ffafa66aea4c111fadb5a",
+        "start_line": 6
+      }
+    ],
+    "reason": "该段落承担“十四类章节的写法”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "c2399ec8c60a05d8e4161d5c30a73a71e8b057cd96e45bbc80816b15ac740e8e",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-3b14b48467b7"
+}

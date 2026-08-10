@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "d0cf3c26ab00d625143f52c2d8adab1b3d5e37a4ddb003e8ec210cef0d2e5031",
+    "before_sha256": "d0cf3c26ab00d625143f52c2d8adab1b3d5e37a4ddb003e8ec210cef0d2e5031"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "24a2afdb654079f5a6e373fcbeafb8523c45f1ab1cdb1d844c28b0b2361b0b8a",
+  "chunk_binding_sha256": "29d163038c3ec6983a04125946134e7ecf3c2c8c7352122b7bfe3032affac1c8",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-213fa09c88f5.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "305ad03914029cbb98a2ddc48e2a97841f82b96f2c08a9c36dcf0c968340675d",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 1,
+        "id": "S1",
+        "sha256": "3121fc5deed623ef56a4d8705de3812088a52198991d49a894599a79e567c462",
+        "start_line": 1
+      }
+    ],
+    "reason": "理论知识学习笔记 / 阶段成果、真实短板与四周计划 / 实际短板中的定义、对象和条件承担后续对应关系，原句保持这些信息的排列与范围。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "925645cf80378c555d9aa7cbe3e86f13b2b58fb348fad74ffdd00c5240f2dd69",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-213fa09c88f5"
+}

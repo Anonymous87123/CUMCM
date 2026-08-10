@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "5fa8a27c61002049dcab5ac94f1dc2a5d7f97f3ef8444f137114cbe773a7b54c",
+    "before_sha256": "5fa8a27c61002049dcab5ac94f1dc2a5d7f97f3ef8444f137114cbe773a7b54c"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "2d5f02f69aa6a0f7387427ca53b8dd94392ab6e731e3e4459d69e4877db6098f",
+  "chunk_binding_sha256": "75f2c23dc135ed705bc031a6927a7563c6bedc9da9a47c3a4131340a677afb54",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-a1637d7beaae.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "7dd977f98d7f49591599531294cde209dce766f5544338e93bf8ff4a28cd527f",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "1f8c11bc799266e0acb7fadad5a831fd31d8e5c1839a7a27aea729df7e589b24",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“59 篇编号论文的结构与写作分析 / 人类作者的惯用词、段落骨架与行文节奏”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "40b5f1fef5a215ddd65b5d532ef389bb850149fe633f688a8958ef5586bcdb3a",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-a1637d7beaae"
+}

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "31b5fbd7a12e852af08b6374ee78a242dbec059fd8fef61b47af3d58c65d6bbb",
+    "before_sha256": "31b5fbd7a12e852af08b6374ee78a242dbec059fd8fef61b47af3d58c65d6bbb"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "dc9abfc4319b694c61d2587a9b5f3729b33a08bc36008bd52ad2ef0f5270da7c",
+  "chunk_binding_sha256": "9e858586094c28b04a785767158c2a1bd6b7b21e97f8e04c96567fe43375727c",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-8aeda1e2d26b.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "20cfda79cc10073b539a55364a9ad0b92aeff5c3eab8b51b3398384b8227d473",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "153351b9b4a7da7db938013ecf36f76df680ef7496b1ab2e48767700c89636ce",
+        "start_line": 3
+      }
+    ],
+    "reason": "本单元承担“MCM-CUP-STANDARD-WRITE Skill”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "d902afc2aa3980fc164ed104164a0435c21ad0ac9812008b13b11fa1142e6fea",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-8aeda1e2d26b"
+}

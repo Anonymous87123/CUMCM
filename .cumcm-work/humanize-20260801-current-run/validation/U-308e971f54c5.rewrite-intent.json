@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "2241de72ab629cb0966fc70c86ef0a5e6e65a36b03def6fe41be4159a53f6261",
+    "before_sha256": "2241de72ab629cb0966fc70c86ef0a5e6e65a36b03def6fe41be4159a53f6261"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "8d64aff0ba1a790692de03266bc22969504336bc757cb76a26e737c113dcaa4f",
+  "chunk_binding_sha256": "c1b8fa0f453eb9bea08c4941ea3213b31a5a60e1c4c4cfd7bd9ae71dd09eb50c",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-308e971f54c5.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "6c3b67c380e34b7b471583ceaec180893efec5432d232a432a2d4cb4e7792263",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "ce66ad221a4aa49d46db760e6fada8e6cd059a8a44e6a7132355f4c8d4baf7da",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“59 篇编号论文的结构与写作分析 / 宏观框架与版面组织”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "0c984fd22e1dd8816e28808ab1f33c4d8ba35dcb3e1e8d9424762250add566ed",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-308e971f54c5"
+}

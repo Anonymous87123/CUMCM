@@ -1,0 +1,88 @@
+{
+  "artifact": {
+    "after_sha256": "47d87dc2153422deaf6efaebdc5522e0dad9738037c29db243da2850a3db98fb",
+    "before_sha256": "08fbf22042e6927deed11e74f9c0fe8e8438311a41586d29b2f43b6337d488a1"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "b3525dc5a68c9f10470f8ad497804bc4ee56604236c1e681e7fcf87ed285228f",
+  "chunk_binding_sha256": "319ab4fba20dc3cf2eb0762eb0c2f6b7b7c39068c845d8ea115fa2d17478584d",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-efc3c8ffbf6f.diff",
+    "sha256": "000e915777d3ff6d14871b800ed17f4db3aad1dd07adb0442cf7f057647c27a2"
+  },
+  "evidence_sha256": "c4269bbc2165ec35d412b26d170405d50370c78537966a4ed871f5fb89774955",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载",
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载",
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 10,
+        "id": "S1",
+        "sha256": "c17c0226b8335cc7336e79b29362f5bd28676e2deaabdc664050061814d3df04",
+        "start_line": 10
+      },
+      {
+        "end_line": 14,
+        "id": "S2",
+        "sha256": "3bd9adc7601a166f1c6ae80cb2b4323d5df5a30894e8c13992ef40be4bd30714",
+        "start_line": 14
+      }
+    ],
+    "summary": "删除工作台式词壳，保留对象、动作、条件和结论边界",
+    "target_signals": [
+      "LEX-STRICT-CORPUS-DIRECT-ACTION"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 10,
+        "operation": "REPLACE",
+        "start_line": 10
+      },
+      {
+        "end_line": 14,
+        "operation": "REPLACE",
+        "start_line": 14
+      }
+    ],
+    "masked_after_sha256": "7bae8f476c04e10ee464f27960db28f302f07185a3180ff06d1773e1cda414dc",
+    "masked_before_sha256": "07c370a98041f645591303fe90da1cc09d5dabc6210362cac84f44cf0d8a69e0",
+    "source_spans_covered": 2,
+    "source_spans_total": 2,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "ff24cec0522f0934b94e45a215cf56419db15bace4b2cf77b768a1e96b31535d",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-efc3c8ffbf6f"
+}

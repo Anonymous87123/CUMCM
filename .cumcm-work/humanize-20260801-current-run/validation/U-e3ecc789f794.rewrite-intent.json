@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "5eb04bf8c4eb322cc1cb54584b4f45717679b6b550529b5b1b3023e30a882895",
+    "before_sha256": "5eb04bf8c4eb322cc1cb54584b4f45717679b6b550529b5b1b3023e30a882895"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "4cdd39b718f59c0193f4bb1a553d36568af8fabf726433bd94e9773dac240701",
+  "chunk_binding_sha256": "14a5b415ffc33f9709e322fb939c634376be42a1ed185ef3cedc13f78febb80c",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-e3ecc789f794.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "a5324ece3a71484cf02d584dc265d3855d8c5d5242b5258589d282e5c9f945ad",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "714a1545363c7aae26d729389f8defdfe066978512a980426bab4b36dcb82668",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“59 篇编号论文的结构与写作分析 / A/B/C 三类论文的微观文风 / C 类：数据口径、隔离验证与决策解释并重”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "ed82214b7e67d32cd27c7a3d67de028f609f3b82f6da21343416832a1e5951d4",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-e3ecc789f794"
+}

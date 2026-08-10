@@ -1,0 +1,11 @@
+--- U-fba8e7070aa4.before
++++ U-fba8e7070aa4.after
+@@ -7,7 +7,7 @@
+ -> evaluate -> simulate -> report
+ \end{quote}
+ Python 用 PuLP/Pyomo 或 SciPy 建立确定性基线，用
+-NetworkX 验证图算法接口；MATLAB 用 Optimization Toolbox/Global Optimization
++NetworkX 验证图算法输入输出关系；MATLAB 用 Optimization Toolbox/Global Optimization
+ Toolbox 建立第二实现。随机算法统一接收种子、预算和停止阈值，输出每代最优值、
+ 可行率及 Pareto 集。仿真模块只通过明确的数据类接收方案，禁止在仿真循环内
+ 偷偷改变约束。

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "602e49bb6b1de65c293d25d31b7ae04afdf67d8599d265ff124c37f02cd764b8",
+    "before_sha256": "602e49bb6b1de65c293d25d31b7ae04afdf67d8599d265ff124c37f02cd764b8"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "9c052d06aa50c1ceb8c8947d8fd9fd258d21846e9a3c57b401d71362a9f6b1a5",
+  "chunk_binding_sha256": "9a6e02e7f725073fd8743ec07473338eb7be54ca23a29af18ba69a1fb95b79e6",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-e3559472cde5.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "cfb29ef498e16bb8fba75c4c154cf5bf7f75aa07d0471ca79bc0b23cb9073294",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 6,
+        "id": "S1",
+        "sha256": "73b2af3bbc55c2043e978b20c3ea5350f5280c8b851f929baf1fabd80eb82506",
+        "start_line": 6
+      }
+    ],
+    "reason": "本单元承担“十四类章节的写法”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "c2399ec8c60a05d8e4161d5c30a73a71e8b057cd96e45bbc80816b15ac740e8e",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-e3559472cde5"
+}

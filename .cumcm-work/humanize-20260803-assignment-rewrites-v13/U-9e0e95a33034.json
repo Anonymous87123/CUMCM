@@ -1,0 +1,91 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-9e0e95a33034",
+  "chunk_binding_sha256": "6156b340bb2287253099483f5c4c2ce11a0061a09468861c95ec8985ae6e3d9d",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "076f68ce372327a7",
+    "prepare_integrity_sha256": "8f97c89de72845dd0773e19976987f925b059c3713ff6674aff16dbb18eae5a4",
+    "run_metadata_sha256": "6e9ac6fe3ed78d0bd91cc4f918384e779c45c7fc167106e797d868a4d2cd96bb",
+    "policy_snapshot_sha256": "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "54c7b230c8146c982ccc9c4547f4a5bea96d6fea556c12fb60aad7919254833e",
+      "unit_id": "U-9e0e95a33034",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 65160,
+      "end": 65580,
+      "start_line": 1620,
+      "end_line": 1634,
+      "source_span_sha256": "1fe916cd671d381a09876c5a12e2cd1bfe9b2e26df43bba44ba1f275ebcae518",
+      "masked_text_sha256": "4245b0a40ab80106fa5632481636883924c5a9ed318d23fe1ec29e66e2a2d1fa",
+      "chunk_binding_sha256": "6156b340bb2287253099483f5c4c2ce11a0061a09468861c95ec8985ae6e3d9d"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "ae20c6ba657e006e773c354691a9f1db892894f8f1262931a13054bae07d212f",
+      "routing_input_sha256": "3fd20dbff67a0d0a5a9932ac887b03b4b31271fcaafbbcd68c8b4ec2777f493d"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "e07f9b703f845928686b92a665332f6f0936a51670aef504df28235ecc362f78"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00988:0ebe6915ed7e]]\n\n模板实际路径为 [[PROTECTED:F00001-P00989:164ffba2fd25]]。[[PROTECTED:F00001-P00990:bc660fe2b728]]\n目录保留上游\n[[PROTECTED:F00001-P00991:fffcd67a5a99]]、字体和\n[[PROTECTED:F00001-P00992:a6378623ceea]]；[[PROTECTED:F00001-P00993:8d1a7ea85a22]] 默认为指导模式，在每级标题后给出目标、\n清单、语言、篇幅排版、图表位置、判别力要点和错误警示；[[PROTECTED:F00001-P00994:221da3a7ea51]]\n定义模式开关后载入同一主文件，隐藏全部指引。章节顺序固定为摘要与关键词、\n问题重述、问题分析、模型假设、符号说明、分问题模型建立与求解、结果分析与\n模型检验、灵敏度/稳健性、模型评价与改进、参考文献、附录。\n\n篇幅提示集中使用本次整理 59 篇论文的实测中位数和四分位范围，不预造比例。目录\n[[PROTECTED:F00001-P00995:00934fdecb87]] 记录证据范围和改造日期；后续范文结论先在批注区登记\n来源编号、日期、页码、题型和核验状态，再增量修改指引。\n\n",
+  "rewrite_intent": {
+    "summary": "删除工作台式词壳，保留对象、动作、条件和结论边界",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 12,
+        "end_line": 12,
+        "sha256": "89c28720274b961ee06ceabd1d9b4cff130dd1439534674a50d0d318439d60d1"
+      }
+    ],
+    "target_signals": [
+      "LEX-STRICT-CORPUS-DIRECT-ACTION"
+    ]
+  }
+}

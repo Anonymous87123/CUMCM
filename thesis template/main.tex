@@ -1,0 +1,1527 @@
+\ifdefined\MCMSubmission
+  \documentclass[withoutpreface,bwprint]{cumcmthesis}
+\else
+  \documentclass[withoutpreface,colorprint]{cumcmthesis}
+\fi
+
+\usepackage{enumitem}
+\usepackage{listings}
+\usepackage{xcolor}
+\usepackage[most]{tcolorbox}
+
+% 沿用类文件随附的宋体族及其伪粗体设置，避免指导模式示例图注回退到
+% 系统宋体的未定义粗体字形；PDF 书签中将节编号细空格安全降级为空格。
+\DeclareCaptionFont{song}{\song}
+\pdfstringdefDisableCommands{\def\thinspace{ }}
+
+\newif\ifmcmguidance
+\ifdefined\MCMSubmission
+  \mcmguidancefalse
+\else
+  \mcmguidancetrue
+\fi
+
+\definecolor{mcmguideborder}{RGB}{45,97,71}
+\definecolor{mcmguidebg}{RGB}{244,248,245}
+\definecolor{mcmguidehead}{RGB}{29,74,53}
+\newcommand{\MCMGuideField}[2]{\par\noindent\textbf{#1：}#2}
+\newtcolorbox{mcmguidebox}{%
+  enhanced,
+  breakable,
+  colback=mcmguidebg,
+  colframe=mcmguideborder,
+  boxrule=0.5pt,
+  arc=0pt,
+  left=7pt,
+  right=7pt,
+  top=5pt,
+  bottom=5pt,
+  before skip=6pt,
+  after skip=6pt
+}
+\newcommand{\MCMGuide}[7]{%
+  \ifmcmguidance
+    \begin{mcmguidebox}
+      \small\color{black}
+      {\color{mcmguidehead}\bfseries 写作指引}
+      \MCMGuideField{目标}{#1}
+      \MCMGuideField{必备清单}{#2}
+      \MCMGuideField{语言风格}{#3}
+      \MCMGuideField{篇幅与排版}{#4}
+      \MCMGuideField{图表位置}{#5}
+      \MCMGuideField{高分点}{#6}
+      \MCMGuideField{错误警示}{#7}
+    \end{mcmguidebox}
+  \fi
+}
+
+% 以下范围来自 2020--2025 年 A/B/C 题 59 篇、2892 页论文的页级标题命中统计。
+% 格式均为“跨度页数中位数 [Q1,Q3]”；检测率较低或容易被目录提前命中的项目只作定性提示。
+\newcommand{\MCMCorpusScope}{2020--2025 年 A/B/C 题 59 篇编号论文，共 2892 页}
+\newcommand{\MCMEvidenceScope}{59/59 篇均已逐页通读，十四类章节检查 826/826；A/B/C 为 20/19/20 篇}
+\newcommand{\MCMHumanStyleScope}{人类文风入口覆盖 59/59 篇：44 篇细粒度原页记录加 15 篇结构化动作卡；不虚构全文词频}
+\newcommand{\MCMTotalLength}{全篇总页数参考为 45 [37,58.5] 页，不作为硬性页数限制}
+\newcommand{\MCMAbstractLength}{摘要检出 58/59，跨度参考 1 [1,1] 页}
+\newcommand{\MCMRestatementLength}{问题重述检出 57/59，跨度参考 1 [1,1] 页}
+\newcommand{\MCMAnalysisLength}{问题分析检出 57/59，跨度参考 1 [1,1] 页}
+\newcommand{\MCMAssumptionLength}{模型假设检出 48/59，跨度参考 1 [1,1] 页}
+\newcommand{\MCMSymbolLength}{符号说明检出 58/59，跨度参考 1 [1,3.75] 页}
+\newcommand{\MCMBuildLength}{模型建立检出 58/59，跨度参考 2 [1,6] 页}
+\newcommand{\MCMSolveLength}{模型求解检出 55/59，跨度参考 2 [1,6] 页}
+\newcommand{\MCMResultLength}{结果分析检出 47/59，跨度参考 7 [1,12] 页}
+\newcommand{\MCMTestLength}{模型检验仅检出 22/59，跨度 1.5 [1,7] 页仅作定性参考}
+\newcommand{\MCMSensitivityLength}{灵敏度分析仅检出 25/59，目录会提前命中，跨度 1 [1,2] 页仅作定性参考}
+\newcommand{\MCMEvaluationLength}{模型评价检出 51/59，跨度参考 1 [1,1] 页}
+\newcommand{\MCMImprovementLength}{改进方案仅检出 19/59，跨度 1 [1,1] 页仅作定性参考}
+\newcommand{\MCMReferenceLength}{参考文献检出 57/59，跨度 1 [1,11] 页受附件合并影响}
+\newcommand{\MCMAppendixLength}{附录检出 48/59，跨度 16 [6,28] 页受代码和附件长度影响}
+
+\title{论文题目}
+\tihao{A}
+\baominghao{}
+\schoolname{}
+\membera{}
+\memberb{}
+\memberc{}
+\supervisor{}
+\yearinput{2026}
+\monthinput{09}
+\dayinput{01}
+
+\begin{document}
+\maketitle
+
+\ifmcmguidance
+  \begin{mcmguidebox}
+    \small
+    {\color{mcmguidehead}\bfseries 全文人类行文协议}
+    \MCMGuideField{证据范围}{\MCMEvidenceScope；\MCMHumanStyleScope。}
+    \MCMGuideField{段落起点}{先写本题中已经观察到的事实、矛盾、数量级或前问结果，再写由此作出的选择。不要先报算法名。}
+    \MCMGuideField{段落推进}{按“观察--判断--动作--结果--边界”组织。每个“故、因此、考虑到、由图可知”之前有证据，之后有变量、公式、算法或决策动作。}
+    \MCMGuideField{公式衔接}{公式前说明关系从哪里来，公式后用一句人话解释每一项的物理、几何或业务作用；求解器只在变量域、结构规模或证据条件授权后出现。}
+    \MCMGuideField{结果衔接}{按“条件--读数--比较--原因--影响”解释。跳变先查事件对象，异常时段回到局部轨迹，候选方案放进共同环境或全过程复评。}
+    \MCMGuideField{常用表达}{可使用“注意到……，故……”“考虑到……，本文将……”“由前述结果可知……”“在相同……条件下……”“虽……，但……”，但省略处必须填入本题对象、数字和动作。}
+    \MCMGuideField{禁用空话}{不写“构建综合性框架、充分证明模型有效、显著提升性能、具有广泛适用性、为后续研究奠定基础”，除非紧跟可核对的对象、数值、比较和范围。}
+  \end{mcmguidebox}
+
+  \begin{mcmguidebox}
+    \small
+    {\color{mcmguidehead}\bfseries 2024--2025 新增逐篇写法索引}
+    \MCMGuideField{A053/A163/A178/A242/A196}{依次学习反证逐节前推、全局图缩到局部搜索、代理区间与精确判定分工、物理上下界授权优化、先证连通再用二分。}
+    \MCMGuideField{B159/B195/B196/B060/B157}{依次学习决策立场确定检验假设、无样本先公开模拟器、结构规模触发换搜索、局部与全曲线反演分工、有限改善主动收窄结论。}
+    \MCMGuideField{C038/C063/C094/C234/C023/C132}{依次学习收益与风险并列、共同环境复评、管理语言参数化、索引与邻接落进编码、安全/及时/可执行损失分开、记录行还原为真实主体并按模型角色分工。}
+  \end{mcmguidebox}
+
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{人类段落动作账本（写每个关键段前填写）}
+    \label{tab:human-paragraph-action-guide}
+    \begin{tabular}{p{2.15cm}p{2.7cm}p{2.65cm}p{2.65cm}p{2.55cm}}
+      \toprule
+      段落任务 & 可核观察 & 判断或取舍 & 数学/程序动作 & 结果、边界或下一接口 \\
+      \midrule
+      方法选择 & 曲线、规模、约束或上一模型不足 & 为什么保留/舍弃候选 & 变量、模型、求解器与参数 & 比较口径和适用范围 \\
+      事件解释 & 跳变时点、首次对象或异常区间 & 事件对象是否切换 & 局部复算、反证或全过程检查 & 机制解释和反例范围 \\
+      数据决策 & 样本单位、重复测量、时间与缺失 & 行如何还原为主体，证据如何回退 & 聚合、划分、概率与决策接口 & 总体、少数类、样本数和行动 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\fi
+
+\begin{abstract}
+\MCMGuide
+  {在有限篇幅内交代每一问的对象、方法、关键结果和检验，形成可独立阅读的全文压缩版。}
+  {总任务；逐问模型链；最有判别力的数值或关系；约束满足情况；至少一项检验；3--5 个关键词。}
+  {每问一段，先写对象和困难，再写方法、数字与检验；可用“针对……，建立……；求得……；经……检验……”，但必须补入本问特有的变量和数值，不写背景议论和目录式介绍。}
+  {\MCMCorpusScope；\MCMTotalLength；\MCMAbstractLength。摘要不分小标题，结果数字与正文保持一致。}
+  {摘要通常不插图表；只有题面明确要求摘要表格时才例外。}
+  {让评阅者在首屏看见模型差异、关键结果和可信度证据。}
+  {不写“结果很好”；不遗漏某一问；不填正文没有出现的数字；不把算法名堆成清单。}
+% 从下一行开始写摘要正文。
+\ifmcmguidance
+  \keywords{关键词一\quad 关键词二\quad 关键词三}
+\else
+  \keywords{}
+\fi
+\end{abstract}
+
+\section{问题重述}
+\MCMGuide
+  {把题面重组为可建模的输入、输出、限制和提交任务。}
+  {研究对象；已知量；各问输出；硬性约束；附件与结果文件要求；问题间依赖。}
+  {客观转述，减少背景，使用“给定……求……”和“在……约束下确定……”。}
+  {\MCMRestatementLength；按分问列出任务，不复制大段题面。}
+  {一般不插图；复杂空间关系可重绘一张带坐标和符号的示意图。}
+  {重述后应能直接建立任务矩阵，并与后文标题逐一对应。}
+  {遗漏单位、时间范围或提交格式；引入尚未证明的模型；原文大段照录。}
+% 正文写在此处。
+
+\section{问题分析}
+\MCMGuide
+  {识别每问核心矛盾，解释问题分解、模型选择和问间数据流。}
+  {难点；输入输出；基线方案；近邻模型边界；改进理由；残差形态；留出验证；各问复用和新增内容；分问是正向计算、反问题、放宽约束还是改换目标；题面公式中可直接获得的量与真正剩余未知量；原始情形、等价关系、保留分支与覆盖检查；旧方法的分类/计算负担、可保留不变量与新构造；工程简化的数量/尺度、对称或统计补偿依据及最终判据；空间图形是否真正改变选址、布场方向和变量区间；可见信息、禁用信息、局部目标与事后全局评价；已知/未知信息、单人/多人等信息结构；缺失字段的题面语义、同条件多值性、采样范围与处理动作；候选统计检验的适用前提与分流；前问结论怎样解释后问分组、后问结果怎样反向核对前问；指标的具体数据操作与零值处理；客观权重的业务异常与有限修正；目标变化前后的候选范围。}
+  {以观察、取舍和依赖关系组织。数据题可写“观察附件……发现……，利用……判断……”；机理题可写“注意到……，故……”；模型改进写“由上述分析可知……，故……”。A0127 型工程题先用“它实际上是一道……问题；问题二是问题一的反问题；相较于问题二，问题三改变了……”交代问间关系，再写“由题面式（·）可知……可以直接得到，因此关键是……”隔离剩余未知量。精确几何边界若计算过重，按“负担—数量/尺度—对称或统计补偿—中心/代理判据—二值动作”给简化依据；云图或空间分布若参与设计，就把读出的方向、镜面/设施移动方向和变量区间连续写出。A0165 型空间机理题先用“将……划分为……，分别进行建模”拆开传播阶段，再以“为计算……首先需要……”补齐前置量；若把矩形判定转为两个三角形判定，要说明等价关系和边界口径。快速计算核须列高精度基准、分辨率、偏差和使用阶段；研究一个变量时列全固定量，图形真的呈单峰后才进入三分搜索。前问方案被沿用时，逐项写清继承计算核、冻结变量和新开放自由度；检验先给结构预言，再主动改变时刻、边界或输入，比较峰值、对称轴或空间分布是否按机理迁移。缺失值不要统一写“插补”：先写“由题目可知[空白语义]，研究表[编号]发现[同条件多值/采样范围]，因此[置零、剔除、拒绝填补或局部忽略]”。统计检验按“由表[编号]可知[期望计数等前提]，满足/不满足[检验]前提，因此采用[方法]”推进。若前问趋势用于命名后问聚类，再明确写出聚类怎样反向核对前问结论。几何/分支题先写“根据……将……分为……”，再以“但在求解过程中，发现……可通过旋转/交换重合”给出压缩依据；若旧方法需大量分类方程，先让负担可见，再用“注意到[具体不变量]”切换到轨迹、对称或等价构造。分布式/无源定位题可写“由于各对象信息不共享，故局部目标只由……建立；全局误差仅用于事后比较，并未进入……的调整”。每个“故”前有事实，后有实际动作。}
+  {\MCMAnalysisLength；每问一段或一小节，先分析再给技术路线。}
+  {在本节末放一张总流程图；流程节点应与代码模块和章节一致。}
+  {明确为什么该模型适用、为什么不选近邻方法，以及验证将如何进行；让段落保留真实选择，例如“现有两种方法可以选择……，但……，故舍弃……”；便利假设先代入容量、数量和需求事实，若产生矛盾则当场修正；集总 ODE 与 PDE 的选择用无量纲数、温差上界或对照误差说明；若原问题含多种相对次序或拓扑，先列完整情形，再以可验证的旋转、平移、交换或同构关系合并等价类，保留分支须覆盖原情形；若解析分区已能求解但分类负担过重，保留旧方法的可行性与负担，再写不变量、新构造和被消去的计算，不用“为简化计算”跳过取舍；复合 B 题逐层列信息集、状态、动作、目标和接口；局部信息模型须列可见量、禁用量、局部目标、全局评价及其不进入决策的理由；预处理除了给误差界，还要写搜索空间、函数评估或通信次数的变化；数据--优化混合题按“整理数据—同口径比较—指出缺口—增加结构—优化—补充实验”展开；C/混合题画出原字段、特征、标签、划分、概率与决策的谱系；缺失值处理须按字段语义分别裁决，并写出受影响的样本编号和分析范围；同一已知条件仍多值且采样不能代表整体时，允许明确拒绝猜测性填补；检验方法须在期望计数、样本独立性等前提通过后使用，不满足时写出校正或替代方法；前问证据与后问聚类可以双向复核，但须分别说明赋义依据和反向裁决；不能直接观测的业务概念按“概念—代理指标—方向—归一化/权重—解释”落地；每项评价指标写清统计量、排除的零值/异常、方向和后续用途；客观权重若使业务关键指标异常偏低，先点名冲突，再限定修正幅度并做一致性检查；拒绝历史均值等便利口径时至少写出它丢失的两类信息；固定权重或统一规则若会造成某一时段局部失配，先点名失败周次和缺口，再说明权重怎样随状态更新；前视/后视窗口须由连续淡季、峰谷或状态相关长度确定；业务后果有方向性差异时，先把“哪一种后果更重”写成函数的符号、单调性和曲率条件，再构造分段损失；观察到周期或分组规律后允许不纳模，但须说明异常尖峰、历史策略失效或任务口径改变等具体理由；动态模型的初值不能习惯性置零，先检查同位置历史状态，逐期拆分前再判断该过程是否有记忆；候选集裁剪同时给尾部数量级、头部覆盖率和扩大范围的代价；若分问目标逆转，重新判断低排名候选是否恢复贡献，不照搬上一问范围；沿用前问模型时逐项核对输入、输出和目标，说明复用、修改、删除与新增模块；若新表已经直接给出状态或标签，明写与旧表语义的差异并删除重复估计步骤；结构转化后复用还须列转化规则、分组、接口保持量和不能沿用的特殊对象；复用前集中检查共线、共圆、不可辨识等退化，写明检测条件和修复动作；B026 型实验题还要把每次新增实验绑定到一个前文缺口，不笼统写“用于验证模型”；少样本高阶拟合同时报告样本数、自由度与外推用途，不能把插值点上的 $R^2=1$ 直接写成整体最优；方法切换保留旧方案及其具体不足；新增实验先区分探索未知区域还是确认预测读数；控制变量比较按“保持条件—唯一改变量—比较组—响应 A—响应 B—局部结论”逐项填实，不能只写方法名称。}
+  {用“采用某算法”代替问题分析；模型与数据条件不匹配；各问互不衔接；把标准算法改名却不给新增结构、消融和同口径基线。}
+% 正文写在此处。
+
+\ifmcmguidance
+  \begin{quote}\small
+  \textbf{A0175 型人类行文补充：}程序分支写成“若第一阻断成立，则不再考虑后续；若不成立，再检验第二、第三条件”，使文字顺序与控制流一致。全对象两两比较负担过重时，先给计算量，再由物理局部性限定距离阈值和邻接候选。步长序列只在相邻增益明显趋缓时写“认为结果接近稳定”；基线扫描显示变量影响较弱时，列明扫描范围和变化量后再冻结该变量。
+  \end{quote}
+\fi
+
+\ifmcmguidance
+  \begin{quote}\small
+  \textbf{A092 型人类行文补充：}先把题面数据代入已有模型，逐项列出可直接得到的量，再把“唯一不能直接求得”的随机量交给抽样估计。序号或时间曲线只负责提出空间猜想，另选代表日期、时刻或工况绘制二维分布复核；沿两个方向扰动设施时，若一轴关于原点近似对称且跨时段影响抵消，才冻结该轴。每个“我们由此推测”“因此为了简化模型”后都应紧跟复核动作或变量处置。
+  \end{quote}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.5pt}
+    \caption{直接量、唯一剩余量与近似接口表（空间/概率题按需填写）}
+    \label{tab:direct-remaining-quantity-guide}
+    \begin{tabular}{p{1.7cm}p{2.3cm}p{1.9cm}p{2.2cm}p{2.4cm}p{2.1cm}}
+      \toprule
+      目标量 & 可直接得到的分量 & 唯一剩余量 & 不能直接求的原因 & 估计动作与预算 & 近似边界 \\
+      \midrule
+      效率、概率或期望 & 逐项列公式与题面数据 & 只保留确实未闭合的一项 & 随机方向、随机位置或高维积分 & 随机对象、命中事件、样本数和种子 & 置信区间、加密或重复结果 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.5pt}
+    \caption{空间猜想、方向扰动与变量裁剪表（空间优化题按需填写）}
+    \label{tab:spatial-hypothesis-direction-guide}
+    \begin{tabular}{p{1.9cm}p{2.1cm}p{2.0cm}p{2.25cm}p{2.45cm}p{2.1cm}}
+      \toprule
+      初步曲线/扰动 & 观察到的结构 & 暂存猜想 & 代表截面或对照 & 对称、抵消与幅度证据 & 设计动作 \\
+      \midrule
+      环序号、时刻或两方向试算 & 高值区、对称轴、正负变化 & 设施或对象应偏向何处 & 日期、时刻、工况和二维图 & 同口径指标及跨时段汇总 & 冻结坐标、保留方向或限定区间 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\fi
+
+\ifmcmguidance
+  \begin{quote}\small
+  \textbf{B226 型人类行文补充：}三维问题若能复用二维模型，先用“由问题一知，只要已知……和……，就可以求解……”点名两个缺失量，再分别推导并回代；不要把复用包装成新的“综合框架”。几何推导先用“我们记……为面 I，……为面 II”命名对象，再写法向量和叉乘。作业规范可以说明常用方向，但当最优性可证明时，应另列命题并比较同长度候选的覆盖面积。
+  \end{quote}
+  \begin{quote}\small
+  \textbf{B311 型人类行文补充：}题面术语确有两种理解时，保留两个候选定义，固定同一数值例，用能够区分二者的图形或实测量裁决；不要用“经分析”跳过舍弃过程。比较前后分问时列出不变结构、改变量和被替换的函数输入。参数虽小时，先计算它在完整作业尺度上的累计量，并比较两端可行区间；方向先由题内数值决定，规范只作后置印证。
+  \end{quote}
+  \begin{quote}\small
+  \textbf{B477 型人类行文补充：}旧定义在新几何中出现反直觉排序时，固定共同输入，写清可观察矛盾和受影响的量，只修正该量；二维关系升维前先证明新增输入由位置和航向唯一确定。若准备换方法，先把旧方案的精度、失效位置、误差累积和计算负担逐项写实，再列新方法交付给下游的深度、梯度、坡度、覆宽等接口。初始搜索出现起点依赖或漏测时保留失败状态，按实际原因分区且只修失败区，不把局部返工改写成从一开始就设计好的全局框架。
+  \end{quote}
+  \begin{quote}\small
+  \textbf{C050 型人类行文补充：}数据侧写中的每张图都要回答它支持哪个变量、时间窗或约束判断；对象过多时先写代表选择规则，再展示代表结果并指向全量附件。回归系数要译回 kg、元、天等业务单位，人工特征按“对象—计算口径—代理语义—下游用途”说明。现有附件能够量化的结论与待采外部数据分开写；代理量有多种解释时，保留竞争机制，写出追加证据和分情形动作。
+  \end{quote}
+  \begin{quote}\small
+  \textbf{C126 型人类行文补充：}方法切换前先写原始数据的分布、零值、时间结构和计算负担，再交代转换规则、新口径与下游模型；不要从“数据复杂”直接跳到算法名。时间序列阶数或窗口要由保鲜、余货或运营时滞授权。检验表先说明各行列怎样读，再给限定到当前样本和时窗的结论。负预测或零值若对应明确经营状态，先译成余货、折价或不补货动作。主路线可用另一条独立规则作有限核对；预测进入优化时逐项写明中间量、上期状态、单位和约束位置。
+  \end{quote}
+  \begin{quote}\small
+  \textbf{C228 型人类行文补充：}开放任务先写题目没有规定探究方向，再把对象拆成能互相补足的观察面，并说明每一面回答什么；不要以“从多个维度深入分析”代替聚焦。候选模型若效果不佳，保留候选、指标和换路理由；数据缺失、时窗太短、无趋势或近似随机时，也允许主动降为均值或业务规则并限定时窗。求解器的变化要从变量域和目标结构推出。预测经价格弹性等响应关系修正后，逐项交代进入收入、成本、损耗和约束的位置；效果比较先说明同期基线为何可比，补采建议从现有模型不能解释的关系中长出。
+  \end{quote}
+  \begin{quote}\small
+  \textbf{A016 型人类行文补充：}几何方程存在多根时，不写“取合理解”，而要先列构件的前后顺序、方向和连续性，再说明为何保留最近可行根。碰撞或越界搜索先由轨迹继承、结构重复或单调性缩小最早事件对象，给出不漏早发事件的理由；数值求精按“前进—越界—回退—缩步—停止”写，并把停止阈值转成误差界。若相切、守恒或比例关系使目标量固定，应先证明在当前约束下没有优化自由度，再计算题设指定方案。复用前问时逐项列出方向、符号、切向量和边界变化；整体缩放前先证明局部倍率能够沿状态链传递。
+  \end{quote}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.2pt}
+    \caption{物理条件选根与局部递推表（几何/运动学题填写）}
+    \label{tab:physical-root-selection-guide}
+    \begin{tabular}{p{1.9cm}p{2.1cm}p{2.15cm}p{2.2cm}p{2.3cm}p{2.3cm}}
+      \toprule
+      已知起点/状态 & 数学方程与候选根 & 顺序/方向硬条件 & 连续性或局部幅度 & 保留根及物理解释 & 递推输出与下一接口 \\
+      \midrule
+      第 $i$ 个构件的位置和速度 & 定长、相交或闭合方程 & 前后次序、单调、同侧/异侧 & 相邻角度、位移或时间连续 & 根编号、数值范围和对应构件 & 第 $i+1$ 个状态及循环终点 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.2pt}
+    \caption{首次事件对象缩域与分支消去表（碰撞/失效题填写）}
+    \label{tab:first-event-reduction-guide}
+    \begin{tabular}{p{2.0cm}p{2.15cm}p{2.2cm}p{2.35cm}p{2.25cm}p{2.1cm}}
+      \toprule
+      全部候选事件 & 结构重复/轨迹关系 & 最早事件为何在此 & 保留对象、点、边或区间 & 被删除分支及时间理由 & 判定式与首次触发动作 \\
+      \midrule
+      碰撞、越界、首次失效 & 后件继承前件轨迹等 & 单调、先后或邻接证明 & 龙头/前若干构件等具体集合 & 只会在首次事件后发生 & 投影、距离、阈值；触发即停 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.2pt}
+    \caption{越界回退、缩步与误差界表（数值搜索填写）}
+    \label{tab:rollback-error-bound-guide}
+    \begin{tabular}{p{1.85cm}p{2.1cm}p{2.2cm}p{2.2cm}p{2.15cm}p{2.45cm}}
+      \toprule
+      搜索变量/初值 & 初始范围与步长 & 继续/越界判据 & 回退与缩步规则 & 停止阈值 & 误差上界、首个不可行点与产物 \\
+      \midrule
+      时间、角度或参数 & 单位、上下界和粗步长 & 方程残差、事件或约束 & 退回上一步，步长乘指定比例 & 最小步长/区间宽度 & 阈值如何控制物理误差及结果表 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.0pt}
+    \caption{固定量证明、跨区复用与齐次缩放表（后续分问填写）}
+    \label{tab:invariant-homogeneity-guide}
+    \begin{tabular}{p{1.85cm}p{2.1cm}p{2.15cm}p{2.25cm}p{2.15cm}p{2.45cm}}
+      \toprule
+      分问目标 & 相切/守恒/比例依据 & 是否仍有自由度 & 跨区改变项与不变量 & 局部倍率传递式 & 结论、适用约束与复用产物 \\
+      \midrule
+      缩短、反向或限速 & 式号、辅助线或守恒量 & 固定则先证明不可优化 & 符号、方向、切向量、边界 & 从相邻状态证明 $k$ 倍关系 & 指定方案或整体缩放及边界 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.2pt}
+    \caption{开放任务观察面聚焦表（探索性分问填写）}
+    \label{tab:open-question-focus-guide}
+    \begin{tabular}{p{1.8cm}p{2.15cm}p{2.3cm}p{2.3cm}p{2.25cm}p{2.2cm}}
+      \toprule
+      题目未指定项 & 观察对象 & 观察面及互补关系 & 各自回答的问题 & 所用数据/图表 & 进入后文的判断 \\
+      \midrule
+      探究方向、评价口径或补采范围 & 品类、单品、时段或关系 & 时间/分布/关联，主体/对象等 & 周期、模式、作用或差异 & 字段、窗口、统计量和图号 & 预测窗、候选集、假设或约束 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.2pt}
+    \caption{候选模型试算与换路理由表（选型段填写）}
+    \label{tab:candidate-model-switch-guide}
+    \begin{tabular}{p{2.0cm}p{2.15cm}p{2.15cm}p{2.35cm}p{2.25cm}p{2.1cm}}
+      \toprule
+      候选方法 & 同源输入与预算 & 实际指标/现象 & 具体不足 & 改用方法及针对点 & 保留的比较证据 \\
+      \midrule
+      基线、统计或学习模型 & 同一时间窗、划分和指标 & 误差、残差、趋势或稳定性 & 在何对象/区间失效 & 新方法处理何结构 & 表号、图号、日志或附件 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.2pt}
+    \caption{数据能力与方法降级表（短序列/缺失对象填写）}
+    \label{tab:data-capability-downgrade-guide}
+    \begin{tabular}{p{2.1cm}p{2.2cm}p{2.2cm}p{2.35cm}p{2.15cm}p{2.1cm}}
+      \toprule
+      对象与可用时窗 & 缺失/趋势/随机性观察 & 复杂方法所需条件 & 当前不满足处 & 降级估计或规则 & 结论时窗与风险 \\
+      \midrule
+      单品、主体或稀疏序列 & 缺口、长度、波动和结构 & 样本量、稳定趋势或外生量 & 可辨识、训练或外推困难 & 均值、加权平均或业务规则 & 只限当前窗口并列补采 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.2pt}
+    \caption{变量结构到求解器选择表（跨分问优化填写）}
+    \label{tab:variable-structure-solver-guide}
+    \begin{tabular}{p{2.0cm}p{2.1cm}p{2.2cm}p{2.35cm}p{2.25cm}p{2.2cm}}
+      \toprule
+      分问/旧模型 & 新增决策变量 & 变量域与联动 & 目标和约束变化 & 编码/求解器及理由 & 输出与可行性检查 \\
+      \midrule
+      单目标连续模型 & 选择标志、数量或价格 & $0/1$、连续及上下界联动 & 双目标、陈列或品种数限制 & 混合编码、Pareto 或精确法 & 候选解、偏好选择和残差 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.2pt}
+    \caption{方案效果与同期历史基线表（结果段填写）}
+    \label{tab:historical-baseline-comparison-guide}
+    \begin{tabular}{p{2.15cm}p{2.2cm}p{2.1cm}p{2.25cm}p{2.3cm}p{2.05cm}}
+      \toprule
+      方案指标与单位 & 基线区间及选择理由 & 同季/同星期/同状态 & 基线统计范围 & 当前结果与有限比较 & 不支持的外推 \\
+      \midrule
+      利润、误差、覆盖或风险 & 日期、对象和经营状态可比 & 固定节律与业务条件 & 均值、分位或区间 & 差值、比例及限定语 & 因果、全年或异场景效果 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.2pt}
+    \caption{模型边界到补充数据表（开放建议段填写）}
+    \label{tab:model-boundary-data-gap-guide}
+    \begin{tabular}{p{2.1cm}p{2.25cm}p{2.3cm}p{2.25cm}p{2.25cm}p{1.9cm}}
+      \toprule
+      当前模型依据 & 尚不能区分的关系 & 所需外部字段 & 采集对象/频率/方式 & 加入后的模型或动作 & 未采集时处理 \\
+      \midrule
+      成本、内部销量或静态属性 & 竞争、预期、偏好或收入机制 & 竞品价、问卷、客流或收入 & 门店、顾客、日/周及数据源 & 定价、需求、分群或情景比较 & 限定结论或保守决策 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.5pt}
+    \caption{数据侧写到决策接口表（C/数据决策题按需填写）}
+    \label{tab:data-profile-decision-interface-guide}
+    \begin{tabular}{p{1.75cm}p{2.2cm}p{2.2cm}p{2.25cm}p{2.25cm}p{2.0cm}}
+      \toprule
+      图表/统计对象 & 数据范围与处理 & 实际观察 & 支持的变量/窗口 & 支持的约束或判断 & 后续模型动作 \\
+      \midrule
+      丰富度、销量、损耗或分布 & 时间、对象、负值/缺失处理 & 方向、波动、异常和数量级 & 预测窗口、候选范围或特征 & 硬约束、阈值或相关假设 & 保留、剔除、分组、预测或优化 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.2pt}
+    \caption{数据病态与方法切换接口表（数据模型按需填写）}
+    \label{tab:data-pathology-route-guide}
+    \begin{tabular}{p{1.7cm}p{2.15cm}p{2.2cm}p{2.2cm}p{2.25cm}p{2.25cm}}
+      \toprule
+      数据对象 & 可核观察 & 原口径的具体困难 & 转换规则及新口径 & 下游模型与设置 & 信息损失/适用边界 \\
+      \midrule
+      日序列、面板或成分数据 & 分布、零值、周期、长度 & 偏差、不可识别或计算负担 & 同期平均、分层、变换或删步 & 输入字段、阶数、迭代/窗口 & 被平滑结构和不可外推范围 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.2pt}
+    \caption{业务时间尺度到模型阶数表（时序/动态题按需填写）}
+    \label{tab:business-memory-model-order-guide}
+    \begin{tabular}{p{2.05cm}p{2.2cm}p{2.05cm}p{2.1cm}p{2.3cm}p{2.25cm}}
+      \toprule
+      可观察业务事实 & 状态能延续多久 & 对应记忆变量 & 阶数/窗口及理由 & 数据诊断或对照 & 结论适用时窗 \\
+      \midrule
+      保鲜、余货、运输或库存时滞 & 天、周或事件周期 & 滞后销量、库存或状态 & VAR 阶数、滚动窗、前视窗 & 信息准则、残差或业务回代 & 当前品类、季节和样本期 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.2pt}
+    \caption{检验表导读与限定结论表（结果表前后填写）}
+    \label{tab:diagnostic-table-reading-guide}
+    \begin{tabular}{p{1.7cm}p{2.15cm}p{2.0cm}p{2.3cm}p{2.35cm}p{2.45cm}}
+      \toprule
+      表行/列 & 统计量或诊断图 & 各自回答的问题 & 具体读数与阈值 & 合并后的裁决 & 不支持的强结论 \\
+      \midrule
+      估计、标准差、检验量 & 轨迹、相关、AIC/SC、$R^2$/F & 收敛、拟合、简洁或显著性 & 数值、方向、衰减或门限 & 可用于何任务和多长时窗 & 外部正确性、全局稳健或因果 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.2pt}
+    \caption{异常数值的业务语义与决策动作表（按需填写）}
+    \label{tab:numeric-business-semantics-guide}
+    \begin{tabular}{p{1.75cm}p{2.1cm}p{2.4cm}p{2.2cm}p{2.4cm}p{2.3cm}}
+      \toprule
+      数值形态 & 数据/模型口径 & 可观察业务状态 & 直接决策动作 & 保留、截断或转换规则 & 所需复核证据 \\
+      \midrule
+      负数、零值或极端量 & 预测、退货、库存或损耗 & 余货、折价、缺货或停补 & 补货、定价、清仓或暂缓 & 按状态处理而非统一删值 & 销售、退货、库存和时点记录 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.2pt}
+    \caption{主路线与独立规则交叉核对表（筛选题按需填写）}
+    \label{tab:independent-screening-crosscheck-guide}
+    \begin{tabular}{p{2.05cm}p{2.15cm}p{2.15cm}p{2.25cm}p{2.25cm}p{2.35cm}}
+      \toprule
+      主路线及输入 & 主路线输出 & 独立规则及独立性 & 规则输出 & 一致与差异对象 & 允许写出的结论 \\
+      \midrule
+      预测、分类或优化筛选 & 名单、排序或阈值 & 频率、业务门槛或另一数据口径 & 同口径名单或状态 & 交集、差集及差异原因 & 有限一致/待核，不写独立验证 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.2pt}
+    \caption{预测--优化与状态传递接口表（动态决策题填写）}
+    \label{tab:forecast-optimization-state-interface-guide}
+    \begin{tabular}{p{1.85cm}p{1.8cm}p{2.25cm}p{2.25cm}p{2.35cm}p{2.6cm}}
+      \toprule
+      上游输出 & 单位/索引 & 进入目标或约束的位置 & 上期状态/近期统计 & 业务下限与边界 & 下游决策及回代检查 \\
+      \midrule
+      销量、需求或风险预测 & 对象、日期和单位 & 收入、需求、容量或风险项 & 余货、库存、均值或时滞 & 陈列、损耗、预算和可售范围 & 补货/定价/分配及单位、可行性核对 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.5pt}
+    \caption{代表对象选择与全量证据去向表（对象较多时填写）}
+    \label{tab:representative-selection-appendix-guide}
+    \begin{tabular}{p{1.9cm}p{2.35cm}p{2.05cm}p{2.25cm}p{2.1cm}p{2.25cm}}
+      \toprule
+      对象全集 & 排序指标与阈值 & 代表规则 & 正文展示内容 & 全量附件位置 & 规则适用边界 \\
+      \midrule
+      品类、单品、样本或时点 & 总量、极值、分组及最低门槛 & 每组高/低、中心或边界代表 & 代表图、关键表和解释 & 文件名、表号或代码入口 & 不能代表的尾部与异常对象 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.5pt}
+    \caption{系数业务解释与人工特征语义表（回归/评价题按需填写）}
+    \label{tab:coefficient-feature-semantics-guide}
+    \begin{tabular}{p{1.65cm}p{1.75cm}p{1.9cm}p{2.4cm}p{2.15cm}p{2.45cm}}
+      \toprule
+      系数/特征 & 对象 & 计算口径 & 业务单位或代理语义 & 方向及变化量 & 下游用途与限制 \\
+      \midrule
+      回归斜率 & 自变量与因变量 & 缩放、窗口和基准 & 每 1 kg、元、天等 & 增加/减少的实际数值 & 定价、预测或决策解释 \\
+      构造特征 & 样本、时点或类别 & 计数、均值、节气/事件窗口 & 所刻画的丰富度、季节或事件效应 & 增大/减小代表什么 & 关联、分类或优化入口 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.5pt}
+    \caption{现有数据与外部证据分流表（补充数据题按需填写）}
+    \label{tab:current-external-evidence-guide}
+    \begin{tabular}{p{2.0cm}p{2.65cm}p{2.35cm}p{2.25cm}p{2.25cm}p{1.8cm}}
+      \toprule
+      信息项 & 当前附件可支持的判断 & 尚未覆盖的缺口 & 外部采集方式 & 预定模型/决策用途 & 证据状态 \\
+      \midrule
+      销量、价格、客流、竞品等 & 只写已计算的数值或关系 & 不能区分的机制或对象 & 日志、问卷、传感器或公开数据 & 预测、定价、库存或促销 & 已量化/待采/未确认 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.5pt}
+    \caption{代理量竞争机制与分情形动作表（代理解释不唯一时填写）}
+    \label{tab:proxy-competing-mechanism-guide}
+    \begin{tabular}{p{1.75cm}p{2.3cm}p{2.3cm}p{2.65cm}p{2.45cm}p{1.85cm}}
+      \toprule
+      代理量及读数 & 竞争机制 A & 竞争机制 B & 可区分的追加证据 & 分情形决策动作 & 未决时动作 \\
+      \midrule
+      频率、评分、指数等 & 正向业务解释及条件 & 反向/替代解释及条件 & 销量、反馈、竞品、时效等 & A 时如何做；B 时如何做 & 暂缓、保守或补采 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.5pt}
+    \caption{竞争定义与可观察量裁决表（题意确有歧义时填写）}
+    \label{tab:competing-definition-guide}
+    \begin{tabular}{p{1.9cm}p{2.25cm}p{2.25cm}p{2.0cm}p{2.7cm}p{2.3cm}}
+      \toprule
+      题面原词 & 候选定义 A & 候选定义 B & 共同输入/数值例 & 可区分图形或实测量 & 保留、舍弃及理由 \\
+      \midrule
+      比例、边界或状态 & 写清分子、分母和对象 & 写清另一口径 & 两模型完全同源 & 只有定义差异会改变的观察 & 证据指向哪一口径 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.5pt}
+    \caption{旧模型复用与两个缺失量归约表（三维几何题按需填写）}
+    \label{tab:two-missing-quantities-guide}
+    \begin{tabular}{p{2.1cm}p{2.0cm}p{2.0cm}p{2.25cm}p{2.15cm}p{2.3cm}}
+      \toprule
+      旧模型及输出 & 缺失量 A & 缺失量 B & 各自推导工具 & 复用接口 & 最终输出与适用条件 \\
+      \midrule
+      覆盖、受力或效率模型 & 水深、距离或状态 & 夹角、边界或方向 & 几何、向量或守恒关系 & 原模型所需变量与单位 & 回代结果及不再成立的条件 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.5pt}
+    \caption{作业规范、命题与同条件证明表（方向选择题按需填写）}
+    \label{tab:norm-proof-guide}
+    \begin{tabular}{p{2.15cm}p{2.35cm}p{2.25cm}p{2.25cm}p{2.25cm}p{2.0cm}}
+      \toprule
+      规范及其作用 & 待证命题 & 同长度比较对象 & 比较指标 & 证明结论 & 适用条件 \\
+      \midrule
+      只作方向选择动机 & 平行/垂直或其他最优性 & 梯形、矩形或候选轨迹 & 覆盖面积、长度或代价 & 哪一方向占优及原因 & 地形、边界和等长口径 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\fi
+
+\ifmcmguidance
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{新增实验的证据缺口表（B 类实验题按需填写）}
+    \label{tab:evidence-gap-experiments-guide}
+    \begin{tabular}{p{1.75cm}p{2.05cm}p{2.1cm}p{2.0cm}p{2.15cm}p{1.55cm}}
+      \toprule
+      前文缺口 & 保持条件 & 改变因素 & 新增观测 & 裁决用途 & 证据角色 \\
+      \midrule
+      缺失组合/水平 & 题面规定的其余条件 & 缺失的一个因素或组合 & 转化率、选择性或成本 & 判断排序/最优点是否覆盖该格 & 探索 \\
+      未观测区间 & 采样起点与终点口径 & 增加一个时间/温度区间 & 峰值、平台或转折读数 & 判定曲线形态与模型边界 & 探索 \\
+      预测点确认 & 配方、温度或进料量 & 按模型给出的候选点设定 & 实测值、预测值及误差 & 判断误差是否低于预设阈值 & 确认 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{控制变量双响应读图表（B 类实验题按需填写）}
+    \label{tab:controlled-dual-response-guide}
+    \begin{tabular}{p{1.9cm}p{2.2cm}p{1.8cm}p{2.1cm}p{2.1cm}p{2.3cm}}
+      \toprule
+      保持条件 & 唯一改变量及范围 & 比较组 & 响应 A 读数 & 响应 B 读数 & 局部结论及适用域 \\
+      \midrule
+      逐项列出相同条件 & 因素、水平或区间 & 组 A/组 B & 同温度/时点数值与趋势 & 同温度/时点数值与趋势 & 只覆盖本组与采样范围 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{动态规则的失败、窗口与修正表（C/动态题按需填写）}
+    \label{tab:dynamic-rule-revision-guide}
+    \begin{tabular}{p{2.15cm}p{2.55cm}p{2.35cm}p{2.2cm}p{3.2cm}}
+      \toprule
+      基线规则 & 具体失败状态 & 数据证据与时点 & 窗口/权重更新 & 更新后的可行性裁决 \\
+      \midrule
+      固定权重/统一时间窗 & 总体达标但某周缺货等 & 连续淡季、峰谷或缺口数值 & 按缺口重赋权；前视/后视长度 & 缺口和、硬约束或接受阈值 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{观察、纳模与范围取舍表（C/数据--优化题按需填写）}
+    \label{tab:observation-modeling-scope-guide}
+    \begin{tabular}{p{2.15cm}p{2.5cm}p{1.35cm}p{2.8cm}p{3.25cm}}
+      \toprule
+      观察到的规律/差异 & 业务后果或可能成因 & 纳入/舍弃 & 数量证据与适用范围 & 数学动作 \\
+      \midrule
+      短缺与超供后果不对称 & 停产损失重于库存增加 & 纳入 & 给出方向、阈值和曲率依据 & 列函数条件并构造分段损失 \\
+      周期/非周期波动 & 尖峰干扰；新方案改变历史机制 & 舍弃 & 给尾部量级、覆盖率和任务边界 & 明写舍弃理由，不静默忽略 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{评价指标的数据操作与权重修正表（C/评价题按需填写）}
+    \label{tab:indicator-operation-weight-guide}
+    \begin{tabular}{p{1.65cm}p{2.55cm}p{2.25cm}p{1.35cm}p{2.45cm}p{2.55cm}}
+      \toprule
+      指标 & 原字段与计算操作 & 零值/异常/时间窗处理 & 方向 & 客观权重异常 & 修正范围与一致性门 \\
+      \midrule
+      逐项填写 & 分子、分母、聚合和对数/方差等 & 哪些记录删去及原因 & 成本/效益 & 点名哪个指标与业务冲突 & 有限修正依据、CR 或同类判据 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{目标变化与候选范围重审表（跨分问题按需填写）}
+    \label{tab:objective-reversal-scope-guide}
+    \begin{tabular}{p{2.0cm}p{2.25cm}p{2.35cm}p{2.35cm}p{3.65cm}}
+      \toprule
+      分问与目标 & 原候选集及依据 & 新目标改变了什么 & 新候选集与停止条件 & 低排名对象为何重新有用/仍应排除 \\
+      \midrule
+      成本损耗最小/产能最大等 & 头部数量、覆盖率与尾部量级 & 目标、约束或偏好方向 & 扩围数量、容量或资源耗尽条件 & 给业务贡献与计算代价，不写“沿用上问” \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{完整分类与等价分支压缩表（几何/分支题按需填写）}
+    \label{tab:case-symmetry-reduction-guide}
+    \begin{tabular}{p{2.0cm}p{2.2cm}p{2.55cm}p{2.0cm}p{2.1cm}p{2.15cm}}
+      \toprule
+      原始情形数与划分依据 & 等价情形 & 旋转/交换/同构映射 & 保留分支 & 适用条件 & 覆盖与边界检查 \\
+      \midrule
+      先列完整次序、区域或拓扑 & 点名可重合的类 & 写清变换前后对象对应 & 给模型/公式编号 & 角度、方向、编号等条件 & 每个原始情形均映射且特殊类另列 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{旧方法负担与几何换模表（定位/轨迹题按需填写）}
+    \label{tab:method-burden-switch-guide}
+    \begin{tabular}{p{2.1cm}p{2.8cm}p{2.45cm}p{2.75cm}p{2.55cm}}
+      \toprule
+      旧方法及可行性 & 可见分类/联立负担 & 保留的不变量 & 新构造与求解动作 & 被消去的工作量与边界 \\
+      \midrule
+      分区方程/逐类讨论 & 区域、符号或分支怎样增长 & 定弦定角、对称、守恒等 & 轨迹交点、对称点或统一坐标 & 少解哪些方程；何时仍需旧分支 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{误差边界的证明台阶表（身份/区间判定按需填写）}
+    \label{tab:error-bound-proof-guide}
+    \begin{tabular}{p{2.15cm}p{2.85cm}p{2.15cm}p{2.25cm}p{3.25cm}}
+      \toprule
+      具体对象与误差例 & 候选轨迹/扇形/区域 & 端点或单调性 & 关键量变化界 & 区间交叠、穷举与最终裁决 \\
+      \midrule
+      给编号、初值和误差量 & 说明为何只能落在该交集 & 列端点及其作用 & 写上下界和单位 & 各候选区间是否相交；据此识别或保留歧义 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{局部信息与事后全局评价表（分布式/无源定位题按需填写）}
+    \label{tab:local-global-information-guide}
+    \begin{tabular}{p{2.2cm}p{2.45cm}p{2.25cm}p{2.7cm}p{3.0cm}}
+      \toprule
+      对象与可见信息 & 局部目标及动作 & 明确禁用的信息 & 全局评价量与计算时点 & 为何不违反信息边界 \\
+      \midrule
+      接收机自身角度/状态 & 只由本机观测求移动量 & 他机观测、全局真实坐标等 & 仿真或执行结束后统一汇总 & 评价量未进入任何对象的决策 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{预处理误差界与计算收益表（按需填写）}
+    \label{tab:preprocess-bound-cost-guide}
+    \begin{tabular}{p{2.25cm}p{2.45cm}p{2.45cm}p{2.65cm}p{2.85cm}}
+      \toprule
+      原始误差/搜索域 & 预处理观测与动作 & 证明后的误差界 & 搜索空间或评估次数变化 & 通信/计算意义与适用条件 \\
+      \midrule
+      给题设范围与单位 & 写可用信息和公式 & 给上下界及证明位置 & 同一精度下的候选数变化 & 只说明可计算的节省，不作空泛效率结论 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{几何引理到实际编队流程映射表（按需填写）}
+    \label{tab:lemma-formation-assembly-guide}
+    \begin{tabular}{p{1.35cm}p{2.0cm}p{2.0cm}p{2.5cm}p{2.4cm}p{2.7cm}}
+      \toprule
+      引理 & 固定点/基准 & 调整点 & 控制角、距离或比例 & 几何目标 & 对应对象组与阶段输出 \\
+      \midrule
+      引理 1/2/3 & 逐点列明 & 逐点列明 & 可观测控制量与容差 & 等边、定比分点、中心等 & 映射到实际编号并交给下一阶段 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{缺失字段语义与处理裁决表（C/数据题按需填写）}
+    \label{tab:missing-semantics-guide}
+    \begin{tabular}{p{1.7cm}p{2.0cm}p{2.4cm}p{2.35cm}p{2.15cm}p{2.35cm}}
+      \toprule
+      字段/样本 & 题面中的空白语义 & 匹配候选与参考质量证据 & 处理动作 & 受影响编号 & 后续分析范围 \\
+      \midrule
+      成分/状态等 & 未检出、近似零、未知或未采样 & 给检测限、表号、组别和采样范围 & 乘法替换、剔除、拒绝填补或局部忽略 & 逐项列出 & 哪些统计仍用、哪些不再使用 \\
+      同一颜色字段 & 定性缺失 & 列匹配条件、候选编号及化学样品参考质量 & 按证据分流热卡、众数或不填补 & 逐项列出 & 写明每种动作影响的分析 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{统计检验前提与方法分流表（按实际检验填写）}
+    \label{tab:test-prerequisite-routing-guide}
+    \begin{tabular}{p{2.0cm}p{2.45cm}p{1.8cm}p{2.1cm}p{1.6cm}p{3.1cm}}
+      \toprule
+      变量关系/分组 & 期望计数、独立性等前提 & 是否满足 & 采用检验/校正 & 统计量/$p$ & 结论及适用范围 \\
+      \midrule
+      类型--状态等 & 引用列联表或前提统计 & 是/否 & Pearson、Yates 或替代法 & 实际数值 & 只回答该变量关系，不扩成因果 \\
+      两类相关矩阵 & 对称矩阵先取上三角；同一成分对一一对应 & 是/否 & 配对 Wilcoxon 或有据替代 & 实际数值 & 说明不拒绝/拒绝原假设及范围 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{工程简化与二值判定依据表（A/几何题按需填写）}
+    \label{tab:engineering-simplification-guide}
+    \begin{tabular}{p{1.75cm}p{2.25cm}p{2.1cm}p{2.35cm}p{2.2cm}p{2.15cm}}
+      \toprule
+      简化对象 & 精确计算负担 & 数量/尺度证据 & 对称、统计或误差依据 & 简化判据 & 代码中的二值/数值动作 \\
+      \midrule
+      阴影边界、碰撞或覆盖 & 逐对象姿态/边界求交的复杂度 & 完全覆盖对象占比、边界带宽或尺度比 & 中心对称、统计补偿或代理误差界 & 中心/代表点是否落入区域 & 有效/无效、遮挡/不遮挡，并保存近似边界 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{空间证据到选址与布场动作表（A/布局题按需填写）}
+    \label{tab:spatial-evidence-layout-guide}
+    \begin{tabular}{p{1.55cm}p{2.25cm}p{2.15cm}p{2.35cm}p{2.25cm}p{2.25cm}}
+      \toprule
+      图/空间量 & 读出的方向或区域 & 设施/对象布置动作 & 变量方向与搜索区间 & 硬约束及几何代理 & 后续同口径验证 \\
+      \midrule
+      效率云图、热区或方向场 & 明确高值方位和条件 & 镜面/节点集中；中心或塔反向移动 & 给坐标轴、符号和上下界 & 最小距离、特征直径、分区/分层规则 & 用相同效率、覆盖或输出指标比较策略 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.5pt}
+    \caption{固定变量、快速计算核与一维搜索表（连续/空间优化题按需填写）}
+    \label{tab:fixed-fast-kernel-search-guide}
+    \begin{tabular}{p{2.0cm}p{2.35cm}p{2.45cm}p{2.35cm}p{2.35cm}p{2.1cm}}
+      \toprule
+      原决策向量 & 本轮固定项及依据 & 快速核、基准与偏差 & 保留变量及响应形态 & 搜索范围、方法与停止 & 最终复算口径 \\
+      \midrule
+      位置、尺寸、间距、高度等 & 前问结果、等式消元或工程约束；逐项列值 & 高/低分辨率、同输入基准值、相对偏差、仅用于何阶段 & 只开放一个变量；单调、单峰或无规则 & 三分、边界或局部搜索；给区间更新和容差 & 以展示变量代回高精度核，复算目标和约束 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.5pt}
+    \caption{结构预言式模型检验表（机理/空间题按需填写）}
+    \label{tab:structural-prediction-validation-guide}
+    \begin{tabular}{p{2.15cm}p{2.2cm}p{2.05cm}p{2.5cm}p{2.35cm}p{2.35cm}}
+      \toprule
+      机理预言 & 原输入结构 & 主动改动 & 预期图形或指标 & 实际观察 & 一致性与结论边界 \\
+      \midrule
+      峰值、对称轴、传播方向或守恒关系应怎样变化 & 原时刻、边界、载荷或空间分布 & 只改变一个可解释输入 & 方向、位置、排序或结构，不先看结果倒推 & 重新计算后的峰值移动、对称或曲线形态 & 一致支持哪一现象；不替代数值精度和外部验证 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.5pt}
+    \caption{条件分支与邻接候选表（光路、碰撞或局部相互作用题按需填写）}
+    \label{tab:conditional-adjacency-guide}
+    \begin{tabular}{p{1.8cm}p{2.35cm}p{2.05cm}p{2.35cm}p{2.45cm}p{1.9cm}}
+      \toprule
+      当前对象/射线 & 第一阻断条件 & 成立时跳过项 & 未成立时继续检查 & 邻接候选及物理依据 & 输出状态 \\
+      \midrule
+      镜面、节点或任务 & 交点、遮挡、越界等判据 & 明写不再计算的效率/碰撞/服务项 & 第二、第三条件及顺序 & 全配对计算量、距离阈值、候选集合 & 保留、阻断或进入后续 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.5pt}
+    \caption{抽样预算与弱变量冻结表（计算预算受限的优化题按需填写）}
+    \label{tab:sampling-budget-freeze-guide}
+    \begin{tabular}{p{1.55cm}p{2.35cm}p{1.7cm}p{2.25cm}p{2.5cm}p{2.4cm}}
+      \toprule
+      阶段 & 抽样对象与比例 & 重复/种子 & 固定基线 & 本阶段变量及范围 & 输出与下一步 \\
+      \midrule
+      粗评估/细复算 & 抽取对象比例和保留样本数 & 重复次数与随机种子 & 固定位置、尺寸或高度 & 扫描变量、步长及变化幅度 & 弱变量冻结；候选进入更高比例复算 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\fi
+
+\section{模型假设}
+\MCMGuide
+  {用最少假设封闭模型，并说明每项假设对方程或约束的影响。}
+  {假设对象；适用范围；定量判据；简化理由；外部来源或标定区间；受影响的方程/参数；替代情景；后续检验或局限。}
+  {一条一义，采用“在……尺度内忽略……，因此……”的可检验表述。}
+  {\MCMAssumptionLength；建议编号列出，避免长段议论。}
+  {通常不插图表；必要时用情景表区分不同假设组。}
+  {每项假设都能在模型中找到作用位置，并能在评价中追溯其风险。}
+  {把题面事实写成假设；用“误差无影响”取消误差分析；只凭“很薄/很小”采用集总或线性近似；假设互相冲突；经验概率、独立性与截断生成机制不一致；声称共同效用却采用零和极小极大；因为当前解“不够好/不够可贷”而静默改写损失对象或风险阈值。}
+\ifmcmguidance
+  \begin{enumerate}[label=\textbf{H\arabic*:},leftmargin=3.5em]
+    \item 示例：在题目规定的时间尺度内忽略次要效应，并说明该简化进入哪一项方程或约束。
+  \end{enumerate}
+\fi
+% 提交正文可在此使用 enumerate 环境逐条写假设。
+
+\section{符号说明}
+\MCMGuide
+  {统一全文符号、单位、索引和变量域，降低跨问阅读成本。}
+  {核心变量；参数；集合/索引；物理单位；取值域；代码变量；向量、矩阵和随机量体例；多人问题的玩家索引、联合状态和信息集；数据问题的实体/时间索引、标签、类别概率和训练/验证/测试角色。}
+  {定义短而精确，同一符号只承担一个含义；局部中间量在首次出现处定义。}
+  {\MCMSymbolLength；优先三线表，按状态量、决策量和参数分组。}
+  {放一张符号表；不把公式或结果表混入本节。}
+  {符号表与公式、代码变量和附件字段可以相互映射；等效速率与真实物性参数明确区分。}
+  {单位缺失；时间常数符号错误；同一符号在换热系数与等效速率间换义；把所有临时变量塞入总表。}
+\ifmcmguidance
+  \begin{table}[H]
+    \centering
+    \caption{主要符号与说明（示例）}
+    \label{tab:symbols}
+    \begin{tabular}{cll}
+      \toprule
+      符号 & 含义 & 单位或取值域 \\
+      \midrule
+      $x_i$ & 第 $i$ 个决策变量 & 依题意填写 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\fi
+% 提交正文可在此放置符号说明三线表。
+
+\section{分问题模型建立与求解}
+\MCMGuide
+  {逐问完成“变量—依据—模型—约束—算法—输出”的可复算闭环。}
+  {模型依据；数学表达；全部约束；硬/软约束分类、松弛依据与不可行状态；题面硬约束--数学约束--代码检查--最大违约/通过率/超限位置/修复代价映射；促动器/控制输入与实际状态位移的关系；坐标正负号、旋转方向与节点标识不变量；模型的提出/推导/实现/求解/验证状态；代理物理量与原任务指标的误差边界；经验系数的来源、标定样本和区间；参数来源；算法流程；极值方向与索引小例；停止条件；复杂度；输出文件；跨分问结果版本/哈希及显式读取；蒙特卡洛样本量/重复/种子/区间；终点残值/回收费率；可行域覆盖；决策时信息集；离线全知上界/在线策略；马尔可夫状态顺序与转移计数；随机与多人层新增维度；数据谱系、标签逐行来源、外层测试冻结、预处理/集成权重拟合域、估计器拟合状态与模型接口、PCA 线性代数语义、评价方法核心算子/列数、概率值域/公式同源、阈值排序方向、有序分类输出域、PD/LGD/EAD 量纲、可选决策的二元--连续联动、风险乘数定义、正文公式--代码--结果--单位--边界样例映射、预测概率到决策的接口、级联误差、外部情景参数来源及解--目标同源。}
+  {先用“注意到/观察到……”交代依据，再用“考虑到……，本文将……”说明取舍；公式后立即解释其几何、物理或决策作用。改进模型先写原模型遗漏及造成的偏差，再写新增变量、交互项或约束；区分模型、离散格式和求解器。A001 型机理段可按“前期瞬态观察—稳定窗口—公式后的物理释义—粗略遍历—遗传算法求精”推进；周期误差须先写判据再说检验，参数扰动须交代误差来源。A022 型机理段先算平衡位高排除浸没边界，再由前问数值结果授权解析解、数值积分或非惯性系近似；图形显示单调后才把参数置于上界，并说明局部加密的对象。A0127 型光学/空间段把点或射线按“A 系—公共系—B 系—平面交点—区域内外”写成连续动作，效率按“全量—无效点损失—接收量—比值”闭合；若直接高精度遍历计算量过大，先用二分或大步长定位变量与初步范围，再缩短步长精化，逐级写清变量、范围、输出和停止精度。A0165 型传播段按“过程分段—几何等价—六近邻栅格—快速核偏差—固定其余变量—单峰响应—三分搜索—冻结旧变量—只开放新自由度”推进；算法须给输入、输出、左右内点比较、区间更新和停止条件，最终候选回到高精度核复算。结构检验则按“机理预言—改变采样时刻或边界—重新计算—峰值/对称结构是否一致”写。B026 的散点模型段可按“趋势—机理上界—预期曲线—模型”推进，实验段按“缺口—保持—改变—观测—裁决”收束。B050 型候选裁决按“候选模型—同口径数值—样本/自由度限制—决定”展开，递进回归按“旧指标—剩余不足—新增结构—新指标”推进；只有旧方法的具体不足写清后，才自然转入另一类方法。B160 型回归段保留“初始模型—诊断图—具体问题—修正动作—修正模型”，模型选择则先由曲线形态排除线性，再说明继续升阶的解释或稳定性边界。B030 型几何段先列完整分类，待发现旋转/交换等价关系后才压缩分支；调用前问时先写“由问题一（·）中的……可知”或“联合式（·）--（·）得”，再说明新输入怎样落入旧接口。B035 型换模段按“旧方法可行—分类/联立负担—注意到具体不变量—新构造—减少的计算”展开；证明段按“数值例—候选区域—端点—变化界—区间裁决”，不以一次仿真替代确定性边界。B086 型局部优化先写信息不共享的边界，再由本机可观测角度建立局部目标；事后全局指标须说明没有进入调整动作。预处理按“误差界—搜索空间—信号/计算次数”解释双重收益；几何引理逐条映射固定点、调整点、控制量和具体机群。C 类评价指标按“统计量定义—方向—业务能力—评价含义—公式”展开；规则筛样先写每条阈值排除什么，再规定同时满足后的统计量。成分数据先闭合再变换，逆变换后重新核对总和；逐对象指标可直接门控后续计算，高指标进入预测，低指标保留不变或基线；异常值若只放大一个距离量，先说明失真机制，再局部压缩该量。R 型聚类用于分变量和选代表量，Q 型聚类用于分样本，不能只写“采用聚类”。固定权重的局部失配、由连续淡季确定的窗口，以及大项预拆—背包—残项补救等求解接力，均按“失败/容量条件—动作—输出接口”写清。}
+  {\MCMBuildLength；\MCMSolveLength；以分问题为二级标题，以模型、求解和小结为三级标题。}
+  {模型结构图靠近首次描述；算法流程图靠近求解；大规模结果后移到结果章节或附录。}
+  {基线和改进共享同一评价口径，约束均有题意来源；硬约束一旦超限就把候选标为不可行/近似可行，而不是以通过率替代可行性，并报告最大违约、超限分布和修复代价；控制器方向不未经兼容性方程直接当作状态位移方向，固定长度、相邻距离和受力等结构要求均有残差；坐标变换用中心、顶点和非对称点核对符号与方向，节点按标识而非固定行号读取；仅提出的备选模型不写成已求解结果；几何接收率若用面积比代理，明确缺少的入射--法向--反射--交点--覆盖链及误差，经验系数保留标定与区间；算法输出带版本或哈希直接进入下游分问和后文表图；最小化最大偏差等复合极值以手算小例确认 \texttt{argmin}/\texttt{argmax} 方向；用“动作—耗时—状态变化—现金变化—可行条件”表统一题面与代码；用信息集表区分每个时刻可见量和未来未知量；随机目标先定义同一项非预见策略，再对该策略取期望；C 类逐期状态闭合，评价/订购/转运分别核对方法，沿用模块列明输入、输出与目标；C 类把标签字段/生成规则、训练回代、内层调参与独立测试分栏并断言实体集合交集为零，外层测试不参与缩放、校准或投票权重学习，预测进入优化时传递类别概率或情景；模型名称与拟合 API 一致，每个估计器首次 \texttt{predict} 前已有 \texttt{fit} 或模型载入证据；可选贷款/流量用二元变量联动连续量和零结果；TOPSIS 等评价模型逐项映射正向化、权重、理想解、距离与贴近度；阈值声明升/降序和尾部；风险乘数明确 $Q$ 表示增量还是总倍率，并以边界样例核对正文、代码和结果；外部情景参数记录地区、样本、时窗和区间；每个优化候选用解标识贯穿适应度、排序、导出和复算。}
+  {公式悬空；只报软件函数；遗漏变量域/边界；启发式算法不写编码、参数和终止条件；把终点库存强制清零却不证明可行；用候选子集替代完整决策域；把读取未来情景的离线解写成在线策略；把稳态分布当逐日预测，或把各情景全知最优值的最大项当成策略期望；按行号制造监督标签、在 Logistic 名义下使用普通线性回归，或在训练数据回代 Accuracy/AUC 却称独立预测；先对全体数据 \texttt{fit\_transform} 或用全体准确率学习集成权重；估计器未拟合即预测、参数名未被库识别；训练/测试实体重叠；逐元素翻转 PCA 载荷；用构成评分的同源变量宣称外部验证；正文声称 TOPSIS 而代码只有加权和；概率越界或正文--代码--结果不同式；强制 $x_i>0$ 却输出零值而没有准入变量；正文用 $(1+Q)$ 而代码只乘 $q$；问题对象数与程序索引范围不同；把降序前 $q\%$ 写成第 $q$ 百分位；把无界回归相关系数当分类性能；PD/LGD/EAD 量纲混用；把中间预测硬标签当无误差真值；外部情景比例无来源或区间；最优目标与导出策略来自不同候选。}
+
+\ifmcmguidance
+  \begin{quote}\small
+  \textbf{A0175 型求解补充：}遮挡、阴影与截断按先后条件分支推进，并明确某条件成立后哪些计算不再执行；邻接筛选先报告全配对负担，再以局部相互作用和距离阈值压缩候选。计算预算写成“低比例、多次重复的粗评估—较高比例、较少重复的细复算”；基线扫描证实影响弱的变量先冻结，把预算留给位置、间距或尺寸等主要变量。
+  \end{quote}
+\fi
+
+\ifmcmguidance
+  \begin{quote}\small
+  \textbf{A092 型求解补充：}两个投影区域可能重叠时，先说明直接相加会重复计数，再给离散对象、网格步长和并集规则。后问沿用前问布局时，不用“同上”带过：写清前问得到的规则结构、允许共享参数的对称性、按圈/层/类的分组单位、被冻结的逐对象变量，以及变量维数下降后为何切换求解器。
+  \end{quote}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.3pt}
+    \caption{重叠区域与跨问按组降维接口表（按需填写）}
+    \label{tab:overlap-group-reduction-guide}
+    \begin{tabular}{p{1.75cm}p{1.75cm}p{1.8cm}p{2.15cm}p{2.15cm}p{2.2cm}p{1.55cm}}
+      \toprule
+      区域/原变量 & 重叠或维数问题 & 依据 & 离散/分组单位 & 并集或共享规则 & 保留变量与输出 & 求解器 \\
+      \midrule
+      区域 A、B 或逐对象参数 & 重复计数或变量过多 & 几何交叠、前问结构与对称性 & 网格点、圈、层或类别 & $A\cup B$ 计数；组内共享参数 & 步长、变量数、接口量 & 高维/降维后方法 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\fi
+
+\ifmcmguidance
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{数据--预测--决策谱系检查表（C/混合题按需填写）}
+    \label{tab:data-decision-lineage-guide}
+    \begin{tabular}{p{2.0cm}p{2.6cm}p{2.7cm}p{2.5cm}p{2.7cm}}
+      \toprule
+      环节 & 实体/时间范围 & 仅在哪一折拟合 & 输出与不确定性 & 下游用途/约束 \\
+      \midrule
+      清洗与特征 & 原字段、缺失数量、聚合窗 & 训练折/全量只读规则 & 特征、缺失标志 & 基线与学习模型 \\
+      预测与校准 & 训练/验证/独立测试实体 & 内层调参、外层评估 & 类别概率、区间、误判成本 & 目标、约束或情景 \\
+      决策与后处理 & 决策对象、预算时段 & 不适用/参数标定集 & 决策变量、约束残差 & 执行方案与复核日志 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{降维、概率与优化输出实现审计表（按需填写）}
+    \label{tab:implementation-lineage-guide}
+    \begin{tabular}{p{1.8cm}p{3.4cm}p{4.1cm}p{3.5cm}}
+      \toprule
+      环节 & 必须保存 & 自动/手工断言 & 正文落点 \\
+      \midrule
+      PCA/降维 & 载荷、贡献率、所选列、得分维度 & 只整列换向；正交误差和矩阵维度通过 & 选型、得分式、外部验证 \\
+      评价/阈值 & 指标列数、核心算子、排序方向、阈值样本 & 归一化列数一致；理想解/距离齐全；尾部比例可复算 & 方法公式、代码映射与阈值依据 \\
+      概率/冲击 & 定义域、公式版本、标定集、归一化常数 & 值域在 $[0,1]$；正文与代码测试点同值 & 参数来源、敏感性与边界 \\
+      标签/训练 & 标签字段、生成规则、实体索引、类计数、拟合接口 & 标签逐行可追溯；模型名与损失/API 一致；禁止按行号造标签 & 数据谱系、样本表与训练日志 \\
+      数据划分 & 训练/验证/测试实体与时间索引 & 三集合两两交集为空；预处理仅拟合训练折 & 样本数、指标角色与泄漏审计 \\
+      集成流水线 & 外层测试索引、预处理器、基分类器、权重、校准器 & 所有 \texttt{fit}/调参/权重仅用训练或内层折；首个预测前已拟合/载入 & 测试指标角色、模型文件与调用顺序 \\
+      有序分类 & 类别编码、分档阈值、输出域、混淆矩阵 & 少数类召回/宏平均指标齐全；越界输出为零 & 模型选择、类别指标与校准 \\
+      风险收益 & PD、LGD、EAD、成本与收益的单位 & 每项量纲闭合；额度乘法次数与公式一致 & 目标推导、参数标定与结果单位 \\
+      公式/实现 & 正文式、代码式、库参数、单位、边界输入 & $Q$ 与 $1+Q$ 等逐点同值；参数名可被库识别 & 公式编号、函数、测试日志与差异裁决 \\
+      准入/额度 & 二元标志 $z_i$、连续量 $x_i$、上下界、对象数 & $Lz_i\le x_i\le Uz_i$；零结果与 $z_i=0$ 同源；对象规模一致 & 变量域、结果表与可行性日志 \\
+      优化输出 & \texttt{solution\_id}、决策哈希、适应度、约束残差 & 排序、导出和结果表标识一致；按展示变量重算目标 & 策略表、摘要结果与附录日志 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{潜变量与可观测代理表（C/混合题按需填写）}
+    \label{tab:latent-proxy-guide}
+    \begin{tabular}{p{2.0cm}p{1.65cm}p{2.65cm}p{1.25cm}p{2.35cm}p{3.0cm}}
+      \toprule
+      业务概念 & 能否直接观测 & 代理指标及时间窗 & 方向 & 归一化/权重 & 代理理由与未覆盖信息 \\
+      \midrule
+      供货连续性/稳定性等 & 否/部分 & 间隔、连续周数、波动量等 & 成本/效益 & 方法、样本域与权重 & 每个代理对应概念的哪一面 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{结构转化与跨问题模型沿用表（按需填写）}
+    \label{tab:model-inheritance-guide}
+    \begin{tabular}{p{1.85cm}p{2.25cm}p{2.05cm}p{1.75cm}p{2.25cm}p{2.7cm}}
+      \toprule
+      原始结构/模块 & 转化规则与分组 & 旧接口输入输出 & 保持量 & 改变量、输入与处理 & 特殊对象、理由与验证 \\
+      \midrule
+      几何/评价/预测/决策 & 坐标变换、子结构或字段映射 & 变量、状态、目标与约束 & 逐项列明 & 点名改变量、替换输入及复用/修改/删除/新增 & 不能沿用者另建关系；做覆盖检查 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{复用前的退化条件与修复表（几何/结构题按需填写）}
+    \label{tab:degeneracy-repair-guide}
+    \begin{tabular}{p{2.0cm}p{2.5cm}p{2.8cm}p{2.75cm}p{2.7cm}}
+      \toprule
+      退化类型/对象 & 可计算检测条件 & 旧模型为何失效 & 修复、跳过或专轮动作 & 修复后的验证 \\
+      \midrule
+      共线、共圆、重合或不可辨识 & 行列式、叉积、半径差等阈值 & 交点不唯一、角度无区分等 & 更换发射组合、跳过本轮或另建关系 & 覆盖、唯一性和最终残差 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{粗定位、精化与同一计算核复用表（连续/空间优化题按需填写）}
+    \label{tab:coarse-fine-search-guide}
+    \begin{tabular}{p{1.55cm}p{2.0cm}p{2.1cm}p{1.55cm}p{2.0cm}p{2.0cm}p{1.75cm}}
+      \toprule
+      阶段 & 负责变量 & 搜索范围 & 步长/准则 & 本阶段输出 & 传给下一阶段的接口 & 停止与复算 \\
+      \midrule
+      二分/粗搜 & 塔位、主尺度或主参数 & 题面可行区间 & 符号判据或大步长 & 初步区间、可行候选 & 区间、固定量、计算核版本 & 缩小区间后停止 \\
+      小步长精化 & 区域尺寸、高度或剩余参数 & 上一步局部范围 & 实际小步长 & 最优候选、目标与约束残差 & 同一效率/动力学核 & 达到精度并按展示变量复算 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\fi
+
+\ifmcmguidance
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.5pt}
+    \caption{边界锚定贪心布设表（覆盖/路径题按需填写）}
+    \label{tab:boundary-anchored-greedy-guide}
+    \begin{tabular}{p{1.8cm}p{2.2cm}p{1.55cm}p{2.25cm}p{2.45cm}p{2.15cm}}
+      \toprule
+      起始边界 & 第一对象确定规则 & 空间步长 & 可行指标区间 & 候选选择规则 & 对边余量、额外候选与输出 \\
+      \midrule
+      东/西/上/下边界 & 覆盖恰达边界或满足首个约束 & 实际距离或离散步长 & 重叠率、间距或风险上下界 & 最低可行值、最小增量或其他规则 & 最后可行对象、对边余量、下一候选处置、数量和总量 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.5pt}
+    \caption{局部代理拟合与残差驱动再分区表（空间分区题按需填写）}
+    \label{tab:residual-partition-guide}
+    \begin{tabular}{p{1.7cm}p{2.2cm}p{1.9cm}p{1.8cm}p{2.0cm}p{2.0cm}p{1.6cm}}
+      \toprule
+      初始区域 & 人工/结构分区依据 & 局部代理 & 拟合指标 & 拆分触发线 & 子区域与重拟合 & 保留区域 \\
+      \midrule
+      区域 I--$k$ & 等值线、坡向或边界 & 平面、曲面或局部回归 & MSE、残差或交叉验证误差 & 实际阈值及失败区域 & 只拆失败区并重求参数 & 已合格区保持不动 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\fi
+
+\subsection{问题一}
+\MCMGuide
+  {完成问题一的最小可解释基线，并为后续问题提供经过检验的中间量。}
+  {输入；输出；变量；模型；求解步骤；初步结果；检验接口。}
+  {先界定问题，再推导，不在同一段混写多个模型。}
+  {结合 \MCMBuildLength、\MCMSolveLength{} 与 \MCMResultLength；一问一闭环，按实际分问数分配。}
+  {只保留支撑本问判断的图表；完整中间矩阵放附录。}
+  {基线足够简单、可手算抽查，并能暴露后续改进的明确缺陷。}
+  {跳过基线直接堆复杂模型；本问输出与下一问接口不清。}
+
+\subsubsection{模型建立}
+\MCMGuide
+  {把对象和关系写成封闭的数学系统。}
+  {变量域；目标/状态方程；硬/软约束、松弛变量与惩罚含义；题面硬约束及逐项残差；控制输入到状态位移的兼容方程；固定长度、相邻距离变化和受力边界；坐标系、符号约定、旋转方向和节点标识；入射方向、面板法向、反射方向、馈源面交点和覆盖判据；代理指标误差；经验系数来源与定义域；初边值；参数和单位；复合极值方向；RMS/加权误差的样本集、平方、分母、权重和单位；连续阈值/峰值/积分定义；离散映射；假设引用；终值回收会计；状态支配压缩的单调条件；$N$ 个观测对应 $N-1$ 次相邻转移；多人支付与题面目标的映射；跨阶段联合状态；PCA 载荷列和得分矩阵；评价指标列数、正负理想解、距离和贴近度；阈值的升/降序、尾部和标定样本；概率函数定义域；有序类别编码与分档阈值；PD/LGD/EAD 及损失金额单位；经验矩阵赋值/尺度/归一化；风险乘数是增量 $Q$ 还是总倍率 $1+Q$；预测概率、误判损失、离散决策域和政策调整系数。}
+  {采用“令……；由……可得……”并紧跟公式解释；不要连续堆式。若沿用前问模型，写清“参照问题一/二中的……”后究竟复用哪些量、又新增什么结构。}
+  {\MCMBuildLength；相关公式成组编号，长推导保留关键步骤。}
+  {几何、网络或层次关系图放在模型定义后。}
+  {每条题意要求都有数学落点，量纲和方向一致；正文阈值、风险倍率与代码常量可在零值、典型值和边界值逐点对照；终点库存、残值、补购价格和收益满足同一会计恒等式；状态压缩保留所有可能成为最优的非支配状态；马尔可夫原始计数、状态顺序、行和与转移矩阵一致；PCA 载荷只整列换向且正交、所选列与得分维度一致；评价方法的核心算子与公式同源、归一化覆盖全部指标；阈值尾部和百分位方向一致；PD、LGD、EAD 与损失金额量纲闭合；概率有限、守界且归一化，经验矩阵的归一化常数进入执行公式。}
+  {符号未定义；约束方向错误；用固定位置冒充全局峰值；阈值交点、排序方向、尾部或离散误差没有说明；用“剩余有损失”直接推出整数库存精确为零；现金作为状态值却遗漏终值残值或未证明支配关系；用期望库存代替逐路径可行性；逐元素取正 PCA 载荷、误取载荷行或用输入变量充当外部验证；写 TOPSIS 却不计算理想解和距离；把损失率写成金额后重复乘额度；手设概率越界或正文归一化未进入代码；正文将 $Q$ 定义为增量、代码却直接以 $q$ 作为总倍率。}
+% 模型正文与公式写在此处。
+
+\subsubsection{求解方法与实现}
+\MCMGuide
+  {说明从输入到输出的完整、可复现计算过程。}
+  {预处理；外层测试冻结；流水线 \texttt{fit}/\texttt{transform}/\texttt{predict} 顺序；集成权重学习折；库参数有效性；正文公式--代码--单位--边界输入映射；指标列数和归一化循环；方法核心算子；初始化；候选/邻域机制；复合极值与内外层索引的最小测试；迭代/求解器；参数；可行性修复；停止条件；提案/接受/代数/函数评估计数；蒙特卡洛正文/代码样本量、独立重复、随机种子、区间和样本量收敛；情景生成校准；训练/调参与独立评估情景及集合交集；类别编码/阈值/输出域；候选集覆盖；候选解标识/哈希；上游分问输出版本/哈希与下游显式载入；联合状态；整数松弛与恢复；求解后取整/折扣/截断的复核；输出。}
+  {按执行顺序写，使用可核对的函数和参数；遍历/仿真可按“固定……；遍历……及其范围；记录……；绘图或导出……”展开，循环对象、步长和产物不可省略；实验设计先交代预算与安全边界，再列候选方法、舍弃理由、因素水平和最终组合，不以代码截图替代说明；若实验由多个缺口触发，先把各次实验标为探索或确认，再逐项列出保持条件、改变因素、新增观测和裁决用途。}
+  {\MCMSolveLength；伪代码控制在一页内，完整代码放附录。}
+  {算法流程图或收敛图紧随相应文字。}
+  {读者可据此复现主要结果，并知道失败或不收敛时如何处理；有限网格同时报告最后可行点、首个不可行点和细化步长；评价模型以最小样例核对每个核心算子，复合极值方向和内外层索引均有断言，数据列数与归一化循环上界一致；随机生成器以频数/分布检验核对，蒙特卡洛报告区间与样本量收敛；下游分问读取的就是上游最终版本而非同名旧文件；在线策略在留出情景报告相对离线全知上界的遗憾和失败率；完整域用枚举、小实例或界验证覆盖；逻辑掩码用 \texttt{sum}/\texttt{nnz} 计数；训练/验证/测试索引两两求交为空，缩放器、基分类器、校准器和投票权重均不读取外层测试；每个估计器首次预测前保留拟合或载入记录，库参数名通过构造器/参数字典核对；正文公式与实现对边界样例同值；有序分类输出经阈值映射后逐类计分；每个候选解标识随适应度排序并原样导出；连续松弛报告界和整数恢复差距，任何求解后变更都重新验算变量域、预算、逻辑与目标。}
+  {只写“调用 MATLAB/Python 求解”；声称 TOPSIS 却只做加权求和；归一化循环少一列或结果数组维度仍沿用另一批样本；全域重采样却称局部邻域；把接受次数写成总迭代；不报告初值、步长、种群或容差；生成与读取下标错位；用 \texttt{length(mask)} 计真值；把零概率改为无穷后继续求期望；用同一情景调参和报成绩；测试切片与训练切片重叠；在切分后仍对全体数据拟合缩放器或用综合准确率确定投票权重；估计器未拟合即调用 \texttt{predict}，或把 \texttt{estimator} 误作 \texttt{n\_estimators} 而未验证；多人定义在实现中退化为单主体搜索；排序后导出未排序种群第一列；删除整数变量后仍称原整数规划最优；先在边界内求解再于求解器外打折造成越界。}
+% 求解步骤写在此处。
+
+\subsubsection{本问结果与小结}
+\MCMGuide
+  {报告本问输出，解释其含义并说明传给下一问的量。}
+  {关键结果；单位；原始计数与比例分母；训练/验证/外层测试指标角色；多数类基线、少数类召回、宏平均指标、PR-AUC 与校准；集成权重来源；有序分类输出范围和分档阈值；概率值域、归一化和非有限数扫描；最后可行/首个不可行样本；固定长度、相邻距离、受力与其他题面硬约束的最大违约、通过率、超限位置和修复代价；模型完成状态；坐标/方向不变量；代理性能与物理性能的口径；经验系数标定误差；逐路径资源可行性/缺货概率；解标识、决策标志与连续变量一致性；按展示变量重算的目标、求解器状态、上下界和预算残差；蒙特卡洛均值/区间/样本量收敛；上游输出版本及下游读取版本；约束核对；误差/残差；解释；问题间接口。}
+  {按“条件—读数—比较—原因—影响”写。可用“在相同实验条件下……”固定比较口径；有约束与无约束结果时成对报告，再说明为何采用受限方案。图后写具体趋势，不以“如下图所示”收尾；B026 型结果先用 F 值/$p$ 值回答因素是否有影响，再用均值差回答哪一水平更优；B050 型递进模型逐行保留旧指标、新指标和本轮裁决，避免只展示最终最好的一行；B030 型结果先写具体极值或偏差，再解释量级差异的机制，允许用“虽……但……”限定误差，最后才作整体对照；B035 型算法比较允许写“局部上可能……占优势”，但下一句必须解释状态更新、大误差优先或前视深度怎样使终局指标反转；数值继续可达精度与任务所需精度分开，采用轮数还要给通信、时间或调整代价。B086 型方案比较固定同一初始数据，依次给收敛速度、稳定误差、发射/计算代理和代理边界，再作选择；若单组初值不足以检验稳定性，先承认不足，再给扰动分布、重复组数、收敛区间与适用范围。大批仿真结果须交代完整文件位置、正文代表情形和选择理由。回归效果分为相对效果（R/R 方）、绝对效果（RMSE/MAE）和整体检验（F/$p$ 或同类统计量），三类指标之后再解释主因素或交互项。若指标决定对象是否进入下一步，按“对象—指标—阈值/分支—动作—输出”逐行报告，不把低指标对象静默删去。R/Q 双聚类结果先分别说明变量组和样本组，再写代表量怎样进入分类。跨类型比较固定同一参考序列，分别给每类最大值、最小值和集中/离散程度后再作判断。若主导成分使其余变量在同一比例图中不可读，保留完整图并补画去除主导成分的图，再结合两图解释；不要只展示有利于结论的第二张图。分类可先用简单阈值规则给直观结果和独立测试表现，再以 PLS-DA/VIP 等多变量方法复核，两法的角色和一致/不一致处理须写明。没有已知亚类标签时先说明无监督身份；若一类分簇清楚而另一类不清楚，分别陈述并将后者限定为粗分。潜变量维数同时比较交叉验证误差与累计解释率，选择最小充分维数；对称相关矩阵先取上三角去重，对应成分对存在配对结构时再选配对检验。若两方案的成本、损失或收益对应不同产能/样本规模，先说明原始量为何不可比，再改用单位产出、成本/产能或同一分母下的指标裁决。}
+  {\MCMResultLength；本小节只占其中与本问相称的部分，完整结果放附录。}
+  {结果表先于解释段出现，或图后立即给出判断。}
+  {结果、模型和题问一一对应，至少有一项局部检验；题面硬约束逐项有可行性残差；比例乘分母可在舍入容差内还原整数计数，条件均值注明成功/失败样本口径；总体准确率与混淆矩阵可互算，少数类指标不被多数类掩盖；有序类别结果落在声明输出域或有明确分档规则；概率、权重、目标和期望均为有限数；随机估计的正文/代码预算一致且有区间；下游结果可追溯到上游最终版本；结果行的解标识、决策向量与目标同源且复算一致；决策为 0 的执行变量归零或明确标为未采用候选，所有结果落在模型域内。}
+  {只给数值；表头把速度写成温度等单位错位；有限网格直接称连续全局最优；不说明触发约束；筛选样本后仍沿用原分母，或均值/标准差公式缺少归一化/平方根；结果表出现 \texttt{Inf}/\texttt{NaN} 后仍报告期望结论；把排序后的最优值配给未排序策略；决策为 0 却保留非零额度/流量，或表值越过正文上下界。}
+% 复制“问题一”结构以展开其余分问。
+
+\ifmcmguidance
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{递进模型的指标与裁决账本（按实际模型填写）}
+    \label{tab:progressive-model-guide}
+    \begin{tabular}{p{2.2cm}p{3.0cm}p{2.2cm}p{2.2cm}p{3.2cm}}
+      \toprule
+      当前层 & 新增结构 & 旧指标 & 新指标 & 剩余不足与裁决 \\
+      \midrule
+      基线模型 & 题意直接给出的变量与主效应 & -- & 训练/验证指标 & 是否已有可解释基线 \\
+      第一次改进 & 非线性变换或分段结构 & 上一行实际数值 & 本行实际数值 & 改善是否超过复杂度代价 \\
+      第二次改进 & 交互项、约束或新状态 & 上一行实际数值 & 本行实际数值 & 继续、停止或切换方法 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{方案同口径比较表（产出规模不同时填写）}
+    \label{tab:comparable-denominator-guide}
+    \begin{tabular}{p{2.15cm}p{2.4cm}p{2.35cm}p{2.7cm}p{3.45cm}}
+      \toprule
+      方案 & 原始成本/收益 & 对应产出与基准 & 可比较指标及数值 & 采用该口径后的裁决 \\
+      \midrule
+      基线/历史方案 & 实际原始量 & 是否达到题定产出 & 成本/产能、单位收益等 & 不以原始总量直接判断优劣 \\
+      改进/规划方案 & 与基线同定义 & 产出、样本或时长 & 与基线同分母 & 数值差及适用条件 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{前视搜索、局部让步与实用停止表（按需填写）}
+    \label{tab:lookahead-practical-stop-guide}
+    \begin{tabular}{p{1.65cm}p{2.05cm}p{2.2cm}p{2.4cm}p{2.25cm}p{2.35cm}}
+      \toprule
+      策略/深度 & 当前轮局部指标 & 终局或累计指标 & 反转机制/优先对象 & 任务精度与采用轮数 & 额外轮次代价与停止理由 \\
+      \midrule
+      贪心/前视/随机 & 保留局部占优的真实读数 & 同预算、同口径结果 & 状态怎样被第一动作改变 & 阈值、轮数、动作/通信次数 & 时间、资源、干扰或收益不足 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{方案收敛、稳态误差与资源代理裁决表（按需填写）}
+    \label{tab:convergence-resource-decision-guide}
+    \begin{tabular}{p{1.45cm}p{2.2cm}p{2.1cm}p{2.15cm}p{2.55cm}p{2.5cm}}
+      \toprule
+      方案 & 同一初始数据与预算 & 收敛速度/循环数 & 稳定误差与波动 & 发射/计算代理及口径 & 代理边界与最终裁决 \\
+      \midrule
+      方案 A/B & 固定坐标、阈值和步长 & 达到同量级所需轮次 & 稳定区间而非单点最小值 & 给公式、数值和同一分母 & 明写是否只是相对代理 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.4pt}
+    \caption{随机可行背景比较表（启发式/抽样优化按需填写）}
+    \label{tab:feasible-background-guide}
+    \begin{tabular}{p{2.05cm}p{2.1cm}p{1.7cm}p{2.2cm}p{2.2cm}p{2.7cm}}
+      \toprule
+      可行方案生成规则 & 共同硬约束 & 样本数/种子 & 同口径指标与单位 & 候选在样本中的位置 & 可写结论与禁止外推 \\
+      \midrule
+      随机、拉丁超立方或规则扰动 & 与候选完全相同 & $N$、重复和随机种子 & 目标值、单位及时间口径 & 分位、优于比例或范围 & 仅支持样本背景；不写全局最优或独立验证 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\fi
+
+\section{结果分析与模型检验}
+\MCMGuide
+  {综合解释各问结果，并用独立证据检验模型与算法。}
+  {关键表图；基线对照；误差；题面硬约束最大违约/通过率/超限分布和结构兼容性；控制方向与实际位移关系；坐标符号与旋转方向不变量；模型完成状态；代理指标相对光线追迹/物理链的误差；经验系数来源、标定集和区间；回代/守恒/交叉验证；训练回代/内层调参/最终独立测试的指标角色与实体交集；外层测试是否隔离于预处理、校准和集成权重；多数类基线、混淆矩阵、少数类召回、宏平均指标、PR-AUC、校准和误判成本；有序分类阈值与输出域；PCA 正交性/得分维度与独立效标；评价方法核心算子/列数；估计器拟合状态与参数有效性；预测--决策误差传播；异常情景；总体时序与代表时点；异常后的下一期修正；候选规则的共同历史基准、机制差异、约束状态、初期稳健性与现实性裁决；随机重复次数、频率、目标分布和代表方案规则；最大改善与平均改善；随机重复分布与蒙特卡洛置信区间/样本量收敛；概率有限性、正文--代码同式与归一化；跨分问数据版本；解--目标同源；离线全知上界与在线策略差距；缺货概率/机会约束；多人最佳反应、逐动作支配关系、纯/混合均衡和候选空间核验。}
+  {结论带条件和对象，区分数值变化、统计证据和决策含义；先给无约束/基准结果，再给受限/调整结果，最后解释差值。长时序先用总体图回答方案是否闭合，再选少量代表时点解释输入、状态、决策和约束怎样作用；两条曲线同向时应给出峰谷或滞后周数，不只写“趋势一致”；异常状态按“异常读数—实际停止条件—两种可能原因—下一步动作”推进。候选规则先说明共同历史基础，再分别解释变化机制，以约束、成本/损失、初期稳健性和现实含义裁决；随机求解只在给出重复协议、频率和目标质量后选典型代表，不把一次输出称为唯一最优。局部信息模型把“对象实际可用的指标”与“研究者事后汇总的全局指标”分开，正文说明后者没有进入对象动作；方案比较同时给收敛速度、稳定误差、资源代理和代理边界。单组初值不足时，先写不足，再按扰动分布、重复组数、收敛带和适用范围补证。改进幅度较小时同时报告最大值和平均值，直接写“改善有限”并解释资源或可行域边界，不改写为“显著提升”。回归诊断先点名共线性、异方差、残差结构或过拟合等具体问题，再给删项、变换、正则化或重划分动作，不用“优化模型”代替诊断与修正。若原始成本较低但产出未达基准，先改用成本/产能等同口径指标再下结论；图中旺季、淡季或峰谷须点名具体时点，并落到补货、调度或风险动作。}
+  {\MCMResultLength；\MCMTestLength；结果和检验篇幅不得被模型名称介绍挤占。}
+  {先总表，再放残差、收敛、拟合或情景图；图表均在正文引用。}
+  {每个关键结果都有解释，每个核心模型都有与其证据类型匹配的检验；总体曲线与代表时点承担不同解释任务，状态传递可由相邻两期复算；逐期模型先说明局部结果的语义，再按“全时段均可行”的要求决定取各期最小数的最大值或各期最大数的最小值；反常结果先有机制诊断再有局部修改，有限改善不使用“显著”或“充分证明”；固定长度、相邻距离与受力等结构约束没有被几何假设删除，启发式趋稳只写作收敛迹象而非全局最优；PCA 输入变量不充当外部效标，评价方法核心算子在代码中可定位，训练/测试实体交集为零且外层测试不参与任何拟合或权重学习，首次预测前存在拟合/载入证据，少数类和有序类别指标与任务匹配，概率/冲击公式与代码同源，结果表按显示策略复算目标；确定性、随机性和多人结果分开给目标、可行性与证据等级；负的内点混合概率只判为无内点解，并继续检查纯与边界均衡；严格支配对每个对手动作逐列成立。}
+  {把训练拟合、全样本综合指标或重叠样本指标当预测能力；用外层测试准确率反过来确定集成权重；用总体准确率掩盖少数类漏判，或用连续相关系数替代有序分类指标；用不同划分比较基线并计算相对提升；用综合指数输入变量证明综合指数有效；手设冲击产生预期方向后又以该方向证明模型有效；只展示最好结果或把最好目标配给另一候选策略；误差指标与任务损失不一致；用一条随机样本或路线“看起来合理”证明模型正确；把局部单阶段均衡直接称为多阶段全局均衡。}
+
+\ifmcmguidance
+  \begin{quote}\small
+  \textbf{B311 型检验与收尾补充：}“首先、其次、再次、最后”只有在四句分别检查对称、单调、特殊方向不变和极限式等独立结构预测时才保留；每句写明条件、预言和观察。空间覆盖可先定位等值线间距最大或坡度最小的最不利位置，说明单调依据，再由该处充分覆盖推出其余区域。关键几何图若与首次出现相隔较远，可为减少读者回翻而就近重现，但应说明本段调用的标记，删除无关图层。
+  \end{quote}
+  \begin{quote}\small
+  \textbf{B477 型结果交付补充：}比较浅/深起点或多条起始线时，候选必须用同一越界面积、总长度或漏测口径裁决，并把“较优”限制在实际比较的候选内。路线过密时，正文图只承担位置解释，精确坐标转附件，正文仍按区汇总条数、长度、覆盖面积和异常比例。检验分别按回代、候选比较、测试集指标和参数扫描的实际功能命名，不合并成“充分验证模型正确”。
+  \end{quote}
+\fi
+
+\ifmcmguidance
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.5pt}
+    \caption{硬阈值余量与目标反馈表（阈值可行但仍需改进的题目按需填写）}
+    \label{tab:threshold-objective-feedback-guide}
+    \begin{tabular}{p{2.05cm}p{2.15cm}p{2.15cm}p{2.65cm}p{2.1cm}p{2.25cm}}
+      \toprule
+      现方案总量 & 硬阈值与余量 & 候选删减/调整对象 & 总量、面积与干扰变化链 & 次目标 & 复核后可行性 \\
+      \midrule
+      功率、产能、覆盖或成本 & 阈值、超出量及单位 & 高遮挡、高成本或低贡献对象 & 删减后逐项重算，不只比较单个指标 & 面积、成本、稳健性或公平性 & 硬约束、目标值及是否接受 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\fi
+
+\ifmcmguidance
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.5pt}
+    \caption{基线与随机方法的绝对--相对双误差表（算法对照按需填写）}
+    \label{tab:absolute-relative-validation-guide}
+    \begin{tabular}{p{2.1cm}p{2.1cm}p{2.2cm}p{2.0cm}p{2.0cm}p{2.65cm}}
+      \toprule
+      基线方法 & 对照方法 & 共同位置/指标 & 绝对误差 & 相对误差 & 结论及证据边界 \\
+      \midrule
+      解析、贪心或精确规划 & SA、GA、PSO 或独立数值法 & 相同位置、重叠率、目标值 & 同单位逐项报告 & 同分母逐项报告 & 只支持同口径一致性；是否独立另说 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \setlength{\tabcolsep}{3.5pt}
+    \caption{异常区域的局部原因与结果解释表（分区结果按需填写）}
+    \label{tab:region-specific-explanation-guide}
+    \begin{tabular}{p{1.7cm}p{2.0cm}p{2.7cm}p{2.5cm}p{2.4cm}}
+      \toprule
+      异常区域 & 异常指标与读数 & 局部几何/作业原因 & 对覆盖、间距或状态的作用 & 线数、漏测或代价后果 \\
+      \midrule
+      逐区填写 & 线数、面积、长度或比例 & 坡度、等值线方向、边界或人为简化 & 足迹变窄、间距改变或可行域收缩 & 给实际数量并限制结论范围 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\fi
+
+\subsection{结果解释}
+\MCMGuide
+  {将数值转化为机制判断或可执行决策。}
+  {方向；数量级；基线差异；活跃约束；原因；不确定性；适用范围。}
+  {避免“较好”，改写为可比较、带对象和条件的陈述；“由图可知”后必须接实际趋势，可按“图左/图右”分别解释基准状态和调整状态。长序列按“总体变化—代表时点—状态传递”组织；改进较小时写“最大为……、平均为……，说明……”，不以最大值代替整体效果；两个方案产出规模不同则先统一分母，不用较低的原始成本直接宣称更优。}
+  {\MCMResultLength；按问题顺序解释，不重复模型推导。}
+  {比较表和关键曲线放在对应解释之前。}
+  {读者能从表图得出同一判断，结论不超出检验范围。}
+  {逐格念表；因果过度；忽略反常点和失败情景。}
+
+\subsection{模型检验}
+\MCMGuide
+  {验证方程、数值实现或预测性能是否支持结论。}
+  {检验对象；方法；题面硬约束的最大违约、通过率、超限位置与修复后残差；控制输入--状态位移兼容性；中心点/顶点/非对称点的坐标符号与方向测试；提案/推导/实现/求解/验证状态表；光线追迹或等价物理链与面积代理对照；经验系数标定及不确定性；公式文字--单位--代码测试点；复合极值/索引/RMS 手算小例；阈值的升/降序、尾部与标定集；数据隔离；训练/验证/测试样本数、类分布与实体交集；预处理/集成权重的拟合索引；估计器首次拟合与预测顺序、库参数有效性；多数类基线、少数类召回、宏平均指标、PR-AUC、校准；有序类别编码、分档阈值和输出域；残差方向；PCA 载荷正交性、所选列和得分维度；评价模型核心算子和归一化列数；概率定义域网格、边界值及正文--代码测试点对照；PD/LGD/EAD 量纲；风险乘数 $Q$ 的零值、典型值与边界值；经验矩阵归一化；解标识与目标复算；跨分问版本/哈希；转移计数与矩阵行和；随机重复数、种子、正文/代码样本量、均值/标准差/分位数/失败率及样本量收敛；非有限数扫描；多人小实例；结果；裁决。}
+  {明确“检验什么、如何检验、通过何种标准”。有限次数新增实验不能合并成一句“验证模型”，应在表中逐项写清它究竟裁决哪个前文缺口；确认实验同时报告实测值、预测值、误差定义、接受阈值和裁决；实验实施前写成“若……则保留……，否则修正……”，避免看到结果后再改判据。成分预测至少检查逆变换后的闭合总和，并把预测样本与已知类别重新聚类或用独立规则交叉核对；前问趋势给后问聚类赋义时，也要让后问结果反向检查前问结论。若论文只做总订货量与总转运量等预期关系核对、目标方向核对或逐周极值聚合，应如实称为关系/方向/可行性检查，不补写成残差检验或参数灵敏度。}
+  {\MCMTestLength；检测率较低不代表可以省略，至少覆盖主模型和关键输出。}
+  {残差、网格收敛、混淆矩阵、校准曲线或回代误差图放在本节。}
+  {检验独立于用于拟合或寻优的证据；代码中的 \texttt{fit}/\texttt{predict}/指标数据对象与正文角色一致且集合交集为空，预处理器和集成权重的拟合索引不含外层测试，首个预测之前已有模型拟合或载入，参数字典可由库接口识别；PCA 仅整列换向；评价方法每个核心公式都有对应算子；概率函数守界并与代码同点一致；说明定向偏差会扩大还是缩小可行域；阈值方向、变量域、风险倍率和单位与附录一致；有序分类不用无界回归相关性替代分类指标；情景生成分布与模型假设一致；马尔可夫稳态、一步预测和多步预测不混用。}
+  {把“偏差使约束更易满足”当合理性；只写“模型有效”；交叉验证泄漏或测试切片重叠；在全体数据上拟合缩放器、以全体准确率学习投票权重或在 \texttt{dtrain} 上拟合、预测和计分却称独立测试；未拟合即预测或错误参数静默失效；总体准确率高但少数类召回很低仍称可靠；逐元素改 PCA 载荷；正文列出 TOPSIS 距离而代码只做加权和；概率超过 1 或正文与代码不同式；正文用 $(1+Q)$、代码用 $q$ 而不裁决；正文 190 而代码 180 等常量冲突未裁决；把一次仿真称为蒙特卡洛验证。}
+
+\ifmcmguidance
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{确认实验的预测误差与裁决表（按实际实验填写）}
+    \label{tab:prediction-confirmation-guide}
+    \begin{tabular}{p{1.4cm}p{3.2cm}p{2.0cm}p{2.0cm}p{2.4cm}p{2.4cm}}
+      \toprule
+      角色 & 条件组合 & 实测值 & 预测值 & 误差/阈值 & 裁决 \\
+      \midrule
+      确认 & 温度、配方及其他固定条件 & 实测读数 & 模型输出 & 误差定义及接受线 & 接受、修正或撤回 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{回归诊断与修正账本（按实际模型填写）}
+    \label{tab:regression-diagnostics-guide}
+    \begin{tabular}{p{1.7cm}p{1.9cm}p{1.9cm}p{1.9cm}p{2.6cm}p{2.7cm}}
+      \toprule
+      模型版本 & R/R 方 & RMSE/MAE & F/$p$ 或同类检验 & 诊断图与具体问题 & 修正动作及裁决 \\
+      \midrule
+      初始模型 & 样本/验证分别填 & 原量纲误差 & 整体/系数检验 & 共线性、残差或过拟合证据 & 删项、变换、正则化或保留 \\
+      修正模型 & 与初始同口径 & 与初始同口径 & 与初始同口径 & 问题是否缓解及剩余边界 & 接受、继续修正或撤回 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{逐期可分性与跨情景聚合表（动态规划题按需填写）}
+    \label{tab:temporal-decomposition-aggregation-guide}
+    \begin{tabular}{p{2.0cm}p{1.8cm}p{1.7cm}p{2.1cm}p{2.0cm}p{2.1cm}}
+      \toprule
+      初始状态来源 & 时间依赖判断 & 局部模型 & 局部结果含义 & 聚合方向 & 全时段保证 \\
+      \midrule
+      历史同周期同位置 & 无记忆/库存递推 & 逐周 0--1/LP & 最少对象数/最大产能 & 各周最小数取最大；各周最大值取最小 & 同一集合或全部周可行 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{候选机制的同基准比较与裁决表（启发式规则按需填写）}
+    \label{tab:candidate-rule-comparison-guide}
+    \begin{tabular}{p{1.45cm}p{2.55cm}p{2.6cm}p{2.45cm}p{3.65cm}}
+      \toprule
+      候选 & 共同历史/数据基准 & 本候选的变化机制 & 约束与目标结果 & 初期稳健性、现实含义及裁决 \\
+      \midrule
+      A/B/C/D 等 & 同一忙期均值、样本与参数 & 倍率、随机项、阈值或修正率 & 可行性、成本、损失等同口径数值 & 保留、淘汰及具体原因 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{随机重复与典型代表方案表（随机算法按需填写）}
+    \label{tab:stochastic-representative-guide}
+    \begin{tabular}{p{1.55cm}p{1.9cm}p{2.1cm}p{2.5cm}p{2.6cm}p{2.3cm}}
+      \toprule
+      重复次数 & 种子/生成协议 & 可行率与失败数 & 目标分布/分位数 & 方案频率与相似性口径 & 代表方案选择规则 \\
+      \midrule
+      实际次数 & 固定种子或种子清单 & 不只保留成功运行 & 均值、区间、最好/最差 & 决策向量如何判为同一方案 & 高频且目标较优；不称唯一最优 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{指标门控计算与结果去向表（逐对象模型按需填写）}
+    \label{tab:metric-gated-computation-guide}
+    \begin{tabular}{@{}p{1.7cm}p{1.8cm}p{1.7cm}p{2.35cm}p{2.25cm}p{2.35cm}@{}}
+      \toprule
+      对象/成分 & 指标与实际值 & 阈值或相对分组 & 后续动作 & 输出与验证 & 未进入分支的处理 \\
+      \midrule
+      逐项填写 & $R^2$、误差或可信度 & 高/低或明确阈值 & 预测、保持不变、改用基线 & 预测值、闭合/误差检查 & 明写保留值，不静默删除 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{可解释分类规则与多变量复核表（分类题按需填写）}
+    \label{tab:interpretable-multivariate-confirm-guide}
+    \begin{tabular}{@{}p{1.55cm}p{2.0cm}p{2.0cm}p{2.1cm}p{2.4cm}p{2.4cm}@{}}
+      \toprule
+      预处理 & 简单规则/阈值 & 训练--测试口径 & 规则结果 & 多变量复核与 VIP & 一致性、分工与边界 \\
+      \midrule
+      clr/标准化等 & 给变量、方向和实际阈值 & 样本数、切分和冻结方式 & 准确率、混淆或具体类别 & PLS-DA 等及实际重要变量 & 阈值负责解释，复核负责检查；不一致时保留调查 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{潜变量维数的双指标裁决表（PLS 等模型按需填写）}
+    \label{tab:latent-dimension-decision-guide}
+    \begin{tabular}{@{}p{1.7cm}p{2.5cm}p{2.5cm}p{2.55cm}p{3.35cm}@{}}
+      \toprule
+      潜变量数 & CV/adjCV 误差 & 累计解释率 & 相邻维数增益 & 选取理由与后续输出 \\
+      \midrule
+      1--$m$ 逐行 & RMSEP/MAE 等实际值 & X、Y/类别分别报告 & 误差下降与解释率增量 & 选最小充分维数，并接系数、预测和验证 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{变量--样本双聚类与同基准比较表（C/成分题按需填写）}
+    \label{tab:rq-anchor-comparison-guide}
+    \begin{tabular}{p{1.65cm}p{2.25cm}p{2.05cm}p{2.15cm}p{2.2cm}p{2.9cm}}
+      \toprule
+      环节/类别 & 聚类或固定基准 & 输入对象 & 输出/代表量 & 最大--最小值 & 集中度、反向核对与结论 \\
+      \midrule
+      R 型/变量 & 相关/距离口径 & 成分变量 & 变量组与代表成分 & -- & 为后续 Q 型降相关 \\
+      Q 型/样本 & 代表成分与距离 & 样本 & 亚类与标签 & -- & 与已知标签/前问趋势交叉核对 \\
+      类型比较 & 同一参考序列 & 各类别样本 & 关联分布 & 各类实际极值 & 比较集中或离散，不换基准 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\fi
+
+\section{灵敏度与稳健性分析}
+\MCMGuide
+  {识别关键参数和结论失稳边界，区分数值稳定与决策稳定。}
+  {物理参数；几何半径/曲率/边缘范围；集热器高度/直径、塔高及空间布场尺度；固定索长和相邻距离阈值；焦点/顶点与经验修正系数；离散步长；RMS/微调权重；蒙特卡洛样本量；经验边界；随机种子；多目标尺度/权重与 Pareto/风险水平；聚类数 $k$、风险增量/倍率 $Q$、客户流失率、贷款准入阈值与分类阈值；PD/LGD/EAD 与损失率、概率函数方差、风险阈值及其尾部方向、客户价值、主观冲击矩阵/归一化、外部事件冲击比例和政策折扣；中间预测的 oracle/硬标签/概率输入；扰动范围与步长；增大/减小方向是否非对称；饱和点或平台；分响应敏感度排序；固定原策略或重新优化口径；重复求解；响应指标；稳定判据；最大违约/通过率/超限分布；活跃约束；决策切换点。}
+  {用条件句报告稳定区间和失稳原因，不把单点变化称为稳健。A0127 型空间/机理题按“范围和步长—变化区间—增大/减小方向—饱和位置—分效率或分状态排序”解释；若参数增大后平台而减小时快速恶化，应分别陈述。A0175 型步长分析按“候选步长序列—对应输出—相邻增益—增益明显趋缓—选择工作步长”推进，使用“认为接近稳定”或“后续增益已较小”等有边界的表述，不写成理论收敛。时间窗口应分别比较只提前、只延后和双向观察；结论写明哪一方向占优，以及双向方案只在何种短窗口下更有效。}
+  {\MCMSensitivityLength；优先分析能改变结论的少量关键参数。}
+  {单参数曲线、龙卷风图、箱线图或情景表放在扰动协议后。}
+  {指出最敏感因素、稳定范围和应对策略。}
+  {任意采用正负百分比；写“调到同一数量级”却不给缩放式；不声明固定策略或重新优化；只画平移曲线而不报告可行性、活跃约束和策略切换；程序对每个参数都返回一个确定数值就称“稳定”，却不给判据和失稳边界。}
+% 正文写在此处。
+
+\ifmcmguidance
+  \begin{table}[H]
+    \centering
+    \small
+    \caption{灵敏度的范围、方向、饱和与排序表}
+    \label{tab:sensitivity-shape-ranking-guide}
+    \begin{tabular}{p{1.65cm}p{1.8cm}p{1.45cm}p{2.0cm}p{2.0cm}p{1.8cm}p{2.35cm}}
+      \toprule
+      扰动参数 & 范围与步长 & 固定/重求解 & 指标变化区间 & 增大/减小方向 & 饱和点/失稳点 & 分指标排序与工程动作 \\
+      \midrule
+      尺寸、高度、权重或阈值 & 给实际上下界和步长 & 明确口径 & 最小--最大或相对变化 & 分开写，不合并为“波动” & 平台、突变或约束切换位置 & 最敏感项、次序及推荐范围 \\
+      \bottomrule
+    \end{tabular}
+  \end{table}
+\fi
+
+\section{模型评价与改进}
+\MCMGuide
+  {在证据范围内评价模型，并把局限转化为可执行改进。}
+  {具体优点；误差来源；适用边界；所需新数据；改进模型；验证方案。}
+  {优缺点绑定机制，不使用“简单、准确、适用范围广”等泛化形容。}
+  {\MCMEvaluationLength；\MCMImprovementLength；评价与改进逐项对应。}
+  {可用一张“局限—影响—改进—验证”表，避免装饰图。}
+  {诚实说明未解决问题，同时给出能落地的下一步。}
+  {只列套话；把增加模型复杂度当成改进；提出无法由现有/可得数据检验的方案。}
+
+\subsection{模型评价}
+\MCMGuide
+  {说明哪些机制带来哪些能力，以及哪些假设限制了结论。}
+  {优势证据；局限来源；影响方向；适用场景和禁用场景。}
+  {采用“由于显式保留……，因此能够……”的因果链。}
+  {\MCMEvaluationLength；优点和不足数量服从实际证据。}
+  {一般不插图；复杂比较可用短表。}
+  {每项评价能回指正文模型或检验。}
+  {优点与任何模型都适用；缺点没有影响分析。}
+
+\subsection{改进方向}
+\MCMGuide
+  {针对已确认局限提出新数据、模型和验证协议。}
+  {对应局限；新增变量/约束；实现方式；计算代价；预期验证。}
+  {按“缺陷—改法—验证”逐项写，不作无证据展望。}
+  {\MCMImprovementLength；优先高影响、可执行改进。}
+  {可用结构表，不需要概念性装饰图。}
+  {改进可直接转化为代码或实验任务。}
+  {只写“增加数据、优化算法”；没有对照指标。}
+
+\section{参考文献}
+\MCMGuide
+  {完整、可追溯地列出正文实际使用的理论、算法、数据和软件来源。}
+  {正文引用；作者/机构；题名；载体；年份；页码或 URL；访问日期。}
+  {遵循统一著录格式，不把搜索结果、百科摘要或未阅读文献当一手来源。}
+  {\MCMReferenceLength；只列正文引用条目，按引用顺序或统一规范排列。}
+  {本节不插图表。}
+  {关键定义和方法优先引用原始论文、教材、标准或官方资料。}
+  {有条目无正文引用；引用键未定义；网页缺机构和访问日期。}
+\addcontentsline{toc}{section}{参考文献}
+\ifmcmguidance
+  \noindent [1] LaTeXStudio. CUMCMThesis: 全国大学生数学建模竞赛
+  \LaTeX{} 模板[CP/OL].（格式示例）
+\fi
+% 提交正文可在此使用 thebibliography 环境，或接入 BibTeX/Biber。
+\ifmcmguidance
+  \begin{thebibliography}{9}
+    \bibitem{template-source} 模板示例来源：将此条替换为正文实际引用的教材、算法原始论文、数据或软件文档。
+  \end{thebibliography}
+\fi
+
+\appendix
+\section{附录：代码、数据与补充结果}
+\MCMGuide
+  {提供不打断主文但支撑复现的代码、数据字典、完整结果和运行说明。}
+  {文件清单；入口脚本；环境版本；参数；随机种子；题面硬约束--代码检查--最大违约/通过率/超限位置/修复残差表；控制输入/状态位移映射测试；坐标符号、旋转方向和节点标识不变量测试；模型提出/推导/实现/求解/验证状态表；反射方向/交点/覆盖的物理链日志或代理误差对照；经验系数来源、标定集、区间与敏感性；公式文字--单位--代码边界样例；复合极值、内外层索引和 RMS 小例；蒙特卡洛正文/代码样本量、重复、种子、区间和样本量收敛文件；每个分问输出的数据版本/哈希及下游显式读取日志；数据版本、标签字段/生成规则/逐行实体索引、类计数、实体/时间切分及集合交集输出；冻结外层测试索引；预处理器、分类器、校准器和集成权重的拟合索引/调用日志；首个 \texttt{predict} 前的 \texttt{fit}/模型载入记录；模型名--损失--拟合 API 与库参数有效性检查；指标列数/归一化循环与评价方法核心算子日志；PCA 载荷/正交性/所选列/得分维度日志；独立效标与同源一致性标记；概率定义域与正文--代码同式测试；风险乘数、单位与边界输入映射；阈值排序/尾部/标定集；类别编码、输出域、混淆矩阵和少数类指标；PD/LGD/EAD 单位表；训练回代/调参/独立测试指标文件；预测概率与决策接口；准入二元变量与连续量联动、问题对象数、候选解标识/哈希、排序和目标复算日志；阈值/变量域对照表；求解后处理与可行性日志；外部情景参数的地区/样本/时窗/区间、情景生成器与分布测试；转移计数/概率归一化/非有限数单元测试；会计恒等式单元测试；输入输出；主文引用关系。}
+  {说明性文字短而精确；代码保持可复制，不用截图。}
+  {\MCMAppendixLength；附录与正文分开控制，长代码按模块分节，超大数据以清单说明。}
+  {只保留复现所需补充图表，并与主文编号/文件名对应。}
+  {第三方能从附件目录定位输入、运行入口和输出。}
+  {主文从未引用附录；代码常量偏离正文约束；缩放器读取外层测试；估计器未拟合即预测或参数名无效；使用本机绝对路径；代码缺依赖和参数；重复粘贴主文表格。}
+
+\subsection{程序与文件清单}
+\MCMGuide
+  {建立主文结果到代码和附件的索引。}
+  {相对路径；功能；输入；输出；调用顺序；软件版本。}
+  {用表格或列表描述，不粘贴无关日志。}
+  {每个文件一行，入口文件置顶。}
+  {可放目录树；不放代码截图。}
+  {任何关键表图均能定位到生成脚本。}
+  {文件名与提交包不一致；漏写随机种子或依赖。}
+% 文件清单写在此处。
+
+% ===== 范文证据增量批注区 =====
+% 格式：[来源编号 | 来源年份 | 核验日期 YYYY-MM-DD | 原文页码/章节 | 适用题型 | 结论 | 页面复核状态]
+% 新结论只追加在本区或 ITERATION.md；不得无来源覆盖既有指引。
+% [2020_A212 | 2020 | 2026-07-29 | p.7--12,14--16,21--26 | A | 集总/PDE 选型需定量判据；阈值、变量域、单位和离散目标须正文--代码互审；退火区分提案与接受计数；多目标公开尺度与权重扰动 | 15 处原始栅格已核]
+% [2020_B078 | 2020 | 2026-07-29 | p.5,9,12,16--18,20--21,29,33,41--44,46,48 | B | 复合 B 题按信息集/状态/动作/转移/目标闭环；终值回收与完整可行域须核；情景生成、多次仿真、博弈效用、混合策略和联合状态须正文--代码互审 | 全文 1--50 页已读，16 处原始栅格已核]
+% [2020_B108 | 2020 | 2026-07-29 | p.15--17,19--20,23,25,34 | B | 区分离线全知上界与在线非预见策略；状态支配压缩须含终值残值；计数/比例/均值/标准差可互审；博弈依次检查最佳反应、纯/混合/边界均衡并保留跨阶段状态 | 全文 1--104 页已读，8 处原始栅格已核]
+% [2020_B125 | 2020 | 2026-07-29 | p.7,11--12,14,22--23,30--31,34 | B | 马尔可夫转移数、状态顺序与矩阵互审；稳态不代替逐日预测；同一非预见策略取期望，离线情景最优只作上界；概率须有限归一化，逻辑掩码与支配判定做静态测试 | 全文 1--34 页已读，9 处原始栅格已核]
+% [2020_B175 | 2020 | 2026-07-29 | p.17,19,22,25,31,36,38--39 | B | MDP 状态须充分；稳态/预测/随机生成器参数同源；单条路径只作示例；累积量常量覆盖阻断复现；效率/公平目标须闭合偏好并验证多人求解 | 全文 1--39 页已读，8 处原始栅格已核]
+% [2020_C109 | 2020 | 2026-07-29 | p.12,14,19,27,59--60,76--77 | C | 数据谱系、训练回代/独立测试口径和级联误差须分开；整数松弛、结果驱动假设及求解后折扣均须披露并重新验算可行性 | 全文 1--77 页已读，8 处原始栅格已核]
+% [2020_C142 | 2020 | 2026-07-29 | p.10,14,17,19,23,35,38,44 | C | 概率须守界且正文--代码同式；PCA 只整列换向并核对选列/得分维度；训练测试实体交集为零；主观冲击归一化进入代码；最优目标与导出策略以解标识同源并复算 | 全文 1--45 页已读，8 处原始栅格已核]
+% [2020_C170 | 2020 | 2026-07-29 | p.15,17,19,22,24,36--38 | C | 评价方法的公式步骤、代码核心算子和归一化列数须同源；阈值声明排序方向与尾部；有序分类报告少数类/宏平均指标和输出域；PD/LGD/EAD 做量纲表；正文样本数与代码数组/分组维度一致 | 全文 1--40 页已读，8 处原始栅格已核]
+% [2020_C227 | 2020 | 2026-07-29 | p.7,9--10,12,18,25,31,35 | C | 外层测试不得参与缩放/集成权重；分类同时报告基线、少数类、PR-AUC/校准；首个 predict 前必须 fit 且参数名有效；正文 (1+Q) 与代码 q、单位和边界输入逐项同式；聚类数/风险乘数/流失率须重求解敏感性 | 全文 1--35 页已读，8 处原始栅格已核]
+% [2020_C305 | 2020 | 2026-07-29 | p.7,10,13,19,43--44,52--53 | C | 标签逐行溯源且 Logistic 由二项拟合 API 支撑；可选贷款用 z--x 联动；正文公式、代码与结果同式并复算可行性；同源 PCA 不作独立验证；情景参数带来源与敏感性 | 全文 1--53 页已读，8 处原始栅格已核]
+% [2021_A028 | 2021 | 2026-07-29 | p.13--14,17,25,28,31--32,35--36,38 | A | 题面索长/邻距约束进入模型和残差；控制方向不等于状态位移方向；复合极值与索引用小例核对；启发式收敛不冒充全局最优；蒙特卡洛正文/代码预算同源；跨分问结果以版本/哈希显式衔接 | 全文 1--38 页已读，10 处原始栅格已核]
+% [2021_A115 | 2021 | 2026-07-29 | p.10,16,18,21,24--25,28,33 | A | 硬约束违约须标明不可行/近似可行并报告最大违约与通过率；模型状态区分提案/实现/求解；坐标符号与方向做不变量测试；几何接收率闭合光路或标明代理误差；经验系数须标定；程序有输出不等于稳定 | 全文 1--35 页已读，8 处原始栅格已核]
+% [2021_A217 | 2021 | 2026-07-30 | p.1--3,6--12,20--31,37--39,52--59 | A | 以“注意到……故……”把对称性接到一维驻点，以“考虑到……本文将……”说明坐标与口径选择；同一坐标系贯通面板姿态、遮挡和射线追迹；公式后解释几何意义，成对图按图左/图右完成比较 | 全文 1--59 页已读，关键原始栅格已核]
+% [2022_A001 | 2022 | 2026-07-30 | p.1--37；重点 p.7,11,13,16,18,20,21,35 | A | 坐标/受力平衡接一阶状态 RK4；前期不稳定触发 100--180 s 稳定窗；粗略遍历后 GA 求精；周期误差与 +/-1% 惯量扰动分别承担检验/可靠性 | 全文 1--37 页已读，8 项原始栅格已核]
+% [2022_A022 | 2022 | 2026-07-30 | p.1--30；重点 p.6--9,12,16--18 | A | 先以平衡位高排除浸没边界；由前问结果授权复数解/数值积分；相对垂荡小才采用非惯性系纵摇近似；图形显示旋转阻尼单调后置上界并局部加密纵摇阻尼 | 全文 1--30 页已读，8 项原始栅格已核]
+% [2021_B007 | 2021 | 2026-07-30 | p.1--3,5--8,11--17,19--23,39--45 | B | 以“观察附件……发现……”起笔，按数据转换、同口径模型比较、基线缺口、交互改进、优化和补充实验展开；结果成对报告无温度限制/温度受限方案；实验设计写明备选方法及舍弃理由 | 全文 1--45 页已读，7 处原始栅格已核]
+% [2021_B026 | 2021 | 2026-07-30 | p.1--8,11,19--26（按错页装订顺序） | B | 先以三次样条统一温度水平，再由散点与转化率上界引出 Logistic；方差分析和多重比较定位因素/水平，五元/三元二次回归分别处理两种装料方式；每个新增实验都对应一个前文证据缺口，结果按全温区/受限温区成对报告 | 全文 1--26 页已读，6 处原始栅格已核]
+% [2021_B050 | 2021 | 2026-07-30 | p.1--7,13,16--26,27--59 | B | 以样本数和自由度裁决高阶拟合；用调整后 R 方逐层触发非线性变换与交互项；先说明回归规划的具体不足再切换 BP；五次实验分为三次峰值探索与两次预测确认，模型权重进入实验变量筛选 | 全文 1--59 页已读，8 处原始栅格已核]
+% [2021_B160 | 2021 | 2026-07-30 | p.1--28；重点 p.3,9--20 | B | 曲线形态与复杂度边界共同选型；控制变量写全保持量、改变量、组别和双响应；共线性诊断后修模；按相对/绝对/整体检验解释回归；实验预先绑定裁决用途 | 全文 1--28 页已读，6 项原始栅格已核]
+% [2022_B030 | 2022 | 2026-07-30 | p.1--42；重点 p.5--16、p.17--25 | B | 完整分类后以旋转对称压缩分支；遍历写清固定量、范围和产物；旧模型复用先授权；长结果分流到支撑材料；结果按读数—原因—让步—整体对照推进 | 全文 1--42 页已读，8 项原始栅格已核]
+% [2022_B035 | 2022 | 2026-07-30 | p.1--41；重点 p.4--22 | B | 先显露极坐标分区负担，再以定弦定角两圆轨迹换模；误差按数值例、短弧、端点、变化界和区间穷举证明；前视搜索保留局部让步并解释全局反转；六轮数值极限与五轮 16 架次实用停止分开；复用前审计共线/共圆退化 | 全文 1--41 页已读，p.6、9、13、14、17、18、19、22 共 8 项原始栅格已核]
+% [2022_B086 | 2022 | 2026-07-30 | p.1--32；重点 p.5--25 | B | 解析双解与角集合判号；径向预处理同时给 5% 误差界和搜索收益；局部角目标与事后全局评价分开；两方案按收敛、稳态误差与资源代理裁决并披露代理边界；三引理由控制量映射到具体机群；单组数据不足后做十组高斯扰动 | 全文 1--32 页已读，p.6、10、12、18、19、22、24、25 共 8 项原始栅格已核]
+% [2022_C155 | 2022 | 2026-07-30 | p.1--41；重点 p.4、6、12、15--16、19、24、28 | C | 缺失字段按题面语义分流；检验先核期望计数再选 Pearson/Yates；前问趋势给聚类赋义且聚类反向核对；R 方门控预测/不变策略；异常距离局部压缩后逆变换并核闭合；R 型分变量、Q 型分样本；固定参考序列比较类型关联分布 | 全文 1--41 页已读，8 项原始 JPEG 栅格已核，p.6、13、19 另经 220 DPI Tesseract chi_sim+eng 复识]
+% [2022_C229 | 2022 | 2026-07-30 | p.1--26；重点 p.4--6、11--14、17、19 | C | 同一颜色字段按候选参考质量分流热卡/众数；空白和报表零按近似零值乘法替换后闭合；主导成分用全图/去除图配对解释；简单 PbO 树给可解释规则、PLS-DA/VIP 复核；无标签亚类转无监督并诚实限定粗分；RMSEP 与解释率共同定维；对称矩阵取上三角后作配对 Wilcoxon | 全文 1--26 页已读，p.4、5、6、11、12、13、17、19 共 8 项原始栅格已核，p.4、12、14 另经 220 DPI Tesseract chi_sim+eng 复识]
+% [2023_A0127 | 2023 | 2026-07-30 | p.1--58；重点 p.2--3、8--12、15--26、29--32、33--58 | A | 正向计算/反问题/放宽约束先定分问关系；题面已知量后隔离五类效率；塔影简化给数量、对称与统计补偿依据；坐标转移落成交点内外判定；云图直接触发塔址与布场方向；二分/粗搜/精化回应计算预算；灵敏度写范围、方向、饱和和分效率排序 | 全文 1--58 页已读，p.8、10、12、15、18（两处）、24、26 共 8 项关键栅格已核]
+% [2023_A0165 | 2023 | 2026-07-30 | p.1--45；重点 p.1、3、6、12--23 | A | 摘要按传播阶段交付中间量；矩形转两三角形等价判定；六近邻栅格和锥形光斑复用求交接口；2×2 快速核给不足 2% 的偏差边界；固定其余变量读单峰后作三分搜索；空间散点触发塔向南移；问题三冻结 W、D 与位置，只开放各圈高度；改采样时刻核对峰值随太阳视运动迁移 | 全文 1--45 页已读，p.15、18、19、21、22、23 共 6 项关键栅格已核，p.18、21 另经 220 DPI Tesseract chi_sim+eng 复识]
+% [2023_A0175 | 2023 | 2026-07-30 | p.1--39；重点 p.5--21、p.22--39 代码 | A | 阻断判断按条件分支逐级传播；全配对负担由物理局部性和距离阈值压为邻接候选；步长序列在增益趋缓后谨慎选取工作值；基线扫描后冻结弱影响变量；10\%$\times$10 粗评估接 30\%$\times$5 细复算；硬阈值达标后继续讨论删减高遮挡镜面与次目标 | 全文 1--39 页已读，p.14、18、20、21 共 4 项关键栅格已核]
+% [2023_A092 | 2023 | 2026-07-30 | p.1--53；重点 p.3--4、9--21、26--31、34--53 代码 | A | 可直接量逐项剥离后只把截断效率交给蒙特卡洛；遮挡并集重叠触发镜面离散计数；序号曲线提出空间猜想并以代表时刻二维图复核；双方向扰动由东西对称抵消冻结一轴；前问同心圆结构与各向同性把逐镜变量压为逐圈变量；100 组随机可行解只作样本背景 | 全文 1--53 页已读，p.10、12、17、19、26、28、29、31 共 8 项关键栅格已核，p.10、19、22、27、29、30 经 220 DPI Tesseract chi_sim+eng 复识]
+% [2021_C006 | 2021 | 2026-07-30 | p.1--60；重点 p.8--11,14,20--28 | C | 潜变量落到可观测代理；双理由否决便利口径；逐期状态、总体/代表时点、有限改善和模块沿用均写明接口 | 全文 1--60 页已读，4 项原始栅格已核]
+% [2021_C085 | 2021 | 2026-07-30 | p.1--56；重点 p.6--8,13--17,21--23 | C | 指标按定义/方向/业务含义展开；固定权重的单周失败触发缺口重赋权；连续淡季决定两周窗口；成本与产能统一口径；大项预拆、背包和残项补救按角色接力 | 全文 1--56 页已读，p.8、13、15、21 共 4 项原始栅格已核]
+% [2021_C169 | 2021 | 2026-07-30 | p.1--51；重点 p.5--8,13--16,19,21--25,27--30 | C | 非对称业务后果先转成函数条件；观察规律后给出不纳模理由；历史同位状态确定初值；先判记忆再逐周拆分；候选集用尾部数量级/覆盖比例/经济代价裁剪；逐周局部结果按任务语义取最大或最小 | 全文 1--51 页已读，p.6、10、17、24、28--29 共 5 项原始栅格已核]
+% [2023_C050 | 2023 | 2026-07-31 | p.1--44；重点 p.4--25、p.27--44 附录与代码 | C | 数据侧写逐图接下游判断；代表对象先给规则并指向附件；回归系数译回 kg/元；特征按对象/口径/代理语义/用途说明；附件内证据与外部数据分流；代理量保留竞争机制、追加证据和分情形动作 | 全文 1--44 页已读，p.7、14、18、21、23、25、26、27 共 8 项关键栅格已核；代码已读未运行]
+% [2023_C126 | 2023 | 2026-07-31 | p.1--74；重点 p.1--18、p.20--74 支撑材料与代码 | C | 数据病态与计算负担触发同期平均；T/F 压缩相关矩阵；经营时滞授权 VAR(2)；检验表先导读再限定结论；负预测译为余货/折价/不补货；频率规则独立核对名单；预测、上期状态与业务下限逐项进入优化 | 全文 1--74 页已读，p.4、6、10、13、14、17、23、69 共 8 项关键栅格已核；BUGS、R、EViews、LINGO 未独立运行]
+% [2023_C228 | 2023 | 2026-07-31 | p.1--70；重点 p.1--30 正文、p.31--70 支撑表与代码 | C | 开放题先聚焦时间/销售/关系观察面；周期读数接生活机制；候选预测效果不佳后改 LSTM；缺失/短窗/随机性触发加权平均；连续变量转 0/1+连续后改混合编码 NSGA-II；弹性修正显式接入收益与约束；结果用同季历史基线解释；补采建议从成本模型边界长出 | 全文 1--70 页已读，p.1、4、10、17、20、24、29、56 共 8 项关键栅格已核；代码已读未运行]
+% [2024_A016 | 2024 | 2026-07-31 | p.1--59；重点 p.1--31 正文、p.33--59 MATLAB | A | 全局运动压成相邻把手递推；物理顺序和局部小角度裁决多根；轨迹继承将首次碰撞缩到龙头/第二板凳；时间与螺距搜索保留越界、回退和缩步；相切比例几何证明调头总弧长固定；四区域复用列明方向/符号改变；速度齐次性授权整体缩放；最小步长转成误差界 | 全文 1--59 页已读，p.1、9、14、21、29、30、31、44 共 8 项关键栅格已核；代码已读未运行]
+% [2024_A053 | 2024 | 2026-07-31 | p.1--62 | A | 物理次序选根；首次碰撞反证逐节前推；事件对象切换解释跳变；全过程反例裁决终点简化；由“不能倒退”推出半径下界；局部轨迹解释速度突增 | 62/62 页、9 项栅格已核；EV-20260731-A053-STYLE-01]
+% [2024_A163 | 2024 | 2026-07-31 | p.1--44 | A | 先证明自由度，再由全局图缩到局部搜索；按状态类别、运动方向和步长写递推 | 44/44 页、8 项栅格已核；EV-20260731-A163-STYLE-01]
+% [2024_A178 | 2024 | 2026-07-31 | p.1--48 | A | 代理圆只夹区间，四角点作最终判定；机制猜想再跨条件核验 | 48/48 页、8 项栅格已核；EV-20260731-A178-STYLE-01]
+% [2024_A242 | 2024 | 2026-07-31 | p.1--58 | A | 物理下界与可行上界共同授权优化区间；仿真、几何和速度分别承担验证 | 58/58 页、8 项栅格已核；EV-20260731-A242-STYLE-01]
+% [2025_A196 | 2025 | 2026-08-01 | p.1--34 | A | 先证明区间连通再二分；理论误差、输出精度、多初值结果分开；近似法只供初值 | 34/34 页、8 项栅格已核；EV-20260801-A196-STYLE-01]
+% [2024_B159 | 2024 | 2026-07-31 | p.1--37 | B | 由决策者更在意哪类错误确定 H0/H1；复杂度增加才换模型；后问只替换不确定性输入 | 37/37 页、8 项栅格已核；EV-20260731-B159-STYLE-01]
+% [2024_B195 | 2024 | 2026-07-31 | p.1--70 | B | 无实测样本先公开模拟器；成本与状态闭合后压缩重复步骤；保留长短期偏好取舍 | 70/70 页、8 项栅格已核；EV-20260731-B195-STYLE-01]
+% [2024_B196 | 2024 | 2026-07-31 | p.1--28 | B | 结构计数授权搜索切换；热点映射到执行；扰动按变化节点和成本原因解释 | 28/28 页、8 项栅格已核；EV-20260731-B196-STYLE-01]
+% [2025_B060 | 2025 | 2026-08-01 | p.1--72 | B | 局部与全曲线反演分工；中间谱差重新传入厚度模型；异常点按机制解释 | 72/72 页、8 项栅格已核；EV-20260801-B060-STYLE-01]
+% [2025_B157 | 2025 | 2026-08-01 | p.1--67 | B | 先写干扰对下游的伤害再预处理；主量不变而局部残差下降时收窄修正作用 | 67/67 页、3 项栅格已核；EV-20260801-B157-STYLE-01]
+% [2024_C038 | 2024 | 2026-07-31 | p.1--61 | C | 图表观察进入约束；风险下降与利润牺牲并列；联合不利情景与单因素扰动分开 | 61/61 页、8 项栅格已核；EV-20260731-C038-STYLE-01]
+% [2024_C063 | 2024 | 2026-07-31 | p.1--49 | C | 典型情景解释、共同环境裁决；先写最坏后果再给风险准则 | 49/49 页、8 项栅格已核；EV-20260731-C063-STYLE-01]
+% [2024_C094 | 2024 | 2026-08-01 | p.1--58 | C | 管理语言落成 p/q 参数；候选在共同环境复评；替代关系须通过需求和目标双门 | 58/58 页、8 项栅格已核；EV-20260801-C094-STYLE-01]
+% [2024_C234 | 2024 | 2026-08-01 | p.1--45 | C | 数据表决定索引；三类真实邻接进入编码；收敛、约束形状和极端基线共同核验 | 45/45 页、8 项栅格已核；EV-20260801-C234-STYLE-01]
+% [2025_C023 | 2025 | 2026-08-01 | p.1--28 | C | 安全、及时、可执行损失分开；校准与决策分开；可疑结果落为复测动作 | 28/28 页、3 项栅格已核；EV-20260801-C023-STYLE-01]
+% [2025_C132 | 2025 | 2026-08-01 | p.1--65 | C | 检测行先还原为孕妇；三级证据回退；静态、时序、删失风险分工；总体、少数类、样本数并列 | 65/65 页、3 项栅格已核；EV-20260801-C132-STYLE-01]
+% ===== 批注区结束 =====
+
+\end{document}

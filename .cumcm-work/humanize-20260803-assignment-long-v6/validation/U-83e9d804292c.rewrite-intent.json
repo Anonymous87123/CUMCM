@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "b545d49d5ca9b246e5a71fbb01f511b230c15dee56e6aa9e94fd14f173a4dc63",
+    "before_sha256": "b545d49d5ca9b246e5a71fbb01f511b230c15dee56e6aa9e94fd14f173a4dc63"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "91e0ecb3f3d6aae297c95408016581c1d31f4db7cb5f2773d86edc4d3b18a872",
+  "chunk_binding_sha256": "58378b51afdcfbb0a8608c6fe48ef19ea08aa42f6658031d71d44963586f465b",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-83e9d804292c.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "e80616c20327ec97c6850ee7c4ee891570c9ca7a455a34eb9af80979a41e7040",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 1,
+        "id": "S1",
+        "sha256": "5f1be1bcef0c86f0fe99d7e77853b2e14ade22745deb91fc73a6b9a8c98abb5e",
+        "start_line": 1
+      }
+    ],
+    "reason": "59 篇编号论文的结构与写作分析 / 可复用表达与 边界中的定义、对象和条件承担后续对应关系，原句保持这些信息的排列与范围。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "4120977c4383ede040332ea6c2810d3c17ebb3cb05bbc8c668e84539bdbe7aaf",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-83e9d804292c"
+}

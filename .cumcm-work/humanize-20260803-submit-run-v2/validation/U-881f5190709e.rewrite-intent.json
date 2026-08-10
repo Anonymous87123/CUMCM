@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "1e70743640f506ded5d3f6b6cbcaba17ad8fff50abeb92f78330776aeee3b174",
+    "before_sha256": "1e70743640f506ded5d3f6b6cbcaba17ad8fff50abeb92f78330776aeee3b174"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "3b89c853444890558a8f0c74b96db48f38dd9af68cfc675740b53e1915d575a8",
+  "chunk_binding_sha256": "73d9ef084908c16160d8ea4b8453c09985dfc0e8527bb168e0f6a4290a8f5387",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-881f5190709e.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "8c7a8d74b31779dd35f80994efc07adcd005d356aaa44ed9b31c18c5a2b09340",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 7,
+        "id": "S1",
+        "sha256": "a2a93cfd50d7b7d013b3127456096ebf998d3fa90bf8e1fc77c9e6d0947bf342",
+        "start_line": 1
+      }
+    ],
+    "reason": "本节是问题分析的三项固定指引，原句区分难点识别、任务拆解与方法清单核对。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "df69c42ff9a280359cf90291a9b7af7f15bcc26d46fba9b50f7ca11405d932ad",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-881f5190709e"
+}

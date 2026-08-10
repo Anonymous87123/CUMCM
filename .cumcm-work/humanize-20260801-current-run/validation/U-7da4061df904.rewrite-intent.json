@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "1bea382bb6eb9ef091495adb3eb1f7fea2afaa13be2b3334a1eb99b5a9f819fd",
+    "before_sha256": "1bea382bb6eb9ef091495adb3eb1f7fea2afaa13be2b3334a1eb99b5a9f819fd"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "8d4f1cb66b20420cfc661b7d1582f7ab53db61402d0312c86a9058525452454d",
+  "chunk_binding_sha256": "f813051132d00417ad4b7234f2808226d2b512298061c8e67865732641f70883",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-7da4061df904.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "1a106355c864f87b003bed0fb14460a2a7125df47c70e8e197516dcb6c32572b",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "16f6b10e33a377a4ba7329c024d67b7625cb08fd056064b4c75042ab4b9e1625",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“59 篇编号论文的结构与写作分析 / A/B/C 三类论文的微观文风 / A 类：先交代机制，再讨论数值”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "78611214b43eb53e6bd4e7a0a8ee2b5923e4efae226322cfb5e0fa080c990e87",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-7da4061df904"
+}

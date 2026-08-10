@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "21c64266b3b169e0dd74f1ff95cc5d101675663bc560e3b7247b5b34969d89f9",
+    "before_sha256": "21c64266b3b169e0dd74f1ff95cc5d101675663bc560e3b7247b5b34969d89f9"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "36cc126e0776836fc3aa8c0bc739326b17f7925bb0470f693c7deffc7ec9eeec",
+  "chunk_binding_sha256": "d898beb22300f1fe838c9aae46e3ec654a9c61a362490450831b747b8824be38",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-bda9a1059824.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "554cdf54637c87b5781637caa6cca32601c473e81314792e622e894f2781a3cc",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "714a1545363c7aae26d729389f8defdfe066978512a980426bab4b36dcb82668",
+        "start_line": 3
+      }
+    ],
+    "reason": "本单元承担“C 类：数据口径、隔离验证与决策解释并重”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "1723cb0da9a9ecf513e460196f34f40b88fc00cb07569f2652d16cfb97c15ad8",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-bda9a1059824"
+}

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "cfd37452259c364ba20003e533a9fb095e901f9558a02e1628650cef04ec457b",
+    "before_sha256": "cfd37452259c364ba20003e533a9fb095e901f9558a02e1628650cef04ec457b"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "9229b12d0872be8ac78039744b4ca6bbe2a3a3cfebdc9c261a9ea217cd499c6c",
+  "chunk_binding_sha256": "c7310683955f450633a44e72f3769bca92430645cbb5ca405aa5e9fc7e5e8ba7",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-cab7a031c2a2.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "00aee31857e76c69ec8b38cefc43ca3b713a4e2cd25114d53a16b51111e07446",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "bd7a9490bae1132a501c6d96130a5d661d5b7c6203d7b2cfa9050d4953303267",
+        "start_line": 3
+      }
+    ],
+    "reason": "本单元承担“当前真实短板”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "10f7bcb012219edce2ca3a5324e699b98ff48b4cd81998de7e0fd76e2ecf140e",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-cab7a031c2a2"
+}

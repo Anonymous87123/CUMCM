@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "e1c3fc1d635458e94716f4fcfdb7bb45fb48eb54542cc7fd08096fdd57cc80ce",
+    "before_sha256": "e1c3fc1d635458e94716f4fcfdb7bb45fb48eb54542cc7fd08096fdd57cc80ce"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "b826eef5db3e3b4af990e48fb69220c9b1665df5fae921d8ee7381ebc4e80c76",
+  "chunk_binding_sha256": "1723e690b1ad8a6f8f65393511e85776541c28bece7df5e2a5211ee80ce71917",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-867293a569a0.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "8696895e3adbeaffa59a9a46bd5b97ae04cfd77410e08e13d52df0c79e39f8ab",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "66a412519c55394645941666ea30cad1c9a40eef836df16a8063ca1b3435aa25",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段落承担“高频失分点”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "641895c7277ebce43904ec0938e9e408348c65ca8663198920eaf80663183ea4",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-867293a569a0"
+}

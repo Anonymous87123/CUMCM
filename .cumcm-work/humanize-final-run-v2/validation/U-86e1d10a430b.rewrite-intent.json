@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "0c024b7e7cac41c152b7fe80a81f8c9377360666c9e1e3b0fd5b8b6968fc0181",
+    "before_sha256": "0c024b7e7cac41c152b7fe80a81f8c9377360666c9e1e3b0fd5b8b6968fc0181"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "8e770d0fb8b731012f559f4ac93aa2088c7125e8f0f593b4e12afe11bcf7c354",
+  "chunk_binding_sha256": "6ea7732664c7bacbf019572aff5caecd06f4eec0f85e4028e6c7f2619aca12fc",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-86e1d10a430b.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "d3e8410b0d0842ce1602b9512bcf2950ba2b198b4d67601ffd79baab395d36e1",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 10,
+        "id": "S1",
+        "sha256": "4e1db96dce2dc988428be3650126677be3bf694df058c228ea192f84d788c1d4",
+        "start_line": 1
+      }
+    ],
+    "reason": "逐行复核该单元，原段落的术语、因果条件、数值范围和证据限定均有明确功能，故保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "76fa3b2cbde3e1bd30d2ba82be2af599ccbf87de36f7be62775e5c03d5857a2a",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-86e1d10a430b"
+}

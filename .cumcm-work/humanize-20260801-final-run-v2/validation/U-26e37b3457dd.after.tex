@@ -1,0 +1,20 @@
+\subsubsection{开源代码逻辑、优缺点与边界}
+
+代码流水线为：
+\begin{quote}
+\small\ttfamily
+data -> instance -> model -> solver -> repair\\
+-> evaluate -> simulate -> report
+\end{quote}
+Python 用 PuLP/Pyomo 或 SciPy 建立确定性基线，用
+NetworkX 验证图算法接口；MATLAB 用 Optimization Toolbox/Global Optimization
+Toolbox 建立第二实现。随机算法统一接收种子、预算和停止阈值，输出每代最优值、
+可行率及 Pareto 集。仿真模块只通过明确的数据类接收方案，禁止在仿真循环内
+偷偷改变约束。
+
+精确规划的优势是可解释、可复算并可给上下界，缺点是非凸或大规模整数问题可能
+耗时；启发式的优势是能处理混合和非光滑结构，缺点是没有全局最优保证且对参数
+敏感。模型边界由结构而非题型标签决定：可线性化的约束先线性化；不确定性已知
+分布可用随机规划或 Monte Carlo，只有区间信息时优先稳健情景；动态图路径与
+静态最短路分开处理。
+

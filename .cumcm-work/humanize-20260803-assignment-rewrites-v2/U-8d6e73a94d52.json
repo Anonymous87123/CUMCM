@@ -1,0 +1,91 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-8d6e73a94d52",
+  "chunk_binding_sha256": "90f1207014cd8b077f05b0042cfd496eba7932f4feea8867b4e7f13040d7e0ec",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "8cd38067072b5191",
+    "prepare_integrity_sha256": "cda44ea18c8aa5b6b97fbc6093ba29450511f52eb3056235a675e3db78f2c630",
+    "run_metadata_sha256": "11ad09c96e88a441b112d4c840cec6236153159f10cb19e992ebfba1c8bb7f5d",
+    "policy_snapshot_sha256": "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "eba71855409d6a3c4570e3ddcb487e56ab77996bc3dde98146bf78dd30b00b94",
+      "unit_id": "U-8d6e73a94d52",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 11014,
+      "end": 11374,
+      "start_line": 371,
+      "end_line": 383,
+      "source_span_sha256": "745ec1ad1524f0de280b516165e7f2ca3ab843928aff937bd086baf164e43918",
+      "masked_text_sha256": "5bb29bbac146751dc60f2dab201801bd49acd95244eacab8a06258d6bf036e33",
+      "chunk_binding_sha256": "90f1207014cd8b077f05b0042cfd496eba7932f4feea8867b4e7f13040d7e0ec"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "2fe0abf8da3d92e880331826bebb2d022b1500bada4d063df049f00375425490",
+      "routing_input_sha256": "bdeb65ffe6a58c01febc049db8c34854fa30d9eaf9fdfdb7d1e5d80885ad832b"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "0a54d6ced5a4e6ce69e0234569c48e5b2e928f6dd0d8b687f1e5127b1cf4d8aa"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00194:c29930c8ff81]]\n\n三人共同维护数据契约、配置文件、日志和结果目录。MATLAB 适合快速矩阵推导、\n数值求解与官方工具箱复核；Python 适合数据 pipeline、开源模型、自动化测试和\n制图。关键结果至少满足[[PROTECTED:F00001-P00195:ded3dc5440a4]]或[[PROTECTED:F00001-P00196:c7350d4d40b8]]之一。\n误差分析统一区分测量误差、参数误差、模型结构误差、离散误差和随机算法波动，\n不能只举出一个综合误差率。\n\n选题时先在两小时内完成任务矩阵：状态量和守恒关系占主导时优先 A 类机理线；\n离散资源、路径、排程和策略占主导时优先 B 类优化线；附件数据、预测、评价和\n不确定决策占主导时优先 C 类数据线。最终决定同时考虑题意闭合度、可验证性、\n团队代码储备和结果文件要求，而不是依据[[PROTECTED:F00001-P00197:fbcaa49b9396]]。\n\n",
+  "rewrite_intent": {
+    "summary": "删除工作台式词壳，保留对象、动作、条件和结论边界",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 7,
+        "end_line": 7,
+        "sha256": "a10073bfe922f2f8c7f6a533be675e6cac5e777fa23f4f02e675f02f9d0446f5"
+      }
+    ],
+    "target_signals": [
+      "LEX-STRICT-CORPUS-DIRECT-ACTION"
+    ]
+  }
+}

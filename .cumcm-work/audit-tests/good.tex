@@ -1,0 +1,39 @@
+\documentclass{ctexart}
+\begin{document}
+\begin{abstract}
+针对数据决策问题，本文完成数据清洗、特征构造、预测和交叉验证，并报告误差。
+\keywords{数据清洗；预测；交叉验证}
+\end{abstract}
+\section{问题重述}
+给定观测数据，需要建立评价与预测模型，并输出可复算的决策结果。
+\section{问题分析}
+先检查缺失与异常，再构造描述统计和特征；训练集用于拟合，验证集用于独立评价。
+\section{模型假设}
+观测口径在研究期内保持一致，缺失机制在给定特征条件下可忽略。
+\section{符号说明}
+$x_i$ 表示第 $i$ 个样本的特征，$y_i$ 表示响应变量。
+\section{分问题模型建立与求解}
+采用稳健缩放处理连续变量，以回归模型为基线，再用交叉验证选择参数。
+\begin{table}[htbp]
+\centering
+\caption{主要误差指标}
+\label{tab:metric}
+\begin{tabular}{cc}指标&数值\\MAE&0.12\end{tabular}
+\end{table}
+\section{结果分析}
+表~\ref{tab:metric} 表明验证集 MAE 为 0.12；相比训练误差，差值处于预设容差内，
+说明模型没有出现明显过拟合。残差方向在主要特征区间内没有系统偏移，约束均满足，
+因此结果可用于题设范围内的排序决策；这一判断不外推到观测区间之外。
+\section{模型检验}
+采用五折交叉验证与留出集对照，记录 MAE、RMSE 和残差分布。
+\section{灵敏度与稳健性分析}
+改变正则参数并重复训练，记录排序变化和误差区间。
+\section{模型评价与改进}
+模型可解释且能复算；对极端样本仍敏感，后续以稳健损失并按相同验证协议比较。
+\begin{thebibliography}{9}
+\bibitem{source} 数据分析方法参考资料。
+\end{thebibliography}
+\appendix
+\section{附录：代码与运行说明}
+入口脚本依次执行清洗、训练、交叉验证和结果导出，并固定随机种子。
+\end{document}

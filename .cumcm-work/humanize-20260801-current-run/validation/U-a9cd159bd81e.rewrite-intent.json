@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "cfd37452259c364ba20003e533a9fb095e901f9558a02e1628650cef04ec457b",
+    "before_sha256": "cfd37452259c364ba20003e533a9fb095e901f9558a02e1628650cef04ec457b"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "058398dd7a7114d05e532ed2bbe2d569fc5cb1f24e09cc9754959a912b066e91",
+  "chunk_binding_sha256": "315669724b8ec42ff78f5408b30f42bde513bfd933740f0916d143a8ba6df68e",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-a9cd159bd81e.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "d4ce6c42764884d04b8877aa3a75ba045013f83947cfc917710f9d0dcf577e7d",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "db2395501bc34d236c05e7945d5da590b0a83ae56701be88278b3436faa83994",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“理论知识学习笔记 / 阶段成果、真实短板与四周计划 / 当前真实短板”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "10f7bcb012219edce2ca3a5324e699b98ff48b4cd81998de7e0fd76e2ecf140e",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-a9cd159bd81e"
+}

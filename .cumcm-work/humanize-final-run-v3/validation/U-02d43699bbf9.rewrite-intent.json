@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "0a822826d0ad334b1cc50b0c6c47d50cb9fb63cc189703087527dd634d6d59dc",
+    "before_sha256": "0a822826d0ad334b1cc50b0c6c47d50cb9fb63cc189703087527dd634d6d59dc"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "8216b33537309b9d89a236830f93ff634837b442e19e22bec2c2e3ab97e88f11",
+  "chunk_binding_sha256": "fe6e3c626569a2a38747b16c854ce4788809a1a10193cdd335f40a59c5190d78",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-02d43699bbf9.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "975683053398a92f97c99bf18f20f7637717f6cb19dbb381f47578e0a3c0ca78",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "34de689c907111141466b64c39767559578352733add3f789c6ce53bbfdd99cc",
+        "start_line": 3
+      }
+    ],
+    "reason": "本单元承担“A 类：先交代机制，再讨论数值”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "0a3f834a8b62664b4626e6f88ae098415a6dbc395b18ce2c6b56ed7551f13ccf",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-02d43699bbf9"
+}

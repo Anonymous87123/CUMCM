@@ -1,0 +1,582 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "candidate_assembly_exit_code": 0,
+  "candidate_assembly_status": "PASS",
+  "delivery_gate_exit_code": 2,
+  "delivery_gate_status": "REVIEW",
+  "draft_surface_source_check": {
+    "details": {},
+    "scope": [],
+    "semantic_entailment_certified": false,
+    "status": "N/A"
+  },
+  "evidence": {
+    "after_path": "validation/U-d0cbb9bb18c5.after.tex",
+    "after_sha256": "745ec1ad1524f0de280b516165e7f2ca3ab843928aff937bd086baf164e43918",
+    "before_path": "validation/U-d0cbb9bb18c5.before.tex",
+    "before_sha256": "745ec1ad1524f0de280b516165e7f2ca3ab843928aff937bd086baf164e43918",
+    "checker_executed": true,
+    "document_format": "tex",
+    "document_scope": "FRAGMENT",
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "d8b73b0b9fa21ae32c13270641c3f42d747ef4fcacd47faf22a48ef1558db85c",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "0f37aded1f6c7776c0b5c23532f116c96e84b77e7bd1b92ad09b004039a5a7de",
+      "scanner_sha256": "1753891b4383dcbf129fa7b1c21f060cb9daa339f17c8442f4641152c3b7848e",
+      "validator_sha256": "852a57f4ecf669695101bbfc4f6251b0aed8e9ebbef749051a59bfe009de6d75"
+    },
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "source_path_archived": false
+  },
+  "exit_code": 2,
+  "hard_invariant_layer_status": "PASS",
+  "humanize_quality_claim_allowed": false,
+  "introduced_findings": [],
+  "invariants": {
+    "advisories": [],
+    "errors": [],
+    "evidence": {
+      "document_scope": "FRAGMENT",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "speech_act_audit": {
+        "categories": {
+          "assumption": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "attribution_source": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "condition": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "definition_naming": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "focus_scope": {
+            "after": {
+              "优先": 3
+            },
+            "after_occurrences": [
+              {
+                "category": "focus_scope",
+                "claim_id": "C0011",
+                "column": 29,
+                "end": 242,
+                "end_column": 31,
+                "end_line": 9,
+                "line": 9,
+                "marker": "优先",
+                "sentence_context": "选题时先在两小时内完成任务矩阵：状态量和守恒关系占主导时优先 A 类机理线",
+                "sentence_id": "T0010",
+                "side": "after",
+                "start": 240
+              },
+              {
+                "category": "focus_scope",
+                "claim_id": "C0012",
+                "column": 18,
+                "end": 270,
+                "end_column": 20,
+                "end_line": 10,
+                "line": 10,
+                "marker": "优先",
+                "sentence_context": "离散资源、路径、排程和策略占主导时优先 B 类优化线",
+                "sentence_id": "T0011",
+                "side": "after",
+                "start": 268
+              },
+              {
+                "category": "focus_scope",
+                "claim_id": "C0014",
+                "column": 10,
+                "end": 301,
+                "end_column": 12,
+                "end_line": 11,
+                "line": 11,
+                "marker": "优先",
+                "sentence_context": "不确定决策占主导时优先 C 类数据线",
+                "sentence_id": "T0013",
+                "side": "after",
+                "start": 299
+              }
+            ],
+            "before": {
+              "优先": 3
+            },
+            "before_occurrences": [
+              {
+                "category": "focus_scope",
+                "claim_id": "C0011",
+                "column": 29,
+                "end": 242,
+                "end_column": 31,
+                "end_line": 9,
+                "line": 9,
+                "marker": "优先",
+                "sentence_context": "选题时先在两小时内完成任务矩阵：状态量和守恒关系占主导时优先 A 类机理线",
+                "sentence_id": "T0010",
+                "side": "before",
+                "start": 240
+              },
+              {
+                "category": "focus_scope",
+                "claim_id": "C0012",
+                "column": 18,
+                "end": 270,
+                "end_column": 20,
+                "end_line": 10,
+                "line": 10,
+                "marker": "优先",
+                "sentence_context": "离散资源、路径、排程和策略占主导时优先 B 类优化线",
+                "sentence_id": "T0011",
+                "side": "before",
+                "start": 268
+              },
+              {
+                "category": "focus_scope",
+                "claim_id": "C0014",
+                "column": 10,
+                "end": 301,
+                "end_column": 12,
+                "end_line": 11,
+                "line": 11,
+                "marker": "优先",
+                "sentence_context": "不确定决策占主导时优先 C 类数据线",
+                "sentence_id": "T0013",
+                "side": "before",
+                "start": 299
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "logical_relation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "modality_scope": {
+            "after": {
+              "只": 1,
+              "可": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0009",
+                "column": 3,
+                "end": 201,
+                "end_column": 4,
+                "end_line": 7,
+                "line": 7,
+                "marker": "只",
+                "sentence_context": "不能只给一个综合误差率",
+                "sentence_id": "T0009",
+                "side": "after",
+                "start": 200
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0015",
+                "column": 34,
+                "end": 324,
+                "end_column": 35,
+                "end_line": 11,
+                "line": 11,
+                "marker": "可",
+                "sentence_context": "最终决定同时考虑题意闭合度、可验证性、",
+                "sentence_id": "T0014",
+                "side": "after",
+                "start": 323
+              }
+            ],
+            "before": {
+              "只": 1,
+              "可": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0009",
+                "column": 3,
+                "end": 201,
+                "end_column": 4,
+                "end_line": 7,
+                "line": 7,
+                "marker": "只",
+                "sentence_context": "不能只给一个综合误差率",
+                "sentence_id": "T0009",
+                "side": "before",
+                "start": 200
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0015",
+                "column": 34,
+                "end": 324,
+                "end_column": 35,
+                "end_line": 11,
+                "line": 11,
+                "marker": "可",
+                "sentence_context": "最终决定同时考虑题意闭合度、可验证性、",
+                "sentence_id": "T0014",
+                "side": "before",
+                "start": 323
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "negation": {
+            "after": {
+              "不": 2,
+              "不能": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0009",
+                "column": 1,
+                "end": 200,
+                "end_column": 3,
+                "end_line": 7,
+                "line": 7,
+                "marker": "不能",
+                "sentence_context": "不能只给一个综合误差率",
+                "sentence_id": "T0009",
+                "side": "after",
+                "start": 198
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0014",
+                "column": 1,
+                "end": 291,
+                "end_column": 2,
+                "end_line": 11,
+                "line": 11,
+                "marker": "不",
+                "sentence_context": "不确定决策占主导时优先 C 类数据线",
+                "sentence_id": "T0013",
+                "side": "after",
+                "start": 290
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0017",
+                "column": 16,
+                "end": 345,
+                "end_column": 17,
+                "end_line": 12,
+                "line": 12,
+                "marker": "不",
+                "sentence_context": "团队代码储备和结果文件要求，而不是依据",
+                "sentence_id": "T0015",
+                "side": "after",
+                "start": 344
+              }
+            ],
+            "before": {
+              "不": 2,
+              "不能": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0009",
+                "column": 1,
+                "end": 200,
+                "end_column": 3,
+                "end_line": 7,
+                "line": 7,
+                "marker": "不能",
+                "sentence_context": "不能只给一个综合误差率",
+                "sentence_id": "T0009",
+                "side": "before",
+                "start": 198
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0014",
+                "column": 1,
+                "end": 291,
+                "end_column": 2,
+                "end_line": 11,
+                "line": 11,
+                "marker": "不",
+                "sentence_context": "不确定决策占主导时优先 C 类数据线",
+                "sentence_id": "T0013",
+                "side": "before",
+                "start": 290
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0017",
+                "column": 16,
+                "end": 345,
+                "end_column": 17,
+                "end_line": 12,
+                "line": 12,
+                "marker": "不",
+                "sentence_context": "团队代码储备和结果文件要求，而不是依据",
+                "sentence_id": "T0015",
+                "side": "before",
+                "start": 344
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "reporting_observation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          }
+        },
+        "claim_pairing": {
+          "after_claims": 17,
+          "before_claims": 17,
+          "unique_exact_pairs": 17,
+          "unpaired_after_claims": 0,
+          "unpaired_before_claims": 0
+        },
+        "protection": {
+          "after_ranges": 3,
+          "before_ranges": 3,
+          "line_column_basis": "NORMALIZED_LF_1_BASED_UNICODE_CODEPOINT",
+          "masking": "LENGTH_PRESERVING"
+        }
+      }
+    },
+    "hard_failure": false,
+    "status": "pass",
+    "summary": {
+      "advisories": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    "warnings": []
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 0,
+    "introduced_candidates": 0,
+    "unexplained_high_candidates": 0
+  },
+  "mechanical_validation_exit_code": 0,
+  "mechanical_validation_status": "PASS",
+  "mode": "REWRITE",
+  "paired_quality_clearance_granted": false,
+  "paired_quality_review_local_clearance_supported": false,
+  "paired_quality_review_request": {
+    "artifact": {
+      "after_sha256": "745ec1ad1524f0de280b516165e7f2ca3ab843928aff937bd086baf164e43918",
+      "before_sha256": "745ec1ad1524f0de280b516165e7f2ca3ab843928aff937bd086baf164e43918"
+    },
+    "changes": [],
+    "limitations": {
+      "academic_correctness": "NOT_EVALUATED",
+      "authorship": "NOT_EVALUATED",
+      "quality_clearance_granted": false
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "d8b73b0b9fa21ae32c13270641c3f42d747ef4fcacd47faf22a48ef1558db85c",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "0f37aded1f6c7776c0b5c23532f116c96e84b77e7bd1b92ad09b004039a5a7de",
+      "scanner_sha256": "1753891b4383dcbf129fa7b1c21f060cb9daa339f17c8442f4641152c3b7848e",
+      "validator_sha256": "852a57f4ecf669695101bbfc4f6251b0aed8e9ebbef749051a59bfe009de6d75"
+    },
+    "request_sha256": "226ac37a940949ad2944dd4aa6197e05ddb9939a3d8cfaebfef9bbda791e9e1d",
+    "review_contract": {
+      "empty_or_generic_benefit_is_clearance": false,
+      "local_model_or_caller_assertion_is_clearance": false,
+      "required_dimensions": [
+        "actionable_pathology_remaining",
+        "no_change_is_best_available_decision",
+        "problem_span_binding",
+        "independent_reading_benefit",
+        "subject_and_modifier_alignment",
+        "verb_object_collocation",
+        "logical_relation_preservation",
+        "template_field_role_and_authorization",
+        "information_density_and_rhythm",
+        "author_voice_non_regression"
+      ],
+      "required_per_change_verdicts": [
+        "ACCEPT",
+        "REVISE",
+        "REVERT"
+      ],
+      "validator_pass_is_quality_clearance": false
+    },
+    "schema": "humanize-paired-quality-review-request/v1",
+    "status": "PENDING_EXTERNAL_REVIEW",
+    "template_field_changes": [],
+    "validation_context": {
+      "decision": "NO_CHANGE",
+      "document_format": "tex",
+      "document_scope": "FRAGMENT",
+      "mechanical_validation_status": "PASS",
+      "mode": "REWRITE",
+      "scene": "RESEARCH"
+    }
+  },
+  "paired_quality_review_status": "PENDING_EXTERNAL_REVIEW",
+  "paired_style_delta_findings": [],
+  "paired_style_delta_layer_status": "NOT_APPLICABLE",
+  "paired_style_delta_summary": {
+    "authorship_inference": false,
+    "finding_count": 0,
+    "scope": "PAIRED_COURSE_VOICE_NON_REGRESSION_CANDIDATE",
+    "status": "NOT_APPLICABLE"
+  },
+  "pending_warnings": [],
+  "proposed_warning_resolutions": [],
+  "report_scope_check": {
+    "editable_range_count": 0,
+    "editable_ranges": [],
+    "extractor_replay_match": null,
+    "fragment_count": 0,
+    "outside_selection_unchanged": null,
+    "report_sha256": null,
+    "scope_path": null,
+    "scope_semantic_sha256": null,
+    "scope_sha256": null,
+    "source_sha256": null,
+    "status": "N/A"
+  },
+  "review_reasons": [
+    "paired_quality_not_evaluated"
+  ],
+  "scene": "RESEARCH",
+  "semantic_source_check": "N/A",
+  "speech_act_diagnostics": [],
+  "speech_act_layer_status": "PASS",
+  "status": "REVIEW",
+  "structural_plan_check": {
+    "change_applied": false,
+    "decision": "NO_CHANGE",
+    "semantic_mapping": "NOT_APPLICABLE",
+    "semantic_review_status": "NOT_REQUIRED",
+    "status": "NOT_APPLICABLE"
+  },
+  "style_signal_layer_status": "PASS",
+  "template_field_edit_scope_check": {
+    "authorized_edit_count": 0,
+    "authorized_edits": [],
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "provided": false,
+    "schema_version": null,
+    "scope_sha256": null,
+    "source_sha256": "745ec1ad1524f0de280b516165e7f2ca3ab843928aff937bd086baf164e43918",
+    "status": "N/A"
+  },
+  "template_field_findings": [],
+  "template_field_layer_status": "PASS",
+  "template_field_summary": {
+    "authorized_edit_count": 0,
+    "finding_count": 0,
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "review_finding_count": 0,
+    "status": "PASS"
+  },
+  "unaccepted_warnings": [],
+  "unexplained_high_findings": [],
+  "warning_proposal_state": {
+    "attestation_status": "NOT_PROVIDED",
+    "cross_record_reviewer_linkability": "NOT_RECORDED",
+    "identity_verified": false,
+    "proposal_source": "NOT_PROVIDED",
+    "proposed_warning_fingerprints": [],
+    "review_clearance_granted": false,
+    "reviewer_identifier_collected": false,
+    "stable_reviewer_pseudonym_recorded": false,
+    "warning_review_request_sha256": null
+  },
+  "warning_resolutions": {},
+  "warning_review_request": null,
+  "warnings_without_resolution_proposal": []
+}

@@ -1,0 +1,108 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-3f059fa0afe0",
+  "chunk_binding_sha256": "c71950a5a4bab0a93b8ce71c0803e471e4be4786f2e0aa78f8aa41b0b36229e4",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "8cd38067072b5191",
+    "prepare_integrity_sha256": "cda44ea18c8aa5b6b97fbc6093ba29450511f52eb3056235a675e3db78f2c630",
+    "run_metadata_sha256": "11ad09c96e88a441b112d4c840cec6236153159f10cb19e992ebfba1c8bb7f5d",
+    "policy_snapshot_sha256": "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "eba71855409d6a3c4570e3ddcb487e56ab77996bc3dde98146bf78dd30b00b94",
+      "unit_id": "U-3f059fa0afe0",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 13170,
+      "end": 15349,
+      "start_line": 432,
+      "end_line": 480,
+      "source_span_sha256": "2241de72ab629cb0966fc70c86ef0a5e6e65a36b03def6fe41be4159a53f6261",
+      "masked_text_sha256": "d6cdebb21e246765c01fc6147c64f1dc2e625d0878b8fc3c8733d8075b119046",
+      "chunk_binding_sha256": "c71950a5a4bab0a93b8ce71c0803e471e4be4786f2e0aa78f8aa41b0b36229e4"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "3272163b0b290c6cf138ae552d80b6335d574d6764f7bc17453a09c06dcbc704",
+      "routing_input_sha256": "33afd5ebb432640c9918a238cb93c064eedc57b922f69fa1afa0b64c347359c0"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "0e8e587582fae9f2c6681c3fad411cf7e24337755c4826e231c02a87d6761199"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00228:60b8b93bd608]]\n\n编号论文并不追求固定的小标题数量，而是把题目信息、建模依据、求解过程、结果解释和误差核查逐项写清：\n[[PROTECTED:F00001-P00229:0e106b8b7173]]\n章节标题可以因题目合并，但上述功能不能被删去。篇幅判断使用全部论文的实测\n页级位置和章节跨度，不把经验百分比写成硬规则。全篇总页数参考中位数\n45 页和四分位范围 37--58.5 页；不同章节的检出率、首次出现位置和跨度汇总于\n表~[[PROTECTED:F00001-P00230:67f8bb659fef]]。检测率低的章节只能形成\n定性建议，不能据缺失 OCR 推断获奖论文没有相应内容。\n\n[[PROTECTED:F00001-P00231:887183cf4214]]\n[[PROTECTED:F00001-P00232:55af54645e72]][[PROTECTED:F00001-P00233:d446b44d6923]][[PROTECTED:F00001-P00234:b11b4ca186c0]]\n[[PROTECTED:F00001-P00235:3000c3bd47e8]]\n章节 & 检出论文 & 首次位置比例中位数 [Q1,Q3] & 跨度页数中位数 [Q1,Q3] & 跨度比例中位数 [Q1,Q3][[PROTECTED:F00001-P00236:b11b4ca186c0]]\n[[PROTECTED:F00001-P00237:3f9db2ae5742]]\n[[PROTECTED:F00001-P00238:6c327e891740]]\n[[PROTECTED:F00001-P00239:3000c3bd47e8]]\n章节 & 检出论文 & 首次位置比例中位数 [Q1,Q3] & 跨度页数中位数 [Q1,Q3] & 跨度比例中位数 [Q1,Q3][[PROTECTED:F00001-P00240:b11b4ca186c0]]\n[[PROTECTED:F00001-P00241:3f9db2ae5742]]\n[[PROTECTED:F00001-P00242:7cf754fef645]]\n摘要 & 58/59 (98.3[[PROTECTED:F00001-P00243:fed3f9917a84]]) & 0.0215 [0.017, 0.0268] & 1 [1, 1] & 0.0215 [0.017, 0.0268][[PROTECTED:F00001-P00244:b11b4ca186c0]]\n问题重述 & 57/59 (96.6[[PROTECTED:F00001-P00245:fed3f9917a84]]) & 0.0444 [0.0345, 0.0541] & 1 [1, 1] & 0.0222 [0.0172, 0.0286][[PROTECTED:F00001-P00246:b11b4ca186c0]]\n问题分析 & 57/59 (96.6[[PROTECTED:F00001-P00247:fed3f9917a84]]) & 0.0526 [0.0417, 0.0732] & 1 [1, 1] & 0.0244 [0.0172, 0.0357][[PROTECTED:F00001-P00248:b11b4ca186c0]]\n模型假设 & 48/59 (81.4[[PROTECTED:F00001-P00249:fed3f9917a84]]) & 0.0735 [0.0562, 0.106] & 1 [1, 1] & 0.0225 [0.0172, 0.0286][[PROTECTED:F00001-P00250:b11b4ca186c0]]\n符号说明 & 58/59 (98.3[[PROTECTED:F00001-P00251:fed3f9917a84]]) & 0.0808 [0.0661, 0.1143] & 1 [1, 3.75] & 0.029 [0.0205, 0.0749][[PROTECTED:F00001-P00252:b11b4ca186c0]]\n模型建立 & 58/59 (98.3[[PROTECTED:F00001-P00253:fed3f9917a84]]) & 0.0825 [0.0489, 0.1329] & 2 [1, 6] & 0.045 [0.0245, 0.1681][[PROTECTED:F00001-P00254:b11b4ca186c0]]\n模型求解 & 55/59 (93.2[[PROTECTED:F00001-P00255:fed3f9917a84]]) & 0.1077 [0.0286, 0.2319] & 2 [1, 6] & 0.0385 [0.0206, 0.1562][[PROTECTED:F00001-P00256:b11b4ca186c0]]\n结果分析 & 47/59 (79.7[[PROTECTED:F00001-P00257:fed3f9917a84]]) & 0.1795 [0.0639, 0.3107] & 7 [1, 12] & 0.1282 [0.0278, 0.25][[PROTECTED:F00001-P00258:b11b4ca186c0]]\n模型检验 & 22/59 (37.3[[PROTECTED:F00001-P00259:fed3f9917a84]]) & 0.2294 [0.0564, 0.4821] & 1.5 [1, 7] & 0.0335 [0.0249, 0.1889][[PROTECTED:F00001-P00260:b11b4ca186c0]]\n灵敏度分析 & 25/59 (42.4[[PROTECTED:F00001-P00261:fed3f9917a84]]) & 0.0357 [0.02, 0.3929] & 1 [1, 2] & 0.0256 [0.0179, 0.0385][[PROTECTED:F00001-P00262:b11b4ca186c0]]\n模型评价 & 51/59 (86.4[[PROTECTED:F00001-P00263:fed3f9917a84]]) & 0.5111 [0.396, 0.6186] & 1 [1, 1] & 0.0227 [0.0172, 0.0294][[PROTECTED:F00001-P00264:b11b4ca186c0]]\n改进方案 & 19/59 (32.2[[PROTECTED:F00001-P00265:fed3f9917a84]]) & 0.4667 [0.3707, 0.5928] & 1 [1, 1] & 0.0263 [0.0194, 0.0345][[PROTECTED:F00001-P00266:b11b4ca186c0]]\n参考文献 & 57/59 (96.6[[PROTECTED:F00001-P00267:fed3f9917a84]]) & 0.5424 [0.4151, 0.6667] & 1 [1, 11] & 0.0333 [0.0222, 0.2941][[PROTECTED:F00001-P00268:b11b4ca186c0]]\n附录 & 48/59 (81.4[[PROTECTED:F00001-P00269:fed3f9917a84]]) & 0.5574 [0.4427, 0.7079] & 16 [6, 28] & 0.3779 [0.1865, 0.4926][[PROTECTED:F00001-P00270:b11b4ca186c0]]\n[[PROTECTED:F00001-P00271:76ac79294e9f]]\n[[PROTECTED:F00001-P00272:20f5534ac79d]]\n\n表中首次位置按页码除以论文总页数计算。灵敏度分析的首次位置中位数异常靠前，\n抽查发现目录页和摘要中的同名词会导致提前命中，故该项只用于检索，不能解释为\n正文真的在前 3.57[[PROTECTED:F00001-P00273:fed3f9917a84]] 篇幅内展开灵敏度分析。参考文献与附录跨度也或由标题合并、\n附件页连续而偏大；模板只把高检出章节的跨度用于量化提示。\n\n",
+  "rewrite_intent": {
+    "summary": "删除工作台式词壳，保留对象、动作、条件和结论边界",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 5,
+        "end_line": 5,
+        "sha256": "629d2716df19f7f4802b61cf5bf0e342fcedc36854a615f4e8c61007efaeb5ce"
+      },
+      {
+        "id": "S2",
+        "start_line": 39,
+        "end_line": 40,
+        "sha256": "e77e965e92c09f60dff0c776ab067bb2932f5528daf5214d288bf299e4dc8374"
+      }
+    ],
+    "target_signals": [
+      "LEX-STRICT-CORPUS-DIRECT-ACTION"
+    ]
+  }
+}

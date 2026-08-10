@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "733e6a9773e42ac1cba828f61ece1dac80053467f0959c31724f2b015bb4b174",
+    "before_sha256": "733e6a9773e42ac1cba828f61ece1dac80053467f0959c31724f2b015bb4b174"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "df43b1dd5626c1229f0599a75bc134570a40a6da2ca44abcaf2454c41cbb6e16",
+  "chunk_binding_sha256": "43786d05472645075d0a22a90cc08059af375792aba1a51b949ded567af46aef",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-3e85b007efd7.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "a6cc87500b09f1fd6bd47becbc2de65bdb376631365701b4076819922ed7ec6f",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "4ef0c2b58bd8aab6e742333bc57e1e20daa4aafaaf69044edcf890eac66f3281",
+        "start_line": 3
+      }
+    ],
+    "reason": "本单元承担“开源代码逻辑、约束与选型边界”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "f5a34185d1a237f3956701edff262832397dee522337c462f405782662b116fc",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-3e85b007efd7"
+}

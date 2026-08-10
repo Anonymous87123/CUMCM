@@ -1,0 +1,89 @@
+{
+  "artifact": {
+    "after_sha256": "6d1804ea900dd1e825d66dc94f83af188f4aa4d65b554e92ebb387c7c65156d5",
+    "before_sha256": "ae1d6ae8729da3a2deee22c8ed7f28e34059ba16d118c432c5cf8b54b3d2881b"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "36cc8b055d53822e74743ac3b5500d28f94a19a698514bdeeda50305282a2854",
+  "chunk_binding_sha256": "300b9fd38f511ff5e81e75eb3114230d99a44c4203348e7c3c1455f838149f6a",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-eda57d1bbaa4.diff",
+    "sha256": "19783955e0774d01db4a362ae5bd0d8fc0f20f81a30a4349b153c261f8eee146"
+  },
+  "evidence_sha256": "83fad2deb058504354c75755d7aad523b4206d010cd9f677213944f0d87cd69a",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "重组样本筛选句，区分抽样筛选与不确定性仿真的任务边界",
+        "target_signals": [
+          "STYLE-SENTENCE-FLOW"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "压缩模型归类句，保留分类与外推边界及风险条件",
+        "target_signals": [
+          "STYLE-CLASSIFICATION-BOUNDARY"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 9,
+        "id": "S1",
+        "sha256": "491c76797b23e83af3fce3f08eea2acf4f4c72760b6b674b75f9de0d70de8e7e",
+        "start_line": 7
+      },
+      {
+        "end_line": 28,
+        "id": "S2",
+        "sha256": "238e8f37b34a72cdaa59e49496b0bec0ee231ffac603cc14d6cce4c33a33747d",
+        "start_line": 27
+      }
+    ],
+    "summary": "理顺样本筛选与模型归类句，同时保留任务边界和外推风险条件",
+    "target_signals": [
+      "STYLE-SENTENCE-FLOW",
+      "STYLE-CLASSIFICATION-BOUNDARY"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 9,
+        "operation": "REPLACE",
+        "start_line": 7
+      },
+      {
+        "end_line": 28,
+        "operation": "REPLACE",
+        "start_line": 27
+      }
+    ],
+    "masked_after_sha256": "9599f62650b569afc78a9cdf1af9ca7a7541faebc332e62bc6ac3b03a091e511",
+    "masked_before_sha256": "3247dbcba8e55258652bd1e329799949fb2663f24178397b0923b5a066581c48",
+    "source_spans_covered": 2,
+    "source_spans_total": 2,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "1d71c80a52ccf511906cdb637debfc3823a5b0f93dc988babeb5c6050924b16a",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-eda57d1bbaa4"
+}

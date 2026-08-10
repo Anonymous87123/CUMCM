@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "80ef51b01c0cadcea6fd2d8bccad67e53cf2fd89f3a6f792573c4684ca1fa390",
+    "before_sha256": "80ef51b01c0cadcea6fd2d8bccad67e53cf2fd89f3a6f792573c4684ca1fa390"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "0ece885bfdf8fc5ca02a177a4012b7ec595851ec5b5dfe85d39c810b8a5633a1",
+  "chunk_binding_sha256": "a49dec0edaffa79c9424084120befc268f40d265f8b4d01396e73c7d185dde4f",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-355c78162fa6.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "d28c5b30c7c2caaa73f2d01dc077461fa07a1e83aa4133ab852a754ef17e7d3e",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "df8a9895474c286875f3ee3f6ba1d9666b5cb242320d11137f271622fe500618",
+        "start_line": 3
+      }
+    ],
+    "reason": "本单元承担“语料边界”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "f7c1fb62948ee676330cf81a0dd21911c10c9736e66ed0782c004b21ca8de2b1",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-355c78162fa6"
+}

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "745ec1ad1524f0de280b516165e7f2ca3ab843928aff937bd086baf164e43918",
+    "before_sha256": "745ec1ad1524f0de280b516165e7f2ca3ab843928aff937bd086baf164e43918"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "27be05175df9f5bd950977deb1ec8a6e6b8e3247f8be575f2f9e7c77d474c1db",
+  "chunk_binding_sha256": "cb32e45bcc6686dfcef96e4effad4f1f4e6db5e0d449d79fb2684339de31d57c",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-7f87c3df92ff.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "ef515b8304174de1c4a017218445c3d03da92a81891ac7c83d51c69300810578",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "bd0e3a989b1abf3e64aa3dd3165f8cd52dc19d7d810a6c93c9928480b91448a3",
+        "start_line": 3
+      }
+    ],
+    "reason": "本单元承担“三人交叉学习与代码集成”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "226ac37a940949ad2944dd4aa6197e05ddb9939a3d8cfaebfef9bbda791e9e1d",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-7f87c3df92ff"
+}

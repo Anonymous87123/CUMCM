@@ -1,0 +1,91 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-aa93899f2928",
+  "chunk_binding_sha256": "e75265f2a6d2031b4c258163908bbc1441e635e4fccb80e29414011e774ae24a",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "9e04024e371e85bd",
+    "prepare_integrity_sha256": "84e7ec1ddc3ece555e01a21c6aad72ac0ef159863d5f4cb38e8199c23b2a049e",
+    "run_metadata_sha256": "fcd49d2065b6e5e66b082364dfccd9a8ea8ce621152d3dc6f3a36536b25cd893",
+    "policy_snapshot_sha256": "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "f1e9e0b15813d25dff3a74e13e41a6187f941a4a0b322f7f46b8a94b05262235",
+      "unit_id": "U-aa93899f2928",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 68710,
+      "end": 68910,
+      "start_line": 1717,
+      "end_line": 1724,
+      "source_span_sha256": "461905c599e60cb612fddb5f49b7d3da9ba044c2279646dc8c30b0a575612174",
+      "masked_text_sha256": "e60ddc14337ff288f82a127c106a7e142a0eb9b18f3841408e1b37babaac1a83",
+      "chunk_binding_sha256": "e75265f2a6d2031b4c258163908bbc1441e635e4fccb80e29414011e774ae24a"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "f1e92f95828377b4011460501909a3b6f1b7eb038a99ac2edca642d32de1a5f3",
+      "routing_input_sha256": "7417feaf151c069b1bd3f76ef392e0f7bec20736b90c28d079e61eff1d52858f"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "0e35a5747aa648b8d6921139c5db3e0c02646cc6e0a063cfc21a6bb3245d9de6"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P01060:f5a5df1d2db5]]\n\n全部 OCR 页面记录、论文汇总、证据记录表、模型链和语料统计属于临时分析证据，\n保存在工作区 [[PROTECTED:F00001-P01061:35984f801b37]] 下；正式成果不依赖运行时缓存才能编译。\n记录表中的页面文本可用于定位，不替代原 PDF。任何涉及公式、表格、小字号图注\n或低置信页的结论，须回到原始页面局部核验后才能加入模板或 Skill。\n\n[[PROTECTED:F00001-P01062:2dc670e7ffe1]]\n",
+  "rewrite_intent": {
+    "summary": "删除工作台式词壳，保留对象、动作、条件和结论边界",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 3,
+        "end_line": 3,
+        "sha256": "6a29d2b947aa43ce763617cc321ee5e298dde75f4b2588a40165f49a1435f05e"
+      }
+    ],
+    "target_signals": [
+      "LEX-STRICT-CORPUS-DIRECT-ACTION"
+    ]
+  }
+}

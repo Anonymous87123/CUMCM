@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "1fe916cd671d381a09876c5a12e2cd1bfe9b2e26df43bba44ba1f275ebcae518",
+    "before_sha256": "1fe916cd671d381a09876c5a12e2cd1bfe9b2e26df43bba44ba1f275ebcae518"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "df7285e81264b721129b64e0d61f3c88dccd3fee0ca446d6fe015231984e3180",
+  "chunk_binding_sha256": "8355f5849a89f74c95967a6c210db1a6c2375f11d0158b18fb56c2fc055b6d25",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-b12f509db546.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "5ff6ca58cda94d3b59d57ab6cea763f50da6d8bee9e0f38f0f25cd522b7f3dc1",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "3df0cffea082424da13b55fc81a02de5c666699dcc36b1791236203fffade273",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段落承担“双模式论文模板”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "c5e475d3f9ea580c1572609bd39bb67217457549f5e594aedb983688f027617b",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-b12f509db546"
+}

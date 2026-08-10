@@ -1,0 +1,99 @@
+{
+    "schema_version":  "humanize-unit-rewrite-bundle/v4",
+    "unit_id":  "U-351e32fb5a23",
+    "chunk_binding_sha256":  "6cb23c0ab87c2b01f9d76bcaf8ab5c1a2988ab4a38b2189836de0e5ff78aef17",
+    "decision":  "REWRITE",
+    "voice_profile_sha256":  "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+    "authoring_binding":  {
+                              "schema_version":  "humanize-long-authoring-binding/v1",
+                              "integrity_scope":  "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+                              "snapshot_id":  "b48ef9450b05230b",
+                              "prepare_integrity_sha256":  "08d8d35f9bd43257bbfc5c931659c168f2106c243f412dfc62528b7847c32149",
+                              "run_metadata_sha256":  "697c2507466cf5cde0e99810c211ce52bc6884c88736ebc99741cea022da3217",
+                              "policy_snapshot_sha256":  "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+                              "source_binding":  {
+                                                     "file_id":  "F00001",
+                                                     "source_file_sha256":  "da6925eb091af9d09d1f22b972b450ea0c6aa035703baafa84910bb5318754d9",
+                                                     "unit_id":  "U-351e32fb5a23",
+                                                     "offset_unit":  "PYTHON_UNICODE_CODEPOINT_INDEX",
+                                                     "start":  8302,
+                                                     "end":  8431,
+                                                     "start_line":  310,
+                                                     "end_line":  314,
+                                                     "source_span_sha256":  "90d5969948f806bbbab37515f1ea0a32a76b163287b4bfbaa4130ed06d9e21fa",
+                                                     "masked_text_sha256":  "100c65f4d4b4ecd20d7546c2ef6f2f2e34cd141365a069394a3dc70de4828b8a",
+                                                     "chunk_binding_sha256":  "6cb23c0ab87c2b01f9d76bcaf8ab5c1a2988ab4a38b2189836de0e5ff78aef17"
+                                                 },
+                              "scene_route":  {
+                                                  "requested_scene":  "RESEARCH",
+                                                  "resolved_scene":  "RESEARCH",
+                                                  "status":  "EXPLICIT",
+                                                  "reason_code":  "USER_EXPLICIT_SCENE",
+                                                  "document_prior_scene":  "",
+                                                  "scores":  {
+                                                                 "COURSE":  0,
+                                                                 "MODELING":  0,
+                                                                 "RESEARCH":  0
+                                                             },
+                                                  "top_score":  0,
+                                                  "margin":  0,
+                                                  "ambiguous_scenes":  [
+
+                                                                       ],
+                                                  "evidence":  [
+
+                                                               ],
+                                                  "policy_sha256":  "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+                                                  "policy_revision":  5,
+                                                  "heading_path_sha256":  "80fc4f6ae5a629246dc0b3c06ffab56311957ff28e058fbe035101aea51ebbee",
+                                                  "routing_input_sha256":  "93ef0515b040ecb848615cbe765bafe45630667145de42360dbe67d7fd5f106a"
+                                              },
+                              "voice_binding":  {
+                                                    "profile_id":  "scene-default-research",
+                                                    "profile_revision":  1,
+                                                    "profile_kind":  "DEFAULT",
+                                                    "binding_scene":  "RESEARCH",
+                                                    "profile_sha256":  "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+                                                },
+                              "mode":  "REWRITE",
+                              "intensity":  "BALANCED",
+                              "authoring_allowed":  true,
+                              "completion_claim_allowed":  false,
+                              "humanize_quality_claim_allowed":  false,
+                              "authoring_binding_sha256":  "fea1af420e0619694bc0f00705bb1ceba64211a4ce7378103a71552a649f04b6"
+                          },
+    "keep_reasons":  {
+
+                     },
+    "template_field_edit_scope":  null,
+    "masked_text":  "[[PROTECTED:F00001-P00171:6447c6a6b1a8]]\n螺距约为 [[PROTECTED:F00001-P00172:e6519b0fb24b]] 的方案在终点附近看似可行，但在完整运动过程中会提前碰撞。\n这个反例把[[PROTECTED:F00001-P00173:050b64ef92e1]]的漏洞钉在了运动途中：候选方案到达终点前便已碰撞。\n读者可据此判断模型为何需要保留时间推进。\n\n",
+    "rewrite_intent":  {
+                           "summary":  "调整目录式、均匀并列式表达，保留具体判断、程序动作与使用边界",
+                           "operations":  [
+                                              {
+                                                  "id":  "O1",
+                                                  "kind":  "REWRITE_STYLE_SHELL",
+                                                  "source_span_ids":  [
+                                                                          "S1"
+                                                                      ],
+                                                  "target_signals":  [
+                                                                         "HUM-JUDGMENT-TRACE",
+                                                                         "RHYTHM-UNIFORM-SEQUENCE"
+                                                                     ],
+                                                  "summary":  "调整目录式、均匀并列式表达，保留具体判断、程序动作与使用边界"
+                                              }
+                                          ],
+                           "source_spans":  [
+                                                {
+                                                    "id":  "S1",
+                                                    "start_line":  1,
+                                                    "end_line":  5,
+                                                    "sha256":  "100c65f4d4b4ecd20d7546c2ef6f2f2e34cd141365a069394a3dc70de4828b8a"
+                                                }
+                                            ],
+                           "target_signals":  [
+                                                  "HUM-JUDGMENT-TRACE",
+                                                  "RHYTHM-UNIFORM-SEQUENCE"
+                                              ]
+                       }
+}

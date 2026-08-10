@@ -1,0 +1,78 @@
+{
+    "schema_version":  "humanize-unit-rewrite-bundle/v4",
+    "unit_id":  "U-26e37b3457dd",
+    "chunk_binding_sha256":  "2708cb23a8a65bac5a08c3b0582e3662ede01ea9bad78298f512ec9572c14122",
+    "decision":  "NO_CHANGE",
+    "voice_profile_sha256":  "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+    "authoring_binding":  {
+                              "schema_version":  "humanize-long-authoring-binding/v1",
+                              "integrity_scope":  "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+                              "snapshot_id":  "598a5e1303015f05",
+                              "prepare_integrity_sha256":  "613cc9ff09132c442cf1ba22f40492e56441e0f883bf82c86c099ff87fa3e1e0",
+                              "run_metadata_sha256":  "562e269a388588be545e1e831bf5f797a4a46970d3cfcf405eeac42ad6762460",
+                              "policy_snapshot_sha256":  "87656f9f0219c0ea2bb402202dc778469ce20e751d065776590fef4fcce7fd95",
+                              "source_binding":  {
+                                                     "file_id":  "F00001",
+                                                     "source_file_sha256":  "dc0f0e379a599cd9c22874ea35bccde81a8f55a9411aa8214fcf23114a67d539",
+                                                     "unit_id":  "U-26e37b3457dd",
+                                                     "offset_unit":  "PYTHON_UNICODE_CODEPOINT_INDEX",
+                                                     "start":  7775,
+                                                     "end":  8305,
+                                                     "start_line":  268,
+                                                     "end_line":  287,
+                                                     "source_span_sha256":  "9ae40263e0d423b800c07d2a3dd89bde0d67659f838d503f4a6eca63fe1fe740",
+                                                     "masked_text_sha256":  "6845ae4c1a30e1f78de099148d09124fe17ea8f375b5b98995ba29ee73255d53",
+                                                     "chunk_binding_sha256":  "2708cb23a8a65bac5a08c3b0582e3662ede01ea9bad78298f512ec9572c14122"
+                                                 },
+                              "scene_route":  {
+                                                  "requested_scene":  "RESEARCH",
+                                                  "resolved_scene":  "RESEARCH",
+                                                  "status":  "EXPLICIT",
+                                                  "reason_code":  "USER_EXPLICIT_SCENE",
+                                                  "document_prior_scene":  "",
+                                                  "scores":  {
+                                                                 "COURSE":  0,
+                                                                 "MODELING":  0,
+                                                                 "RESEARCH":  0
+                                                             },
+                                                  "top_score":  0,
+                                                  "margin":  0,
+                                                  "ambiguous_scenes":  [
+
+                                                                       ],
+                                                  "evidence":  [
+
+                                                               ],
+                                                  "policy_sha256":  "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+                                                  "policy_revision":  5,
+                                                  "heading_path_sha256":  "0b24ad27e9239ae4b872b4754baaa3182de4be3820aace437181a232c2f9e411",
+                                                  "routing_input_sha256":  "3b7cca3ec39ce0c4f5f5279455b8e231b00d47612b464538edcd7e24635638b5"
+                                              },
+                              "voice_binding":  {
+                                                    "profile_id":  "scene-default-research",
+                                                    "profile_revision":  1,
+                                                    "profile_kind":  "DEFAULT",
+                                                    "binding_scene":  "RESEARCH",
+                                                    "profile_sha256":  "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+                                                },
+                              "mode":  "REWRITE",
+                              "intensity":  "BALANCED",
+                              "authoring_allowed":  true,
+                              "completion_claim_allowed":  false,
+                              "humanize_quality_claim_allowed":  false,
+                              "authoring_binding_sha256":  "4a60ada315427a6ae8f910b670e329cf300a688c9c21059f24bf859b5634a2bb"
+                          },
+    "keep_reasons":  {
+
+                     },
+    "template_field_edit_scope":  null,
+    "reason":  "该段承担“理论知识学习笔记 / 组员1：规划、智能优化、图网络与仿真 / 开源代码逻辑、优缺点与边界”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。",
+    "evidence_spans":  [
+                           {
+                               "id":  "S1",
+                               "start_line":  3,
+                               "end_line":  3,
+                               "sha256":  "4ef0c2b58bd8aab6e742333bc57e1e20daa4aafaaf69044edcf890eac66f3281"
+                           }
+                       ]
+}

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "5d0c817b7a389149bb254670742e90cb0fc6413313fa993783661c7ff8c0bdc2",
+    "before_sha256": "5d0c817b7a389149bb254670742e90cb0fc6413313fa993783661c7ff8c0bdc2"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "0cb118052b0b68e5cb66b79b7ab95309cf9a158617b411bdfd5c7989fb14472e",
+  "chunk_binding_sha256": "3fc7b1706098dd56e47532029d8672c3c51c29ba2ccc0f63fd880db374aca087",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-7fb8cf2df4b6.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "0cd2b856e9e67971f8736546fc66892f6b29a031245728fd504e8b37f5c40c0c",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 1,
+        "id": "S1",
+        "sha256": "d19eac578cdb5534c2363c5ba5b2ea5fdcb5c284d7f64743bfec28b9a53f59a8",
+        "start_line": 1
+      }
+    ],
+    "reason": "该段落承担“人类作者的惯用词、段落骨架与行文节奏”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "9a3df1914aabd441dfcad7aa0e48e83a9d101536fffa70a2486bd609cd72eea0",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-7fb8cf2df4b6"
+}

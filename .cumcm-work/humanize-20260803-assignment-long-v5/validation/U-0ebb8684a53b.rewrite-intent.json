@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "0c024b7e7cac41c152b7fe80a81f8c9377360666c9e1e3b0fd5b8b6968fc0181",
+    "before_sha256": "0c024b7e7cac41c152b7fe80a81f8c9377360666c9e1e3b0fd5b8b6968fc0181"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "c5bb7d9ea88e9af43e6fe3c66c742b116d91295f7ff1db452f8508d682c6c564",
+  "chunk_binding_sha256": "26fed1287e8d2fb037aaee6466faeae4a922171b0854bc0c85ead3b2a516a682",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-0ebb8684a53b.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "132cfb94a341d9e9c58d40f799d4d63ec6403bbbe5109e13dd634208b5cfe9b7",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 1,
+        "id": "S1",
+        "sha256": "e316f8ae2597550ae6f3bb51146dd548437255435176fde12c96b5cc0473f1b0",
+        "start_line": 1
+      }
+    ],
+    "reason": "59 篇编号论文的结构与写作分析 / A/B/C 三类论文的微观文风中的定义、对象和条件承担后续对应关系，原句保持这些信息的排列与范围。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "e0a7584e17a4d9502ee44009b5e07c4830fea1e72c496ed4aa2f7e17215cf471",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-0ebb8684a53b"
+}

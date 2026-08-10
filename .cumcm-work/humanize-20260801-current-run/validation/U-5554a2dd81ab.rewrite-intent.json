@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "f0ec2e7b8e3b2ddcd36a6f75109c59fccc900411101432fa60bedcbf47d51818",
+    "before_sha256": "f0ec2e7b8e3b2ddcd36a6f75109c59fccc900411101432fa60bedcbf47d51818"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "8b7258dbe529839385ed00863297b9352c0edf622f943b62c9633efd4707d2fc",
+  "chunk_binding_sha256": "185b5906b5df44e84702b3f6f1563af5fc86066272671e1098958ba9733cd725",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-5554a2dd81ab.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "f6ffdc0210877af50c51432a32fa26bb411cf16d80bb859935b5c21dce676039",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "ffe92a5fbf68719c6a027c85346499ba445cb1e7c30e43e49b30e5f1373b3daa",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“三项工具成果及迭代机制 / 学习报告”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "bab774348cf1105cb2309c2799b50e7fcb118880e98e60138f94f480161a298f",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-5554a2dd81ab"
+}

@@ -1,0 +1,108 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-461bd14fcb2f",
+  "chunk_binding_sha256": "385c2c348a89dd0e822dacd5447337f3e61db491ccf518f089e949377d325d84",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "e7e867d4911316eb",
+    "prepare_integrity_sha256": "a633dfcb09a3da2e2b138e5f22d1e9c1f1d3f1844b37ced5f47e90d74c0e5acd",
+    "run_metadata_sha256": "ed42a010547910b874853ea7105122ff42aa848053ac83540661647b45b06e07",
+    "policy_snapshot_sha256": "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "eba71855409d6a3c4570e3ddcb487e56ab77996bc3dde98146bf78dd30b00b94",
+      "unit_id": "U-461bd14fcb2f",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 2650,
+      "end": 3404,
+      "start_line": 106,
+      "end_line": 127,
+      "source_span_sha256": "4fbdac16d79e9ed043242be9b3595d7dcf3e02fb697f7acb096e6ea1e4e38136",
+      "masked_text_sha256": "39c66a4dcae6b23552cc8f8604117f7c212a512231d636a40c88da012fe07643",
+      "chunk_binding_sha256": "385c2c348a89dd0e822dacd5447337f3e61db491ccf518f089e949377d325d84"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "c5bb550bd7d230951347d77493d7876f6dd63dfbae52ea615aa62644ca04a120",
+      "routing_input_sha256": "3755108b5f0417c1d281ba5e1997f0ddf344542d41d372ec1e7c84fb53fa2914"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "cc1746d9660ba4a73e1212635b0c0437b221e8a08f887708788c8f95c84e8d4f"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00066:56970ac16252]]\n\n处理流程以论文为单位建立 JSONL 页面记录。唯一可用文本层的论文直接提取，其余\n58 篇先按 120 DPI 渲染并由 RapidOCR 全部识别；文本密集页出现 OCR 中位置信度\n低于 0.75、中文正文少于 100 字或标题段落明显断裂时，按 220 DPI 重渲染，并以\nTesseract 的 [[PROTECTED:F00001-P00067:9b4f895dae04]] 复识。每页记录年份、题型、论文编号、页码、\n识别方法、置信度、中文字符数、文本框坐标及复识审计信息。\n\n记录表把证据细分为章节命中、模型链、写作特征和页面视觉核验四类。公式、表格及\n小字号图注不依据 OCR 猜测；这类内容只通过原始栅格的局部裁剪核对。统计脚本必须\n先验证 59 个文件和 2892 个连续页码，再计算章节顺序、页数分布、段落密度、图表\n候选、公式候选和模型词链。自动页数统计得到全篇页数中位数为 45 页，四分位范围为\n37--58.5 页；每篇论文的页面文本行数中位数再取中位数为 38，段落候选数对应\n中位数为 6。段落候选\n由正文行缩进和垂直间距估计，只用于版面密度比较，不等同于排版软件中的自然段。\n共有 2232 页触发并完成 Tesseract 复识，其中 1583 页因质量分更高而被选为最终\n文本；最终方法还包括 1281 页 RapidOCR 和 28 页直接文本提取。按同一严格阈值，\n1770 页在严格的逐字 OCR 质量阈值下仍标记为未确认；这表示其机器文本不用于逐字引文，\n不表示页面未读。59 篇均已逐页人工通读，涉及公式、表格和小字号图注的结论另由原始栅格\n或局部裁剪确认。\n十四类章节的检出率和页级跨度见表~[[PROTECTED:F00001-P00068:67f8bb659fef]]。\n\n",
+  "rewrite_intent": {
+    "summary": "删除工作台式词壳，保留对象、动作、条件和结论边界",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 4,
+        "end_line": 4,
+        "sha256": "38208a90d18df604b5925ba106245a5be42273a68bc3bbe219fa0492000de68e"
+      },
+      {
+        "id": "S2",
+        "start_line": 9,
+        "end_line": 9,
+        "sha256": "d0aaa9bd3ae89ed354f46becaf096f889efef418c97e6c56e49d20536e5cb0e3"
+      }
+    ],
+    "target_signals": [
+      "LEX-STRICT-CORPUS-DIRECT-ACTION"
+    ]
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-b17329da3240",
+  "chunk_binding_sha256": "7307c39fab221d47afdbd1c873325b461656f1e2a666943021ccd674dfd1b374",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "076f68ce372327a7",
+    "prepare_integrity_sha256": "8f97c89de72845dd0773e19976987f925b059c3713ff6674aff16dbb18eae5a4",
+    "run_metadata_sha256": "6e9ac6fe3ed78d0bd91cc4f918384e779c45c7fc167106e797d868a4d2cd96bb",
+    "policy_snapshot_sha256": "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "54c7b230c8146c982ccc9c4547f4a5bea96d6fea556c12fb60aad7919254833e",
+      "unit_id": "U-b17329da3240",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 10052,
+      "end": 10616,
+      "start_line": 340,
+      "end_line": 359,
+      "source_span_sha256": "733e6a9773e42ac1cba828f61ece1dac80053467f0959c31724f2b015bb4b174",
+      "masked_text_sha256": "7332aec8656cd3fa03f6f82b0d18e6808452b8d9c077169fb835c1a3633210e3",
+      "chunk_binding_sha256": "7307c39fab221d47afdbd1c873325b461656f1e2a666943021ccd674dfd1b374"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "e711e04e103272d166cfe48c0422565b35751a63a698695130e28b7c5a69443a",
+      "routing_input_sha256": "c0170da3603cc426c52e4ba1979c91137a71fe7eeabf02a5eaa35cefbca13f75"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "ef1b76ff84d4fec5fd964af03eff32fb53127462cec9cc2f8bdf8cdac888fddc"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00178:d954e130f92a]]\n\n代码流水线为：\n[[PROTECTED:F00001-P00179:7dd80fd5ed7e]]\n[[PROTECTED:F00001-P00180:9bd6563a665b]][[PROTECTED:F00001-P00181:55668f736cc3]]\nschema -> audit -> split -> preprocess -> baseline[[PROTECTED:F00001-P00182:b11b4ca186c0]]\n-> fit -> validate -> explain -> export\n[[PROTECTED:F00001-P00183:6c1dc1fa6ece]]\nPython 侧使用 pandas、scikit-learn、\nstatsmodels 及主流梯度提升接口；MATLAB 侧建立读表、缺失处理、回归分类和时序\n对照。所有随机切分记录种子，时间序列禁止随机打乱，分组样本按主体隔离。\n评价模型在正向化、无量纲化和权重确定后再计算排序，并做权重扰动和秩相关检验。\n\nK-Means 假定近似球形且需预设簇数，DBSCAN 能识别噪声和任意形状但依赖密度尺度；\n层次聚类便于解释树状结构但大样本代价高；谱聚类适合非凸簇但需构图。Lasso 可\n稀疏选择，Ridge 在共线数据上的稳定性较好；SVR 适合中小样本但调参和扩展性受限；随机森林\n稳健易用但外推弱；梯度提升精度高但要防泄漏和过拟合。ARIMA/SARIMA 要检验\n平稳和季节性，VAR 要控制维数和滞后，GM(1,1) 只适合小样本单调趋势，深度时序\n模型不能替代滚动窗口基线。\n\n",
+  "rewrite_intent": {
+    "summary": "删除工作台式词壳，保留对象、动作、条件和结论边界",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 16,
+        "end_line": 16,
+        "sha256": "3d11c22103f73c46d0dc63a4578e85c8f928058ddef3ab84c37b45fb30c179a0"
+      }
+    ],
+    "target_signals": [
+      "LEX-STRICT-CORPUS-DIRECT-ACTION"
+    ]
+  }
+}

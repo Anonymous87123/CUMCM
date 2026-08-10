@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "9ae40263e0d423b800c07d2a3dd89bde0d67659f838d503f4a6eca63fe1fe740",
+    "before_sha256": "9ae40263e0d423b800c07d2a3dd89bde0d67659f838d503f4a6eca63fe1fe740"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "f3b61647a538f4acb799439bee37959121d2bb60e8535ae34f51cf12e06f6657",
+  "chunk_binding_sha256": "2708cb23a8a65bac5a08c3b0582e3662ede01ea9bad78298f512ec9572c14122",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-26e37b3457dd.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "c785f46ae4e8f499083c6350ff13ec749c247047abda433b6d7e9ea90142fc27",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "4ef0c2b58bd8aab6e742333bc57e1e20daa4aafaaf69044edcf890eac66f3281",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“理论知识学习笔记 / 组员1：规划、智能优化、图网络与仿真 / 开源代码逻辑、优缺点与边界”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "ca8d13eeed38a66fb47a419f051721833876f178c4781c1356a0ce79d3bdae80",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-26e37b3457dd"
+}

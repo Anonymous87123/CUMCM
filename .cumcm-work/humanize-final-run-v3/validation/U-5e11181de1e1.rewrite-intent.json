@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "0c024b7e7cac41c152b7fe80a81f8c9377360666c9e1e3b0fd5b8b6968fc0181",
+    "before_sha256": "0c024b7e7cac41c152b7fe80a81f8c9377360666c9e1e3b0fd5b8b6968fc0181"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "d2e97d19d90174883aa91895a7a627c24a62ef243801d2770ddbca27e05c3d99",
+  "chunk_binding_sha256": "1949d580b2454b793ec3353ca17ba95624c5a2d8e6427d0d9496849f66b08db3",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-5e11181de1e1.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "8d8bca1d028ce5ccad806f72dfca7d134c0ef3c9e36b2c2e627fc0cce44bdaa3",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "4bd9a39dba0cc8b0a3bdfd91b4a02cf61c54383666b24dc5ff24c74f220edc61",
+        "start_line": 3
+      }
+    ],
+    "reason": "本单元承担“A/B/C 三类论文的微观文风”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "76fa3b2cbde3e1bd30d2ba82be2af599ccbf87de36f7be62775e5c03d5857a2a",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-5e11181de1e1"
+}

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "e10bc078a3502f7ed80c73f90d9360483526099719832986dfd0e91b28851f46",
+    "before_sha256": "e10bc078a3502f7ed80c73f90d9360483526099719832986dfd0e91b28851f46"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "3e9896ac0ca2dc536010641a2fe2a67568b36707273ed3b8714631f70986b4d9",
+  "chunk_binding_sha256": "82ee88e2704951deb5a873aa6333fab05aecdc102987795841b81b1e2cbd75ae",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-c8ea003d42a0.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "ab5069adf3069cc03f165377dbb3160f72202c21fd61d7e529844746fc7c3c11",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "1dbcb3217080b036f3088e2b858e0b8205d64cb7c0147e355d5423a65c32c291",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段落承担“可实现代码清单”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "aa8f77d4259ff1b3e9696313b50918ec545f51b1c25fde6f1578ce4ad1f911cd",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-c8ea003d42a0"
+}

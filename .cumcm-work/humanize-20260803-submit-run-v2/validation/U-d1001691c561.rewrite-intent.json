@@ -1,0 +1,68 @@
+{
+  "artifact": {
+    "after_sha256": "cef22b43a3f10fe49055ae2086533b5ef2e7b503c463e95aaaade0aea0463d22",
+    "before_sha256": "92183da2acf2a66fb021dbfbba94eb2104ae06aab2f643d5d22b3103b3ba5c8d"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "44aaaa06e73b183a12018f55254734fbf2aee4c492bf7ae1a298f751f2fa2858",
+  "chunk_binding_sha256": "a7cb755b943a9239713dd47f2d15987a2d9fdb68fce462f88f7f2631a84a0451",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-d1001691c561.diff",
+    "sha256": "b16d82c2e192ef8e5fc83cd796e38545cba2c98eb44c4b7acce2aadcea7629a3"
+  },
+  "evidence_sha256": "abd47e35a9ad917dce0d7f79d2e7f2c5d4cd11a7ef87b7445f333150fa464219",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "调整目录式、均匀并列式表达，保留具体判断、程序动作与使用边界",
+        "target_signals": [
+          "HUM-JUDGMENT-TRACE",
+          "RHYTHM-UNIFORM-SEQUENCE"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 45,
+        "id": "S1",
+        "sha256": "a3c83635d3ead85e67be9b47fad940eacba603c7c4a94f437ca338ac5d0129d5",
+        "start_line": 1
+      }
+    ],
+    "summary": "调整目录式、均匀并列式表达，保留具体判断、程序动作与使用边界",
+    "target_signals": [
+      "HUM-JUDGMENT-TRACE",
+      "RHYTHM-UNIFORM-SEQUENCE"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 37,
+        "operation": "REPLACE",
+        "start_line": 33
+      }
+    ],
+    "masked_after_sha256": "c8a87ad6c23ad01a1d57499cc2f026c2bfe8603b4069f0170f9668b903e9ad5b",
+    "masked_before_sha256": "a3c83635d3ead85e67be9b47fad940eacba603c7c4a94f437ca338ac5d0129d5",
+    "source_spans_covered": 1,
+    "source_spans_total": 1,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "a9fa711f542622359c8d9fbcdf2e1d7043e805890a0ffc6a3b9f7058e7e3e117",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-d1001691c561"
+}

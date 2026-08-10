@@ -1,0 +1,66 @@
+{
+  "artifact": {
+    "after_sha256": "67a1a0b9c40f24c67adb54cc9fdcef7be83ded7f0a1d37c87d6b05fb25738656",
+    "before_sha256": "6d1804ea900dd1e825d66dc94f83af188f4aa4d65b554e92ebb387c7c65156d5"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "27c30ab042e091ef49ab52faeff328c97d15b71f99944ee30c475537b3b3e3c2",
+  "chunk_binding_sha256": "1d8e107bfc12773169c2a6bb881d88f85b35311fa3a941617a2fe90e14d5929a",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-c0102a2e2c80.diff",
+    "sha256": "a79dd5545316c648cc6641d092993e653809818a4adc3b79d1afdae5144655f9"
+  },
+  "evidence_sha256": "ec50651f0307d3c8bf2efc5715a1709fe7864f8e62bf732eecc8e9f7821ef7c8",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载",
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 13,
+        "id": "S1",
+        "sha256": "6de06655874a81031079431d19ae31c52154b3f8624526873a5cd82917e81500",
+        "start_line": 13
+      }
+    ],
+    "summary": "删除工作台式词壳，保留对象、动作、条件和结论边界",
+    "target_signals": [
+      "LEX-STRICT-CORPUS-DIRECT-ACTION"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 13,
+        "operation": "REPLACE",
+        "start_line": 13
+      }
+    ],
+    "masked_after_sha256": "65817a8a50defe54fa2f510eaaee3b42322d974c2af32a6eee5ed774651a6c7e",
+    "masked_before_sha256": "45d4b27ea7ef6fb8ba1f1bedc4e9a01ff31edf78845a25fb59e82219c5fd1d40",
+    "source_spans_covered": 1,
+    "source_spans_total": 1,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "ae2fecf0db12ae0b90b011a4da6d9c9bb8abb95012b64d12b381fd5a766a03ee",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-c0102a2e2c80"
+}

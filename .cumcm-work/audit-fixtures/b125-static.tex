@@ -1,0 +1,25 @@
+\documentclass{ctexart}
+\begin{document}
+\begin{abstract}给出优化模型与检验结果。\end{abstract}
+\keywords{优化；动态规划}
+\section{问题重述}重述任务。
+\section{问题分析}分析约束与目标。
+\section{模型假设}假设数据可靠。
+\section{符号说明}定义变量。
+\section{分问题模型建立与求解}
+\subsection{模型建立}建立目标函数和约束。
+\subsection{模型求解}附录给出完整实现代码。
+\section{结果分析}
+结果表明方案满足约束，并通过回代误差检查。
+\section{模型检验}使用基准对照和误差指标复算。
+\section{灵敏度分析}扰动参数后重新优化。
+\section{模型评价与改进}评价局限并提出改进。
+\begin{thebibliography}{1}\bibitem{x} 测试文献。\end{thebibliography}
+\appendix
+\section{代码}
+\begin{verbatim}
+n = length(weather == 1);
+p(find(p == 0)) = inf;
+dominated = choose(i,:) > max(choose(:,:));
+\end{verbatim}
+\end{document}

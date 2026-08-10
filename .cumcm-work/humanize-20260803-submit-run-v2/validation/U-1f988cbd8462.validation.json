@@ -1,0 +1,2021 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "candidate_assembly_exit_code": 0,
+  "candidate_assembly_status": "PASS",
+  "delivery_gate_exit_code": 2,
+  "delivery_gate_status": "REVIEW",
+  "draft_surface_source_check": {
+    "details": {},
+    "scope": [],
+    "semantic_entailment_certified": false,
+    "status": "N/A"
+  },
+  "evidence": {
+    "after_path": "validation/U-1f988cbd8462.after.tex",
+    "after_sha256": "9e378be8f61eaddd9ce54131fc432f0d9f32b227ae6f015e8066f18a3b271fb1",
+    "before_path": "validation/U-1f988cbd8462.before.tex",
+    "before_sha256": "1c87882aaf56015e3d369f213705b24889211c284dd9724c300b91e68509f4e9",
+    "checker_executed": true,
+    "document_format": "tex",
+    "document_scope": "FRAGMENT",
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "08b4e88c540722085ab5130c2137c802ce2ef561f64db8a3f97660e98c12e29b",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "acf31a687e741637d1ebb82a3ab9e67039251326cfb006f45ea7dfb719641689",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "source_path_archived": false
+  },
+  "exit_code": 2,
+  "hard_invariant_layer_status": "PASS",
+  "humanize_quality_claim_allowed": false,
+  "introduced_findings": [],
+  "invariants": {
+    "advisories": [],
+    "errors": [],
+    "evidence": {
+      "document_scope": "FRAGMENT",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "speech_act_audit": {
+        "categories": {
+          "assumption": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "attribution_source": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "condition": {
+            "after": {
+              "当": 1,
+              "若": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0114",
+                "column": 14,
+                "end": 1724,
+                "end_column": 15,
+                "end_line": 61,
+                "line": 61,
+                "marker": "若",
+                "sentence_context": "若变量只有一维且单调，可改用遍历或二分",
+                "sentence_id": "T0083",
+                "side": "after",
+                "start": 1723
+              },
+              {
+                "category": "condition",
+                "claim_id": "C0188",
+                "column": 53,
+                "end": 2716,
+                "end_column": 54,
+                "end_line": 94,
+                "line": 94,
+                "marker": "当",
+                "sentence_context": "每次预测只读取当前",
+                "sentence_id": "T0137",
+                "side": "after",
+                "start": 2715
+              }
+            ],
+            "before": {
+              "当": 1,
+              "若": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0111",
+                "column": 14,
+                "end": 1692,
+                "end_column": 15,
+                "end_line": 61,
+                "line": 61,
+                "marker": "若",
+                "sentence_context": "若变量只有一维且单调，可改用遍历或二分",
+                "sentence_id": "T0083",
+                "side": "before",
+                "start": 1691
+              },
+              {
+                "category": "condition",
+                "claim_id": "C0183",
+                "column": 46,
+                "end": 2661,
+                "end_column": 47,
+                "end_line": 94,
+                "line": 94,
+                "marker": "当",
+                "sentence_context": "预测时只用当前",
+                "sentence_id": "T0133",
+                "side": "before",
+                "start": 2660
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "definition_naming": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "focus_scope": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "logical_relation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "modality_scope": {
+            "after": {
+              "只": 4,
+              "可": 6,
+              "应": 2
+            },
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0029",
+                "column": 16,
+                "end": 583,
+                "end_column": 17,
+                "end_line": 23,
+                "line": 23,
+                "marker": "应",
+                "sentence_context": "此时应改用刚性求解器，不靠缩小一步掩盖问题",
+                "sentence_id": "T0024",
+                "side": "after",
+                "start": 582
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0072",
+                "column": 19,
+                "end": 1182,
+                "end_column": 20,
+                "end_line": 43,
+                "line": 43,
+                "marker": "只",
+                "sentence_context": "多根、步长和漏检风险要另列检查，不能只写",
+                "sentence_id": "T0054",
+                "side": "after",
+                "start": 1181
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0081",
+                "column": 35,
+                "end": 1294,
+                "end_column": 36,
+                "end_line": 47,
+                "line": 47,
+                "marker": "可",
+                "sentence_context": "小规模枚举答案，再调用PuLP/Pyomo或MATLAB求解器，读取可行性、目标值和最优间隙",
+                "sentence_id": "T0060",
+                "side": "after",
+                "start": 1293
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0092",
+                "column": 27,
+                "end": 1433,
+                "end_column": 28,
+                "end_line": 52,
+                "line": 52,
+                "marker": "可",
+                "sentence_context": "染色体经可行性修复后，再按非支配排序和拥挤",
+                "sentence_id": "T0068",
+                "side": "after",
+                "start": 1432
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0101",
+                "column": 26,
+                "end": 1561,
+                "end_column": 27,
+                "end_line": 55,
+                "line": 55,
+                "marker": "可",
+                "sentence_context": "变量少且约束凸时， 约束法可直接呈现取舍边界",
+                "sentence_id": "T0073",
+                "side": "after",
+                "start": 1560
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0114",
+                "column": 17,
+                "end": 1727,
+                "end_column": 18,
+                "end_line": 61,
+                "line": 61,
+                "marker": "只",
+                "sentence_context": "若变量只有一维且单调，可改用遍历或二分",
+                "sentence_id": "T0083",
+                "side": "after",
+                "start": 1726
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0115",
+                "column": 25,
+                "end": 1735,
+                "end_column": 26,
+                "end_line": 61,
+                "line": 61,
+                "marker": "可",
+                "sentence_context": "若变量只有一维且单调，可改用遍历或二分",
+                "sentence_id": "T0083",
+                "side": "after",
+                "start": 1734
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0138",
+                "column": 22,
+                "end": 2061,
+                "end_column": 23,
+                "end_line": 72,
+                "line": 72,
+                "marker": "可",
+                "sentence_context": "它决定后续样本是否可信，但不能把业务极值自动删除，也不能在",
+                "sentence_id": "T0102",
+                "side": "after",
+                "start": 2060
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0154",
+                "column": 16,
+                "end": 2268,
+                "end_column": 17,
+                "end_line": 79,
+                "line": 79,
+                "marker": "应",
+                "sentence_context": "直接业务含义，密度不均或非凸簇应比较DBSCAN或谱聚类",
+                "sentence_id": "T0112",
+                "side": "after",
+                "start": 2267
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0167",
+                "column": 21,
+                "end": 2442,
+                "end_column": 22,
+                "end_line": 85,
+                "line": 85,
+                "marker": "只",
+                "sentence_context": "方向、相关重复和权重敏感性都要说明，不能只给最终名次",
+                "sentence_id": "T0121",
+                "side": "after",
+                "start": 2441
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0178",
+                "column": 24,
+                "end": 2599,
+                "end_column": 25,
+                "end_line": 90,
+                "line": 90,
+                "marker": "可",
+                "sentence_context": "线性模型可解释，树模型能处理非线性",
+                "sentence_id": "T0130",
+                "side": "after",
+                "start": 2598
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0188",
+                "column": 50,
+                "end": 2713,
+                "end_column": 51,
+                "end_line": 94,
+                "line": 94,
+                "marker": "只",
+                "sentence_context": "每次预测只读取当前",
+                "sentence_id": "T0137",
+                "side": "after",
+                "start": 2712
+              }
+            ],
+            "before": {
+              "只": 4,
+              "可": 6,
+              "应": 2
+            },
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0028",
+                "column": 16,
+                "end": 569,
+                "end_column": 17,
+                "end_line": 23,
+                "line": 23,
+                "marker": "应",
+                "sentence_context": "此时应改用刚性求解器，不靠缩小一步掩盖问题",
+                "sentence_id": "T0024",
+                "side": "before",
+                "start": 568
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0070",
+                "column": 19,
+                "end": 1162,
+                "end_column": 20,
+                "end_line": 43,
+                "line": 43,
+                "marker": "只",
+                "sentence_context": "多根、步长和漏检风险要另列检查，不能只写",
+                "sentence_id": "T0054",
+                "side": "before",
+                "start": 1161
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0078",
+                "column": 35,
+                "end": 1266,
+                "end_column": 36,
+                "end_line": 47,
+                "line": 47,
+                "marker": "可",
+                "sentence_context": "小规模枚举答案，再调用PuLP/Pyomo或MATLAB求解器，读取可行性、目标值和最优间隙",
+                "sentence_id": "T0060",
+                "side": "before",
+                "start": 1265
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0089",
+                "column": 27,
+                "end": 1405,
+                "end_column": 28,
+                "end_line": 52,
+                "line": 52,
+                "marker": "可",
+                "sentence_context": "染色体经过可行性修复后，按非支配排序和拥挤",
+                "sentence_id": "T0068",
+                "side": "before",
+                "start": 1404
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0098",
+                "column": 26,
+                "end": 1532,
+                "end_column": 27,
+                "end_line": 55,
+                "line": 55,
+                "marker": "可",
+                "sentence_context": "变量少且约束凸时， 约束法可直接呈现取舍边界",
+                "sentence_id": "T0073",
+                "side": "before",
+                "start": 1531
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0111",
+                "column": 17,
+                "end": 1695,
+                "end_column": 18,
+                "end_line": 61,
+                "line": 61,
+                "marker": "只",
+                "sentence_context": "若变量只有一维且单调，可改用遍历或二分",
+                "sentence_id": "T0083",
+                "side": "before",
+                "start": 1694
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0112",
+                "column": 25,
+                "end": 1703,
+                "end_column": 26,
+                "end_line": 61,
+                "line": 61,
+                "marker": "可",
+                "sentence_context": "若变量只有一维且单调，可改用遍历或二分",
+                "sentence_id": "T0083",
+                "side": "before",
+                "start": 1702
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0135",
+                "column": 22,
+                "end": 2018,
+                "end_column": 23,
+                "end_line": 72,
+                "line": 72,
+                "marker": "可",
+                "sentence_context": "它决定后续样本是否可信，但不能把业务极值自动删除，也不能在",
+                "sentence_id": "T0100",
+                "side": "before",
+                "start": 2017
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0151",
+                "column": 16,
+                "end": 2223,
+                "end_column": 17,
+                "end_line": 79,
+                "line": 79,
+                "marker": "应",
+                "sentence_context": "直接业务含义，密度不均或非凸簇应比较DBSCAN或谱聚类",
+                "sentence_id": "T0110",
+                "side": "before",
+                "start": 2222
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0164",
+                "column": 21,
+                "end": 2395,
+                "end_column": 22,
+                "end_line": 85,
+                "line": 85,
+                "marker": "只",
+                "sentence_context": "方向、相关重复和权重敏感性都要说明，不能只给最终名次",
+                "sentence_id": "T0118",
+                "side": "before",
+                "start": 2394
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0174",
+                "column": 24,
+                "end": 2551,
+                "end_column": 25,
+                "end_line": 90,
+                "line": 90,
+                "marker": "可",
+                "sentence_context": "线性模型可解释，树模型能处理非线性",
+                "sentence_id": "T0126",
+                "side": "before",
+                "start": 2550
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0183",
+                "column": 44,
+                "end": 2659,
+                "end_column": 45,
+                "end_line": 94,
+                "line": 94,
+                "marker": "只",
+                "sentence_context": "预测时只用当前",
+                "sentence_id": "T0133",
+                "side": "before",
+                "start": 2658
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "negation": {
+            "after": {
+              "不": 10,
+              "不能": 7,
+              "无": 1,
+              "未": 4,
+              "没有": 1,
+              "非": 5
+            },
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0030",
+                "column": 25,
+                "end": 592,
+                "end_column": 26,
+                "end_line": 23,
+                "line": 23,
+                "marker": "不",
+                "sentence_context": "此时应改用刚性求解器，不靠缩小一步掩盖问题",
+                "sentence_id": "T0024",
+                "side": "after",
+                "start": 591
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0052",
+                "column": 5,
+                "end": 909,
+                "end_column": 6,
+                "end_line": 35,
+                "line": 35,
+                "marker": "不",
+                "sentence_context": "& 适合不规则几何、变系数介质和混合边界",
+                "sentence_id": "T0039",
+                "side": "after",
+                "start": 908
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0061",
+                "column": 25,
+                "end": 1017,
+                "end_column": 26,
+                "end_line": 39,
+                "line": 39,
+                "marker": "不",
+                "sentence_context": "筛去不满足构件次序和运动方向的候选根，随后逐节",
+                "sentence_id": "T0046",
+                "side": "after",
+                "start": 1016
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0072",
+                "column": 17,
+                "end": 1181,
+                "end_column": 19,
+                "end_line": 43,
+                "line": 43,
+                "marker": "不能",
+                "sentence_context": "多根、步长和漏检风险要另列检查，不能只写",
+                "sentence_id": "T0054",
+                "side": "after",
+                "start": 1179
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0075",
+                "column": 21,
+                "end": 1229,
+                "end_column": 22,
+                "end_line": 46,
+                "line": 46,
+                "marker": "不",
+                "sentence_context": "& 先逐项列出决策变量、线性目标、等式和不等式",
+                "sentence_id": "T0057",
+                "side": "after",
+                "start": 1228
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0087",
+                "column": 23,
+                "end": 1373,
+                "end_column": 25,
+                "end_line": 49,
+                "line": 49,
+                "marker": "不能",
+                "sentence_context": "大时计算量上升，Big--M须来自实际上界，不能任意指定过大的常数",
+                "sentence_id": "T0064",
+                "side": "after",
+                "start": 1371
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0091",
+                "column": 13,
+                "end": 1419,
+                "end_column": 14,
+                "end_line": 52,
+                "line": 52,
+                "marker": "不",
+                "sentence_context": "& 各项目标先分别保留，不急着揉成一个总分",
+                "sentence_id": "T0067",
+                "side": "after",
+                "start": 1418
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0093",
+                "column": 36,
+                "end": 1442,
+                "end_column": 37,
+                "end_line": 52,
+                "line": 52,
+                "marker": "非",
+                "sentence_context": "染色体经可行性修复后，再按非支配排序和拥挤",
+                "sentence_id": "T0068",
+                "side": "after",
+                "start": 1441
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0099",
+                "column": 32,
+                "end": 1524,
+                "end_column": 33,
+                "end_line": 54,
+                "line": 54,
+                "marker": "不",
+                "sentence_context": "它能展示取舍，但不替参赛者选最终方案",
+                "sentence_id": "T0072",
+                "side": "after",
+                "start": 1523
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0109",
+                "column": 8,
+                "end": 1676,
+                "end_column": 9,
+                "end_line": 60,
+                "line": 60,
+                "marker": "非",
+                "sentence_context": "& 适合连续、非光滑或难求导的参数搜索，编码简短",
+                "sentence_id": "T0080",
+                "side": "after",
+                "start": 1675
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0111",
+                "column": 27,
+                "end": 1696,
+                "end_column": 29,
+                "end_line": 60,
+                "line": 60,
+                "marker": "没有",
+                "sentence_context": "它没有连续全局最优证书，结果会受",
+                "sentence_id": "T0081",
+                "side": "after",
+                "start": 1694
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0119",
+                "column": 22,
+                "end": 1783,
+                "end_column": 23,
+                "end_line": 64,
+                "line": 64,
+                "marker": "非",
+                "sentence_context": "非负单源最短路用Dijkstra",
+                "sentence_id": "T0087",
+                "side": "after",
+                "start": 1782
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0129",
+                "column": 15,
+                "end": 1910,
+                "end_column": 17,
+                "end_line": 67,
+                "line": 67,
+                "marker": "不能",
+                "sentence_context": "路线要另行处理，最小生成树也不能代替两点间最短路",
+                "sentence_id": "T0094",
+                "side": "after",
+                "start": 1908
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0133",
+                "column": 20,
+                "end": 1960,
+                "end_column": 21,
+                "end_line": 70,
+                "line": 70,
+                "marker": "未",
+                "sentence_context": "& 拿到附件后先建数据字典和主键，并把未检出、未知、未采样分开记录",
+                "sentence_id": "T0097",
+                "side": "after",
+                "start": 1959
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0133",
+                "column": 24,
+                "end": 1964,
+                "end_column": 25,
+                "end_line": 70,
+                "line": 70,
+                "marker": "未",
+                "sentence_context": "& 拿到附件后先建数据字典和主键，并把未检出、未知、未采样分开记录",
+                "sentence_id": "T0097",
+                "side": "after",
+                "start": 1963
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0133",
+                "column": 27,
+                "end": 1967,
+                "end_column": 28,
+                "end_line": 70,
+                "line": 70,
+                "marker": "未",
+                "sentence_context": "& 拿到附件后先建数据字典和主键，并把未检出、未知、未采样分开记录",
+                "sentence_id": "T0097",
+                "side": "after",
+                "start": 1966
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0139",
+                "column": 26,
+                "end": 2066,
+                "end_column": 28,
+                "end_line": 72,
+                "line": 72,
+                "marker": "不能",
+                "sentence_context": "它决定后续样本是否可信，但不能把业务极值自动删除，也不能在",
+                "sentence_id": "T0102",
+                "side": "after",
+                "start": 2064
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0140",
+                "column": 39,
+                "end": 2079,
+                "end_column": 41,
+                "end_line": 72,
+                "line": 72,
+                "marker": "不能",
+                "sentence_context": "它决定后续样本是否可信，但不能把业务极值自动删除，也不能在",
+                "sentence_id": "T0102",
+                "side": "after",
+                "start": 2077
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0147",
+                "column": 3,
+                "end": 2174,
+                "end_column": 4,
+                "end_line": 77,
+                "line": 77,
+                "marker": "不",
+                "sentence_context": "比较不同簇数的轮廓系数",
+                "sentence_id": "T0108",
+                "side": "after",
+                "start": 2173
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0152",
+                "column": 44,
+                "end": 2249,
+                "end_column": 45,
+                "end_line": 78,
+                "line": 78,
+                "marker": "未",
+                "sentence_context": "两者速度快、图形直观，但主成分未必有",
+                "sentence_id": "T0111",
+                "side": "after",
+                "start": 2248
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0154",
+                "column": 10,
+                "end": 2262,
+                "end_column": 11,
+                "end_line": 79,
+                "line": 79,
+                "marker": "不",
+                "sentence_context": "直接业务含义，密度不均或非凸簇应比较DBSCAN或谱聚类",
+                "sentence_id": "T0112",
+                "side": "after",
+                "start": 2261
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0154",
+                "column": 13,
+                "end": 2265,
+                "end_column": 14,
+                "end_line": 79,
+                "line": 79,
+                "marker": "非",
+                "sentence_context": "直接业务含义，密度不均或非凸簇应比较DBSCAN或谱聚类",
+                "sentence_id": "T0112",
+                "side": "after",
+                "start": 2264
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0157",
+                "column": 11,
+                "end": 2312,
+                "end_column": 12,
+                "end_line": 82,
+                "line": 82,
+                "marker": "无",
+                "sentence_context": "& 指标须先正向化和无量纲化",
+                "sentence_id": "T0115",
+                "side": "after",
+                "start": 2311
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0164",
+                "column": 29,
+                "end": 2407,
+                "end_column": 30,
+                "end_line": 84,
+                "line": 84,
+                "marker": "不",
+                "sentence_context": "计算过程清楚，但 不等于",
+                "sentence_id": "T0119",
+                "side": "after",
+                "start": 2406
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0167",
+                "column": 19,
+                "end": 2441,
+                "end_column": 21,
+                "end_line": 85,
+                "line": 85,
+                "marker": "不能",
+                "sentence_context": "方向、相关重复和权重敏感性都要说明，不能只给最终名次",
+                "sentence_id": "T0121",
+                "side": "after",
+                "start": 2439
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0179",
+                "column": 34,
+                "end": 2609,
+                "end_column": 35,
+                "end_line": 90,
+                "line": 90,
+                "marker": "非",
+                "sentence_context": "线性模型可解释，树模型能处理非线性",
+                "sentence_id": "T0130",
+                "side": "after",
+                "start": 2608
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0182",
+                "column": 18,
+                "end": 2635,
+                "end_column": 19,
+                "end_line": 91,
+                "line": 91,
+                "marker": "不",
+                "sentence_context": "相关或高准确率都不构成因果证据",
+                "sentence_id": "T0133",
+                "side": "after",
+                "start": 2634
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0196",
+                "column": 10,
+                "end": 2816,
+                "end_column": 12,
+                "end_line": 97,
+                "line": 97,
+                "marker": "不能",
+                "sentence_context": "时间序列不能随机打乱做普通K折",
+                "sentence_id": "T0143",
+                "side": "after",
+                "start": 2814
+              }
+            ],
+            "before": {
+              "不": 10,
+              "不能": 7,
+              "无": 1,
+              "未": 4,
+              "没有": 1,
+              "非": 5
+            },
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0029",
+                "column": 25,
+                "end": 578,
+                "end_column": 26,
+                "end_line": 23,
+                "line": 23,
+                "marker": "不",
+                "sentence_context": "此时应改用刚性求解器，不靠缩小一步掩盖问题",
+                "sentence_id": "T0024",
+                "side": "before",
+                "start": 577
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0051",
+                "column": 5,
+                "end": 893,
+                "end_column": 6,
+                "end_line": 35,
+                "line": 35,
+                "marker": "不",
+                "sentence_context": "& 适合不规则几何、变系数介质和混合边界",
+                "sentence_id": "T0040",
+                "side": "before",
+                "start": 892
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0059",
+                "column": 24,
+                "end": 1000,
+                "end_column": 25,
+                "end_line": 39,
+                "line": 39,
+                "marker": "不",
+                "sentence_context": "& 由已知龙头位置建立相邻把手的定长方程，筛去不满足构件次序和运动方向的根，再逐节",
+                "sentence_id": "T0046",
+                "side": "before",
+                "start": 999
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0070",
+                "column": 17,
+                "end": 1161,
+                "end_column": 19,
+                "end_line": 43,
+                "line": 43,
+                "marker": "不能",
+                "sentence_context": "多根、步长和漏检风险要另列检查，不能只写",
+                "sentence_id": "T0054",
+                "side": "before",
+                "start": 1159
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0073",
+                "column": 18,
+                "end": 1206,
+                "end_column": 19,
+                "end_line": 46,
+                "line": 46,
+                "marker": "不",
+                "sentence_context": "& 写出决策变量、线性目标、等式和不等式",
+                "sentence_id": "T0057",
+                "side": "before",
+                "start": 1205
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0084",
+                "column": 23,
+                "end": 1345,
+                "end_column": 25,
+                "end_line": 49,
+                "line": 49,
+                "marker": "不能",
+                "sentence_context": "大时计算量上升，Big--M须来自实际上界，不能任意指定过大的常数",
+                "sentence_id": "T0064",
+                "side": "before",
+                "start": 1343
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0088",
+                "column": 11,
+                "end": 1389,
+                "end_column": 12,
+                "end_line": 52,
+                "line": 52,
+                "marker": "不",
+                "sentence_context": "& 分别保留各目标，不先强行合成一个分数",
+                "sentence_id": "T0067",
+                "side": "before",
+                "start": 1388
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0090",
+                "column": 35,
+                "end": 1413,
+                "end_column": 36,
+                "end_line": 52,
+                "line": 52,
+                "marker": "非",
+                "sentence_context": "染色体经过可行性修复后，按非支配排序和拥挤",
+                "sentence_id": "T0068",
+                "side": "before",
+                "start": 1412
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0096",
+                "column": 32,
+                "end": 1495,
+                "end_column": 33,
+                "end_line": 54,
+                "line": 54,
+                "marker": "不",
+                "sentence_context": "它能展示取舍，但不替参赛者选最终方案",
+                "sentence_id": "T0072",
+                "side": "before",
+                "start": 1494
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0106",
+                "column": 8,
+                "end": 1644,
+                "end_column": 9,
+                "end_line": 60,
+                "line": 60,
+                "marker": "非",
+                "sentence_context": "& 适合连续、非光滑或难求导的参数搜索，编码简短",
+                "sentence_id": "T0080",
+                "side": "before",
+                "start": 1643
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0108",
+                "column": 27,
+                "end": 1664,
+                "end_column": 29,
+                "end_line": 60,
+                "line": 60,
+                "marker": "没有",
+                "sentence_context": "它没有连续全局最优证书，结果会受",
+                "sentence_id": "T0081",
+                "side": "before",
+                "start": 1662
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0116",
+                "column": 19,
+                "end": 1748,
+                "end_column": 20,
+                "end_line": 64,
+                "line": 64,
+                "marker": "非",
+                "sentence_context": "& 把对象写成节点、关系写成带权边：非负单源最短路用Dijkstra，容量与费用同时存在时",
+                "sentence_id": "T0086",
+                "side": "before",
+                "start": 1747
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0126",
+                "column": 15,
+                "end": 1875,
+                "end_column": 17,
+                "end_line": 67,
+                "line": 67,
+                "marker": "不能",
+                "sentence_context": "路线要另行处理，最小生成树也不能代替两点间最短路",
+                "sentence_id": "T0092",
+                "side": "before",
+                "start": 1873
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0130",
+                "column": 15,
+                "end": 1920,
+                "end_column": 16,
+                "end_line": 70,
+                "line": 70,
+                "marker": "未",
+                "sentence_context": "& 先建数据字典和主键，区分未检出、未知和未采样",
+                "sentence_id": "T0095",
+                "side": "before",
+                "start": 1919
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0130",
+                "column": 19,
+                "end": 1924,
+                "end_column": 20,
+                "end_line": 70,
+                "line": 70,
+                "marker": "未",
+                "sentence_context": "& 先建数据字典和主键，区分未检出、未知和未采样",
+                "sentence_id": "T0095",
+                "side": "before",
+                "start": 1923
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0130",
+                "column": 22,
+                "end": 1927,
+                "end_column": 23,
+                "end_line": 70,
+                "line": 70,
+                "marker": "未",
+                "sentence_context": "& 先建数据字典和主键，区分未检出、未知和未采样",
+                "sentence_id": "T0095",
+                "side": "before",
+                "start": 1926
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0136",
+                "column": 26,
+                "end": 2023,
+                "end_column": 28,
+                "end_line": 72,
+                "line": 72,
+                "marker": "不能",
+                "sentence_context": "它决定后续样本是否可信，但不能把业务极值自动删除，也不能在",
+                "sentence_id": "T0100",
+                "side": "before",
+                "start": 2021
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0137",
+                "column": 39,
+                "end": 2036,
+                "end_column": 41,
+                "end_line": 72,
+                "line": 72,
+                "marker": "不能",
+                "sentence_context": "它决定后续样本是否可信，但不能把业务极值自动删除，也不能在",
+                "sentence_id": "T0100",
+                "side": "before",
+                "start": 2034
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0144",
+                "column": 3,
+                "end": 2129,
+                "end_column": 4,
+                "end_line": 77,
+                "line": 77,
+                "marker": "不",
+                "sentence_context": "比较不同簇数的轮廓系数",
+                "sentence_id": "T0106",
+                "side": "before",
+                "start": 2128
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0149",
+                "column": 44,
+                "end": 2204,
+                "end_column": 45,
+                "end_line": 78,
+                "line": 78,
+                "marker": "未",
+                "sentence_context": "两者速度快、图形直观，但主成分未必有",
+                "sentence_id": "T0109",
+                "side": "before",
+                "start": 2203
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0151",
+                "column": 10,
+                "end": 2217,
+                "end_column": 11,
+                "end_line": 79,
+                "line": 79,
+                "marker": "不",
+                "sentence_context": "直接业务含义，密度不均或非凸簇应比较DBSCAN或谱聚类",
+                "sentence_id": "T0110",
+                "side": "before",
+                "start": 2216
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0151",
+                "column": 13,
+                "end": 2220,
+                "end_column": 14,
+                "end_line": 79,
+                "line": 79,
+                "marker": "非",
+                "sentence_context": "直接业务含义，密度不均或非凸簇应比较DBSCAN或谱聚类",
+                "sentence_id": "T0110",
+                "side": "before",
+                "start": 2219
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0154",
+                "column": 10,
+                "end": 2266,
+                "end_column": 11,
+                "end_line": 82,
+                "line": 82,
+                "marker": "无",
+                "sentence_context": "& 指标先正向化和无量纲化，熵权反映样本差异，TOPSIS再计算对象到正、负理想解的距离",
+                "sentence_id": "T0113",
+                "side": "before",
+                "start": 2265
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0161",
+                "column": 29,
+                "end": 2360,
+                "end_column": 30,
+                "end_line": 84,
+                "line": 84,
+                "marker": "不",
+                "sentence_context": "计算过程清楚，但 不等于",
+                "sentence_id": "T0116",
+                "side": "before",
+                "start": 2359
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0164",
+                "column": 19,
+                "end": 2394,
+                "end_column": 21,
+                "end_line": 85,
+                "line": 85,
+                "marker": "不能",
+                "sentence_context": "方向、相关重复和权重敏感性都要说明，不能只给最终名次",
+                "sentence_id": "T0118",
+                "side": "before",
+                "start": 2392
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0175",
+                "column": 34,
+                "end": 2561,
+                "end_column": 35,
+                "end_line": 90,
+                "line": 90,
+                "marker": "非",
+                "sentence_context": "线性模型可解释，树模型能处理非线性",
+                "sentence_id": "T0126",
+                "side": "before",
+                "start": 2560
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0178",
+                "column": 18,
+                "end": 2587,
+                "end_column": 19,
+                "end_line": 91,
+                "line": 91,
+                "marker": "不",
+                "sentence_context": "相关或高准确率都不构成因果证据",
+                "sentence_id": "T0129",
+                "side": "before",
+                "start": 2586
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0191",
+                "column": 10,
+                "end": 2761,
+                "end_column": 12,
+                "end_line": 97,
+                "line": 97,
+                "marker": "不能",
+                "sentence_context": "时间序列不能随机打乱做普通K折",
+                "sentence_id": "T0139",
+                "side": "before",
+                "start": 2759
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "reporting_observation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          }
+        },
+        "claim_pairing": {
+          "after_claims": 199,
+          "before_claims": 194,
+          "unique_exact_pairs": 139,
+          "unpaired_after_claims": 60,
+          "unpaired_before_claims": 55
+        },
+        "protection": {
+          "after_ranges": 7,
+          "before_ranges": 7,
+          "line_column_basis": "NORMALIZED_LF_1_BASED_UNICODE_CODEPOINT",
+          "masking": "LENGTH_PRESERVING"
+        }
+      }
+    },
+    "hard_failure": false,
+    "status": "pass",
+    "summary": {
+      "advisories": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    "warnings": []
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 0,
+    "introduced_candidates": 0,
+    "unexplained_high_candidates": 0
+  },
+  "mechanical_validation_exit_code": 0,
+  "mechanical_validation_status": "PASS",
+  "mode": "REWRITE",
+  "paired_quality_clearance_granted": false,
+  "paired_quality_review_local_clearance_supported": false,
+  "paired_quality_review_request": {
+    "artifact": {
+      "after_sha256": "9e378be8f61eaddd9ce54131fc432f0d9f32b227ae6f015e8066f18a3b271fb1",
+      "before_sha256": "1c87882aaf56015e3d369f213705b24889211c284dd9724c300b91e68509f4e9"
+    },
+    "changes": [
+      {
+        "after": {
+          "end_line": 19,
+          "han_chars": 34,
+          "line_count": 1,
+          "sha256": "32fab83f685ac7c75774a49d8c395cfe5ea3a853853ef9a603880449c567731f",
+          "start_line": 19
+        },
+        "before": {
+          "end_line": 19,
+          "han_chars": 26,
+          "line_count": 1,
+          "sha256": "96b5ec962c77fdeb3cea18b5f7056c93e5606577ad79dd994a7c006bf3845b35",
+          "start_line": 19
+        },
+        "change_id": "QCH-66f2cad810d336297524",
+        "operation": "REPLACE",
+        "ordinal": 1
+      },
+      {
+        "after": {
+          "end_line": 22,
+          "han_chars": 37,
+          "line_count": 1,
+          "sha256": "98180831190250f7fc43b88fb9d332ff36d7b697a984c652d260407b3ff77fc4",
+          "start_line": 22
+        },
+        "before": {
+          "end_line": 22,
+          "han_chars": 33,
+          "line_count": 1,
+          "sha256": "9b35718800cdb619a7081f06dc7b1bcbd5b1afa499cb773c2e3a37e143ee4500",
+          "start_line": 22
+        },
+        "change_id": "QCH-f8626c47087dcbd9a541",
+        "operation": "REPLACE",
+        "ordinal": 2
+      },
+      {
+        "after": {
+          "end_line": 26,
+          "han_chars": 39,
+          "line_count": 1,
+          "sha256": "e7e7ec1d2d8e7e04199f089fa1d6081832dfd590211c3f8b44fb00f455fb51d9",
+          "start_line": 26
+        },
+        "before": {
+          "end_line": 26,
+          "han_chars": 34,
+          "line_count": 1,
+          "sha256": "797b5582c72fbf46ceaa45a18d95f02eabc27ca8d288be550e694663e5dd976a",
+          "start_line": 26
+        },
+        "change_id": "QCH-583cc20c06577b3e76bc",
+        "operation": "REPLACE",
+        "ordinal": 3
+      },
+      {
+        "after": {
+          "end_line": 32,
+          "han_chars": 30,
+          "line_count": 1,
+          "sha256": "015836f031b8c1728451f710bf6fad01bbc2d271ec9ec508889475eff342e9bb",
+          "start_line": 32
+        },
+        "before": {
+          "end_line": 32,
+          "han_chars": 33,
+          "line_count": 1,
+          "sha256": "dec310ff8ec3a3dc1222c8cca1c34618515cc37c0fa062f6bb8ad4bf68b4fd5d",
+          "start_line": 32
+        },
+        "change_id": "QCH-a6c51c1ea2471c8e2996",
+        "operation": "REPLACE",
+        "ordinal": 4
+      },
+      {
+        "after": {
+          "end_line": 39,
+          "han_chars": 40,
+          "line_count": 1,
+          "sha256": "d41ca800446ac2a052ebe69175eef1831434a900d11b4c3be1e9e1e18d25c7e8",
+          "start_line": 39
+        },
+        "before": {
+          "end_line": 39,
+          "han_chars": 37,
+          "line_count": 1,
+          "sha256": "7ca59f9e56911632459821ce68bc96c2faf6c88382a240b11ce13cf3c12ec019",
+          "start_line": 39
+        },
+        "change_id": "QCH-bba31bf7b20b147aa002",
+        "operation": "REPLACE",
+        "ordinal": 5
+      },
+      {
+        "after": {
+          "end_line": 46,
+          "han_chars": 38,
+          "line_count": 1,
+          "sha256": "7e99c2290f5457ea049c0de61485cdb5b160deca90711f341fc486707238167f",
+          "start_line": 46
+        },
+        "before": {
+          "end_line": 46,
+          "han_chars": 31,
+          "line_count": 1,
+          "sha256": "3595155da8431c8b0da35d31956883581b063a4d2f54f6b374f488e30550087d",
+          "start_line": 46
+        },
+        "change_id": "QCH-24a30c3c471bd8fe6e98",
+        "operation": "REPLACE",
+        "ordinal": 6
+      },
+      {
+        "after": {
+          "end_line": 52,
+          "han_chars": 38,
+          "line_count": 1,
+          "sha256": "6a3fd2411e1fb882c5fd1ca58debad23ae133cd33807d023d5b5fe6de963ea47",
+          "start_line": 52
+        },
+        "before": {
+          "end_line": 52,
+          "han_chars": 37,
+          "line_count": 1,
+          "sha256": "67a2dc1d9fe4878a09b302c501c72a660dc2d02d2048cc735f936182349cef70",
+          "start_line": 52
+        },
+        "change_id": "QCH-e3515a87c79811f5686d",
+        "operation": "REPLACE",
+        "ordinal": 7
+      },
+      {
+        "after": {
+          "end_line": 58,
+          "han_chars": 38,
+          "line_count": 1,
+          "sha256": "00d599b0a73e57c29ecc3fc9098c129c12c7879015ea5bac1fea64700134370a",
+          "start_line": 58
+        },
+        "before": {
+          "end_line": 58,
+          "han_chars": 35,
+          "line_count": 1,
+          "sha256": "8352b83006bdbb599d97e626b45f85016dda420b2fe570f445e07ca67f8e482b",
+          "start_line": 58
+        },
+        "change_id": "QCH-f9521517fae62ee45aa5",
+        "operation": "REPLACE",
+        "ordinal": 8
+      },
+      {
+        "after": {
+          "end_line": 64,
+          "han_chars": 35,
+          "line_count": 1,
+          "sha256": "ce1188352368ee10ca0baa5316b29791baee02a0b5867eb82d6a4e1293e637bd",
+          "start_line": 64
+        },
+        "before": {
+          "end_line": 64,
+          "han_chars": 32,
+          "line_count": 1,
+          "sha256": "5e803473d39e9b6e8518554638aabd3456a620aca3b964eede36f8771018fcd1",
+          "start_line": 64
+        },
+        "change_id": "QCH-c66c6dc30c157da24d55",
+        "operation": "REPLACE",
+        "ordinal": 9
+      },
+      {
+        "after": {
+          "end_line": 70,
+          "han_chars": 41,
+          "line_count": 1,
+          "sha256": "c7c2a0eafee04417b1dd7ff36fc489f46f2424d8e0cd8722b6d177564c22ff33",
+          "start_line": 70
+        },
+        "before": {
+          "end_line": 70,
+          "han_chars": 34,
+          "line_count": 1,
+          "sha256": "86c36f18ea5998984150d099710d7f65fab461244232b773d87990b98342304e",
+          "start_line": 70
+        },
+        "change_id": "QCH-f2645ee1a52185662e41",
+        "operation": "REPLACE",
+        "ordinal": 10
+      },
+      {
+        "after": {
+          "end_line": 76,
+          "han_chars": 34,
+          "line_count": 1,
+          "sha256": "e84a50cfa1bc2b3ef37a1045534acda9d61a0174c7874c25d9f5cc5dec3ea6b1",
+          "start_line": 76
+        },
+        "before": {
+          "end_line": 76,
+          "han_chars": 32,
+          "line_count": 1,
+          "sha256": "c65fd317556b6a0baf42edaea533e296f9db3b39a524ea53a23569860679c49a",
+          "start_line": 76
+        },
+        "change_id": "QCH-ed542f47cfaf44815838",
+        "operation": "REPLACE",
+        "ordinal": 11
+      },
+      {
+        "after": {
+          "end_line": 82,
+          "han_chars": 35,
+          "line_count": 1,
+          "sha256": "8de2128d59e692558fc6942c47619cc43c9a8615b3510f5ed1ffd5f8b8994614",
+          "start_line": 82
+        },
+        "before": {
+          "end_line": 82,
+          "han_chars": 33,
+          "line_count": 1,
+          "sha256": "b759bf67583185fb9910b2cac7f79fdc5d57baeff3c237dc47cd7aaa54cc00c6",
+          "start_line": 82
+        },
+        "change_id": "QCH-894c16c338ca536cea84",
+        "operation": "REPLACE",
+        "ordinal": 12
+      },
+      {
+        "after": {
+          "end_line": 88,
+          "han_chars": 31,
+          "line_count": 1,
+          "sha256": "4952f853aeef674577e5e5f6fc35d50115f0e45e491701f02155cb8583668378",
+          "start_line": 88
+        },
+        "before": {
+          "end_line": 88,
+          "han_chars": 31,
+          "line_count": 1,
+          "sha256": "3d7c9405887eafceaade452804dabc979f25041b1dc45748715a8e887d7e1cfb",
+          "start_line": 88
+        },
+        "change_id": "QCH-29eb2fc32677f077b1e5",
+        "operation": "REPLACE",
+        "ordinal": 13
+      },
+      {
+        "after": {
+          "end_line": 94,
+          "han_chars": 37,
+          "line_count": 1,
+          "sha256": "f71d42bd57ca8a25e1549238092bbbc0756f5e788373c97098cea377084ce231",
+          "start_line": 94
+        },
+        "before": {
+          "end_line": 94,
+          "han_chars": 30,
+          "line_count": 1,
+          "sha256": "32393e44ef54ee1a6daaaf5e4189450513eb1d05b5c44077eaf4b88ba5ad3d08",
+          "start_line": 94
+        },
+        "change_id": "QCH-adb7d2d87380c58326f3",
+        "operation": "REPLACE",
+        "ordinal": 14
+      }
+    ],
+    "limitations": {
+      "academic_correctness": "NOT_EVALUATED",
+      "authorship": "NOT_EVALUATED",
+      "quality_clearance_granted": false
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "08b4e88c540722085ab5130c2137c802ce2ef561f64db8a3f97660e98c12e29b",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "acf31a687e741637d1ebb82a3ab9e67039251326cfb006f45ea7dfb719641689",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "request_sha256": "5bcd63cc1d17aa6c1bb81b7ce4300c78090482e0150bb32467532daae9791f37",
+    "review_contract": {
+      "empty_or_generic_benefit_is_clearance": false,
+      "local_model_or_caller_assertion_is_clearance": false,
+      "required_dimensions": [
+        "actionable_pathology_remaining",
+        "no_change_is_best_available_decision",
+        "problem_span_binding",
+        "independent_reading_benefit",
+        "subject_and_modifier_alignment",
+        "verb_object_collocation",
+        "logical_relation_preservation",
+        "template_field_role_and_authorization",
+        "information_density_and_rhythm",
+        "author_voice_non_regression"
+      ],
+      "required_per_change_verdicts": [
+        "ACCEPT",
+        "REVISE",
+        "REVERT"
+      ],
+      "validator_pass_is_quality_clearance": false
+    },
+    "schema": "humanize-paired-quality-review-request/v1",
+    "status": "PENDING_EXTERNAL_REVIEW",
+    "template_field_changes": [],
+    "validation_context": {
+      "artifact_relation": "CHANGED",
+      "decision": "REWRITE",
+      "decision_eligible": true,
+      "document_format": "tex",
+      "document_scope": "FRAGMENT",
+      "mechanical_validation_status": "PASS",
+      "mode": "REWRITE",
+      "scene": "RESEARCH"
+    }
+  },
+  "paired_quality_review_status": "PENDING_EXTERNAL_REVIEW",
+  "paired_style_delta_findings": [],
+  "paired_style_delta_layer_status": "NOT_APPLICABLE",
+  "paired_style_delta_summary": {
+    "authorship_inference": false,
+    "finding_count": 0,
+    "scope": "PAIRED_COURSE_VOICE_NON_REGRESSION_CANDIDATE",
+    "status": "NOT_APPLICABLE"
+  },
+  "pending_warnings": [],
+  "proposed_warning_resolutions": [],
+  "report_scope_check": {
+    "editable_range_count": 0,
+    "editable_ranges": [],
+    "extractor_replay_match": null,
+    "fragment_count": 0,
+    "outside_selection_unchanged": null,
+    "report_sha256": null,
+    "scope_path": null,
+    "scope_semantic_sha256": null,
+    "scope_sha256": null,
+    "source_sha256": null,
+    "status": "N/A"
+  },
+  "review_reasons": [
+    "paired_quality_not_evaluated"
+  ],
+  "scene": "RESEARCH",
+  "semantic_source_check": "N/A",
+  "speech_act_diagnostics": [],
+  "speech_act_layer_status": "PASS",
+  "status": "REVIEW",
+  "strict_corpus_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 0,
+    "clean_allowed_by_strict_layer": true,
+    "enabled": true,
+    "no_change_allowed": true,
+    "unexplained_candidates": 0
+  },
+  "structural_plan_check": {
+    "actual_content_changed": true,
+    "change_applied": false,
+    "invariant_baseline_sha256": "e166af7540aa4014b8b06418bf73908ca86fbf556267d14cf1f3e4ea0ee104c0",
+    "limitations": "non-STRUCTURAL run",
+    "non_structural_paragraph_order_check": {
+      "author_paragraphs_after": 14,
+      "author_paragraphs_before": 14,
+      "authorized_topology_operations": 0,
+      "detected_paragraph_merges": [],
+      "detected_paragraph_splits": [],
+      "light_sentence_reorder": false,
+      "match_evidence": [
+        {
+          "after_index": 0,
+          "before_index": 0,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00035"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 1,
+          "before_index": 1,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00036"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 2,
+          "before_index": 2,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00037"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 3,
+          "before_index": 3,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00038"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 4,
+          "before_index": 4,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00039",
+            "F00001-P00040",
+            "F00001-P00041"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 5,
+          "before_index": 5,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00042"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 6,
+          "before_index": 6,
+          "before_sha256": "fdb6b5f5341f758d5316d845a935f74309f621e301d45f89ef03e38841f2bad2",
+          "kind": "AUTHOR",
+          "method": "EXACT",
+          "protected_ids": [],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 7,
+          "before_index": 7,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00044"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 8,
+          "before_index": 8,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00045"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 9,
+          "before_index": 9,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00046"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 10,
+          "before_index": 10,
+          "before_sha256": "2158ac876bfca8ce7b819c6bf7f6a9917c48c1d04756a1b56ae52e83ce96d739",
+          "kind": "AUTHOR",
+          "method": "EXACT",
+          "protected_ids": [],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 11,
+          "before_index": 11,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00048"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 12,
+          "before_index": 12,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00049"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 13,
+          "before_index": 13,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00050"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 14,
+          "before_index": 14,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00051"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 15,
+          "before_index": 15,
+          "before_sha256": "01e2a820d026282856271fa1b66705182de09baab2c34b2365eb164e924d6041",
+          "kind": "AUTHOR",
+          "method": "NEAR_EXACT",
+          "protected_ids": [],
+          "similarity": 0.972772
+        }
+      ],
+      "matched_author_paragraphs": 15,
+      "matched_elements": 30,
+      "matched_protected_anchors": 15,
+      "moved_paragraph_sha256": [],
+      "near_exact_reordered": false,
+      "paragraph_topology_changed": false,
+      "protected_anchor_reordered": false,
+      "reordered": false,
+      "scope": "NON_STRUCTURAL_PARAGRAPH_TOPOLOGY_AND_ORDER",
+      "status": "PASS",
+      "topology_authorization_error": "",
+      "topology_authorization_status": "NOT_REQUIRED",
+      "topology_operation_evidence": []
+    },
+    "semantic_review_status": "NOT_ISSUED",
+    "status": "NOT_APPLICABLE"
+  },
+  "style_signal_layer_status": "PASS",
+  "template_field_edit_scope_check": {
+    "authorized_edit_count": 0,
+    "authorized_edits": [],
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "provided": false,
+    "schema_version": null,
+    "scope_sha256": null,
+    "source_sha256": "1c87882aaf56015e3d369f213705b24889211c284dd9724c300b91e68509f4e9",
+    "status": "N/A"
+  },
+  "template_field_findings": [],
+  "template_field_layer_status": "PASS",
+  "template_field_summary": {
+    "authorized_edit_count": 0,
+    "finding_count": 0,
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "review_finding_count": 0,
+    "status": "PASS"
+  },
+  "unaccepted_warnings": [],
+  "unexplained_high_findings": [],
+  "unexplained_strict_findings": [],
+  "warning_proposal_state": {
+    "attestation_status": "NOT_PROVIDED",
+    "cross_record_reviewer_linkability": "NOT_RECORDED",
+    "identity_verified": false,
+    "proposal_source": "NOT_PROVIDED",
+    "proposed_warning_fingerprints": [],
+    "review_clearance_granted": false,
+    "reviewer_identifier_collected": false,
+    "stable_reviewer_pseudonym_recorded": false,
+    "warning_review_request_sha256": null
+  },
+  "warning_resolutions": {},
+  "warning_review_request": null,
+  "warnings_without_resolution_proposal": []
+}

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "4fac80edb486235302e9377f0ddcf828fb79ad14478e833d00e1ebebcc392158",
+    "before_sha256": "4fac80edb486235302e9377f0ddcf828fb79ad14478e833d00e1ebebcc392158"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "d3ffab7c770b5486d36948bc65677151bf0e57422d0c781283d143673bcf3ed2",
+  "chunk_binding_sha256": "802989b1a169dbe73de2371eedbba6d3cfd455ba9973776e69967da6f7f534e3",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-18cc57d2f814.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "e99c2185b32b31e391528faf09ce90ddfcebdce2e261328147ef4019ea56b383",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "bea6388d7be80b5e5ca45b7777fc31e5de4dc684258f33b4f62803e410533e43",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“创新切入、高频失分与高分策略 / 高分写作策略与冻结节奏”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "c18e591d4799b55a4bffdb69cb1475f511a92824ac5ed661c7e99fd9691cfe58",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-18cc57d2f814"
+}

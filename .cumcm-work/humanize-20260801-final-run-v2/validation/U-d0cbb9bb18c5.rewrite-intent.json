@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "745ec1ad1524f0de280b516165e7f2ca3ab843928aff937bd086baf164e43918",
+    "before_sha256": "745ec1ad1524f0de280b516165e7f2ca3ab843928aff937bd086baf164e43918"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "42d3ebebc8586fadf9b0b9360fd5425aceeff4e22be8adbf8050da06b25f9fd5",
+  "chunk_binding_sha256": "5766fc84603490c7b71d47c02a7243fb2e4d2939dbf589bc45c8669605a98dca",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-d0cbb9bb18c5.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "370c5aa41a74d588ba254b0b9f9a5f9673b321c70a5ca9ffa690288253a5e120",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "bd0e3a989b1abf3e64aa3dd3165f8cd52dc19d7d810a6c93c9928480b91448a3",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段落承担“三人交叉学习与代码集成”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "226ac37a940949ad2944dd4aa6197e05ddb9939a3d8cfaebfef9bbda791e9e1d",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-d0cbb9bb18c5"
+}

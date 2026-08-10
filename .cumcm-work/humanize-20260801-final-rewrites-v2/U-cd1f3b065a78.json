@@ -1,0 +1,72 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-cd1f3b065a78",
+  "chunk_binding_sha256": "0453ad345fd36f29a23bdcc4ca8737367a5a0dbe7b982ab4e9ffa9a902a5d0ce",
+  "decision": "NO_CHANGE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "5b708ec3580c1bfc",
+    "prepare_integrity_sha256": "fc36cd909e2ec30032ca40ef8cfdacac24c9312a30f594c52aa2bf43a1983d80",
+    "run_metadata_sha256": "ed7ceaa762912d840b64d659d9c713599092033aa570c208dfd1d1da3bb6b189",
+    "policy_snapshot_sha256": "87656f9f0219c0ea2bb402202dc778469ce20e751d065776590fef4fcce7fd95",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "c1ec1b0021cfa856fa8a0a3fc49493ac63ce4bec9289c8b7b12919354bf18c58",
+      "unit_id": "U-cd1f3b065a78",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 68255,
+      "end": 68453,
+      "start_line": 1705,
+      "end_line": 1712,
+      "source_span_sha256": "4cc8537f66bd8e4a540775efece8be78a4632d8e7b3b34c0f5a2a10e12138780",
+      "masked_text_sha256": "96b08d370cb1320dc13105e7f78eaec3c3130598c57b98049b7f3c57192c8d37",
+      "chunk_binding_sha256": "0453ad345fd36f29a23bdcc4ca8737367a5a0dbe7b982ab4e9ffa9a902a5d0ce"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "f1e92f95828377b4011460501909a3b6f1b7eb038a99ac2edca642d32de1a5f3",
+      "routing_input_sha256": "faa2e328b7c5c9f4e4f649b5e65d939612df097b468e22301ce6d96509b4d2e5"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "a7056cda8aa2de5837368eb63e009ca38a288ef77a0bedeb1f866f2e5edd9903"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "reason": "该段落承担“证据文件说明”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。",
+  "evidence_spans": [
+    {
+      "id": "S1",
+      "start_line": 3,
+      "end_line": 3,
+      "sha256": "d68c1678e780ff87961e218a47babd1951774b1c5fcc09fb14c7c0c75b4ed166"
+    }
+  ]
+}

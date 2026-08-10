@@ -1,0 +1,66 @@
+{
+  "artifact": {
+    "after_sha256": "1bea382bb6eb9ef091495adb3eb1f7fea2afaa13be2b3334a1eb99b5a9f819fd",
+    "before_sha256": "ee7fe993220c327f345564851cf3d3bb8da57e03295f82ee40ebe2468c907b18"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "041825416e084e1e905e34184d1fb03600a3d52b3a0ba237864b405e62d32f3f",
+  "chunk_binding_sha256": "adecc9eecf69bce8546f9af6b161f597811a89338b9e2ec10541115c901e58fa",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-6dc12cef7031.diff",
+    "sha256": "820a91c1cf1549237bd1abd5c3258366b4b0fda4b95124f2f5474926cc79d96f"
+  },
+  "evidence_sha256": "59b1c380d2c7ecacca589409d31516c71cdb1c74e6b4f47534b74e5f23ca1548",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "把模板化的关键强调改成对推导篇幅和闭合关系的直接判断",
+        "target_signals": [
+          "STYLE-META-EMPHASIS"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 6,
+        "id": "S1",
+        "sha256": "cd0a75cdb5cc8f26674b5906bd3f2fe8cde7e9e50ee566f5ce9825b428cef8c2",
+        "start_line": 4
+      }
+    ],
+    "summary": "把模板化的关键强调改成对推导篇幅和闭合关系的直接判断",
+    "target_signals": [
+      "STYLE-META-EMPHASIS"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 6,
+        "operation": "REPLACE",
+        "start_line": 4
+      }
+    ],
+    "masked_after_sha256": "bc1e94bee56e64959b02f8ffeb894f8f1d88882483d7c3405941a561c63b57ac",
+    "masked_before_sha256": "be0d8ac73ed68166e3927f4ecd8c82d8f9a05a25b74abb7f767c4a8466786f02",
+    "source_spans_covered": 1,
+    "source_spans_total": 1,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "ae6be810f7c6943636cb81fa69b2b8e76314168976363e8f1f5bf8eb7e7fd5d0",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-6dc12cef7031"
+}

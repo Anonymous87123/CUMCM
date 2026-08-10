@@ -1,0 +1,60 @@
+{
+  "actual_content_changed": true,
+  "change_applied": false,
+  "invariant_baseline_sha256": "5bb29bbac146751dc60f2dab201801bd49acd95244eacab8a06258d6bf036e33",
+  "limitations": "non-STRUCTURAL run",
+  "non_structural_paragraph_order_check": {
+    "author_paragraphs_after": 2,
+    "author_paragraphs_before": 2,
+    "authorized_topology_operations": 0,
+    "detected_paragraph_merges": [],
+    "detected_paragraph_splits": [],
+    "light_sentence_reorder": false,
+    "match_evidence": [
+      {
+        "after_index": 0,
+        "before_index": 0,
+        "before_sha256": "",
+        "kind": "PROTECTED",
+        "method": "EXACT",
+        "protected_ids": [
+          "F00001-P00194"
+        ],
+        "similarity": 1.0
+      },
+      {
+        "after_index": 1,
+        "before_index": 1,
+        "before_sha256": "bbda75d67c079308410af345cf8077e2952623b7f6a81868119cbbc8ce3de5fe",
+        "kind": "AUTHOR",
+        "method": "NEAR_EXACT",
+        "protected_ids": [],
+        "similarity": 0.993576
+      },
+      {
+        "after_index": 2,
+        "before_index": 2,
+        "before_sha256": "0ad86be9e369892980d839b344481409af6e26db5c59c2b2c0de09e67ea4e76b",
+        "kind": "AUTHOR",
+        "method": "EXACT",
+        "protected_ids": [],
+        "similarity": 1.0
+      }
+    ],
+    "matched_author_paragraphs": 2,
+    "matched_elements": 3,
+    "matched_protected_anchors": 1,
+    "moved_paragraph_sha256": [],
+    "near_exact_reordered": false,
+    "paragraph_topology_changed": false,
+    "protected_anchor_reordered": false,
+    "reordered": false,
+    "scope": "NON_STRUCTURAL_PARAGRAPH_TOPOLOGY_AND_ORDER",
+    "status": "PASS",
+    "topology_authorization_error": "",
+    "topology_authorization_status": "NOT_REQUIRED",
+    "topology_operation_evidence": []
+  },
+  "semantic_review_status": "NOT_ISSUED",
+  "status": "NOT_APPLICABLE"
+}

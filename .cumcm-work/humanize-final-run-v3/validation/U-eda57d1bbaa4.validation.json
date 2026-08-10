@@ -1,0 +1,1137 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "candidate_assembly_exit_code": 0,
+  "candidate_assembly_status": "PASS",
+  "delivery_gate_exit_code": 2,
+  "delivery_gate_status": "REVIEW",
+  "draft_surface_source_check": {
+    "details": {},
+    "scope": [],
+    "semantic_entailment_certified": false,
+    "status": "N/A"
+  },
+  "evidence": {
+    "after_path": "validation/U-eda57d1bbaa4.after.tex",
+    "after_sha256": "6d1804ea900dd1e825d66dc94f83af188f4aa4d65b554e92ebb387c7c65156d5",
+    "before_path": "validation/U-eda57d1bbaa4.before.tex",
+    "before_sha256": "ae1d6ae8729da3a2deee22c8ed7f28e34059ba16d118c432c5cf8b54b3d2881b",
+    "checker_executed": true,
+    "document_format": "tex",
+    "document_scope": "FRAGMENT",
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "d8b73b0b9fa21ae32c13270641c3f42d747ef4fcacd47faf22a48ef1558db85c",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "0f37aded1f6c7776c0b5c23532f116c96e84b77e7bd1b92ad09b004039a5a7de",
+      "scanner_sha256": "1753891b4383dcbf129fa7b1c21f060cb9daa339f17c8442f4641152c3b7848e",
+      "validator_sha256": "852a57f4ecf669695101bbfc4f6251b0aed8e9ebbef749051a59bfe009de6d75"
+    },
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "source_path_archived": false
+  },
+  "exit_code": 2,
+  "hard_invariant_layer_status": "PASS",
+  "humanize_quality_claim_allowed": false,
+  "introduced_findings": [],
+  "invariants": {
+    "advisories": [],
+    "errors": [],
+    "evidence": {
+      "document_scope": "FRAGMENT",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "speech_act_audit": {
+        "categories": {
+          "assumption": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "attribution_source": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "condition": {
+            "after": {
+              "当": 2
+            },
+            "after_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0028",
+                "column": 29,
+                "end": 511,
+                "end_column": 30,
+                "end_line": 14,
+                "line": 14,
+                "marker": "当",
+                "sentence_context": "后两者的二维图不直接充当预测证据",
+                "sentence_id": "T0021",
+                "side": "after",
+                "start": 510
+              },
+              {
+                "category": "condition",
+                "claim_id": "C0051",
+                "column": 31,
+                "end": 1008,
+                "end_column": 32,
+                "end_line": 27,
+                "line": 27,
+                "marker": "当",
+                "sentence_context": "思维导图中的 归入二分类模型，不当作连续响应回归",
+                "sentence_id": "T0037",
+                "side": "after",
+                "start": 1007
+              }
+            ],
+            "before": {
+              "当": 2
+            },
+            "before_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0027",
+                "column": 29,
+                "end": 512,
+                "end_column": 30,
+                "end_line": 14,
+                "line": 14,
+                "marker": "当",
+                "sentence_context": "后两者的二维图不直接充当预测证据",
+                "sentence_id": "T0021",
+                "side": "before",
+                "start": 511
+              },
+              {
+                "category": "condition",
+                "claim_id": "C0050",
+                "column": 32,
+                "end": 1010,
+                "end_column": 33,
+                "end_line": 27,
+                "line": 27,
+                "marker": "当",
+                "sentence_context": "思维导图中的 按二分类模型归位，不当作连续响应回归",
+                "sentence_id": "T0037",
+                "side": "before",
+                "start": 1009
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "definition_naming": {
+            "after": {
+              "定义": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "definition_naming",
+                "claim_id": "C0007",
+                "column": 18,
+                "end": 141,
+                "end_column": 20,
+                "end_line": 5,
+                "line": 5,
+                "marker": "定义",
+                "sentence_context": "重复记录先定义主键和时间容差",
+                "sentence_id": "T0007",
+                "side": "after",
+                "start": 139
+              }
+            ],
+            "before": {
+              "定义": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "definition_naming",
+                "claim_id": "C0007",
+                "column": 18,
+                "end": 141,
+                "end_column": 20,
+                "end_line": 5,
+                "line": 5,
+                "marker": "定义",
+                "sentence_context": "重复记录先定义主键和时间容差",
+                "sentence_id": "T0007",
+                "side": "before",
+                "start": 139
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "focus_scope": {
+            "after": {
+              "主要": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "focus_scope",
+                "claim_id": "C0026",
+                "column": 37,
+                "end": 471,
+                "end_column": 39,
+                "end_line": 13,
+                "line": 13,
+                "marker": "主要",
+                "sentence_context": "PCA 用于线性方差压缩，t-SNE 主要用于局部结构可视化，",
+                "sentence_id": "T0019",
+                "side": "after",
+                "start": 469
+              }
+            ],
+            "before": {
+              "主要": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "focus_scope",
+                "claim_id": "C0025",
+                "column": 37,
+                "end": 472,
+                "end_column": 39,
+                "end_line": 13,
+                "line": 13,
+                "marker": "主要",
+                "sentence_context": "PCA 用于线性方差压缩，t-SNE 主要用于局部结构可视化，",
+                "sentence_id": "T0019",
+                "side": "before",
+                "start": 470
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "logical_relation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "modality_scope": {
+            "after": {
+              "仅": 1,
+              "只": 2,
+              "可": 2,
+              "必须": 3,
+              "需要": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0012",
+                "column": 14,
+                "end": 221,
+                "end_column": 15,
+                "end_line": 7,
+                "line": 7,
+                "marker": "只",
+                "sentence_context": "label 编码，连续变量只有在解释或规则需要时才按等宽/等频分箱",
+                "sentence_id": "T0010",
+                "side": "after",
+                "start": 220
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0012",
+                "column": 22,
+                "end": 230,
+                "end_column": 24,
+                "end_line": 7,
+                "line": 7,
+                "marker": "需要",
+                "sentence_context": "label 编码，连续变量只有在解释或规则需要时才按等宽/等频分箱",
+                "sentence_id": "T0010",
+                "side": "after",
+                "start": 228
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0030",
+                "column": 33,
+                "end": 595,
+                "end_column": 34,
+                "end_line": 17,
+                "line": 17,
+                "marker": "可",
+                "sentence_context": "CRITIC、变异系数、TOPSIS、VIKOR、灰色评价和物元可拓，并训练熵权--AHP、",
+                "sentence_id": "T0023",
+                "side": "after",
+                "start": 594
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0033",
+                "column": 24,
+                "end": 634,
+                "end_column": 26,
+                "end_line": 18,
+                "line": 18,
+                "marker": "必须",
+                "sentence_context": "主观权重必须给判断矩阵和一致性检验，客观权重必须解释",
+                "sentence_id": "T0025",
+                "side": "after",
+                "start": 632
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0034",
+                "column": 42,
+                "end": 652,
+                "end_column": 44,
+                "end_line": 18,
+                "line": 18,
+                "marker": "必须",
+                "sentence_context": "主观权重必须给判断矩阵和一致性检验，客观权重必须解释",
+                "sentence_id": "T0025",
+                "side": "after",
+                "start": 650
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0038",
+                "column": 10,
+                "end": 710,
+                "end_column": 11,
+                "end_line": 20,
+                "line": 20,
+                "marker": "只",
+                "sentence_context": "并非同一含义，不能只因都输出排序而互换",
+                "sentence_id": "T0028",
+                "side": "after",
+                "start": 709
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0046",
+                "column": 43,
+                "end": 930,
+                "end_column": 44,
+                "end_line": 25,
+                "line": 25,
+                "marker": "可",
+                "sentence_context": "线性/广义线性模型保留可解释基线，树模型",
+                "sentence_id": "T0035",
+                "side": "after",
+                "start": 929
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0049",
+                "column": 14,
+                "end": 953,
+                "end_column": 15,
+                "end_line": 26,
+                "line": 26,
+                "marker": "仅",
+                "sentence_context": "处理非线性与交互，深度网络仅在样本规模、序列长度和验证方案足以支撑时启用",
+                "sentence_id": "T0036",
+                "side": "after",
+                "start": 952
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0054",
+                "column": 6,
+                "end": 1029,
+                "end_column": 8,
+                "end_line": 28,
+                "line": 28,
+                "marker": "必须",
+                "sentence_context": "外推任务，必须报告预测区间、结构漂移风险和超出训练区间的限制",
+                "sentence_id": "T0039",
+                "side": "after",
+                "start": 1027
+              }
+            ],
+            "before": {
+              "仅": 1,
+              "只": 2,
+              "可": 2,
+              "必须": 3,
+              "需要": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0012",
+                "column": 14,
+                "end": 221,
+                "end_column": 15,
+                "end_line": 7,
+                "line": 7,
+                "marker": "只",
+                "sentence_context": "label 编码，连续变量只有在解释或规则需要时才按等宽/等频分箱",
+                "sentence_id": "T0010",
+                "side": "before",
+                "start": 220
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0012",
+                "column": 22,
+                "end": 230,
+                "end_column": 24,
+                "end_line": 7,
+                "line": 7,
+                "marker": "需要",
+                "sentence_context": "label 编码，连续变量只有在解释或规则需要时才按等宽/等频分箱",
+                "sentence_id": "T0010",
+                "side": "before",
+                "start": 228
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0029",
+                "column": 33,
+                "end": 596,
+                "end_column": 34,
+                "end_line": 17,
+                "line": 17,
+                "marker": "可",
+                "sentence_context": "CRITIC、变异系数、TOPSIS、VIKOR、灰色评价和物元可拓，并训练熵权--AHP、",
+                "sentence_id": "T0023",
+                "side": "before",
+                "start": 595
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0032",
+                "column": 24,
+                "end": 635,
+                "end_column": 26,
+                "end_line": 18,
+                "line": 18,
+                "marker": "必须",
+                "sentence_context": "主观权重必须给判断矩阵和一致性检验，客观权重必须解释",
+                "sentence_id": "T0025",
+                "side": "before",
+                "start": 633
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0033",
+                "column": 42,
+                "end": 653,
+                "end_column": 44,
+                "end_line": 18,
+                "line": 18,
+                "marker": "必须",
+                "sentence_context": "主观权重必须给判断矩阵和一致性检验，客观权重必须解释",
+                "sentence_id": "T0025",
+                "side": "before",
+                "start": 651
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0037",
+                "column": 10,
+                "end": 711,
+                "end_column": 11,
+                "end_line": 20,
+                "line": 20,
+                "marker": "只",
+                "sentence_context": "并非同一含义，不能只因都输出排序而互换",
+                "sentence_id": "T0028",
+                "side": "before",
+                "start": 710
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0045",
+                "column": 43,
+                "end": 931,
+                "end_column": 44,
+                "end_line": 25,
+                "line": 25,
+                "marker": "可",
+                "sentence_context": "线性/广义线性模型保留可解释基线，树模型",
+                "sentence_id": "T0035",
+                "side": "before",
+                "start": 930
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0048",
+                "column": 14,
+                "end": 954,
+                "end_column": 15,
+                "end_line": 26,
+                "line": 26,
+                "marker": "仅",
+                "sentence_context": "处理非线性与交互，深度网络仅在样本规模、序列长度和验证方案足以支撑时启用",
+                "sentence_id": "T0036",
+                "side": "before",
+                "start": 953
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0053",
+                "column": 12,
+                "end": 1034,
+                "end_column": 14,
+                "end_line": 28,
+                "line": 28,
+                "marker": "必须",
+                "sentence_context": "预测作为外推任务单列，必须报告预测区间、结构漂移风险和超出训练区间的限制",
+                "sentence_id": "T0039",
+                "side": "before",
+                "start": 1032
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "negation": {
+            "after": {
+              "不": 5,
+              "不能": 2,
+              "并非": 1,
+              "非": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0006",
+                "column": 1,
+                "end": 124,
+                "end_column": 3,
+                "end_line": 5,
+                "line": 5,
+                "marker": "不能",
+                "sentence_context": "不能把业务极值自动删除",
+                "sentence_id": "T0006",
+                "side": "after",
+                "start": 122
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0018",
+                "column": 2,
+                "end": 293,
+                "end_column": 3,
+                "end_line": 9,
+                "line": 9,
+                "marker": "不",
+                "sentence_context": "的不确定性仿真共享随机数配置，但不把 与 混为同一任务",
+                "sentence_id": "T0014",
+                "side": "after",
+                "start": 292
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0019",
+                "column": 17,
+                "end": 308,
+                "end_column": 18,
+                "end_line": 9,
+                "line": 9,
+                "marker": "不",
+                "sentence_context": "的不确定性仿真共享随机数配置，但不把 与 混为同一任务",
+                "sentence_id": "T0014",
+                "side": "after",
+                "start": 307
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0028",
+                "column": 25,
+                "end": 507,
+                "end_column": 26,
+                "end_line": 14,
+                "line": 14,
+                "marker": "不",
+                "sentence_context": "后两者的二维图不直接充当预测证据",
+                "sentence_id": "T0021",
+                "side": "after",
+                "start": 506
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0037",
+                "column": 1,
+                "end": 702,
+                "end_column": 3,
+                "end_line": 20,
+                "line": 20,
+                "marker": "并非",
+                "sentence_context": "并非同一含义，不能只因都输出排序而互换",
+                "sentence_id": "T0028",
+                "side": "after",
+                "start": 700
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0038",
+                "column": 8,
+                "end": 709,
+                "end_column": 10,
+                "end_line": 20,
+                "line": 20,
+                "marker": "不能",
+                "sentence_context": "并非同一含义，不能只因都输出排序而互换",
+                "sentence_id": "T0028",
+                "side": "after",
+                "start": 707
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0048",
+                "column": 3,
+                "end": 942,
+                "end_column": 4,
+                "end_line": 26,
+                "line": 26,
+                "marker": "非",
+                "sentence_context": "处理非线性与交互，深度网络仅在样本规模、序列长度和验证方案足以支撑时启用",
+                "sentence_id": "T0036",
+                "side": "after",
+                "start": 941
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0051",
+                "column": 30,
+                "end": 1007,
+                "end_column": 31,
+                "end_line": 27,
+                "line": 27,
+                "marker": "不",
+                "sentence_context": "思维导图中的 归入二分类模型，不当作连续响应回归",
+                "sentence_id": "T0037",
+                "side": "after",
+                "start": 1006
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0066",
+                "column": 43,
+                "end": 1322,
+                "end_column": 44,
+                "end_line": 37,
+                "line": 37,
+                "marker": "不",
+                "sentence_context": "\\item 回归报告 MAE、MSE、RMSE、MAPE，分类报告混淆矩阵及类别不平衡指标",
+                "sentence_id": "T0047",
+                "side": "after",
+                "start": 1321
+              }
+            ],
+            "before": {
+              "不": 5,
+              "不能": 2,
+              "并非": 1,
+              "非": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0006",
+                "column": 1,
+                "end": 124,
+                "end_column": 3,
+                "end_line": 5,
+                "line": 5,
+                "marker": "不能",
+                "sentence_context": "不能把业务极值自动删除",
+                "sentence_id": "T0006",
+                "side": "before",
+                "start": 122
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0017",
+                "column": 2,
+                "end": 295,
+                "end_column": 3,
+                "end_line": 9,
+                "line": 9,
+                "marker": "不",
+                "sentence_context": "的不确定性仿真共享随机数配置，但不混淆 和 两个任务",
+                "sentence_id": "T0014",
+                "side": "before",
+                "start": 294
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0018",
+                "column": 17,
+                "end": 310,
+                "end_column": 18,
+                "end_line": 9,
+                "line": 9,
+                "marker": "不",
+                "sentence_context": "的不确定性仿真共享随机数配置，但不混淆 和 两个任务",
+                "sentence_id": "T0014",
+                "side": "before",
+                "start": 309
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0027",
+                "column": 25,
+                "end": 508,
+                "end_column": 26,
+                "end_line": 14,
+                "line": 14,
+                "marker": "不",
+                "sentence_context": "后两者的二维图不直接充当预测证据",
+                "sentence_id": "T0021",
+                "side": "before",
+                "start": 507
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0036",
+                "column": 1,
+                "end": 703,
+                "end_column": 3,
+                "end_line": 20,
+                "line": 20,
+                "marker": "并非",
+                "sentence_context": "并非同一含义，不能只因都输出排序而互换",
+                "sentence_id": "T0028",
+                "side": "before",
+                "start": 701
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0037",
+                "column": 8,
+                "end": 710,
+                "end_column": 10,
+                "end_line": 20,
+                "line": 20,
+                "marker": "不能",
+                "sentence_context": "并非同一含义，不能只因都输出排序而互换",
+                "sentence_id": "T0028",
+                "side": "before",
+                "start": 708
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0047",
+                "column": 3,
+                "end": 943,
+                "end_column": 4,
+                "end_line": 26,
+                "line": 26,
+                "marker": "非",
+                "sentence_context": "处理非线性与交互，深度网络仅在样本规模、序列长度和验证方案足以支撑时启用",
+                "sentence_id": "T0036",
+                "side": "before",
+                "start": 942
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0050",
+                "column": 31,
+                "end": 1009,
+                "end_column": 32,
+                "end_line": 27,
+                "line": 27,
+                "marker": "不",
+                "sentence_context": "思维导图中的 按二分类模型归位，不当作连续响应回归",
+                "sentence_id": "T0037",
+                "side": "before",
+                "start": 1008
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0065",
+                "column": 43,
+                "end": 1327,
+                "end_column": 44,
+                "end_line": 37,
+                "line": 37,
+                "marker": "不",
+                "sentence_context": "\\item 回归报告 MAE、MSE、RMSE、MAPE，分类报告混淆矩阵及类别不平衡指标",
+                "sentence_id": "T0047",
+                "side": "before",
+                "start": 1326
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "reporting_observation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          }
+        },
+        "claim_pairing": {
+          "after_claims": 69,
+          "before_claims": 68,
+          "unique_exact_pairs": 61,
+          "unpaired_after_claims": 8,
+          "unpaired_before_claims": 7
+        },
+        "protection": {
+          "after_ranges": 4,
+          "before_ranges": 4,
+          "line_column_basis": "NORMALIZED_LF_1_BASED_UNICODE_CODEPOINT",
+          "masking": "LENGTH_PRESERVING"
+        }
+      }
+    },
+    "hard_failure": false,
+    "status": "pass",
+    "summary": {
+      "advisories": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    "warnings": []
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 0,
+    "introduced_candidates": 0,
+    "unexplained_high_candidates": 0
+  },
+  "mechanical_validation_exit_code": 0,
+  "mechanical_validation_status": "PASS",
+  "mode": "REWRITE",
+  "paired_quality_clearance_granted": false,
+  "paired_quality_review_local_clearance_supported": false,
+  "paired_quality_review_request": {
+    "artifact": {
+      "after_sha256": "6d1804ea900dd1e825d66dc94f83af188f4aa4d65b554e92ebb387c7c65156d5",
+      "before_sha256": "ae1d6ae8729da3a2deee22c8ed7f28e34059ba16d118c432c5cf8b54b3d2881b"
+    },
+    "changes": [
+      {
+        "after": {
+          "end_line": 9,
+          "han_chars": 91,
+          "line_count": 3,
+          "sha256": "5ba060804774a9866fa905fbf11665b5561c61fef48d4d4dd481aa087bd3c6eb",
+          "start_line": 7
+        },
+        "before": {
+          "end_line": 9,
+          "han_chars": 92,
+          "line_count": 3,
+          "sha256": "a36458e89bbc782944e222c937b444772d98aac57b25957c26f5e035f2ca5861",
+          "start_line": 7
+        },
+        "change_id": "QCH-2371be11057f4669ac6f",
+        "operation": "REPLACE",
+        "ordinal": 1
+      },
+      {
+        "after": {
+          "end_line": 28,
+          "han_chars": 59,
+          "line_count": 2,
+          "sha256": "ebda7b11ce8fdd24616ce3dbffb531ac71d2dc7ed80a3709d44cfc827db8e94c",
+          "start_line": 27
+        },
+        "before": {
+          "end_line": 28,
+          "han_chars": 63,
+          "line_count": 2,
+          "sha256": "b856028b718ecffae94e41424d2be28d1c7a848c5a71fae1b685816dd7919625",
+          "start_line": 27
+        },
+        "change_id": "QCH-c4c1eafafc5ab4bb1a71",
+        "operation": "REPLACE",
+        "ordinal": 2
+      }
+    ],
+    "limitations": {
+      "academic_correctness": "NOT_EVALUATED",
+      "authorship": "NOT_EVALUATED",
+      "quality_clearance_granted": false
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "d8b73b0b9fa21ae32c13270641c3f42d747ef4fcacd47faf22a48ef1558db85c",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "0f37aded1f6c7776c0b5c23532f116c96e84b77e7bd1b92ad09b004039a5a7de",
+      "scanner_sha256": "1753891b4383dcbf129fa7b1c21f060cb9daa339f17c8442f4641152c3b7848e",
+      "validator_sha256": "852a57f4ecf669695101bbfc4f6251b0aed8e9ebbef749051a59bfe009de6d75"
+    },
+    "request_sha256": "1d71c80a52ccf511906cdb637debfc3823a5b0f93dc988babeb5c6050924b16a",
+    "review_contract": {
+      "empty_or_generic_benefit_is_clearance": false,
+      "local_model_or_caller_assertion_is_clearance": false,
+      "required_dimensions": [
+        "actionable_pathology_remaining",
+        "no_change_is_best_available_decision",
+        "problem_span_binding",
+        "independent_reading_benefit",
+        "subject_and_modifier_alignment",
+        "verb_object_collocation",
+        "logical_relation_preservation",
+        "template_field_role_and_authorization",
+        "information_density_and_rhythm",
+        "author_voice_non_regression"
+      ],
+      "required_per_change_verdicts": [
+        "ACCEPT",
+        "REVISE",
+        "REVERT"
+      ],
+      "validator_pass_is_quality_clearance": false
+    },
+    "schema": "humanize-paired-quality-review-request/v1",
+    "status": "PENDING_EXTERNAL_REVIEW",
+    "template_field_changes": [],
+    "validation_context": {
+      "decision": "REWRITE",
+      "document_format": "tex",
+      "document_scope": "FRAGMENT",
+      "mechanical_validation_status": "PASS",
+      "mode": "REWRITE",
+      "scene": "RESEARCH"
+    }
+  },
+  "paired_quality_review_status": "PENDING_EXTERNAL_REVIEW",
+  "paired_style_delta_findings": [],
+  "paired_style_delta_layer_status": "NOT_APPLICABLE",
+  "paired_style_delta_summary": {
+    "authorship_inference": false,
+    "finding_count": 0,
+    "scope": "PAIRED_COURSE_VOICE_NON_REGRESSION_CANDIDATE",
+    "status": "NOT_APPLICABLE"
+  },
+  "pending_warnings": [],
+  "proposed_warning_resolutions": [],
+  "report_scope_check": {
+    "editable_range_count": 0,
+    "editable_ranges": [],
+    "extractor_replay_match": null,
+    "fragment_count": 0,
+    "outside_selection_unchanged": null,
+    "report_sha256": null,
+    "scope_path": null,
+    "scope_semantic_sha256": null,
+    "scope_sha256": null,
+    "source_sha256": null,
+    "status": "N/A"
+  },
+  "review_reasons": [
+    "paired_quality_not_evaluated"
+  ],
+  "scene": "RESEARCH",
+  "semantic_source_check": "N/A",
+  "speech_act_diagnostics": [],
+  "speech_act_layer_status": "PASS",
+  "status": "REVIEW",
+  "structural_plan_check": {
+    "actual_content_changed": true,
+    "change_applied": false,
+    "invariant_baseline_sha256": "3247dbcba8e55258652bd1e329799949fb2663f24178397b0923b5a066581c48",
+    "limitations": "non-STRUCTURAL run",
+    "non_structural_paragraph_order_check": {
+      "author_paragraphs_after": 5,
+      "author_paragraphs_before": 5,
+      "authorized_topology_operations": 0,
+      "detected_paragraph_merges": [],
+      "detected_paragraph_splits": [],
+      "light_sentence_reorder": false,
+      "match_evidence": [
+        {
+          "after_index": 0,
+          "before_index": 0,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00161"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 1,
+          "before_index": 1,
+          "before_sha256": "3841e5d89b05216878379c1662fb2a2c7cb7ccb46a0b61f204d1946339ae3809",
+          "kind": "AUTHOR",
+          "method": "NEAR_EXACT",
+          "protected_ids": [],
+          "similarity": 0.976101
+        },
+        {
+          "after_index": 2,
+          "before_index": 2,
+          "before_sha256": "cc8118bd391a25a1fbed9b045e86102b1993a8ff4878ac3ab756f5634481d4f3",
+          "kind": "AUTHOR",
+          "method": "EXACT",
+          "protected_ids": [],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 3,
+          "before_index": 3,
+          "before_sha256": "c4db952d3ee9e4cd84fb97f312f7dff87053752c57e149b9f83daa1744f3c58d",
+          "kind": "AUTHOR",
+          "method": "EXACT",
+          "protected_ids": [],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 4,
+          "before_index": 4,
+          "before_sha256": "a1f15f011402fcda2b7d27e128a96fbe8b4873150852b612afddfa4e4b18e663",
+          "kind": "AUTHOR",
+          "method": "NEAR_EXACT",
+          "protected_ids": [],
+          "similarity": 0.98324
+        },
+        {
+          "after_index": 5,
+          "before_index": 5,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00166"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 6,
+          "before_index": 6,
+          "before_sha256": "8d47e21e37b83a327dd78072692a4b29ad89e7055afa1c02e7c4b6f95c810a2a",
+          "kind": "AUTHOR",
+          "method": "EXACT",
+          "protected_ids": [],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 7,
+          "before_index": 7,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00174"
+          ],
+          "similarity": 1.0
+        }
+      ],
+      "matched_author_paragraphs": 5,
+      "matched_elements": 8,
+      "matched_protected_anchors": 3,
+      "moved_paragraph_sha256": [],
+      "near_exact_reordered": false,
+      "paragraph_topology_changed": false,
+      "protected_anchor_reordered": false,
+      "reordered": false,
+      "scope": "NON_STRUCTURAL_PARAGRAPH_TOPOLOGY_AND_ORDER",
+      "status": "PASS",
+      "topology_authorization_error": "",
+      "topology_authorization_status": "NOT_REQUIRED",
+      "topology_operation_evidence": []
+    },
+    "semantic_review_status": "NOT_ISSUED",
+    "status": "NOT_APPLICABLE"
+  },
+  "style_signal_layer_status": "PASS",
+  "template_field_edit_scope_check": {
+    "authorized_edit_count": 0,
+    "authorized_edits": [],
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "provided": false,
+    "schema_version": null,
+    "scope_sha256": null,
+    "source_sha256": "ae1d6ae8729da3a2deee22c8ed7f28e34059ba16d118c432c5cf8b54b3d2881b",
+    "status": "N/A"
+  },
+  "template_field_findings": [],
+  "template_field_layer_status": "PASS",
+  "template_field_summary": {
+    "authorized_edit_count": 0,
+    "finding_count": 0,
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "review_finding_count": 0,
+    "status": "PASS"
+  },
+  "unaccepted_warnings": [],
+  "unexplained_high_findings": [],
+  "warning_proposal_state": {
+    "attestation_status": "NOT_PROVIDED",
+    "cross_record_reviewer_linkability": "NOT_RECORDED",
+    "identity_verified": false,
+    "proposal_source": "NOT_PROVIDED",
+    "proposed_warning_fingerprints": [],
+    "review_clearance_granted": false,
+    "reviewer_identifier_collected": false,
+    "stable_reviewer_pseudonym_recorded": false,
+    "warning_review_request_sha256": null
+  },
+  "warning_resolutions": {},
+  "warning_review_request": null,
+  "warnings_without_resolution_proposal": []
+}

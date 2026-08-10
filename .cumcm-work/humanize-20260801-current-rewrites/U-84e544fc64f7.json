@@ -1,0 +1,78 @@
+{
+    "schema_version":  "humanize-unit-rewrite-bundle/v4",
+    "unit_id":  "U-84e544fc64f7",
+    "chunk_binding_sha256":  "18afbe32e303c2f17ad9ab2130462fc38a4b83bc1fed583ba8396703b33e91e3",
+    "decision":  "NO_CHANGE",
+    "voice_profile_sha256":  "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+    "authoring_binding":  {
+                              "schema_version":  "humanize-long-authoring-binding/v1",
+                              "integrity_scope":  "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+                              "snapshot_id":  "598a5e1303015f05",
+                              "prepare_integrity_sha256":  "613cc9ff09132c442cf1ba22f40492e56441e0f883bf82c86c099ff87fa3e1e0",
+                              "run_metadata_sha256":  "562e269a388588be545e1e831bf5f797a4a46970d3cfcf405eeac42ad6762460",
+                              "policy_snapshot_sha256":  "87656f9f0219c0ea2bb402202dc778469ce20e751d065776590fef4fcce7fd95",
+                              "source_binding":  {
+                                                     "file_id":  "F00001",
+                                                     "source_file_sha256":  "dc0f0e379a599cd9c22874ea35bccde81a8f55a9411aa8214fcf23114a67d539",
+                                                     "unit_id":  "U-84e544fc64f7",
+                                                     "offset_unit":  "PYTHON_UNICODE_CODEPOINT_INDEX",
+                                                     "start":  29242,
+                                                     "end":  36327,
+                                                     "start_line":  705,
+                                                     "end_line":  908,
+                                                     "source_span_sha256":  "6d1fe3e5368734fd759c08441496952f5aaaa99d8f7b3ff297e840300f562ca1",
+                                                     "masked_text_sha256":  "430bf8e209996f0e735a1b71bbea4a1f40e5e52df3fc81e6d0f317d87467a25d",
+                                                     "chunk_binding_sha256":  "18afbe32e303c2f17ad9ab2130462fc38a4b83bc1fed583ba8396703b33e91e3"
+                                                 },
+                              "scene_route":  {
+                                                  "requested_scene":  "RESEARCH",
+                                                  "resolved_scene":  "RESEARCH",
+                                                  "status":  "EXPLICIT",
+                                                  "reason_code":  "USER_EXPLICIT_SCENE",
+                                                  "document_prior_scene":  "",
+                                                  "scores":  {
+                                                                 "COURSE":  0,
+                                                                 "MODELING":  0,
+                                                                 "RESEARCH":  0
+                                                             },
+                                                  "top_score":  0,
+                                                  "margin":  0,
+                                                  "ambiguous_scenes":  [
+
+                                                                       ],
+                                                  "evidence":  [
+
+                                                               ],
+                                                  "policy_sha256":  "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+                                                  "policy_revision":  5,
+                                                  "heading_path_sha256":  "ce9f99758a441db97bcc597ee881076aad629b362d5792fb4afd11b046bb5343",
+                                                  "routing_input_sha256":  "b73e869df24db9c878403469e9c537c7659e1a0030d01f4f5efe1b3a1d0fbab2"
+                                              },
+                              "voice_binding":  {
+                                                    "profile_id":  "scene-default-research",
+                                                    "profile_revision":  1,
+                                                    "profile_kind":  "DEFAULT",
+                                                    "binding_scene":  "RESEARCH",
+                                                    "profile_sha256":  "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+                                                },
+                              "mode":  "REWRITE",
+                              "intensity":  "BALANCED",
+                              "authoring_allowed":  true,
+                              "completion_claim_allowed":  false,
+                              "humanize_quality_claim_allowed":  false,
+                              "authoring_binding_sha256":  "1913218c2dd78a76d85d21f4cb795b06fb3f4e5c9c9b4b1a703b72ac5a864216"
+                          },
+    "keep_reasons":  {
+
+                     },
+    "template_field_edit_scope":  null,
+    "reason":  "该段承担“59 篇编号论文的结构与写作分析 / A/B/C 三类论文的微观文风 / B 类：变量、约束与策略必须逐项对应”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。",
+    "evidence_spans":  [
+                           {
+                               "id":  "S1",
+                               "start_line":  3,
+                               "end_line":  3,
+                               "sha256":  "94e942ec0f6d2bfd48c2f641e4f4444cb2b2dc60b4651b1adcd09129dd0c0720"
+                           }
+                       ]
+}

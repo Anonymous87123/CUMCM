@@ -1,0 +1,103 @@
+{
+  "artifact": {
+    "after_sha256": "abddc3b6ef63a6e1b2f89d398d460b7d4818d920261a5884ea6f16d69454e499",
+    "before_sha256": "ff4e3a17d5a9d3f75a7b520e5dc6194901d5f385c69f8e9dfc97cf441935e6b6"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "f6a6d0f455c9ef4fb63ebf1b3265fd05e403037a7121c15254a191aa5fd80d93",
+  "chunk_binding_sha256": "5a7b1cd8534d570ef85f5f5bddde6b674cb571afa1361fc14b9670a3319dff31",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-67bd7c53383e.diff",
+    "sha256": "ba07c80dfc541ac623c38f76f5363f87dbc330df1bb3f9d3bea44e96f517ef63"
+  },
+  "evidence_sha256": "c44759cd2071b2d889e3e259cb9579035b9ac304632c56e422d709befc55b12e",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "调整目录式、均匀并列式表达，保留具体判断、程序动作与使用边界",
+        "target_signals": [
+          "HUM-JUDGMENT-TRACE",
+          "RHYTHM-UNIFORM-SEQUENCE"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 62,
+        "id": "S1",
+        "sha256": "7023d864ae555605a1c22469eb2b9320a8f2698d8a2f153e47b8a027367193c7",
+        "start_line": 1
+      }
+    ],
+    "summary": "调整目录式、均匀并列式表达，保留具体判断、程序动作与使用边界",
+    "target_signals": [
+      "HUM-JUDGMENT-TRACE",
+      "RHYTHM-UNIFORM-SEQUENCE"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 19,
+        "operation": "REPLACE",
+        "start_line": 19
+      },
+      {
+        "end_line": 24,
+        "operation": "REPLACE",
+        "start_line": 24
+      },
+      {
+        "end_line": 29,
+        "operation": "REPLACE",
+        "start_line": 29
+      },
+      {
+        "end_line": 39,
+        "operation": "REPLACE",
+        "start_line": 39
+      },
+      {
+        "end_line": 44,
+        "operation": "REPLACE",
+        "start_line": 44
+      },
+      {
+        "end_line": 49,
+        "operation": "REPLACE",
+        "start_line": 49
+      },
+      {
+        "end_line": 54,
+        "operation": "REPLACE",
+        "start_line": 54
+      },
+      {
+        "end_line": 59,
+        "operation": "REPLACE",
+        "start_line": 59
+      }
+    ],
+    "masked_after_sha256": "a35cf8848cce4e3c44d98b04ef89994eaa8b22489f87112ab68929bffa553857",
+    "masked_before_sha256": "7023d864ae555605a1c22469eb2b9320a8f2698d8a2f153e47b8a027367193c7",
+    "source_spans_covered": 1,
+    "source_spans_total": 1,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "4892ad3aa2ce0592acaa367a560553a054062f0187bfd7b65ae8ce853eceb85a",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-67bd7c53383e"
+}

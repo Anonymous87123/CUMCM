@@ -1,0 +1,99 @@
+{
+    "schema_version":  "humanize-unit-rewrite-bundle/v4",
+    "unit_id":  "U-58ced89d4882",
+    "chunk_binding_sha256":  "15bb74dcd259f781e4c4af856ad066d62142438c5f34c9fe3bc0372b097d36ab",
+    "decision":  "REWRITE",
+    "voice_profile_sha256":  "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+    "authoring_binding":  {
+                              "schema_version":  "humanize-long-authoring-binding/v1",
+                              "integrity_scope":  "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+                              "snapshot_id":  "b48ef9450b05230b",
+                              "prepare_integrity_sha256":  "08d8d35f9bd43257bbfc5c931659c168f2106c243f412dfc62528b7847c32149",
+                              "run_metadata_sha256":  "697c2507466cf5cde0e99810c211ce52bc6884c88736ebc99741cea022da3217",
+                              "policy_snapshot_sha256":  "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+                              "source_binding":  {
+                                                     "file_id":  "F00001",
+                                                     "source_file_sha256":  "da6925eb091af9d09d1f22b972b450ea0c6aa035703baafa84910bb5318754d9",
+                                                     "unit_id":  "U-58ced89d4882",
+                                                     "offset_unit":  "PYTHON_UNICODE_CODEPOINT_INDEX",
+                                                     "start":  4302,
+                                                     "end":  4553,
+                                                     "start_line":  168,
+                                                     "end_line":  176,
+                                                     "source_span_sha256":  "3036d9f25f65f1d7bdbce6a59a1f1b30ea01289167d31e493ebd1aaeef830093",
+                                                     "masked_text_sha256":  "3a5546172abf94ba62d9da767d7f71a860b070090a86f14127b9766cf01f0c5f",
+                                                     "chunk_binding_sha256":  "15bb74dcd259f781e4c4af856ad066d62142438c5f34c9fe3bc0372b097d36ab"
+                                                 },
+                              "scene_route":  {
+                                                  "requested_scene":  "RESEARCH",
+                                                  "resolved_scene":  "RESEARCH",
+                                                  "status":  "EXPLICIT",
+                                                  "reason_code":  "USER_EXPLICIT_SCENE",
+                                                  "document_prior_scene":  "",
+                                                  "scores":  {
+                                                                 "COURSE":  0,
+                                                                 "MODELING":  0,
+                                                                 "RESEARCH":  0
+                                                             },
+                                                  "top_score":  0,
+                                                  "margin":  0,
+                                                  "ambiguous_scenes":  [
+
+                                                                       ],
+                                                  "evidence":  [
+
+                                                               ],
+                                                  "policy_sha256":  "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+                                                  "policy_revision":  5,
+                                                  "heading_path_sha256":  "5028afd3db0d32cde9419773d67f9bf5afc74aac1c5044f9bed39f6ea6e39ec0",
+                                                  "routing_input_sha256":  "24934f16a5e1891b5520498dff85ca0edbc04ed09318becb6a7738e68273fd36"
+                                              },
+                              "voice_binding":  {
+                                                    "profile_id":  "scene-default-research",
+                                                    "profile_revision":  1,
+                                                    "profile_kind":  "DEFAULT",
+                                                    "binding_scene":  "RESEARCH",
+                                                    "profile_sha256":  "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+                                                },
+                              "mode":  "REWRITE",
+                              "intensity":  "BALANCED",
+                              "authoring_allowed":  true,
+                              "completion_claim_allowed":  false,
+                              "humanize_quality_claim_allowed":  false,
+                              "authoring_binding_sha256":  "bbd444884221d2e712d217b62aba6bae3a02be91b5721fd10e6cd992d78cd67e"
+                          },
+    "keep_reasons":  {
+
+                     },
+    "template_field_edit_scope":  null,
+    "masked_text":  "[[PROTECTED:F00001-P00084:28b09daa8ae5]]\n\n这一阶段最有价值的变化，是分工开始落到模型接口，而不只是认领几个算法名称。队长\n输出位置和速度，组员1把这些量写进速度约束，组员2维护参数表和误差口径，三人的结果\n可以在同一张变量表里接上。几个简单基线也保留了下来：RK4对照Euler，MILP对照小规模\n枚举，粒子群对照遍历，树模型对照线性或Logistic。读A053时，笔记也没有停在目录层面，其中\n[[PROTECTED:F00001-P00085:cc5bfaa694b0]]这条顺序已经整理成一份可逐项核对\n代码的笔记。\n\n",
+    "rewrite_intent":  {
+                           "summary":  "调整目录式、均匀并列式表达，保留具体判断、程序动作与使用边界",
+                           "operations":  [
+                                              {
+                                                  "id":  "O1",
+                                                  "kind":  "REWRITE_STYLE_SHELL",
+                                                  "source_span_ids":  [
+                                                                          "S1"
+                                                                      ],
+                                                  "target_signals":  [
+                                                                         "HUM-JUDGMENT-TRACE",
+                                                                         "RHYTHM-UNIFORM-SEQUENCE"
+                                                                     ],
+                                                  "summary":  "调整目录式、均匀并列式表达，保留具体判断、程序动作与使用边界"
+                                              }
+                                          ],
+                           "source_spans":  [
+                                                {
+                                                    "id":  "S1",
+                                                    "start_line":  1,
+                                                    "end_line":  9,
+                                                    "sha256":  "3a5546172abf94ba62d9da767d7f71a860b070090a86f14127b9766cf01f0c5f"
+                                                }
+                                            ],
+                           "target_signals":  [
+                                                  "HUM-JUDGMENT-TRACE",
+                                                  "RHYTHM-UNIFORM-SEQUENCE"
+                                              ]
+                       }
+}

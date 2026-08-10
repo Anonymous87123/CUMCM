@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "5fbce766c71ad6e4830147fe50de9a7553328777f6644a2778780d26c8c39c3e",
+    "before_sha256": "5fbce766c71ad6e4830147fe50de9a7553328777f6644a2778780d26c8c39c3e"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "54ba94e3496202b1932d3915cc535d3ced80a9d210bab2c37bab30b996857581",
+  "chunk_binding_sha256": "3a2e0568d7a3775c4f3da19d4b844919972c0c89fdba05c387ee06125c0f69e1",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-9e76634f650a.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "2f3c0996afa60fa714fc9fab287ff834858019b87070393fb724ae6ea20ef529",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "9e53ef8a2e6690d6fcb026b687fba90ffae158e3d16646f56205402b16b56b5e",
+        "start_line": 3
+      }
+    ],
+    "reason": "本单元承担“可实现代码清单”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "a1125e09061e15f87e271b723e754b87d7fb8d78b6cd5d296ae4f14552a48d14",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-9e76634f650a"
+}

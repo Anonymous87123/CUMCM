@@ -1,0 +1,133 @@
+{
+  "artifact": {
+    "after_sha256": "9e378be8f61eaddd9ce54131fc432f0d9f32b227ae6f015e8066f18a3b271fb1",
+    "before_sha256": "1c87882aaf56015e3d369f213705b24889211c284dd9724c300b91e68509f4e9"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "b3dee37a8c570f561e44f29db2f38f13969bf44bb6f051ce8d0e88b26e8a6e30",
+  "chunk_binding_sha256": "9963490a7b653d263644bd996a30c7f70772fe70640edffb5934cb1261ce0bfb",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-1f988cbd8462.diff",
+    "sha256": "3205f6e4de7313f7748590d40618378109f84089b16d8f902bd0469c845d76ce"
+  },
+  "evidence_sha256": "22c85646122aea2f120d80fb86068c36284093b73b86bfa6827008a28ed0ed14",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "调整目录式、均匀并列式表达，保留具体判断、程序动作与使用边界",
+        "target_signals": [
+          "HUM-JUDGMENT-TRACE",
+          "RHYTHM-UNIFORM-SEQUENCE"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 100,
+        "id": "S1",
+        "sha256": "e166af7540aa4014b8b06418bf73908ca86fbf556267d14cf1f3e4ea0ee104c0",
+        "start_line": 1
+      }
+    ],
+    "summary": "调整目录式、均匀并列式表达，保留具体判断、程序动作与使用边界",
+    "target_signals": [
+      "HUM-JUDGMENT-TRACE",
+      "RHYTHM-UNIFORM-SEQUENCE"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 19,
+        "operation": "REPLACE",
+        "start_line": 19
+      },
+      {
+        "end_line": 22,
+        "operation": "REPLACE",
+        "start_line": 22
+      },
+      {
+        "end_line": 26,
+        "operation": "REPLACE",
+        "start_line": 26
+      },
+      {
+        "end_line": 32,
+        "operation": "REPLACE",
+        "start_line": 32
+      },
+      {
+        "end_line": 39,
+        "operation": "REPLACE",
+        "start_line": 39
+      },
+      {
+        "end_line": 46,
+        "operation": "REPLACE",
+        "start_line": 46
+      },
+      {
+        "end_line": 52,
+        "operation": "REPLACE",
+        "start_line": 52
+      },
+      {
+        "end_line": 58,
+        "operation": "REPLACE",
+        "start_line": 58
+      },
+      {
+        "end_line": 64,
+        "operation": "REPLACE",
+        "start_line": 64
+      },
+      {
+        "end_line": 70,
+        "operation": "REPLACE",
+        "start_line": 70
+      },
+      {
+        "end_line": 76,
+        "operation": "REPLACE",
+        "start_line": 76
+      },
+      {
+        "end_line": 82,
+        "operation": "REPLACE",
+        "start_line": 82
+      },
+      {
+        "end_line": 88,
+        "operation": "REPLACE",
+        "start_line": 88
+      },
+      {
+        "end_line": 94,
+        "operation": "REPLACE",
+        "start_line": 94
+      }
+    ],
+    "masked_after_sha256": "5ef3dd55d0dd06b7a1525d5838dcd9461732b8be8043ddcd2a698376fb51383f",
+    "masked_before_sha256": "e166af7540aa4014b8b06418bf73908ca86fbf556267d14cf1f3e4ea0ee104c0",
+    "source_spans_covered": 1,
+    "source_spans_total": 1,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "5bcd63cc1d17aa6c1bb81b7ce4300c78090482e0150bb32467532daae9791f37",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-1f988cbd8462"
+}

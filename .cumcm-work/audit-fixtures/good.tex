@@ -1,0 +1,33 @@
+\documentclass{ctexart}
+\begin{document}
+\begin{abstract}
+本文针对数据决策问题建立可复算模型，并报告主要结果和误差检验。
+\keywords{数据\quad 预测\quad 交叉验证}
+\end{abstract}
+\section{问题重述}
+给定历史数据，要求形成预测与决策。
+\section{问题分析}
+先完成数据清洗和描述统计，再按时间划分样本并建立基线。
+\section{模型假设}
+观测口径在研究期内保持一致。
+\section{符号说明}
+$y_t$ 表示第 $t$ 期观测值。
+\section{分问题模型建立与求解}
+采用交叉验证选择预测模型，并记录全部约束。
+\section{结果分析}
+模型在独立验证集上的误差低于持续性基线。结果表明，改进主要来自周期特征，
+而非训练样本的偶然拟合；相比基线，关键时段的偏差方向得到修正。所有输出均
+满足题目约束，异常日期另行回查，因此该结论只适用于当前数据范围。
+\section{模型检验}
+采用滚动交叉验证，并以 RMSE 和 MAE 对照持续性基准。
+\section{灵敏度与稳健性分析}
+对窗口长度和阈值进行参数扰动，重复训练后比较决策是否改变。
+\section{模型评价与改进}
+模型保留时间顺序，但对结构突变的适应性有限；改进时引入变点并重新验证。
+\begin{thebibliography}{9}
+\bibitem{source} 数据来源说明。
+\end{thebibliography}
+\appendix
+\section{附录}
+给出入口脚本、依赖、随机种子和运行说明。
+\end{document}

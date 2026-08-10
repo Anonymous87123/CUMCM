@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "0e43454995566747e856da123a4cb4b065a565a1cb91421843b2dc69379f9711",
+    "before_sha256": "0e43454995566747e856da123a4cb4b065a565a1cb91421843b2dc69379f9711"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "91bda2ce5f7324312d5a806a518cac7ebccce2605478457d43458c54ca6a43e4",
+  "chunk_binding_sha256": "47de24ce408f3b35961f8f2218dadc705bd08b25ba354cdaf54162ff70cb54a2",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-99abf63c5cd0.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "89ebee34c609d0a31e7c188733c51a51de25066f07f968afc69f231ba6f60b87",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 4,
+        "id": "S1",
+        "sha256": "9b2a699cbc88a5bd65bf9033ffcdd1f4cb4f097f1c6a530c5c05e0261f993123",
+        "start_line": 4
+      }
+    ],
+    "reason": "该段承担“研究边界、证据与处理方法”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "8bca47973c5c2039b9b13e9cbfd933e02782972d4f9e1ac964e9a92b05063433",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-99abf63c5cd0"
+}

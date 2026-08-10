@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "cc661b8235c81d78cb792d2f78047a4b4a7f195baf4fa7426322b18bb5218d3b",
+    "before_sha256": "cc661b8235c81d78cb792d2f78047a4b4a7f195baf4fa7426322b18bb5218d3b"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "09d2a589e036612688911bc277a7756d317c6af3216b2dc9cf095962378d0aee",
+  "chunk_binding_sha256": "c331f49f12ef64d3ad80b40d99565c6e239e61d0b7884cb9131351186204a39a",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-6e047f2d8820.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "6d5e286ceceb4b0ba13107daa9c2e26bd7cf9e16ccafbed6deefa3a3c74aacc1",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "e7c8c5dfc33cc3544372e082c14c9bf513b309ee2ea53504b74f02c0a09668b7",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段落承担“开源代码逻辑、约束与选型边界”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "6924ab0713b8d660e1bed42e1d13de4e20c9273d5d5e051d6b0f030362ab86e9",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-6e047f2d8820"
+}

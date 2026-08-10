@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "4cc8537f66bd8e4a540775efece8be78a4632d8e7b3b34c0f5a2a10e12138780",
+    "before_sha256": "4cc8537f66bd8e4a540775efece8be78a4632d8e7b3b34c0f5a2a10e12138780"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "7090a0ff24ce552e3c9c88bd3e36f89d30aa5efbacbfa6b39e2f65863546c122",
+  "chunk_binding_sha256": "0453ad345fd36f29a23bdcc4ca8737367a5a0dbe7b982ab4e9ffa9a902a5d0ce",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-cd1f3b065a78.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "446cc3e1b5e53eb73091f6d1d009ff05eb2d61685da74d742daca0eacaabf6ef",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "d68c1678e780ff87961e218a47babd1951774b1c5fcc09fb14c7c0c75b4ed166",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段落承担“证据文件说明”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "851d2a2c100006078b6b4eacf58a3f842643139ae44feecce81fa226ebba7b78",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-cd1f3b065a78"
+}

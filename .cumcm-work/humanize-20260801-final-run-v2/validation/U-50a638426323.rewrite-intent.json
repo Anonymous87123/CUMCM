@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "6d1804ea900dd1e825d66dc94f83af188f4aa4d65b554e92ebb387c7c65156d5",
+    "before_sha256": "6d1804ea900dd1e825d66dc94f83af188f4aa4d65b554e92ebb387c7c65156d5"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "27f1a90ce27dadeea862af7b65935f254014cef848dacc10c2a4065a4e9eefb1",
+  "chunk_binding_sha256": "614d605908d2966df805187d9ad6aab054afeb44118093e9c0eea396154ab1e6",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-50a638426323.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "251ca103256c95dfc3bdaab2e786fe3240d3b68df477c82bb3b92f32132dd3c8",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "0271e84571525ed9ac3e5d90778af1d41fe2a4800a802765730951ad448ad2cf",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段落承担“数据链、算法原理与完整步骤”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "5aa5861d58c60af6518df3910ff52c28b770051e3d00aa295633d9ed71898c6b",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-50a638426323"
+}

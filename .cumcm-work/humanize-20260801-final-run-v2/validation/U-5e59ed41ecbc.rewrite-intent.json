@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "f0ec2e7b8e3b2ddcd36a6f75109c59fccc900411101432fa60bedcbf47d51818",
+    "before_sha256": "f0ec2e7b8e3b2ddcd36a6f75109c59fccc900411101432fa60bedcbf47d51818"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "7ba44699645359a7bbf6a2c6cb245ae250cd4d46c097073c18922f9d04fa815b",
+  "chunk_binding_sha256": "193bf7ac3ba8ac6cd847686818f4b431ef5c92008c21c35e9430daf592a0d9ac",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-5e59ed41ecbc.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "5aca7ae7fcb640731c714e4344a5455ca0829ec3e80be10c8bbe8f0054d30264",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "445ef458f9c195b0327bb1b2f754b9a0a0179f2d9b0ed3b6edfcf8bba1574dc3",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段落承担“学习报告”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "bab774348cf1105cb2309c2799b50e7fcb118880e98e60138f94f480161a298f",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-5e59ed41ecbc"
+}

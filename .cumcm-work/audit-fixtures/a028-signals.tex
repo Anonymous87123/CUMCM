@@ -1,0 +1,26 @@
+\documentclass{ctexart}
+\newcommand{\keywords}[1]{#1}
+\begin{document}
+\begin{abstract}几何结构调整与随机模拟审计夹具。\end{abstract}
+\keywords{几何；误差}
+\section{问题重述}确定结构调整量。
+\section{问题分析}核对几何、结构和代码索引。
+\section{模型假设}测试假设仅用于审计夹具。
+\section{符号说明}$e_i$ 为几何误差。
+\section{模型建立与求解}
+目标是最小化最大偏差。附录保留可疑实现信号供静态审计。
+\section{结果分析}
+结果表明当前候选的数值已经生成，但该夹具故意保留极值方向、循环索引和随机模拟协议缺项，用于确认 warning 能被发现；这些静态信号需要人工裁决，不代表模型一定错误。其余文字仅补足结果解释长度，并不作为真实建模结论或数据证据。
+\section{模型检验}采用残差和 RMSE 回代复算。
+\section{灵敏度分析}对参数做扰动测试。
+\section{模型评价与改进}需补全随机协议后再评价。
+\begin{thebibliography}{1}\bibitem{r} 测试条目.\end{thebibliography}
+\appendix
+\section{附录：代码}
+\begin{verbatim}
+Index_Max = find(YMax == max(YMax));
+if (Position(j,1) > 0)
+  New_Position(j,2:4) = Position(i,2:4);
+end
+\end{verbatim}
+\end{document}

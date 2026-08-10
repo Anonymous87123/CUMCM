@@ -1,0 +1,72 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-099d839e1da6",
+  "chunk_binding_sha256": "b7d3bbf1b934dc7e8eff5d19941622b9c9b162b95f88b73748d14f12bc9fce35",
+  "decision": "NO_CHANGE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "7bdc914cd195ce3c",
+    "prepare_integrity_sha256": "a00dc59b6117cfc212f631f84843b51a0c61191e5e2dfb8b4878ffe166d7f494",
+    "run_metadata_sha256": "4cd475055916c2b477e77093a300926dd661f3a1e3c88848550a22d3042a493e",
+    "policy_snapshot_sha256": "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "ac6e4224f3a4335df76bee7b10f54554686f551cc337426cdbb593b512ad73fb",
+      "unit_id": "U-099d839e1da6",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 46002,
+      "end": 46429,
+      "start_line": 1156,
+      "end_line": 1171,
+      "source_span_sha256": "b545d49d5ca9b246e5a71fbb01f511b230c15dee56e6aa9e94fd14f173a4dc63",
+      "masked_text_sha256": "dcea19db5c1781ccdcc0db7d29f0d3a2e62459cea3169114b29a8aef600da543",
+      "chunk_binding_sha256": "b7d3bbf1b934dc7e8eff5d19941622b9c9b162b95f88b73748d14f12bc9fce35"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "9db848671bb36b115438351c88cf3d2dcdefd25384126150af98148d783bbd58",
+      "routing_input_sha256": "ef4d362369c8ab2b384c0ddd7861fe311c8dc814668a8dc2fda583f2da6b5b65"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "ec8b5e2f6ad03a775cac6cf5f20082ab98765d5ae0ee3d6ef3143c83cba1a760"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "reason": "59 篇编号论文的结构与写作分析 / 可复用表达与 边界中的定义、对象和条件承担后续对应关系，原句保持这些信息的排列与范围。",
+  "evidence_spans": [
+    {
+      "id": "S1",
+      "start_line": 1,
+      "end_line": 1,
+      "sha256": "5f1be1bcef0c86f0fe99d7e77853b2e14ade22745deb91fc73a6b9a8c98abb5e"
+    }
+  ]
+}

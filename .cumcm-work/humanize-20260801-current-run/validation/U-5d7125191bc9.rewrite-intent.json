@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "496fe9edb394e66f6f37d2500c8fe1a3b59362ad06df5cba9fd99afe019b2994",
+    "before_sha256": "496fe9edb394e66f6f37d2500c8fe1a3b59362ad06df5cba9fd99afe019b2994"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "0ab3266e30ad7b91e8646a5f6ee325af10b0f656a1a0255baa7795a933109d0f",
+  "chunk_binding_sha256": "99764033cdf115df9d2b847b09ec4b3182a15cfd4609f57357b9aeda08749a62",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-5d7125191bc9.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "cc4fc0761b0a63a1fd9effb72ad71ae1dc552e5178698313e0ba2433c41da421",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "d313b953275e89c89b00331b30c96e6b6f2daeb869ff498f2a0c7add6e10ed66",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“59 篇编号论文的结构与写作分析”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "62efe7ca8e9a3f62274a2206b8ecbb25fd9c2d838464b98434f1c04bee6b1d5f",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-5d7125191bc9"
+}

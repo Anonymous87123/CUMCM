@@ -1,0 +1,116 @@
+{
+  "artifact": {
+    "after_sha256": "2823f3ac73261fcaae652bbda5b0c9614082277db7c016ff02f69e627e5bc201",
+    "before_sha256": "1642c6c297cccd31169ef2a71cbc3c105e3b94c458e3aff5f80b72e35053f82a"
+  },
+  "changes": [
+    {
+      "after": {
+        "end_line": 6,
+        "han_chars": 111,
+        "line_count": 3,
+        "sha256": "c3cc025e35ed06bb3ccf30ade1db38e7938e064563de308196fdb8c4d8456a71",
+        "start_line": 4
+      },
+      "before": {
+        "end_line": 6,
+        "han_chars": 97,
+        "line_count": 3,
+        "sha256": "3d0b6bd7cd3ea93e85a05a7cc077dffc44f375c6df0798119611bb1d81813973",
+        "start_line": 4
+      },
+      "change_id": "QCH-136e11b8ba85c7af6d53",
+      "operation": "REPLACE",
+      "ordinal": 1
+    },
+    {
+      "after": {
+        "end_line": 8,
+        "han_chars": 34,
+        "line_count": 1,
+        "sha256": "11d3d7e2958371b26d5b9e60f753c90d0c730cf2a630c9ef6896824aa7110916",
+        "start_line": 8
+      },
+      "before": {
+        "end_line": 8,
+        "han_chars": 33,
+        "line_count": 1,
+        "sha256": "1ec2b53e3b346eb567fe210ca9cc4fc34eaa85f7642ff46551eff9913039023c",
+        "start_line": 8
+      },
+      "change_id": "QCH-cc4c38646b5f68c773e5",
+      "operation": "REPLACE",
+      "ordinal": 2
+    },
+    {
+      "after": {
+        "end_line": 12,
+        "han_chars": 39,
+        "line_count": 1,
+        "sha256": "d67734fea07350abe60537aed383de0fd93106b171c8af86aa3f003ec5e85fc7",
+        "start_line": 12
+      },
+      "before": {
+        "end_line": 12,
+        "han_chars": 35,
+        "line_count": 1,
+        "sha256": "ca7191839614ed394ac1862edda06909048bce2fbd41b7ab47a71f96b0602f95",
+        "start_line": 12
+      },
+      "change_id": "QCH-40c3ec66e9f3fe15d487",
+      "operation": "REPLACE",
+      "ordinal": 3
+    }
+  ],
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "authorship": "NOT_EVALUATED",
+    "quality_clearance_granted": false
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "08b4e88c540722085ab5130c2137c802ce2ef561f64db8a3f97660e98c12e29b",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "acf31a687e741637d1ebb82a3ab9e67039251326cfb006f45ea7dfb719641689",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "019111837767741d04ec58d08c936c5cc852ea655d14d9148f6c5b4163a1b363",
+  "review_contract": {
+    "empty_or_generic_benefit_is_clearance": false,
+    "local_model_or_caller_assertion_is_clearance": false,
+    "required_dimensions": [
+      "actionable_pathology_remaining",
+      "no_change_is_best_available_decision",
+      "problem_span_binding",
+      "independent_reading_benefit",
+      "subject_and_modifier_alignment",
+      "verb_object_collocation",
+      "logical_relation_preservation",
+      "template_field_role_and_authorization",
+      "information_density_and_rhythm",
+      "author_voice_non_regression"
+    ],
+    "required_per_change_verdicts": [
+      "ACCEPT",
+      "REVISE",
+      "REVERT"
+    ],
+    "validator_pass_is_quality_clearance": false
+  },
+  "schema": "humanize-paired-quality-review-request/v1",
+  "status": "PENDING_EXTERNAL_REVIEW",
+  "template_field_changes": [],
+  "validation_context": {
+    "artifact_relation": "CHANGED",
+    "decision": "REWRITE",
+    "decision_eligible": true,
+    "document_format": "tex",
+    "document_scope": "FRAGMENT",
+    "mechanical_validation_status": "PASS",
+    "mode": "REWRITE",
+    "scene": "RESEARCH"
+  }
+}

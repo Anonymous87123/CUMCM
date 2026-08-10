@@ -1,0 +1,65 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-11b03d92f32b",
+  "chunk_binding_sha256": "04f506129dd8ef5e3ff00a76e9fe207f885a0abaca04986b36f6259e3690119c",
+  "decision": "NO_CHANGE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "6e431f0e89ab1e86",
+    "prepare_integrity_sha256": "eda36299f73e98ecb94f2b0e6bfce625f3c76a096020db20339a9f0aa4cbe92d",
+    "run_metadata_sha256": "608d4d0ccec33ec88b56bd68ba284ea5cc38ad73dd6a2aa82e76a66a5e147559",
+    "policy_snapshot_sha256": "87656f9f0219c0ea2bb402202dc778469ce20e751d065776590fef4fcce7fd95",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "7f6938fc417b480fc08def55a9dfdf8fbd1a02109ab04284b9b5f72b25736aeb",
+      "unit_id": "U-11b03d92f32b",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 5157,
+      "end": 5405,
+      "start_line": 169,
+      "end_line": 177,
+      "source_span_sha256": "3f4ae6b5cffaafb719838b69aebcd416ba9e176850c67b2ce9afb48233006f68",
+      "masked_text_sha256": "0f19847d0904a37abc1f4514b49fc88bebe3b831e699288778feff10dc79190f",
+      "chunk_binding_sha256": "04f506129dd8ef5e3ff00a76e9fe207f885a0abaca04986b36f6259e3690119c"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "e62a30b56faaa472b203d45be572053710fca4149d79ae5298cc90d262dbf2f3",
+      "routing_input_sha256": "9545d118a40d12fa62af6381d26e067500c968e08244bd545d8b80ab248bdae5"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "570df1c01e5276135eda8fb5530159f3bd389f93a03362059734b7bece9bb89a"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "reason": "TODO: replace this placeholder with a specific function-preservation reason and add at least one hash-bound evidence_span before finalize",
+  "evidence_spans": []
+}

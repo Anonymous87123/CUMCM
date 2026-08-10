@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "3f4ae6b5cffaafb719838b69aebcd416ba9e176850c67b2ce9afb48233006f68",
+    "before_sha256": "3f4ae6b5cffaafb719838b69aebcd416ba9e176850c67b2ce9afb48233006f68"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "a28aa105d53591de1482e69c60de8a0059315c7557ef71272353dffbd9c796e8",
+  "chunk_binding_sha256": "c58c4936e9498fa0ffda10ef744f53c57e6c2d0b2a7b2141e752c58427f1c626",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-24139d897c83.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "1c87df91cf13b22776850f6fb14e80234ba5d2fa40527a2cc6c89a2b77b3b937",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 1,
+        "id": "S1",
+        "sha256": "0ddb2b600355bfb43c8df8e8f9284d71bf19602c185eaa7e6e16acead04b3668",
+        "start_line": 1
+      }
+    ],
+    "reason": "六年真题任务图谱与人员分工 / 四块学习结构中的定义、对象和条件承担后续对应关系，原句保持这些信息的排列与范围。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "7bf704e84b25f04da6ead4def77477f7571a2a5d25dcc235ac2aaa1f7806aafb",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-24139d897c83"
+}

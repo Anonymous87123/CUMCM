@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "7be133fe2600040ee133b26fb333eb8bc2d043dbc91ee5ab01913458a06675f2",
+    "before_sha256": "7be133fe2600040ee133b26fb333eb8bc2d043dbc91ee5ab01913458a06675f2"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "4f2a28cefe5e106bfb7536f5b336212445c584a1979f1eb70c530bd092dc7d21",
+  "chunk_binding_sha256": "5e8359bd9860e805f635a1311f888796af259268b4276731ba9b140622c3721b",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-fd4d6f6d314f.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "09000d09598c6b41083e364169ad2e11cad927aeb609f04b513609fc77209162",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "153351b9b4a7da7db938013ecf36f76df680ef7496b1ab2e48767700c89636ce",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段落承担“MCM-CUP-STANDARD-WRITE Skill”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "001413f89e73cdb0c1bbbe288321335bbfd517c6b4e7e2a211e3c832bdcf82c0",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-fd4d6f6d314f"
+}

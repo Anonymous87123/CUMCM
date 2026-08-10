@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "e1c3fc1d635458e94716f4fcfdb7bb45fb48eb54542cc7fd08096fdd57cc80ce",
+    "before_sha256": "e1c3fc1d635458e94716f4fcfdb7bb45fb48eb54542cc7fd08096fdd57cc80ce"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "b9eea07af8687920a03101108d89fd3b7540488713bab83d9c912ab3d1561eac",
+  "chunk_binding_sha256": "2893ddd55438e15e9a55bd9e192794843a224b8bde7b238de1191b64853e43ef",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-ab67d2d2ec3a.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "fdbdb34a4e6b632e23b1849f6ff7f82681b0a35ab3255e7afc45bae76b57c9e7",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "66a412519c55394645941666ea30cad1c9a40eef836df16a8063ca1b3435aa25",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“创新切入、高频失分与高分策略 / 高频失分点”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "641895c7277ebce43904ec0938e9e408348c65ca8663198920eaf80663183ea4",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-ab67d2d2ec3a"
+}

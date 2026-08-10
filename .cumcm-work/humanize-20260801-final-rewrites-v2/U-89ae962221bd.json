@@ -1,0 +1,72 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-89ae962221bd",
+  "chunk_binding_sha256": "4e7e752a38cecab0da39e7a488b6c29a80a805d09136033f6732c32620d3ea20",
+  "decision": "NO_CHANGE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "5b708ec3580c1bfc",
+    "prepare_integrity_sha256": "fc36cd909e2ec30032ca40ef8cfdacac24c9312a30f594c52aa2bf43a1983d80",
+    "run_metadata_sha256": "ed7ceaa762912d840b64d659d9c713599092033aa570c208dfd1d1da3bb6b189",
+    "policy_snapshot_sha256": "87656f9f0219c0ea2bb402202dc778469ce20e751d065776590fef4fcce7fd95",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "c1ec1b0021cfa856fa8a0a3fc49493ac63ce4bec9289c8b7b12919354bf18c58",
+      "unit_id": "U-89ae962221bd",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 66367,
+      "end": 68255,
+      "start_line": 1668,
+      "end_line": 1704,
+      "source_span_sha256": "74e3b8ac61a05bdc51d6a9417498c5bdc58b163156676c1cf41b519d29d8eecc",
+      "masked_text_sha256": "32fe78ddd90b50692939678528182f36d4ea61061cb6c6029e24de21b3f37336",
+      "chunk_binding_sha256": "4e7e752a38cecab0da39e7a488b6c29a80a805d09136033f6732c32620d3ea20"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "5f2af4df69a58a0d38b6d008b963ef8fdfbff63543a09b93ff9df2d6fad7b664",
+      "routing_input_sha256": "874710d5838e8b6567f108df63a19ae5b487050c2a683c7992fb68d0bc054ec7"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "aa8afa93881aa108195b8b8b968e0780d3d2d6d06769da7ae35f504c09e368a2"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "reason": "该段落承担“算法责任与验收总表”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。",
+  "evidence_spans": [
+    {
+      "id": "S1",
+      "start_line": 6,
+      "end_line": 6,
+      "sha256": "add13b351390c2ec1e97b4e7a9a2567f18f2983c62a68437c2ab49727359d10d"
+    }
+  ]
+}

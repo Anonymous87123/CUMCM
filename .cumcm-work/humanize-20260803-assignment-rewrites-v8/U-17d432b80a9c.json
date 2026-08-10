@@ -1,0 +1,91 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-17d432b80a9c",
+  "chunk_binding_sha256": "a26df77857f9e982448e8450a35513a948e527c9a86c92ce30b401e1afb529fe",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "7bdc914cd195ce3c",
+    "prepare_integrity_sha256": "a00dc59b6117cfc212f631f84843b51a0c61191e5e2dfb8b4878ffe166d7f494",
+    "run_metadata_sha256": "4cd475055916c2b477e77093a300926dd661f3a1e3c88848550a22d3042a493e",
+    "policy_snapshot_sha256": "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "ac6e4224f3a4335df76bee7b10f54554686f551cc337426cdbb593b512ad73fb",
+      "unit_id": "U-17d432b80a9c",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 5294,
+      "end": 6082,
+      "start_line": 180,
+      "end_line": 205,
+      "source_span_sha256": "d803997805f65e52e7fb6523c345d7bd10ad7d9ae631a2326f6b7b890f94867e",
+      "masked_text_sha256": "dd3d8483b92ad4918af4c3207ea1e94df0cb5257abeba52b60ad89fb5fb16510",
+      "chunk_binding_sha256": "a26df77857f9e982448e8450a35513a948e527c9a86c92ce30b401e1afb529fe"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "3f56f90c72ad4061947775801d2478eb7904a14e90d3a40522a8c2be86e9f8a1",
+      "routing_input_sha256": "5efbfde0425f765149b0e220921eda48eb92b5db4f663eac7baabae30705b504"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "1cae6e581f52e27724b5b5635b0cd4e41a848b966902f046ad5ef548bf8a456c"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00109:984aea57717d]]\n\n队长的模型链从守恒关系开始，而不是从求解器开始。机械系统用牛顿第二定律、\n刚体平衡、重力、摩擦和弹簧—阻尼关系建立状态方程；流体问题用质量守恒和\nBernoulli 关系闭合；电路问题用 Ohm 定律和 Kirchhoff 定律组织节点或回路方程；\n气体过程核对理想气体状态关系。传热采用 Newton 冷却或热传导方程，波动、扩散\n及多孔介质渗流按偏微分方程处理。人口过程用 Logistic 方程和捕食—被捕食模型，\n药物过程使用房室代谢方程，传播过程比较 SIR 与 SIS 的恢复机制。\n\n完整步骤固定为：\n[[PROTECTED:F00001-P00110:7cb58e5ee5a6]]\n  [[PROTECTED:F00001-P00111:ab452bea72eb]] 画出对象、边界和能量/质量/动量交换，确定系统尺度与正方向；\n  [[PROTECTED:F00001-P00112:ab452bea72eb]] 从守恒律或受力关系推导状态方程，逐项给出单位和符号；\n  [[PROTECTED:F00001-P00113:ab452bea72eb]] 写明初始条件、边界条件、连续性条件、控制量及可行域；\n  [[PROTECTED:F00001-P00114:ab452bea72eb]] 先进行极端情形、量纲和简化模型的解析检查；\n  [[PROTECTED:F00001-P00115:ab452bea72eb]] 对 ODE 比较显式 Euler 与四阶 Runge--Kutta，对 PDE 按网格选择有限差分或有限元；\n  [[PROTECTED:F00001-P00116:ab452bea72eb]] 进行步长/网格收敛、守恒残差、回代误差和参数扰动检验；\n  [[PROTECTED:F00001-P00117:ab452bea72eb]] 把经检验的状态量封装为组员1的目标/约束或组员2的可解释特征。\n[[PROTECTED:F00001-P00118:4f22427cd9b1]]\n\nEuler 法实现简单但全局误差阶数低，只用于基线和步长敏感性对照；RK4 在光滑 ODE\n上兼顾精度与实现成本，但对刚性系统不应硬套。有限差分适合规则区域和清晰的\n差分格式，可直接检查截断误差与 CFL 条件；有限元更适合复杂几何和变系数边界，\n代价是网格、形函数、装配和边界处理更重。解析解存在时先用解析解作单元测试，\n不存在时采用网格加密、守恒量和独立实现交叉验证。\n\n",
+  "rewrite_intent": {
+    "summary": "删除工作台式词壳，保留对象、动作、条件和结论边界",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 15,
+        "end_line": 15,
+        "sha256": "7381992771ca4e917402b0ef48811bdcb1b75948a1a68cfbb658f3a4540f7c1d"
+      }
+    ],
+    "target_signals": [
+      "LEX-STRICT-CORPUS-DIRECT-ACTION"
+    ]
+  }
+}

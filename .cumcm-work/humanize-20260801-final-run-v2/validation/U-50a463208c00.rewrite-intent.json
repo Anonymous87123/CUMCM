@@ -1,0 +1,66 @@
+{
+  "artifact": {
+    "after_sha256": "908e2608292fd6aa74e3cc63a2deed6c727d68184819cbbc2ffa325bd1c947f5",
+    "before_sha256": "fb635ccd28245ad7cb6cc8e095c1fccb3266ad4e724db883d671a3a4fbd658dc"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "a345ae85628fc5c693a5a1ac848e1b9b66da728cb4f6d45861f25fef25987995",
+  "chunk_binding_sha256": "ec479020109583ea74b02b7c4af3013e1cd762f683a2338d1c76f8b7768b2a44",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-50a463208c00.diff",
+    "sha256": "b014ea1cf0c981abc482e45b4e18061b54eff7531d3bf3538cdc980e60c41d3c"
+  },
+  "evidence_sha256": "2101adddb429d316648a6cec2cce0259dc24259cef5b2fbc23b73e462d80216d",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "按证据、分工和下一次演练重写结论，删去算法清单式对举和空泛闭环收尾",
+        "target_signals": [
+          "STYLE-CHECKLIST-CONCLUSION"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 9,
+        "id": "S1",
+        "sha256": "d6c8915a89716bafd7c9f42b1b65df2425d143a3a2923bcd34b68efe90b708d7",
+        "start_line": 3
+      }
+    ],
+    "summary": "按证据、分工和下一次演练重写结论，删去算法清单式对举和空泛闭环收尾",
+    "target_signals": [
+      "STYLE-CHECKLIST-CONCLUSION"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 9,
+        "operation": "REPLACE",
+        "start_line": 3
+      }
+    ],
+    "masked_after_sha256": "91424e059df8160f0090595fdd6e88e32ce630069829137edf526d4e00e38d83",
+    "masked_before_sha256": "3de3e4be94471681ef71afb9ec057f5db9957c2bdb81b712b739c0529bf16ca1",
+    "source_spans_covered": 1,
+    "source_spans_total": 1,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "67dcbd54b032ae8e932eafd1319e557655e264cfa2c3977fa4653b150ad895a0",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-50a463208c00"
+}

@@ -1,0 +1,133 @@
+{
+  "action_catalog_sha256": "1a63b106a03bec4d30da50e4ca61031b8a713e0b3e9508986ec403c42c81dc47",
+  "action_profile_sha256": "d4b9a969679878bdef250727c3be239a73e06353ae2cd7be8ed86d54d179c68c",
+  "action_profile_status": "PASS",
+  "active_detector_definition_sha256": [
+    "41093627534731dd0dc6b5125b5d1c9b4e8a050e8cade4b4da7e5c26f4c6eb20",
+    "dd2b8ec37beb5116792eca111f4899bdecf6747bb63e9d988c3a6672b23f82f8",
+    "dff1ba4363a0b94fa3a2f0cac0767e4c43e87961636c9ddac743d9057e9ece7a"
+  ],
+  "after_blocks": 127,
+  "before_blocks": 127,
+  "before_logical_document_sha256": "35dea1e04e49e33ac286f083db943d7023d4dc02390ad51fdd6d5112ce1fbd3d",
+  "blocking_unit_ids": [],
+  "candidate_logical_document_sha256": "e22187184236ee58ae38ba91ce1e1dc12ae93915ed8225437e0e999b5aef87c9",
+  "evaluated_units": 28,
+  "evaluation_partitions": [
+    {
+      "before_sha256": "7c1fcda8eaec81eebc2acdd04c5e7561b006900222a93e0a8ea5c8dff7da8acc",
+      "candidate_sha256": "fec890ea8ab6efbed26dfc3044247f8554301a7ccc32b42df8ba2305264b515d",
+      "document_id": "F00001",
+      "resolved_scene": "RESEARCH",
+      "unit_ids": [
+        "U-d1001691c561",
+        "U-dee7ab53efd5",
+        "U-1f988cbd8462",
+        "U-58ced89d4882",
+        "U-67ff01994e42",
+        "U-a6366210ec1d",
+        "U-cf692ea7d2af",
+        "U-67bd7c53383e",
+        "U-39e075ee6a84",
+        "U-49a4f84db22d",
+        "U-a4b15861068f",
+        "U-351e32fb5a23",
+        "U-3852cd5e8be9",
+        "U-7e4d16fdaa9b",
+        "U-4ea651e0f6c2",
+        "U-404f050b5eb9",
+        "U-32f63fa253a0",
+        "U-881f5190709e",
+        "U-794f247cbb79",
+        "U-5171b9294d02",
+        "U-04f39778ea23",
+        "U-88d6df6df629",
+        "U-a1df26d79969",
+        "U-c7df72c35d84",
+        "U-d2dbe69570bb",
+        "U-61cd6393a2c2",
+        "U-0308819b7e46",
+        "U-ca4099b735aa"
+      ]
+    }
+  ],
+  "evaluation_scope": "FULL",
+  "expected_units": 28,
+  "finding_count": 0,
+  "findings": [],
+  "inherited_finding_count": 0,
+  "inherited_findings": [],
+  "lexical_policy_sha256": "08b4e88c540722085ab5130c2137c802ce2ef561f64db8a3f97660e98c12e29b",
+  "logical_document_hashes": [
+    {
+      "before_sha256": "7c1fcda8eaec81eebc2acdd04c5e7561b006900222a93e0a8ea5c8dff7da8acc",
+      "candidate_sha256": "fec890ea8ab6efbed26dfc3044247f8554301a7ccc32b42df8ba2305264b515d",
+      "document_id": "F00001",
+      "unit_ids": [
+        "U-d1001691c561",
+        "U-dee7ab53efd5",
+        "U-1f988cbd8462",
+        "U-58ced89d4882",
+        "U-67ff01994e42",
+        "U-a6366210ec1d",
+        "U-cf692ea7d2af",
+        "U-67bd7c53383e",
+        "U-39e075ee6a84",
+        "U-49a4f84db22d",
+        "U-a4b15861068f",
+        "U-351e32fb5a23",
+        "U-3852cd5e8be9",
+        "U-7e4d16fdaa9b",
+        "U-4ea651e0f6c2",
+        "U-404f050b5eb9",
+        "U-32f63fa253a0",
+        "U-881f5190709e",
+        "U-794f247cbb79",
+        "U-5171b9294d02",
+        "U-04f39778ea23",
+        "U-88d6df6df629",
+        "U-a1df26d79969",
+        "U-c7df72c35d84",
+        "U-d2dbe69570bb",
+        "U-61cd6393a2c2",
+        "U-0308819b7e46",
+        "U-ca4099b735aa"
+      ]
+    }
+  ],
+  "negative_guard_loader_version": "2.0.0",
+  "negative_guard_registry_sha256": "d4b9a969679878bdef250727c3be239a73e06353ae2cd7be8ed86d54d179c68c",
+  "negative_guard_registry_source_format": "FULL_AUDIT_CATALOG",
+  "negative_guard_registry_source_sha256": "1a63b106a03bec4d30da50e4ca61031b8a713e0b3e9508986ec403c42c81dc47",
+  "negative_guard_registry_status": "PASS",
+  "policy": {
+    "author_view": "masked_text_without_protected_payload",
+    "boundary_minimum_units": 3,
+    "boundary_opening_han_chars": 6,
+    "comparison": "after must not introduce additional cross-unit coverage",
+    "corpus_negative_guards": [
+      "regex_groups/v1",
+      "structured_repeated_list/v1"
+    ],
+    "partition_key": [
+      "logical_document_id",
+      "resolved_scene"
+    ],
+    "repair_signal_categories": [
+      "repair-template-repetition"
+    ],
+    "scene_all_semantics": "evaluate_each_resolved_scene_separately",
+    "structured_tex_projection": [
+      "LIST_BEGIN",
+      "LIST_ITEM",
+      "LIST_END"
+    ],
+    "template_normalization": "NFKC+remove-zero-width+remove-Han-internal-space",
+    "version": "cross-unit-repetition/v3"
+  },
+  "policy_sha256": "cadd752b9716d0664de8ef48a1205e870a3b080eafdd93a4fda3a588963ff403",
+  "review_reasons": [],
+  "schema_version": "humanize-cross-unit-repetition/v3",
+  "status": "PASS",
+  "unit_inventory_sha256": "35acd251fab8bb2afc03d876c53821ec9e42bd44acb4dd9e86f0f414e6aa4f75"
+}

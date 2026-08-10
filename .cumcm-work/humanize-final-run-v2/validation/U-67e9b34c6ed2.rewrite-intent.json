@@ -1,0 +1,66 @@
+{
+  "artifact": {
+    "after_sha256": "21c9e20a58b60e20cb0ea1c33834026c0bf72e0954f363c9a6ebe259633466a1",
+    "before_sha256": "cbd3ca6e7368417c64fbc3caeae8b9da1e3c7a224109276f32f7e4796ec31c6c"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "cc8e215d7f9e62e5c74a70263d97f9357cd4ec9caa1d4839e0abcf0acc499b2e",
+  "chunk_binding_sha256": "9e26bc7b7d3a0d87ac4faccf6f1eda0db4f6ef80431d35221e178f4e610dc883",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-67e9b34c6ed2.diff",
+    "sha256": "275182f1195ca5efa6e582c5276dbefc1591b7a0810a196f9bef764640266074"
+  },
+  "evidence_sha256": "7bbe5e94ebade4ce4d79cb8f9df37bd9d44aad85b41a91311cde61f77d2af0a9",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "将管理化抽象壳改为可直接核对的章节功能序列",
+        "target_signals": [
+          "LEX-MGMT-01"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "0342a8826847871f0ca1ca7f31dcb58cf142a59f05c0c9ee01120f0b54863403",
+        "start_line": 3
+      }
+    ],
+    "summary": "将管理化抽象壳改为可直接核对的章节功能序列",
+    "target_signals": [
+      "LEX-MGMT-01"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 3,
+        "operation": "REPLACE",
+        "start_line": 3
+      }
+    ],
+    "masked_after_sha256": "a608978f8a80a0565c0d919ecd602226c8f511807c900953a98ee9da7acd8c15",
+    "masked_before_sha256": "e433494fae15de827c2c2554b572fa303670924e1a759492e938b594a55c2f7b",
+    "source_spans_covered": 1,
+    "source_spans_total": 1,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "2a4f5f85a40369f902f63c387746326983c56c51a8297835da783f4733d4c0a7",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-67e9b34c6ed2"
+}

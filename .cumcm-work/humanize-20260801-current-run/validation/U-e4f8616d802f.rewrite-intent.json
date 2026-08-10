@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "e6953a1e2b545b909f6842200eb2a11df0d6f8b641f4f9863f4e7a5f71b3ce46",
+    "before_sha256": "e6953a1e2b545b909f6842200eb2a11df0d6f8b641f4f9863f4e7a5f71b3ce46"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "310ff806f63e095b2dc181523e71493731e88f460cbb0f2579b8339b8e6eaa6f",
+  "chunk_binding_sha256": "bc10e1f39b99cc3c111519893c23acdddc36615c921f9fcfc38c797680fcb43d",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-e4f8616d802f.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "0857e3b3a0e53bf2716b8b7f00ce280e04689f86a4f7eb716cd81eac35d0bf69",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 6,
+        "id": "S1",
+        "sha256": "99f46eff2f790d506ae988c1d27eca6a248c446a6ee966fa25a360b239f14dbc",
+        "start_line": 6
+      }
+    ],
+    "reason": "该段承担“理论知识学习笔记 / 阶段成果、真实短板与四周计划 / 2026 年 7 月 29 日至 8 月 25 日量化训练”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "2bbdc94c7b8c8f82a15e2972acf87301a5df934e891672523a69da4a0de93afa",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-e4f8616d802f"
+}

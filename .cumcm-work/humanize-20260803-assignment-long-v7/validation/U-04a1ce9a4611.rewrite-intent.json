@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "9ae40263e0d423b800c07d2a3dd89bde0d67659f838d503f4a6eca63fe1fe740",
+    "before_sha256": "9ae40263e0d423b800c07d2a3dd89bde0d67659f838d503f4a6eca63fe1fe740"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "f5d943e71e6d706d9702035dcc0500be5e71da97d49c42c0972ca3eeaf89003f",
+  "chunk_binding_sha256": "62119c519841a41d0c1059b24c6d7f74e245639416487ad4bdda996318691bb5",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-04a1ce9a4611.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "9fbd1987199381b134100bd277648890b7727d344659e4afcebd66315a87c477",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 1,
+        "id": "S1",
+        "sha256": "02cb31ef86181a3cf9a405a55678f2f0810264a8062f3f899a319447a5224c51",
+        "start_line": 1
+      }
+    ],
+    "reason": "理论知识学习笔记 / 组员1：规划、智能优化、图网络与仿真 / 开源代码逻辑、优缺点与边界中的定义、对象和条件承担后续对应关系，原句保持这些信息的排列与范围。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "741ab4bd7589418dd7ce07e3a4de24cfd4c8b084994684e2388ee9ab96d51ccd",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-04a1ce9a4611"
+}

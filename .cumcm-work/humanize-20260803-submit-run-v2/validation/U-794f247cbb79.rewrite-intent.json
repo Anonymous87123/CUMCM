@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "9620a3039cb9dd57422ec2a6c82a6634a49890c1ad6a60341e860026ee756255",
+    "before_sha256": "9620a3039cb9dd57422ec2a6c82a6634a49890c1ad6a60341e860026ee756255"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "badc5ca8b27d82043da19b7d946206301a233b6f8e9cba9123bbf470ea8a0b26",
+  "chunk_binding_sha256": "f8f16b1dec066f00165ba0b850832abea9a0f2909d6c21550cb3b9c36952e8ff",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-794f247cbb79.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "6e91920024743c0929ad4c2e7ce5dcf432d909a1a71e1a08393f86a6a2b49d39",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 7,
+        "id": "S1",
+        "sha256": "0e2b607bf8debc671166086502119cb71fafd43280d7a47dd29dbfdcc2eff0b0",
+        "start_line": 1
+      }
+    ],
+    "reason": "本节是模型假设的三项固定指引，原句保留假设对象、计算后果与删除检验的职责边界。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "8eabe01c9df5b119a020ede30869c1b7bedc96be5385cc007a3f06db630e846f",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-794f247cbb79"
+}

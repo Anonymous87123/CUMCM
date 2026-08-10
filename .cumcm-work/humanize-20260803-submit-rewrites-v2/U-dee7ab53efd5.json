@@ -1,0 +1,99 @@
+{
+    "schema_version":  "humanize-unit-rewrite-bundle/v4",
+    "unit_id":  "U-dee7ab53efd5",
+    "chunk_binding_sha256":  "ca90bdba07e08d450c9a1075e6fab8c4d81ac05e8451493c1d83b07bc4243990",
+    "decision":  "REWRITE",
+    "voice_profile_sha256":  "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+    "authoring_binding":  {
+                              "schema_version":  "humanize-long-authoring-binding/v1",
+                              "integrity_scope":  "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+                              "snapshot_id":  "b48ef9450b05230b",
+                              "prepare_integrity_sha256":  "08d8d35f9bd43257bbfc5c931659c168f2106c243f412dfc62528b7847c32149",
+                              "run_metadata_sha256":  "697c2507466cf5cde0e99810c211ce52bc6884c88736ebc99741cea022da3217",
+                              "policy_snapshot_sha256":  "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+                              "source_binding":  {
+                                                     "file_id":  "F00001",
+                                                     "source_file_sha256":  "da6925eb091af9d09d1f22b972b450ea0c6aa035703baafa84910bb5318754d9",
+                                                     "unit_id":  "U-dee7ab53efd5",
+                                                     "offset_unit":  "PYTHON_UNICODE_CODEPOINT_INDEX",
+                                                     "start":  1164,
+                                                     "end":  1499,
+                                                     "start_line":  55,
+                                                     "end_line":  67,
+                                                     "source_span_sha256":  "897f883c485a7432a6d1494d5a49187795acc0275faba3fbe374c90e26cb52e6",
+                                                     "masked_text_sha256":  "62e61192f54dd56b47a88c9f939fbbd949e860d1935a0114baccf406fba9e5c4",
+                                                     "chunk_binding_sha256":  "ca90bdba07e08d450c9a1075e6fab8c4d81ac05e8451493c1d83b07bc4243990"
+                                                 },
+                              "scene_route":  {
+                                                  "requested_scene":  "RESEARCH",
+                                                  "resolved_scene":  "RESEARCH",
+                                                  "status":  "EXPLICIT",
+                                                  "reason_code":  "USER_EXPLICIT_SCENE",
+                                                  "document_prior_scene":  "",
+                                                  "scores":  {
+                                                                 "COURSE":  0,
+                                                                 "MODELING":  0,
+                                                                 "RESEARCH":  0
+                                                             },
+                                                  "top_score":  0,
+                                                  "margin":  0,
+                                                  "ambiguous_scenes":  [
+
+                                                                       ],
+                                                  "evidence":  [
+
+                                                               ],
+                                                  "policy_sha256":  "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+                                                  "policy_revision":  5,
+                                                  "heading_path_sha256":  "4e3f83ebb2dd90a73a71da185db8c5527fce235376ede368fd286522d9821180",
+                                                  "routing_input_sha256":  "0e3a3aebcc9cebeae6567131d64788877a0a490ff02ce41e6060428930676918"
+                                              },
+                              "voice_binding":  {
+                                                    "profile_id":  "scene-default-research",
+                                                    "profile_revision":  1,
+                                                    "profile_kind":  "DEFAULT",
+                                                    "binding_scene":  "RESEARCH",
+                                                    "profile_sha256":  "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+                                                },
+                              "mode":  "REWRITE",
+                              "intensity":  "BALANCED",
+                              "authoring_allowed":  true,
+                              "completion_claim_allowed":  false,
+                              "humanize_quality_claim_allowed":  false,
+                              "authoring_binding_sha256":  "4dd20bc3fc00c0d69e5f184e221498870787f60376454472998c130325cee882"
+                          },
+    "keep_reasons":  {
+
+                     },
+    "template_field_edit_scope":  null,
+    "masked_text":  "[[PROTECTED:F00001-P00034:0e0552b614b7]]\n\n近六年的A、B、C题并不要求同一种能力。A题往往要从物理过程落到方程，还得看住\n数值误差；B题的要害在变量、约束和可行方案；C题通常先处理数据口径，再谈预测、\n评价和决策。分工按任务侧重展开：队长主攻机理与连续模型，组员1负责\n规划和优化，组员2负责数据与统计学习。三人共用一张输入输出表。队长交出状态量和\n物理边界，组员1据此写目标与约束，组员2维护参数、特征和误差口径。这样一来，结果\n从谁的脚本产生、又被谁接着使用，在代码和正文里都能顺着查下去。\n\n一项内容要记入本阶段成果，须满足三项要求：能用自己的话解释为什么选它，能把公式拆成\n程序动作，也能说出它在哪些条件下会失效。思维导图中的方法远不止这些，这次先完成\n十三个单元的原理与代码入口梳理；尚未动手的分支，后面用真题逐项补齐。\n\n",
+    "rewrite_intent":  {
+                           "summary":  "调整目录式、均匀并列式表达，保留具体判断、程序动作与使用边界",
+                           "operations":  [
+                                              {
+                                                  "id":  "O1",
+                                                  "kind":  "REWRITE_STYLE_SHELL",
+                                                  "source_span_ids":  [
+                                                                          "S1"
+                                                                      ],
+                                                  "target_signals":  [
+                                                                         "HUM-JUDGMENT-TRACE",
+                                                                         "RHYTHM-UNIFORM-SEQUENCE"
+                                                                     ],
+                                                  "summary":  "调整目录式、均匀并列式表达，保留具体判断、程序动作与使用边界"
+                                              }
+                                          ],
+                           "source_spans":  [
+                                                {
+                                                    "id":  "S1",
+                                                    "start_line":  1,
+                                                    "end_line":  13,
+                                                    "sha256":  "62e61192f54dd56b47a88c9f939fbbd949e860d1935a0114baccf406fba9e5c4"
+                                                }
+                                            ],
+                           "target_signals":  [
+                                                  "HUM-JUDGMENT-TRACE",
+                                                  "RHYTHM-UNIFORM-SEQUENCE"
+                                              ]
+                       }
+}

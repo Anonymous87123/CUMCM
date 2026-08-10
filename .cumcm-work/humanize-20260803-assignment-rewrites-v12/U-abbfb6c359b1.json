@@ -1,0 +1,91 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-abbfb6c359b1",
+  "chunk_binding_sha256": "844b163df8faa5af4ace6ca2652ccade08f62330119f83a05a178cf083aae680",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "9e04024e371e85bd",
+    "prepare_integrity_sha256": "3daa4bb31841baf6ab66756dd30e86cebb845366b17a0db8503a1811dc32a48c",
+    "run_metadata_sha256": "d88abe7cf423f4788c662ad5b68652830a9b6058e5ae2a6a565515f48ddb9881",
+    "policy_snapshot_sha256": "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "f1e9e0b15813d25dff3a74e13e41a6187f941a4a0b322f7f46b8a94b05262235",
+      "unit_id": "U-abbfb6c359b1",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 44455,
+      "end": 46007,
+      "start_line": 1127,
+      "end_line": 1155,
+      "source_span_sha256": "86cdc0467dc6495022d66907c39c5bebd78a324b5b2fa3c6c289a7c906e37c8c",
+      "masked_text_sha256": "86300a35a2731db6f261d4a03b2cced97c2296c4a814eb9cf20bb8102fd82f32",
+      "chunk_binding_sha256": "844b163df8faa5af4ace6ca2652ccade08f62330119f83a05a178cf083aae680"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "cf66fda73eddfe47ee73f42c989522d5c7a21f64e98a841a4cb79c36feaa41a8",
+      "routing_input_sha256": "204a3072f544d722ff554d6de1951aaa5ed62f92736352e30a334ce5cdca414c"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "c27d705a5e9723b1acf9c9dc45433ac65c55c1b87af3e51df8eb39916ef07c77"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00676:d3b31285f1cb]]\n\n[[PROTECTED:F00001-P00677:900d86791ddf]]\n[[PROTECTED:F00001-P00678:2cc568261310]][[PROTECTED:F00001-P00679:8f2c3c3e26da]][[PROTECTED:F00001-P00680:b11b4ca186c0]]\n[[PROTECTED:F00001-P00681:3000c3bd47e8]]\n章节 & 必答问题与段落结构 & 推荐表达及图表 & 质量门与常见错误[[PROTECTED:F00001-P00682:b11b4ca186c0]]\n[[PROTECTED:F00001-P00683:3f9db2ae5742]]\n[[PROTECTED:F00001-P00684:6c327e891740]]\n[[PROTECTED:F00001-P00685:3000c3bd47e8]]\n章节 & 必答问题与段落结构 & 推荐表达及图表 & 质量门与常见错误[[PROTECTED:F00001-P00686:b11b4ca186c0]]\n[[PROTECTED:F00001-P00687:3f9db2ae5742]]\n[[PROTECTED:F00001-P00688:7cf754fef645]]\n摘要 & 逐问写对象、模型、关键结果和检验；最后给关键词。 & [[PROTECTED:F00001-P00689:f080fd4e5ff8]]；通常不放图。 & 每问均出现，数字与正文一致；不堆算法名，不写[[PROTECTED:F00001-P00690:7d5641bc90c6]]。[[PROTECTED:F00001-P00691:b11b4ca186c0]]\n问题重述 & 重组给定量、输出、硬约束、附件和问间依赖。 & [[PROTECTED:F00001-P00692:3031d9ca7d1c]]；复杂几何可重绘示意图。 & 不大段照抄，不漏单位、时段或提交文件，不在前文引入模型。[[PROTECTED:F00001-P00693:b11b4ca186c0]]\n问题分析 & 每问说明核心矛盾、输入输出、基线、改进和数据流。 & [[PROTECTED:F00001-P00694:190418c2e415]]；节末可放总流程图。 & 必须解释选择理由和近邻方法边界，不能只列算法。[[PROTECTED:F00001-P00695:b11b4ca186c0]]\n模型假设 & 一条一义写对象、范围、简化理由和方程后果。 & [[PROTECTED:F00001-P00696:6b638e95283d]]；必要时放情景表。 & 题面事实不是假设；[[PROTECTED:F00001-P00697:bd9cd4d8d8b6]]不得作为模型假设；后文可追溯。[[PROTECTED:F00001-P00698:b11b4ca186c0]]\n符号说明 & 定义状态量、决策量、参数、集合、索引、单位和域。 & 三线表分组；局部临时量在首次出现处定义。 & 同符号不跨问改义；公式、代码和附件字段一致。[[PROTECTED:F00001-P00699:b11b4ca186c0]]\n模型建立 & 依次给依据、变量、数学表达、约束、初边值和参数。 & [[PROTECTED:F00001-P00700:5c28ed5d2149]]；结构图靠近定义。 & 公式前有来源、后有解释；约束方向、量纲和变量域正确。[[PROTECTED:F00001-P00701:b11b4ca186c0]]\n模型求解 & 写预处理、初始化、求解器/迭代、参数、停止和输出。 & 按执行顺序写；伪代码和流程图不替代参数表。 & 第三方可复算；不以[[PROTECTED:F00001-P00702:f178e7ab724b]]结束。[[PROTECTED:F00001-P00703:b11b4ca186c0]]\n结果分析 & 读关键值，比较基线，解释原因，说明约束和决策含义。 & [[PROTECTED:F00001-P00704:c2aee1a48e51]]；图表后立即解释。 & 不逐格念表；有单位、有效数字和不确定范围；每问均回应。[[PROTECTED:F00001-P00705:b11b4ca186c0]]\n模型检验 & 明确检验对象、方法、阈值、独立数据、指标和裁决。 & 回代、守恒、残差、网格收敛、交叉验证或消融。 & 不能用训练拟合代替外部能力；失败项也要报告。[[PROTECTED:F00001-P00706:b11b4ca186c0]]\n灵敏度分析 & 定义扰动参数、范围、采样、重复求解和响应指标。 & [[PROTECTED:F00001-P00707:8fd5c6a63363]]；放曲线/情景表。 & 扰动后必须重算；区分数值稳定和决策稳定。[[PROTECTED:F00001-P00708:b11b4ca186c0]]\n模型评价 & 将优势绑定机制，将不足绑定假设、数据或算法。 & [[PROTECTED:F00001-P00709:3e7d3ba4cd4a]] & 不写任何模型都适用的[[PROTECTED:F00001-P00710:2cceb3ab5112]]。[[PROTECTED:F00001-P00711:b11b4ca186c0]]\n改进方案 & 对每项局限给新数据/变量/约束、实现方式和验证协议。 & 按[[PROTECTED:F00001-P00712:ff97000f4b09]]对应；可用短表。 & 增加复杂度不是天然改进；方案必须可执行和可检验。[[PROTECTED:F00001-P00713:b11b4ca186c0]]\n参考文献 & 只列正文实际使用的理论、数据、软件与标准来源。 & 统一著录；定义和算法优先原始论文、教材、标准或官方资料。 & 正文引用与条目双向对应；网页含机构、日期和访问日期。[[PROTECTED:F00001-P00714:b11b4ca186c0]]\n附录 & 给入口脚本、环境、参数、随机种子、数据字典和补充结果。 & 文件清单、目录树、可复制代码；主文明确引用。 & 关键结果可由附录复现；不放截图代码，不泄露个人信息。[[PROTECTED:F00001-P00715:b11b4ca186c0]]\n[[PROTECTED:F00001-P00716:76ac79294e9f]]\n[[PROTECTED:F00001-P00717:20f5534ac79d]]\n\n",
+  "rewrite_intent": {
+    "summary": "删除工作台式词壳，保留对象、动作、条件和结论边界",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 14,
+        "end_line": 14,
+        "sha256": "f41f8e2cdc69c8185c11b968edca76ca3bcfae66235fe8bd9aed01d5dc49102f"
+      }
+    ],
+    "target_signals": [
+      "LEX-STRICT-CORPUS-DIRECT-ACTION"
+    ]
+  }
+}

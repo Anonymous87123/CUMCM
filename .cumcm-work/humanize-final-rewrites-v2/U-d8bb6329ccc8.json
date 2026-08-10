@@ -1,0 +1,72 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-d8bb6329ccc8",
+  "chunk_binding_sha256": "025f8d1a9356a43652c2d1b09e3803962cb31f3cc9d73984589248881942c3e4",
+  "decision": "NO_CHANGE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "94be093235ebfcd6",
+    "prepare_integrity_sha256": "80cb2ffcd1c9c53c31d2eb41ccc47d6e6ac94d58f144b938770fde352dc42a4c",
+    "run_metadata_sha256": "f55b22bb9142581695873b42c631f7a2200c890800ce8c800d82198765a5b4c0",
+    "policy_snapshot_sha256": "87656f9f0219c0ea2bb402202dc778469ce20e751d065776590fef4fcce7fd95",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "e86d118b70874f7b073c20830d98d3aec346d9b059a5684ee477362632f25578",
+      "unit_id": "U-d8bb6329ccc8",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 1590,
+      "end": 2334,
+      "start_line": 67,
+      "end_line": 98,
+      "source_span_sha256": "38711f3111e47dc30b53409a4a8d97eaf217ba897bbfd86e9a91bdb6bc571a8d",
+      "masked_text_sha256": "e307fd9077e2c593ec7993aece9b6ed97a41121b23123bf58b0eafacac9e679d",
+      "chunk_binding_sha256": "025f8d1a9356a43652c2d1b09e3803962cb31f3cc9d73984589248881942c3e4"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "1c128f30457b24368732bf0f211e765e0487b33b46df5b0a65564cbe8546e7ef",
+      "routing_input_sha256": "6bea1d79c7b5202b9bbc01631314c85f61045166a764d5f684d6326f0ed0f27e"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "efbe981f9704ec88f0752ba28aff7ec3a8c08fa21441cc95240b29482c4b1f3d"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "reason": "逐行复核该单元，原段落的术语、因果条件、数值范围和证据限定均有明确功能，故保留原文。",
+  "evidence_spans": [
+    {
+      "id": "S1",
+      "start_line": 1,
+      "end_line": 32,
+      "sha256": "e307fd9077e2c593ec7993aece9b6ed97a41121b23123bf58b0eafacac9e679d"
+    }
+  ]
+}

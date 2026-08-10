@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "2241de72ab629cb0966fc70c86ef0a5e6e65a36b03def6fe41be4159a53f6261",
+    "before_sha256": "2241de72ab629cb0966fc70c86ef0a5e6e65a36b03def6fe41be4159a53f6261"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "096b2f03573ed80d107579d2dc85b403abf888ac0b9697564c00586b1b461a25",
+  "chunk_binding_sha256": "f95460b4be01acacddc75b6c9c965ff43c3b0bb7c44382e14c967b0de8b9e2cc",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-bf86ab4f8ae1.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "8723edd1e61cb6210a8b4786ac5ff695bea5bfcf0c171b33f45b165073833929",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "ce66ad221a4aa49d46db760e6fada8e6cd059a8a44e6a7132355f4c8d4baf7da",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段落承担“宏观框架与版面组织”中的对象、条件与证据次序，现有结构已区分定义、判断和结果范围，继续改写会削弱这些功能关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "0c984fd22e1dd8816e28808ab1f33c4d8ba35dcb3e1e8d9424762250add566ed",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-bf86ab4f8ae1"
+}

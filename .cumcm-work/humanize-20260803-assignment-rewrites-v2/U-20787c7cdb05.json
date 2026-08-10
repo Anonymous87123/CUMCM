@@ -1,0 +1,91 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-20787c7cdb05",
+  "chunk_binding_sha256": "f0351ab3daa70b060c018e54cdba67625b7b3fabcbf4a4fda89a0409fd5e9b0a",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "8cd38067072b5191",
+    "prepare_integrity_sha256": "cda44ea18c8aa5b6b97fbc6093ba29450511f52eb3056235a675e3db78f2c630",
+    "run_metadata_sha256": "11ad09c96e88a441b112d4c840cec6236153159f10cb19e992ebfba1c8bb7f5d",
+    "policy_snapshot_sha256": "3c1bb12b0f650e01ad14f7d51b8bde8782aae5f54b3d66778155ecfb43705c89",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "eba71855409d6a3c4570e3ddcb487e56ab77996bc3dde98146bf78dd30b00b94",
+      "unit_id": "U-20787c7cdb05",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 46004,
+      "end": 46434,
+      "start_line": 1156,
+      "end_line": 1171,
+      "source_span_sha256": "3ab27546a451e7d2946e7d977ffcec42368f9237462e9a2f2e1b4c33abeec54b",
+      "masked_text_sha256": "4153382af29d9a70a2e5bb8e89739363910e5263969cd604481764af29dd795a",
+      "chunk_binding_sha256": "f0351ab3daa70b060c018e54cdba67625b7b3fabcbf4a4fda89a0409fd5e9b0a"
+    },
+    "scene_route": {
+      "requested_scene": "RESEARCH",
+      "resolved_scene": "RESEARCH",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "9db848671bb36b115438351c88cf3d2dcdefd25384126150af98148d783bbd58",
+      "routing_input_sha256": "9e7a7f51cb6bb6d8f3383ee080372893aa98f274776ce708ddb54085400b566d"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-research",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "RESEARCH",
+      "profile_sha256": "18887ba292c25e48d8f9fc598e1a33fa721d1fa8795b3d78f9964af0773b39e0"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "c368243a367671c91240698624bb461866d7885e3f83a7b597e0a1accb399bbb"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00718:a4d792d628d6]]\n\n可复用的是信息结构，不是整句套用。摘要可用[[PROTECTED:F00001-P00719:879a28688659]]的四步；模型段可用[[PROTECTED:F00001-P00720:7b5a3c348bd1]]；结果段可用[[PROTECTED:F00001-P00721:6356f428d997]]；评价段可用[[PROTECTED:F00001-P00722:4cde6338b738]]。[[PROTECTED:F00001-P00723:d02099358114]][[PROTECTED:F00001-P00724:e69a5428ab1c]][[PROTECTED:F00001-P00725:6a1f5e00feee]][[PROTECTED:F00001-P00726:3e8a753eea78]]等句子若没有对象、数值、条件和证据，应删除\n或改写。\n\n表达复用不等于隐藏不确定性。OCR 无法确认的字词标为未确认；跨论文统计只报告\n检测定义和样本数；DOCX 中公式对象或附件字段若未被结构化提取，则回看原件，不\n依据评述补字。逐篇学习首先提取论文为什么读起来像真实研究：作者看见了什么、\n为何作出选择、怎样把公式接到结果、又怎样用图表完成判断。只有会改变结论强度或\n妨碍复现的边界才进入质量门；个别疏漏不作为主要要学习对象，更不以挑错数量衡量\n审读深度。\n\n",
+  "rewrite_intent": {
+    "summary": "删除工作台式词壳，保留对象、动作、条件和结论边界",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "LEX-STRICT-CORPUS-DIRECT-ACTION"
+        ],
+        "summary": "删除工作台式词壳，改为对象、动作或条件直接承载"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 10,
+        "end_line": 10,
+        "sha256": "13d7d3c2b59d01dfb2d39cc6dc933ef7c8c99f7476c1479f71e3d70740f2116f"
+      }
+    ],
+    "target_signals": [
+      "LEX-STRICT-CORPUS-DIRECT-ACTION"
+    ]
+  }
+}

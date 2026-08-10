@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "e6953a1e2b545b909f6842200eb2a11df0d6f8b641f4f9863f4e7a5f71b3ce46",
+    "before_sha256": "e6953a1e2b545b909f6842200eb2a11df0d6f8b641f4f9863f4e7a5f71b3ce46"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "1341b45b9746ff2839833bd43e2c64f201a115e96aa11d07953a9e86090d7a45",
+  "chunk_binding_sha256": "1cd80bb1c707333a323c5b5d65b224e2df09e7ce818a63df979aebfbc0a7a7b5",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-21a8b64e3c1e.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "35072c0b72375e9f21fdd6b5d84aeb971fffb3b32fe0169689968a0a7dea40eb",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 6,
+        "id": "S1",
+        "sha256": "308b3e806655a831d5ee15c4f3b7f8dbc2052845b5c0772a65c37f5881ff2a07",
+        "start_line": 6
+      }
+    ],
+    "reason": "本单元承担“2026 年 7 月 29 日至 8 月 25 日量化训练”的对象、条件与证据边界；原文段落已锁定术语、数字和论证顺序，保持原句可避免结构漂移。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "2bbdc94c7b8c8f82a15e2972acf87301a5df934e891672523a69da4a0de93afa",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-21a8b64e3c1e"
+}

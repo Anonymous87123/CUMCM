@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "d803997805f65e52e7fb6523c345d7bd10ad7d9ae631a2326f6b7b890f94867e",
+    "before_sha256": "d803997805f65e52e7fb6523c345d7bd10ad7d9ae631a2326f6b7b890f94867e"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "2f099492dae0ec52a7d7f082e3e0226811c469e894d982b01f4a9cce01bb2238",
+  "chunk_binding_sha256": "fa074fcf4dc167fc93c882b2b3f692c7cbf2fee1220cb79decdc10fab62b8708",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-93449d7ff25a.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "f45d49c6fe74eb7d621abed224d146abfde4e36d8d640b9a768bdd6303f93299",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 3,
+        "id": "S1",
+        "sha256": "1e9bf0206ccded52f6873243fe92db315eff231c16bf80addb1ed4d1be230349",
+        "start_line": 3
+      }
+    ],
+    "reason": "该段承担“理论知识学习笔记 / 队长：机理、连续模型与数值实现 / 覆盖内容、原理与求解步骤”中的对象、条件与范围说明；当前没有可独立删除的句壳，保留原文。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "95d1ebe096c397e104cff9481798ae6ebc244ff91cb68a80ee7601ef015ed93f",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-93449d7ff25a"
+}
