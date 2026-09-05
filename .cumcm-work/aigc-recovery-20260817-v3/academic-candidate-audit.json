@@ -1,0 +1,270 @@
+{
+  "schema": "aigc-academic-candidate-audit/v1",
+  "status": "fail",
+  "scope": "mechanical academic-style release gate; not authorship detection or final naturalness clearance",
+  "source": {
+    "path": "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main.tex",
+    "sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+    "tree_files": 1,
+    "tree_sha256": "49d9f41f4fcc7bff1657b26cedcfd3b7b8158b245a5095f7ebaab38b8497978d"
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\humanize-run\\rendered_review\\main.tex",
+    "sha256": "aad579c3d3b75579febf79ef6c5744dddb06188495c653bc186ed3e9a030e0fb",
+    "tree_files": 1,
+    "tree_sha256": "3df15d4936ab7e968a3e6dee76b96cd41c237d6908dc119144ad1ba41c61d8dd"
+  },
+  "decisions": {
+    "path": null,
+    "sha256": null
+  },
+  "dependencies": [
+    {
+      "role": "humanize-lexical-scanner",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\scripts\\scan_humanize_chinese.py",
+      "sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "bytes": 87413
+    },
+    {
+      "role": "humanize-lexical-signals",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\lexical-signals.json",
+      "sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "bytes": 5001788
+    },
+    {
+      "role": "protected-rewrite-contract",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_rewrite_contract.py",
+      "sha256": "72d897f7623ec2c34d62eaeedc1fe2f63d1272aecf86ea8f92614c9cf859cf33",
+      "bytes": 7729
+    },
+    {
+      "role": "section-voice-audit",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_voice_mode.py",
+      "sha256": "d925c441a3754e1d884e8020ddb6e0b1c23fe7339159773a06df166e8cb45daa",
+      "bytes": 11395
+    },
+    {
+      "role": "paragraph-rhythm-audit",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_style_rhythm.py",
+      "sha256": "da87dc3a15c7dcfcbe49b25fdf8e3bcb1557b5c71238ed78265b4033e60e9a0e",
+      "bytes": 8502
+    },
+    {
+      "role": "relative-style-comparison",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\compare_style_revision.py",
+      "sha256": "f8a40d11bcf5cb134f2293ca2709b94b90ef8474e976ac655f0feecac98b2db3",
+      "bytes": 5114
+    }
+  ],
+  "gates": [
+    {
+      "id": "humanize-lexical",
+      "required": true,
+      "status": "review",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\scripts\\scan_humanize_chinese.py",
+          "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\humanize-run\\rendered_review\\main.tex",
+          "--scene",
+          "MODELING",
+          "--format",
+          "json"
+        ],
+        "returncode": 0,
+        "stderr": ""
+      },
+      "coverage": {
+        "status": "PASS",
+        "requested_count": 1,
+        "scanned_count": 1,
+        "skipped_count": 0,
+        "requested_files": [
+          "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\humanize-run\\rendered_review\\main.tex"
+        ],
+        "scanned_files": [
+          "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\humanize-run\\rendered_review\\main.tex"
+        ],
+        "skipped_files": []
+      },
+      "actionable_findings": 2,
+      "kept_by_position_bound_decision": 0,
+      "unresolved_findings": 2,
+      "signal_counts": {
+        "LEX-STRICT-CORPUS-OUTLOOK-01": 1,
+        "LEX-VAGUE-ATTRIBUTION-01": 1
+      },
+      "unresolved": [
+        {
+          "signal_id": "LEX-VAGUE-ATTRIBUTION-01",
+          "relative_path": "main.tex",
+          "line": 77,
+          "column": 4,
+          "matched": "研究表明",
+          "severity": "medium",
+          "action": "REVIEW",
+          "rationale": "该候选只提示归因来源在当前句中不可见，不判断来源真假。不得删除归因后改成无来源断言，不得虚构作者、年份或引用。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-OUTLOOK-01",
+          "relative_path": "main.tex",
+          "line": 487,
+          "column": 10,
+          "matched": "治理建议",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "没有材料授权的建议和展望直接删除；真实后续工作必须绑定 supplied content。"
+        }
+      ],
+      "decision_errors": [],
+      "unused_decisions": []
+    },
+    {
+      "id": "protected-rewrite-contract",
+      "required": true,
+      "status": "fail",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_rewrite_contract.py",
+          "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main.tex",
+          "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\humanize-run\\rendered_review\\main.tex",
+          "--format",
+          "json"
+        ],
+        "returncode": 1,
+        "stderr": ""
+      },
+      "errors": 1,
+      "warnings": 3,
+      "findings": [
+        {
+          "severity": "error",
+          "code": "CONSTRAINT_DIRECTION_CHANGED",
+          "before_count": 6,
+          "after_count": 5
+        },
+        {
+          "severity": "warning",
+          "code": "NEGATION_CHANGED",
+          "before_count": 130,
+          "after_count": 129
+        },
+        {
+          "severity": "warning",
+          "code": "CAUSAL_DIRECTION_MARKER_CHANGED",
+          "before_count": 4,
+          "after_count": 1
+        },
+        {
+          "severity": "warning",
+          "code": "CLAIM_STRENGTH_CHANGED",
+          "before_count": 41,
+          "after_count": 38
+        }
+      ],
+      "number_diff": {
+        "removed": [],
+        "introduced": []
+      }
+    },
+    {
+      "id": "section-voice",
+      "required": true,
+      "status": "pass",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_voice_mode.py",
+          "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\aigc-academic-candidate-h95omii8\\candidate-combined.tex",
+          "--format",
+          "json"
+        ],
+        "returncode": 0,
+        "stderr": ""
+      },
+      "summary": {
+        "segments": 37,
+        "modes": {
+          "prose": 37,
+          "evidence": 0,
+          "operator": 0
+        },
+        "findings": 0
+      },
+      "findings": []
+    },
+    {
+      "id": "paragraph-rhythm",
+      "required": true,
+      "status": "pass",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_style_rhythm.py",
+          "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\aigc-academic-candidate-h95omii8\\candidate-combined.tex",
+          "--mode",
+          "auto",
+          "--format",
+          "json"
+        ],
+        "returncode": 0,
+        "stderr": ""
+      },
+      "summary": {
+        "segments_total": 37,
+        "segments_analyzed": 37,
+        "paragraphs_analyzed": 72,
+        "findings": 0
+      },
+      "findings": []
+    },
+    {
+      "id": "relative-style-comparison",
+      "required": false,
+      "status": "improved",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\compare_style_revision.py",
+          "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\aigc-academic-candidate-h95omii8\\source-combined.tex",
+          "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\aigc-academic-candidate-h95omii8\\candidate-combined.tex",
+          "--format",
+          "json"
+        ],
+        "returncode": 0,
+        "stderr": ""
+      },
+      "same_bytes": false,
+      "improvements": [
+        {
+          "metric": "rhythm_findings",
+          "source": 1,
+          "candidate": 0,
+          "delta": -1
+        }
+      ],
+      "regressions": []
+    }
+  ],
+  "recovery": {
+    "route": "REBASE_FROM_FROZEN_SOURCE",
+    "current_candidate_repair_allowed": false,
+    "source_rebase_required": true,
+    "lexical_findings_actionable_now": false,
+    "blocking_gate_ids": [
+      "humanize-lexical",
+      "protected-rewrite-contract"
+    ],
+    "reason_codes": [
+      "CONSTRAINT_DIRECTION_CHANGED"
+    ],
+    "next_action": "Discard this file as a release candidate. Start one protected Humanize run from the frozen source; do not repair lexical findings on the drifted file."
+  },
+  "summary": {
+    "required": 4,
+    "passed": 2,
+    "review": 1,
+    "failed": 1
+  }
+}

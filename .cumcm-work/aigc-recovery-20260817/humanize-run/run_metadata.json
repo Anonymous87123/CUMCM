@@ -1,0 +1,98 @@
+{
+  "budgets": {
+    "max_author_chars": 7000,
+    "max_lines": 600,
+    "min_author_chars": 1200
+  },
+  "completion_claim_allowed": false,
+  "created_at": "2026-08-17T11:21:36+00:00",
+  "editable_style_wrappers": [],
+  "file_statuses": {
+    "READY": 1
+  },
+  "files_total": 1,
+  "integrity_manifest": "prepare_integrity.json",
+  "intensity": "BALANCED",
+  "next_action": "Rewrite only PENDING chunk files, then validate and finalize them.",
+  "no_editable_scope": false,
+  "policy_snapshot": {
+    "implementation_hashes": {
+      "finalize_script_sha256": "754b5d080383f658b7705645db2cf8427646a41a77424c678757cd12380d9fb9",
+      "negative_guard_loader_sha256": "79c377648afe325f94de96afe6c6d3e5c26a67a9d3539e51756530bf35ebb08e",
+      "prepare_script_sha256": "06c8dd66994d425229d3482f99d8c32015b343c707ec6d136b2767d1d1b34a04",
+      "scene_router_sha256": "23c19fe30dd8f8fb2962d9746a379f100b18ca572e7e79e4cb4916d2cf48589a",
+      "voice_profile_builder_sha256": "29afb050a055946121d232cf05e9546326b23be0c86880666ea7674c26c3b114",
+      "voice_profile_validator_sha256": "ead741fe5209ce150a7b51497d2eb3ce6cfec9e87fb052c86800607d0bb83c22"
+    },
+    "runtime": {
+      "python_cache_tag": "cpython-313",
+      "python_implementation": "cpython",
+      "python_version": [
+        3,
+        13,
+        7
+      ]
+    },
+    "schema_version": "humanize-long-document-policy-snapshot/v1",
+    "validator_policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "bf9bd7f80b080391f529df2dd0b993338b632daeb1ad4504d9d5e165466cefef",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    }
+  },
+  "policy_snapshot_sha256": "84c502e50c6973f5885eb5640bb229db7ec83f2bf27319fa278d4365b1aeb66b",
+  "processable_editable_units": 30,
+  "protected_spans_total": 772,
+  "scene": "MODELING",
+  "scene_routing_policy_revision": 5,
+  "scene_routing_policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+  "scene_routing_status": "PASS",
+  "scene_routing_summary": {
+    "EXPLICIT": 31
+  },
+  "snapshot_id": "842ae235d7ee9818",
+  "source_processing_status_summary": {
+    "AUTHORING_QUEUE": 1
+  },
+  "source_role_override_status": "NOT_SUPPLIED",
+  "source_role_overrides": "source_role_overrides.json",
+  "source_role_overrides_sha256": "afd2295a487476b1f50c5022231f548e5ff8ef94abec9a1a5416581171edeb1e",
+  "source_role_summary": {
+    "AUTHOR_TEXT": 1
+  },
+  "status": "REVIEW",
+  "structural_transaction_candidates": 0,
+  "structural_transaction_inventory": "structural_transaction_inventory.json",
+  "structural_transaction_inventory_sha256": "bde1f8c76b8be89f79a5e65701efec3d327003670528d53f9a4f9ebae0a51827",
+  "structural_transaction_policy_revision": "1.0.0",
+  "structural_transaction_policy_sha256": "0b9314429a8d8b7f66aa3d0db93e2840408c26fdf6b7bc1b1cdfe78c5f2ada04",
+  "structural_transaction_scope": "NONE",
+  "tool": "prepare_humanize_long_document.py",
+  "unit_statuses": {
+    "PENDING": 30,
+    "SKIPPED_PROTECTED": 8,
+    "UNRESOLVED": 1
+  },
+  "units_total": 39,
+  "voice_binding": {
+    "binding_scene": "MODELING",
+    "profile_binding_scene": "MODELING",
+    "profile_source": "SCENE_DEFAULT",
+    "requested_scene": "MODELING",
+    "scene_binding_status": "BOUND",
+    "source_path": "",
+    "voice_default_disclosure": true,
+    "voice_evidence_status": "DETERMINISTIC_DEFAULT",
+    "voice_profile_binding_scene": "MODELING",
+    "voice_profile_confidence": "DEFAULT",
+    "voice_profile_id": "scene-default-modeling",
+    "voice_profile_kind": "DEFAULT",
+    "voice_profile_revision": 1,
+    "voice_profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01"
+  }
+}

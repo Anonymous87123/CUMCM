@@ -1,0 +1,62 @@
+{
+  "schema": "aigc-blind-key/v1",
+  "seed": 20260820,
+  "dimensions": [
+    "naturalness",
+    "judgment_trajectory",
+    "specificity",
+    "content_density",
+    "semantic_fidelity"
+  ],
+  "pairs": [
+    {
+      "pair_id": "P0001",
+      "A": "a-reflection-boundary::source",
+      "B": "a-reflection-boundary::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0002",
+      "A": "a-reflection-boundary::humanize-academic-chinese::t2",
+      "B": "a-reflection-boundary::source"
+    },
+    {
+      "pair_id": "P0003",
+      "A": "a-reflection-boundary::source",
+      "B": "a-reflection-boundary::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0004",
+      "A": "b-resource-constraint::source",
+      "B": "b-resource-constraint::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0005",
+      "A": "b-resource-constraint::source",
+      "B": "b-resource-constraint::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0006",
+      "A": "b-resource-constraint::source",
+      "B": "b-resource-constraint::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0007",
+      "A": "c-model-comparison::humanize-academic-chinese::t1",
+      "B": "c-model-comparison::source"
+    },
+    {
+      "pair_id": "P0008",
+      "A": "c-model-comparison::source",
+      "B": "c-model-comparison::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0009",
+      "A": "c-model-comparison::humanize-academic-chinese::t3",
+      "B": "c-model-comparison::source"
+    }
+  ],
+  "packet_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-holdout-current-rules-20260820-r4\\blind\\evaluation-packet.json",
+  "packet_sha256": "7176100bcca7836bd1c28aac42ccbf360e6e281aed7aec2e6a3cbe351e91b820",
+  "source_pairs_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-holdout-current-rules-20260820-r4\\blind\\pairs.json",
+  "source_pairs_sha256": "6f6d4a5f773cf7842fbc5b233438e3a9d3f44f3c9416ce38f71361cac0adddcc"
+}

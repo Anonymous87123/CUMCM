@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-CN" data-packet-sha256="9348a3fce0a6d025dce99014b1290e41a8d0cc9c23b676a66ef232646ab45a99">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>匿名文风盲评</title>
+  <style>
+    :root { color-scheme: light; --ink:#18211d; --muted:#5c6862; --line:#ccd3cf;
+      --paper:#f5f7f5; --surface:#fff; --accent:#176b4d; --warn:#a33b2b; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:15px/1.65 system-ui,
+      "Microsoft YaHei", sans-serif; letter-spacing:0; }
+    header, main, footer { width:min(1180px, calc(100% - 32px)); margin-inline:auto; }
+    header { padding:28px 0 18px; border-bottom:1px solid var(--line); }
+    h1 { margin:0 0 8px; font-size:24px; }
+    h2 { margin:0; font-size:18px; }
+    p { margin:6px 0; }
+    .muted { color:var(--muted); }
+    .toolbar { display:flex; gap:16px; align-items:end; flex-wrap:wrap; padding:18px 0; }
+    label.control { display:grid; gap:5px; min-width:min(360px,100%); font-weight:600; }
+    input[type=text] { min-height:40px; padding:8px 10px; border:1px solid #9ba8a1;
+      border-radius:4px; background:#fff; font:inherit; }
+    button { min-height:40px; padding:8px 14px; border:1px solid var(--accent); border-radius:4px;
+      background:var(--accent); color:#fff; font:inherit; font-weight:700; cursor:pointer; }
+    button.secondary { background:#fff; color:var(--accent); }
+    button:disabled { opacity:.5; cursor:not-allowed; }
+    #status { margin-left:auto; font-variant-numeric:tabular-nums; }
+    .pair { margin:0 0 22px; padding:20px; border:1px solid var(--line); border-radius:6px;
+      background:var(--surface); }
+    .passages { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:14px 0 18px; }
+    .passage { min-width:0; padding:14px; border-left:4px solid #7b8b83; background:#f8faf8; }
+    .passage h3 { margin:0 0 8px; font-size:16px; }
+    .passage-text { margin:0; white-space:pre-wrap; overflow-wrap:anywhere; }
+    fieldset { display:grid; grid-template-columns:minmax(190px,1fr) repeat(4,minmax(68px,auto));
+      gap:8px 12px; align-items:center; margin:8px 0; padding:10px 12px; border:1px solid #d9dedb;
+      border-radius:4px; }
+    fieldset.missing { border-color:var(--warn); background:#fff8f6; }
+    legend { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+    .dimension strong, .dimension small { display:block; }
+    .dimension small { color:var(--muted); }
+    .choice { display:flex; align-items:center; gap:5px; white-space:nowrap; }
+    .notes { display:grid; gap:5px; margin-top:12px; font-weight:600; }
+    textarea { width:100%; min-height:72px; resize:vertical; border:1px solid #aab4af;
+      border-radius:4px; padding:8px 10px; font:inherit; }
+    .error { color:var(--warn); font-weight:700; }
+    footer { padding:10px 0 28px; color:var(--muted); font-size:13px; overflow-wrap:anywhere; }
+    @media (max-width:760px) {
+      .passages { grid-template-columns:1fr; }
+      fieldset { grid-template-columns:1fr 1fr 1fr 1fr; }
+      .dimension { grid-column:1/-1; }
+      #status { width:100%; margin-left:0; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>匿名文风盲评</h1>
+  <p>只比较页面中可见的两段文字，不推测作者身份，也不使用 AI 检测器。</p>
+  <p class="muted">每个维度可选 A、B、持平或跳过。跳过不计正式票；两人结论相反时保留原表，再追加一名独立评审。</p>
+</header>
+<main>
+  <div class="toolbar">
+    <label class="control">评审者编号
+      <input id="rater" type="text" maxlength="80" autocomplete="off" placeholder="例如 R01">
+    </label>
+    <button id="export" type="button">导出评分 CSV</button>
+    <button id="clear" type="button" class="secondary">清空本页记录</button>
+    <div id="status" aria-live="polite"></div>
+  </div>
+  <div id="message" aria-live="assertive"></div>
+  <div id="pairs"></div>
+</main>
+<footer>匿名包 SHA-256：<span id="packet-hash">9348a3fce0a6d025dce99014b1290e41a8d0cc9c23b676a66ef232646ab45a99</span></footer>
+<script>
+"use strict";
+const packetHash = "9348a3fce0a6d025dce99014b1290e41a8d0cc9c23b676a66ef232646ab45a99";
+const packetBytes = Uint8Array.from(atob("eyJzY2hlbWEiOiJhaWdjLWJsaW5kLXBhY2tldC92MSIsImluc3RydWN0aW9ucyI6Ikp1ZGdlIG9ubHkgdGhlIHZpc2libGUgcGFzc2FnZXMuIERvIG5vdCBpbmZlciBhdXRob3JzaGlwIG9yIHVzZSBhbiBBSSBkZXRlY3Rvci4iLCJkaW1lbnNpb25zIjpbIm5hdHVyYWxuZXNzIiwianVkZ21lbnRfdHJhamVjdG9yeSIsInNwZWNpZmljaXR5IiwiY29udGVudF9kZW5zaXR5Iiwic2VtYW50aWNfZmlkZWxpdHkiXSwiY2hvaWNlcyI6WyJBIiwiQiIsIlRJRSIsIlNLSVAiXSwicGFpcnMiOlt7InBhaXJfaWQiOiJQMDAwMSIsIkEiOiLov5nkuKTpobnmjIfmoIflj5jljJbmlrnlkJHkuIDoh7TvvIzkvYbmgaLlpI3luYXluqblrZjlnKjlt67lvILjgILlsL3nrqHnu5/orqHlj6PlvoTkuI3lkIzvvIzkuozogIXlnYfor4Hlrp7kuobnpoHmuJTlkI7nmoTotYTmupDlm57ljYfotovlir/vvJrlm5vlpKflrrbpsbzmgLvnlJ/nianph4/kuI4xLjjlgI3nmoTmoIflrprlgLzlh6DkuY7lrozlhajlkLvlkIjvvIzooajmmI7ljZXljLrmqKHlnovog73lpJ/lh4bnoa7liLvnlLvlhajmtYHln5/lubPlnYfmgaLlpI3msLTlubPvvJskXFxtYXRocm17Q1BVRX1eKiTkvY7kuo7muZbljJfmsZ/mrrXlrp7mtYvnmoQyLjLlgI3vvIzliJnlj43mmKDlh7rlsYDlnLDpq5jmjZXmjZ7mlYjnjofmnaHku7bkuIvotYTmupDlop7luYXlj6/og73mm7TkuLrmmL7okZfjgIJcbiIsIkIiOiLkuKTpobnmjIfmoIfnmoTlj5jljJbmlrnlkJHkuIDoh7TvvIzkvYbmgaLlpI3luYXluqblubbkuI3nm7jlkIzjgILlsL3nrqHnu5/orqHlj6PlvoTmnInliKvvvIzkuozogIXlnYfor4Hlrp7kuobnpoHmuJTlkI7nmoTotYTmupDlm57ljYfotovlir/jgILlm5vlpKflrrbpsbzmgLvnlJ/nianph4/kuI4xLjjlgI3nmoTmoIflrprlgLzlh6DkuY7lrozlhajlkLvlkIjvvIzooajmmI7ljZXljLrmqKHlnovog73lpJ/lh4bnoa7liLvnlLvlhajmtYHln5/nmoTlubPlnYfmgaLlpI3msLTlubPvvJskXFxtYXRocm17Q1BVRX1eKiTkvY7kuo7muZbljJfmsZ/mrrXlrp7mtYvnmoQyLjLlgI3vvIzliJnlj43mmKDlh7rlsYDlnLDmjZXmjZ7mlYjnjofovoPpq5jml7bvvIzotYTmupDlop7luYXlj6/og73mm7TkuLrmmL7okZfjgIJcbiJ9LHsicGFpcl9pZCI6IlAwMDAyIiwiQSI6Iui/meS4pOmhueaMh+agh+WPmOWMluaWueWQkeS4gOiHtO+8jOS9huaBouWkjeW5heW6puWtmOWcqOW3ruW8guOAguWwveeuoee7n+iuoeWPo+W+hOS4jeWQjO+8jOS6jOiAheWdh+ivgeWunuS6huemgea4lOWQjueahOi1hOa6kOWbnuWNh+i2i+WKv++8muWbm+Wkp+WutumxvOaAu+eUn+eJqemHj+S4jjEuOOWAjeeahOagh+WumuWAvOWHoOS5juWujOWFqOWQu+WQiO+8jOihqOaYjuWNleWMuuaooeWei+iDveWkn+WHhuehruWIu+eUu+WFqOa1geWfn+W5s+Wdh+aBouWkjeawtOW5s++8myRcXG1hdGhybXtDUFVFfV4qJOS9juS6jua5luWMl+axn+auteWunua1i+eahDIuMuWAje+8jOWImeWPjeaYoOWHuuWxgOWcsOmrmOaNleaNnuaViOeOh+adoeS7tuS4i+i1hOa6kOWinuW5heWPr+iDveabtOS4uuaYvuiRl+OAglxuIiwiQiI6IuS4pOmhueaMh+agh+e7meWHuueahOaWueWQkeebuOWQjO+8jOS9huaBouWkjeW5heW6puacieW3ruWIq+OAguWwveeuoeS6jOiAheeahOe7n+iuoeWPo+W+hOS4jeWQjO+8jOS7jeWdh+ivgeWunuemgea4lOWQjui1hOa6kOato+WcqOWbnuWNh+OAguWbm+Wkp+WutumxvOaAu+eUn+eJqemHj+WHoOS5juWujOWFqOi0tOWQiDEuOOWAjeeahOagh+WumuWAvO+8jOihqOaYjuWNleWMuuaooeWei+iDveWkn+WHhuehruWPjeaYoOWFqOa1geWfn+W5s+Wdh+aBouWkjeawtOW5s++8myRcXG1hdGhybXtDUFVFfV4qJOS9juS6jua5luWMl+axn+auteWunua1i+eahDIuMuWAje+8jOWImeWPjeaYoOWxgOWcsOaNleaNnuaViOeOh+i+g+mrmOeahOadoeS7tuS4i++8jOi1hOa6kOWinuW5heWPr+iDveabtOS4uuaYvuiRl+OAglxuIn0seyJwYWlyX2lkIjoiUDAwMDMiLCJBIjoi5Lik6aG55oyH5qCH6YO96ZqP56aB5riU5ZCR5oGi5aSN5pa55ZCR5Y+Y5YyW77yM5L2G5aKe5bmF5a2Y5Zyo5beu5byC44CC5bC9566h57uf6K6h5Y+j5b6E5LiN5ZCM77yM5LqM6ICF5Z2H6K+B5a6e5LqG6LWE5rqQ5Zue5Y2H44CC5Zub5aSn5a626bG85oC755Sf54mp6YeP5ZCMMS445YCN5qCH5a6a5YC85Yeg5LmO5a6M5YWo5ZC75ZCI77yM6KGo5piO5Y2V5Yy65qih5Z6L6IO95aSf5YeG56Gu5o+P6L+w5YWo5rWB5Z+f5bmz5Z2H5oGi5aSN5rC05bmz77ybJFxcbWF0aHJte0NQVUV9Xiok5L2O5LqO5rmW5YyX5rGf5q615a6e5rWL55qEMi4y5YCN77yM5YiZ5o+Q56S65bGA5Zyw6auY5o2V5o2e5pWI546H5LiL55qE6LWE5rqQ5aKe5bmF5Y+v6IO95pu05Li65pi+6JGX44CCXG4iLCJCIjoi6L+Z5Lik6aG55oyH5qCH5Y+Y5YyW5pa55ZCR5LiA6Ie077yM5L2G5oGi5aSN5bmF5bqm5a2Y5Zyo5beu5byC44CC5bC9566h57uf6K6h5Y+j5b6E5LiN5ZCM77yM5LqM6ICF5Z2H6K+B5a6e5LqG56aB5riU5ZCO55qE6LWE5rqQ5Zue5Y2H6LaL5Yq/77ya5Zub5aSn5a626bG85oC755Sf54mp6YeP5LiOMS445YCN55qE5qCH5a6a5YC85Yeg5LmO5a6M5YWo5ZC75ZCI77yM6KGo5piO5Y2V5Yy65qih5Z6L6IO95aSf5YeG56Gu5Yi755S75YWo5rWB5Z+f5bmz5Z2H5oGi5aSN5rC05bmz77ybJFxcbWF0aHJte0NQVUV9Xiok5L2O5LqO5rmW5YyX5rGf5q615a6e5rWL55qEMi4y5YCN77yM5YiZ5Y+N5pig5Ye65bGA5Zyw6auY5o2V5o2e5pWI546H5p2h5Lu25LiL6LWE5rqQ5aKe5bmF5Y+v6IO95pu05Li65pi+6JGX44CCXG4ifSx7InBhaXJfaWQiOiJQMDAwNCIsIkEiOiLlm5vlpKflrrbpsbzotYTmupDmgaLlpI3lubbkuI3nrYnlkIzkuo7nj43nqIDkv53miqTniannp43lkIzmraXlj5fnm4rjgILplb/msZ/msZ/osZrnmoTmgaLlpI3nm7TmjqXlj5fkuK3lsYLnjI7niankvpvnu5nliLbnuqbvvJvplb/msZ/psp/pmaTpo5/mupDpmZDliLblpJbvvIzov5jlkIzml7blj5fliLDmtITmuLjpgJrpgZPpmLvpmpTlkozkurrlt6Xlop7mrpbmlL7mtYHnmoTlj4zph43lvbHlk43jgILlj6rmnInlhYjljpjmuIXov5nkuKTnsbvkuI3lkIznmoTpqbHliqjmnLrliLbvvIzmiY3og73lsIbnp43nvqTmgaLlpI3lt67lvILlh4bnoa7lvZLlm6Dkuo7po5/mupDkvpvnu5njgIHmsZ/muZbov57pgJrmgKfmiJbmlL7mtYHooaXlgb/mlYjlupTjgIJcbiIsIkIiOiLlm5vlpKflrrbpsbzotYTmupDmgaLlpI3lubbkuI3nrYnlkIzkuo7nj43nqIDkv53miqTniannp43lkIzmraXlj5fnm4rjgILplb/msZ/msZ/osZrnmoTnp43nvqTmgaLlpI3mm7Tnm7TmjqXkvp3otZbkuK3lsYLnjI7niannmoTkvpvnu5nog73lipvvvIzogIzplb/msZ/psp/pmaTpo5/mupDpmZDliLblpJbvvIzov5jlj5fmtITmuLjpgJrpgZPpmLvpmpTkuI7kurrlt6Xlop7mrpbmlL7mtYHnmoTlj4zph43lvbHlk43jgILlj6rmnInljpjmuIXov5nkuKTnsbvkuI3lkIznmoTpqbHliqjmnLrliLbvvIzmiY3og73lsIbnp43nvqTmgaLlpI3lt67lvILlh4bnoa7lvZLlm6Dkuo7po5/mupDkvpvnu5njgIHmsZ/muZbov57pgJrmgKfmiJbmlL7mtYHooaXlgb/mlYjlupTjgIJcbiJ9LHsicGFpcl9pZCI6IlAwMDA1IiwiQSI6IuWbm+Wkp+WutumxvOi1hOa6kOaBouWkjeW5tuS4jeetieWQjOS6juePjeeogOS/neaKpOeJqeenjeWQjOatpeWPl+ebiuOAgumVv+axn+axn+ixmueahOenjee+pOaBouWkjeabtOebtOaOpeS+nei1luS4reWxgueMjueJqeeahOS+m+e7meiDveWKm++8jOiAjOmVv+axn+myn+mZpOmjn+a6kOmZkOWItuWklu+8jOi/mOWPl+a0hOa4uOmAmumBk+mYu+malOS4juS6uuW3peWinuauluaUvua1geeahOWPjOmHjeW9seWTjeOAguWPquacieWOmOa4hei/meS4pOexu+S4jeWQjOeahOmpseWKqOacuuWItu+8jOaJjeiDveWwhuenjee+pOaBouWkjeW3ruW8guWHhuehruW9kuWboOS6jumjn+a6kOS+m+e7meOAgeaxn+a5lui/numAmuaAp+aIluaUvua1geihpeWBv+aViOW6lOOAglxuIiwiQiI6IuWbm+Wkp+WutumxvOi1hOa6kOaBouWkjeW5tuS4jeetieWQjOS6juePjeeogOS/neaKpOeJqeenjeWQjOatpeWPl+ebiuOAgumVv+axn+axn+ixmueahOaBouWkjeS+nei1luS4reWxgueMjueJqeiDveWQpuaMgee7reS+m+e7me+8m+mVv+axn+myn+mZpOWPl+mjn+a6kOmZkOWItuWklu+8jOi/mOWPl+WIsOa0hOa4uOmAmumBk+mYu+malOS4juS6uuW3peWinuauluaUvua1geeahOWPjOmHjeW9seWTjeOAgumjn+a6kOS+m+e7meOAgeaxn+a5lui/numAmuaAp+WSjOaUvua1geihpeWBv+aViOW6lOWIhuWIq+WvueW6lOS4jeWQjOeOr+iKgu+8jOWPquacieWFiOWIhua4hei/meS4pOexu+mpseWKqOacuuWItu+8jOaJjeiDveWwhuenjee+pOaBouWkjeW3ruW8guWHhuehruW9kuWboOS6juebuOW6lOeOr+iKguOAglxuIn0seyJwYWlyX2lkIjoiUDAwMDYiLCJBIjoi5Zub5aSn5a626bG86LWE5rqQ5oGi5aSN5bm25LiN562J5ZCM5LqO54+N56iA5L+d5oqk54mp56eN5ZCM5q2l5Y+X55uK44CC6ZW/5rGf5rGf6LGa55u05o6l5L6d6LWW5Lit5bGC54yO54mp55qE5L6b57uZ6IO95Yqb44CC6ZW/5rGf6bKf55qE5oOF5Ya16L+Y6KaB5aSN5p2C77ya6Zmk6aOf5rqQ6ZmQ5Yi25aSW77yM5rSE5ri46YCa6YGT6Zi76ZqU5LiO5Lq65bel5aKe5q6W5pS+5rWB6L+Y5bim5p2l5Y+M6YeN5b2x5ZON44CC5Y+q5pyJ5Y6Y5riF6L+Z5Lik57G75LiN5ZCM55qE6amx5Yqo5py65Yi277yM5omN6IO95bCG56eN576k5oGi5aSN5beu5byC5YeG56Gu5b2S5Zug5LqO6aOf5rqQ5L6b57uZ44CB5rGf5rmW6L+e6YCa5oCn5oiW5pS+5rWB6KGl5YG/5pWI5bqU44CCXG4iLCJCIjoi5Zub5aSn5a626bG86LWE5rqQ5oGi5aSN5bm25LiN562J5ZCM5LqO54+N56iA5L+d5oqk54mp56eN5ZCM5q2l5Y+X55uK44CC6ZW/5rGf5rGf6LGa55qE56eN576k5oGi5aSN5pu055u05o6l5L6d6LWW5Lit5bGC54yO54mp55qE5L6b57uZ6IO95Yqb77yM6ICM6ZW/5rGf6bKf6Zmk6aOf5rqQ6ZmQ5Yi25aSW77yM6L+Y5Y+X5rSE5ri46YCa6YGT6Zi76ZqU5LiO5Lq65bel5aKe5q6W5pS+5rWB55qE5Y+M6YeN5b2x5ZON44CC5Y+q5pyJ5Y6Y5riF6L+Z5Lik57G75LiN5ZCM55qE6amx5Yqo5py65Yi277yM5omN6IO95bCG56eN576k5oGi5aSN5beu5byC5YeG56Gu5b2S5Zug5LqO6aOf5rqQ5L6b57uZ44CB5rGf5rmW6L+e6YCa5oCn5oiW5pS+5rWB6KGl5YG/5pWI5bqU44CCXG4ifSx7InBhaXJfaWQiOiJQMDAwNyIsIkEiOiLplb/msZ/mtYHln5/mmK/miJHlm73mt6HmsLTmuJTkuJrmnIDlj5Hovr7jgIHnlJ/nianlpJrmoLfmgKfmnIDkuLDlr4znmoTljLrln5/kuYvkuIDvvIzkvYbplb/mnJ/lj5fov4fluqbmjZXmjZ7jgIHlt6XkuJrlup/msLTmjpLmlL7jgIHmsLTln5/loZHmlpnmsaHmn5Pku6Xlj4rokZvmtLLlnZ3jgIHkuInls6HlpKflnZ3nrYnmsLTliKnlt6XnqIvnmoTnu7zlkIjlvbHlk43vvIzpsbznsbvmtITmuLjpgJrpgZPooqvpmLvmlq3vvIzmuJTkuJrotYTmupDmjIHnu63oobDpgIDvvIzlhbjlnovpo5/nianpk77nu5PmnoTlj5HnlJ/pgIDljJbjgILoh6oyMDIx5bm0MeaciDHml6Xlrp7mlr3plb/msZ/ljYHlubTnpoHmuJTmlL/nrZbku6XmnaXvvIzplb/msZ/mtYHln5/nlJ/mgIHnjq/looPlt7Llh7rnjrDmmL7okZflj5jljJbvvJrlsYDpg6jmsLTln5/msLTotKjmlLnlloTvvIzmsLTojYnnrYnmsLTnlJ/mpI3ooqvpgJDmraXmgaLlpI3vvJsyMDI15bm055uR5rWL5pWw5o2u5pi+56S677yM6Z2S44CB6I2J44CB6bKi44CB6bOZ5Zub5aSn5a626bG86LWE5rqQ6YeP5bey5oGi5aSN6Iez56aB5riU5YmN55qE57qmMS445YCN77yM6KGo5piO56aB5riU5a+55Z+656GA6LWE5rqQ5ZKM57uP5rWO6bG857G75YW35pyJ5pi+6JGX55qE5L+u5aSN5L2c55So44CCXG4iLCJCIjoi6ZW/5rGf5rWB5Z+f5piv5oiR5Zu95reh5rC05riU5Lia5pyA5Y+R6L6+44CB55Sf54mp5aSa5qC35oCn5pyA5Liw5a+M55qE5Yy65Z+f5LmL5LiA44CC6ZW/5pyf55qE6L+H5bqm5o2V5o2e44CB5bel5Lia5bqf5rC05o6S5pS+44CB5rC05Z+f5aGR5paZ5rGh5p+T77yM5Yqg5LiK6JGb5rSy5Z2d44CB5LiJ5bOh5aSn5Z2d562J5rC05Yip5bel56iL77yM5YWx5ZCM6Zi75pat5LqG6bG857G75rSE5ri46YCa6YGT77yM5riU5Lia6LWE5rqQ5oyB57ut6KGw6YCA77yM5YW45Z6L6aOf54mp6ZO+57uT5p6E5Lmf6ZqP5LmL6YCA5YyW44CC6IeqMjAyMeW5tDHmnIgx5pel5a6e5pa96ZW/5rGf5Y2B5bm056aB5riU5pS/562W5Lul5p2l77yM5rWB5Z+f55Sf5oCB546v5aKD5bey5pyJ5pi+6JGX5Y+Y5YyW77ya5bGA6YOo5rC05Z+f5rC06LSo5pS55ZaE77yM5rC06I2J562J5rC055Sf5qSN6KKr6YCQ5q2l5oGi5aSN44CCMjAyNeW5tOebkea1i+aVsOaNruaYvuekuu+8jOmdkuOAgeiNieOAgemyouOAgemzmeWbm+Wkp+WutumxvOi1hOa6kOmHj+W3suaBouWkjeiHs+emgea4lOWJjeeahOe6pjEuOOWAje+8jOihqOaYjuemgea4lOWvueWfuuehgOi1hOa6kOWSjOe7j+a1jumxvOexu+WFt+acieaYvuiRl+eahOS/ruWkjeS9nOeUqOOAglxuIn0seyJwYWlyX2lkIjoiUDAwMDgiLCJBIjoi6ZW/5rGf5rWB5Z+f5piv5oiR5Zu95reh5rC05riU5Lia5pyA5Y+R6L6+44CB55Sf54mp5aSa5qC35oCn5pyA5Liw5a+M55qE5Yy65Z+f5LmL5LiA77yM5L2G6ZW/5pyf5Y+X6L+H5bqm5o2V5o2e44CB5bel5Lia5bqf5rC05o6S5pS+44CB5rC05Z+f5aGR5paZ5rGh5p+T5Lul5Y+K6JGb5rSy5Z2d44CB5LiJ5bOh5aSn5Z2d562J5rC05Yip5bel56iL55qE57u85ZCI5b2x5ZON77yM6bG857G75rSE5ri46YCa6YGT6KKr6Zi75pat77yM5riU5Lia6LWE5rqQ5oyB57ut6KGw6YCA77yM5YW45Z6L6aOf54mp6ZO+57uT5p6E5Y+R55Sf6YCA5YyW44CC6IeqMjAyMeW5tDHmnIgx5pel5a6e5pa96ZW/5rGf5Y2B5bm056aB5riU5pS/562W5Lul5p2l77yM6ZW/5rGf5rWB5Z+f55Sf5oCB546v5aKD5bey5Ye6546w5pi+6JGX5Y+Y5YyW77ya5bGA6YOo5rC05Z+f5rC06LSo5pS55ZaE77yM5rC06I2J562J5rC055Sf5qSN6KKr6YCQ5q2l5oGi5aSN77ybMjAyNeW5tOebkea1i+aVsOaNruaYvuekuu+8jOmdkuOAgeiNieOAgemyouOAgemzmeWbm+Wkp+WutumxvOi1hOa6kOmHj+W3suaBouWkjeiHs+emgea4lOWJjeeahOe6pjEuOOWAje+8jOihqOaYjuemgea4lOWvueWfuuehgOi1hOa6kOWSjOe7j+a1jumxvOexu+WFt+acieaYvuiRl+eahOS/ruWkjeS9nOeUqOOAglxuIiwiQiI6IuS9nOS4uuaIkeWbvea3oeawtOa4lOS4muacgOWPkei+vuOAgeeUn+eJqeWkmuagt+aAp+acgOS4sOWvjOeahOWMuuWfn+S5i+S4gO+8jOmVv+axn+a1geWfn+mVv+acn+aJv+WPl+i/h+W6puaNleaNnuOAgeW3peS4muW6n+awtOaOkuaUvuWSjOawtOWfn+WhkeaWmeaxoeafk++8m+iRm+a0suWdneOAgeS4ieWzoeWkp+WdneetieawtOWIqeW3peeoi+WPiOmYu+aWreS6humxvOexu+a0hOa4uOmAmumBk+OAguWkmuenjeW9seWTjeWPoOWKoOWQju+8jOa4lOS4mui1hOa6kOaMgee7reihsOmAgO+8jOWFuOWei+mjn+eJqemTvue7k+aehOWPkeeUn+mAgOWMluOAgjIwMjHlubQx5pyIMeaXpe+8jOmVv+axn+WNgeW5tOemgea4lOaUv+etluW8gOWni+WunuaWve+8jOatpOWQjua1geWfn+eUn+aAgeeOr+Wig+WHuueOsOaYvuiRl+WPmOWMlu+8jOWxgOmDqOawtOWfn+awtOi0qOaUueWWhO+8jOawtOiNieetieawtOeUn+akjeiiq+mAkOatpeaBouWkjeOAgjIwMjXlubTnm5HmtYvmlbDmja7mmL7npLrvvIzpnZLjgIHojYnjgIHpsqLjgIHps5nlm5vlpKflrrbpsbzotYTmupDph4/lt7LmgaLlpI3oh7PnpoHmuJTliY3nmoTnuqYxLjjlgI3vvIzooajmmI7npoHmuJTlr7nln7rnoYDotYTmupDlkoznu4/mtY7psbznsbvlhbfmnInmmL7okZfkv67lpI3kvZznlKjjgIJcbiJ9LHsicGFpcl9pZCI6IlAwMDA5IiwiQSI6IumVv+axn+a1geWfn+aYr+aIkeWbvea3oeawtOa4lOS4muacgOWPkei+vuOAgeeUn+eJqeWkmuagt+aAp+acgOS4sOWvjOeahOWMuuWfn+S5i+S4gO+8jOS9humVv+acn+WPl+i/h+W6puaNleaNnuOAgeW3peS4muW6n+awtOaOkuaUvuOAgeawtOWfn+WhkeaWmeaxoeafk+S7peWPiuiRm+a0suWdneOAgeS4ieWzoeWkp+WdneetieawtOWIqeW3peeoi+eahOe7vOWQiOW9seWTje+8jOmxvOexu+a0hOa4uOmAmumBk+iiq+mYu+aWre+8jOa4lOS4mui1hOa6kOaMgee7reihsOmAgO+8jOWFuOWei+mjn+eJqemTvue7k+aehOWPkeeUn+mAgOWMluOAguiHqjIwMjHlubQx5pyIMeaXpeWunuaWvemVv+axn+WNgeW5tOemgea4lOaUv+etluS7peadpe+8jOmVv+axn+a1geWfn+eUn+aAgeeOr+Wig+W3suWHuueOsOaYvuiRl+WPmOWMlu+8muWxgOmDqOawtOWfn+awtOi0qOaUueWWhO+8jOawtOiNieetieawtOeUn+akjeiiq+mAkOatpeaBouWkje+8mzIwMjXlubTnm5HmtYvmlbDmja7mmL7npLrvvIzpnZLjgIHojYnjgIHpsqLjgIHps5nlm5vlpKflrrbpsbzotYTmupDph4/lt7LmgaLlpI3oh7PnpoHmuJTliY3nmoTnuqYxLjjlgI3vvIzooajmmI7npoHmuJTlr7nln7rnoYDotYTmupDlkoznu4/mtY7psbznsbvlhbfmnInmmL7okZfnmoTkv67lpI3kvZznlKjjgIJcbiIsIkIiOiLplb/msZ/mtYHln5/mmK/miJHlm73mt6HmsLTmuJTkuJrmnIDlj5Hovr7jgIHnlJ/nianlpJrmoLfmgKfmnIDkuLDlr4znmoTljLrln5/kuYvkuIDvvIzkvYbov4fluqbmjZXmjZ7jgIHlt6XkuJrlup/msLTmjpLmlL7jgIHmsLTln5/loZHmlpnmsaHmn5Pplb/mnJ/lrZjlnKjvvJvpsbznsbvmtITmuLjpgJrpgZPkuZ/ooqvokZvmtLLlnZ3jgIHkuInls6HlpKflnZ3nrYnmsLTliKnlt6XnqIvpmLvmlq3jgILlj5fov5nkupvlm6DntKDlhbHlkIzlvbHlk43vvIzmuJTkuJrotYTmupDmjIHnu63oobDpgIDvvIzlhbjlnovpo5/nianpk77nu5PmnoTpgJDmuJDpgIDljJbjgILoh6oyMDIx5bm0MeaciDHml6Xlrp7mlr3plb/msZ/ljYHlubTnpoHmuJTmlL/nrZblkI7vvIzmtYHln5/nlJ/mgIHnjq/looPlh7rnjrDmmL7okZflj5jljJbvvIzlsYDpg6jmsLTln5/msLTotKjlvIDlp4vmlLnlloTvvIzmsLTojYnnrYnmsLTnlJ/mpI3ooqvpgJDmraXmgaLlpI3jgIIyMDI15bm055uR5rWL5pWw5o2u5pi+56S677yM6Z2S44CB6I2J44CB6bKi44CB6bOZ5Zub5aSn5a626bG86LWE5rqQ6YeP5bey5oGi5aSN6Iez56aB5riU5YmN55qE57qmMS445YCN77yM6KGo5piO56aB5riU5a+55Z+656GA6LWE5rqQ5ZKM57uP5rWO6bG857G75YW35pyJ5pi+6JGX55qE5L+u5aSN5L2c55So44CCXG4ifV19"), c => c.charCodeAt(0));
+const packet = JSON.parse(new TextDecoder("utf-8").decode(packetBytes));
+const dimensions = ["naturalness","judgment_trajectory","specificity","content_density","semantic_fidelity"];
+const labels = {
+  naturalness:["自然度","是否像有目的的学术叙述，而非可互换套句"],
+  judgment_trajectory:["判断过程","是否看得出由现象、困难或比较走向处理方式"],
+  specificity:["具体性","对象、变量、阈值、条件和变化是否写清"],
+  content_density:["内容密度","是否少重复、不跳步，每段承担明确作用"],
+  semantic_fidelity:["语义忠实度","事实、范围、限定和数学方向是否保持"]
+};
+const choiceLabels = {A:"A",B:"B",TIE:"持平",SKIP:"跳过"};
+const stateKey = "aigc-blind-review:" + packetHash;
+let state = {rater:"", answers:{}, notes:{}};
+try { state = Object.assign(state, JSON.parse(localStorage.getItem(stateKey) || "{}")); } catch (_) {}
+const rater = document.getElementById("rater");
+const pairsNode = document.getElementById("pairs");
+const statusNode = document.getElementById("status");
+const messageNode = document.getElementById("message");
+rater.value = state.rater || "";
+function save() { state.rater = rater.value; localStorage.setItem(stateKey, JSON.stringify(state)); updateStatus(); }
+function complete(pair) { return dimensions.every(d => state.answers[pair.pair_id]?.[d]); }
+function updateStatus() {
+  const done = packet.pairs.filter(complete).length;
+  statusNode.textContent = `已完成 ${done} / ${packet.pairs.length} 对`;
+}
+function element(tag, className, text) {
+  const node = document.createElement(tag); if (className) node.className = className;
+  if (text !== undefined) node.textContent = text; return node;
+}
+packet.pairs.forEach((pair, pairIndex) => {
+  state.answers[pair.pair_id] ||= {};
+  const section = element("section", "pair"); section.dataset.pairId = pair.pair_id;
+  section.append(element("h2", "", `第 ${pairIndex + 1} 对 · ${pair.pair_id}`));
+  const passages = element("div", "passages");
+  ["A","B"].forEach(side => {
+    const article = element("article", "passage"); article.append(element("h3", "", `文本 ${side}`));
+    article.append(element("p", "passage-text", pair[side])); passages.append(article);
+  });
+  section.append(passages);
+  dimensions.forEach((dimension, dimIndex) => {
+    const fieldset = document.createElement("fieldset"); fieldset.dataset.dimension = dimension;
+    fieldset.append(element("legend", "", labels[dimension][0]));
+    const title = element("div", "dimension"); title.append(element("strong", "", labels[dimension][0]));
+    title.append(element("small", "", labels[dimension][1])); fieldset.append(title);
+    ["A","B","TIE","SKIP"].forEach(choice => {
+      const label = element("label", "choice"); const input = document.createElement("input");
+      input.type = "radio"; input.name = `p${pairIndex}-d${dimIndex}`; input.value = choice;
+      input.checked = state.answers[pair.pair_id][dimension] === choice;
+      input.addEventListener("change", () => { state.answers[pair.pair_id][dimension] = choice;
+        fieldset.classList.remove("missing"); save(); });
+      label.append(input, document.createTextNode(choiceLabels[choice])); fieldset.append(label);
+    });
+    section.append(fieldset);
+  });
+  const notesLabel = element("label", "notes", "备注（可选）"); const notes = document.createElement("textarea");
+  notes.maxLength = 2000; notes.value = state.notes[pair.pair_id] || "";
+  notes.addEventListener("input", () => { state.notes[pair.pair_id] = notes.value; save(); });
+  notesLabel.append(notes); section.append(notesLabel); pairsNode.append(section);
+});
+rater.addEventListener("input", save);
+function csvCell(value) { const text = String(value ?? ""); return /[",\r\n]/.test(text)
+  ? `"${text.replaceAll('"','""')}"` : text; }
+document.getElementById("export").addEventListener("click", () => {
+  messageNode.textContent = ""; messageNode.className = "";
+  const reviewer = rater.value.trim(); const missing = [];
+  document.querySelectorAll("fieldset").forEach(node => node.classList.remove("missing"));
+  packet.pairs.forEach(pair => dimensions.forEach(d => { if (!state.answers[pair.pair_id]?.[d]) {
+    missing.push([pair.pair_id,d]); document.querySelector(`.pair[data-pair-id="${CSS.escape(pair.pair_id)}"] fieldset[data-dimension="${d}"]`).classList.add("missing"); } }));
+  if (!reviewer || missing.length) {
+    messageNode.className = "error";
+    messageNode.textContent = !reviewer ? "请填写评审者编号。" : `还有 ${missing.length} 个维度未选择。`;
+    if (missing.length) document.querySelector("fieldset.missing")?.scrollIntoView({behavior:"smooth",block:"center"});
+    return;
+  }
+  const header = ["pair_id","rater_id","rater_kind",...dimensions,"notes"];
+  const lines = [header.join(",")];
+  packet.pairs.forEach(pair => { const row = [pair.pair_id,reviewer,"human",
+    ...dimensions.map(d => state.answers[pair.pair_id][d]),state.notes[pair.pair_id] || ""];
+    lines.push(row.map(csvCell).join(",")); });
+  const blob = new Blob(["\uFEFF" + lines.join("\r\n") + "\r\n"], {type:"text/csv;charset=utf-8"});
+  const link = document.createElement("a"); link.href = URL.createObjectURL(blob);
+  link.download = `ratings-${reviewer.replace(/[^A-Za-z0-9._-]+/g,"-") || "reviewer"}-${packetHash.slice(0,8)}.csv`;
+  link.click(); setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+  messageNode.textContent = "评分表已导出。请不要把本页记录交给另一名评审参考。";
+});
+document.getElementById("clear").addEventListener("click", () => {
+  if (!confirm("确认清空本页保存的评审编号、选择和备注？")) return;
+  localStorage.removeItem(stateKey); location.reload();
+});
+updateStatus();
+</script>
+</body>
+</html>

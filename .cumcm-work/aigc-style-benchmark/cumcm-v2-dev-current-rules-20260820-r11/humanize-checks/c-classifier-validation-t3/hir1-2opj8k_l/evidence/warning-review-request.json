@@ -1,0 +1,315 @@
+{
+  "artifact": {
+    "after_sha256": "f1cf0519b446db9901e1851134a28d8ff5507a9ae51b47856da08f26c3daf889",
+    "before_sha256": "90a017dc6de4105101b9520baca01ad6eb2255d3100772098c863837efd9c1d4"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "4ac82f84bd5e37514d69740dad34f6f364e556a921158236230fd85ff90539b0",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "markdown",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不": 2,
+          "不能": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0001",
+            "column": 16,
+            "end": 16,
+            "end_column": 17,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "表 1 给出的两个数据集结果并不完全一致",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 15
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0003",
+            "column": 57,
+            "end": 57,
+            "end_column": 58,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "AdaBoost 的训练结果与测试结果最接近，而其余分类器都表现出程度不同的过拟合",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 56
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0009",
+            "column": 155,
+            "end": 156,
+            "end_column": 157,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不能",
+            "sentence_context": "训练样本占全部数据的 70%，故模型选择时还要查看测试集上的保持程度，不能由训练集指标单独决定",
+            "sentence_id": "T0005",
+            "side": "after",
+            "start": 154
+          }
+        ],
+        "before": {
+          "不": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0003",
+            "column": 41,
+            "end": 41,
+            "end_column": 42,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "从表1可以看出,训练集和测试集效果最接近的为Adaboost,其余的分类器有程度不一样的过拟合现象",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 40
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "不": 1,
+            "不能": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "不": 1,
+              "不能": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0001",
+                "column": 16,
+                "end": 16,
+                "end_column": 17,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "表 1 给出的两个数据集结果并不完全一致",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 15
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0003",
+                "column": 57,
+                "end": 57,
+                "end_column": 58,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "AdaBoost 的训练结果与测试结果最接近，而其余分类器都表现出程度不同的过拟合",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 56
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0009",
+                "column": 155,
+                "end": 156,
+                "end_column": 157,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不能",
+                "sentence_context": "训练样本占全部数据的 70%，故模型选择时还要查看测试集上的保持程度，不能由训练集指标单独决定",
+                "sentence_id": "T0005",
+                "side": "after",
+                "start": 154
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0003",
+                "column": 41,
+                "end": 41,
+                "end_column": 42,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "从表1可以看出,训练集和测试集效果最接近的为Adaboost,其余的分类器有程度不一样的过拟合现象",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 40
+              }
+            ],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "4bd06dda97f68ec619ce9c1ee897f20e7a288b8971a3bb270f51ae78fda637da"
+    },
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "可以": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0001",
+            "column": 4,
+            "end": 5,
+            "end_column": 6,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可以",
+            "sentence_context": "从表1可以看出,训练集和测试集效果最接近的为Adaboost,其余的分类器有程度不一样的过拟合现象",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 3
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "可以": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0001",
+                "column": 4,
+                "end": 5,
+                "end_column": 6,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可以",
+                "sentence_context": "从表1可以看出,训练集和测试集效果最接近的为Adaboost,其余的分类器有程度不一样的过拟合现象",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 3
+              }
+            ],
+            "removed": {
+              "可以": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "c1e525ed5912e85636a3880134d1424ab8f7f465b38889635d71aba9c0255912"
+    },
+    {
+      "code": "SPEECH_ACT_FOCUS_SCOPE_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "主要": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "focus_scope",
+            "claim_id": "C0007",
+            "column": 87,
+            "end": 88,
+            "end_column": 89,
+            "end_line": 1,
+            "line": 1,
+            "marker": "主要",
+            "sentence_context": "在整体上,Logistic回归明显略逊一筹,后三个分类器的结果较为接近,主要是三个分类器在训练集上都有良好的表现,而训练集数据占到了整体数据的7成",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 86
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "主要": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "focus_scope",
+                "claim_id": "C0007",
+                "column": 87,
+                "end": 88,
+                "end_column": 89,
+                "end_line": 1,
+                "line": 1,
+                "marker": "主要",
+                "sentence_context": "在整体上,Logistic回归明显略逊一筹,后三个分类器的结果较为接近,主要是三个分类器在训练集上都有良好的表现,而训练集数据占到了整体数据的7成",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 86
+              }
+            ],
+            "removed": {
+              "主要": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'focus_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "c6f3cc685c9d109be38173c7cb89f2b26adc92a831b734b8a5a0a993cb71d692"
+    }
+  ]
+}

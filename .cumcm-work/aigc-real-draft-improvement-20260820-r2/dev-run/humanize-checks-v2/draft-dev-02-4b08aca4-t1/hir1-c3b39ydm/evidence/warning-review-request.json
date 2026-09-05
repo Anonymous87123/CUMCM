@@ -1,0 +1,186 @@
+{
+  "artifact": {
+    "after_sha256": "9b2816a292aa6583abbc15b78919a037540a2126972e2698568dd42e024832f7",
+    "before_sha256": "f79fdc58a074e9bbc7364d1313fbacffb15235249d1d92225f44f89f299fb328"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "6d32447717eb719b7c9caa92b0460d1a19028ea583aab56775cbe05c5b361c34",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "tex",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不": 1,
+          "未": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0002",
+            "column": 27,
+            "end": 27,
+            "end_column": 28,
+            "end_line": 1,
+            "line": 1,
+            "marker": "未",
+            "sentence_context": "当前模型尚未区分年龄结构、繁殖季节和分阶段放流调度，也将江豚、长江鲟及入侵者对中层猎物的半饱和响应置于同一尺度",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 26
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0006",
+            "column": 106,
+            "end": 106,
+            "end_column": 107,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "按这一级别的简化，模型更适合比较各机制作用的相对强弱，而不直接外推为精细的长期种群预测",
+            "sentence_id": "T0003",
+            "side": "after",
+            "start": 105
+          }
+        ],
+        "before": {
+          "不": 2,
+          "未": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0002",
+            "column": 25,
+            "end": 25,
+            "end_column": 26,
+            "end_line": 1,
+            "line": 1,
+            "marker": "未",
+            "sentence_context": "当前模型尚未展开分龄、繁殖季节和分阶段放流调度，也把江豚、长江鲟与入侵者对中层猎物的半饱和响应压缩在同一尺度上",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 24
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0005",
+            "column": 91,
+            "end": 91,
+            "end_column": 92,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "按这一级别的简化，它更适合比较不同机制的相对强弱，而不直接外推为精细的长期种群预测",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 90
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0006",
+            "column": 102,
+            "end": 102,
+            "end_column": 103,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "按这一级别的简化，它更适合比较不同机制的相对强弱，而不直接外推为精细的长期种群预测",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 101
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "不": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0002",
+                "column": 27,
+                "end": 27,
+                "end_column": 28,
+                "end_line": 1,
+                "line": 1,
+                "marker": "未",
+                "sentence_context": "当前模型尚未区分年龄结构、繁殖季节和分阶段放流调度，也将江豚、长江鲟及入侵者对中层猎物的半饱和响应置于同一尺度",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 26
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0002",
+                "column": 25,
+                "end": 25,
+                "end_column": 26,
+                "end_line": 1,
+                "line": 1,
+                "marker": "未",
+                "sentence_context": "当前模型尚未展开分龄、繁殖季节和分阶段放流调度，也把江豚、长江鲟与入侵者对中层猎物的半饱和响应压缩在同一尺度上",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 24
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0005",
+                "column": 91,
+                "end": 91,
+                "end_column": 92,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "按这一级别的简化，它更适合比较不同机制的相对强弱，而不直接外推为精细的长期种群预测",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 90
+              }
+            ],
+            "removed": {
+              "不": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "fd013786d7b20a224741dc479d94cff42292f54ea440d198a6ab115a22fc8522"
+    }
+  ]
+}

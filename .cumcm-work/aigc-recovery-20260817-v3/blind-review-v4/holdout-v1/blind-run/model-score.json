@@ -1,0 +1,598 @@
+{
+  "schema": "aigc-blind-score/v1",
+  "status": "pass",
+  "pairs": 12,
+  "ratings": 24,
+  "errors": 0,
+  "warnings": 12,
+  "counts": {
+    "naturalness": {
+      "candidate": 3,
+      "source": 20,
+      "TIE": 1
+    },
+    "judgment_trajectory": {
+      "candidate": 4,
+      "source": 17,
+      "TIE": 3
+    },
+    "specificity": {
+      "candidate": 1,
+      "source": 16,
+      "TIE": 7
+    },
+    "content_density": {
+      "candidate": 1,
+      "source": 16,
+      "TIE": 7
+    },
+    "semantic_fidelity": {
+      "candidate": 1,
+      "source": 5,
+      "TIE": 18
+    }
+  },
+  "counts_by_rater_kind": {
+    "model": {
+      "naturalness": {
+        "candidate": 3,
+        "source": 20,
+        "TIE": 1
+      },
+      "judgment_trajectory": {
+        "candidate": 4,
+        "source": 17,
+        "TIE": 3
+      },
+      "specificity": {
+        "candidate": 1,
+        "source": 16,
+        "TIE": 7
+      },
+      "content_density": {
+        "candidate": 1,
+        "source": 16,
+        "TIE": 7
+      },
+      "semantic_fidelity": {
+        "candidate": 1,
+        "source": 5,
+        "TIE": 18
+      }
+    }
+  },
+  "per_pair_counts": {
+    "holdout-01-line-22": {
+      "naturalness": {
+        "candidate": 1,
+        "source": 1
+      },
+      "judgment_trajectory": {
+        "candidate": 2
+      },
+      "specificity": {
+        "candidate": 1,
+        "source": 1
+      },
+      "content_density": {
+        "candidate": 1,
+        "source": 1
+      },
+      "semantic_fidelity": {
+        "candidate": 1,
+        "TIE": 1
+      }
+    },
+    "holdout-02-line-38": {
+      "naturalness": {
+        "source": 1,
+        "TIE": 1
+      },
+      "judgment_trajectory": {
+        "source": 2
+      },
+      "specificity": {
+        "source": 1,
+        "TIE": 1
+      },
+      "content_density": {
+        "source": 2
+      },
+      "semantic_fidelity": {
+        "source": 1,
+        "TIE": 1
+      }
+    },
+    "holdout-03-line-54": {
+      "naturalness": {
+        "source": 2
+      },
+      "judgment_trajectory": {
+        "source": 1,
+        "TIE": 1
+      },
+      "specificity": {
+        "source": 2
+      },
+      "content_density": {
+        "source": 2
+      },
+      "semantic_fidelity": {
+        "TIE": 2
+      }
+    },
+    "holdout-04-line-57": {
+      "naturalness": {
+        "source": 2
+      },
+      "judgment_trajectory": {
+        "source": 2
+      },
+      "specificity": {
+        "source": 1,
+        "TIE": 1
+      },
+      "content_density": {
+        "source": 2
+      },
+      "semantic_fidelity": {
+        "source": 1,
+        "TIE": 1
+      }
+    },
+    "holdout-05-line-64": {
+      "naturalness": {
+        "source": 2
+      },
+      "judgment_trajectory": {
+        "source": 2
+      },
+      "specificity": {
+        "source": 1,
+        "TIE": 1
+      },
+      "content_density": {
+        "source": 1,
+        "TIE": 1
+      },
+      "semantic_fidelity": {
+        "source": 1,
+        "TIE": 1
+      }
+    },
+    "holdout-06-line-79": {
+      "naturalness": {
+        "source": 1,
+        "candidate": 1
+      },
+      "judgment_trajectory": {
+        "source": 1,
+        "candidate": 1
+      },
+      "specificity": {
+        "source": 1,
+        "TIE": 1
+      },
+      "content_density": {
+        "TIE": 2
+      },
+      "semantic_fidelity": {
+        "TIE": 2
+      }
+    },
+    "holdout-07-line-207": {
+      "naturalness": {
+        "source": 1,
+        "candidate": 1
+      },
+      "judgment_trajectory": {
+        "source": 1,
+        "candidate": 1
+      },
+      "specificity": {
+        "source": 2
+      },
+      "content_density": {
+        "source": 2
+      },
+      "semantic_fidelity": {
+        "TIE": 2
+      }
+    },
+    "holdout-08-line-277": {
+      "naturalness": {
+        "source": 2
+      },
+      "judgment_trajectory": {
+        "source": 1,
+        "TIE": 1
+      },
+      "specificity": {
+        "source": 2
+      },
+      "content_density": {
+        "source": 2
+      },
+      "semantic_fidelity": {
+        "TIE": 2
+      }
+    },
+    "holdout-09-line-422": {
+      "naturalness": {
+        "source": 2
+      },
+      "judgment_trajectory": {
+        "source": 2
+      },
+      "specificity": {
+        "source": 1,
+        "TIE": 1
+      },
+      "content_density": {
+        "source": 1,
+        "TIE": 1
+      },
+      "semantic_fidelity": {
+        "source": 1,
+        "TIE": 1
+      }
+    },
+    "holdout-10-line-488": {
+      "naturalness": {
+        "source": 2
+      },
+      "judgment_trajectory": {
+        "source": 1,
+        "TIE": 1
+      },
+      "specificity": {
+        "source": 2
+      },
+      "content_density": {
+        "source": 1,
+        "TIE": 1
+      },
+      "semantic_fidelity": {
+        "TIE": 2
+      }
+    },
+    "holdout-11-line-502": {
+      "naturalness": {
+        "source": 2
+      },
+      "judgment_trajectory": {
+        "source": 2
+      },
+      "specificity": {
+        "source": 1,
+        "TIE": 1
+      },
+      "content_density": {
+        "TIE": 2
+      },
+      "semantic_fidelity": {
+        "TIE": 2
+      }
+    },
+    "holdout-12-line-524": {
+      "naturalness": {
+        "source": 2
+      },
+      "judgment_trajectory": {
+        "source": 2
+      },
+      "specificity": {
+        "source": 1,
+        "TIE": 1
+      },
+      "content_density": {
+        "source": 2
+      },
+      "semantic_fidelity": {
+        "source": 1,
+        "TIE": 1
+      }
+    }
+  },
+  "rater_notes": [
+    {
+      "pair_id": "holdout-01-line-22",
+      "rater_id": "holdout-model-a",
+      "rater_kind": "model",
+      "text": "B的表述更紧凑，且将模型构成与评价目标交代得更直接。"
+    },
+    {
+      "pair_id": "holdout-02-line-38",
+      "rater_id": "holdout-model-a",
+      "rater_kind": "model",
+      "text": "B修正了数字和措辞问题，并清楚区分了资源恢复与系统健康。"
+    },
+    {
+      "pair_id": "holdout-03-line-54",
+      "rater_id": "holdout-model-a",
+      "rater_kind": "model",
+      "text": "A以更完整的因果链展开五个子问题，推进关系和细节更明确。"
+    },
+    {
+      "pair_id": "holdout-04-line-57",
+      "rater_id": "holdout-model-a",
+      "rater_kind": "model",
+      "text": "B先界定问题核心，再说明合并变量会丢失资源层级信息，论证更顺畅。"
+    },
+    {
+      "pair_id": "holdout-05-line-64",
+      "rater_id": "holdout-model-a",
+      "rater_kind": "model",
+      "text": "B明确说明了终态差异与压力源之间的关联，判断落点比A更清楚。"
+    },
+    {
+      "pair_id": "holdout-06-line-79",
+      "rater_id": "holdout-model-a",
+      "rater_kind": "model",
+      "text": "A明确提出还需验证赋权方法稳健性，判断路径和具体检验意图更完整。"
+    },
+    {
+      "pair_id": "holdout-07-line-207",
+      "rater_id": "holdout-model-a",
+      "rater_kind": "model",
+      "text": "A补充了归一化指标的解释及资源承载机制，信息密度和推理链更充分。"
+    },
+    {
+      "pair_id": "holdout-08-line-277",
+      "rater_id": "holdout-model-a",
+      "rater_kind": "model",
+      "text": "A逐组说明各情景数值变化并保留过程变量作用，具体性和分析轨迹更强。"
+    },
+    {
+      "pair_id": "holdout-09-line-422",
+      "rater_id": "holdout-model-a",
+      "rater_kind": "model",
+      "text": "B的语句衔接更自然，并明确将局部跨越限定为不稳定现象。"
+    },
+    {
+      "pair_id": "holdout-10-line-488",
+      "rater_id": "holdout-model-a",
+      "rater_kind": "model",
+      "text": "A更具体地列出监测指标和治理环节，语气自然且行动建议更完整。"
+    },
+    {
+      "pair_id": "holdout-11-line-502",
+      "rater_id": "holdout-model-a",
+      "rater_kind": "model",
+      "text": "B用更直接的措辞提出补充数据和机制变量，后续判断路径更清晰。"
+    },
+    {
+      "pair_id": "holdout-12-line-524",
+      "rater_id": "holdout-model-a",
+      "rater_kind": "model",
+      "text": "B按五个子问题逐项说明逻辑链，模块职责和信息传递关系更清楚。"
+    },
+    {
+      "pair_id": "holdout-01-line-22",
+      "rater_id": "holdout-model-b",
+      "rater_kind": "model",
+      "text": "A保留了更多具体建模对象，B按资源层、物种响应和情景评价展开，判断链更清楚。"
+    },
+    {
+      "pair_id": "holdout-02-line-38",
+      "rater_id": "holdout-model-b",
+      "rater_kind": "model",
+      "text": "B将资源恢复与系统健康的区分直接落到统一动力学模型上，论证推进比A更明确。"
+    },
+    {
+      "pair_id": "holdout-03-line-54",
+      "rater_id": "holdout-model-b",
+      "rater_kind": "model",
+      "text": "A的因果链叙述更自然且细节更充分，B更凝练但删去了部分中间判断。"
+    },
+    {
+      "pair_id": "holdout-04-line-57",
+      "rater_id": "holdout-model-b",
+      "rater_kind": "model",
+      "text": "B明确说明合并资源变量会掩盖底层承压机制，模型保留四类资源的理由更完整。"
+    },
+    {
+      "pair_id": "holdout-05-line-64",
+      "rater_id": "holdout-model-b",
+      "rater_kind": "model",
+      "text": "B增加了情景与种群终态差异的直接关联，使方法选择的判断路径更顺畅。"
+    },
+    {
+      "pair_id": "holdout-06-line-79",
+      "rater_id": "holdout-model-b",
+      "rater_kind": "model",
+      "text": "B明确指出三种赋权方法用于检验排序是否改变，鲁棒性判断比A更直接。"
+    },
+    {
+      "pair_id": "holdout-07-line-207",
+      "rater_id": "holdout-model-b",
+      "rater_kind": "model",
+      "text": "A保留了0.204、4.213及归一化解释等更多细节，B则把动态结论压缩得更易读。"
+    },
+    {
+      "pair_id": "holdout-08-line-277",
+      "rater_id": "holdout-model-b",
+      "rater_kind": "model",
+      "text": "A完整列出多组情景数值并解释M、V的后续用途，信息密度和可核查性更高。"
+    },
+    {
+      "pair_id": "holdout-09-line-422",
+      "rater_id": "holdout-model-b",
+      "rater_kind": "model",
+      "text": "B先限定短时间窗和参数变化，再说明不能确定唯一界点，结论边界表达更自然。"
+    },
+    {
+      "pair_id": "holdout-10-line-488",
+      "rater_id": "holdout-model-b",
+      "rater_kind": "model",
+      "text": "A以连续现象链连接治理重点，物种、资源层和监测指标的具体对应更丰富。"
+    },
+    {
+      "pair_id": "holdout-11-line-502",
+      "rater_id": "holdout-model-b",
+      "rater_kind": "model",
+      "text": "B用更明确的后续研究路径衔接标准化CPUE、连续监测和竞争摄食，语气更自然。"
+    },
+    {
+      "pair_id": "holdout-12-line-524",
+      "rater_id": "holdout-model-b",
+      "rater_kind": "model",
+      "text": "B按五个子问题逐一对应共享逻辑链，模块职责和信息传递关系说明得更清楚。"
+    }
+  ],
+  "variants": [
+    "candidate",
+    "source"
+  ],
+  "coverage": {
+    "holdout-01-line-22": 2,
+    "holdout-02-line-38": 2,
+    "holdout-03-line-54": 2,
+    "holdout-04-line-57": 2,
+    "holdout-05-line-64": 2,
+    "holdout-06-line-79": 2,
+    "holdout-07-line-207": 2,
+    "holdout-08-line-277": 2,
+    "holdout-09-line-422": 2,
+    "holdout-10-line-488": 2,
+    "holdout-11-line-502": 2,
+    "holdout-12-line-524": 2
+  },
+  "human_coverage": {
+    "holdout-01-line-22": 0,
+    "holdout-02-line-38": 0,
+    "holdout-03-line-54": 0,
+    "holdout-04-line-57": 0,
+    "holdout-05-line-64": 0,
+    "holdout-06-line-79": 0,
+    "holdout-07-line-207": 0,
+    "holdout-08-line-277": 0,
+    "holdout-09-line-422": 0,
+    "holdout-10-line-488": 0,
+    "holdout-11-line-502": 0,
+    "holdout-12-line-524": 0
+  },
+  "model_coverage": {
+    "holdout-01-line-22": 2,
+    "holdout-02-line-38": 2,
+    "holdout-03-line-54": 2,
+    "holdout-04-line-57": 2,
+    "holdout-05-line-64": 2,
+    "holdout-06-line-79": 2,
+    "holdout-07-line-207": 2,
+    "holdout-08-line-277": 2,
+    "holdout-09-line-422": 2,
+    "holdout-10-line-488": 2,
+    "holdout-11-line-502": 2,
+    "holdout-12-line-524": 2
+  },
+  "unspecified_coverage": {
+    "holdout-01-line-22": 0,
+    "holdout-02-line-38": 0,
+    "holdout-03-line-54": 0,
+    "holdout-04-line-57": 0,
+    "holdout-05-line-64": 0,
+    "holdout-06-line-79": 0,
+    "holdout-07-line-207": 0,
+    "holdout-08-line-277": 0,
+    "holdout-09-line-422": 0,
+    "holdout-10-line-488": 0,
+    "holdout-11-line-502": 0,
+    "holdout-12-line-524": 0
+  },
+  "formal_human_ready": false,
+  "evaluation_level": "PROBE_OR_HUMAN_PENDING",
+  "evidence": {
+    "key": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\holdout-v1\\blind-run\\evaluation-key.json",
+      "sha256": "0fcc9e1b6356b9d42fbce9003f8a9a082c78f39c914b7bdb0f67ea0171508480"
+    },
+    "ratings": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\holdout-v1\\blind-run\\model-ratings.csv",
+      "sha256": "8927aab14f3f64ca393fed591f45b26a7c353c30ef9d2be73e860a8f507a9447"
+    },
+    "packet": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\holdout-v1\\blind-run\\evaluation-packet.json",
+      "sha256": "5f05b93059ca3e8920adb895452428758342fc1f0a2756cb28e323f5657b1285"
+    },
+    "source_pairs": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\holdout-v1\\holdout-pairs.json",
+      "sha256": "481fef7b11698b032d5d919cbccf5b1b16dc01ff70f5046be0f4767231a28a02"
+    }
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+      "pair_id": "holdout-01-line-22",
+      "human_raters": 0
+    },
+    {
+      "severity": "warning",
+      "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+      "pair_id": "holdout-02-line-38",
+      "human_raters": 0
+    },
+    {
+      "severity": "warning",
+      "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+      "pair_id": "holdout-03-line-54",
+      "human_raters": 0
+    },
+    {
+      "severity": "warning",
+      "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+      "pair_id": "holdout-04-line-57",
+      "human_raters": 0
+    },
+    {
+      "severity": "warning",
+      "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+      "pair_id": "holdout-05-line-64",
+      "human_raters": 0
+    },
+    {
+      "severity": "warning",
+      "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+      "pair_id": "holdout-06-line-79",
+      "human_raters": 0
+    },
+    {
+      "severity": "warning",
+      "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+      "pair_id": "holdout-07-line-207",
+      "human_raters": 0
+    },
+    {
+      "severity": "warning",
+      "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+      "pair_id": "holdout-08-line-277",
+      "human_raters": 0
+    },
+    {
+      "severity": "warning",
+      "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+      "pair_id": "holdout-09-line-422",
+      "human_raters": 0
+    },
+    {
+      "severity": "warning",
+      "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+      "pair_id": "holdout-10-line-488",
+      "human_raters": 0
+    },
+    {
+      "severity": "warning",
+      "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+      "pair_id": "holdout-11-line-502",
+      "human_raters": 0
+    },
+    {
+      "severity": "warning",
+      "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+      "pair_id": "holdout-12-line-524",
+      "human_raters": 0
+    }
+  ],
+  "interpretation": "Counts report preferences from the declared rater kinds. Model probes are diagnostic only; formal release requires two human raters per pair. No count proves authorship or detector performance."
+}

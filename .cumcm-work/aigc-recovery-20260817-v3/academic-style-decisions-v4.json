@@ -1,0 +1,43 @@
+{
+  "schema": "aigc-academic-style-decisions/v1",
+  "source_tree_sha256": "49d9f41f4fcc7bff1657b26cedcfd3b7b8158b245a5095f7ebaab38b8497978d",
+  "candidate_tree_sha256": "3d698ca3acdcbe8cbf52f43e51a29aa33f41e415b6574f4ef1bfbee83efda29e",
+  "decisions": [
+    {
+      "signal_id": "LEX-STRICT-CORPUS-SCOPE-01",
+      "relative_path": "main.tex",
+      "line": 32,
+      "column": 22,
+      "matched": "会自动",
+      "decision": "keep",
+      "reason": "“不会自动转化”限定资源恢复与系统健康之间不存在必然对应，属于摘要结论边界。",
+      "reviewer": "Codex source-bound review"
+    },
+    {
+      "signal_id": "LEX-STRICT-CORPUS-OUTLOOK-01",
+      "relative_path": "main.tex",
+      "line": 487,
+      "column": 10,
+      "matched": "治理建议",
+      "decision": "keep",
+      "reason": "该标题标明由模型结果转入条件性措施讨论，正文已限定情景排序不能等同实际治理效果。",
+      "reviewer": "Codex source-bound review"
+    }
+  ],
+  "semantic_decisions": [
+    {
+      "code": "NEGATION_CHANGED",
+      "finding_sha256": "96e0641599b7d0466f70bdeba76138ad08f53f890da10f630022eebdefdb0776",
+      "decision": "accept",
+      "reason": "二十个改写单元均已通过原生否定、模态、条件和报告状态检查；外层差异来自跨段全局词形统计，没有命题极性反转。",
+      "reviewer": "Codex source-bound review"
+    },
+    {
+      "code": "CLAIM_STRENGTH_CHANGED",
+      "finding_sha256": "ac9ee018c8982bc522219683a3ab466dc73a4f782a7a49af79e95739f7a378d7",
+      "decision": "accept",
+      "reason": "源稿多处“显著”被保守降格；候选新增“支持”均绑定当前测试、资料或否定语境，没有把相关或情景结果提升为证明。",
+      "reviewer": "Codex source-bound review"
+    }
+  ]
+}

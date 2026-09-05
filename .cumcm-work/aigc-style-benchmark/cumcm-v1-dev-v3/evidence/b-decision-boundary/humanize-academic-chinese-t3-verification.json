@@ -1,0 +1,38 @@
+{
+  "schema": "aigc-adapter-run/v1",
+  "package": "humanize-academic-chinese",
+  "action": "verify-candidate",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-v3\\incoming-evidence\\b-decision-boundary-t3\\verify",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev\\sources\\b-decision-boundary.txt",
+    "sha256": "81d3f3f287335a10ec05dd90cb6739f9b70c51aea4d96c72e8b84114a185ff0b",
+    "bytes": 903,
+    "suffix": ".txt"
+  },
+  "protected_inventory": {
+    "numbers": {},
+    "tex_commands": {},
+    "tex_keys": {},
+    "inline_math": {},
+    "dollar_display_math": {},
+    "display_math": {},
+    "math_environments": {},
+    "code_fences": {},
+    "urls": {}
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev\\humanize-runs-v2\\b-decision-boundary-t3\\hir1-tspscs9p\\artifacts\\after.md",
+    "sha256": "aa8cf7c4e6f760f37ae483cf6098bf8187e20077ea8d036b34f85d7e4f30a722",
+    "bytes": 909,
+    "suffix": ".md"
+  },
+  "human_review_required": true
+}

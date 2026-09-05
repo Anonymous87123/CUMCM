@@ -1,0 +1,30 @@
+{
+  "schema": "aigc-benchmark-generation/v1",
+  "provider": "humanize-academic-chinese",
+  "status": "pass",
+  "authoring_actor": "model",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout\\sources\\a-search-error-boundary.txt",
+    "sha256": "85b65409e38c967aad05d65557921f28ae47bd6f8f4d98d49c58f607994a12e6"
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout\\humanize-runs-v1\\a-search-error-boundary-t3\\hir1-kopufd5x\\artifacts\\after.md",
+    "sha256": "d46ff9e9ea87256d047f81940a243a94db0721293d10b5f5fa2809919f976d9d"
+  },
+  "execution": {
+    "mode": "model_authored_native_validated",
+    "native_action": "validate_and_emit_frozen_candidate",
+    "run_id": "hir1-kopufd5x"
+  },
+  "native_report": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout\\humanize-runs-v1\\a-search-error-boundary-t3\\hir1-kopufd5x\\run.json",
+    "sha256": "21e1699c543a4ff5b0c3e091c58f2d00ced2b1dd3bf4047a711ae4d315e90ce3"
+  },
+  "claims": {
+    "human_authorship_proven": false,
+    "native_generation_proven": false,
+    "validation_executed": true,
+    "external_style_clearance": false,
+    "mechanical_validation_only": true
+  }
+}

@@ -1,0 +1,707 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "candidate_assembly_exit_code": 0,
+  "candidate_assembly_status": "PASS",
+  "delivery_gate_exit_code": 2,
+  "delivery_gate_status": "REVIEW",
+  "draft_surface_source_check": {
+    "details": {},
+    "scope": [],
+    "semantic_entailment_certified": false,
+    "status": "N/A"
+  },
+  "evidence": {
+    "after_path": "validation/U-e2ef47edd600.after.tex",
+    "after_sha256": "65a843e5d54601e5d3745b1c4e34b68d2e9f659b1fe2aacac3165478bf9bf34a",
+    "before_path": "validation/U-e2ef47edd600.before.tex",
+    "before_sha256": "d2d75dd45c766950a38872d54e5979c042bdebcf4485d1b818b32a5c24e9726a",
+    "checker_executed": true,
+    "document_format": "tex",
+    "document_scope": "FRAGMENT",
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "bf9bd7f80b080391f529df2dd0b993338b632daeb1ad4504d9d5e165466cefef",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "source_path_archived": false
+  },
+  "exit_code": 2,
+  "hard_invariant_layer_status": "PASS",
+  "humanize_quality_claim_allowed": false,
+  "introduced_findings": [],
+  "invariants": {
+    "advisories": [],
+    "errors": [],
+    "evidence": {
+      "document_scope": "FRAGMENT",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "speech_act_audit": {
+        "categories": {
+          "assumption": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "attribution_source": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "condition": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "definition_naming": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "focus_scope": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "logical_relation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "modality_scope": {
+            "after": {
+              "仅": 1,
+              "可": 1,
+              "默认": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0005",
+                "column": 21,
+                "end": 488,
+                "end_column": 22,
+                "end_line": 6,
+                "line": 6,
+                "marker": "可",
+                "sentence_context": "其中 代表基础食物链有效承载力，可汇总营养输入、水质改善和污染冲击对基础食物链的作用",
+                "sentence_id": "T0003",
+                "side": "after",
+                "start": 487
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0010",
+                "column": 128,
+                "end": 595,
+                "end_column": 129,
+                "end_line": 6,
+                "line": 6,
+                "marker": "仅",
+                "sentence_context": "这里仅沿用营养级对应关系，用来解释三级食物链的生态位",
+                "sentence_id": "T0005",
+                "side": "after",
+                "start": 594
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0027",
+                "column": 54,
+                "end": 1073,
+                "end_column": 56,
+                "end_line": 18,
+                "line": 18,
+                "marker": "默认",
+                "sentence_context": "& 5.0 & 中层对底层的摄食率，取自 Hastings \\& Powell (1991) 默认值 \\\\",
+                "sentence_id": "T0016",
+                "side": "after",
+                "start": 1071
+              }
+            ],
+            "before": {
+              "仅": 1,
+              "可": 1,
+              "默认": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0006",
+                "column": 21,
+                "end": 488,
+                "end_column": 22,
+                "end_line": 6,
+                "line": 6,
+                "marker": "可",
+                "sentence_context": "其中 代表基础食物链有效承载力，可理解为营养输入、水质改善或污染冲击后的综合结果",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 487
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0011",
+                "column": 129,
+                "end": 596,
+                "end_column": 130,
+                "end_line": 6,
+                "line": 6,
+                "marker": "仅",
+                "sentence_context": "我们在这里仅保留营养级对应，用于说明三级食物链的生态位含义，不直接继承问题一的参数数值",
+                "sentence_id": "T0005",
+                "side": "before",
+                "start": 595
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0028",
+                "column": 54,
+                "end": 1073,
+                "end_column": 56,
+                "end_line": 18,
+                "line": 18,
+                "marker": "默认",
+                "sentence_context": "& 5.0 & 中层对底层的摄食率，取自 Hastings \\& Powell (1991) 默认值 \\\\",
+                "sentence_id": "T0015",
+                "side": "before",
+                "start": 1071
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "negation": {
+            "after": {
+              "不": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0012",
+                "column": 161,
+                "end": 628,
+                "end_column": 162,
+                "end_line": 6,
+                "line": 6,
+                "marker": "不",
+                "sentence_context": "问题一的参数数值不移入本模型",
+                "sentence_id": "T0006",
+                "side": "after",
+                "start": 627
+              }
+            ],
+            "before": {
+              "不": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0013",
+                "column": 154,
+                "end": 621,
+                "end_column": 155,
+                "end_line": 6,
+                "line": 6,
+                "marker": "不",
+                "sentence_context": "我们在这里仅保留营养级对应，用于说明三级食物链的生态位含义，不直接继承问题一的参数数值",
+                "sentence_id": "T0005",
+                "side": "before",
+                "start": 620
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "reporting_observation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          }
+        },
+        "claim_pairing": {
+          "after_claims": 37,
+          "before_claims": 38,
+          "unique_exact_pairs": 32,
+          "unpaired_after_claims": 5,
+          "unpaired_before_claims": 6
+        },
+        "protection": {
+          "after_ranges": 26,
+          "before_ranges": 26,
+          "line_column_basis": "NORMALIZED_LF_1_BASED_UNICODE_CODEPOINT",
+          "masking": "LENGTH_PRESERVING"
+        }
+      }
+    },
+    "hard_failure": false,
+    "status": "pass",
+    "summary": {
+      "advisories": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    "warnings": []
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 0,
+    "introduced_candidates": 0,
+    "unexplained_high_candidates": 0
+  },
+  "mechanical_validation_exit_code": 0,
+  "mechanical_validation_status": "PASS",
+  "mode": "REWRITE",
+  "paired_quality_clearance_granted": false,
+  "paired_quality_review_local_clearance_supported": false,
+  "paired_quality_review_request": {
+    "artifact": {
+      "after_sha256": "65a843e5d54601e5d3745b1c4e34b68d2e9f659b1fe2aacac3165478bf9bf34a",
+      "before_sha256": "d2d75dd45c766950a38872d54e5979c042bdebcf4485d1b818b32a5c24e9726a"
+    },
+    "changes": [
+      {
+        "after": {
+          "end_line": 2,
+          "han_chars": 56,
+          "line_count": 1,
+          "sha256": "a3020943caab04154032b3480d089282ca7ce9bfb815adaed1081d812b308368",
+          "start_line": 2
+        },
+        "before": {
+          "end_line": 2,
+          "han_chars": 54,
+          "line_count": 1,
+          "sha256": "ad8d8c22a993f3e5ed127f2915a3b134a5e62ead16717d913e16f3709bec6a2b",
+          "start_line": 2
+        },
+        "change_id": "QCH-d3943ed1fc3d4c1e5626",
+        "operation": "REPLACE",
+        "ordinal": 1
+      },
+      {
+        "after": {
+          "end_line": 15,
+          "han_chars": 121,
+          "line_count": 1,
+          "sha256": "b276d191366c800dfac1dca30434c86763d4b7517c6b4d68657405ed804f1a95",
+          "start_line": 15
+        },
+        "before": {
+          "end_line": 15,
+          "han_chars": 121,
+          "line_count": 1,
+          "sha256": "eecbf306beaf5280620f21d5a14ba8c4cb6273e71ac28bd3dd7d318bf18a93ff",
+          "start_line": 15
+        },
+        "change_id": "QCH-192d1fbf1788294ce673",
+        "operation": "REPLACE",
+        "ordinal": 2
+      }
+    ],
+    "limitations": {
+      "academic_correctness": "NOT_EVALUATED",
+      "authorship": "NOT_EVALUATED",
+      "quality_clearance_granted": false
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "bf9bd7f80b080391f529df2dd0b993338b632daeb1ad4504d9d5e165466cefef",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "request_sha256": "7695c82c12ba5a38a4ba24a9378925d06a644a262e7c1cdff8c6a0ae50c0f24b",
+    "review_contract": {
+      "empty_or_generic_benefit_is_clearance": false,
+      "local_model_or_caller_assertion_is_clearance": false,
+      "required_dimensions": [
+        "actionable_pathology_remaining",
+        "no_change_is_best_available_decision",
+        "problem_span_binding",
+        "independent_reading_benefit",
+        "subject_and_modifier_alignment",
+        "verb_object_collocation",
+        "logical_relation_preservation",
+        "template_field_role_and_authorization",
+        "information_density_and_rhythm",
+        "author_voice_non_regression"
+      ],
+      "required_per_change_verdicts": [
+        "ACCEPT",
+        "REVISE",
+        "REVERT"
+      ],
+      "validator_pass_is_quality_clearance": false
+    },
+    "schema": "humanize-paired-quality-review-request/v1",
+    "status": "PENDING_EXTERNAL_REVIEW",
+    "template_field_changes": [],
+    "validation_context": {
+      "artifact_relation": "CHANGED",
+      "decision": "REWRITE",
+      "decision_eligible": true,
+      "document_format": "tex",
+      "document_scope": "FRAGMENT",
+      "mechanical_validation_status": "PASS",
+      "mode": "REWRITE",
+      "scene": "MODELING"
+    }
+  },
+  "paired_quality_review_status": "PENDING_EXTERNAL_REVIEW",
+  "paired_style_delta_findings": [],
+  "paired_style_delta_layer_status": "NOT_APPLICABLE",
+  "paired_style_delta_summary": {
+    "authorship_inference": false,
+    "finding_count": 0,
+    "scope": "PAIRED_COURSE_VOICE_NON_REGRESSION_CANDIDATE",
+    "status": "NOT_APPLICABLE"
+  },
+  "pending_warnings": [],
+  "proposed_warning_resolutions": [],
+  "report_scope_check": {
+    "editable_range_count": 0,
+    "editable_ranges": [],
+    "extractor_replay_match": null,
+    "fragment_count": 0,
+    "outside_selection_unchanged": null,
+    "report_sha256": null,
+    "scope_path": null,
+    "scope_semantic_sha256": null,
+    "scope_sha256": null,
+    "source_sha256": null,
+    "status": "N/A"
+  },
+  "review_reasons": [
+    "paired_quality_not_evaluated"
+  ],
+  "scene": "MODELING",
+  "semantic_source_check": "N/A",
+  "speech_act_diagnostics": [],
+  "speech_act_layer_status": "PASS",
+  "status": "REVIEW",
+  "strict_corpus_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 0,
+    "clean_allowed_by_strict_layer": true,
+    "enabled": true,
+    "no_change_allowed": true,
+    "unexplained_candidates": 0
+  },
+  "structural_plan_check": {
+    "actual_content_changed": true,
+    "change_applied": false,
+    "invariant_baseline_sha256": "79e4915f2e0f7c6714d7fcbb311b3af209f99c1467662d08c81b567cb41cbc57",
+    "limitations": "non-STRUCTURAL run",
+    "non_structural_paragraph_order_check": {
+      "author_paragraphs_after": 2,
+      "author_paragraphs_before": 2,
+      "authorized_topology_operations": 0,
+      "detected_paragraph_merges": [],
+      "detected_paragraph_splits": [],
+      "light_sentence_reorder": false,
+      "match_evidence": [
+        {
+          "after_index": 0,
+          "before_index": 0,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00426"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 1,
+          "before_index": 1,
+          "before_sha256": "f486517fcc8e3a4b611e1f55bd1535ef4bf48a93be74ce5c2e827fe84d52faf6",
+          "kind": "AUTHOR",
+          "method": "NEAR_EXACT",
+          "protected_ids": [],
+          "similarity": 0.821918
+        },
+        {
+          "after_index": 2,
+          "before_index": 2,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00429"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 3,
+          "before_index": 3,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00430"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 4,
+          "before_index": 4,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00431"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 5,
+          "before_index": 5,
+          "before_sha256": "ec3b28931cb05c30ce7583c209ccd631e2e08de440a877dd3ae73c0bac3d8664",
+          "kind": "AUTHOR",
+          "method": "NEAR_EXACT",
+          "protected_ids": [],
+          "similarity": 0.927326
+        },
+        {
+          "after_index": 6,
+          "before_index": 6,
+          "before_sha256": "6d0a8a0c0557fce1540b85c2ab65f44c6b5ceb8bbee952d025046c50d6bf7389",
+          "kind": "AUTHOR",
+          "method": "EXACT",
+          "protected_ids": [],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 7,
+          "before_index": 7,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00442"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 8,
+          "before_index": 8,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00443"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 9,
+          "before_index": 9,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00444"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 10,
+          "before_index": 10,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00445"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 11,
+          "before_index": 11,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00446"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 12,
+          "before_index": 12,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00447"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 13,
+          "before_index": 13,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00449"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 14,
+          "before_index": 14,
+          "before_sha256": "6fb0cd07616c453cea10ccc7ba8a0d8f3ed460ac579ec57b0b7533c3a24a2d68",
+          "kind": "AUTHOR",
+          "method": "EXACT",
+          "protected_ids": [],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 15,
+          "before_index": 15,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00469"
+          ],
+          "similarity": 1.0
+        }
+      ],
+      "matched_author_paragraphs": 4,
+      "matched_elements": 18,
+      "matched_protected_anchors": 14,
+      "moved_paragraph_sha256": [],
+      "near_exact_reordered": false,
+      "paragraph_topology_changed": false,
+      "protected_anchor_reordered": false,
+      "reordered": false,
+      "scope": "NON_STRUCTURAL_PARAGRAPH_TOPOLOGY_AND_ORDER",
+      "status": "PASS",
+      "topology_authorization_error": "",
+      "topology_authorization_status": "NOT_REQUIRED",
+      "topology_operation_evidence": []
+    },
+    "semantic_review_status": "NOT_ISSUED",
+    "status": "NOT_APPLICABLE"
+  },
+  "style_signal_layer_status": "PASS",
+  "template_field_edit_scope_check": {
+    "authorized_edit_count": 0,
+    "authorized_edits": [],
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "provided": false,
+    "schema_version": null,
+    "scope_sha256": null,
+    "source_sha256": "d2d75dd45c766950a38872d54e5979c042bdebcf4485d1b818b32a5c24e9726a",
+    "status": "N/A"
+  },
+  "template_field_findings": [],
+  "template_field_layer_status": "PASS",
+  "template_field_summary": {
+    "authorized_edit_count": 0,
+    "finding_count": 0,
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "review_finding_count": 0,
+    "status": "PASS"
+  },
+  "unaccepted_warnings": [],
+  "unexplained_high_findings": [],
+  "unexplained_strict_findings": [],
+  "warning_proposal_state": {
+    "attestation_status": "NOT_PROVIDED",
+    "cross_record_reviewer_linkability": "NOT_RECORDED",
+    "identity_verified": false,
+    "proposal_source": "NOT_PROVIDED",
+    "proposed_warning_fingerprints": [],
+    "review_clearance_granted": false,
+    "reviewer_identifier_collected": false,
+    "stable_reviewer_pseudonym_recorded": false,
+    "warning_review_request_sha256": null
+  },
+  "warning_resolutions": {},
+  "warning_review_request": null,
+  "warnings_without_resolution_proposal": []
+}

@@ -1,0 +1,88 @@
+{
+  "artifact": {
+    "after_sha256": "17777981171ab0b1d00594f62cf0456d963f796d953558c34a3d8949c66fcca8",
+    "before_sha256": "4e6042c171e7f2d38f5648fc2340249fff711739bd9ede2fe2bcb98029d2054e"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "2ac9308192cbbcf3684b9f2fb6ff276597a0d6aaba9686b96818b3dd14f7cda9",
+  "chunk_binding_sha256": "c1081574d47b068444274d0ebd59f0225d9d152e891b025a4badc9a089826c92",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-c530201b41a9.diff",
+    "sha256": "28fc05b961ffc5705fcdb56495ea4cb6ffe5925872b97fc43eb7318e537ae3c9"
+  },
+  "evidence_sha256": "91036577af8f796776c4499b3ebd97ece3b0cc8af26ba6b9c0a765373b39559f",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "由总量合并无法解释底层退化这一矛盾，引出四组资源与鱼类的配对关系。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "由总量合并无法解释底层退化这一矛盾，引出四组资源与鱼类的配对关系。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "6cd364da1cc2d4f619c7b602add344815ea6d2bcbcd3d62d70837710d6ba0715",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "id": "S2",
+        "sha256": "777b6651fb303315a98b01ad3e50a03146caa59bdc18fdcd078c322ea71005ca",
+        "start_line": 4
+      }
+    ],
+    "summary": "由总量合并无法解释底层退化这一矛盾，引出四组资源与鱼类的配对关系。",
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "operation": "REPLACE",
+        "start_line": 4
+      }
+    ],
+    "masked_after_sha256": "abac7a845cf4b9ba596114ca5d2c3b40e3fdd1663c85c5c6b139c7228260b7da",
+    "masked_before_sha256": "0230f52d8c81395a3366332bae876871e738a5b76d18534d02f276f7ead2c974",
+    "source_spans_covered": 2,
+    "source_spans_total": 2,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "9fcb63d9c0f5a630b18dc8f0bb07e5faa6551e77e5ec10d583cd8b80af2418a4",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-c530201b41a9"
+}

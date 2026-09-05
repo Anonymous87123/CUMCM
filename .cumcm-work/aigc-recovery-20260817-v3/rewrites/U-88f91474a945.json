@@ -1,0 +1,108 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-88f91474a945",
+  "chunk_binding_sha256": "3634b0011547cbb8afd6ef5ec589f6618766d6afb2e7cee701aa0fc72884db49",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "842ae235d7ee9818",
+    "prepare_integrity_sha256": "c38e1d6ea4a8467e7d26d083319b223bd567819e17070c0ac06e74de425e1aa2",
+    "run_metadata_sha256": "af8e27fded78b4cdf5593d7a49751c6f6e43e94172419e8103c4f33a166925b9",
+    "policy_snapshot_sha256": "78c9d819ed643befe1459941693ca6ea078ca61644c28b531ba2fb612fd20234",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "unit_id": "U-88f91474a945",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 3935,
+      "end": 4217,
+      "start_line": 71,
+      "end_line": 75,
+      "source_span_sha256": "25b739f8310fb1363c5478a19d66e7afa6b077be20b48abe0e1c9524de8130de",
+      "masked_text_sha256": "912500524d6c2e4631eb28bf8265301f683cb260bf6a0724436ca2c0246813da",
+      "chunk_binding_sha256": "3634b0011547cbb8afd6ef5ec589f6618766d6afb2e7cee701aa0fc72884db49"
+    },
+    "scene_route": {
+      "requested_scene": "MODELING",
+      "resolved_scene": "MODELING",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "c5fd2b4e42bc3226945d4b430b1533b16059efc50ea539837c6f5c3322bdb863",
+      "routing_input_sha256": "eac2088cc5c7249ba96b272ae27d6a44a7c92eefbb2472724f3c32cb9389e556"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-modeling",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "MODELING",
+      "profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "068c75a74d08c180b2c6112cd34c52ba118056a954d8deeb2b0ade0480630abd"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00061:c7fd7a00fa4b]]\n问题三只按轨道形态区分长期行为，问题四继续检查这些不规则轨道是否伴随初值敏感性。有限时间窗内的正李雅普诺夫指数若随步长、积分时长或初值改变而消失，就不能据此确定稳定混沌或唯一动力学阈值。\n\n方程组保持不变，除基准参数扫描外还分别，调整积分时长、步长及局部初始条件，检验正李雅普诺夫指数区间的鲁棒性。判别结果若跨数值设置保持一致，可支持动力学复杂性增强的趋势；若随设置改变，则只报告[[PROTECTED:F00001-P00062:c080be86fe3f]]的保守结论。\n\n",
+  "rewrite_intent": {
+    "summary": "区分轨道不规则与初值敏感性，收紧有限时间李雅普诺夫指数的结论。",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "区分轨道不规则与初值敏感性，收紧有限时间李雅普诺夫指数的结论。"
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "区分轨道不规则与初值敏感性，收紧有限时间李雅普诺夫指数的结论。"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 2,
+        "end_line": 2,
+        "sha256": "89c8d2849646eac8958123e5bb3958aa6ec04e1f6df1262708c884cdcb612f3b"
+      },
+      {
+        "id": "S2",
+        "start_line": 4,
+        "end_line": 4,
+        "sha256": "80bfb6f65e1bd0c459a586e8ff685c65ab83276d921c5f763fa90fa338fce03d"
+      }
+    ],
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  }
+}

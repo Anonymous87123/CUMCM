@@ -1,0 +1,70 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-05e9265c162b",
+  "chunk_binding_sha256": "314b43eeb796cf9d3c766cf849865df83e1b5339f63b7e01c543c7f11e10db30",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "842ae235d7ee9818",
+    "prepare_integrity_sha256": "d29792bc3f5dc4de93f9af478012116f2e8efb1b3db0f52f6a68ea908266d04c",
+    "run_metadata_sha256": "3707a4069ea1f90054467e86965e07118cc2d6eb1b053b492b1a2336ba1fd561",
+    "policy_snapshot_sha256": "78c9d819ed643befe1459941693ca6ea078ca61644c28b531ba2fb612fd20234",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "unit_id": "U-05e9265c162b",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 3661,
+      "end": 3935,
+      "start_line": 66,
+      "end_line": 70,
+      "source_span_sha256": "9ae12364f598e42360d28d9e1680bd8fa3e39012d18043b6625cbbc90c146892",
+      "masked_text_sha256": "e65961cd3752669d3d27b623cf55394504b159295e87bc9f1f6547c60e46376e",
+      "chunk_binding_sha256": "314b43eeb796cf9d3c766cf849865df83e1b5339f63b7e01c543c7f11e10db30"
+    },
+    "scene_route": {
+      "requested_scene": "MODELING",
+      "resolved_scene": "MODELING",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "6d394ef8a5faffaa94575a0b5bcba2df58987c495c369d968817a33cf236b27f",
+      "routing_input_sha256": "a8bbbd2f5afda50eb55a8fb7a810504b177f4c7f9dc2710772bdf6aceb6cdd47"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-modeling",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "MODELING",
+      "profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "85be296f05eb9c2523c7faf57d04cda5766ab4e1db4609c5d7f41baba1216c03"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00058:da4fbdf040c4]]\n系统长期动力学行为的识别比短期政策效应分析更依赖简洁的模型结构。若沿用前两问的高维划分，参数空间将急剧膨胀，反而难以归纳系统轨道类型。因此，我们在问题三中采用[[PROTECTED:F00001-P00059:03ab29b8e340]]的最简三级食物链闭环，将环境承载力变化抽象为无量纲控制参数[[PROTECTED:F00001-P00060:68e2c657635f]]，在同一参数轴上分析系统从规则有界振荡向复杂非线性波动的演化过程。\n\n仅靠轨道形态不足以支撑系统行为分类，还需结合统一时间窗内的后期轨道统计量。通过综合分析波动幅度、峰谷差及峰间间隔的离散程度，才能为系统行为分类提供可重复验证的定量依据。\n\n",
+  "rewrite_intent": {
+    "summary": "TODO: edit masked_text, then replace this placeholder and populate operations, source_spans, and target_signals before finalize",
+    "operations": [],
+    "source_spans": [],
+    "target_signals": []
+  }
+}

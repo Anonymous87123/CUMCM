@@ -1,0 +1,324 @@
+{
+  "artifact": {
+    "after_sha256": "037b31fadc0a0dafc12570328aa2aa2d066ee932fbecdb2f53d0b7b32b0db686",
+    "before_sha256": "37c607f3e700be24e296ba6031796256e61ecfba607262a7af839658c404f329"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "ee35cf2b6b9b1bd5248ef4efce601173090de97ef8136f2df65cc424d63e8f3d",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "f83c6f8a0685151c89e44db01fad01f69476e2d9367751a60305bdd3d0220236",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "markdown",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "可": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0006",
+            "column": 85,
+            "end": 85,
+            "end_column": 86,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可",
+            "sentence_context": "由图(26)可见,在终止时结果未收敛,为了进一步使曲线收敛,我们选择了二次退火,并大幅度降低终止温度,当终止温度0.0008C时,收敛效果较好,如图(27)所示",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 84
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "可": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0006",
+                "column": 85,
+                "end": 85,
+                "end_column": 86,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "由图(26)可见,在终止时结果未收敛,为了进一步使曲线收敛,我们选择了二次退火,并大幅度降低终止温度,当终止温度0.0008C时,收敛效果较好,如图(27)所示",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 84
+              }
+            ],
+            "removed": {
+              "可": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "eb681784a0032babd0a9782ff9ff378519d33e62a90350de061772026c690143"
+    },
+    {
+      "code": "SPEECH_ACT_REPORTING_OBSERVATION_CHANGED",
+      "details": {
+        "after": {
+          "显示": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "reporting_observation",
+            "claim_id": "C0008",
+            "column": 104,
+            "end": 105,
+            "end_column": 106,
+            "end_line": 1,
+            "line": 1,
+            "marker": "显示",
+            "sentence_context": "图(27)显示，此时曲线已基本收敛",
+            "sentence_id": "T0005",
+            "side": "after",
+            "start": 103
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "显示": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "显示": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "reporting_observation",
+                "claim_id": "C0008",
+                "column": 104,
+                "end": 105,
+                "end_column": 106,
+                "end_line": 1,
+                "line": 1,
+                "marker": "显示",
+                "sentence_context": "图(27)显示，此时曲线已基本收敛",
+                "sentence_id": "T0005",
+                "side": "after",
+                "start": 103
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'reporting_observation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "14fa438f5bef52dcdc1eacc94a48063ae0abc7820217360045f0bde43abf11fa"
+    },
+    {
+      "code": "SPEECH_ACT_LOGICAL_RELATION_CHANGED",
+      "details": {
+        "after": {
+          "于是": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "logical_relation",
+            "claim_id": "C0006",
+            "column": 74,
+            "end": 75,
+            "end_column": 76,
+            "end_line": 1,
+            "line": 1,
+            "marker": "于是",
+            "sentence_context": "于是改用二次退火，并把终止温度降至0.0008C",
+            "sentence_id": "T0004",
+            "side": "after",
+            "start": 73
+          }
+        ],
+        "before": {
+          "从而": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "logical_relation",
+            "claim_id": "C0003",
+            "column": 21,
+            "end": 22,
+            "end_column": 23,
+            "end_line": 1,
+            "line": 1,
+            "marker": "从而",
+            "sentence_context": "在问题四中,已将目标函数做了标准化处理,从而导致对终止温度的要求较高,终止温度对结果的收敛性起到至关重要的作用,图(26)为终止温度为0.1C时收敛曲线图",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 20
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "于是": 1
+          },
+          "removed": {
+            "从而": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "于是": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0006",
+                "column": 74,
+                "end": 75,
+                "end_column": 76,
+                "end_line": 1,
+                "line": 1,
+                "marker": "于是",
+                "sentence_context": "于是改用二次退火，并把终止温度降至0.0008C",
+                "sentence_id": "T0004",
+                "side": "after",
+                "start": 73
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0003",
+                "column": 21,
+                "end": 22,
+                "end_column": 23,
+                "end_line": 1,
+                "line": 1,
+                "marker": "从而",
+                "sentence_context": "在问题四中,已将目标函数做了标准化处理,从而导致对终止温度的要求较高,终止温度对结果的收敛性起到至关重要的作用,图(26)为终止温度为0.1C时收敛曲线图",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 20
+              }
+            ],
+            "removed": {
+              "从而": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'logical_relation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "42d2ecfe91b47caaa07de65714e95161a37c23f2e94c30d034782c92ec64288e"
+    },
+    {
+      "code": "SPEECH_ACT_CONDITION_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "当": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "condition",
+            "claim_id": "C0011",
+            "column": 130,
+            "end": 130,
+            "end_column": 131,
+            "end_line": 1,
+            "line": 1,
+            "marker": "当",
+            "sentence_context": "由图(26)可见,在终止时结果未收敛,为了进一步使曲线收敛,我们选择了二次退火,并大幅度降低终止温度,当终止温度0.0008C时,收敛效果较好,如图(27)所示",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 129
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "当": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0011",
+                "column": 130,
+                "end": 130,
+                "end_column": 131,
+                "end_line": 1,
+                "line": 1,
+                "marker": "当",
+                "sentence_context": "由图(26)可见,在终止时结果未收敛,为了进一步使曲线收敛,我们选择了二次退火,并大幅度降低终止温度,当终止温度0.0008C时,收敛效果较好,如图(27)所示",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 129
+              }
+            ],
+            "removed": {
+              "当": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'condition'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "81bc88e6c52b0492b545b671f1f2daa0d1b73a8de5e3a5259e4a549b0556da4b"
+    }
+  ]
+}

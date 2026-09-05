@@ -1,0 +1,818 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "candidate_assembly_exit_code": 0,
+  "candidate_assembly_status": "PASS",
+  "delivery_gate_exit_code": 2,
+  "delivery_gate_status": "REVIEW",
+  "draft_surface_source_check": {
+    "details": {},
+    "scope": [],
+    "semantic_entailment_certified": false,
+    "status": "N/A"
+  },
+  "evidence": {
+    "after_path": "validation/U-015593fe61e9.after.tex",
+    "after_sha256": "3d4f906d4050e70683cfff567e91a68dbdb213e6a54a7d49f28303d744dd1af5",
+    "before_path": "validation/U-015593fe61e9.before.tex",
+    "before_sha256": "42655d2784240dfde83e263394bff90604a9172bf8df92494f3a0842a875873e",
+    "checker_executed": true,
+    "document_format": "tex",
+    "document_scope": "FRAGMENT",
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "bf9bd7f80b080391f529df2dd0b993338b632daeb1ad4504d9d5e165466cefef",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "source_path_archived": false
+  },
+  "exit_code": 2,
+  "hard_invariant_layer_status": "PASS",
+  "humanize_quality_claim_allowed": false,
+  "introduced_findings": [],
+  "invariants": {
+    "advisories": [],
+    "errors": [],
+    "evidence": {
+      "document_scope": "FRAGMENT",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "speech_act_audit": {
+        "categories": {
+          "assumption": {
+            "after": {
+              "设": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "assumption",
+                "claim_id": "C0016",
+                "column": 124,
+                "end": 333,
+                "end_column": 125,
+                "end_line": 6,
+                "line": 6,
+                "marker": "设",
+                "sentence_context": "各模块共用时间口径、情景设定和上游输入，承担不同判断，彼此不替代",
+                "sentence_id": "T0010",
+                "side": "after",
+                "start": 332
+              }
+            ],
+            "before": {
+              "设": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "assumption",
+                "claim_id": "C0015",
+                "column": 136,
+                "end": 343,
+                "end_column": 137,
+                "end_line": 6,
+                "line": 6,
+                "marker": "设",
+                "sentence_context": "我们统一时间口径、情景设定和上游输入，使不同模块之间能够互相传递信息而不至于脱节",
+                "sentence_id": "T0009",
+                "side": "before",
+                "start": 342
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "attribution_source": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "condition": {
+            "after": {
+              "当": 1,
+              "若": 2
+            },
+            "after_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0006",
+                "column": 83,
+                "end": 107,
+                "end_column": 84,
+                "end_line": 2,
+                "line": 2,
+                "marker": "当",
+                "sentence_context": "四个指标经正向化后，熵权、CRITIC、等权和 2000 次局部扰动都给出同一排序，其中 始终最差，当前比较范围内，复合压力情景始终排在末位",
+                "sentence_id": "T0003",
+                "side": "after",
+                "start": 106
+              },
+              {
+                "category": "condition",
+                "claim_id": "C0010",
+                "column": 37,
+                "end": 166,
+                "end_column": 38,
+                "end_line": 4,
+                "line": 4,
+                "marker": "若",
+                "sentence_context": "若后续补入独立生态监测量并扩展污染、入侵强度梯度，新增数据用于检查这一排序能否外推",
+                "sentence_id": "T0006",
+                "side": "after",
+                "start": 165
+              },
+              {
+                "category": "condition",
+                "claim_id": "C0020",
+                "column": 36,
+                "end": 391,
+                "end_column": 37,
+                "end_line": 8,
+                "line": 8,
+                "marker": "若",
+                "sentence_context": "若连续河段监测、标准化CPUE、珍稀物种年度调查及污染分级资料齐全，单区结果才能按河段复算，长期动力学参数也才能与实际营养级数据对应",
+                "sentence_id": "T0012",
+                "side": "after",
+                "start": 390
+              }
+            ],
+            "before": {
+              "当": 1,
+              "若": 2
+            },
+            "before_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0006",
+                "column": 93,
+                "end": 117,
+                "end_column": 94,
+                "end_line": 2,
+                "line": 2,
+                "marker": "当",
+                "sentence_context": "四个指标经正向化后，熵权、CRITIC、等权和 2000 次局部扰动都给出同一排序，其中 始终最差，复合压力的负向作用在当前比较框架下较为稳定",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 116
+              },
+              {
+                "category": "condition",
+                "claim_id": "C0009",
+                "column": 37,
+                "end": 167,
+                "end_column": 38,
+                "end_line": 4,
+                "line": 4,
+                "marker": "若",
+                "sentence_context": "若后续补入独立生态监测量并扩展污染、入侵强度梯度，排序结论的外推边界会更清楚",
+                "sentence_id": "T0006",
+                "side": "before",
+                "start": 166
+              },
+              {
+                "category": "condition",
+                "claim_id": "C0019",
+                "column": 38,
+                "end": 412,
+                "end_column": 39,
+                "end_line": 8,
+                "line": 8,
+                "marker": "若",
+                "sentence_context": "若后续补入连续河段监测、标准化 CPUE、珍稀物种年度调查以及污染分级资料，单区框架可以继续推进到分段比较，长期动力学部分也能与实际营养级数据建立更稳定的对应关系",
+                "sentence_id": "T0011",
+                "side": "before",
+                "start": 411
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "definition_naming": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "focus_scope": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "logical_relation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "modality_scope": {
+            "after": {
+              "只": 1,
+              "可": 1,
+              "可以": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0001",
+                "column": 20,
+                "end": 20,
+                "end_column": 21,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "\\subsection{综合评价的排序可信度}",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 19
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 9,
+                "end": 33,
+                "end_column": 10,
+                "end_line": 2,
+                "line": 2,
+                "marker": "只",
+                "sentence_context": "问题五的综合评价只用于三种情景之间的相对比较",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 32
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0019",
+                "column": 15,
+                "end": 371,
+                "end_column": 17,
+                "end_line": 8,
+                "line": 8,
+                "marker": "可以",
+                "sentence_context": "\\noindent 现有资料可以支持方向性的情景比较和模型内机制解释",
+                "sentence_id": "T0011",
+                "side": "after",
+                "start": 369
+              }
+            ],
+            "before": {
+              "只": 1,
+              "可": 1,
+              "可以": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0001",
+                "column": 20,
+                "end": 20,
+                "end_column": 21,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "\\subsection{综合评价的排序可信度}",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 19
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 9,
+                "end": 33,
+                "end_column": 10,
+                "end_line": 2,
+                "line": 2,
+                "marker": "只",
+                "sentence_context": "问题五的综合评价只用于三种情景之间的相对比较",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 32
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0020",
+                "column": 80,
+                "end": 455,
+                "end_column": 82,
+                "end_line": 8,
+                "line": 8,
+                "marker": "可以",
+                "sentence_context": "若后续补入连续河段监测、标准化 CPUE、珍稀物种年度调查以及污染分级资料，单区框架可以继续推进到分段比较，长期动力学部分也能与实际营养级数据建立更稳定的对应关系",
+                "sentence_id": "T0011",
+                "side": "before",
+                "start": 453
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "negation": {
+            "after": {
+              "不": 3,
+              "不能": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0008",
+                "column": 5,
+                "end": 135,
+                "end_column": 7,
+                "end_line": 4,
+                "line": 4,
+                "marker": "不能",
+                "sentence_context": "综合分数不能替代单指标解释",
+                "sentence_id": "T0004",
+                "side": "after",
+                "start": 133
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0009",
+                "column": 27,
+                "end": 156,
+                "end_column": 28,
+                "end_line": 4,
+                "line": 4,
+                "marker": "不",
+                "sentence_context": "食源、江豚和长江鲟仍对应不同层面的生态状态",
+                "sentence_id": "T0005",
+                "side": "after",
+                "start": 155
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0017",
+                "column": 134,
+                "end": 343,
+                "end_column": 135,
+                "end_line": 6,
+                "line": 6,
+                "marker": "不",
+                "sentence_context": "各模块共用时间口径、情景设定和上游输入，承担不同判断，彼此不替代",
+                "sentence_id": "T0010",
+                "side": "after",
+                "start": 342
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0018",
+                "column": 141,
+                "end": 350,
+                "end_column": 142,
+                "end_line": 6,
+                "line": 6,
+                "marker": "不",
+                "sentence_context": "各模块共用时间口径、情景设定和上游输入，承担不同判断，彼此不替代",
+                "sentence_id": "T0010",
+                "side": "after",
+                "start": 349
+              }
+            ],
+            "before": {
+              "不": 3,
+              "不能": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0007",
+                "column": 5,
+                "end": 136,
+                "end_column": 7,
+                "end_line": 4,
+                "line": 4,
+                "marker": "不能",
+                "sentence_context": "综合分数不能替代单指标解释",
+                "sentence_id": "T0004",
+                "side": "before",
+                "start": 134
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0008",
+                "column": 27,
+                "end": 157,
+                "end_column": 28,
+                "end_line": 4,
+                "line": 4,
+                "marker": "不",
+                "sentence_context": "食源、江豚和长江鲟仍对应不同层面的生态状态",
+                "sentence_id": "T0005",
+                "side": "before",
+                "start": 156
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0016",
+                "column": 145,
+                "end": 352,
+                "end_column": 146,
+                "end_line": 6,
+                "line": 6,
+                "marker": "不",
+                "sentence_context": "我们统一时间口径、情景设定和上游输入，使不同模块之间能够互相传递信息而不至于脱节",
+                "sentence_id": "T0009",
+                "side": "before",
+                "start": 351
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0016",
+                "column": 160,
+                "end": 367,
+                "end_column": 161,
+                "end_line": 6,
+                "line": 6,
+                "marker": "不",
+                "sentence_context": "我们统一时间口径、情景设定和上游输入，使不同模块之间能够互相传递信息而不至于脱节",
+                "sentence_id": "T0009",
+                "side": "before",
+                "start": 366
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "reporting_observation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          }
+        },
+        "claim_pairing": {
+          "after_claims": 22,
+          "before_claims": 21,
+          "unique_exact_pairs": 8,
+          "unpaired_after_claims": 14,
+          "unpaired_before_claims": 13
+        },
+        "protection": {
+          "after_ranges": 2,
+          "before_ranges": 2,
+          "line_column_basis": "NORMALIZED_LF_1_BASED_UNICODE_CODEPOINT",
+          "masking": "LENGTH_PRESERVING"
+        }
+      }
+    },
+    "hard_failure": false,
+    "status": "pass",
+    "summary": {
+      "advisories": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    "warnings": []
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 6,
+    "introduced_candidates": 0,
+    "unexplained_high_candidates": 0
+  },
+  "mechanical_validation_exit_code": 0,
+  "mechanical_validation_status": "PASS",
+  "mode": "REWRITE",
+  "paired_quality_clearance_granted": false,
+  "paired_quality_review_local_clearance_supported": false,
+  "paired_quality_review_request": {
+    "artifact": {
+      "after_sha256": "3d4f906d4050e70683cfff567e91a68dbdb213e6a54a7d49f28303d744dd1af5",
+      "before_sha256": "42655d2784240dfde83e263394bff90604a9172bf8df92494f3a0842a875873e"
+    },
+    "changes": [
+      {
+        "after": {
+          "end_line": 2,
+          "han_chars": 79,
+          "line_count": 1,
+          "sha256": "013bf378fc506e91359736ac6c2c4c8592b02beb762fe6868ce45be7245c4e89",
+          "start_line": 2
+        },
+        "before": {
+          "end_line": 2,
+          "han_chars": 81,
+          "line_count": 1,
+          "sha256": "232b59992dbb26d81148957b9e7d14a853a7aab7350ec1503714501e72519604",
+          "start_line": 2
+        },
+        "change_id": "QCH-9d8ad7d9e5ca222ee2e5",
+        "operation": "REPLACE",
+        "ordinal": 1
+      },
+      {
+        "after": {
+          "end_line": 4,
+          "han_chars": 72,
+          "line_count": 1,
+          "sha256": "f9198bec73f9c6f6c348b9d070a5e50d79b4915ec6ed81936d393fce01731be6",
+          "start_line": 4
+        },
+        "before": {
+          "end_line": 4,
+          "han_chars": 69,
+          "line_count": 1,
+          "sha256": "b6e20fe895212f5e3f15615d3c2cad58781b1a0f051642e629f978587e9d0c9d",
+          "start_line": 4
+        },
+        "change_id": "QCH-bc9be40eea6ebd7216a5",
+        "operation": "REPLACE",
+        "ordinal": 2
+      },
+      {
+        "after": {
+          "end_line": 6,
+          "han_chars": 115,
+          "line_count": 1,
+          "sha256": "23b6f2dd52bbf6483ab57da5ab254f7fb7039286578d522b09be946a3d28a230",
+          "start_line": 6
+        },
+        "before": {
+          "end_line": 6,
+          "han_chars": 140,
+          "line_count": 1,
+          "sha256": "bb54bc28943d116dd7b0de056e7d6f5efea8200eddeeac76d6c93b1afc9565be",
+          "start_line": 6
+        },
+        "change_id": "QCH-60f162cf36fef4b651a3",
+        "operation": "REPLACE",
+        "ordinal": 3
+      },
+      {
+        "after": {
+          "end_line": 8,
+          "han_chars": 82,
+          "line_count": 1,
+          "sha256": "ff3c6dead34c9b66179f2650eda5adb7c6a91699455e1f8138503e0a44f15f5a",
+          "start_line": 8
+        },
+        "before": {
+          "end_line": 8,
+          "han_chars": 97,
+          "line_count": 1,
+          "sha256": "5aceac3b69c6c591c2201d8e057db86bfe4400408752c38eb065c35b2e8e4848",
+          "start_line": 8
+        },
+        "change_id": "QCH-94c8fe1e0ceb57c94386",
+        "operation": "REPLACE",
+        "ordinal": 4
+      }
+    ],
+    "limitations": {
+      "academic_correctness": "NOT_EVALUATED",
+      "authorship": "NOT_EVALUATED",
+      "quality_clearance_granted": false
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "bf9bd7f80b080391f529df2dd0b993338b632daeb1ad4504d9d5e165466cefef",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "request_sha256": "80bf6dc080e8cb966110cc5d845aa69e218002c6deca4770521187d753ffd21d",
+    "review_contract": {
+      "empty_or_generic_benefit_is_clearance": false,
+      "local_model_or_caller_assertion_is_clearance": false,
+      "required_dimensions": [
+        "actionable_pathology_remaining",
+        "no_change_is_best_available_decision",
+        "problem_span_binding",
+        "independent_reading_benefit",
+        "subject_and_modifier_alignment",
+        "verb_object_collocation",
+        "logical_relation_preservation",
+        "template_field_role_and_authorization",
+        "information_density_and_rhythm",
+        "author_voice_non_regression"
+      ],
+      "required_per_change_verdicts": [
+        "ACCEPT",
+        "REVISE",
+        "REVERT"
+      ],
+      "validator_pass_is_quality_clearance": false
+    },
+    "schema": "humanize-paired-quality-review-request/v1",
+    "status": "PENDING_EXTERNAL_REVIEW",
+    "template_field_changes": [],
+    "validation_context": {
+      "artifact_relation": "CHANGED",
+      "decision": "REWRITE",
+      "decision_eligible": true,
+      "document_format": "tex",
+      "document_scope": "FRAGMENT",
+      "mechanical_validation_status": "PASS",
+      "mode": "REWRITE",
+      "scene": "MODELING"
+    }
+  },
+  "paired_quality_review_status": "PENDING_EXTERNAL_REVIEW",
+  "paired_style_delta_findings": [],
+  "paired_style_delta_layer_status": "NOT_APPLICABLE",
+  "paired_style_delta_summary": {
+    "authorship_inference": false,
+    "finding_count": 0,
+    "scope": "PAIRED_COURSE_VOICE_NON_REGRESSION_CANDIDATE",
+    "status": "NOT_APPLICABLE"
+  },
+  "pending_warnings": [],
+  "proposed_warning_resolutions": [],
+  "report_scope_check": {
+    "editable_range_count": 0,
+    "editable_ranges": [],
+    "extractor_replay_match": null,
+    "fragment_count": 0,
+    "outside_selection_unchanged": null,
+    "report_sha256": null,
+    "scope_path": null,
+    "scope_semantic_sha256": null,
+    "scope_sha256": null,
+    "source_sha256": null,
+    "status": "N/A"
+  },
+  "review_reasons": [
+    "paired_quality_not_evaluated"
+  ],
+  "scene": "MODELING",
+  "semantic_source_check": "N/A",
+  "speech_act_diagnostics": [],
+  "speech_act_layer_status": "PASS",
+  "status": "REVIEW",
+  "strict_corpus_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 6,
+    "clean_allowed_by_strict_layer": true,
+    "enabled": true,
+    "no_change_allowed": true,
+    "unexplained_candidates": 0
+  },
+  "structural_plan_check": {
+    "actual_content_changed": true,
+    "change_applied": false,
+    "invariant_baseline_sha256": "523f5d75fcf3f5cd5c0e3808294219b007676bf4fd2c3380e8b9630f9f995341",
+    "limitations": "non-STRUCTURAL run",
+    "non_structural_paragraph_order_check": {
+      "author_paragraphs_after": 4,
+      "author_paragraphs_before": 4,
+      "authorized_topology_operations": 0,
+      "detected_paragraph_merges": [],
+      "detected_paragraph_splits": [],
+      "light_sentence_reorder": false,
+      "match_evidence": [
+        {
+          "after_index": 0,
+          "before_index": 0,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00683"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 1,
+          "before_index": 1,
+          "before_sha256": "48c6642fc96f19b20ddb4ab29b22fe9a622030ffe20ed67cb4d68e5fde6d1a02",
+          "kind": "AUTHOR",
+          "method": "NEAR_EXACT",
+          "protected_ids": [],
+          "similarity": 0.883895
+        },
+        {
+          "after_index": 2,
+          "before_index": 2,
+          "before_sha256": "587331b3de56b4be1d9d0cc2801ff6f5b114896f966ce93382e49e2dc8a1b570",
+          "kind": "AUTHOR",
+          "method": "NEAR_EXACT",
+          "protected_ids": [],
+          "similarity": 0.862745
+        }
+      ],
+      "matched_author_paragraphs": 2,
+      "matched_elements": 3,
+      "matched_protected_anchors": 1,
+      "moved_paragraph_sha256": [],
+      "near_exact_reordered": false,
+      "paragraph_topology_changed": false,
+      "protected_anchor_reordered": false,
+      "reordered": false,
+      "scope": "NON_STRUCTURAL_PARAGRAPH_TOPOLOGY_AND_ORDER",
+      "status": "PASS",
+      "topology_authorization_error": "",
+      "topology_authorization_status": "NOT_REQUIRED",
+      "topology_operation_evidence": []
+    },
+    "semantic_review_status": "NOT_ISSUED",
+    "status": "NOT_APPLICABLE"
+  },
+  "style_signal_layer_status": "PASS",
+  "template_field_edit_scope_check": {
+    "authorized_edit_count": 0,
+    "authorized_edits": [],
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "provided": false,
+    "schema_version": null,
+    "scope_sha256": null,
+    "source_sha256": "42655d2784240dfde83e263394bff90604a9172bf8df92494f3a0842a875873e",
+    "status": "N/A"
+  },
+  "template_field_findings": [],
+  "template_field_layer_status": "PASS",
+  "template_field_summary": {
+    "authorized_edit_count": 0,
+    "finding_count": 0,
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "review_finding_count": 0,
+    "status": "PASS"
+  },
+  "unaccepted_warnings": [],
+  "unexplained_high_findings": [],
+  "unexplained_strict_findings": [],
+  "warning_proposal_state": {
+    "attestation_status": "NOT_PROVIDED",
+    "cross_record_reviewer_linkability": "NOT_RECORDED",
+    "identity_verified": false,
+    "proposal_source": "NOT_PROVIDED",
+    "proposed_warning_fingerprints": [],
+    "review_clearance_granted": false,
+    "reviewer_identifier_collected": false,
+    "stable_reviewer_pseudonym_recorded": false,
+    "warning_review_request_sha256": null
+  },
+  "warning_resolutions": {},
+  "warning_review_request": null,
+  "warnings_without_resolution_proposal": []
+}

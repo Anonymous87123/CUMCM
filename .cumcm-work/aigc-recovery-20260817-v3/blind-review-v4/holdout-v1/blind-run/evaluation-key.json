@@ -1,0 +1,77 @@
+{
+  "schema": "aigc-blind-key/v1",
+  "seed": 20260818,
+  "dimensions": [
+    "naturalness",
+    "judgment_trajectory",
+    "specificity",
+    "content_density",
+    "semantic_fidelity"
+  ],
+  "pairs": [
+    {
+      "pair_id": "holdout-01-line-22",
+      "A": "source",
+      "B": "candidate"
+    },
+    {
+      "pair_id": "holdout-02-line-38",
+      "A": "candidate",
+      "B": "source"
+    },
+    {
+      "pair_id": "holdout-03-line-54",
+      "A": "source",
+      "B": "candidate"
+    },
+    {
+      "pair_id": "holdout-04-line-57",
+      "A": "candidate",
+      "B": "source"
+    },
+    {
+      "pair_id": "holdout-05-line-64",
+      "A": "candidate",
+      "B": "source"
+    },
+    {
+      "pair_id": "holdout-06-line-79",
+      "A": "source",
+      "B": "candidate"
+    },
+    {
+      "pair_id": "holdout-07-line-207",
+      "A": "source",
+      "B": "candidate"
+    },
+    {
+      "pair_id": "holdout-08-line-277",
+      "A": "source",
+      "B": "candidate"
+    },
+    {
+      "pair_id": "holdout-09-line-422",
+      "A": "candidate",
+      "B": "source"
+    },
+    {
+      "pair_id": "holdout-10-line-488",
+      "A": "source",
+      "B": "candidate"
+    },
+    {
+      "pair_id": "holdout-11-line-502",
+      "A": "candidate",
+      "B": "source"
+    },
+    {
+      "pair_id": "holdout-12-line-524",
+      "A": "candidate",
+      "B": "source"
+    }
+  ],
+  "packet_path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\holdout-v1\\blind-run\\evaluation-packet.json",
+  "packet_sha256": "5f05b93059ca3e8920adb895452428758342fc1f0a2756cb28e323f5657b1285",
+  "source_pairs_path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\holdout-v1\\holdout-pairs.json",
+  "source_pairs_sha256": "481fef7b11698b032d5d919cbccf5b1b16dc01ff70f5046be0f4767231a28a02"
+}

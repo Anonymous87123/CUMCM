@@ -1,0 +1,125 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-ab841ce78d7e",
+  "chunk_binding_sha256": "723108ee17f060099d63f3f49979a7de3323324434695b42202eddae195fbc8d",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "842ae235d7ee9818",
+    "prepare_integrity_sha256": "c38e1d6ea4a8467e7d26d083319b223bd567819e17070c0ac06e74de425e1aa2",
+    "run_metadata_sha256": "af8e27fded78b4cdf5593d7a49751c6f6e43e94172419e8103c4f33a166925b9",
+    "policy_snapshot_sha256": "78c9d819ed643befe1459941693ca6ea078ca61644c28b531ba2fb612fd20234",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "unit_id": "U-ab841ce78d7e",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 9629,
+      "end": 10842,
+      "start_line": 189,
+      "end_line": 215,
+      "source_span_sha256": "981e2b6b27d1f1d0fb3c978b7e99a9f7e16bc43a0f58459ef7e83e40218931ce",
+      "masked_text_sha256": "854c7e57a3f9b4b697007bd1fa6c213592fd9b572db2ad870b992f2731142c65",
+      "chunk_binding_sha256": "723108ee17f060099d63f3f49979a7de3323324434695b42202eddae195fbc8d"
+    },
+    "scene_route": {
+      "requested_scene": "MODELING",
+      "resolved_scene": "MODELING",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "e5df72bd9f779f430810d639e6afbc5b7f35fc7089394bff27fb5b07dcab1d45",
+      "routing_input_sha256": "127d99f43c329bf375e83121b573de1348e2490fe5fe5080091dfd74ce82b803"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-modeling",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "MODELING",
+      "profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "34433a6b4098c0e3c245a5db589f10a9c02ec6fa2ece100269788a5abfa0cf58"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00227:ff7c71a6c970]]\n表 [[PROTECTED:F00001-P00228:1533aea25e15]] 给出了 2025 年的总量标定结果与局地对照结果。四大家鱼总量为1.805倍，与题目给出的1.8倍接近；[[PROTECTED:F00001-P00229:23f77b65545d]] 虽低于 2.2 的湖北段对照值，但恢复方向一致。\n[[PROTECTED:F00001-P00230:bcdfe912634f]]\n[[PROTECTED:F00001-P00231:444090bde130]]\n[[PROTECTED:F00001-P00232:5a9c9369c65b]]\n[[PROTECTED:F00001-P00233:3e2ca51f327b]]\n[[PROTECTED:F00001-P00234:17ac77618fb6]]\n[[PROTECTED:F00001-P00235:3000c3bd47e8]]\n指标 & 观测值 & 模拟值 & 相对误差 & 说明 [[PROTECTED:F00001-P00236:b11b4ca186c0]]\n[[PROTECTED:F00001-P00237:3f9db2ae5742]]\n四大家鱼总量倍率 & 1.800 & 1.805 & 0.26[[PROTECTED:F00001-P00238:fed3f9917a84]] & 对齐 [[PROTECTED:F00001-P00239:b11b4ca186c0]]\n[[PROTECTED:F00001-P00240:23f77b65545d]] 倍率 & 2.200 & 1.838 & 16.47[[PROTECTED:F00001-P00241:fed3f9917a84]] & 一致 [[PROTECTED:F00001-P00242:b11b4ca186c0]]\n[[PROTECTED:F00001-P00243:76ac79294e9f]]\n[[PROTECTED:F00001-P00244:fce4e77a7146]]\n[[PROTECTED:F00001-P00245:4cc1d10bd836]]\n\n两项指标的方向相同，幅度却不同。四大家鱼总生物量为1.805倍，基本复现用于标定的1.8倍；[[PROTECTED:F00001-P00246:23f77b65545d]]为1.838倍，低于湖北江段的2.2倍。前者对应全流域平均尺度，后者保留了局部渔获口径，两者不能用同一误差解释。\n\n禁渔情景下，四大家鱼总量与[[PROTECTED:F00001-P00247:23f77b65545d]]上升，基础资源末值却只有初值的0.204倍，水草最低值出现在第10年；食压指数同时增至4.213。鱼群恢复与底层资源改善在模型中没有同步发生。0.204和[[PROTECTED:F00001-P00248:0e3efde77bda]]都是归一化单区指标，不代表全流域实际生物量或能量金字塔的绝对比例。[[PROTECTED:F00001-P00249:0e3efde77bda]]持续上升而底层资源下降，指向消费者增长快于资源供给；捕捞压力解除后，中层鱼类的摄食压力和种间竞争随之增强，呈现[[PROTECTED:F00001-P00250:93782f19b06a]]。\n\n[[PROTECTED:F00001-P00251:8f99e6e4b5c2]]\n[[PROTECTED:F00001-P00252:444090bde130]]\n[[PROTECTED:F00001-P00253:39e863913a9e]]\n[[PROTECTED:F00001-P00254:f57352f9f99d]]\n[[PROTECTED:F00001-P00255:c1a928c1c2e2]]\n[[PROTECTED:F00001-P00256:b3664f89b860]]\n\n",
+  "rewrite_intent": {
+    "summary": "按统计口径解释两项恢复指标，再将鱼群回升与底层资源承压并置。",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "按统计口径解释两项恢复指标，再将鱼群回升与底层资源承压并置。"
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "按统计口径解释两项恢复指标，再将鱼群回升与底层资源承压并置。"
+      },
+      {
+        "id": "O3",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S3"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "按统计口径解释两项恢复指标，再将鱼群回升与底层资源承压并置。"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 2,
+        "end_line": 2,
+        "sha256": "3de3c325adf836f457ce6cf822a4c7a7f8c3c89ae688a1340a17677560e9dea4"
+      },
+      {
+        "id": "S2",
+        "start_line": 17,
+        "end_line": 17,
+        "sha256": "94ac7991751545575728c2f3e17d306f9e2066b1fa8ac1ba4a6f8f86d9a927be"
+      },
+      {
+        "id": "S3",
+        "start_line": 19,
+        "end_line": 19,
+        "sha256": "03a1aeceeb6fbcf5d517840bd6e610083f97ad7f21b826072426538e4fdb5faf"
+      }
+    ],
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  }
+}

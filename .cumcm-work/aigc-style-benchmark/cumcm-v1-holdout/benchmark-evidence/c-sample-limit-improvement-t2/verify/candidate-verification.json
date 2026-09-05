@@ -1,0 +1,40 @@
+{
+  "schema": "aigc-adapter-run/v1",
+  "package": "humanize-academic-chinese",
+  "action": "verify-candidate",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout\\benchmark-evidence\\c-sample-limit-improvement-t2\\verify",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout\\sources\\c-sample-limit-improvement.txt",
+    "sha256": "6ec19d62f65976965620066510b59ec60eb501dcced6b123c50d874ca550d00a",
+    "bytes": 338,
+    "suffix": ".txt"
+  },
+  "protected_inventory": {
+    "numbers": {
+      "1": 1
+    },
+    "tex_commands": {},
+    "tex_keys": {},
+    "inline_math": {},
+    "dollar_display_math": {},
+    "display_math": {},
+    "math_environments": {},
+    "code_fences": {},
+    "urls": {}
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout\\humanize-runs-v1\\c-sample-limit-improvement-t2\\hir1-_mvli_49\\artifacts\\after.md",
+    "sha256": "e19709d8db509231331b4a54632a68dfcb144e062cfd455937e30c61a3c31d8f",
+    "bytes": 332,
+    "suffix": ".md"
+  },
+  "human_review_required": true
+}

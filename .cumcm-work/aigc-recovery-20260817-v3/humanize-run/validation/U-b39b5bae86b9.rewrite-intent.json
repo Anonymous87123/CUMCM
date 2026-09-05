@@ -1,0 +1,110 @@
+{
+  "artifact": {
+    "after_sha256": "751be4bce346f776863d51425e5448866e2d0ed3e23c1dcce6b5b880aa4a6dcd",
+    "before_sha256": "941ef8e74f8a460d0fffe07d50ff2740966abe13c29895b88c92fa7b98c887c1"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "291762864c630ac1dc59deb8cadc268716b746c15408793884f639319786fcfa",
+  "chunk_binding_sha256": "04d64f47eaa86bce5d385f6c3c4db5536827c6bf3f10a327393d6e7758374b60",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-b39b5bae86b9.diff",
+    "sha256": "59c403c091812f32c0ca18ea68a8e5dad89feb79e2655866cb1ce68f8f034ea8"
+  },
+  "evidence_sha256": "a8eff018f3afbcab22276bacdbcf9ede4af2aa95f847849603573b4b976da108",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "区分全流域标定和湖北段局地对照，减少模型段的编辑后台与重复主语。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "区分全流域标定和湖北段局地对照，减少模型段的编辑后台与重复主语。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O3",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S3"
+        ],
+        "summary": "区分全流域标定和湖北段局地对照，减少模型段的编辑后台与重复主语。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "c1a1af4636e4ae925b4b3a2b801fd2e6c48728105f9e5991323f3e6bd5177f44",
+        "start_line": 2
+      },
+      {
+        "end_line": 19,
+        "id": "S2",
+        "sha256": "4f90d02e10d294ead97219988edcc2c57d7b632d40a34e1ddd414ecb0d5631cb",
+        "start_line": 19
+      },
+      {
+        "end_line": 22,
+        "id": "S3",
+        "sha256": "719777d014cbb6dc7ca5f03ff5b6cfbe7640ff19f614b98b27468d7016a76b21",
+        "start_line": 22
+      }
+    ],
+    "summary": "区分全流域标定和湖北段局地对照，减少模型段的编辑后台与重复主语。",
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      },
+      {
+        "end_line": 19,
+        "operation": "REPLACE",
+        "start_line": 19
+      },
+      {
+        "end_line": 22,
+        "operation": "REPLACE",
+        "start_line": 22
+      }
+    ],
+    "masked_after_sha256": "87838139a845ef22120814f69f851a19d4b5679c3daf38882c16e970abbd9696",
+    "masked_before_sha256": "fb7d89e472fe75fd3a4778f08a014f814d207170d8604e82b55546d5ffad227a",
+    "source_spans_covered": 3,
+    "source_spans_total": 3,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "8b245f165067a1321b5d83d0d8d4a25355865cc768817629afb520dca43275ab",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-b39b5bae86b9"
+}

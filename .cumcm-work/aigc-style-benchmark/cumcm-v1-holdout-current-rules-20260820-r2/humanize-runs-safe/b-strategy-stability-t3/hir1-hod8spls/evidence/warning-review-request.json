@@ -1,0 +1,128 @@
+{
+  "artifact": {
+    "after_sha256": "aeb26bcf81b78b11be16c2892d88b843af6818d00a2f7824115b288e6b9ee881",
+    "before_sha256": "31dc3a6dc7f792084c86163f945f6e40c13ee60355d29a611ac5e26dbcce70c0"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "ee35cf2b6b9b1bd5248ef4efce601173090de97ef8136f2df65cc424d63e8f3d",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "e338ace7bf0f6abceb99f4f72110e765d59ce91d88db785d87e46b4b9aa81d7a",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "markdown",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0011",
+            "column": 149,
+            "end": 149,
+            "end_column": 150,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "如果混合策略不满足纳什均衡，就存在好的策略和坏的策略",
+            "sentence_id": "T0004",
+            "side": "after",
+            "start": 148
+          }
+        ],
+        "before": {
+          "不": 1,
+          "不能": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0011",
+            "column": 149,
+            "end": 149,
+            "end_column": 150,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "如果混合策略不满足纳什均衡,就存在好的策略和坏的策略,玩家出于利已的角度,会倾向性地采用混合策略中的好策略,那么之前找到的混合策略就不能稳定存在了",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 148
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0015",
+            "column": 209,
+            "end": 210,
+            "end_column": 211,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不能",
+            "sentence_context": "如果混合策略不满足纳什均衡,就存在好的策略和坏的策略,玩家出于利已的角度,会倾向性地采用混合策略中的好策略,那么之前找到的混合策略就不能稳定存在了",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 208
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "不能": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0015",
+                "column": 209,
+                "end": 210,
+                "end_column": 211,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不能",
+                "sentence_context": "如果混合策略不满足纳什均衡,就存在好的策略和坏的策略,玩家出于利已的角度,会倾向性地采用混合策略中的好策略,那么之前找到的混合策略就不能稳定存在了",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 208
+              }
+            ],
+            "removed": {
+              "不能": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "959fc840faf33438168873095c382b2d7699568e039ce5610f3b5a3f9709415b"
+    }
+  ]
+}

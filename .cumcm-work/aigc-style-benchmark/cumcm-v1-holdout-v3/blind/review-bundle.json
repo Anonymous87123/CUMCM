@@ -1,0 +1,33 @@
+{
+  "schema": "aigc-blind-review-bundle/v1",
+  "state": "READY_FOR_INDEPENDENT_HUMAN_REVIEW",
+  "pairs": 9,
+  "dimensions": [
+    "naturalness",
+    "judgment_trajectory",
+    "specificity",
+    "content_density",
+    "semantic_fidelity"
+  ],
+  "packet": {
+    "path": "evaluation-packet.json",
+    "sha256": "b3d2758e6f92d25862f25a054d1ada824d143fced05b6d91d5015ccd898b9d75",
+    "bytes": 8833
+  },
+  "review_page": {
+    "path": "review.html",
+    "sha256": "e94a5b5b54a34f454828df2ce4bda9c2fd363a9db7b022555bd411b9bbf3ae11",
+    "bytes": 21279
+  },
+  "ratings_template": {
+    "path": "ratings-template.csv",
+    "sha256": "3388e62e8cd0be1c3502afdc9f834e7d2a3713a0eddd899b96cb0f700df14ffb",
+    "bytes": 251
+  },
+  "claims": {
+    "contains_private_key": false,
+    "contains_pair_mapping": false,
+    "contains_provider_identity": false,
+    "human_rating_completed": false
+  }
+}

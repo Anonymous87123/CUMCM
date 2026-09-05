@@ -1,0 +1,88 @@
+{
+  "artifact": {
+    "after_sha256": "5ee36207642268e2ba5af5acb86311eab0fd73d2657b448f59cd49d5a537187e",
+    "before_sha256": "325d179538a5cd5758993f8428b06171fd5f1de025f26a5074432feb55b3a7aa"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "3a88236dff9e4e631fc4d455a970c49524a26a0b5ecd4fa73c7ef63d5fd1fe87",
+  "chunk_binding_sha256": "b1ff66066ab4b858be456f437ebc31cb348e96d03a7d9071970aa722e291791c",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-8f28215ff44b.diff",
+    "sha256": "e896412ee9b281caaf1ff2d44063f345bed77eab04248348ae456a717b319211"
+  },
+  "evidence_sha256": "7f9255faccf64980ebb54a58a669596972f1859d82e9187f91325056a2e97d48",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "将治理建议绑定到各层指标差异，并声明情景计算不等同于实际治理效果。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "将治理建议绑定到各层指标差异，并声明情景计算不等同于实际治理效果。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "dd7170ec2428e946234ad38872ec0afba852e4575f62e4fccb0fdfc0da013c70",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "id": "S2",
+        "sha256": "c625af05149b44cf5d1a443d9e72028fa83875205222dd4c7a50397d9028427b",
+        "start_line": 4
+      }
+    ],
+    "summary": "将治理建议绑定到各层指标差异，并声明情景计算不等同于实际治理效果。",
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "operation": "REPLACE",
+        "start_line": 4
+      }
+    ],
+    "masked_after_sha256": "8e4f822f47a7945dc49ec836229ed8b7979b14f0fce2de80991814bef8181b6f",
+    "masked_before_sha256": "f6a296a2b1f4fd370530b52f5efd9b8cac07af0d16a438b06e476637107a9940",
+    "source_spans_covered": 2,
+    "source_spans_total": 2,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "2d30bad023b85869000900467f35d4d732500df8683ecb2a54bc9b2539dc5e91",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-8f28215ff44b"
+}

@@ -1,0 +1,61 @@
+{
+  "artifacts": {
+    "execution-record.json": {
+      "sha256": "adefa9cc52c0109ff4d420d04367419f435da8ce1ce21b9514e860b9220bbddb",
+      "size": 643
+    },
+    "inputs/after.bin": {
+      "sha256": "fc4fec96de0163351b572bd8e0d98216c4baaa74b228f4f07d4a23d026298c26",
+      "size": 581
+    },
+    "inputs/before.bin": {
+      "sha256": "31dc3a6dc7f792084c86163f945f6e40c13ee60355d29a611ac5e26dbcce70c0",
+      "size": 571
+    },
+    "invocation-request.json": {
+      "sha256": "624589e58465acbabf7d970f6661d0c3da90ab51f137ca0587a13929aa9f576f",
+      "size": 2409
+    },
+    "paired-quality-review-request.json": {
+      "sha256": "f3b1a27a530d9ee41d1b7e2cbf5b8c6971b6e8efe289d7128a336219f778a76b",
+      "size": 2910
+    },
+    "rendered-output.txt": {
+      "sha256": "587ae9ebd71a5434180b86f8fa2535fa4037305ec602fb94334a0da2d0129134",
+      "size": 22244
+    },
+    "stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    "validation-result.json": {
+      "sha256": "587ae9ebd71a5434180b86f8fa2535fa4037305ec602fb94334a0da2d0129134",
+      "size": 22244
+    }
+  },
+  "contains_source_content": true,
+  "delivery_gate_status": "REVIEW",
+  "exit_code": 2,
+  "external_anchor_status": "NOT_PROVIDED",
+  "integrity_scope": "SELF_CONSISTENCY_ONLY",
+  "invocation_request_sha256": "d437009807702c8f9afe161f3e506b6841fffcb86c50ca539156a43caf526ec2",
+  "manifest_sha256": "a7233feb7d9632b12b8010d74e719198a8caf05588fac14c048e43e61b73ff6e",
+  "mode": "REWRITE",
+  "paired_quality_review_request_sha256": "6a96b956a057f3092eb8ff08a2008a5f43d4051c6c485c2c5eeeccb29b650409",
+  "paired_quality_review_status": "BLOCKED_BY_MECHANICAL_GATE",
+  "record_sha256": "38cbad36ca981872a234d5916f74783193b55f19ab4362cd489c23fe0684ebef",
+  "run_id": "hvr4-d437009807702c8f9afe161f3e506b6841fffcb86c50ca539156a43caf526ec2",
+  "scene": "MODELING",
+  "schema": "humanize-direct-validation-evidence/v5",
+  "source_bindings": {
+    "after": {
+      "sha256": "fc4fec96de0163351b572bd8e0d98216c4baaa74b228f4f07d4a23d026298c26",
+      "size": 581
+    },
+    "before": {
+      "sha256": "31dc3a6dc7f792084c86163f945f6e40c13ee60355d29a611ac5e26dbcce70c0",
+      "size": 571
+    }
+  },
+  "status": "REVIEW"
+}

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "25b739f8310fb1363c5478a19d66e7afa6b077be20b48abe0e1c9524de8130de",
+    "before_sha256": "25b739f8310fb1363c5478a19d66e7afa6b077be20b48abe0e1c9524de8130de"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "67d74fb312c5964cf8bc1d5609f7da22e39d7788912a3541984ae8a5e7f7c464",
+  "chunk_binding_sha256": "3634b0011547cbb8afd6ef5ec589f6618766d6afb2e7cee701aa0fc72884db49",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-88f91474a945.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "de52da6fd3aaa4758d3e6086b127c1510946eb5d8f4f503db3e3100264734222",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 5,
+        "id": "S1",
+        "sha256": "912500524d6c2e4631eb28bf8265301f683cb260bf6a0724436ca2c0246813da",
+        "start_line": 1
+      }
+    ],
+    "reason": "问题四分析段落区分轨道现象与初值敏感性，并明确数值条件改变时的结论范围。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "97487c27b1def15b7e1b9a0adec98938a9bdaab293137b80fe0f8414169700be",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-88f91474a945"
+}

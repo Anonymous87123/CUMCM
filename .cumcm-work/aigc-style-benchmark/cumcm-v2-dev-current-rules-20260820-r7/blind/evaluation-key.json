@@ -1,0 +1,62 @@
+{
+  "schema": "aigc-blind-key/v1",
+  "seed": 20260820,
+  "dimensions": [
+    "naturalness",
+    "judgment_trajectory",
+    "specificity",
+    "content_density",
+    "semantic_fidelity"
+  ],
+  "pairs": [
+    {
+      "pair_id": "P0001",
+      "A": "a-shadow-intersection::source",
+      "B": "a-shadow-intersection::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0002",
+      "A": "a-shadow-intersection::humanize-academic-chinese::t2",
+      "B": "a-shadow-intersection::source"
+    },
+    {
+      "pair_id": "P0003",
+      "A": "a-shadow-intersection::source",
+      "B": "a-shadow-intersection::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0004",
+      "A": "b-symmetry-reduction::source",
+      "B": "b-symmetry-reduction::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0005",
+      "A": "b-symmetry-reduction::source",
+      "B": "b-symmetry-reduction::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0006",
+      "A": "b-symmetry-reduction::source",
+      "B": "b-symmetry-reduction::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0007",
+      "A": "c-classifier-validation::humanize-academic-chinese::t1",
+      "B": "c-classifier-validation::source"
+    },
+    {
+      "pair_id": "P0008",
+      "A": "c-classifier-validation::source",
+      "B": "c-classifier-validation::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0009",
+      "A": "c-classifier-validation::humanize-academic-chinese::t3",
+      "B": "c-classifier-validation::source"
+    }
+  ],
+  "packet_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r7\\blind\\evaluation-packet.json",
+  "packet_sha256": "5d6ada09283e7751d34d62ef5799c49981b8d38f658816ca0649685140509736",
+  "source_pairs_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r7\\blind\\pairs.json",
+  "source_pairs_sha256": "8f3d8930e6818cd8621e5bcd5f95b74577800f08d9774dd9a8b31e895a3a96e2"
+}

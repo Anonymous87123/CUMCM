@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "8eccfe0249291e20e12cec7fc0580b0d72eaeb1e31e05b68da6c91da54448464",
+    "before_sha256": "8eccfe0249291e20e12cec7fc0580b0d72eaeb1e31e05b68da6c91da54448464"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "1185fcfdd2b52e40d1653eca2ed25f3961042c2de6ebe29aedbcd48c4a2b7236",
+  "chunk_binding_sha256": "e274d81a149b5d1ab61fd2025d2df452f41cd4dfc6435d38c61a1d929c5b3345",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-70772ee7e6a7.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "476c2dc64597dc98b9ea54d7d99f81b82b4d6db535d5d11ce9df9220112350ee",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 5,
+        "id": "S1",
+        "sha256": "a8eda0a64da1ad917ab551a16b8734804e016928d35f2cd38aa3f16f9bd81c33",
+        "start_line": 1
+      }
+    ],
+    "reason": "长期行为评价段落分别说明轨道证据和参数映射范围，保留原文可维持模型职责边界。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "9427b9b4182e803d43b0c92b86abd334d6bae2a5fbbe17678c5e24af0b9fb63a",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-70772ee7e6a7"
+}

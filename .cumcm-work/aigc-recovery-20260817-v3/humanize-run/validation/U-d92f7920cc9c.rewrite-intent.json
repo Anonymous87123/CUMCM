@@ -1,0 +1,88 @@
+{
+  "artifact": {
+    "after_sha256": "796325041ff3ce2fabb2c4fe7e5e4358e220542b376e3de3d515689d0c0d7a3a",
+    "before_sha256": "df3c97eba9f9a7b49dc8ec069a9a8f01711d7239101961e211966a3ad64a30b0"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "fed87ad5c808fd90935c1609fab3795ffbd1524457ed0f0af19d53642d5cf0b7",
+  "chunk_binding_sha256": "f7532a1973afa2406d73ba8fd60fb736249587cddba502babf67b6cee891ab95",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-d92f7920cc9c.diff",
+    "sha256": "91cf37cae5551f7bea36ecfbb37991a63176d3fbace041a82740d84f031665b2"
+  },
+  "evidence_sha256": "90712d7a7bc3e1e8b7e7d1526156cde7137275f26763a2246ef1d166531b519a",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "按江豚和长江鲟的不同受限环节说明状态量、损失项和控制量的来源。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "按江豚和长江鲟的不同受限环节说明状态量、损失项和控制量的来源。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "7b7b176981743d5f587aec1db572690ef300d87cedab50da028f39577947cb93",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "id": "S2",
+        "sha256": "89a72a2f3529b27e796545f5051124562b4d44bb1f572fdb4cfcde8bebf37eb0",
+        "start_line": 4
+      }
+    ],
+    "summary": "按江豚和长江鲟的不同受限环节说明状态量、损失项和控制量的来源。",
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "operation": "REPLACE",
+        "start_line": 4
+      }
+    ],
+    "masked_after_sha256": "c6cade55dc796e82b196998edf79999975879cffcd8bd94a7ff89635e2fdef5e",
+    "masked_before_sha256": "fce02c2a65c7bfb2820346ab9b9487118c444e471612daf9361ccec6fbd5547c",
+    "source_spans_covered": 2,
+    "source_spans_total": 2,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "5037569e056bff2a3b22b77a3d4827e97d9c30281234249e7695972f73207313",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-d92f7920cc9c"
+}

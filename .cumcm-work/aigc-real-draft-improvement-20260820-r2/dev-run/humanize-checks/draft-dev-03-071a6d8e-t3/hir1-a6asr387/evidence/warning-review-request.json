@@ -1,0 +1,278 @@
+{
+  "artifact": {
+    "after_sha256": "1905432db4981e0b472b97983ec1acce910455e96976169be2f53c96593836ba",
+    "before_sha256": "a1b48683e83b065adce2c0cead0ec74ead53f7e1d11ad12130ee76ca4464df55"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "37030d3279e22443f13c781227a3c19f14ef8031bf265e22544674140be6cbbb",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "tex",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不": 1,
+          "不能": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0007",
+            "column": 71,
+            "end": 72,
+            "end_column": 73,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不能",
+            "sentence_context": "因此，治理重点不能只停留在捕捞约束",
+            "sentence_id": "T0003",
+            "side": "after",
+            "start": 70
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0009",
+            "column": 128,
+            "end": 128,
+            "end_column": 129,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "鱼道修复、产卵场连通和放流节律也不宜按同一模板推进",
+            "sentence_id": "T0005",
+            "side": "after",
+            "start": 127
+          }
+        ],
+        "before": {
+          "不": 2,
+          "不能": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0005",
+            "column": 58,
+            "end": 58,
+            "end_column": 59,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "问题二里，江豚与长江鲟对通道和放流的响应又不一样",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 57
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0007",
+            "column": 74,
+            "end": 75,
+            "end_column": 76,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不能",
+            "sentence_context": "顺着这些现象看，治理重点不能只停留在捕捞约束本身",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 73
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0009",
+            "column": 138,
+            "end": 138,
+            "end_column": 139,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "鱼道修复、产卵场连通和放流节律也不宜照一套模板处理",
+            "sentence_id": "T0005",
+            "side": "before",
+            "start": 137
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "不": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0007",
+                "column": 71,
+                "end": 72,
+                "end_column": 73,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不能",
+                "sentence_context": "因此，治理重点不能只停留在捕捞约束",
+                "sentence_id": "T0003",
+                "side": "after",
+                "start": 70
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0009",
+                "column": 128,
+                "end": 128,
+                "end_column": 129,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "鱼道修复、产卵场连通和放流节律也不宜按同一模板推进",
+                "sentence_id": "T0005",
+                "side": "after",
+                "start": 127
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0005",
+                "column": 58,
+                "end": 58,
+                "end_column": 59,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "问题二里，江豚与长江鲟对通道和放流的响应又不一样",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 57
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0007",
+                "column": 74,
+                "end": 75,
+                "end_column": 76,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不能",
+                "sentence_context": "顺着这些现象看，治理重点不能只停留在捕捞约束本身",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 73
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0009",
+                "column": 138,
+                "end": 138,
+                "end_column": 139,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "鱼道修复、产卵场连通和放流节律也不宜照一套模板处理",
+                "sentence_id": "T0005",
+                "side": "before",
+                "start": 137
+              }
+            ],
+            "removed": {
+              "不": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "1cb7897abfa539f25702e8bb047b3a6e470832603c392b03eb60e3e5592b94c2"
+    },
+    {
+      "code": "SPEECH_ACT_LOGICAL_RELATION_CHANGED",
+      "details": {
+        "after": {
+          "因此": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "logical_relation",
+            "claim_id": "C0006",
+            "column": 64,
+            "end": 65,
+            "end_column": 66,
+            "end_line": 1,
+            "line": 1,
+            "marker": "因此",
+            "sentence_context": "因此，治理重点不能只停留在捕捞约束",
+            "sentence_id": "T0003",
+            "side": "after",
+            "start": 63
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "因此": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "因此": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0006",
+                "column": 64,
+                "end": 65,
+                "end_column": 66,
+                "end_line": 1,
+                "line": 1,
+                "marker": "因此",
+                "sentence_context": "因此，治理重点不能只停留在捕捞约束",
+                "sentence_id": "T0003",
+                "side": "after",
+                "start": 63
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'logical_relation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "16a5406c573fff5003d84ea1e20c972fa655170b127d899ed894e3e23ef938b8"
+    }
+  ]
+}

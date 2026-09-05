@@ -1,0 +1,360 @@
+{
+  "artifact": {
+    "after_sha256": "29ee746ab8412bce880ce114ca937241328d9a6797f42ecd41b5ed821ff09a16",
+    "before_sha256": "4f411883f9e161e278023b2c7fd5a3952d9f3c46b13658c48a47c5e4790020d3"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "419ee73bf9be886ba77b2dc896e5ddb4e6be3eee3983164b64f190aa3367688d",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "tex",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不能": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0004",
+            "column": 83,
+            "end": 84,
+            "end_column": 85,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不能",
+            "sentence_context": "后一种情况发生在后定日镜的反射光被前定日镜截住、不能到达集热器时",
+            "sentence_id": "T0003",
+            "side": "after",
+            "start": 82
+          }
+        ],
+        "before": {
+          "未": 2
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0001",
+            "column": 9,
+            "end": 9,
+            "end_column": 10,
+            "end_line": 1,
+            "line": 1,
+            "marker": "未",
+            "sentence_context": "当α镜的入射光线未被塔身遮挡时，需要考虑后定日镜接收的太阳光被前定日镜所阻挡的阴影损失和后定日镜在反射太阳光时被前定日镜阻挡而未到达集热器上的遮挡损失",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 8
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0002",
+            "column": 64,
+            "end": 64,
+            "end_column": 65,
+            "end_line": 1,
+            "line": 1,
+            "marker": "未",
+            "sentence_context": "当α镜的入射光线未被塔身遮挡时，需要考虑后定日镜接收的太阳光被前定日镜所阻挡的阴影损失和后定日镜在反射太阳光时被前定日镜阻挡而未到达集热器上的遮挡损失",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 63
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "不能": 1
+          },
+          "removed": {
+            "未": 2
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "不能": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0004",
+                "column": 83,
+                "end": 84,
+                "end_column": 85,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不能",
+                "sentence_context": "后一种情况发生在后定日镜的反射光被前定日镜截住、不能到达集热器时",
+                "sentence_id": "T0003",
+                "side": "after",
+                "start": 82
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0001",
+                "column": 9,
+                "end": 9,
+                "end_column": 10,
+                "end_line": 1,
+                "line": 1,
+                "marker": "未",
+                "sentence_context": "当α镜的入射光线未被塔身遮挡时，需要考虑后定日镜接收的太阳光被前定日镜所阻挡的阴影损失和后定日镜在反射太阳光时被前定日镜阻挡而未到达集热器上的遮挡损失",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 8
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0002",
+                "column": 64,
+                "end": 64,
+                "end_column": 65,
+                "end_line": 1,
+                "line": 1,
+                "marker": "未",
+                "sentence_context": "当α镜的入射光线未被塔身遮挡时，需要考虑后定日镜接收的太阳光被前定日镜所阻挡的阴影损失和后定日镜在反射太阳光时被前定日镜阻挡而未到达集热器上的遮挡损失",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 63
+              }
+            ],
+            "removed": {
+              "未": 2
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "4ab50dd1aa45b741a7df0d6cc57bba0e0869a373fe31fcf631fd1e0dfcf82a00"
+    },
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "可能": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0002",
+            "column": 23,
+            "end": 24,
+            "end_column": 25,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可能",
+            "sentence_context": "排除塔身对α镜入射光线的遮挡后,定日镜之间仍可能产生阴影和遮挡",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 22
+          }
+        ],
+        "before": {
+          "需要": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0002",
+            "column": 17,
+            "end": 18,
+            "end_column": 19,
+            "end_line": 1,
+            "line": 1,
+            "marker": "需要",
+            "sentence_context": "当α镜的入射光线未被塔身遮挡时，需要考虑后定日镜接收的太阳光被前定日镜所阻挡的阴影损失和后定日镜在反射太阳光时被前定日镜阻挡而未到达集热器上的遮挡损失",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 16
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "可能": 1
+          },
+          "removed": {
+            "需要": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "可能": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 23,
+                "end": 24,
+                "end_column": 25,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可能",
+                "sentence_context": "排除塔身对α镜入射光线的遮挡后,定日镜之间仍可能产生阴影和遮挡",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 22
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 17,
+                "end": 18,
+                "end_column": 19,
+                "end_line": 1,
+                "line": 1,
+                "marker": "需要",
+                "sentence_context": "当α镜的入射光线未被塔身遮挡时，需要考虑后定日镜接收的太阳光被前定日镜所阻挡的阴影损失和后定日镜在反射太阳光时被前定日镜阻挡而未到达集热器上的遮挡损失",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 16
+              }
+            ],
+            "removed": {
+              "需要": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "bdeb44b215f91f344fe5f09257a166e163d578a083c0cced9377b0d497c8bc81"
+    },
+    {
+      "code": "SPEECH_ACT_CONDITION_CHANGED",
+      "details": {
+        "after": {
+          "若": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "condition",
+            "claim_id": "C0010",
+            "column": 136,
+            "end": 136,
+            "end_column": 137,
+            "end_line": 1,
+            "line": 1,
+            "marker": "若",
+            "sentence_context": "对于α镜坐标系内的D(,J,0),沿入射光线求它与b镜平面的交点,若交点处在b镜面内,便说明该光线受到b镜遮挡",
+            "sentence_id": "T0005",
+            "side": "after",
+            "start": 135
+          }
+        ],
+        "before": {
+          "当": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "condition",
+            "claim_id": "C0001",
+            "column": 1,
+            "end": 1,
+            "end_column": 2,
+            "end_line": 1,
+            "line": 1,
+            "marker": "当",
+            "sentence_context": "当α镜的入射光线未被塔身遮挡时，需要考虑后定日镜接收的太阳光被前定日镜所阻挡的阴影损失和后定日镜在反射太阳光时被前定日镜阻挡而未到达集热器上的遮挡损失",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 0
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "若": 1
+          },
+          "removed": {
+            "当": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "若": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0010",
+                "column": 136,
+                "end": 136,
+                "end_column": 137,
+                "end_line": 1,
+                "line": 1,
+                "marker": "若",
+                "sentence_context": "对于α镜坐标系内的D(,J,0),沿入射光线求它与b镜平面的交点,若交点处在b镜面内,便说明该光线受到b镜遮挡",
+                "sentence_id": "T0005",
+                "side": "after",
+                "start": 135
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0001",
+                "column": 1,
+                "end": 1,
+                "end_column": 2,
+                "end_line": 1,
+                "line": 1,
+                "marker": "当",
+                "sentence_context": "当α镜的入射光线未被塔身遮挡时，需要考虑后定日镜接收的太阳光被前定日镜所阻挡的阴影损失和后定日镜在反射太阳光时被前定日镜阻挡而未到达集热器上的遮挡损失",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 0
+              }
+            ],
+            "removed": {
+              "当": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'condition'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "66cc78a7d87c7086ce2a2e119dea4581126c6fa5ac7609e10d808a5cfb15cc41"
+    }
+  ]
+}

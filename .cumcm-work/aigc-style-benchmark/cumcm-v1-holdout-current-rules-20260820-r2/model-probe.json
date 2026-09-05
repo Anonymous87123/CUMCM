@@ -1,0 +1,816 @@
+{
+  "schema": "aigc-style-benchmark-model-probe/v1",
+  "status": "pass",
+  "suite_id": "cumcm-v1-holdout",
+  "split": "holdout",
+  "manifest": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-current-rules-20260820-r2\\blind-ready.json",
+    "sha256": "323e7458e60cb809dec5872e108618e6a3f483ac9c0dbc41098d552a8df1f1de",
+    "bytes": 47689
+  },
+  "ratings": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-current-rules-20260820-r2\\blind\\model-ratings-M01.csv",
+    "sha256": "719f1106197f64304710d8054b7fe2362fbe0ea56d274b101be048252adb7f62",
+    "bytes": 757
+  },
+  "formal_human_ready": false,
+  "evaluation_level": "MODEL_PROBE_ONLY",
+  "human_coverage": {
+    "P0001": 0,
+    "P0002": 0,
+    "P0003": 0,
+    "P0004": 0,
+    "P0005": 0,
+    "P0006": 0,
+    "P0007": 0,
+    "P0008": 0,
+    "P0009": 0
+  },
+  "model_coverage": {
+    "P0001": 1,
+    "P0002": 1,
+    "P0003": 1,
+    "P0004": 1,
+    "P0005": 1,
+    "P0006": 1,
+    "P0007": 1,
+    "P0008": 1,
+    "P0009": 1
+  },
+  "score": {
+    "schema": "aigc-blind-score/v1",
+    "scoring_protocol": "aigc-blind-scoring/v2",
+    "status": "pass",
+    "pairs": 9,
+    "ratings": 9,
+    "errors": 0,
+    "warnings": 18,
+    "counts": {
+      "naturalness": {
+        "a-search-error-boundary::humanize-academic-chinese::t1": 1,
+        "a-search-error-boundary::humanize-academic-chinese::t2": 1,
+        "a-search-error-boundary::humanize-academic-chinese::t3": 1,
+        "b-strategy-stability::humanize-academic-chinese::t1": 1,
+        "b-strategy-stability::humanize-academic-chinese::t2": 1,
+        "b-strategy-stability::humanize-academic-chinese::t3": 1,
+        "c-sample-limit-improvement::humanize-academic-chinese::t1": 1,
+        "c-sample-limit-improvement::humanize-academic-chinese::t2": 1,
+        "c-sample-limit-improvement::humanize-academic-chinese::t3": 1
+      },
+      "judgment_trajectory": {
+        "TIE": 9
+      },
+      "specificity": {
+        "TIE": 9
+      },
+      "content_density": {
+        "a-search-error-boundary::humanize-academic-chinese::t1": 1,
+        "a-search-error-boundary::humanize-academic-chinese::t2": 1,
+        "a-search-error-boundary::humanize-academic-chinese::t3": 1,
+        "b-strategy-stability::humanize-academic-chinese::t1": 1,
+        "b-strategy-stability::humanize-academic-chinese::t2": 1,
+        "b-strategy-stability::humanize-academic-chinese::t3": 1,
+        "c-sample-limit-improvement::humanize-academic-chinese::t1": 1,
+        "c-sample-limit-improvement::humanize-academic-chinese::t2": 1,
+        "c-sample-limit-improvement::humanize-academic-chinese::t3": 1
+      },
+      "semantic_fidelity": {
+        "TIE": 9
+      }
+    },
+    "counts_by_rater_kind": {
+      "model": {
+        "naturalness": {
+          "a-search-error-boundary::humanize-academic-chinese::t1": 1,
+          "a-search-error-boundary::humanize-academic-chinese::t2": 1,
+          "a-search-error-boundary::humanize-academic-chinese::t3": 1,
+          "b-strategy-stability::humanize-academic-chinese::t1": 1,
+          "b-strategy-stability::humanize-academic-chinese::t2": 1,
+          "b-strategy-stability::humanize-academic-chinese::t3": 1,
+          "c-sample-limit-improvement::humanize-academic-chinese::t1": 1,
+          "c-sample-limit-improvement::humanize-academic-chinese::t2": 1,
+          "c-sample-limit-improvement::humanize-academic-chinese::t3": 1
+        },
+        "judgment_trajectory": {
+          "TIE": 9
+        },
+        "specificity": {
+          "TIE": 9
+        },
+        "content_density": {
+          "a-search-error-boundary::humanize-academic-chinese::t1": 1,
+          "a-search-error-boundary::humanize-academic-chinese::t2": 1,
+          "a-search-error-boundary::humanize-academic-chinese::t3": 1,
+          "b-strategy-stability::humanize-academic-chinese::t1": 1,
+          "b-strategy-stability::humanize-academic-chinese::t2": 1,
+          "b-strategy-stability::humanize-academic-chinese::t3": 1,
+          "c-sample-limit-improvement::humanize-academic-chinese::t1": 1,
+          "c-sample-limit-improvement::humanize-academic-chinese::t2": 1,
+          "c-sample-limit-improvement::humanize-academic-chinese::t3": 1
+        },
+        "semantic_fidelity": {
+          "TIE": 9
+        }
+      }
+    },
+    "per_pair_counts": {
+      "P0001": {
+        "naturalness": {
+          "a-search-error-boundary::humanize-academic-chinese::t1": 1
+        },
+        "judgment_trajectory": {
+          "TIE": 1
+        },
+        "specificity": {
+          "TIE": 1
+        },
+        "content_density": {
+          "a-search-error-boundary::humanize-academic-chinese::t1": 1
+        },
+        "semantic_fidelity": {
+          "TIE": 1
+        }
+      },
+      "P0002": {
+        "naturalness": {
+          "a-search-error-boundary::humanize-academic-chinese::t2": 1
+        },
+        "judgment_trajectory": {
+          "TIE": 1
+        },
+        "specificity": {
+          "TIE": 1
+        },
+        "content_density": {
+          "a-search-error-boundary::humanize-academic-chinese::t2": 1
+        },
+        "semantic_fidelity": {
+          "TIE": 1
+        }
+      },
+      "P0003": {
+        "naturalness": {
+          "a-search-error-boundary::humanize-academic-chinese::t3": 1
+        },
+        "judgment_trajectory": {
+          "TIE": 1
+        },
+        "specificity": {
+          "TIE": 1
+        },
+        "content_density": {
+          "a-search-error-boundary::humanize-academic-chinese::t3": 1
+        },
+        "semantic_fidelity": {
+          "TIE": 1
+        }
+      },
+      "P0004": {
+        "naturalness": {
+          "b-strategy-stability::humanize-academic-chinese::t1": 1
+        },
+        "judgment_trajectory": {
+          "TIE": 1
+        },
+        "specificity": {
+          "TIE": 1
+        },
+        "content_density": {
+          "b-strategy-stability::humanize-academic-chinese::t1": 1
+        },
+        "semantic_fidelity": {
+          "TIE": 1
+        }
+      },
+      "P0005": {
+        "naturalness": {
+          "b-strategy-stability::humanize-academic-chinese::t2": 1
+        },
+        "judgment_trajectory": {
+          "TIE": 1
+        },
+        "specificity": {
+          "TIE": 1
+        },
+        "content_density": {
+          "b-strategy-stability::humanize-academic-chinese::t2": 1
+        },
+        "semantic_fidelity": {
+          "TIE": 1
+        }
+      },
+      "P0006": {
+        "naturalness": {
+          "b-strategy-stability::humanize-academic-chinese::t3": 1
+        },
+        "judgment_trajectory": {
+          "TIE": 1
+        },
+        "specificity": {
+          "TIE": 1
+        },
+        "content_density": {
+          "b-strategy-stability::humanize-academic-chinese::t3": 1
+        },
+        "semantic_fidelity": {
+          "TIE": 1
+        }
+      },
+      "P0007": {
+        "naturalness": {
+          "c-sample-limit-improvement::humanize-academic-chinese::t1": 1
+        },
+        "judgment_trajectory": {
+          "TIE": 1
+        },
+        "specificity": {
+          "TIE": 1
+        },
+        "content_density": {
+          "c-sample-limit-improvement::humanize-academic-chinese::t1": 1
+        },
+        "semantic_fidelity": {
+          "TIE": 1
+        }
+      },
+      "P0008": {
+        "naturalness": {
+          "c-sample-limit-improvement::humanize-academic-chinese::t2": 1
+        },
+        "judgment_trajectory": {
+          "TIE": 1
+        },
+        "specificity": {
+          "TIE": 1
+        },
+        "content_density": {
+          "c-sample-limit-improvement::humanize-academic-chinese::t2": 1
+        },
+        "semantic_fidelity": {
+          "TIE": 1
+        }
+      },
+      "P0009": {
+        "naturalness": {
+          "c-sample-limit-improvement::humanize-academic-chinese::t3": 1
+        },
+        "judgment_trajectory": {
+          "TIE": 1
+        },
+        "specificity": {
+          "TIE": 1
+        },
+        "content_density": {
+          "c-sample-limit-improvement::humanize-academic-chinese::t3": 1
+        },
+        "semantic_fidelity": {
+          "TIE": 1
+        }
+      }
+    },
+    "rater_notes": [
+      {
+        "pair_id": "P0001",
+        "rater_id": "M01",
+        "rater_kind": "model",
+        "text": "B分开误差来源与局部搜索用途"
+      },
+      {
+        "pair_id": "P0002",
+        "rater_id": "M01",
+        "rater_kind": "model",
+        "text": "A将曲线引介单列；数值与结论不变"
+      },
+      {
+        "pair_id": "P0003",
+        "rater_id": "M01",
+        "rater_kind": "model",
+        "text": "B比逗号长串更易读；判断链等同"
+      },
+      {
+        "pair_id": "P0004",
+        "rater_id": "M01",
+        "rater_kind": "model",
+        "text": "B拆开混合策略定义与稳定性解释"
+      },
+      {
+        "pair_id": "P0005",
+        "rater_id": "M01",
+        "rater_kind": "model",
+        "text": "B两类方案边界更清楚"
+      },
+      {
+        "pair_id": "P0006",
+        "rater_id": "M01",
+        "rater_kind": "model",
+        "text": "B用分号区分两类方案；其余等同"
+      },
+      {
+        "pair_id": "P0007",
+        "rater_id": "M01",
+        "rater_kind": "model",
+        "text": "A把性能判断和原因分开"
+      },
+      {
+        "pair_id": "P0008",
+        "rater_id": "M01",
+        "rater_kind": "model",
+        "text": "B的因果停顿更清楚"
+      },
+      {
+        "pair_id": "P0009",
+        "rater_id": "M01",
+        "rater_kind": "model",
+        "text": "A冒号后的读数与原因仍保持同一层级"
+      }
+    ],
+    "variants": [
+      "a-search-error-boundary::humanize-academic-chinese::t1",
+      "a-search-error-boundary::humanize-academic-chinese::t2",
+      "a-search-error-boundary::humanize-academic-chinese::t3",
+      "a-search-error-boundary::source",
+      "b-strategy-stability::humanize-academic-chinese::t1",
+      "b-strategy-stability::humanize-academic-chinese::t2",
+      "b-strategy-stability::humanize-academic-chinese::t3",
+      "b-strategy-stability::source",
+      "c-sample-limit-improvement::humanize-academic-chinese::t1",
+      "c-sample-limit-improvement::humanize-academic-chinese::t2",
+      "c-sample-limit-improvement::humanize-academic-chinese::t3",
+      "c-sample-limit-improvement::source"
+    ],
+    "coverage": {
+      "P0001": 1,
+      "P0002": 1,
+      "P0003": 1,
+      "P0004": 1,
+      "P0005": 1,
+      "P0006": 1,
+      "P0007": 1,
+      "P0008": 1,
+      "P0009": 1
+    },
+    "human_coverage": {
+      "P0001": 0,
+      "P0002": 0,
+      "P0003": 0,
+      "P0004": 0,
+      "P0005": 0,
+      "P0006": 0,
+      "P0007": 0,
+      "P0008": 0,
+      "P0009": 0
+    },
+    "effective_human_coverage": {
+      "P0001": 0,
+      "P0002": 0,
+      "P0003": 0,
+      "P0004": 0,
+      "P0005": 0,
+      "P0006": 0,
+      "P0007": 0,
+      "P0008": 0,
+      "P0009": 0
+    },
+    "human_decisions": {
+      "P0001": {
+        "naturalness": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "judgment_trajectory": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "specificity": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "content_density": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "semantic_fidelity": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        }
+      },
+      "P0002": {
+        "naturalness": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "judgment_trajectory": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "specificity": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "content_density": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "semantic_fidelity": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        }
+      },
+      "P0003": {
+        "naturalness": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "judgment_trajectory": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "specificity": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "content_density": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "semantic_fidelity": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        }
+      },
+      "P0004": {
+        "naturalness": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "judgment_trajectory": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "specificity": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "content_density": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "semantic_fidelity": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        }
+      },
+      "P0005": {
+        "naturalness": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "judgment_trajectory": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "specificity": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "content_density": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "semantic_fidelity": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        }
+      },
+      "P0006": {
+        "naturalness": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "judgment_trajectory": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "specificity": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "content_density": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "semantic_fidelity": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        }
+      },
+      "P0007": {
+        "naturalness": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "judgment_trajectory": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "specificity": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "content_density": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "semantic_fidelity": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        }
+      },
+      "P0008": {
+        "naturalness": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "judgment_trajectory": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "specificity": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "content_density": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "semantic_fidelity": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        }
+      },
+      "P0009": {
+        "naturalness": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "judgment_trajectory": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "specificity": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "content_density": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        },
+        "semantic_fidelity": {
+          "effective_votes": 0,
+          "vote_counts": {},
+          "majority_ready": false,
+          "decision": null
+        }
+      }
+    },
+    "unresolved_human_dimensions": 0,
+    "pairwise_exact_agreement": null,
+    "model_coverage": {
+      "P0001": 1,
+      "P0002": 1,
+      "P0003": 1,
+      "P0004": 1,
+      "P0005": 1,
+      "P0006": 1,
+      "P0007": 1,
+      "P0008": 1,
+      "P0009": 1
+    },
+    "unspecified_coverage": {
+      "P0001": 0,
+      "P0002": 0,
+      "P0003": 0,
+      "P0004": 0,
+      "P0005": 0,
+      "P0006": 0,
+      "P0007": 0,
+      "P0008": 0,
+      "P0009": 0
+    },
+    "formal_human_ready": false,
+    "evaluation_level": "PROBE_OR_HUMAN_PENDING",
+    "evidence": {
+      "key": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-current-rules-20260820-r2\\blind\\evaluation-key.json",
+        "sha256": "464574ecea3c32939cf1e19b288c73f6e290a07e373a2a958c12a846b10d0d59"
+      },
+      "ratings": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-current-rules-20260820-r2\\blind\\model-ratings-M01.csv",
+        "sha256": "719f1106197f64304710d8054b7fe2362fbe0ea56d274b101be048252adb7f62"
+      },
+      "packet": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-current-rules-20260820-r2\\blind\\evaluation-packet.json",
+        "sha256": "a190b0d2436f11cfa2fe1bb5c611737aa44d52190c24bb8f3a4afa9580d3f74a"
+      },
+      "source_pairs": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-current-rules-20260820-r2\\blind\\pairs.json",
+        "sha256": "5d0ea5aee8dac354e96f6fda33a1d39d89f8ba29d4f1b237a912f2429a029d36"
+      }
+    },
+    "findings": [
+      {
+        "severity": "warning",
+        "code": "PAIR_HAS_ONE_RATER",
+        "pair_id": "P0001"
+      },
+      {
+        "severity": "warning",
+        "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+        "pair_id": "P0001",
+        "human_raters": 0
+      },
+      {
+        "severity": "warning",
+        "code": "PAIR_HAS_ONE_RATER",
+        "pair_id": "P0002"
+      },
+      {
+        "severity": "warning",
+        "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+        "pair_id": "P0002",
+        "human_raters": 0
+      },
+      {
+        "severity": "warning",
+        "code": "PAIR_HAS_ONE_RATER",
+        "pair_id": "P0003"
+      },
+      {
+        "severity": "warning",
+        "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+        "pair_id": "P0003",
+        "human_raters": 0
+      },
+      {
+        "severity": "warning",
+        "code": "PAIR_HAS_ONE_RATER",
+        "pair_id": "P0004"
+      },
+      {
+        "severity": "warning",
+        "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+        "pair_id": "P0004",
+        "human_raters": 0
+      },
+      {
+        "severity": "warning",
+        "code": "PAIR_HAS_ONE_RATER",
+        "pair_id": "P0005"
+      },
+      {
+        "severity": "warning",
+        "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+        "pair_id": "P0005",
+        "human_raters": 0
+      },
+      {
+        "severity": "warning",
+        "code": "PAIR_HAS_ONE_RATER",
+        "pair_id": "P0006"
+      },
+      {
+        "severity": "warning",
+        "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+        "pair_id": "P0006",
+        "human_raters": 0
+      },
+      {
+        "severity": "warning",
+        "code": "PAIR_HAS_ONE_RATER",
+        "pair_id": "P0007"
+      },
+      {
+        "severity": "warning",
+        "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+        "pair_id": "P0007",
+        "human_raters": 0
+      },
+      {
+        "severity": "warning",
+        "code": "PAIR_HAS_ONE_RATER",
+        "pair_id": "P0008"
+      },
+      {
+        "severity": "warning",
+        "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+        "pair_id": "P0008",
+        "human_raters": 0
+      },
+      {
+        "severity": "warning",
+        "code": "PAIR_HAS_ONE_RATER",
+        "pair_id": "P0009"
+      },
+      {
+        "severity": "warning",
+        "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+        "pair_id": "P0009",
+        "human_raters": 0
+      }
+    ],
+    "interpretation": "Counts report preferences from the declared rater kinds. Formal release requires at least two effective human ratings and a strict human majority on every pair-dimension; SKIP is not an effective vote, and unresolved disagreement requires an appended independent tiebreak rating. No count proves authorship or detector performance."
+  },
+  "claims": {
+    "may_select_candidate": false,
+    "may_advance_manifest_state": false,
+    "human_quality_clearance": false
+  }
+}

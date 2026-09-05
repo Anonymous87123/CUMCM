@@ -1,0 +1,38 @@
+{
+  "schema": "aigc-adapter-run/v1",
+  "package": "humanize-academic-chinese",
+  "action": "verify-candidate",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-holdout-current-rules-20260820-r10\\verify-final\\a-reflection-boundary-t3",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-holdout-current-rules-20260820-r10\\sources\\a-reflection-boundary.txt",
+    "sha256": "f45733b5a37e3f6c6f261ef2416fd1dc07a502b1209a3937f4f2a220f79fda27",
+    "bytes": 472,
+    "suffix": ".txt"
+  },
+  "protected_inventory": {
+    "numbers": {},
+    "tex_commands": {},
+    "tex_keys": {},
+    "inline_math": {},
+    "dollar_display_math": {},
+    "display_math": {},
+    "math_environments": {},
+    "code_fences": {},
+    "urls": {}
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-holdout-current-rules-20260820-r10\\candidates-safe\\a-reflection-boundary-t3.txt",
+    "sha256": "519a288cdd9a6c2620f09e6c1962e9afb62c22eb3af746a6a94ca3a59e17ed03",
+    "bytes": 484,
+    "suffix": ".txt"
+  },
+  "human_review_required": true
+}

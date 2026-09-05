@@ -1,0 +1,62 @@
+{
+  "schema": "aigc-blind-key/v1",
+  "seed": 20260821,
+  "dimensions": [
+    "naturalness",
+    "judgment_trajectory",
+    "specificity",
+    "content_density",
+    "semantic_fidelity"
+  ],
+  "pairs": [
+    {
+      "pair_id": "P0001",
+      "A": "a-convergence-repair::humanize-academic-chinese::t1",
+      "B": "a-convergence-repair::source"
+    },
+    {
+      "pair_id": "P0002",
+      "A": "a-convergence-repair::source",
+      "B": "a-convergence-repair::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0003",
+      "A": "a-convergence-repair::source",
+      "B": "a-convergence-repair::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0004",
+      "A": "b-decision-boundary::source",
+      "B": "b-decision-boundary::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0005",
+      "A": "b-decision-boundary::source",
+      "B": "b-decision-boundary::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0006",
+      "A": "b-decision-boundary::source",
+      "B": "b-decision-boundary::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0007",
+      "A": "c-correlation-boundary::humanize-academic-chinese::t1",
+      "B": "c-correlation-boundary::source"
+    },
+    {
+      "pair_id": "P0008",
+      "A": "c-correlation-boundary::source",
+      "B": "c-correlation-boundary::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0009",
+      "A": "c-correlation-boundary::source",
+      "B": "c-correlation-boundary::humanize-academic-chinese::t3"
+    }
+  ],
+  "packet_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-v3\\blind\\evaluation-packet.json",
+  "packet_sha256": "e2733a053f76fd2d21e5bebfa1b7823c66e7c7b517a19c30f0611bbea8f2386f",
+  "source_pairs_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-v3\\blind\\pairs.json",
+  "source_pairs_sha256": "7fb87e87ff79f2b6c07031e514de20ad188ff37d92ea4c0203530568a5dda05c"
+}

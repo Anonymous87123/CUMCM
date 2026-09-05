@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "568148e35af00f966df43ccd17114c03c50cee114bf2a57d77e35a247282c05d",
+    "before_sha256": "568148e35af00f966df43ccd17114c03c50cee114bf2a57d77e35a247282c05d"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "a63395c5714535f42a2e04a3f19d9e35a7b3defb163e2d3c7aed2d3005094be5",
+  "chunk_binding_sha256": "792edf16b2e1b60d9b97d758f19f67d795b3defd33c0ad832a994b32d5d2fea0",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-812ffef31ba1.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "db60c726234035c0be66b89e1c8270e306ae1be762eccea61e3cae07414f0a4c",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 31,
+        "id": "S1",
+        "sha256": "3558b1b1c38243af385d368aff5f66814bbb13b866ade1673e70654da11b2e68",
+        "start_line": 1
+      }
+    ],
+    "reason": "求解结果段落依次定义后期窗口、列出统计表并限定混沌判断职责，结构与对象对应明确。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "11278123b50fb724dfe317226d623a403951b1d3f5bb15eb40322eb728b0e6c8",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-812ffef31ba1"
+}

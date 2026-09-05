@@ -1,0 +1,116 @@
+{
+  "artifact": {
+    "after_sha256": "4ec64ec8fedf424623f3528b8cad21d05f3706a5e3c983ca9d38bd593d839d11",
+    "before_sha256": "981e2b6b27d1f1d0fb3c978b7e99a9f7e16bc43a0f58459ef7e83e40218931ce"
+  },
+  "changes": [
+    {
+      "after": {
+        "end_line": 2,
+        "han_chars": 54,
+        "line_count": 1,
+        "sha256": "e22df03f9cc0ce7806aab3abfedecf48338edff4fbfffc2eaab4569b5c98ec70",
+        "start_line": 2
+      },
+      "before": {
+        "end_line": 2,
+        "han_chars": 56,
+        "line_count": 1,
+        "sha256": "88cf6063f065b1032b40af6912867d0c0214f7acf3b3230db2b86bdce1ff2139",
+        "start_line": 2
+      },
+      "change_id": "QCH-05ac95b036a7b9770a87",
+      "operation": "REPLACE",
+      "ordinal": 1
+    },
+    {
+      "after": {
+        "end_line": 17,
+        "han_chars": 88,
+        "line_count": 1,
+        "sha256": "f2372d3e3896525ecbc01e59a8f551db6ffd1fe5121ffc70427e1c7767994d21",
+        "start_line": 17
+      },
+      "before": {
+        "end_line": 17,
+        "han_chars": 119,
+        "line_count": 1,
+        "sha256": "3d0d2bb7bd3888bb2fd566d09a33ecc7ec339d4d6c9d3c11d2b00c8bc26c31d1",
+        "start_line": 17
+      },
+      "change_id": "QCH-12c71341fa22fa41e393",
+      "operation": "REPLACE",
+      "ordinal": 2
+    },
+    {
+      "after": {
+        "end_line": 19,
+        "han_chars": 170,
+        "line_count": 1,
+        "sha256": "04a95799bd37fe95592da25164a2efd2f20aa3b811f9bdfb8a4c462f4137d05b",
+        "start_line": 19
+      },
+      "before": {
+        "end_line": 19,
+        "han_chars": 249,
+        "line_count": 1,
+        "sha256": "047be946eb848d10cd306292aab548a8f57214dc74756407789ae6e3014f68e2",
+        "start_line": 19
+      },
+      "change_id": "QCH-d36c33cf86f4db801f32",
+      "operation": "REPLACE",
+      "ordinal": 3
+    }
+  ],
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "authorship": "NOT_EVALUATED",
+    "quality_clearance_granted": false
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "bf9bd7f80b080391f529df2dd0b993338b632daeb1ad4504d9d5e165466cefef",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "14aa71fbf6e473cd6941b54f4d01223c8ba316af7f9441a400473822ab1c60c1",
+  "review_contract": {
+    "empty_or_generic_benefit_is_clearance": false,
+    "local_model_or_caller_assertion_is_clearance": false,
+    "required_dimensions": [
+      "actionable_pathology_remaining",
+      "no_change_is_best_available_decision",
+      "problem_span_binding",
+      "independent_reading_benefit",
+      "subject_and_modifier_alignment",
+      "verb_object_collocation",
+      "logical_relation_preservation",
+      "template_field_role_and_authorization",
+      "information_density_and_rhythm",
+      "author_voice_non_regression"
+    ],
+    "required_per_change_verdicts": [
+      "ACCEPT",
+      "REVISE",
+      "REVERT"
+    ],
+    "validator_pass_is_quality_clearance": false
+  },
+  "schema": "humanize-paired-quality-review-request/v1",
+  "status": "PENDING_EXTERNAL_REVIEW",
+  "template_field_changes": [],
+  "validation_context": {
+    "artifact_relation": "CHANGED",
+    "decision": "REWRITE",
+    "decision_eligible": true,
+    "document_format": "tex",
+    "document_scope": "FRAGMENT",
+    "mechanical_validation_status": "PASS",
+    "mode": "REWRITE",
+    "scene": "MODELING"
+  }
+}

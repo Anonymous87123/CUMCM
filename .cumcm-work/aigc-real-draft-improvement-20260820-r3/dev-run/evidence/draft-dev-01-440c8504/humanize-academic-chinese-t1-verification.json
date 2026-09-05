@@ -1,0 +1,63 @@
+{
+  "schema": "aigc-adapter-run/v1",
+  "package": "humanize-academic-chinese",
+  "action": "verify-candidate",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r3\\dev-run\\verify-final\\draft-dev-01-440c8504-t1",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r3\\dev-run\\sources\\draft-dev-01-440c8504.tex",
+    "sha256": "d03e7c9155c60ef4c851bd99e53f21d4ea256f26bace4a9d889338e3a9c95d4b",
+    "bytes": 576,
+    "suffix": ".tex"
+  },
+  "protected_inventory": {
+    "numbers": {
+      "0.204": 1,
+      "1.8": 1,
+      "1.805": 1,
+      "1.838": 1,
+      "120": 1,
+      "2025": 2,
+      "4.213": 1
+    },
+    "tex_commands": {
+      "\\mathrm": 1
+    },
+    "tex_keys": {},
+    "inline_math": {
+      "\\mathrm{CPUE}^*": 1
+    },
+    "dollar_display_math": {},
+    "display_math": {},
+    "math_environments": {},
+    "code_fences": {},
+    "urls": {}
+  },
+  "tex_semantic_contract": {
+    "status": "pass",
+    "before": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r3\\dev-run\\sources\\draft-dev-01-440c8504.tex",
+    "after": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r3\\dev-run\\authoring\\draft-dev-01-440c8504-t1.tex",
+    "scene": "GENERAL",
+    "errors": 0,
+    "warnings": 0,
+    "findings": [],
+    "number_diff": {
+      "removed": [],
+      "introduced": []
+    }
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r3\\dev-run\\authoring\\draft-dev-01-440c8504-t1.tex",
+    "sha256": "77426a4093f866edcd61fa6f1e143dcec491b04b996f25444c137d2f72e947a5",
+    "bytes": 566,
+    "suffix": ".tex"
+  },
+  "human_review_required": true
+}

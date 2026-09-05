@@ -1,0 +1,144 @@
+{
+  "schema": "aigc-tex-blind-holdout-seal/v1",
+  "state": "SEALED_UNSCORED",
+  "release_id": "aigc-mcm-v6-20260819",
+  "sealed_at_utc": "2026-08-18T03:49:10+00:00",
+  "pair_count": 12,
+  "sampling": {
+    "method": "seeded-section-round-robin/v1",
+    "seed": 20260819,
+    "eligible": 28,
+    "selected": 12,
+    "quality_labels_used": false,
+    "exclude_spec": null,
+    "exclude_specs": [
+      {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\tex-pair-spec.json",
+        "sha256": "cc29ae73d56fc852d3854b33d044e24d74127fa2806042fd94011cfec2257346"
+      },
+      {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\holdout-v1\\holdout-spec.json",
+        "sha256": "680ec7e0380ca4e146719258bb61b50bac7ee30025ee388f2b374a5c5cab51bf"
+      }
+    ]
+  },
+  "artifacts": {
+    "spec": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v6\\holdout-spec.json",
+      "bytes": 5661,
+      "sha256": "299131d9ff4cdd597bbd1263487d14f29adb848325355a4cd724cc98eecc2a38",
+      "schema": "aigc-tex-blind-pair-spec/v1"
+    },
+    "pairs": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v6\\holdout-pairs.json",
+      "bytes": 16901,
+      "sha256": "ac742280f14902fa953530c04f2eb81e05f9d86e2c80d45a45582e7d43a74ea4",
+      "schema": "aigc-blind-pairs/v1"
+    },
+    "key": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v6\\blind-run\\evaluation-key.json",
+      "bytes": 1860,
+      "sha256": "37cdbabcb27f997e0afc5195d19a91d770d5a53450d349031b17a5c10777d7ba",
+      "schema": "aigc-blind-key/v1"
+    },
+    "packet": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v6\\blind-run\\evaluation-packet.json",
+      "bytes": 11904,
+      "sha256": "4296324fa2891a53290a9f7df8c4a8ecd423c79e5631b6ddc052b8fdd585a719",
+      "schema": "aigc-blind-packet/v1"
+    },
+    "ratings_template": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v6\\blind-run\\ratings-template.csv",
+      "bytes": 460,
+      "sha256": "10f681a745445d24026ab2c6b5959014e45edb228f623f9807ba5c2bb06f33e3"
+    }
+  },
+  "rule_snapshot": [
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\SKILL.md",
+      "bytes": 33738,
+      "sha256": "e4d81e4aa79bbe84655942691b2212704263ae6cabb3d6ae88735b238b54fdc2"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_academic_candidate.py",
+      "bytes": 22915,
+      "sha256": "8fe9b084eede7f469bdb0fc8611d797379cd1b5747a5a814308ab76beef8d9d5"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_style_rhythm.py",
+      "bytes": 8502,
+      "sha256": "da87dc3a15c7dcfcbe49b25fdf8e3bcb1557b5c71238ed78265b4033e60e9a0e"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\sample_tex_blind_pairs.py",
+      "bytes": 8662,
+      "sha256": "d82b89bdb4e63df1d4d839080e1b38e2e8cf9c3f840e72ba18cea3ff57a150dc"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\prepare_tex_blind_pairs.py",
+      "bytes": 6112,
+      "sha256": "a6881e919de0d2c0302d95993cf60042ef07b767d24ac663b0df9691580c09ff"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\blind_pair_evaluation.py",
+      "bytes": 12615,
+      "sha256": "40ecd20f51b5f7f888a3fb5f7e92e0aa01dcc4c7205a8ddec05f859aee7b8f2f"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\seal_tex_blind_holdout.py",
+      "bytes": 7192,
+      "sha256": "ae6c835b1fd148dc03cc2295bdf53f69a596f183d3a2ec094d57370e31719caa"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_tex_blind_holdout.py",
+      "bytes": 4241,
+      "sha256": "30103aa8b5b61318affe6cc9ffa831a348a67c8f307ec11399f196a522012c39"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\SKILL.md",
+      "bytes": 26716,
+      "sha256": "bc962c3b8007a177788edca1bfd11d7819b1d6a53d3854fe92b175cf73996e9e"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\system-prompt-contract.md",
+      "bytes": 18715,
+      "sha256": "ece53109f73c8c515fde74608f993450cc48a92530fc65f811e35b0cc6a56ff9"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\modeling-reasoning-preservation.md",
+      "bytes": 2290,
+      "sha256": "be4eaa70304e7e17b216ab19bbd695eb76ee793fa432eae0007de5d1ee2f2a11"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\long-document-workflow.md",
+      "bytes": 94222,
+      "sha256": "21cdc7bf4fd0b97cfae4167d7e83454d8ad70c4202beb2d09fffc806ccdf8012"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\generator-projection-policy.json",
+      "bytes": 4955,
+      "sha256": "3ad690e27bc8cff438ae0343759e6ac100f28a7c74abcf127a15277a4dec0f70"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\scripts\\build_humanize_generator_projection.py",
+      "bytes": 89994,
+      "sha256": "20f6e7baced9605f29fd44f8d6de753cc877f7f10a348e2042f63506cafca754"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\SKILL.md",
+      "bytes": 29904,
+      "sha256": "05d8be3863238ddcf3fb66d23d17ef558a509d3fd7624c1f987820f228a23834"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_rewrite_contract.py",
+      "bytes": 19655,
+      "sha256": "319a31b07a42997aa38003a4e7457281ea37f204c367751e987e3c76964d3f12"
+    }
+  ],
+  "release_requirements": {
+    "minimum_human_raters_per_pair": 2,
+    "model_ratings_are_diagnostic_only": true,
+    "mapping_key_visibility": "private-until-ratings-frozen",
+    "current_rules_must_not_be_tuned_from_holdout_results": true
+  }
+}

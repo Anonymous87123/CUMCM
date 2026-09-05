@@ -1,0 +1,88 @@
+{
+  "artifact": {
+    "after_sha256": "97d20e54c78594259fee5d4af89eeb225dac1c3ba6065f1819d469882bff134a",
+    "before_sha256": "bbe3b06fc9e36932dad3a8eedc9d87c4889181d50b7ea0d755e9d9f3c7a48a1f"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "35e35b78ce980a0328b29c6c16b264ae688ef8ca45cc8340cdc9f36eb3a9bc6d",
+  "chunk_binding_sha256": "f71f37fb87a56ac4b9ac6c242e4bbdec1f2472b7ab27958b3cce555a9be26020",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-deaaf69e6551.diff",
+    "sha256": "15cc1f51561e096187b13e4fa66454c07e5acc6f262ea67ad5ae6b70350151a9"
+  },
+  "evidence_sha256": "8f8293fa4d99aab1f9d5b815ae64b301ebc6883dd13febc2040cacdda600d153",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "从前四问的层级差异引出四项指标，并把多种赋权方法限定为排序检查。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "从前四问的层级差异引出四项指标，并把多种赋权方法限定为排序检查。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "69a0946c36936ec07a3e6d07836ec6b550909ab8d610597e20bda2f0ec83c741",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "id": "S2",
+        "sha256": "9628e73d2ec4f1f9271ca2f412ed9142d422834bde70b9617fe6eeb245a7a92b",
+        "start_line": 4
+      }
+    ],
+    "summary": "从前四问的层级差异引出四项指标，并把多种赋权方法限定为排序检查。",
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "operation": "REPLACE",
+        "start_line": 4
+      }
+    ],
+    "masked_after_sha256": "980c886c825d905a85c44b98c0815e83d9dfcfbc2a63579de65e8c73c1df7f85",
+    "masked_before_sha256": "0c568d07658eb9cc035cabdc7921d574c904113ba7f9be52c4300a427cc947b8",
+    "source_spans_covered": 2,
+    "source_spans_total": 2,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "ab9b70d953ae7e264bb9a10e6e33619cacdeb7c8e692d6ac0f784a7d9e0ca33c",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-deaaf69e6551"
+}

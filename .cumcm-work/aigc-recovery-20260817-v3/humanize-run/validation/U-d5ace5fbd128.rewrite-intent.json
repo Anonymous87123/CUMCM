@@ -1,0 +1,110 @@
+{
+  "artifact": {
+    "after_sha256": "97f7606482751dcdedfcf524fd3fffe225aceaf6d6ffca0c5e7c083a40d98928",
+    "before_sha256": "aad7f22ffc5214edb3aca81f91c0628e3ea4fa262c0c7378a4e1ab8f137e9b10"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "0a141fa497e9fe9843f50c406229d8832dd946338a93f104f662646b37d71711",
+  "chunk_binding_sha256": "2574cd4c52d898b2d411efbd80b8fd9161f941ebbbe0d76562576c28273209c9",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-d5ace5fbd128.diff",
+    "sha256": "c68058c9492e865986e8d2c7781990ce31c8a8bf9e6e92d43b38c4788840b248"
+  },
+  "evidence_sha256": "f477258a3f064d6f561bfe387fca92259eeec511abfc81ed7e8de4ff85b0b73d",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "厘清中层猎物与四大家鱼的变量边界，并收紧权重和敏感性结论。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "厘清中层猎物与四大家鱼的变量边界，并收紧权重和敏感性结论。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O3",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S3"
+        ],
+        "summary": "厘清中层猎物与四大家鱼的变量边界，并收紧权重和敏感性结论。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "e0e7ff7d33eb68bc787c47386650260b37cde1aaa8e15099c994d059288a5c02",
+        "start_line": 2
+      },
+      {
+        "end_line": 27,
+        "id": "S2",
+        "sha256": "94be10716a7bd7ba90527341cc6f2e32082e8efcdb5e1c3daa8551c153700c57",
+        "start_line": 27
+      },
+      {
+        "end_line": 34,
+        "id": "S3",
+        "sha256": "9a7e5a792f4fe20a15eb9e20f3ea22dd83b228a6e27e46f26be5d9661b442e1e",
+        "start_line": 34
+      }
+    ],
+    "summary": "厘清中层猎物与四大家鱼的变量边界，并收紧权重和敏感性结论。",
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      },
+      {
+        "end_line": 27,
+        "operation": "REPLACE",
+        "start_line": 27
+      },
+      {
+        "end_line": 34,
+        "operation": "REPLACE",
+        "start_line": 34
+      }
+    ],
+    "masked_after_sha256": "27b16344d51030ce922431bd893656fb5975896fa8cac8875f4c3eef2780259f",
+    "masked_before_sha256": "b822241759ead62192f8ddc926380ac3a803127ef0537081077b2c993af829d5",
+    "source_spans_covered": 3,
+    "source_spans_total": 3,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "74ac0dd40d1068a269df4fa7223119b9846ca020959dc4d404a9a54e072532c9",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-d5ace5fbd128"
+}

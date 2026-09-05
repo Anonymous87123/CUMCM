@@ -1,0 +1,66 @@
+{
+  "artifact": {
+    "after_sha256": "5a57b0866dcf350c47b65d201b759f1cfa8e06c18f3a86c596a14b1a0fcab41d",
+    "before_sha256": "e15a1551f384c232ad55c744ea36230cf914723389a6db7db273b41bcdb97d64"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "4b33ef0107d1697072760fe0f8c44c812d02d224a92205b7facf6eace6f57a36",
+  "chunk_binding_sha256": "7f8d8b1367ca4e74c89c7249f28498674885404a63a70c813827cce780527817",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-e0a2391b9668.diff",
+    "sha256": "1145ebc5bfcab5c8d55296f2c653d77b816a6f5e8b128cdf0ee35a83e01684d8"
+  },
+  "evidence_sha256": "3f433957be2c76247983170585c63a88e5004dc15c878995a414a8f967dbc5d9",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "精简李雅普诺夫指数数值实现的步骤播报，保留复核设置。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "9aa7948347f01f7cb6b463860a0f134bad42dfcbeafb52c208be462ff1e81c10",
+        "start_line": 2
+      }
+    ],
+    "summary": "精简李雅普诺夫指数数值实现的步骤播报，保留复核设置。",
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      }
+    ],
+    "masked_after_sha256": "46685f40a0454ac9ead37d89e4cafba81115d72c5abc4580642ae4b2b666f324",
+    "masked_before_sha256": "a8b0dd7abf0bd3e355f8a94f4d2534e445951ac600e6d1ddcfc8080d7378befc",
+    "source_spans_covered": 1,
+    "source_spans_total": 1,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "3c56072a8155742924fa8d4294bc9ff0bb63d28f114e15924c757dd06160a862",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-e0a2391b9668"
+}

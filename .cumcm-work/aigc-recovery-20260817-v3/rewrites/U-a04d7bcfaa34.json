@@ -1,0 +1,108 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-a04d7bcfaa34",
+  "chunk_binding_sha256": "204871cf882195cfb15d6a4a1174263edb38dc4ace7c68ecebba67993bf78bbe",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "842ae235d7ee9818",
+    "prepare_integrity_sha256": "c38e1d6ea4a8467e7d26d083319b223bd567819e17070c0ac06e74de425e1aa2",
+    "run_metadata_sha256": "af8e27fded78b4cdf5593d7a49751c6f6e43e94172419e8103c4f33a166925b9",
+    "policy_snapshot_sha256": "78c9d819ed643befe1459941693ca6ea078ca61644c28b531ba2fb612fd20234",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "unit_id": "U-a04d7bcfaa34",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 24430,
+      "end": 24925,
+      "start_line": 499,
+      "end_line": 503,
+      "source_span_sha256": "7799e35305f64025822d743e97dfaeda2dc361449927e27b6f5545c07c7db040",
+      "masked_text_sha256": "8e5ca23f67ff64c2d5290dfbb4338f4c2a3f762c090785f86e18bc4fbc136f39",
+      "chunk_binding_sha256": "204871cf882195cfb15d6a4a1174263edb38dc4ace7c68ecebba67993bf78bbe"
+    },
+    "scene_route": {
+      "requested_scene": "MODELING",
+      "resolved_scene": "MODELING",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "2a6f8d4ded60fb0aced4ffc9625910b408a33e6ebff3ca71b87fcbcf02b96e3a",
+      "routing_input_sha256": "32e240153873034b2fd345320098b7c86fc89a0bf2f459350d6cd627086216c5"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-modeling",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "MODELING",
+      "profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "1dc410cf25b39fc1769f36a2b02c1e58f40a056444e96e4d8ad5fd1b2c03a015"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00661:dc8e6718fe1b]]\n单区食物网在流域平均尺度上能够同时容纳总量标定、局地对照和反事实比较。我们的标定结果下，2025 年四大家鱼总量为 1.805，CPUE 代理为 1.838；对 [[PROTECTED:F00001-P00662:5f15813916de]]、[[PROTECTED:F00001-P00663:2252b08f5849]] 和 [[PROTECTED:F00001-P00664:1734d45fd979]] 做 [[PROTECTED:F00001-P00665:a3934e59b706]] 扰动后，恢复方向和禁渔占优关系保持不变。进一步对资源增长、摄食耦合、转化效率和自然损失四组结构参数做 [[PROTECTED:F00001-P00666:3eb1afc44071]] 分组扰动，并在每组扰动后重新标定总量目标，CPUE 代理仍位于 1.824--1.840 区间。这一结构按食性组成四组并联关系：四类资源分别与四类鱼直接耦合，用于识别哪一层首先承压，而资源间竞争与鱼类交叉摄食没有显式展开。\n\n[[PROTECTED:F00001-P00667:23f77b65545d]] 权重仍带有经验成分，湖北段数据也具有局地网具口径。按现有设定，模型能够稳健支持的是[[PROTECTED:F00001-P00668:7e59f015de9c]]和[[PROTECTED:F00001-P00669:ae7e00d30a07]]，还不足以精确解释湖北段增幅。提高解释力需要补充标准化CPUE和连续河段监测；取得这些数据后，再引入横向竞争与交叉摄食，单纯增加状态维度不能弥补观测缺口。\n\n",
+  "rewrite_intent": {
+    "summary": "把单区模型的结构边界与新增监测需求直接对应，删除抽象比较词。",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "把单区模型的结构边界与新增监测需求直接对应，删除抽象比较词。"
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "把单区模型的结构边界与新增监测需求直接对应，删除抽象比较词。"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 2,
+        "end_line": 2,
+        "sha256": "683f6e95b15c251750a537f9f3578e58a55249ce42898d3d8c3939bd4f8c8a13"
+      },
+      {
+        "id": "S2",
+        "start_line": 4,
+        "end_line": 4,
+        "sha256": "ab12c57b5d2bcb064ae154834a375a2af44a8ffa140e94d1f955ae548ff878e2"
+      }
+    ],
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  }
+}

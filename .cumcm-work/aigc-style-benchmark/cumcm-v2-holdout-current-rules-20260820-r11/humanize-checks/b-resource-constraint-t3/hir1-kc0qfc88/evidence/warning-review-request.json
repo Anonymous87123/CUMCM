@@ -1,0 +1,322 @@
+{
+  "artifact": {
+    "after_sha256": "7f80f0401449470a0760e6fc55d6e6c4a32f8ae49858e6f468b87304f0251be5",
+    "before_sha256": "874bc69edc4622b1d4343c5c304fc0c13721af04d060139142bc1ad73e9660f5"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "175a8ef99f39f83bd160b225649a18bc876a1d2bd8f61b7ec4a06205321e29b1",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "markdown",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "可": 1,
+          "可能": 1,
+          "需要": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0001",
+            "column": 8,
+            "end": 9,
+            "end_column": 10,
+            "end_line": 1,
+            "line": 1,
+            "marker": "需要",
+            "sentence_context": "生产方案的收益需要沿完整流程计算：零件是否检查会影响装配，成品处理又可能引出调换或拆解",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 7
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0003",
+            "column": 35,
+            "end": 36,
+            "end_column": 37,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可能",
+            "sentence_context": "生产方案的收益需要沿完整流程计算：零件是否检查会影响装配，成品处理又可能引出调换或拆解",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 34
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0005",
+            "column": 61,
+            "end": 61,
+            "end_column": 62,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可",
+            "sentence_context": "把决策图转换为参数后，这些后果均可归入方案的直接盈利值，因此模型以利润为核心指标",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 60
+          }
+        ],
+        "before": {
+          "可以": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0002",
+            "column": 19,
+            "end": 20,
+            "end_column": 21,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可以",
+            "sentence_context": "分析决策图、将决策转换为决策参数后,可以将企业生产流程从零件的检查与装配开始分析到拆解环节",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 18
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "可": 1,
+            "可能": 1,
+            "需要": 1
+          },
+          "removed": {
+            "可以": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "可": 1,
+              "可能": 1,
+              "需要": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0001",
+                "column": 8,
+                "end": 9,
+                "end_column": 10,
+                "end_line": 1,
+                "line": 1,
+                "marker": "需要",
+                "sentence_context": "生产方案的收益需要沿完整流程计算：零件是否检查会影响装配，成品处理又可能引出调换或拆解",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 7
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0003",
+                "column": 35,
+                "end": 36,
+                "end_column": 37,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可能",
+                "sentence_context": "生产方案的收益需要沿完整流程计算：零件是否检查会影响装配，成品处理又可能引出调换或拆解",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 34
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0005",
+                "column": 61,
+                "end": 61,
+                "end_column": 62,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "把决策图转换为参数后，这些后果均可归入方案的直接盈利值，因此模型以利润为核心指标",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 60
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 19,
+                "end": 20,
+                "end_column": 21,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可以",
+                "sentence_context": "分析决策图、将决策转换为决策参数后,可以将企业生产流程从零件的检查与装配开始分析到拆解环节",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 18
+              }
+            ],
+            "removed": {
+              "可以": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "5e26d92e95ff3745578e85a8a226527e578576d7a5dfbc73e892822165334acc"
+    },
+    {
+      "code": "SPEECH_ACT_FOCUS_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "主要": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "focus_scope",
+            "claim_id": "C0007",
+            "column": 89,
+            "end": 90,
+            "end_column": 91,
+            "end_line": 1,
+            "line": 1,
+            "marker": "主要",
+            "sentence_context": "环保性主要体现在丢弃产品的价值上，调换费用还牵涉信誉等难量化因素，二者作为成本解释保留，不与利润组成等权多目标规划",
+            "sentence_id": "T0003",
+            "side": "after",
+            "start": 88
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "主要": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "主要": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "focus_scope",
+                "claim_id": "C0007",
+                "column": 89,
+                "end": 90,
+                "end_column": 91,
+                "end_line": 1,
+                "line": 1,
+                "marker": "主要",
+                "sentence_context": "环保性主要体现在丢弃产品的价值上，调换费用还牵涉信誉等难量化因素，二者作为成本解释保留，不与利润组成等权多目标规划",
+                "sentence_id": "T0003",
+                "side": "after",
+                "start": 88
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'focus_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "f50dc96ea913f5e169b9184a23ff229365ae15ad3e66663fd8de1a780a326522"
+    },
+    {
+      "code": "SPEECH_ACT_LOGICAL_RELATION_CHANGED",
+      "details": {
+        "after": {
+          "因此": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "logical_relation",
+            "claim_id": "C0006",
+            "column": 73,
+            "end": 74,
+            "end_column": 75,
+            "end_line": 1,
+            "line": 1,
+            "marker": "因此",
+            "sentence_context": "把决策图转换为参数后，这些后果均可归入方案的直接盈利值，因此模型以利润为核心指标",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 72
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "因此": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "因此": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0006",
+                "column": 73,
+                "end": 74,
+                "end_column": 75,
+                "end_line": 1,
+                "line": 1,
+                "marker": "因此",
+                "sentence_context": "把决策图转换为参数后，这些后果均可归入方案的直接盈利值，因此模型以利润为核心指标",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 72
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'logical_relation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "fa641100e7855f4efabfaa3d6278d57fcbb072e8b34d58dc9034cb910e558f30"
+    }
+  ]
+}

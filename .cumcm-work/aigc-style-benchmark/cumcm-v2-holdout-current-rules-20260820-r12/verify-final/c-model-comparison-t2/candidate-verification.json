@@ -1,0 +1,38 @@
+{
+  "schema": "aigc-adapter-run/v1",
+  "package": "humanize-academic-chinese",
+  "action": "verify-candidate",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-holdout-current-rules-20260820-r12\\verify-final\\c-model-comparison-t2",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-holdout-current-rules-20260820-r12\\sources\\c-model-comparison.txt",
+    "sha256": "cde68256dde0feb36f6fe43636468a2c4baf555da137146c64b53a0ac2be6736",
+    "bytes": 486,
+    "suffix": ".txt"
+  },
+  "protected_inventory": {
+    "numbers": {},
+    "tex_commands": {},
+    "tex_keys": {},
+    "inline_math": {},
+    "dollar_display_math": {},
+    "display_math": {},
+    "math_environments": {},
+    "code_fences": {},
+    "urls": {}
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-holdout-current-rules-20260820-r11\\authoring\\c-model-comparison-t2.txt",
+    "sha256": "016560cf4ee16ce9f6221c3bd52922b6573a32f55d59a0d55378e65a2acb4971",
+    "bytes": 489,
+    "suffix": ".txt"
+  },
+  "human_review_required": true
+}

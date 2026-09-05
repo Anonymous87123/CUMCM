@@ -1,0 +1,130 @@
+{
+  "schema": "aigc-academic-recovery-plan/v1",
+  "audit": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-pipeline-audit-20260817\\academic-style-audit-final-v2.json",
+    "sha256": "c4f03ea508d17c3d97d3cb07417819c5f27f9c1a7e5212bd059aa4d3fccd66dd"
+  },
+  "source": {
+    "path": "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main.tex",
+    "sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609"
+  },
+  "candidate": {
+    "path": "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main_aigc_candidate.tex",
+    "sha256": "14dab4cbd902ad43275689e295cebca4fe2ddc47ca5702780f3b330121363ab4"
+  },
+  "scene": "MODELING",
+  "route": "REBASE_FROM_FROZEN_SOURCE",
+  "current_candidate_repair_allowed": false,
+  "source_rebase_required": true,
+  "blocking_gate_ids": [
+    "humanize-lexical",
+    "protected-rewrite-contract"
+  ],
+  "reason_codes": [
+    "MATH_CHANGED",
+    "REFERENCE_CHANGED",
+    "TEX_COMMAND_CHANGED",
+    "NUMBER_CHANGED",
+    "UNIT_CHANGED",
+    "CONSTRAINT_DIRECTION_CHANGED"
+  ],
+  "repair_items": [],
+  "repair_items_suppressed": 24,
+  "completion_claim_allowed": false,
+  "claims": {
+    "prose_rewritten": false,
+    "candidate_release_ready": false,
+    "authorship_or_detector_verdict": false
+  },
+  "native_rebase": {
+    "input_must_be": "source",
+    "forbidden_input": "candidate",
+    "prepare_command": [
+      "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\scripts\\prepare_humanize_long_document.py",
+      "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main.tex",
+      "--output",
+      "<RECOVERY_ROOT>/humanize-run",
+      "--scene",
+      "MODELING",
+      "--intensity",
+      "BALANCED"
+    ],
+    "scaffold_command": [
+      "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+      "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\scripts\\scaffold_humanize_rewrites.py",
+      "--run-dir",
+      "<RECOVERY_ROOT>/humanize-run",
+      "--output",
+      "<RECOVERY_ROOT>/rewrites",
+      "--decision",
+      "REWRITE",
+      "--format",
+      "text"
+    ],
+    "authoring_rule": "Complete each frozen unit from the source. Restore protected spans byte-for-byte; do not copy changed formulas, numbers, units, citations, or TeX from the rejected candidate."
+  },
+  "materialization": {
+    "status": "AUTHORING_REQUIRED",
+    "root": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3",
+    "run_dir": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\humanize-run",
+    "prepare": {
+      "command": [
+        "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\scripts\\prepare_humanize_long_document.py",
+        "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main.tex",
+        "--output",
+        "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\humanize-run",
+        "--scene",
+        "MODELING",
+        "--intensity",
+        "BALANCED"
+      ],
+      "returncode": 0,
+      "stderr": ""
+    },
+    "prepare_status": "READY",
+    "unit_statuses": {
+      "PENDING": 31,
+      "SKIPPED_PROTECTED": 9
+    },
+    "prepare_integrity": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\humanize-run\\prepare_integrity.json",
+      "sha256": "c38e1d6ea4a8467e7d26d083319b223bd567819e17070c0ac06e74de425e1aa2"
+    },
+    "scaffold": {
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\scripts\\scaffold_humanize_rewrites.py",
+          "--run-dir",
+          "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\humanize-run",
+          "--output",
+          "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\rewrites",
+          "--decision",
+          "REWRITE",
+          "--format",
+          "json"
+        ],
+        "returncode": 0,
+        "stderr": ""
+      },
+      "status": "SCAFFOLDED",
+      "templates": 31,
+      "metadata": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\rewrites\\scaffold_metadata.json",
+        "sha256": "06cfa1f01fcb0d7ef3d93c77cc4466c9ae6e9c5df68f8341ca46f9ef76e8cd53"
+      },
+      "commit_marker": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\rewrites\\.humanize-scaffold-committed",
+        "sha256": "f8bbf44c1d350ae71c96821e202f1370ccb951ef598abb9c4cc8aef481062161"
+      }
+    },
+    "claims": {
+      "prose_rewritten": false,
+      "candidate_assembled": false,
+      "candidate_release_ready": false
+    },
+    "execution_receipt": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\recovery-execution.json"
+  }
+}

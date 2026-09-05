@@ -1,0 +1,65 @@
+{
+  "artifacts": {
+    "execution-record.json": {
+      "sha256": "757a029229cc705344b0442394a41e59fa9107649c845e68e4f0f08451875500",
+      "size": 643
+    },
+    "inputs/after.bin": {
+      "sha256": "f16e830bf5ba33e1ef7027a9b490247e3986cded908022067a6def9b1f2c3757",
+      "size": 298
+    },
+    "inputs/before.bin": {
+      "sha256": "537fdbf85c48c57c50686c2d23f40a5499b83b6881f1517315eba61cd38c1078",
+      "size": 448
+    },
+    "invocation-request.json": {
+      "sha256": "3b0df397977fc67fc1cffed58a680b5bd6119edaab6e9d47162b3b0c31d2d3bf",
+      "size": 2404
+    },
+    "paired-quality-review-request.json": {
+      "sha256": "bfd6d181e58510e041f29b7789b648a51d73fe904398cb4f9e60761679da0ae6",
+      "size": 2902
+    },
+    "rendered-output.txt": {
+      "sha256": "0005c530a89de442eaac4fcca00c95138111d56861bd769424c8774d475fbeb3",
+      "size": 111090
+    },
+    "stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    "validation-result.json": {
+      "sha256": "0005c530a89de442eaac4fcca00c95138111d56861bd769424c8774d475fbeb3",
+      "size": 111090
+    },
+    "warning-review-request.json": {
+      "sha256": "45ca35853c2a35976fec6060db17e999a9a6d5f5ef0d8e1b5a596c55cfcd1994",
+      "size": 17132
+    }
+  },
+  "contains_source_content": true,
+  "delivery_gate_status": "FAIL",
+  "exit_code": 1,
+  "external_anchor_status": "NOT_PROVIDED",
+  "integrity_scope": "SELF_CONSISTENCY_ONLY",
+  "invocation_request_sha256": "ab4e634f24abfee20fd01008cb77c2bea6c0fa367baa27d575ced6ee47f42d51",
+  "manifest_sha256": "d7d65c1207fd900eec50f71e391c8a521f315d1e46987da25730701e8f214a0d",
+  "mode": "REWRITE",
+  "paired_quality_review_request_sha256": "59f37e46efd6c99a87e761552b5368b8945b4556dae08eac4ce9bbff346b411d",
+  "paired_quality_review_status": "BLOCKED_BY_MECHANICAL_GATE",
+  "record_sha256": "d5555e017c41433f8460d16b7224066c7907e5c5992c6727ac58517f9a004cc3",
+  "run_id": "hvr4-ab4e634f24abfee20fd01008cb77c2bea6c0fa367baa27d575ced6ee47f42d51",
+  "scene": "MODELING",
+  "schema": "humanize-direct-validation-evidence/v5",
+  "source_bindings": {
+    "after": {
+      "sha256": "f16e830bf5ba33e1ef7027a9b490247e3986cded908022067a6def9b1f2c3757",
+      "size": 298
+    },
+    "before": {
+      "sha256": "537fdbf85c48c57c50686c2d23f40a5499b83b6881f1517315eba61cd38c1078",
+      "size": 448
+    }
+  },
+  "status": "FAIL"
+}

@@ -1,0 +1,379 @@
+{
+  "artifact": {
+    "after_sha256": "3b565d6a66db672b33a9a3b8e6824815ebcf5b158a84928136e1a95336fda91a",
+    "before_sha256": "cde68256dde0feb36f6fe43636468a2c4baf555da137146c64b53a0ac2be6736"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "dc259fca411a61d1fa4ec325c2f30811860183e79443b4df772d3e549a1b0eb6",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "markdown",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0003",
+            "column": 52,
+            "end": 52,
+            "end_column": 53,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "带有偏好性质，直接写成硬约束可能使可行域过窄，甚至得不到可行方案，同时还可能增加转运损耗",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 51
+          }
+        ],
+        "before": {
+          "无": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0002",
+            "column": 67,
+            "end": 67,
+            "end_column": 68,
+            "end_line": 1,
+            "line": 1,
+            "marker": "无",
+            "sentence_context": "若过于强烈的要求则可能会出现约束过强无法规划出最终结果的情况,且会使转运损耗提升,而弱化要求又恐与题意相眉",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 66
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "不": 1
+          },
+          "removed": {
+            "无": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "不": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0003",
+                "column": 52,
+                "end": 52,
+                "end_column": 53,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "带有偏好性质，直接写成硬约束可能使可行域过窄，甚至得不到可行方案，同时还可能增加转运损耗",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 51
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0002",
+                "column": 67,
+                "end": 67,
+                "end_column": 68,
+                "end_line": 1,
+                "line": 1,
+                "marker": "无",
+                "sentence_context": "若过于强烈的要求则可能会出现约束过强无法规划出最终结果的情况,且会使转运损耗提升,而弱化要求又恐与题意相眉",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 66
+              }
+            ],
+            "removed": {
+              "无": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "1bece6680999409aa4bd5bc5542a95c0003e608fc8b80a709eaa0a3ba0701767"
+    },
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "可": 2,
+          "可能": 2
+        },
+        "after_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0002",
+            "column": 40,
+            "end": 41,
+            "end_column": 42,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可能",
+            "sentence_context": "带有偏好性质，直接写成硬约束可能使可行域过窄，甚至得不到可行方案，同时还可能增加转运损耗",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 39
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0002",
+            "column": 43,
+            "end": 43,
+            "end_column": 44,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可",
+            "sentence_context": "带有偏好性质，直接写成硬约束可能使可行域过窄，甚至得不到可行方案，同时还可能增加转运损耗",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 42
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0003",
+            "column": 54,
+            "end": 54,
+            "end_column": 55,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可",
+            "sentence_context": "带有偏好性质，直接写成硬约束可能使可行域过窄，甚至得不到可行方案，同时还可能增加转运损耗",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 53
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0004",
+            "column": 62,
+            "end": 63,
+            "end_column": 64,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可能",
+            "sentence_context": "带有偏好性质，直接写成硬约束可能使可行域过窄，甚至得不到可行方案，同时还可能增加转运损耗",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 61
+          }
+        ],
+        "before": {
+          "可能": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0002",
+            "column": 58,
+            "end": 59,
+            "end_column": 60,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可能",
+            "sentence_context": "若过于强烈的要求则可能会出现约束过强无法规划出最终结果的情况,且会使转运损耗提升,而弱化要求又恐与题意相眉",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 57
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "可": 2,
+            "可能": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "可": 2,
+              "可能": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 40,
+                "end": 41,
+                "end_column": 42,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可能",
+                "sentence_context": "带有偏好性质，直接写成硬约束可能使可行域过窄，甚至得不到可行方案，同时还可能增加转运损耗",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 39
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 43,
+                "end": 43,
+                "end_column": 44,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "带有偏好性质，直接写成硬约束可能使可行域过窄，甚至得不到可行方案，同时还可能增加转运损耗",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 42
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0003",
+                "column": 54,
+                "end": 54,
+                "end_column": 55,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "带有偏好性质，直接写成硬约束可能使可行域过窄，甚至得不到可行方案，同时还可能增加转运损耗",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 53
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0004",
+                "column": 62,
+                "end": 63,
+                "end_column": 64,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可能",
+                "sentence_context": "带有偏好性质，直接写成硬约束可能使可行域过窄，甚至得不到可行方案，同时还可能增加转运损耗",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 61
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 58,
+                "end": 59,
+                "end_column": 60,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可能",
+                "sentence_context": "若过于强烈的要求则可能会出现约束过强无法规划出最终结果的情况,且会使转运损耗提升,而弱化要求又恐与题意相眉",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 57
+              }
+            ],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "acc841fc89deea38c328c40c77c67a64f77df72536565d2404f8754068db05eb"
+    },
+    {
+      "code": "SPEECH_ACT_FOCUS_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "优先": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "focus_scope",
+            "claim_id": "C0010",
+            "column": 139,
+            "end": 140,
+            "end_column": 141,
+            "end_line": 1,
+            "line": 1,
+            "marker": "优先",
+            "sentence_context": "考虑到企业对转运损耗更为敏感，模型保留单一转运商的倾向，但降低其约束强度，使损耗控制在方案选择中占据更高优先级",
+            "sentence_id": "T0003",
+            "side": "after",
+            "start": 138
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "优先": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "优先": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "focus_scope",
+                "claim_id": "C0010",
+                "column": 139,
+                "end": 140,
+                "end_column": 141,
+                "end_line": 1,
+                "line": 1,
+                "marker": "优先",
+                "sentence_context": "考虑到企业对转运损耗更为敏感，模型保留单一转运商的倾向，但降低其约束强度，使损耗控制在方案选择中占据更高优先级",
+                "sentence_id": "T0003",
+                "side": "after",
+                "start": 138
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'focus_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "0456090d0f63b9680d51dbbca7644cc4dd338181d2cd69d0e12a17c8c8d5afda"
+    }
+  ]
+}

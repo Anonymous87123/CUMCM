@@ -1,0 +1,108 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-c530201b41a9",
+  "chunk_binding_sha256": "c1081574d47b068444274d0ebd59f0225d9d152e891b025a4badc9a089826c92",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "842ae235d7ee9818",
+    "prepare_integrity_sha256": "c38e1d6ea4a8467e7d26d083319b223bd567819e17070c0ac06e74de425e1aa2",
+    "run_metadata_sha256": "af8e27fded78b4cdf5593d7a49751c6f6e43e94172419e8103c4f33a166925b9",
+    "policy_snapshot_sha256": "78c9d819ed643befe1459941693ca6ea078ca61644c28b531ba2fb612fd20234",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "unit_id": "U-c530201b41a9",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 3036,
+      "end": 3414,
+      "start_line": 56,
+      "end_line": 60,
+      "source_span_sha256": "4e6042c171e7f2d38f5648fc2340249fff711739bd9ede2fe2bcb98029d2054e",
+      "masked_text_sha256": "0230f52d8c81395a3366332bae876871e738a5b76d18534d02f276f7ead2c974",
+      "chunk_binding_sha256": "c1081574d47b068444274d0ebd59f0225d9d152e891b025a4badc9a089826c92"
+    },
+    "scene_route": {
+      "requested_scene": "MODELING",
+      "resolved_scene": "MODELING",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "665fdb7b62a4f341651cd02782096f1b21653f79c2c6ece467aa12ce8ebc034b",
+      "routing_input_sha256": "19968531b8c5f570d53d9fd794cc07ffba225beead69241bbfd89b1b9ff2dbf9"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-modeling",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "MODELING",
+      "profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "d3c8e416decc1691044afebae022d6bbb5f67e88bdb22e5da8a23a3f0bf1e56a"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00051:339f7e013385]]\n问题一同时考察[[PROTECTED:F00001-P00052:58402c67cc2e]]、[[PROTECTED:F00001-P00053:db1a17b596e9]]和[[PROTECTED:F00001-P00054:85bcf7648871]]。把四大家鱼与水草、浮游植物、浮游动物、底栖饵料各自合并后，模型仍可匹配2025年1.8倍的总量，却无法分辨哪一层资源先承压，也不能解释[[PROTECTED:F00001-P00055:63ff7ce174e2]]等底层退化现象。方程因而保留四类资源与四大家鱼的食性对应关系。\n\n题目给出的两类观测数据分属不同尺度：2025年四大家鱼1.8倍恢复量对应全流域平均口径，可用于约束系统总量参数；湖北江段单网次渔获量提升120[[PROTECTED:F00001-P00056:46c5de803c68]]\n\n",
+  "rewrite_intent": {
+    "summary": "由总量合并无法解释底层退化这一矛盾，引出四组资源与鱼类的配对关系。",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "由总量合并无法解释底层退化这一矛盾，引出四组资源与鱼类的配对关系。"
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "由总量合并无法解释底层退化这一矛盾，引出四组资源与鱼类的配对关系。"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 2,
+        "end_line": 2,
+        "sha256": "6cd364da1cc2d4f619c7b602add344815ea6d2bcbcd3d62d70837710d6ba0715"
+      },
+      {
+        "id": "S2",
+        "start_line": 4,
+        "end_line": 4,
+        "sha256": "777b6651fb303315a98b01ad3e50a03146caa59bdc18fdcd078c322ea71005ca"
+      }
+    ],
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "schema": "aigc-adapter-run/v1",
+  "package": "humanize-academic-chinese",
+  "action": "verify-candidate",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "ARGUMENT_COMPRESSION_REVIEW",
+      "before_count": 160,
+      "after_count": 134,
+      "compression_ratio": 0.8375,
+      "removed_cues": [
+        "����"
+      ],
+      "before_line_range": [
+        1,
+        1
+      ],
+      "after_line_range": [
+        1,
+        1
+      ],
+      "before_examples": [
+        {
+          "line": 1,
+          "column": 1,
+          "context": "��������Ⲣ���ǲ��Űڷŵ�������ݣ���������ͬһ�����������չ����������������һ���ָ�����������һ�㣬�ٵ������׷���ⲿ�������ܷ�����ϴ����������������İ��ӽ��������ڣ�ר�Ŷ�סϵͳ�᲻��Խ�ָ�Խ���ӣ����������壬ǰ��õ��Ļָ������ٺ���Ⱦ�����ַ���һ��Ƚϣ��ſ��ó������������¶��١�ȫ��Ҳ��˴ӡ��ָ��Ƿ������ƽ������ָ��Ƿ��ȵ�ס���Ƿ��㽡������"
+        }
+      ],
+      "after_examples": [
+        {
+          "line": 1,
+          "column": 1,
+          "context": "��������ⲻ�Ǽ򵥲��е����ݡ�����һ�����ָ����ȳ��ֵĲ㼶���������ʳ�����鿴�����ܷ�������ϴ��ݣ��������������İѶ��ڻָ��ŵ����ڶ���ѧ�У���ϵͳ�᲻��Խ�ָ�Խ���ӡ������������Ⱦ�����֣�������������ı����̶ȡ�ȫ��Ҳ����䵽�����ݽ������⣺���ָ��Ƿ��������Լ����ָ��Ƿ��ȵ�ס���Ƿ��㽡������"
+        }
+      ],
+      "before_sequence_sha256": "a890fe8a092b0fe2862f128e70642ecf6c3dfc62316a2a306b42294671cc4e0c",
+      "after_sequence_sha256": "a8711466ec2ef1bf52062cb0cfcfbc98a8a287c4ca390fa8693f9a148c5f2148",
+      "location_method": "changed-block-compression",
+      "finding_sha256": "4e3bbbacd800b3ba5f3486aab7c16ea0ede24f095540dac98639d34d88b315e8"
+    }
+  ],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r2\\dev-run\\verify-final\\draft-dev-01-a890fe8a-t2",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r2\\dev-run\\sources\\draft-dev-01-a890fe8a.tex",
+    "sha256": "182d655957e72f6e4b91f0a3903063b0bae04c4d2e9f968bb99fa3a1f484574e",
+    "bytes": 530,
+    "suffix": ".tex"
+  },
+  "protected_inventory": {
+    "numbers": {},
+    "tex_commands": {},
+    "tex_keys": {},
+    "inline_math": {},
+    "dollar_display_math": {},
+    "display_math": {},
+    "math_environments": {},
+    "code_fences": {},
+    "urls": {}
+  },
+  "tex_semantic_contract": {
+    "status": "pass",
+    "before": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r2\\dev-run\\sources\\draft-dev-01-a890fe8a.tex",
+    "after": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r2\\dev-run\\authoring\\draft-dev-01-a890fe8a-t2.tex",
+    "scene": "GENERAL",
+    "errors": 0,
+    "warnings": 1,
+    "findings": [
+      {
+        "severity": "warning",
+        "code": "ARGUMENT_COMPRESSION_REVIEW",
+        "before_count": 160,
+        "after_count": 134,
+        "compression_ratio": 0.8375,
+        "removed_cues": [
+          "����"
+        ],
+        "before_line_range": [
+          1,
+          1
+        ],
+        "after_line_range": [
+          1,
+          1
+        ],
+        "before_examples": [
+          {
+            "line": 1,
+            "column": 1,
+            "context": "��������Ⲣ���ǲ��Űڷŵ�������ݣ���������ͬһ�����������չ����������������һ���ָ�����������һ�㣬�ٵ������׷���ⲿ�������ܷ�����ϴ����������������İ��ӽ��������ڣ�ר�Ŷ�סϵͳ�᲻��Խ�ָ�Խ���ӣ����������壬ǰ��õ��Ļָ������ٺ���Ⱦ�����ַ���һ��Ƚϣ��ſ��ó������������¶��١�ȫ��Ҳ��˴ӡ��ָ��Ƿ������ƽ������ָ��Ƿ��ȵ�ס���Ƿ��㽡������"
+          }
+        ],
+        "after_examples": [
+          {
+            "line": 1,
+            "column": 1,
+            "context": "��������ⲻ�Ǽ򵥲��е����ݡ�����һ�����ָ����ȳ��ֵĲ㼶���������ʳ�����鿴�����ܷ�������ϴ��ݣ��������������İѶ��ڻָ��ŵ����ڶ���ѧ�У���ϵͳ�᲻��Խ�ָ�Խ���ӡ������������Ⱦ�����֣�������������ı����̶ȡ�ȫ��Ҳ����䵽�����ݽ������⣺���ָ��Ƿ��������Լ����ָ��Ƿ��ȵ�ס���Ƿ��㽡������"
+          }
+        ],
+        "before_sequence_sha256": "a890fe8a092b0fe2862f128e70642ecf6c3dfc62316a2a306b42294671cc4e0c",
+        "after_sequence_sha256": "a8711466ec2ef1bf52062cb0cfcfbc98a8a287c4ca390fa8693f9a148c5f2148",
+        "location_method": "changed-block-compression",
+        "finding_sha256": "4e3bbbacd800b3ba5f3486aab7c16ea0ede24f095540dac98639d34d88b315e8"
+      }
+    ],
+    "number_diff": {
+      "removed": [],
+      "introduced": []
+    }
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r2\\dev-run\\authoring\\draft-dev-01-a890fe8a-t2.tex",
+    "sha256": "229c891bad046439b5c75e14948c63871172bd45faf560c39f1d2ffded512ec6",
+    "bytes": 448,
+    "suffix": ".tex"
+  },
+  "human_review_required": true
+}

@@ -1,0 +1,70 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-e276c4b22163",
+  "chunk_binding_sha256": "56073dfd626724cf81879b102f70ab329c73d26d3afe07eb098e28051080c211",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "842ae235d7ee9818",
+    "prepare_integrity_sha256": "d29792bc3f5dc4de93f9af478012116f2e8efb1b3db0f52f6a68ea908266d04c",
+    "run_metadata_sha256": "3707a4069ea1f90054467e86965e07118cc2d6eb1b053b492b1a2336ba1fd561",
+    "policy_snapshot_sha256": "78c9d819ed643befe1459941693ca6ea078ca61644c28b531ba2fb612fd20234",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "unit_id": "U-e276c4b22163",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 501,
+      "end": 1770,
+      "start_line": 20,
+      "end_line": 34,
+      "source_span_sha256": "a1607838e3418b96b6ec16d751a6e3edd5e3de39ad4d7c5e6ab71d8661ecb661",
+      "masked_text_sha256": "5088f7f76790a13a463be8798a5794c005fd928938f3021ccc9c65dc94d7d051",
+      "chunk_binding_sha256": "56073dfd626724cf81879b102f70ab329c73d26d3afe07eb098e28051080c211"
+    },
+    "scene_route": {
+      "requested_scene": "MODELING",
+      "resolved_scene": "MODELING",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "a41da611e04d53f3050c35dba68ba8b7beafe827c1a625f42be4a84713161d55",
+      "routing_input_sha256": "41cdf35d74a5a6cb38a998de6356ef00199b6891e71c344549be5f65d664e7fe"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-modeling",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "MODELING",
+      "profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "99e7e2487656d2b4e634abc5ce2ad5b5b6c48c0d8f3d8d6abb5252ee3f28df10"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "\n[[PROTECTED:F00001-P00019:049d0a6a9cf4]]\n长江十年禁渔实施后，四大家鱼资源量回升，长江江豚和长江鲟种群亦呈恢复态势，但资源枯竭、江湖连通性受阻、水体污染与外来物种入侵等问题仍较突出。本文围绕[[PROTECTED:F00001-P00020:1bf922abc75b]]核心问题，构建包含流域平均食物网、珍稀物种响应、Hastings-Powell三级食物链和综合情景评价的分层动力学模型，追踪禁渔生态收益在基础资源层、经济鱼类、珍稀物种与系统长期动力学行为间的传递过程。\n\n对于问题一，我们在流域平均尺度下建立四类基础资源与四大家鱼功能群的配对动力系统，以2025年四大家鱼资源量恢复至禁渔前1.8倍的观测数据单参数标定，并以湖北江段单网次渔获量提升120[[PROTECTED:F00001-P00021:fed3f9917a84]]作为局地验证。结果显示：2025年四大家鱼总生物量达禁渔前的1.805倍，单位捕捞努力量渔获量([[PROTECTED:F00001-P00022:23f77b65545d]])为1.838倍，摄食压力指数升至4.213，基础资源量末值降至0.204。禁渔初期恢复效应主要集中于消费者层，基础资源层生态压力同步加剧。\n\n对于问题二，我们基于上游资源-鱼群动态轨迹构建综合生态状态指数，驱动中层猎物承载力，建立长江江豚、长江鲟及入侵物种种群响应模型，并设置高阻隔、无人工放流和污染三种对照情景。基线情景下，长江江豚与长江鲟种群末值分别为禁渔前的1.133倍和1.140倍；高阻隔情景下分别降至0.901倍和0.856倍；无人工放流时长江鲟降至0.519倍；污染情景下二者进一步降至0.610倍和0.704倍。结果显示，江湖通道阻隔会同时抑制两类珍稀物种恢复，而人工增殖放流对长江鲟的补偿效应更为显著。\n\n对于问题三和问题四，我们采用统一的Hastings-Powell三级食物链模型，结合后期轨道统计量与有限时间最大李雅普诺夫指数判别系统长期动力学行为。随承载力参数[[PROTECTED:F00001-P00023:68e2c657635f]]增大，系统由规则有界振荡逐渐转变为复杂非线性波动；在代表点[[PROTECTED:F00001-P00024:8abaee131413]]、[[PROTECTED:F00001-P00025:5ff9d8c4624c]]、[[PROTECTED:F00001-P00026:347344e4b868]]处，时间序列的峰谷差与峰间间隔离散程度均显著增大。短时间窗分析显示，首个连续正李雅普诺夫指数区间出现在[[PROTECTED:F00001-P00027:79ea035e4a4b]]附近，但75组扩展测试中仅5组在[[PROTECTED:F00001-P00028:168e50c07661]]区间出现指数由负转正。故本文仅保留[[PROTECTED:F00001-P00029:835020a288b6]]的方向性结论。\n\n对于问题五，我们在统一积分后期时间窗内提取饵料资源、长江江豚、长江鲟和入侵压力四类核心指标，采用熵权-CRITIC组合赋权构建综合生态健康评价模型。三种典型情景的综合得分依次为0.662、0.423和0.155，2000次局部参数扰动下情景排序稳定率达100[[PROTECTED:F00001-P00030:fed3f9917a84]]。得分递减次序反映了[[PROTECTED:F00001-P00031:62879cc62c2c]]的作用机制。\n\n综上，十年禁渔有利于长江渔业生态系统恢复，但资源恢复红利不会自动转化为系统整体健康改善。若不同步推进水质治理、江湖连通性修复、珍稀物种定向放流与入侵防控，禁渔成效仍可能在向高营养级传递及多重压力叠加过程中被逐步侵蚀。\n[[PROTECTED:F00001-P00032:d87bde9aac5f]]\n\n",
+  "rewrite_intent": {
+    "summary": "TODO: edit masked_text, then replace this placeholder and populate operations, source_spans, and target_signals before finalize",
+    "operations": [],
+    "source_spans": [],
+    "target_signals": []
+  }
+}

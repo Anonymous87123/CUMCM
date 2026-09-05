@@ -1,0 +1,88 @@
+{
+  "artifact": {
+    "after_sha256": "00fb299939650782b7ec936d2e1b80c76ecdbd07fb7559f8fa2024328ecdb8e2",
+    "before_sha256": "cd959e53fb53d45112d90027eb13c2bbbe0105f08b9274522a461f056707c0da"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "fe51ad1fba6750a315f9011987cddf7d679623cd513ad3379883ebe53e3143c7",
+  "chunk_binding_sha256": "337bafc22c47fa69c68ae7edd255eb8350cc49e5ecaa4fbfd737d9d79f51d0b9",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-0a061a5b1e24.diff",
+    "sha256": "7859cbfe78d4e18ffd369b7840c68263aee7b68b3e56a11b22cb9f43700595c5"
+  },
+  "evidence_sha256": "ba725d8a4a6fa7667c844b0edba49d91fbd72ba1b1db1d10fbd93d702be9dcff",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "依据积分时长和扩展测试限定复杂化判据，避免把局部跨越写成唯一阈值。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "依据积分时长和扩展测试限定复杂化判据，避免把局部跨越写成唯一阈值。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "deca6a49045d651405df899e94869f7ceb5c6f54151d8546f020594cbbb35c90",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "id": "S2",
+        "sha256": "e1beafe254e19f31fdf70f09d5a364cc4280f2373917abfbd5cb030fab6edddd",
+        "start_line": 4
+      }
+    ],
+    "summary": "依据积分时长和扩展测试限定复杂化判据，避免把局部跨越写成唯一阈值。",
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "operation": "REPLACE",
+        "start_line": 4
+      }
+    ],
+    "masked_after_sha256": "f4305350a04b9f053c571df0a316c70d15c21aaf1837265f24e20f22c7897e68",
+    "masked_before_sha256": "362a649c8c3ff5a5bf08610a1c37b38762e30da47281a4abb4e54c665d2e989c",
+    "source_spans_covered": 2,
+    "source_spans_total": 2,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "868ff9a700baa0628ab2557b8432ee06c70be7c00cbf7877b727920c6efae8ed",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-0a061a5b1e24"
+}

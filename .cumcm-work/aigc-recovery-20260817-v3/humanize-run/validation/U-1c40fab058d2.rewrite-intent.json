@@ -1,0 +1,88 @@
+{
+  "artifact": {
+    "after_sha256": "5f88108743e3f4e8ab30e61b8729b515bef16faee7fe53b869a9131e591185e7",
+    "before_sha256": "b281aa32a0ee8603aa9b823454756398d19111fe3f840e8fadd49b6b3f8d5f77"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "8f3a0e3165bd17ce36f538d13fefcbb0a4df54ee27c9501ad944641398249d5a",
+  "chunk_binding_sha256": "21d824dde20faa4f13ed6c7045dc285ffa953372e74aeb21c5db1746d42df8d0",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-1c40fab058d2.diff",
+    "sha256": "e48a34cf703c07e43eeedf371f613e3456d0d593a60c0472e33671613f266458"
+  },
+  "evidence_sha256": "861a2b2efd074f31227a1ad11efc70ce8cd392d4c1af61bff43c772f4f7bf731",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "把污染情景的上游重算写成前问接口，简化指标矩阵与组合权重的衔接。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "把污染情景的上游重算写成前问接口，简化指标矩阵与组合权重的衔接。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "f74204eb0281bfbe4003ef1299c9a7845d3e33baff5e7cf4f82426fd8d48d13d",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "id": "S2",
+        "sha256": "c9dfbfeee002d4c3922d4f57ec148907d6de2153d28bfa31e4edd84878196807",
+        "start_line": 4
+      }
+    ],
+    "summary": "把污染情景的上游重算写成前问接口，简化指标矩阵与组合权重的衔接。",
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "operation": "REPLACE",
+        "start_line": 4
+      }
+    ],
+    "masked_after_sha256": "05b4ba80b41d076157f1760b5bedd516a0b2671866027f68de2ef8962d4e3403",
+    "masked_before_sha256": "011200c6a5c0000fa506d0312d06980972bf08d260ec2e3b75ace5c91b9ecaa0",
+    "source_spans_covered": 2,
+    "source_spans_total": 2,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "10788c9edbff5901b3801552e85ec91f0b108bdfa394041acd992c22b696ea0a",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-1c40fab058d2"
+}

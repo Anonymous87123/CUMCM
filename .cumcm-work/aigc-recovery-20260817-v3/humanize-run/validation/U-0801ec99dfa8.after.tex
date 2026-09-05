@@ -1,0 +1,46 @@
+\subsection{求解与结果}
+三种情景“仅禁渔”“禁渔+污染”“禁渔+污染+入侵”的后期平均指标列于表\ref{tab:q5result}。组合赋权得分依次为0.662、0.423和0.155。污染情景的食源指标由0.407升至0.692，江豚和长江鲟却降至0.636和0.716；食源上升并不伴随珍稀物种恢复。污染上再叠加入侵后，入侵压力升至0.641，综合得分继续下降，各指标并不同步。
+\begin{table}[htbp]
+\centering
+\caption{问题五的积分后期平均指标与综合得分}
+\label{tab:q5result}
+\begin{tabularx}{0.95\textwidth}{>{\raggedright\arraybackslash}p{3.0cm} >{\centering\arraybackslash}p{1.6cm} >{\centering\arraybackslash}p{1.6cm} >{\centering\arraybackslash}p{1.6cm} >{\centering\arraybackslash}p{1.6cm} >{\centering\arraybackslash}p{1.6cm}}
+\toprule
+情景 & 食源 & 江豚 & 长江鲟 & 入侵压力 & $\mathcal{H}$ \\
+\midrule
+仅禁渔 & 0.407 & 1.143 & 1.135 & 0.602 & 0.662 \\
+禁渔+污染 & 0.692 & 0.636 & 0.716 & 0.546 & 0.423 \\
+禁渔+污染+入侵 & 0.598 & 0.624 & 0.711 & 0.641 & 0.155 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+\begin{table}[htbp]
+\centering
+\caption{问题五的赋权结果与排序稳健性}
+\label{tab:q5_weight}
+\small
+\setlength{\tabcolsep}{2pt}
+\begin{tabularx}{0.95\textwidth}{>{\raggedright\arraybackslash}p{2.2cm} >{\raggedright\arraybackslash}p{4.3cm} >{\raggedright\arraybackslash}p{3.5cm} X}
+\toprule
+方案 & 权重 $(M,D,A,V)$ & 排序结果 & 说明 \\
+\midrule
+熵权 & $(0.144,0.337,0.351,0.168)$ & 仅禁渔 \textgreater 禁渔+污染 \textgreater 禁渔+污染+入侵 & 根据指标离散程度确定权重 \\
+CRITIC & $(0.319,0.242,0.244,0.194)$ & 仅禁渔 \textgreater 禁渔+污染 \textgreater 禁渔+污染+入侵 & 同时考虑对比强度与相关性 \\
+组合权重 & $(0.232,0.289,0.298,0.181)$ & 仅禁渔 \textgreater 禁渔+污染 \textgreater 禁渔+污染+入侵 & 取熵权与 CRITIC 权重的平均值 \\
+等权对照 & $(0.250,0.250,0.250,0.250)$ & 仅禁渔 \textgreater 禁渔+污染 \textgreater 禁渔+污染+入侵 & 用于检查排序是否依赖某一套客观权重 \\
+局部扰动 & -- & 仅禁渔 \textgreater 禁渔+污染 \textgreater 禁渔+污染+入侵 & 围绕组合权重做 2000 次 $[0.85,1.15]$ 重归一扰动，完整排序稳定率为 100\% \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{table}
+污染情景中食源指标上升而江豚、长江鲟下降。方程中的$u$压低$K_M$，污染死亡项又造成捕食者数量下降；在当前参数组的尾窗内，捕食者减少带来的释放超过了承载损失，于是$M$平均值短时回升。这一回升仅对应模型内的过程量再分配，不表示污染改善了系统健康。
+
+各赋权方案的排序相同。组合权重经 2000 次 $[0.85,1.15]$ 重归一扰动，完整排序稳定率和“入侵情景最差”稳定率均为 100\%。赋权变化没有改变排序，因此这里只说明排序不随这些赋权和扰动改变。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.88\textwidth]{fig05_q5_scenarios.png}
+\caption{问题五的情景比较结果}
+\label{fig:q5}
+\end{figure}
+

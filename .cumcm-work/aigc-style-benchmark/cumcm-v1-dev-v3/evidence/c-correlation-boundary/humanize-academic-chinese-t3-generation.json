@@ -1,0 +1,30 @@
+{
+  "schema": "aigc-benchmark-generation/v1",
+  "provider": "humanize-academic-chinese",
+  "status": "pass",
+  "authoring_actor": "model",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev\\sources\\c-correlation-boundary.txt",
+    "sha256": "10ab89e0600db62714e6ff8dc76ded294748a04deee327aac859121f161952d5"
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev\\humanize-runs-v2\\c-correlation-boundary-t3\\hir1-gvg67moe\\artifacts\\after.md",
+    "sha256": "9fd941e1788e0d0ed750acc92d83c66eed24b7da899cef9c96bb7a61373579fc"
+  },
+  "execution": {
+    "mode": "model_authored_native_validated",
+    "native_action": "validate_and_emit_frozen_candidate",
+    "run_id": "hir1-gvg67moe"
+  },
+  "native_report": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-v3\\evidence\\c-correlation-boundary\\humanize-academic-chinese-t3-native-report.json",
+    "sha256": "d5eeaf7d1fbb14787df9abb01bb6b315237c237a8b732584d155e192d594cf36"
+  },
+  "claims": {
+    "human_authorship_proven": false,
+    "native_generation_proven": false,
+    "validation_executed": true,
+    "external_style_clearance": false,
+    "mechanical_validation_only": true
+  }
+}

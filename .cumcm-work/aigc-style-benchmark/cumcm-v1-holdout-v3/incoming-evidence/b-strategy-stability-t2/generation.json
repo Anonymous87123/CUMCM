@@ -1,0 +1,30 @@
+{
+  "schema": "aigc-benchmark-generation/v1",
+  "provider": "humanize-academic-chinese",
+  "status": "pass",
+  "authoring_actor": "model",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout\\sources\\b-strategy-stability.txt",
+    "sha256": "31dc3a6dc7f792084c86163f945f6e40c13ee60355d29a611ac5e26dbcce70c0"
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout\\humanize-runs-v2\\b-strategy-stability-t2\\hir1-i9gg8gjg\\artifacts\\after.md",
+    "sha256": "6832c0e814ef17f104fafca1dad24c69c4468dd7904ce66fa5e59e64239e0529"
+  },
+  "execution": {
+    "mode": "model_authored_native_validated",
+    "native_action": "validate_and_emit_frozen_candidate",
+    "run_id": "hir1-i9gg8gjg"
+  },
+  "native_report": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout\\humanize-runs-v2\\b-strategy-stability-t2\\hir1-i9gg8gjg\\run.json",
+    "sha256": "b1494c9d930d06fc139e67e58f4b1a5e51e2889d486337b2c8a2904fe38f2acc"
+  },
+  "claims": {
+    "human_authorship_proven": false,
+    "native_generation_proven": false,
+    "validation_executed": true,
+    "external_style_clearance": false,
+    "mechanical_validation_only": true
+  }
+}

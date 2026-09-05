@@ -1,0 +1,88 @@
+{
+  "artifact": {
+    "after_sha256": "65a843e5d54601e5d3745b1c4e34b68d2e9f659b1fe2aacac3165478bf9bf34a",
+    "before_sha256": "d2d75dd45c766950a38872d54e5979c042bdebcf4485d1b818b32a5c24e9726a"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "23df6d6ec012f98f629efdc3cb779f103a8cb4ac41ebfdb75b187f9e2b17fb89",
+  "chunk_binding_sha256": "a981b0e0dd60e2d2eef6ccd3b744ba3a84220fd1b210c1c02560db54cf48b6af",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-e2ef47edd600.diff",
+    "sha256": "59b158dc2294045817ac57c250923293fbe189b8d623ae0451f4206d01889295"
+  },
+  "evidence_sha256": "5c1b5183d501f419b19d4c65bd8b6195b08c89edeaa7d831d64407ae3f9282ed",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "说明三级食物链只继承营养级关系，不沿用问题一参数，删除最小闭环标签。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "说明三级食物链只继承营养级关系，不沿用问题一参数，删除最小闭环标签。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "8a0a1c74db08907efa2fdc4009d8d5ddaea17eeed44a2a1f927d75292cf69105",
+        "start_line": 2
+      },
+      {
+        "end_line": 6,
+        "id": "S2",
+        "sha256": "3f4617afe6153e5b8a40d9eff945459bdb91ee13b953e33b3a550d348a0c2567",
+        "start_line": 6
+      }
+    ],
+    "summary": "说明三级食物链只继承营养级关系，不沿用问题一参数，删除最小闭环标签。",
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      },
+      {
+        "end_line": 6,
+        "operation": "REPLACE",
+        "start_line": 6
+      }
+    ],
+    "masked_after_sha256": "c5fc202ea151357f934893597ed9296045e923bf71aa534f270a0e342ffea378",
+    "masked_before_sha256": "79e4915f2e0f7c6714d7fcbb311b3af209f99c1467662d08c81b567cb41cbc57",
+    "source_spans_covered": 2,
+    "source_spans_total": 2,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "7695c82c12ba5a38a4ba24a9378925d06a644a262e7c1cdff8c6a0ae50c0f24b",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-e2ef47edd600"
+}

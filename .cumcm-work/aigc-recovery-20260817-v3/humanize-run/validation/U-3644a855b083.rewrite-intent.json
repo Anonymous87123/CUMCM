@@ -1,0 +1,88 @@
+{
+  "artifact": {
+    "after_sha256": "3dad20ffa556cfb63d047ff23f8f97ab72c02e81eed87d1a1a56025b00a8de8f",
+    "before_sha256": "2d9277b402d9a98a9e62e4baff893aec4262f1dd6bb679d7357fbca610952a31"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "64ff295e0a5638e1be843b3ea15bc8870d7b8c47a6bfa17afce2606baed80d8d",
+  "chunk_binding_sha256": "ddef9b48710d2693ed9ba8a79209e41e86b79d3981442962e3a18b52afab1e29",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-3644a855b083.diff",
+    "sha256": "572678ef211d1873a4ef102b2902f66a322f2a5ce487af9a9b10a14f49f8ffad"
+  },
+  "evidence_sha256": "aff1e9745072455d4ce5e86c70f656f63a15d65596b0299bf5dfd8b68c9f08c5",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "把五问关系改写为具体的营养级传递与压力比较，删除对举和过程播报。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "把五问关系改写为具体的营养级传递与压力比较，删除对举和过程播报。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "1d0ea017a1cef68e8ff5e3c6c682293850e000b873387735a2737d015f8d2c2e",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "id": "S2",
+        "sha256": "cea5de6e1db3e5915355d3751d457d111d16f8bb9ae4f41c4eb86a670f600cb2",
+        "start_line": 4
+      }
+    ],
+    "summary": "把五问关系改写为具体的营养级传递与压力比较，删除对举和过程播报。",
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "operation": "REPLACE",
+        "start_line": 4
+      }
+    ],
+    "masked_after_sha256": "4fd625405bd8808157c1333531659c0d123907cee43d85eb6df55c62b6bc6341",
+    "masked_before_sha256": "e5b0ea53561b1a81b23c43927355ea84d950ec97d0b7504e9a2a1dae3a184a51",
+    "source_spans_covered": 2,
+    "source_spans_total": 2,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "1998b237b7ad42ee0eb3a9479800028e379deb958af04944af63f4dec551d3cb",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-3644a855b083"
+}

@@ -1,0 +1,92 @@
+{
+  "schema": "aigc-style-benchmark-manifest/v1",
+  "state": "SOURCE_FROZEN",
+  "suite": {
+    "id": "cumcm-v1-dev",
+    "version": "2026-08-15",
+    "split": "dev",
+    "required_trials": 3,
+    "providers": [
+      "humanize-academic-chinese"
+    ],
+    "holdout_policy": null,
+    "definition": {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\benchmarks\\cumcm-v1-dev.json",
+      "sha256": "0726e3931295e0042f1c4270ca890af1840c3bbe010764758ca4481ad035de6e",
+      "bytes": 2000
+    }
+  },
+  "run_root": "\\\\?\\F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev",
+  "cases": [
+    {
+      "id": "a-convergence-repair",
+      "scene": {
+        "document_type": "mcm",
+        "document_format": "plain",
+        "scope": "local"
+      },
+      "challenge_tags": [
+        "public-judgment",
+        "boundary-conditions",
+        "result-explanation",
+        "paragraph-rhythm"
+      ],
+      "source": {
+        "path": "\\\\?\\F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev\\sources\\a-convergence-repair.txt",
+        "sha256": "37c607f3e700be24e296ba6031796256e61ecfba607262a7af839658c404f329",
+        "bytes": 410
+      }
+    },
+    {
+      "id": "b-decision-boundary",
+      "scene": {
+        "document_type": "mcm",
+        "document_format": "plain",
+        "scope": "local"
+      },
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "boundary-conditions",
+        "content-density"
+      ],
+      "source": {
+        "path": "\\\\?\\F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev\\sources\\b-decision-boundary.txt",
+        "sha256": "81d3f3f287335a10ec05dd90cb6739f9b70c51aea4d96c72e8b84114a185ff0b",
+        "bytes": 903
+      }
+    },
+    {
+      "id": "c-correlation-boundary",
+      "scene": {
+        "document_type": "mcm",
+        "document_format": "plain",
+        "scope": "local"
+      },
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "causal-calibration",
+        "paragraph-rhythm"
+      ],
+      "source": {
+        "path": "\\\\?\\F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev\\sources\\c-correlation-boundary.txt",
+        "sha256": "10ab89e0600db62714e6ff8dc76ded294748a04deee327aac859121f161952d5",
+        "bytes": 246
+      }
+    }
+  ],
+  "candidates": [],
+  "blind": null,
+  "score": null,
+  "parent_manifest": null,
+  "history": [
+    {
+      "event": "SOURCE_FROZEN"
+    }
+  ],
+  "claims": {
+    "authorship_or_detector_verdict": false,
+    "automatic_winner_selection": false
+  }
+}

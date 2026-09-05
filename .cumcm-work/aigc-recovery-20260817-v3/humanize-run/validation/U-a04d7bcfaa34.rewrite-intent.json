@@ -1,0 +1,88 @@
+{
+  "artifact": {
+    "after_sha256": "9199a658da8c36d6d761d0ff706dca70d2dc6624a9eb8ed2aa9c597cd327060d",
+    "before_sha256": "7799e35305f64025822d743e97dfaeda2dc361449927e27b6f5545c07c7db040"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "3d4e1875640290678bd84e3cf0285f2bcf590f25d57fdd6173e24785a073514d",
+  "chunk_binding_sha256": "204871cf882195cfb15d6a4a1174263edb38dc4ace7c68ecebba67993bf78bbe",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-a04d7bcfaa34.diff",
+    "sha256": "c7ecda281c2c57f0eb36820cdbbf8a217452d2effe24842877228f692a59fece"
+  },
+  "evidence_sha256": "5e86cf10ce17b169fcac6c2357d875923b74b9e0b3a98abb8349e3bbd256e49a",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "把单区模型的结构边界与新增监测需求直接对应，删除抽象比较词。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "把单区模型的结构边界与新增监测需求直接对应，删除抽象比较词。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "683f6e95b15c251750a537f9f3578e58a55249ce42898d3d8c3939bd4f8c8a13",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "id": "S2",
+        "sha256": "ab12c57b5d2bcb064ae154834a375a2af44a8ffa140e94d1f955ae548ff878e2",
+        "start_line": 4
+      }
+    ],
+    "summary": "把单区模型的结构边界与新增监测需求直接对应，删除抽象比较词。",
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "operation": "REPLACE",
+        "start_line": 4
+      }
+    ],
+    "masked_after_sha256": "cd48bc40ee104176a96eb933d5cc73b59cfc90fd9436fade40c36cfccfeef55c",
+    "masked_before_sha256": "8e5ca23f67ff64c2d5290dfbb4338f4c2a3f762c090785f86e18bc4fbc136f39",
+    "source_spans_covered": 2,
+    "source_spans_total": 2,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "171b3c1e52f710940c831ab47d35c417dce768e4c670761a340bd7156dc18f07",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-a04d7bcfaa34"
+}

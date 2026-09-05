@@ -1,0 +1,174 @@
+% !TeX program = xelatex
+% !BIB program = biber
+[[AIGC_LOCK_00001]]{MMCStyle}
+[[AIGC_LOCK_00002]]{{../figures/}}
+[[AIGC_LOCK_00003]]{enumitem}
+[[AIGC_LOCK_00004]][backend=biber,style=gb7714-[[AIGC_LOCK_00005]],natbib=true,sorting=none]{biblatex}
+[[AIGC_LOCK_00006]]{ref.bib}
+[[AIGC_LOCK_00007]]{nosep}
+
+[[AIGC_LOCK_00008]]{[[AIGC_LOCK_00009]]}
+[[AIGC_LOCK_00010]]{A题}
+[[AIGC_LOCK_00011]]{长江十年禁渔下鱼类食物链恢复、动力学复杂化与入侵风险的耦合建模}
+[[AIGC_LOCK_00012]]{长江十年禁渔；四大家鱼；长江江豚；长江鲟；三级食物链；李雅普诺夫指数}
+[[AIGC_LOCK_00013]]{fancy}
+[[AIGC_LOCK_00014]]{}
+[[AIGC_LOCK_00015]][C]{[[AIGC_LOCK_00016]]}
+[[AIGC_LOCK_00017]]{[[AIGC_LOCK_00018]]}{0pt}
+[[AIGC_LOCK_00019]]{[[AIGC_LOCK_00020]]}{0pt}
+
+[[AIGC_LOCK_00021]]{document}
+[[AIGC_LOCK_00022]]{abstract}
+长江十年禁渔实施后，四大家鱼资源量回升，长江江豚和长江鲟种群亦呈恢复态势，但资源枯竭、江湖连通性受阻、水体污染与外来物种入侵等问题仍较突出。本文围绕"资源恢复能否稳定转化为生态系统健康改善"核心问题，构建包含流域平均食物网、珍稀物种响应、Hastings-Powell三级食物链和综合情景评价的分层动力学模型，追踪禁渔生态收益在基础资源层、经济鱼类、珍稀物种与系统长期动力学行为间的传递过程。
+
+对于问题一，我们在流域平均尺度下建立四类基础资源与四大家鱼功能群的配对动力系统，以[[AIGC_LOCK_00023]]年四大家鱼资源量恢复至禁渔前[[AIGC_LOCK_00024]]倍的观测数据单参数标定，并以湖北江段单网次渔获量提升[[AIGC_LOCK_00025]]\%作为局地验证。结果显示：[[AIGC_LOCK_00026]]年四大家鱼总生物量达禁渔前的[[AIGC_LOCK_00027]]倍，单位捕捞努力量渔获量([[AIGC_LOCK_00028]])为[[AIGC_LOCK_00029]]倍，摄食压力指数升至[[AIGC_LOCK_00030]]，基础资源量末值降至[[AIGC_LOCK_00031]]。禁渔初期恢复效应主要集中于消费者层，基础资源层生态压力同步加剧。
+
+对于问题二，我们基于上游资源-鱼群动态轨迹构建综合生态状态指数，驱动中层猎物承载力，建立长江江豚、长江鲟及入侵物种种群响应模型，并设置高阻隔、无人工放流和污染三种对照情景。基线情景下，长江江豚与长江鲟种群末值分别为禁渔前的[[AIGC_LOCK_00032]]倍和[[AIGC_LOCK_00033]]倍；高阻隔情景下分别降至[[AIGC_LOCK_00034]]倍和[[AIGC_LOCK_00035]]倍；无人工放流时长江鲟降至[[AIGC_LOCK_00036]]倍；污染情景下二者进一步降至[[AIGC_LOCK_00037]]倍和[[AIGC_LOCK_00038]]倍。结果显示，江湖通道阻隔会同时抑制两类珍稀物种恢复，而人工增殖放流对长江鲟的补偿效应更为显著。
+
+对于问题三和问题四，我们采用统一的Hastings-Powell三级食物链模型，结合后期轨道统计量与有限时间最大李雅普诺夫指数判别系统长期动力学行为。随承载力参数[[AIGC_LOCK_00039]]增大，系统由规则有界振荡逐渐转变为复杂非线性波动；在代表点[[AIGC_LOCK_00040]]、[[AIGC_LOCK_00041]]、[[AIGC_LOCK_00042]]处，时间序列的峰谷差与峰间间隔离散程度均显著增大。短时间窗分析显示，首个连续正李雅普诺夫指数区间出现在[[AIGC_LOCK_00043]]附近，但[[AIGC_LOCK_00044]]组扩展测试中仅[[AIGC_LOCK_00045]]组在[[AIGC_LOCK_00046]]区间出现指数由负转正。故本文仅保留"系统动力学复杂性随承载力提高而增强"的方向性结论。
+
+对于问题五，我们在统一积分后期时间窗内提取饵料资源、长江江豚、长江鲟和入侵压力四类核心指标，采用熵权-CRITIC组合赋权构建综合生态健康评价模型。三种典型情景的综合得分依次为[[AIGC_LOCK_00047]]、[[AIGC_LOCK_00048]]和[[AIGC_LOCK_00049]]，[[AIGC_LOCK_00050]]次局部参数扰动下情景排序稳定率达[[AIGC_LOCK_00051]]\%。得分递减次序反映了"水体污染首先削弱禁渔收益，外来物种入侵进一步导致系统状态恶化"的作用机制。
+
+综上，十年禁渔有利于长江渔业生态系统恢复，但资源恢复红利不会自动转化为系统整体健康改善。若不同步推进水质治理、江湖连通性修复、珍稀物种定向放流与入侵防控，禁渔成效仍可能在向高营养级传递及多重压力叠加过程中被逐步侵蚀。
+[[AIGC_LOCK_00052]]{abstract}
+
+[[AIGC_LOCK_00053]]{问题重述}
+长江流域是我国淡水渔业最发达、生物多样性最丰富的区域之一，但长期受过度捕捞、工业废水排放、水域塑料污染以及葛洲坝、三峡大坝等水利工程的综合影响，鱼类洄游通道被阻断，渔业资源持续衰退，典型食物链结构发生退化。自[[AIGC_LOCK_00054]]年[[AIGC_LOCK_00055]]月[[AIGC_LOCK_00056]]日实施长江十年禁渔政策以来，长江流域生态环境已出现显著变化：局部水域水质改善，水草等水生植被逐步恢复；[[AIGC_LOCK_00057]]年监测数据显示，青、草、鲢、鳙四大家鱼资源量已恢复至禁渔前的约[[AIGC_LOCK_00058]]倍，表明禁渔对基础资源和经济鱼类具有显著的修复作用。
+
+但生态系统的恢复并非总是朝着良性方向发展。部分水域在禁渔后出现鱼类种群数量增长过快、过度摄食水生植物和浮游动物的现象，进而导致水体浑浊、底栖植被大面积减少，部分水域甚至形成大面积"水下荒漠"。与此同时，长江江豚种群数量已回升至约[[AIGC_LOCK_00059]]头，[[AIGC_LOCK_00060]]年长江鲟自然繁殖产卵场重新被发现；而鳄雀鳝、巴西龟等外来入侵物种已在鄱阳湖等流域支流形成稳定种群。十年禁渔政策确实取得了显著的资源恢复成效，但恢复后的生态系统未必更加健康，营养级失衡、江湖连通性恢复不足以及外来物种入侵扩散等问题依然突出。因此有必要构建统一的动力学模型，将"资源恢复"与"系统健康"两个概念进行区分并分别评估。[[AIGC_LOCK_00061]]。
+
+本文针对题目提出的五个子问题依次开展研究：
+[[AIGC_LOCK_00062]]{itemize}
+[[AIGC_LOCK_00063]] 问题一：分析禁渔政策对水生植物、浮游动物及四大家鱼种群动态的影响。
+[[AIGC_LOCK_00064]] 问题二：研究禁渔产生的生态收益能否向上传递至长江鲟和长江江豚等顶级捕食者。
+[[AIGC_LOCK_00065]] 问题三：构建长江流域简化鱼类食物链模型并探讨其长期演化规律。
+[[AIGC_LOCK_00066]] 问题四：判别三级食物链系统在不同承载力条件下的动力学行为（稳定、周期振荡或混沌）。
+[[AIGC_LOCK_00067]] 问题五：将工业废水排放、塑料污染和外来物种入侵等胁迫因子纳入统一评价框架，综合评估十年禁渔对长江渔业生态系统的整体效应，并提出针对性的治理对策建议
+[[AIGC_LOCK_00068]]{itemize}
+本文统一采用以下时间口径：[[AIGC_LOCK_00069]]年为政策启动基准年，[[AIGC_LOCK_00070]]年为公报基准年，[[AIGC_LOCK_00071]]年为恢复效果对照年[[AIGC_LOCK_00072]]。
+
+[[AIGC_LOCK_00073]]{问题分析}
+[[AIGC_LOCK_00074]]{总体分析}
+四大家鱼回升、江豚回暖和长江鲟产卵场重现，说明禁渔后的恢复已经出现；“秃海”、通道受阻和入侵扩散又提示，这部分收益在食物链上行过程中还会被重新抵消。我们因此不把注意力停在某一单项指标上，而是追踪恢复收益在不同营养级和不同外部压力下如何分配。
+
+五个子问题并不是并排摆放的五块内容，而是沿着同一条因果链依次展开。我们先在问题一看恢复首先落在哪一层，再到问题二追踪这部分收益能否继续上传；问题三和问题四把视角拉到长期，专门盯住系统会不会越恢复越复杂；到了问题五，前面得到的恢复收益再和污染、入侵放在一起比较，才看得出它究竟能留下多少。全文也因此从“恢复是否发生”推进到“恢复是否稳得住、是否算健康”。
+
+[[AIGC_LOCK_00075]]{问题一分析}
+问题一的核心不仅在于验证"鱼类资源量增加"，更在于同时揭示"鱼类增长的驱动机制"与"基础资源的承载压力变化"。若将四大家鱼合并为单一消费者功能群，将水草、浮游植物、浮游动物和底栖饵料简化为单一资源总量，虽仍能匹配[[AIGC_LOCK_00076]]年资源量恢复至[[AIGC_LOCK_00077]]倍的观测事实，但无法揭示哪一层级资源率先承压，也难以解释题目中"水下荒漠"等底层生态退化现象。因此，模型必须保留四类基础资源与四大家鱼的基本食性对应关系。
+
+题目给出的两类观测数据需差异化使用：[[AIGC_LOCK_00078]]年四大家鱼[[AIGC_LOCK_00079]]倍恢复量对应全流域平均口径，可用于约束系统总量参数；湖北江段单网次渔获量提升[[AIGC_LOCK_00080]]具有明显局地性和网具特异性，更适合作为外部独立验证，不宜与全流域总量数据共同参与参数标定。据此，我们先在统一总量尺度下识别禁渔的直接生态效应，再将局地捕获差异纳入结果分析。
+
+[[AIGC_LOCK_00081]]{问题二分析}
+四大家鱼资源恢复并不等同于珍稀保护物种同步受益。长江江豚的种群恢复更直接依赖中层猎物的供给能力，而长江鲟除食源限制外，还受洄游通道阻隔与人工增殖放流的双重影响。只有厘清这两类不同的驱动机制，才能将种群恢复差异准确归因于食源供给、江湖连通性或放流补偿效应。
+
+据此，我们在问题二中将[[AIGC_LOCK_00082]]年公报基准值、江湖阻隔数据及人工放流信息分别纳入模型状态量、损失项与控制量，并设置高阻隔、无人工放流和水体污染三类对照情景，从而将种群终态差异与不同压力源直接关联。
+
+[[AIGC_LOCK_00083]]{问题三分析}
+系统长期动力学行为的识别比短期政策效应分析更依赖简洁的模型结构。若沿用前两问的高维划分，参数空间将急剧膨胀，反而难以归纳系统轨道类型。因此，我们在问题三中采用"基础资源供给-中层鱼类转移-顶级捕食者反馈"的最简三级食物链闭环，将环境承载力变化抽象为无量纲控制参数[[AIGC_LOCK_00084]]，在同一参数轴上分析系统从规则有界振荡向复杂非线性波动的演化过程。
+
+仅靠轨道形态不足以支撑系统行为分类，还需结合统一时间窗内的后期轨道统计量。通过综合分析波动幅度、峰谷差及峰间间隔的离散程度，才能为系统行为分类提供可重复验证的定量依据。
+
+[[AIGC_LOCK_00085]]{问题四分析}
+问题三揭示的复杂轨道只是现象，问题四旨在判别该现象是否伴随初值敏感性。此处最需避免的误区是将有限时间窗内的不规则轨道误判为稳定混沌。若正李雅普诺夫指数仅在特定积分步长、时间窗口或初始条件下出现，则其更可能是条件性数值伪影，而非系统固有的动力学阈值。
+
+因此，除基准参数扫描外，我们在保持方程组不变的前提下，调整积分时长、步长及局部初始条件，检验正李雅普诺夫指数区间的鲁棒性。若不同数值设置下的判别结果一致，则系统动力学复杂性增强的趋势具有可靠解释力；若结果随数值设置显著波动，则仅能得出"系统复杂波动程度增强"的保守结论。
+
+[[AIGC_LOCK_00086]]{问题五分析}
+前四问研究表明，禁渔的恢复收益在生态系统不同层级并非同步传递：基础食源、经济鱼类、珍稀物种及系统长期动力学行为的响应存在明显差异。据此，我们在问题五中基于统一的时间窗和指标正向化规则，选取基础食源、长江江豚、长江鲟和外来入侵压力四类核心指标，用于评估水体污染与外来物种入侵的复合生态效应。
+
+除计算综合生态健康得分外，还需验证情景排序对赋权方法的鲁棒性。若在熵权法、CRITIC法、等权法及局部参数扰动下情景排序保持一致，则"水体污染首先削弱禁渔收益，外来物种入侵进一步恶化系统状态"的结论具有稳健性。
+
+[[AIGC_LOCK_00087]]{模型假设}
+全文共用同一时间口径、状态尺度和扰动进入方式，作如下假设。
+[[AIGC_LOCK_00088]]{enumerate}
+[[AIGC_LOCK_00089]] 十年尺度内，长江流域宏观水环境用归一化承载力表示，不再逐一建立局地空间网格。
+[[AIGC_LOCK_00090]] 四大家鱼按食性拆分为草鱼、鲢鱼、鳙鱼、青鱼四个功能群，分别对应水草、浮游植物、浮游动物和底栖饵料。
+[[AIGC_LOCK_00091]] 江豚与长江鲟恢复受食源约束；长江鲟额外依赖人工放流，并对大坝阻隔更敏感。
+[[AIGC_LOCK_00092]] 污染通过降低承载力和提高死亡率起作用，外来入侵通过竞争或掠食改变营养级传导。
+[[AIGC_LOCK_00093]] 所有状态变量均归一化处理，初值在 [[AIGC_LOCK_00094]] 附近代表政策启动前后的相对基准量。
+[[AIGC_LOCK_00095]]{enumerate}
+
+[[AIGC_LOCK_00096]]{符号说明}
+[[AIGC_LOCK_00097]]{table}[htbp]
+[[AIGC_LOCK_00098]]
+[[AIGC_LOCK_00099]]{主要符号}
+[[AIGC_LOCK_00100]]{tabularx}{[[AIGC_LOCK_00101]][[AIGC_LOCK_00102]]}{>{[[AIGC_LOCK_00103]][[AIGC_LOCK_00104]]}p{[[AIGC_LOCK_00105]].2cm}X}
+[[AIGC_LOCK_00106]]
+符号 & 含义 \\
+[[AIGC_LOCK_00107]]
+[[AIGC_LOCK_00108]] & 第 [[AIGC_LOCK_00109]] 类底层资源：水草、浮游植物、浮游动物、底栖饵料 \\
+[[AIGC_LOCK_00110]] & 第 [[AIGC_LOCK_00111]] 类四大家鱼功能群：草鱼、鲢鱼、鳙鱼、青鱼 \\
+[[AIGC_LOCK_00112]] & 中层共享猎物代理：中小型鱼类、幼鱼与鱼虾饵料 \\
+[[AIGC_LOCK_00113]][l]{[[AIGC_LOCK_00114]]\\$V(t)[[AIGC_LOCK_00115]]B_{[[AIGC_LOCK_00116]]{carp}}(t),[[AIGC_LOCK_00117]]} & 分别表示四大家鱼总量与底层资源总量 \\
+[[AIGC_LOCK_00118]] & 四大家鱼单网次捕获量代理（权重 [[AIGC_LOCK_00119]],[[AIGC_LOCK_00120]],[[AIGC_LOCK_00121]],[[AIGC_LOCK_00122]]） \\
+[[AIGC_LOCK_00123]][l]{[[AIGC_LOCK_00124]]\\$F_0[[AIGC_LOCK_00125]][[AIGC_LOCK_00126]]_B,[[AIGC_LOCK_00127]]_B[[AIGC_LOCK_00128]]k_M,R_A,[[AIGC_LOCK_00129]]} & 分别表示中层猎物承载力基准、人工放流强度和三级食物链承载力 \\
+[[AIGC_LOCK_00130]] & 食压指数，刻画消费者对底层资源的相对压力 \\
+[[AIGC_LOCK_00131]] & 最大李雅普诺夫指数 \\
+[[AIGC_LOCK_00132]] & 综合生态状态指数 \\
+[[AIGC_LOCK_00133]]
+[[AIGC_LOCK_00134]]{tabularx}
+[[AIGC_LOCK_00135]]{table}
+
+[[AIGC_LOCK_00136]]{问题一的模型建立与求解}
+[[AIGC_LOCK_00137]]{模型建立}
+我们在问题一中采用流域平均单区框架。[[AIGC_LOCK_00138]] 年四大家鱼恢复约 [[AIGC_LOCK_00139]] 倍用于约束总量尺度，湖北段单网次捕获量提升 [[AIGC_LOCK_00140]]\% 保留为局地对照。当前能稳定约束模型的是全流域平均恢复事实，因此我们先在统一尺度下观测禁渔的直接效应。观测事实与模型变量的对应关系如表 [[AIGC_LOCK_00141]] 所示。
+[[AIGC_LOCK_00142]]{table}[htbp]
+[[AIGC_LOCK_00143]]
+[[AIGC_LOCK_00144]]{问题一的观测约束与变量映射}
+[[AIGC_LOCK_00145]]
+[[AIGC_LOCK_00146]]{tabularx}{[[AIGC_LOCK_00147]][[AIGC_LOCK_00148]]}{>{[[AIGC_LOCK_00149]][[AIGC_LOCK_00150]]}p{[[AIGC_LOCK_00151]].2cm} >{[[AIGC_LOCK_00152]][[AIGC_LOCK_00153]]}p{[[AIGC_LOCK_00154]].2cm} >{[[AIGC_LOCK_00155]][[AIGC_LOCK_00156]]}p{[[AIGC_LOCK_00157]].2cm} >{[[AIGC_LOCK_00158]][[AIGC_LOCK_00159]]}X}
+[[AIGC_LOCK_00160]]
+事实来源 & 观测口径 & 对应模型量 & 用途 \\
+[[AIGC_LOCK_00161]]
+题目与公报 & [[AIGC_LOCK_00162]] 年四大家鱼恢复约 [[AIGC_LOCK_00163]] 倍 & [[AIGC_LOCK_00164]] & 参数标定约束 \\
+题目与公报 & 湖北段单网次捕获量提升 [[AIGC_LOCK_00165]]\% & [[AIGC_LOCK_00166]] & 局地对照 \\
+附件 [[AIGC_LOCK_00167]] & 草鱼、鲢鱼、鳙鱼、青鱼食性分工 & [[AIGC_LOCK_00168]] 与 [[AIGC_LOCK_00169]] & 机理约束 \\
+附件 [[AIGC_LOCK_00170]] & [[AIGC_LOCK_00171]] 年公报中的资源恢复事实 & 初值与时间基准 & 规模标定 \\
+[[AIGC_LOCK_00172]]
+[[AIGC_LOCK_00173]]{tabularx}
+[[AIGC_LOCK_00174]]{table}
+
+为识别不同资源层的承压差异，我们保留四类资源与四类鱼的功能群对应关系，而不把四大家鱼合并为单一消费者。草鱼摄食水草、鲢鱼滤食浮游植物、鳙鱼滤食浮游动物、青鱼摄食底栖饵料，因而底层资源不能压缩为单一总量。据此，我们采用资源--功能群配对模型，将每类鱼与对应资源一一耦合：
+[[AIGC_LOCK_00175]]
+[[AIGC_LOCK_00176]]
+其中 [[AIGC_LOCK_00177]] 分别对应草鱼--水草、鲢鱼--浮游植物、鳙鱼--浮游动物、青鱼--底栖饵料。式中 [[AIGC_LOCK_00178]] 表示污染对底层资源的额外损失，[[AIGC_LOCK_00179]] 为捕捞死亡率（禁渔情景取 [[AIGC_LOCK_00180]]，对照情景取 [[AIGC_LOCK_00181]]）。为避免后文记号切换，统一记 [[AIGC_LOCK_00182]]，[[AIGC_LOCK_00183]]。
+[[AIGC_LOCK_00184]]{table}[htbp]
+[[AIGC_LOCK_00185]]
+[[AIGC_LOCK_00186]]{问题一模型参数的角色与来源说明}
+[[AIGC_LOCK_00187]]
+[[AIGC_LOCK_00188]]
+[[AIGC_LOCK_00189]]{[[AIGC_LOCK_00190]]}{4pt}
+[[AIGC_LOCK_00191]]{tabularx}{[[AIGC_LOCK_00192]][[AIGC_LOCK_00193]]}{>{[[AIGC_LOCK_00194]][[AIGC_LOCK_00195]]}p{[[AIGC_LOCK_00196]].8cm} >{[[AIGC_LOCK_00197]][[AIGC_LOCK_00198]]}p{[[AIGC_LOCK_00199]].0cm} X >{[[AIGC_LOCK_00200]][[AIGC_LOCK_00201]]}p{[[AIGC_LOCK_00202]].2cm}}
+[[AIGC_LOCK_00203]]
+参数 & 数值 & 来源/依据 & 角色 \\
+[[AIGC_LOCK_00204]]
+[[AIGC_LOCK_00205]]{[[AIGC_LOCK_00206]]}{l}{[[AIGC_LOCK_00207]]{结构参数（归一化单区设定）}} \\
+[[AIGC_LOCK_00208]] & [[AIGC_LOCK_00209]][l]{[[AIGC_LOCK_00210]]\\$[[AIGC_LOCK_00211]],[[AIGC_LOCK_00212]][[AIGC_LOCK_00213]]K_1,K_2,K_3,K_4[[AIGC_LOCK_00214]]([[AIGC_LOCK_00215]],[[AIGC_LOCK_00216]],[[AIGC_LOCK_00217]],[[AIGC_LOCK_00218]])[[AIGC_LOCK_00219]][[AIGC_LOCK_00220]]_1,[[AIGC_LOCK_00221]]_2,[[AIGC_LOCK_00222]]_3,[[AIGC_LOCK_00223]]_4[[AIGC_LOCK_00224]][[AIGC_LOCK_00225]],[[AIGC_LOCK_00226]],[[AIGC_LOCK_00227]]} & Holling II 型摄食耦合强度，依次对应水草--草鱼、浮游植物--鲢鱼、浮游动物--鳙鱼、底栖饵料--青鱼，保持摄食项与自增殖项同量级[[AIGC_LOCK_00228]]。 & 结构耦合 \\
+[[AIGC_LOCK_00229]] & [[AIGC_LOCK_00230]][l]{[[AIGC_LOCK_00231]]\\$[[AIGC_LOCK_00232]],[[AIGC_LOCK_00233]][[AIGC_LOCK_00234]]e_1,e_2,e_3,e_4[[AIGC_LOCK_00235]][[AIGC_LOCK_00236]],[[AIGC_LOCK_00237]],[[AIGC_LOCK_00238]]} & 归一化转化效率，保证消费者收益不高于资源供给量级。 & 能量转化 \\
+[[AIGC_LOCK_00239]] & [[AIGC_LOCK_00240]][l]{[[AIGC_LOCK_00241]]\\$[[AIGC_LOCK_00242]],[[AIGC_LOCK_00243]][[AIGC_LOCK_00244]]consumer\_scale[[AIGC_LOCK_00245]][[AIGC_LOCK_00246]][[AIGC_LOCK_00247]]gain\_scale[[AIGC_LOCK_00248]][[AIGC_LOCK_00249]][[AIGC_LOCK_00250]]F_0[[AIGC_LOCK_00251]][[AIGC_LOCK_00252]][[AIGC_LOCK_00253]][[[AIGC_LOCK_00254]],[[AIGC_LOCK_00255]]][[AIGC_LOCK_00256]][[AIGC_LOCK_00257]]{CPUE}^*[[AIGC_LOCK_00258]]([[AIGC_LOCK_00259]],[[AIGC_LOCK_00260]],[[AIGC_LOCK_00261]],[[AIGC_LOCK_00262]])[[AIGC_LOCK_00263]]B_{[[AIGC_LOCK_00264]]{carp}}(t)=[[AIGC_LOCK_00265]]_{j=[[AIGC_LOCK_00266]]}^[[AIGC_LOCK_00267]] C_j(t)[[AIGC_LOCK_00268]]R_{[[AIGC_LOCK_00269]]{basal}}(t)=[[AIGC_LOCK_00270]]_{j=[[AIGC_LOCK_00271]]}^[[AIGC_LOCK_00272]] R_j(t)[[AIGC_LOCK_00273]][[AIGC_LOCK_00274]][[AIGC_LOCK_00275]][[[AIGC_LOCK_00276]],[[AIGC_LOCK_00277]]][[AIGC_LOCK_00278]][[AIGC_LOCK_00279]]{CPUE}^*[[AIGC_LOCK_00280]][[[AIGC_LOCK_00281]],[[AIGC_LOCK_00282]]][[AIGC_LOCK_00283]][[AIGC_LOCK_00284]](t)[[AIGC_LOCK_00285]][[AIGC_LOCK_00286]]{CPUE}^*(t)[[AIGC_LOCK_00287]]gain\_scale[[AIGC_LOCK_00288]]consumer\_scale=[[AIGC_LOCK_00289]][[AIGC_LOCK_00290]]F_0[[AIGC_LOCK_00291]][[AIGC_LOCK_00292]]{CPUE}^*[[AIGC_LOCK_00293]]gain\_scale=[[AIGC_LOCK_00294]][[AIGC_LOCK_00295]][[AIGC_LOCK_00296]]{CPUE}^*[[AIGC_LOCK_00297]]F_0=[[AIGC_LOCK_00298]][[AIGC_LOCK_00299]][[[AIGC_LOCK_00300]],[[AIGC_LOCK_00301]]][[AIGC_LOCK_00302]]F_0[[AIGC_LOCK_00303]]B_{[[AIGC_LOCK_00304]]{carp}}[[AIGC_LOCK_00305]]F_0[[AIGC_LOCK_00306]] [[AIGC_LOCK_00307]][[AIGC_LOCK_00308]]F_0[[AIGC_LOCK_00309]][[AIGC_LOCK_00310]]{CPUE}^*[[AIGC_LOCK_00311]][[AIGC_LOCK_00312]]{CPUE}^*[[AIGC_LOCK_00313]][[AIGC_LOCK_00314]]{CPUE}^*[[AIGC_LOCK_00315]][[AIGC_LOCK_00316]]{CPUE}^*[[AIGC_LOCK_00317]][[AIGC_LOCK_00318]][[AIGC_LOCK_00319]][[AIGC_LOCK_00320]][[AIGC_LOCK_00321]]M[[AIGC_LOCK_00322]]D[[AIGC_LOCK_00323]]A[[AIGC_LOCK_00324]]V[[AIGC_LOCK_00325]]E(t)[[AIGC_LOCK_00326]]K_M[[AIGC_LOCK_00327]]M[[AIGC_LOCK_00328]][[AIGC_LOCK_00329]]_B[[AIGC_LOCK_00330]]a_D,a_A,a_V[[AIGC_LOCK_00331]]R_A[[AIGC_LOCK_00332]]D([[AIGC_LOCK_00333]]),A([[AIGC_LOCK_00334]])[[AIGC_LOCK_00335]]E(t)[[AIGC_LOCK_00336]]E(t)[[AIGC_LOCK_00337]][[AIGC_LOCK_00338]]_B,D([[AIGC_LOCK_00339]]),A([[AIGC_LOCK_00340]])[[AIGC_LOCK_00341]]a_D,a_A,a_V[[AIGC_LOCK_00342]]R_A[[AIGC_LOCK_00343]]E(t)[[AIGC_LOCK_00344]][[AIGC_LOCK_00345]]_B[[AIGC_LOCK_00346]]R_A=[[AIGC_LOCK_00347]][[AIGC_LOCK_00348]]u[[AIGC_LOCK_00349]]X[[AIGC_LOCK_00350]][[AIGC_LOCK_00351]] X(t)=X(t)/X([[AIGC_LOCK_00352]])[[AIGC_LOCK_00353]]E_{[[AIGC_LOCK_00354]]{basal}}[[AIGC_LOCK_00355]]E_{[[AIGC_LOCK_00356]]{carp}}[[AIGC_LOCK_00357]]E_{[[AIGC_LOCK_00358]]{basal}}=[[AIGC_LOCK_00359]][[AIGC_LOCK_00360]]E_{[[AIGC_LOCK_00361]]{carp}}=[[AIGC_LOCK_00362]][[AIGC_LOCK_00363]]E(t)[[AIGC_LOCK_00364]]E_{[[AIGC_LOCK_00365]]{basal}}[[AIGC_LOCK_00366]][[[AIGC_LOCK_00367]],[[AIGC_LOCK_00368]]][[AIGC_LOCK_00369]]k_M=[[AIGC_LOCK_00370]][[AIGC_LOCK_00371]]K_M(E,u)[[AIGC_LOCK_00372]][[AIGC_LOCK_00373]]_B[[AIGC_LOCK_00374]]R_A[[AIGC_LOCK_00375]][[AIGC_LOCK_00376]]_B[[AIGC_LOCK_00377]][[AIGC_LOCK_00378]]_B=[[AIGC_LOCK_00379]][[AIGC_LOCK_00380]][[AIGC_LOCK_00381]]_B[[AIGC_LOCK_00382]][[[AIGC_LOCK_00383]],[[AIGC_LOCK_00384]]][[AIGC_LOCK_00385]]R_A=[[AIGC_LOCK_00386]][[AIGC_LOCK_00387]]M[[AIGC_LOCK_00388]]V[[AIGC_LOCK_00389]]R_A=[[AIGC_LOCK_00390]][[AIGC_LOCK_00391]]t=[[AIGC_LOCK_00392]][[AIGC_LOCK_00393]]A([[AIGC_LOCK_00394]])/A([[AIGC_LOCK_00395]])>[[AIGC_LOCK_00396]][[AIGC_LOCK_00397]][[AIGC_LOCK_00398]] [[AIGC_LOCK_00399]]\%[[AIGC_LOCK_00400]]D[[AIGC_LOCK_00401]]A[[AIGC_LOCK_00402]][[AIGC_LOCK_00403]] [[AIGC_LOCK_00404]]\%[[AIGC_LOCK_00405]][[AIGC_LOCK_00406]] D_{[[AIGC_LOCK_00407]]\%}[[AIGC_LOCK_00408]][[AIGC_LOCK_00409]] D_{[[AIGC_LOCK_00410]]\%}[[AIGC_LOCK_00411]][[AIGC_LOCK_00412]] A_{[[AIGC_LOCK_00413]]\%}[[AIGC_LOCK_00414]][[AIGC_LOCK_00415]] A_{[[AIGC_LOCK_00416]]\%}[[AIGC_LOCK_00417]][[AIGC_LOCK_00418]]_B[[AIGC_LOCK_00419]][[AIGC_LOCK_00420]]\%[[AIGC_LOCK_00421]][[AIGC_LOCK_00422]]\%[[AIGC_LOCK_00423]][[AIGC_LOCK_00424]]\%[[AIGC_LOCK_00425]][[AIGC_LOCK_00426]]\%[[AIGC_LOCK_00427]]R_A[[AIGC_LOCK_00428]][[AIGC_LOCK_00429]]\%[[AIGC_LOCK_00430]][[AIGC_LOCK_00431]]\%[[AIGC_LOCK_00432]][[AIGC_LOCK_00433]]\%[[AIGC_LOCK_00434]][[AIGC_LOCK_00435]]\%[[AIGC_LOCK_00436]]e_D[[AIGC_LOCK_00437]][[AIGC_LOCK_00438]]\%[[AIGC_LOCK_00439]][[AIGC_LOCK_00440]]\%[[AIGC_LOCK_00441]][[AIGC_LOCK_00442]]\%[[AIGC_LOCK_00443]][[AIGC_LOCK_00444]]\%[[AIGC_LOCK_00445]]e_A[[AIGC_LOCK_00446]][[AIGC_LOCK_00447]]\%[[AIGC_LOCK_00448]][[AIGC_LOCK_00449]]\%[[AIGC_LOCK_00450]][[AIGC_LOCK_00451]]\%[[AIGC_LOCK_00452]][[AIGC_LOCK_00453]]\%[[AIGC_LOCK_00454]]a_D[[AIGC_LOCK_00455]][[AIGC_LOCK_00456]]\%[[AIGC_LOCK_00457]][[AIGC_LOCK_00458]]\%[[AIGC_LOCK_00459]][[AIGC_LOCK_00460]]\%[[AIGC_LOCK_00461]][[AIGC_LOCK_00462]]\%[[AIGC_LOCK_00463]]a_A[[AIGC_LOCK_00464]][[AIGC_LOCK_00465]]\%[[AIGC_LOCK_00466]][[AIGC_LOCK_00467]]\%[[AIGC_LOCK_00468]][[AIGC_LOCK_00469]]\%[[AIGC_LOCK_00470]][[AIGC_LOCK_00471]]\%[[AIGC_LOCK_00472]]e_D[[AIGC_LOCK_00473]]a_D[[AIGC_LOCK_00474]]|[[AIGC_LOCK_00475]] D|>[[AIGC_LOCK_00476]]\%[[AIGC_LOCK_00477]]R_A[[AIGC_LOCK_00478]]|[[AIGC_LOCK_00479]] A|[[AIGC_LOCK_00480]] [[AIGC_LOCK_00481]]\%[[AIGC_LOCK_00482]][[AIGC_LOCK_00483]]_B[[AIGC_LOCK_00484]]<[[AIGC_LOCK_00485]]\%[[AIGC_LOCK_00486]]K[[AIGC_LOCK_00487]]X_1[[AIGC_LOCK_00488]]R_j[[AIGC_LOCK_00489]]X_2[[AIGC_LOCK_00490]]X_3[[AIGC_LOCK_00491]]a_1,b_1,d_1[[AIGC_LOCK_00492]]a_2,b_2,d_2[[AIGC_LOCK_00493]]r[[AIGC_LOCK_00494]]K[[AIGC_LOCK_00495]]r[[AIGC_LOCK_00496]]a_1[[AIGC_LOCK_00497]]b_1[[AIGC_LOCK_00498]]a_2[[AIGC_LOCK_00499]]b_2[[AIGC_LOCK_00500]]d_1[[AIGC_LOCK_00501]]d_2[[AIGC_LOCK_00502]]K[[AIGC_LOCK_00503]][[[AIGC_LOCK_00504]],[[AIGC_LOCK_00505]]][[AIGC_LOCK_00506]]K[[AIGC_LOCK_00507]]K[[AIGC_LOCK_00508]] [[AIGC_LOCK_00509]][[AIGC_LOCK_00510]]K[[AIGC_LOCK_00511]] [[AIGC_LOCK_00512]][[AIGC_LOCK_00513]]K[[AIGC_LOCK_00514]]t[[AIGC_LOCK_00515]][[[AIGC_LOCK_00516]],[[AIGC_LOCK_00517]]][[AIGC_LOCK_00518]]X_1[[AIGC_LOCK_00519]][[AIGC_LOCK_00520]] X_1[[AIGC_LOCK_00521]][[AIGC_LOCK_00522]] T[[AIGC_LOCK_00523]][[AIGC_LOCK_00524]]{CV}_T[[AIGC_LOCK_00525]][[AIGC_LOCK_00526]](X_1)[[AIGC_LOCK_00527]][[AIGC_LOCK_00528]] X_1[[AIGC_LOCK_00529]][[AIGC_LOCK_00530]]{CV}_T[[AIGC_LOCK_00531]]K[[AIGC_LOCK_00532]]K[[AIGC_LOCK_00533]][[AIGC_LOCK_00534]](X_1)[[AIGC_LOCK_00535]][[AIGC_LOCK_00536]] X_1[[AIGC_LOCK_00537]]N_{[[AIGC_LOCK_00538]]{peak}}[[AIGC_LOCK_00539]][[AIGC_LOCK_00540]] T[[AIGC_LOCK_00541]][[AIGC_LOCK_00542]]{CV}_T[[AIGC_LOCK_00543]]K[[AIGC_LOCK_00544]]X_1[[AIGC_LOCK_00545]][[AIGC_LOCK_00546]]_{[[AIGC_LOCK_00547]]}[[AIGC_LOCK_00548]]([[AIGC_LOCK_00549]],[[AIGC_LOCK_00550]],[[AIGC_LOCK_00551]])[[AIGC_LOCK_00552]]dt=[[AIGC_LOCK_00553]][[AIGC_LOCK_00554]]K=[[AIGC_LOCK_00555]][[AIGC_LOCK_00556]]K=[[AIGC_LOCK_00557]][[AIGC_LOCK_00558]][[AIGC_LOCK_00559]]_{[[AIGC_LOCK_00560]]}[[AIGC_LOCK_00561]]K=[[AIGC_LOCK_00562]][[AIGC_LOCK_00563]]K=[[AIGC_LOCK_00564]][[AIGC_LOCK_00565]]K=[[AIGC_LOCK_00566]][[AIGC_LOCK_00567]][[AIGC_LOCK_00568]]_{[[AIGC_LOCK_00569]]}([[AIGC_LOCK_00570]])[[AIGC_LOCK_00571]][[AIGC_LOCK_00572]]_{[[AIGC_LOCK_00573]]}([[AIGC_LOCK_00574]])[[AIGC_LOCK_00575]]dt=[[AIGC_LOCK_00576]][[AIGC_LOCK_00577]][[AIGC_LOCK_00578]][[AIGC_LOCK_00579]][[AIGC_LOCK_00580]][[AIGC_LOCK_00581]]dt=[[AIGC_LOCK_00582]][[AIGC_LOCK_00583]][[AIGC_LOCK_00584]][[AIGC_LOCK_00585]][[AIGC_LOCK_00586]][[AIGC_LOCK_00587]]dt=[[AIGC_LOCK_00588]][[AIGC_LOCK_00589]][[AIGC_LOCK_00590]][[AIGC_LOCK_00591]][[AIGC_LOCK_00592]][[AIGC_LOCK_00593]]([[AIGC_LOCK_00594]],[[AIGC_LOCK_00595]],[[AIGC_LOCK_00596]])[[AIGC_LOCK_00597]][[AIGC_LOCK_00598]][[AIGC_LOCK_00599]][[AIGC_LOCK_00600]][[AIGC_LOCK_00601]][[AIGC_LOCK_00602]]_{[[AIGC_LOCK_00603]]}([[AIGC_LOCK_00604]])=[[AIGC_LOCK_00605]][[AIGC_LOCK_00606]][[AIGC_LOCK_00607]]_{[[AIGC_LOCK_00608]]}([[AIGC_LOCK_00609]])=[[AIGC_LOCK_00610]][[AIGC_LOCK_00611]][[AIGC_LOCK_00612]]_{[[AIGC_LOCK_00613]]}([[AIGC_LOCK_00614]])<[[AIGC_LOCK_00615]]<[[AIGC_LOCK_00616]]_{[[AIGC_LOCK_00617]]}([[AIGC_LOCK_00618]])[[AIGC_LOCK_00619]]K=[[AIGC_LOCK_00620]][[AIGC_LOCK_00621]]K=[[AIGC_LOCK_00622]][[AIGC_LOCK_00623]][[AIGC_LOCK_00624]] [[AIGC_LOCK_00625]][[AIGC_LOCK_00626]]u=[[AIGC_LOCK_00627]][[AIGC_LOCK_00628]]u>[[AIGC_LOCK_00629]][[AIGC_LOCK_00630]]E_{[[AIGC_LOCK_00631]]{basal}}[[AIGC_LOCK_00632]]E_{[[AIGC_LOCK_00633]]{carp}}[[AIGC_LOCK_00634]]i[[AIGC_LOCK_00635]][[AIGC_LOCK_00636]] M_i,[[AIGC_LOCK_00637]] D_i,[[AIGC_LOCK_00638]] A_i,[[AIGC_LOCK_00639]] V_i[[AIGC_LOCK_00640]]w=(w_1,w_2,w_3,w_4)[[AIGC_LOCK_00641]]([[AIGC_LOCK_00642]],[[AIGC_LOCK_00643]],[[AIGC_LOCK_00644]],[[AIGC_LOCK_00645]])[[AIGC_LOCK_00646]][[AIGC_LOCK_00647]]{H}[[AIGC_LOCK_00648]](M,D,A,V)[[AIGC_LOCK_00649]]([[AIGC_LOCK_00650]],[[AIGC_LOCK_00651]],[[AIGC_LOCK_00652]],[[AIGC_LOCK_00653]])[[AIGC_LOCK_00654]]([[AIGC_LOCK_00655]],[[AIGC_LOCK_00656]],[[AIGC_LOCK_00657]],[[AIGC_LOCK_00658]])[[AIGC_LOCK_00659]]([[AIGC_LOCK_00660]],[[AIGC_LOCK_00661]],[[AIGC_LOCK_00662]],[[AIGC_LOCK_00663]])[[AIGC_LOCK_00664]]([[AIGC_LOCK_00665]],[[AIGC_LOCK_00666]],[[AIGC_LOCK_00667]],[[AIGC_LOCK_00668]])[[AIGC_LOCK_00669]][[[AIGC_LOCK_00670]],[[AIGC_LOCK_00671]]][[AIGC_LOCK_00672]]u[[AIGC_LOCK_00673]]K_M[[AIGC_LOCK_00674]]M[[AIGC_LOCK_00675]][[[AIGC_LOCK_00676]],[[AIGC_LOCK_00677]]][[AIGC_LOCK_00678]]K[[AIGC_LOCK_00679]]gain\_scale[[AIGC_LOCK_00680]]consumer\_scale[[AIGC_LOCK_00681]]F_0[[AIGC_LOCK_00682]][[AIGC_LOCK_00683]]10\%[[AIGC_LOCK_00684]][[AIGC_LOCK_00685]]20\%[[AIGC_LOCK_00686]][[AIGC_LOCK_00687]]{CPUE}^*[[AIGC_LOCK_00688]][[AIGC_LOCK_00689]] [[AIGC_LOCK_00690]]\%[[AIGC_LOCK_00691]]K[[AIGC_LOCK_00692]]K=[[AIGC_LOCK_00693]],[[AIGC_LOCK_00694]],[[AIGC_LOCK_00695]][[AIGC_LOCK_00696]]K[[AIGC_LOCK_00697]]X_1,X_2,X_3[[AIGC_LOCK_00698]]K[[AIGC_LOCK_00699]]K=[[AIGC_LOCK_00700]][[AIGC_LOCK_00701]][[AIGC_LOCK_00702]]_{[[AIGC_LOCK_00703]]}([[AIGC_LOCK_00704]])<[[AIGC_LOCK_00705]]<[[AIGC_LOCK_00706]]_{[[AIGC_LOCK_00707]]}([[AIGC_LOCK_00708]])[[AIGC_LOCK_00709]]r_1,r_2,r_3,r_4[[AIGC_LOCK_00710]][[AIGC_LOCK_00711]],[[AIGC_LOCK_00712]],[[AIGC_LOCK_00713]]} & 归一化相对恢复速度排序，表示水草快于浮游植物、浮游植物快于浮游动物、浮游动物快于底栖饵料；用于维持营养级时间尺度分离。 & 时间尺度约束 \\
+[[AIGC_LOCK_00714]] & [[AIGC_LOCK_00715]] & 统一固定为归一化承载上界，不对应河段实测承载量。 & 归一化基准 \\
+[[AIGC_LOCK_00716]]
+[[AIGC_LOCK_00717]]{[[AIGC_LOCK_00718]]}{l}{[[AIGC_LOCK_00719]]{摄食耦合与饱和响应}} \\
+[[AIGC_LOCK_00720]] & [[AIGC_LOCK_00721]][l]{[[AIGC_LOCK_00722]]\\$[[AIGC_LOCK_00723]],[[AIGC_LOCK_00724]][[AIGC_LOCK_00725]]j=[[AIGC_LOCK_00726]],[[AIGC_LOCK_00727]],[[AIGC_LOCK_00728]],[[AIGC_LOCK_00729]][[AIGC_LOCK_00730]]h_1,h_2,h_3,h_4[[AIGC_LOCK_00731]][[AIGC_LOCK_00732]],[[AIGC_LOCK_00733]],[[AIGC_LOCK_00734]]} & 饱和摄食拐点参数，使系统在归一化尺度下保持有界响应。 & 饱和约束 \\
+[[AIGC_LOCK_00735]]
+[[AIGC_LOCK_00736]]{[[AIGC_LOCK_00737]]}{l}{[[AIGC_LOCK_00738]]{转化效率与自然损失}} \\
+[[AIGC_LOCK_00739]] & [[AIGC_LOCK_00740]][l]{[[AIGC_LOCK_00741]]\\$[[AIGC_LOCK_00742]],[[AIGC_LOCK_00743]][[AIGC_LOCK_00744]]m_1,m_2,m_3,m_4[[AIGC_LOCK_00745]][[AIGC_LOCK_00746]],[[AIGC_LOCK_00747]],[[AIGC_LOCK_00748]]} & 归一化自然损失系数，与转化效率共同维持消费者层在禁渔和非禁渔情景下的数量级稳定。 & 背景损失 \\
+[[AIGC_LOCK_00749]]
+[[AIGC_LOCK_00750]]{[[AIGC_LOCK_00751]]}{l}{[[AIGC_LOCK_00752]]{校准、反事实与场景控制}} \\
+[[AIGC_LOCK_00753]] & [[AIGC_LOCK_00754]] & 固定缩放四大家鱼初值，保留既有物种占比，不由 [[AIGC_LOCK_00755]] 年观测标定估计。 & 初值规范化 \\
+[[AIGC_LOCK_00756]] & [[AIGC_LOCK_00757]] & 由 [[AIGC_LOCK_00758]] 年“四大家鱼恢复到禁渔前约 [[AIGC_LOCK_00759]] 倍”这一总量约束单参数搜索得到。 & 唯一标定参数 \\
+[[AIGC_LOCK_00760]]（禁渔情景） & [[AIGC_LOCK_00761]] & 禁渔基线情景下共同捕捞压力取零；这里给出的是场景取值，而非新增独立参数。 & 基线政策设定 \\
+[[AIGC_LOCK_00762]] & [[AIGC_LOCK_00763]] & 不禁渔反事实情景的固定共同捕捞压力，取自区间 [[AIGC_LOCK_00764]] 的中位值，不参与观测校准。 & 反事实对照 \\
+[[AIGC_LOCK_00765]] & [[AIGC_LOCK_00766]] & 问题一中污染强度默认取零，避免与问题五的污染情景混用。 & 基线环境设定 \\
+[[AIGC_LOCK_00767]]
+[[AIGC_LOCK_00768]]{[[AIGC_LOCK_00769]]}{l}{[[AIGC_LOCK_00770]]{观测代理与初值模板}} \\
+[[AIGC_LOCK_00771]] 权重 & [[AIGC_LOCK_00772]] & 草鱼、鲢鱼、鳙鱼等权；青鱼因偏底栖、单网次可见性较低而保守下调。 & 捕获量代理 \\
+[[AIGC_LOCK_00773]] & [[AIGC_LOCK_00774]][l]{[[AIGC_LOCK_00775]]\\$[[AIGC_LOCK_00776]],[[AIGC_LOCK_00777]],[[AIGC_LOCK_00778]],[[AIGC_LOCK_00779]]} & 归一化初值模板，资源四维在前、鱼类四维在后；四类鱼在仿真前统一乘以 [[AIGC_LOCK_00780]]。 & 状态初始化 \\
+[[AIGC_LOCK_00781]]
+[[AIGC_LOCK_00782]]{tabularx}
+[[AIGC_LOCK_00783]]
+[[AIGC_LOCK_00784]]{table}
+[[AIGC_LOCK_00785]]{完整 Python 源程序}
+[[AIGC_LOCK_00786]][language=Python,basicstyle=[[AIGC_LOCK_00787]][[AIGC_LOCK_00788]],breaklines=true]{../scripts/model_pipeline.py}
+
+[[AIGC_LOCK_00789]]{document}

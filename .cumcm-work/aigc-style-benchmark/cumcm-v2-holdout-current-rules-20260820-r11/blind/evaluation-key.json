@@ -1,0 +1,62 @@
+{
+  "schema": "aigc-blind-key/v1",
+  "seed": 20260822,
+  "dimensions": [
+    "naturalness",
+    "judgment_trajectory",
+    "specificity",
+    "content_density",
+    "semantic_fidelity"
+  ],
+  "pairs": [
+    {
+      "pair_id": "P0001",
+      "A": "a-reflection-boundary::humanize-academic-chinese::t1",
+      "B": "a-reflection-boundary::source"
+    },
+    {
+      "pair_id": "P0002",
+      "A": "a-reflection-boundary::humanize-academic-chinese::t2",
+      "B": "a-reflection-boundary::source"
+    },
+    {
+      "pair_id": "P0003",
+      "A": "a-reflection-boundary::humanize-academic-chinese::t3",
+      "B": "a-reflection-boundary::source"
+    },
+    {
+      "pair_id": "P0004",
+      "A": "b-resource-constraint::humanize-academic-chinese::t1",
+      "B": "b-resource-constraint::source"
+    },
+    {
+      "pair_id": "P0005",
+      "A": "b-resource-constraint::humanize-academic-chinese::t2",
+      "B": "b-resource-constraint::source"
+    },
+    {
+      "pair_id": "P0006",
+      "A": "b-resource-constraint::source",
+      "B": "b-resource-constraint::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0007",
+      "A": "c-model-comparison::source",
+      "B": "c-model-comparison::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0008",
+      "A": "c-model-comparison::humanize-academic-chinese::t2",
+      "B": "c-model-comparison::source"
+    },
+    {
+      "pair_id": "P0009",
+      "A": "c-model-comparison::humanize-academic-chinese::t3",
+      "B": "c-model-comparison::source"
+    }
+  ],
+  "packet_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-holdout-current-rules-20260820-r11\\blind\\evaluation-packet.json",
+  "packet_sha256": "48a3cc379f57ea92170b2a382c2940c203a17fb9599cae7804e542c37cc8bb91",
+  "source_pairs_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-holdout-current-rules-20260820-r11\\blind\\pairs.json",
+  "source_pairs_sha256": "8e536abbbae8a3704cd4bbe3a8204ec78777205698eee8b0ee1c0542eb73ad9f"
+}

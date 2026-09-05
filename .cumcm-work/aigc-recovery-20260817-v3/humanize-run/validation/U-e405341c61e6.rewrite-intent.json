@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "2b1199af3d39741911b65ea76e22cb88ee38f0d240b7a083782b4dcdfb0ca7c3",
+    "before_sha256": "2b1199af3d39741911b65ea76e22cb88ee38f0d240b7a083782b4dcdfb0ca7c3"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "eeb57f87eca3b2f6ff2d3815783823292b661af5f92873a22787f7e0fdd15318",
+  "chunk_binding_sha256": "89c40c9dabc580171cb499701b760f52b6961736f74213238b6c98c6022cf2a6",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-e405341c61e6.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "acf193067fd01be79a49e04bd79c46f3b4e62279dd6eeec05c4d581c6855ca69",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 30,
+        "id": "S1",
+        "sha256": "c9998fb443394ddaad9dc25c05c7de41ff59bea760c371a3299fa443b5d3d457",
+        "start_line": 1
+      }
+    ],
+    "reason": "敏感性段落由扰动设置、结果表和区间内解释组成，保留该结构可维持参数与表格的直接对应。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "dd4191db552da0b36c19114867e36cadd763a570ba650fd1c653f06ab18014cb",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-e405341c61e6"
+}

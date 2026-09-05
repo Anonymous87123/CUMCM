@@ -1,0 +1,178 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-e276c4b22163",
+  "chunk_binding_sha256": "56073dfd626724cf81879b102f70ab329c73d26d3afe07eb098e28051080c211",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "842ae235d7ee9818",
+    "prepare_integrity_sha256": "c38e1d6ea4a8467e7d26d083319b223bd567819e17070c0ac06e74de425e1aa2",
+    "run_metadata_sha256": "af8e27fded78b4cdf5593d7a49751c6f6e43e94172419e8103c4f33a166925b9",
+    "policy_snapshot_sha256": "78c9d819ed643befe1459941693ca6ea078ca61644c28b531ba2fb612fd20234",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "unit_id": "U-e276c4b22163",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 501,
+      "end": 1770,
+      "start_line": 20,
+      "end_line": 34,
+      "source_span_sha256": "a1607838e3418b96b6ec16d751a6e3edd5e3de39ad4d7c5e6ab71d8661ecb661",
+      "masked_text_sha256": "5088f7f76790a13a463be8798a5794c005fd928938f3021ccc9c65dc94d7d051",
+      "chunk_binding_sha256": "56073dfd626724cf81879b102f70ab329c73d26d3afe07eb098e28051080c211"
+    },
+    "scene_route": {
+      "requested_scene": "MODELING",
+      "resolved_scene": "MODELING",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "a41da611e04d53f3050c35dba68ba8b7beafe827c1a625f42be4a84713161d55",
+      "routing_input_sha256": "41cdf35d74a5a6cb38a998de6356ef00199b6891e71c344549be5f65d664e7fe"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-modeling",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "MODELING",
+      "profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "6bb32bf817cbd27d1ed6a83ace881ebfe1969909984ca9f1f1c15209567d588d"
+  },
+  "keep_reasons": {
+    "LEX-STRICT-CORPUS-SCOPE-01": "“不会自动转化”限定资源恢复与系统健康之间不存在必然对应，属于摘要结论边界。"
+  },
+  "template_field_edit_scope": null,
+  "masked_text": "\n[[PROTECTED:F00001-P00019:049d0a6a9cf4]]\n长江十年禁渔实施后，四大家鱼资源量回升，长江江豚和长江鲟种群亦呈恢复态势，但资源枯竭、江湖连通性受阻、水体污染与外来物种入侵等问题仍较突出。围绕[[PROTECTED:F00001-P00020:1bf922abc75b]]核心问题，本文分别描述流域平均食物网、珍稀物种响应和三级食物链的长期行为，再用综合情景评价比较污染与入侵压力下能够保留的禁渔收益。\n\n问题一在流域平均尺度上配对四类基础资源与四大家鱼功能群。以2025年四大家鱼资源量恢复至禁渔前1.8倍作单参数标定，湖北江段单网次渔获量提升120[[PROTECTED:F00001-P00021:fed3f9917a84]]留作局地对照。结果显示，2025年四大家鱼总生物量为禁渔前的1.805倍，单位捕捞努力量渔获量([[PROTECTED:F00001-P00022:23f77b65545d]])为1.838倍；摄食压力指数升至4.213，基础资源量末值降至0.204。鱼类回升早于底层资源恢复。\n\n问题二把上游资源--鱼群轨迹压缩为综合生态状态指数，用它调节中层猎物承载力，并设置高阻隔、无人工放流和污染情景。基线下长江江豚与长江鲟末值为1.133倍和1.140倍，高阻隔时降至0.901倍和0.856倍；取消人工放流后长江鲟降至0.519倍，污染情景下两者为0.610倍和0.704倍。对照结果显示，通道阻隔同时压低两类物种，放流变化的主要响应落在长江鲟。\n\n长期行为部分采用同一Hastings-Powell三级食物链。参数[[PROTECTED:F00001-P00023:68e2c657635f]]增大时，代表点[[PROTECTED:F00001-P00024:8abaee131413]]、[[PROTECTED:F00001-P00025:5ff9d8c4624c]]、[[PROTECTED:F00001-P00026:347344e4b868]]的峰谷差和峰间隔离散程度随之增大，轨道由规则振荡转为复杂非线性波动。短时间窗分析显示，首个连续正李雅普诺夫指数区间位于[[PROTECTED:F00001-P00027:79ea035e4a4b]]附近；75组扩展测试中，仅5组在[[PROTECTED:F00001-P00028:168e50c07661]]区间保留由负转正的跨越。故本文仅报告[[PROTECTED:F00001-P00029:835020a288b6]]的方向性结论。\n\n综合评价取积分后期的饵料资源、长江江豚、长江鲟和入侵压力指标，并用熵权与CRITIC平均权重计算情景得分。三种情景依次得到0.662、0.423和0.155；2000次局部参数扰动无一改变排序，稳定率为100[[PROTECTED:F00001-P00030:fed3f9917a84]]。这一顺序与[[PROTECTED:F00001-P00031:62879cc62c2c]]相对应。\n\n十年禁渔后，鱼类资源已经回升，但资源恢复不会自动转化为系统整体健康改善：模型中的底层资源、珍稀物种和长期轨道变化幅度各异。若不同步推进水质治理、江湖连通性修复、珍稀物种定向放流与入侵防控，恢复收益仍可能在向高营养级传递和多重压力叠加时减弱。\n[[PROTECTED:F00001-P00032:d87bde9aac5f]]\n\n",
+  "rewrite_intent": {
+    "summary": "压缩摘要逐问报到和统一收束，让模型对象、数值差异与结论边界直接落句。",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "压缩摘要逐问报到和统一收束，让模型对象、数值差异与结论边界直接落句。"
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "压缩摘要逐问报到和统一收束，让模型对象、数值差异与结论边界直接落句。"
+      },
+      {
+        "id": "O3",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S3"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "压缩摘要逐问报到和统一收束，让模型对象、数值差异与结论边界直接落句。"
+      },
+      {
+        "id": "O4",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S4"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "压缩摘要逐问报到和统一收束，让模型对象、数值差异与结论边界直接落句。"
+      },
+      {
+        "id": "O5",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S5"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "压缩摘要逐问报到和统一收束，让模型对象、数值差异与结论边界直接落句。"
+      },
+      {
+        "id": "O6",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S6"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "压缩摘要逐问报到和统一收束，让模型对象、数值差异与结论边界直接落句。"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 3,
+        "end_line": 3,
+        "sha256": "17ab5eea6fa234e380496b89a7b301edf145fe272d777366d0105a7196a63d86"
+      },
+      {
+        "id": "S2",
+        "start_line": 5,
+        "end_line": 5,
+        "sha256": "6e516edc0aaaa6c90380a0afec90a9272b1219acf369ee8dbb3def7f0abc2669"
+      },
+      {
+        "id": "S3",
+        "start_line": 7,
+        "end_line": 7,
+        "sha256": "961e77082f42869e7120fcf0b25ced6fcee857663e59538c3de0339761dab2ad"
+      },
+      {
+        "id": "S4",
+        "start_line": 9,
+        "end_line": 9,
+        "sha256": "3a23d2824a626834a25f1f9a54f483baf9fcc8871e15bbe9076ee04a7b872d3d"
+      },
+      {
+        "id": "S5",
+        "start_line": 11,
+        "end_line": 11,
+        "sha256": "3b21cd43c42d16a389fe0723b356a46198d7d8ba1df7bd3c76b6c9a77e6b8420"
+      },
+      {
+        "id": "S6",
+        "start_line": 13,
+        "end_line": 13,
+        "sha256": "37d2eeb49e2d516f232639851297b97d62e6fac4f08bbc954c3ae621d9b1883d"
+      }
+    ],
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  }
+}

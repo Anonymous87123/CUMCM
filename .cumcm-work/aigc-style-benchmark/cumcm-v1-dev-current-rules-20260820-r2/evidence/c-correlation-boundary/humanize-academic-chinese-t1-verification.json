@@ -1,0 +1,38 @@
+{
+  "schema": "aigc-adapter-run/v1",
+  "package": "humanize-academic-chinese",
+  "action": "verify-candidate",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-current-rules-20260820-r2\\verify\\c-correlation-boundary-t1",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-current-rules-20260820-r2\\sources\\c-correlation-boundary.txt",
+    "sha256": "10ab89e0600db62714e6ff8dc76ded294748a04deee327aac859121f161952d5",
+    "bytes": 246,
+    "suffix": ".txt"
+  },
+  "protected_inventory": {
+    "numbers": {},
+    "tex_commands": {},
+    "tex_keys": {},
+    "inline_math": {},
+    "dollar_display_math": {},
+    "display_math": {},
+    "math_environments": {},
+    "code_fences": {},
+    "urls": {}
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-current-rules-20260820-r2\\candidates-safe\\c-correlation-boundary-t1.txt",
+    "sha256": "46d229fd4ef65c3cac96ce1a22facc1e5867bb834ed1c20a4ae2bf5e94f14142",
+    "bytes": 256,
+    "suffix": ".txt"
+  },
+  "human_review_required": true
+}

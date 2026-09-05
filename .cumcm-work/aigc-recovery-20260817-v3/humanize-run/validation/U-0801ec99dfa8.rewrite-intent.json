@@ -1,0 +1,110 @@
+{
+  "artifact": {
+    "after_sha256": "dc7d932292fc79e59971b2395d3eae3ff169f3db3181d6716ff3a0dd89ba1e41",
+    "before_sha256": "94dacee410178586b7dc4552a06d4abe056d0e82fc1763213478ab526c4cae8d"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "43edaf03dd4983193ca2e5467fd1e09ec4690e07c4289e10976a5ff177450d53",
+  "chunk_binding_sha256": "9338c6407c3e031138c0d1d4b239bfe9bc9a90788c13ddc5454c6db81bacf0ba",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-0801ec99dfa8.diff",
+    "sha256": "19fbe824e75ab9dd1f72aaad9f87eb1ed6fe4b8407e72a8edbab8aac4053460f"
+  },
+  "evidence_sha256": "07ef4b84cee6c4f6e88ac228269a8c383a2ca338a2b6d84f13e05b022411de3b",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "围绕不同步指标解释污染情景，并把赋权一致性限定在当前扰动范围。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "围绕不同步指标解释污染情景，并把赋权一致性限定在当前扰动范围。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O3",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S3"
+        ],
+        "summary": "围绕不同步指标解释污染情景，并把赋权一致性限定在当前扰动范围。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "83c730047c9d31a06169977feb0c243e2e23000a242a830168d7eb1c7846529b",
+        "start_line": 2
+      },
+      {
+        "end_line": 36,
+        "id": "S2",
+        "sha256": "1213dd5073644ec6f4db16cc0e9b77fdc5f6c2e6a96849b57cd748d09e673d9b",
+        "start_line": 36
+      },
+      {
+        "end_line": 38,
+        "id": "S3",
+        "sha256": "aa880b1a9c4b2e62086daab1bc7ea66beec79e2d706fe152cbc6748a3c8e91c0",
+        "start_line": 38
+      }
+    ],
+    "summary": "围绕不同步指标解释污染情景，并把赋权一致性限定在当前扰动范围。",
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      },
+      {
+        "end_line": 36,
+        "operation": "REPLACE",
+        "start_line": 36
+      },
+      {
+        "end_line": 38,
+        "operation": "REPLACE",
+        "start_line": 38
+      }
+    ],
+    "masked_after_sha256": "6359547b33e4431f5c26e8048bbb9bd644a3a97000cd1471269983cfeda9144c",
+    "masked_before_sha256": "f581ba2fd44f331fbb6d042cda3d3de1b00045523ba23b504455665c9f42cc55",
+    "source_spans_covered": 3,
+    "source_spans_total": 3,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "78ff20a104a69d65d629320a116c3cb658025d99a3cd27bfc99b709a7a6bf1de",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-0801ec99dfa8"
+}

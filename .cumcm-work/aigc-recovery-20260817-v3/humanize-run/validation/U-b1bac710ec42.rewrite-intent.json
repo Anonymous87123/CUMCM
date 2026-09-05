@@ -1,0 +1,110 @@
+{
+  "artifact": {
+    "after_sha256": "2361dab58a78f46bfda227c2d09a6a79d1e377dfbd65088c9ddc7bf71fab4772",
+    "before_sha256": "617fa5c9455478a20c580bb58a557b07a3213f056bc00241f50374220910badd"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "0dec015b74194f7845c25761d5bee4b207249c8dc2def9036405c3c6438042c0",
+  "chunk_binding_sha256": "1504c82c5c699553012c4c03052c4f420bfb3cb08664c8bd88e135b91bd95166",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-b1bac710ec42.diff",
+    "sha256": "601a80b1933b59aebdc46c179b078c6ef4ab29e0d83d84e34e3a17ada9eb3e19"
+  },
+  "evidence_sha256": "84d47b3b6aa824960693611bbbc4c777667c7c0e0bb9c6003e43365567e67328",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "减去背景段的万能过渡和模型宣告，按题面对象重述五项任务及时间口径。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "减去背景段的万能过渡和模型宣告，按题面对象重述五项任务及时间口径。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O3",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S3"
+        ],
+        "summary": "减去背景段的万能过渡和模型宣告，按题面对象重述五项任务及时间口径。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 4,
+        "id": "S1",
+        "sha256": "3f4212a067ac637fc7f79a8367ff8ad97f85f5b5cf0b1e95fa2114d62198bfb1",
+        "start_line": 4
+      },
+      {
+        "end_line": 6,
+        "id": "S2",
+        "sha256": "d35d87392a58adaa8ac2b54c08d16b877da370279f3968495db1779f25974d9f",
+        "start_line": 6
+      },
+      {
+        "end_line": 14,
+        "id": "S3",
+        "sha256": "49964f2b575d9b7c21505b751ebdb4337d6cab0a96ab268e70aab0275a189858",
+        "start_line": 14
+      }
+    ],
+    "summary": "减去背景段的万能过渡和模型宣告，按题面对象重述五项任务及时间口径。",
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 4,
+        "operation": "REPLACE",
+        "start_line": 4
+      },
+      {
+        "end_line": 6,
+        "operation": "REPLACE",
+        "start_line": 6
+      },
+      {
+        "end_line": 14,
+        "operation": "REPLACE",
+        "start_line": 14
+      }
+    ],
+    "masked_after_sha256": "ffbb95d6f9c6f509b973ac730c012a7dcc1d7c7e02940dede7fb10870831f596",
+    "masked_before_sha256": "73125f905376eb25f67f10f641b25ccb04d2c3f4843968acdb10678716db0ac5",
+    "source_spans_covered": 3,
+    "source_spans_total": 3,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "3517ffdc37bd0839dd9d67d16621c58caad54974205b770f948e7d670c81e133",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-b1bac710ec42"
+}

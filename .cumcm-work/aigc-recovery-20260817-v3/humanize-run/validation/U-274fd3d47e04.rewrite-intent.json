@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "074c4feaadf74567cc3311d15b59bfdb324efa6a051899a69d9247e93b378252",
+    "before_sha256": "074c4feaadf74567cc3311d15b59bfdb324efa6a051899a69d9247e93b378252"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "faef98cc26aca1aa6dd8c7d37dc64027006c534e3518330d151ca1ebeb16ac8b",
+  "chunk_binding_sha256": "d740061ee9d42f4b848b3cb8d115c0531ba86b08ecc57730c64dedee7249ceb2",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-274fd3d47e04.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "dc2ac3e6614ec44f992b3930b3f3f36162d3058fb98637c5a0b354cb649fe1fb",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 10,
+        "id": "S1",
+        "sha256": "9fff4f44e42de13a44f08bb3a426aac14ec4acf7d4c2ba59c20bc67f25aceadd",
+        "start_line": 1
+      }
+    ],
+    "reason": "模型假设条目逐项限定对象、近似范围和扰动职责，保留原有清单结构可避免改变假设口径。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "4990fef93be649de923e5464f6fa98ddae92076d87c60afa96d6184765522089",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-274fd3d47e04"
+}

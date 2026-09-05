@@ -1,0 +1,288 @@
+{
+  "artifact": {
+    "after_sha256": "8d68c6cb1df3373a4c6cb5bf5dbf27ddcc1e72716a049649947e36345ffe3ead",
+    "before_sha256": "10ab89e0600db62714e6ff8dc76ded294748a04deee327aac859121f161952d5"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "ee35cf2b6b9b1bd5248ef4efce601173090de97ef8136f2df65cc424d63e8f3d",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "fe1bb3314d2b4285bf4eb60ab9963c8bf9a423a0217b0f70abec49a9d16309e5",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "markdown",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不": 2
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0002",
+            "column": 27,
+            "end": 27,
+            "end_column": 28,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "各品类销售基属于时间序列，同期宏观变化可能共同作用于不同序列",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 26
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0004",
+            "column": 50,
+            "end": 50,
+            "end_column": 51,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "普通相关性计算会混入这部分时间影响，不足以判断两种单品之问销基的关系",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 49
+          }
+        ],
+        "before": {
+          "不能": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0003",
+            "column": 42,
+            "end": 43,
+            "end_column": 44,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不能",
+            "sentence_context": "由于各品类销售基的数据为时间序列,直接进行相关性计算容易受时间上的宏观因素影响,并不能判断两种单品之问销基的关系",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 41
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "不": 2
+          },
+          "removed": {
+            "不能": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "不": 2
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0002",
+                "column": 27,
+                "end": 27,
+                "end_column": 28,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "各品类销售基属于时间序列，同期宏观变化可能共同作用于不同序列",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 26
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0004",
+                "column": 50,
+                "end": 50,
+                "end_column": 51,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "普通相关性计算会混入这部分时间影响，不足以判断两种单品之问销基的关系",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 49
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0003",
+                "column": 42,
+                "end": 43,
+                "end_column": 44,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不能",
+                "sentence_context": "由于各品类销售基的数据为时间序列,直接进行相关性计算容易受时间上的宏观因素影响,并不能判断两种单品之问销基的关系",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 41
+              }
+            ],
+            "removed": {
+              "不能": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "1f9985a067a3cc15f3a1edd175f5d264a4ec8e72db3da8471ce368b00efbbf7b"
+    },
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "可能": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0002",
+            "column": 20,
+            "end": 21,
+            "end_column": 22,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可能",
+            "sentence_context": "各品类销售基属于时间序列，同期宏观变化可能共同作用于不同序列",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 19
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "可能": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "可能": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 20,
+                "end": 21,
+                "end_column": 22,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可能",
+                "sentence_context": "各品类销售基属于时间序列，同期宏观变化可能共同作用于不同序列",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 19
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "c99ee2a3ff29c8a4fc3131b6e786814f43073c9e540c6308b847051b7d6d8c06"
+    },
+    {
+      "code": "SPEECH_ACT_LOGICAL_RELATION_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "因此": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "logical_relation",
+            "claim_id": "C0004",
+            "column": 58,
+            "end": 59,
+            "end_column": 60,
+            "end_line": 1,
+            "line": 1,
+            "marker": "因此",
+            "sentence_context": "因此本文选择偶相关性分析确定两种品类之间的相互关系",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 57
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "因此": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0004",
+                "column": 58,
+                "end": 59,
+                "end_column": 60,
+                "end_line": 1,
+                "line": 1,
+                "marker": "因此",
+                "sentence_context": "因此本文选择偶相关性分析确定两种品类之间的相互关系",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 57
+              }
+            ],
+            "removed": {
+              "因此": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'logical_relation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "c118ee09d3d30977b000e0aae876f8d5e3d9e1b8678acb28ca7ba0ece23345d7"
+    }
+  ]
+}

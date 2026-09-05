@@ -1,0 +1,38 @@
+{
+  "schema": "aigc-adapter-run/v1",
+  "package": "humanize-academic-chinese",
+  "action": "verify-candidate",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev\\benchmark-evidence\\c-correlation-boundary-t1\\verify",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev\\sources\\c-correlation-boundary.txt",
+    "sha256": "10ab89e0600db62714e6ff8dc76ded294748a04deee327aac859121f161952d5",
+    "bytes": 246,
+    "suffix": ".txt"
+  },
+  "protected_inventory": {
+    "numbers": {},
+    "tex_commands": {},
+    "tex_keys": {},
+    "inline_math": {},
+    "dollar_display_math": {},
+    "display_math": {},
+    "math_environments": {},
+    "code_fences": {},
+    "urls": {}
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev\\humanize-runs-v2\\c-correlation-boundary-t1\\hir1-wb3eicxa\\artifacts\\after.md",
+    "sha256": "fc1d922827811093b954ab4640037535747011834ec2e0571d91799214e14bb2",
+    "bytes": 234,
+    "suffix": ".md"
+  },
+  "human_review_required": true
+}

@@ -1,0 +1,442 @@
+{
+  "artifact": {
+    "after_sha256": "0000879594caf9ca701834045e4003ba37e61ff14a482ef3617e26a94131120f",
+    "before_sha256": "403e09b6ce0a43648894665b84dcab855e37bb7069023affb5dcc60be3b1f135"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "0518c22a35df2b759ad91823b689fb16d1f0e3048f116dbc19e0018282cf86c3",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "markdown",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0002",
+            "column": 25,
+            "end": 25,
+            "end_column": 26,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "位置关系的完整讨论包含三类九种形态，但九种形态并不对应九套独立模型",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 24
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "不": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "不": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0002",
+                "column": 25,
+                "end": 25,
+                "end_column": 26,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "位置关系的完整讨论包含三类九种形态，但九种形态并不对应九套独立模型",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 24
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "98d3d2f746210b30b1573ce2a8556cd484267195e28fea6f2ac7f6fbbe0ca9be"
+    },
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "只": 1,
+          "可以": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0004",
+            "column": 52,
+            "end": 53,
+            "end_column": 54,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可以",
+            "sentence_context": "将类别 3 旋转后，它与类别 1 可以重合，定位方程也随之对应",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 51
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0007",
+            "column": 79,
+            "end": 79,
+            "end_column": 80,
+            "end_line": 1,
+            "line": 1,
+            "marker": "只",
+            "sentence_context": "求解阶段据此合并这两类，只对类别 1、类别 2 建模",
+            "sentence_id": "T0003",
+            "side": "after",
+            "start": 78
+          }
+        ],
+        "before": {
+          "仅": 2,
+          "可": 2
+        },
+        "before_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0001",
+            "column": 17,
+            "end": 17,
+            "end_column": 18,
+            "end_line": 1,
+            "line": 1,
+            "marker": "仅",
+            "sentence_context": "在针对以上三类九种形态的位置关系仅考虑分类讨论的类别全面性分析的完整性,但在求解过程中,发现类别1与类别3对应的位置关系在几何上具有对称性,可通过旋转重叠,则定位模型是一致可互通的,所以定位模型忽略类别3的分析,且在程序上为方便遍历,也忽略了类别3",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 16
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0004",
+            "column": 71,
+            "end": 71,
+            "end_column": 72,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可",
+            "sentence_context": "在针对以上三类九种形态的位置关系仅考虑分类讨论的类别全面性分析的完整性,但在求解过程中,发现类别1与类别3对应的位置关系在几何上具有对称性,可通过旋转重叠,则定位模型是一致可互通的,所以定位模型忽略类别3的分析,且在程序上为方便遍历,也忽略了类别3",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 70
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0005",
+            "column": 87,
+            "end": 87,
+            "end_column": 88,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可",
+            "sentence_context": "在针对以上三类九种形态的位置关系仅考虑分类讨论的类别全面性分析的完整性,但在求解过程中,发现类别1与类别3对应的位置关系在几何上具有对称性,可通过旋转重叠,则定位模型是一致可互通的,所以定位模型忽略类别3的分析,且在程序上为方便遍历,也忽略了类别3",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 86
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0009",
+            "column": 126,
+            "end": 126,
+            "end_column": 127,
+            "end_line": 1,
+            "line": 1,
+            "marker": "仅",
+            "sentence_context": "仅对类别1与类别2做定位模型的建立,共六个具体模型公式",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 125
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "只": 1,
+            "可以": 1
+          },
+          "removed": {
+            "仅": 2,
+            "可": 2
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "只": 1,
+              "可以": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0004",
+                "column": 52,
+                "end": 53,
+                "end_column": 54,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可以",
+                "sentence_context": "将类别 3 旋转后，它与类别 1 可以重合，定位方程也随之对应",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 51
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0007",
+                "column": 79,
+                "end": 79,
+                "end_column": 80,
+                "end_line": 1,
+                "line": 1,
+                "marker": "只",
+                "sentence_context": "求解阶段据此合并这两类，只对类别 1、类别 2 建模",
+                "sentence_id": "T0003",
+                "side": "after",
+                "start": 78
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0001",
+                "column": 17,
+                "end": 17,
+                "end_column": 18,
+                "end_line": 1,
+                "line": 1,
+                "marker": "仅",
+                "sentence_context": "在针对以上三类九种形态的位置关系仅考虑分类讨论的类别全面性分析的完整性,但在求解过程中,发现类别1与类别3对应的位置关系在几何上具有对称性,可通过旋转重叠,则定位模型是一致可互通的,所以定位模型忽略类别3的分析,且在程序上为方便遍历,也忽略了类别3",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 16
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0004",
+                "column": 71,
+                "end": 71,
+                "end_column": 72,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "在针对以上三类九种形态的位置关系仅考虑分类讨论的类别全面性分析的完整性,但在求解过程中,发现类别1与类别3对应的位置关系在几何上具有对称性,可通过旋转重叠,则定位模型是一致可互通的,所以定位模型忽略类别3的分析,且在程序上为方便遍历,也忽略了类别3",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 70
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0005",
+                "column": 87,
+                "end": 87,
+                "end_column": 88,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "在针对以上三类九种形态的位置关系仅考虑分类讨论的类别全面性分析的完整性,但在求解过程中,发现类别1与类别3对应的位置关系在几何上具有对称性,可通过旋转重叠,则定位模型是一致可互通的,所以定位模型忽略类别3的分析,且在程序上为方便遍历,也忽略了类别3",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 86
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0009",
+                "column": 126,
+                "end": 126,
+                "end_column": 127,
+                "end_line": 1,
+                "line": 1,
+                "marker": "仅",
+                "sentence_context": "仅对类别1与类别2做定位模型的建立,共六个具体模型公式",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 125
+              }
+            ],
+            "removed": {
+              "仅": 2,
+              "可": 2
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "cffd63b10a91c1bab7765ba62e83d7ac964141082a987bd4037da9e860d6e439"
+    },
+    {
+      "code": "SPEECH_ACT_REPORTING_OBSERVATION_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "发现": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "reporting_observation",
+            "claim_id": "C0003",
+            "column": 45,
+            "end": 46,
+            "end_column": 47,
+            "end_line": 1,
+            "line": 1,
+            "marker": "发现",
+            "sentence_context": "在针对以上三类九种形态的位置关系仅考虑分类讨论的类别全面性分析的完整性,但在求解过程中,发现类别1与类别3对应的位置关系在几何上具有对称性,可通过旋转重叠,则定位模型是一致可互通的,所以定位模型忽略类别3的分析,且在程序上为方便遍历,也忽略了类别3",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 44
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "发现": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "reporting_observation",
+                "claim_id": "C0003",
+                "column": 45,
+                "end": 46,
+                "end_column": 47,
+                "end_line": 1,
+                "line": 1,
+                "marker": "发现",
+                "sentence_context": "在针对以上三类九种形态的位置关系仅考虑分类讨论的类别全面性分析的完整性,但在求解过程中,发现类别1与类别3对应的位置关系在几何上具有对称性,可通过旋转重叠,则定位模型是一致可互通的,所以定位模型忽略类别3的分析,且在程序上为方便遍历,也忽略了类别3",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 44
+              }
+            ],
+            "removed": {
+              "发现": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'reporting_observation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "6ef2ee434045d097adcd0644e9ad6689768adcc213f14b2446a2e482eea38d15"
+    },
+    {
+      "code": "SPEECH_ACT_LOGICAL_RELATION_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "所以": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "logical_relation",
+            "claim_id": "C0006",
+            "column": 92,
+            "end": 93,
+            "end_column": 94,
+            "end_line": 1,
+            "line": 1,
+            "marker": "所以",
+            "sentence_context": "在针对以上三类九种形态的位置关系仅考虑分类讨论的类别全面性分析的完整性,但在求解过程中,发现类别1与类别3对应的位置关系在几何上具有对称性,可通过旋转重叠,则定位模型是一致可互通的,所以定位模型忽略类别3的分析,且在程序上为方便遍历,也忽略了类别3",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 91
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "所以": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0006",
+                "column": 92,
+                "end": 93,
+                "end_column": 94,
+                "end_line": 1,
+                "line": 1,
+                "marker": "所以",
+                "sentence_context": "在针对以上三类九种形态的位置关系仅考虑分类讨论的类别全面性分析的完整性,但在求解过程中,发现类别1与类别3对应的位置关系在几何上具有对称性,可通过旋转重叠,则定位模型是一致可互通的,所以定位模型忽略类别3的分析,且在程序上为方便遍历,也忽略了类别3",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 91
+              }
+            ],
+            "removed": {
+              "所以": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'logical_relation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "f8edd71f165699947dbca8dd34fc4bbee1039b699d41df6b54d09a3fda33ab97"
+    }
+  ]
+}

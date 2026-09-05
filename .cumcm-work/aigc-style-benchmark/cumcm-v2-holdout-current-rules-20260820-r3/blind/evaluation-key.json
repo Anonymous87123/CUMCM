@@ -1,0 +1,62 @@
+{
+  "schema": "aigc-blind-key/v1",
+  "seed": 20260820,
+  "dimensions": [
+    "naturalness",
+    "judgment_trajectory",
+    "specificity",
+    "content_density",
+    "semantic_fidelity"
+  ],
+  "pairs": [
+    {
+      "pair_id": "P0001",
+      "A": "a-reflection-boundary::source",
+      "B": "a-reflection-boundary::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0002",
+      "A": "a-reflection-boundary::humanize-academic-chinese::t2",
+      "B": "a-reflection-boundary::source"
+    },
+    {
+      "pair_id": "P0003",
+      "A": "a-reflection-boundary::source",
+      "B": "a-reflection-boundary::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0004",
+      "A": "b-resource-constraint::source",
+      "B": "b-resource-constraint::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0005",
+      "A": "b-resource-constraint::source",
+      "B": "b-resource-constraint::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0006",
+      "A": "b-resource-constraint::source",
+      "B": "b-resource-constraint::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0007",
+      "A": "c-model-comparison::humanize-academic-chinese::t1",
+      "B": "c-model-comparison::source"
+    },
+    {
+      "pair_id": "P0008",
+      "A": "c-model-comparison::source",
+      "B": "c-model-comparison::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0009",
+      "A": "c-model-comparison::humanize-academic-chinese::t3",
+      "B": "c-model-comparison::source"
+    }
+  ],
+  "packet_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-holdout-current-rules-20260820-r3\\blind\\evaluation-packet.json",
+  "packet_sha256": "e2884a868126ff4bc98d3c12a8c1639c37c3c3c3bcc26442129a656321bb89e3",
+  "source_pairs_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-holdout-current-rules-20260820-r3\\blind\\pairs.json",
+  "source_pairs_sha256": "a2247e0629e09644aab5feb6c89f59ba509194af61c6a0b8dccf322dc970feb9"
+}

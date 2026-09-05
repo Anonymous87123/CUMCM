@@ -1,0 +1,41 @@
+{
+  "schema": "aigc-adapter-run/v1",
+  "package": "humanize-academic-chinese",
+  "action": "verify-candidate",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-v3\\incoming-evidence\\b-strategy-stability-t3\\verify",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout\\sources\\b-strategy-stability.txt",
+    "sha256": "31dc3a6dc7f792084c86163f945f6e40c13ee60355d29a611ac5e26dbcce70c0",
+    "bytes": 571,
+    "suffix": ".txt"
+  },
+  "protected_inventory": {
+    "numbers": {
+      "1": 1,
+      "3": 1
+    },
+    "tex_commands": {},
+    "tex_keys": {},
+    "inline_math": {},
+    "dollar_display_math": {},
+    "display_math": {},
+    "math_environments": {},
+    "code_fences": {},
+    "urls": {}
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout\\humanize-runs-v1\\b-strategy-stability-t3\\hir1-z5vmpq_l\\artifacts\\after.md",
+    "sha256": "6a13e7f79ac967eb94ae37be2022fd5de7c858da945c9bd25b4af23467e29fba",
+    "bytes": 582,
+    "suffix": ".md"
+  },
+  "human_review_required": true
+}

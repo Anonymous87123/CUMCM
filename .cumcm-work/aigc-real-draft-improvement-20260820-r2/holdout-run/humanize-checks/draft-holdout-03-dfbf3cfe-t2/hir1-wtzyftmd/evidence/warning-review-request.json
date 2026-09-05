@@ -1,0 +1,189 @@
+{
+  "artifact": {
+    "after_sha256": "1a3f7a34b30cd6244c7d6ac420f357887c983c57a9e567c9f2abf3b9c974159f",
+    "before_sha256": "c7d31376076435d514212c45f2bbc7fd02f8d627b55597e84037b42263d84286"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "10296f2d23e5542e597f654f68f67ac35d29a607b2b8ba25212947b6b9ebab09",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "tex",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不": 1,
+          "不能": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0004",
+            "column": 76,
+            "end": 76,
+            "end_column": 77,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "按现有设定，模型稳健支持 和 ，还不足以给出湖北段增幅的精确解释",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 75
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0008",
+            "column": 140,
+            "end": 141,
+            "end_column": 142,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不能",
+            "sentence_context": "在数据补充后引入横向竞争和交叉摄食，不能只靠增加状态维度",
+            "sentence_id": "T0004",
+            "side": "after",
+            "start": 139
+          }
+        ],
+        "before": {
+          "不": 2
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0005",
+            "column": 82,
+            "end": 82,
+            "end_column": 83,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "按现有设定，模型能够稳健支持的是 和 ，还不足以精确解释湖北段增幅",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 81
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0009",
+            "column": 151,
+            "end": 151,
+            "end_column": 152,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "若要继续提高解释力，我们更关心的是补充标准化 CPUE 和连续河段监测，并在此基础上再引入横向竞争和交叉摄食，而不是只增加状态维度",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 150
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "不能": 1
+          },
+          "removed": {
+            "不": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "不能": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0004",
+                "column": 76,
+                "end": 76,
+                "end_column": 77,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "按现有设定，模型稳健支持 和 ，还不足以给出湖北段增幅的精确解释",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 75
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0008",
+                "column": 140,
+                "end": 141,
+                "end_column": 142,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不能",
+                "sentence_context": "在数据补充后引入横向竞争和交叉摄食，不能只靠增加状态维度",
+                "sentence_id": "T0004",
+                "side": "after",
+                "start": 139
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0005",
+                "column": 82,
+                "end": 82,
+                "end_column": 83,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "按现有设定，模型能够稳健支持的是 和 ，还不足以精确解释湖北段增幅",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 81
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0009",
+                "column": 151,
+                "end": 151,
+                "end_column": 152,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "若要继续提高解释力，我们更关心的是补充标准化 CPUE 和连续河段监测，并在此基础上再引入横向竞争和交叉摄食，而不是只增加状态维度",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 150
+              }
+            ],
+            "removed": {
+              "不": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "7aca8c528757262cd0004fd7ab402d574bd60167e14bdf413366798bc6ebd8d4"
+    }
+  ]
+}

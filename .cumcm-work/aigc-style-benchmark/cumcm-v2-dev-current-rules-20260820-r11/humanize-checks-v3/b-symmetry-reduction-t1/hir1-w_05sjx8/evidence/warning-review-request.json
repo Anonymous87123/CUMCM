@@ -1,0 +1,137 @@
+{
+  "artifact": {
+    "after_sha256": "dea957633179a2fde4f911cec7ed1cc0b84a3870ab7e136875c2cd0c874bd30d",
+    "before_sha256": "403e09b6ce0a43648894665b84dcab855e37bb7069023affb5dcc60be3b1f135"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "be8abc36901e7c703e0d7d53aa60b5e8c35b6c5104075b66007a1abf6b086625",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "markdown",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_REPORTING_OBSERVATION_CHANGED",
+      "details": {
+        "after": {
+          "发现": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "reporting_observation",
+            "claim_id": "C0002",
+            "column": 33,
+            "end": 34,
+            "end_column": 35,
+            "end_line": 1,
+            "line": 1,
+            "marker": "发现",
+            "sentence_context": "但在求解过程中发现，类别 1 与类别 3 在几何上具有对称性，可通过旋转重叠，则两类定位模型可相互对应",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 32
+          }
+        ],
+        "before": {
+          "发现": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "reporting_observation",
+            "claim_id": "C0003",
+            "column": 45,
+            "end": 46,
+            "end_column": 47,
+            "end_line": 1,
+            "line": 1,
+            "marker": "发现",
+            "sentence_context": "在针对以上三类九种形态的位置关系仅考虑分类讨论的类别全面性分析的完整性,但在求解过程中,发现类别1与类别3对应的位置关系在几何上具有对称性,可通过旋转重叠,则定位模型是一致可互通的,所以定位模型忽略类别3的分析,且在程序上为方便遍历,也忽略了类别3",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 44
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "发现": 1
+            },
+            "after_claim_id": "C0002",
+            "after_occurrences": [
+              {
+                "category": "reporting_observation",
+                "claim_id": "C0002",
+                "column": 33,
+                "end": 34,
+                "end_column": 35,
+                "end_line": 1,
+                "line": 1,
+                "marker": "发现",
+                "sentence_context": "但在求解过程中发现，类别 1 与类别 3 在几何上具有对称性，可通过旋转重叠，则两类定位模型可相互对应",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 32
+              }
+            ],
+            "before_claim_id": "C0002",
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "CLAIM"
+          },
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "reporting_observation",
+                "claim_id": "C0003",
+                "column": 45,
+                "end": 46,
+                "end_column": 47,
+                "end_line": 1,
+                "line": 1,
+                "marker": "发现",
+                "sentence_context": "在针对以上三类九种形态的位置关系仅考虑分类讨论的类别全面性分析的完整性,但在求解过程中,发现类别1与类别3对应的位置关系在几何上具有对称性,可通过旋转重叠,则定位模型是一致可互通的,所以定位模型忽略类别3的分析,且在程序上为方便遍历,也忽略了类别3",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 44
+              }
+            ],
+            "removed": {
+              "发现": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'reporting_observation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "59fad1802a7b84eaffe79d90a7771b2e32def8a99c8e8f814782a15934e28ddd"
+    }
+  ]
+}

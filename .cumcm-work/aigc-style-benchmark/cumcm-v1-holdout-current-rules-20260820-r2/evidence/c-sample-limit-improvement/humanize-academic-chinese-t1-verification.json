@@ -1,0 +1,40 @@
+{
+  "schema": "aigc-adapter-run/v1",
+  "package": "humanize-academic-chinese",
+  "action": "verify-candidate",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-current-rules-20260820-r2\\verify\\c-sample-limit-improvement-t1",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-current-rules-20260820-r2\\sources\\c-sample-limit-improvement.txt",
+    "sha256": "6ec19d62f65976965620066510b59ec60eb501dcced6b123c50d874ca550d00a",
+    "bytes": 338,
+    "suffix": ".txt"
+  },
+  "protected_inventory": {
+    "numbers": {
+      "1": 1
+    },
+    "tex_commands": {},
+    "tex_keys": {},
+    "inline_math": {},
+    "dollar_display_math": {},
+    "display_math": {},
+    "math_environments": {},
+    "code_fences": {},
+    "urls": {}
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-current-rules-20260820-r2\\candidates-safe\\c-sample-limit-improvement-t1.txt",
+    "sha256": "828bd5cb606790b1595621bca608ce895f58b5f50f21e3b7b3fe3cefde602417",
+    "bytes": 347,
+    "suffix": ".txt"
+  },
+  "human_review_required": true
+}

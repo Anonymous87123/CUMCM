@@ -1,0 +1,88 @@
+{
+  "artifact": {
+    "after_sha256": "05c2ee25ad4536cef0ca8ac3a37418e020095af0a00deeeb2a86210a18f9ba31",
+    "before_sha256": "880018cc7c7e31c82b00e627b33b61fe8595284e8b49db98eda9bfbc2ec6560e"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "77151917e1c8abae7e6f09e1d724ea9470fec8648b0d83dc039947a402e20977",
+  "chunk_binding_sha256": "ec4c90c2853df65a524b81549a6666699224cc173ce8d73698c108650a7a6cb4",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-769818cb13c6.diff",
+    "sha256": "c7b8ba2bf4bac407c65908d7819ab58c7b3a86e49598d80be0731a52f1b1d23a"
+  },
+  "evidence_sha256": "d439d9dc59ed231cc20a8d19fd2e8241cda601c4b627ac0bfbdf8cedfa4c698d",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "用四组终态直接区分通道、放流和污染作用，删去表格前后的口语化复述。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "用四组终态直接区分通道、放流和污染作用，删去表格前后的口语化复述。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "66283eeb7e7590ced8295fa91d2aaa4d7b74bf8b1a1f98ba986f9b95a2b61d98",
+        "start_line": 2
+      },
+      {
+        "end_line": 19,
+        "id": "S2",
+        "sha256": "066a6a2f4b41b563183a458a1dd8ed184a999e3347ab261fce0eb30dd671a105",
+        "start_line": 19
+      }
+    ],
+    "summary": "用四组终态直接区分通道、放流和污染作用，删去表格前后的口语化复述。",
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      },
+      {
+        "end_line": 19,
+        "operation": "REPLACE",
+        "start_line": 19
+      }
+    ],
+    "masked_after_sha256": "0d3a3f99b7c74615d32ab439d4ba7c77a69ada2274263ce09db71cf9f7fb8d9c",
+    "masked_before_sha256": "836e15021ee539908e7f0c02277ecd6fa8656cba62d1e45903bb893ba3894139",
+    "source_spans_covered": 2,
+    "source_spans_total": 2,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "73c4eba1be36f9dc393ce7b78b5c443de909869fd969cb119e58ff1adbd47527",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-769818cb13c6"
+}

@@ -1,0 +1,57 @@
+{
+  "schema": "aigc-blind-key/v1",
+  "seed": 20260817,
+  "dimensions": [
+    "naturalness",
+    "judgment_trajectory",
+    "specificity",
+    "content_density",
+    "semantic_fidelity"
+  ],
+  "pairs": [
+    {
+      "pair_id": "abstract-q1",
+      "A": "candidate",
+      "B": "source"
+    },
+    {
+      "pair_id": "abstract-q2",
+      "A": "source",
+      "B": "candidate"
+    },
+    {
+      "pair_id": "abstract-long-dynamics",
+      "A": "candidate",
+      "B": "source"
+    },
+    {
+      "pair_id": "analysis-data-scale",
+      "A": "candidate",
+      "B": "source"
+    },
+    {
+      "pair_id": "analysis-robustness-design",
+      "A": "candidate",
+      "B": "source"
+    },
+    {
+      "pair_id": "result-long-horizon-boundary",
+      "A": "candidate",
+      "B": "source"
+    },
+    {
+      "pair_id": "policy-pollution-invasion",
+      "A": "candidate",
+      "B": "source"
+    },
+    {
+      "pair_id": "limitation-extrapolation",
+      "A": "candidate",
+      "B": "source"
+    }
+  ],
+  "packet_path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\blind-run\\evaluation-packet.json",
+  "packet_sha256": "ef1cf41c053b5a376f3dc71fcdb92fa8e72484a94ba457a7435e128aba2ffca8",
+  "source_pairs_path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\blind-pairs-v4.json",
+  "source_pairs_sha256": "7f41726a68e4f67ba730aa6163eeb0f3896ca449c2e9a3f682fc9dffcbcc66cc"
+}

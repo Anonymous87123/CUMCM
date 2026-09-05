@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "9ae12364f598e42360d28d9e1680bd8fa3e39012d18043b6625cbbc90c146892",
+    "before_sha256": "9ae12364f598e42360d28d9e1680bd8fa3e39012d18043b6625cbbc90c146892"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "997623546d178bb156c39acd2535f09a997d8fabe6d68387e072ca00f8c1fea5",
+  "chunk_binding_sha256": "314b43eeb796cf9d3c766cf849865df83e1b5339f63b7e01c543c7f11e10db30",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-05e9265c162b.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "13f9a0245815cf92f437f67034ed217293d11e43f035ad7ef77558e1499b2df7",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 5,
+        "id": "S1",
+        "sha256": "e65961cd3752669d3d27b623cf55394504b159295e87bc9f1f6547c60e46376e",
+        "start_line": 1
+      }
+    ],
+    "reason": "问题三分析段落界定降维条件、控制参数和后期统计量职责，原有结构已经对应本问任务。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "e78c37f393efc7083d2451bdcd73d45bbd92284d51191993393ecfc6979aedb0",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-05e9265c162b"
+}

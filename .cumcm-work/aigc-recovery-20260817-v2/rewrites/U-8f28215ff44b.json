@@ -1,0 +1,70 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-8f28215ff44b",
+  "chunk_binding_sha256": "b1ff66066ab4b858be456f437ebc31cb348e96d03a7d9071970aa722e291791c",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "842ae235d7ee9818",
+    "prepare_integrity_sha256": "d29792bc3f5dc4de93f9af478012116f2e8efb1b3db0f52f6a68ea908266d04c",
+    "run_metadata_sha256": "3707a4069ea1f90054467e86965e07118cc2d6eb1b053b492b1a2336ba1fd561",
+    "policy_snapshot_sha256": "78c9d819ed643befe1459941693ca6ea078ca61644c28b531ba2fb612fd20234",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "unit_id": "U-8f28215ff44b",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 23598,
+      "end": 23977,
+      "start_line": 487,
+      "end_line": 491,
+      "source_span_sha256": "325d179538a5cd5758993f8428b06171fd5f1de025f26a5074432feb55b3a7aa",
+      "masked_text_sha256": "f6a296a2b1f4fd370530b52f5efd9b8cac07af0d16a438b06e476637107a9940",
+      "chunk_binding_sha256": "b1ff66066ab4b858be456f437ebc31cb348e96d03a7d9071970aa722e291791c"
+    },
+    "scene_route": {
+      "requested_scene": "MODELING",
+      "resolved_scene": "MODELING",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "1a681cd81848d7df05b196cc16d554db496a913c2e9fa9835eab54562068f518",
+      "routing_input_sha256": "ba6433df2c860f8c3d99b30d7c1427390c3adf9011fc6a6293cd0682a7eb2f5d"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-modeling",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "MODELING",
+      "profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "25588997dff558893d0e2aeb156c3402f4b8b5b71780418d06f22793d960cc12"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00657:37a48dfaaae7]]\n问题一里，四大家鱼恢复上去了，水草、浮游动物和底栖饵料却可能还在往下走；问题二里，江豚与长江鲟对通道和放流的响应又不一样。顺着这些现象看，治理重点不能只停留在捕捞约束本身。后续监测最好把四大家鱼总量、底层资源指标和食压指数放进同一张报表里看；鱼道修复、产卵场连通和放流节律也不宜照一套模板处理。\n\n更迫切的，其实是把污染治理和入侵控制往前提。问题五已经说明，污染情景下某些过程指标会短时抬升，可我们真正关心的珍稀物种终态和综合得分却在下滑，所以局部过程变好并不等于系统整体好转。对入侵物种，我们建议把鄱阳湖等支流湖泊视作高风险前沿，优先布设早期监测、拦截和清除机制，避免其在禁渔背景下借着食物网空档继续扩散。说到底，禁渔只是把恢复的门推开了一点；后面的水质治理、通道修复、放流优化和入侵防控如果接不上，这部分收益还是留不住。\n\n",
+  "rewrite_intent": {
+    "summary": "TODO: edit masked_text, then replace this placeholder and populate operations, source_spans, and target_signals before finalize",
+    "operations": [],
+    "source_spans": [],
+    "target_signals": []
+  }
+}

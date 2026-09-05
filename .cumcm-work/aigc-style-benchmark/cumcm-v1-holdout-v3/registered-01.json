@@ -1,0 +1,126 @@
+{
+  "schema": "aigc-style-benchmark-manifest/v1",
+  "state": "CANDIDATES_READY",
+  "suite": {
+    "id": "cumcm-v1-holdout",
+    "version": "2026-08-15",
+    "split": "holdout",
+    "required_trials": 3,
+    "providers": [
+      "humanize-academic-chinese"
+    ],
+    "holdout_policy": {
+      "curator": "CUMCM team maintainer",
+      "release_id": "cumcm-style-stack-v1"
+    },
+    "definition": {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\benchmarks\\cumcm-v1-holdout.json",
+      "sha256": "4ca8ac76695c9613352c5992c9c1d851a350b34ab284e79ac28b2b592ba704fb",
+      "bytes": 2178
+    }
+  },
+  "run_root": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-v3",
+  "cases": [
+    {
+      "id": "a-search-error-boundary",
+      "scene": {
+        "document_type": "mcm",
+        "document_format": "plain",
+        "scope": "local"
+      },
+      "challenge_tags": [
+        "public-judgment",
+        "math-protection",
+        "boundary-conditions",
+        "semantic-fidelity"
+      ],
+      "source": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-v3\\sources\\a-search-error-boundary.txt",
+        "sha256": "85b65409e38c967aad05d65557921f28ae47bd6f8f4d98d49c58f607994a12e6",
+        "bytes": 385
+      }
+    },
+    {
+      "id": "b-strategy-stability",
+      "scene": {
+        "document_type": "mcm",
+        "document_format": "plain",
+        "scope": "local"
+      },
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "boundary-conditions",
+        "semantic-fidelity"
+      ],
+      "source": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-v3\\sources\\b-strategy-stability.txt",
+        "sha256": "31dc3a6dc7f792084c86163f945f6e40c13ee60355d29a611ac5e26dbcce70c0",
+        "bytes": 571
+      }
+    },
+    {
+      "id": "c-sample-limit-improvement",
+      "scene": {
+        "document_type": "mcm",
+        "document_format": "plain",
+        "scope": "local"
+      },
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "causal-calibration",
+        "semantic-fidelity"
+      ],
+      "source": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-v3\\sources\\c-sample-limit-improvement.txt",
+        "sha256": "6ec19d62f65976965620066510b59ec60eb501dcced6b123c50d874ca550d00a",
+        "bytes": 338
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "id": "a-search-error-boundary::humanize-academic-chinese::t1",
+      "case_id": "a-search-error-boundary",
+      "provider": "humanize-academic-chinese",
+      "trial": 1,
+      "candidate": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-v3\\candidates\\a-search-error-boundary\\humanize-academic-chinese-t1.md",
+        "sha256": "c6b551af5eb554c5afa6113b7abaeb9a8b9d85d577c0a64740443e03725154e6",
+        "bytes": 389
+      },
+      "verification": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-v3\\evidence\\a-search-error-boundary\\humanize-academic-chinese-t1-verification.json",
+        "sha256": "d33eabc5cdc3fdfefbd1ad1209ca56290fdb1d43e23823e0ef1f606e0efa3648",
+        "bytes": 1404
+      },
+      "generation": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-v3\\evidence\\a-search-error-boundary\\humanize-academic-chinese-t1-generation.json",
+        "sha256": "fafadb45cc371b1ca1bc3a8b73298d6b946ec531e1b5ee6cf110a216bf7703e2",
+        "bytes": 1286,
+        "run_id": "hir1-gnsdg9mh"
+      }
+    }
+  ],
+  "blind": null,
+  "score": null,
+  "parent_manifest": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-v3\\benchmark-source-frozen.json",
+    "sha256": "593556086ed78f24037c62dce79fbab7378d0001031c5dec8dea614934074157",
+    "bytes": 2796
+  },
+  "history": [
+    {
+      "event": "SOURCE_FROZEN"
+    },
+    {
+      "event": "REGISTER:a-search-error-boundary::humanize-academic-chinese::t1",
+      "predecessor_sha256": "593556086ed78f24037c62dce79fbab7378d0001031c5dec8dea614934074157"
+    }
+  ],
+  "claims": {
+    "authorship_or_detector_verdict": false,
+    "automatic_winner_selection": false
+  }
+}

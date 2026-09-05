@@ -1,0 +1,127 @@
+{
+  "artifact": {
+    "after_sha256": "6dee42d69cd189de4de18a050b79c3adbee707c0a0fb28b71b568825f9371f7b",
+    "before_sha256": "bf609c6a55683d5e20aa2e6e40c164d514c252a75f441bc90b6487c571ed8220"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "a760cd5efa1a77cd7f52c127afce14384894d083835a276ba7347869b5906de9",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "tex",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不": 2
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0002",
+            "column": 21,
+            "end": 21,
+            "end_column": 22,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "两项指标都随禁渔向恢复方向变化，但增幅并不一致",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 20
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0003",
+            "column": 31,
+            "end": 31,
+            "end_column": 32,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "尽管统计口径不同，二者均证实了资源回升",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 30
+          }
+        ],
+        "before": {
+          "不": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0003",
+            "column": 29,
+            "end": 29,
+            "end_column": 30,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "尽管统计口径不同，二者均证实了禁渔后的资源回升趋势：四大家鱼总生物量与1.8倍的标定值几乎完全吻合，表明单区模型能够准确刻画全流域平均恢复水平",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 28
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "不": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "不": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0002",
+                "column": 21,
+                "end": 21,
+                "end_column": 22,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "两项指标都随禁渔向恢复方向变化，但增幅并不一致",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 20
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "01043bb268603a8ed9629b123a7bf112fb7abaed092f01db8e81214e2003c575"
+    }
+  ]
+}

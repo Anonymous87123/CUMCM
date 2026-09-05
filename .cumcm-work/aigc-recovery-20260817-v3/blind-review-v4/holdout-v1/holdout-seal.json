@@ -1,0 +1,82 @@
+{
+  "schema": "aigc-tex-blind-holdout-seal/v1",
+  "state": "SEALED_UNSCORED",
+  "release_id": "aigc-mcm-v5-20260818",
+  "sealed_at_utc": "2026-08-18T02:11:41+00:00",
+  "pair_count": 12,
+  "sampling": {
+    "method": "seeded-section-round-robin/v1",
+    "seed": 20260818,
+    "eligible": 40,
+    "selected": 12,
+    "quality_labels_used": false,
+    "exclude_spec": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\tex-pair-spec.json",
+      "sha256": "cc29ae73d56fc852d3854b33d044e24d74127fa2806042fd94011cfec2257346"
+    }
+  },
+  "artifacts": {
+    "spec": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\holdout-v1\\holdout-spec.json",
+      "bytes": 5233,
+      "sha256": "680ec7e0380ca4e146719258bb61b50bac7ee30025ee388f2b374a5c5cab51bf",
+      "schema": "aigc-tex-blind-pair-spec/v1"
+    },
+    "pairs": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\holdout-v1\\holdout-pairs.json",
+      "bytes": 18282,
+      "sha256": "481fef7b11698b032d5d919cbccf5b1b16dc01ff70f5046be0f4767231a28a02",
+      "schema": "aigc-blind-pairs/v1"
+    },
+    "key": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\holdout-v1\\blind-run\\evaluation-key.json",
+      "bytes": 1882,
+      "sha256": "0fcc9e1b6356b9d42fbce9003f8a9a082c78f39c914b7bdb0f67ea0171508480",
+      "schema": "aigc-blind-key/v1"
+    },
+    "packet": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\holdout-v1\\blind-run\\evaluation-packet.json",
+      "bytes": 13290,
+      "sha256": "5f05b93059ca3e8920adb895452428758342fc1f0a2756cb28e323f5657b1285",
+      "schema": "aigc-blind-packet/v1"
+    },
+    "ratings_template": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\holdout-v1\\blind-run\\ratings-template.csv",
+      "bytes": 458,
+      "sha256": "73e39b58562993e116e5f3290943e6e4ec3b9d3e5820d1343f03bbf936ae3f5c"
+    }
+  },
+  "rule_snapshot": [
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\SKILL.md",
+      "bytes": 33279,
+      "sha256": "2a14463c04b4061bd33855c871baf879e6552010b305b7988fdf171b4f2b4867"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\SKILL.md",
+      "bytes": 26094,
+      "sha256": "481dd01e4074e7e1ab215668b722edec18c320eddb37fc7bc9d3c44be787aa91"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_academic_candidate.py",
+      "bytes": 22897,
+      "sha256": "8cf4c40735fcf7d53bf7e1805cc0bee26b07b27e9fcf7aedeb86397cddada8cd"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_style_rhythm.py",
+      "bytes": 8502,
+      "sha256": "da87dc3a15c7dcfcbe49b25fdf8e3bcb1557b5c71238ed78265b4033e60e9a0e"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_rewrite_contract.py",
+      "bytes": 15875,
+      "sha256": "8fdc521622261799bf0379521e2ee6a26dce23481978eade8d23996ebe9ced2f"
+    }
+  ],
+  "release_requirements": {
+    "minimum_human_raters_per_pair": 2,
+    "model_ratings_are_diagnostic_only": true,
+    "mapping_key_visibility": "private-until-ratings-frozen",
+    "current_rules_must_not_be_tuned_from_holdout_results": true
+  }
+}

@@ -1,0 +1,19 @@
+{
+  "schema": "aigc-candidate-task/v1",
+  "provider": "humanize-academic-chinese",
+  "source_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+  "source_snapshot": "F:\\CUMCM\\.cumcm-work\\aigc-pipeline-audit-20260817\\branches\\H1\\prepare\\source.snapshot.tex",
+  "protected_proxy": "F:\\CUMCM\\.cumcm-work\\aigc-pipeline-audit-20260817\\branches\\H1\\prepare\\source.protected-proxy.txt",
+  "protected_spans": "F:\\CUMCM\\.cumcm-work\\aigc-pipeline-audit-20260817\\branches\\H1\\prepare\\protected-spans.json",
+  "native_command": "read SKILL.md, scan source, produce one protected after-file, then run run_humanize_inline.py run/emit/attest",
+  "rules": [
+    "Run the package's complete native workflow, not a borrowed phrase list.",
+    "Generate one candidate directly from this frozen source branch.",
+    "Do not resolve or rewrite AIGC_LOCK tokens.",
+    "Do not add facts, citations, results, author experiences, or causal claims.",
+    "Restore protected spans byte-for-byte before candidate verification.",
+    "Do not overwrite the source snapshot."
+  ],
+  "required_next_action": "verify-candidate",
+  "human_review_required": true
+}

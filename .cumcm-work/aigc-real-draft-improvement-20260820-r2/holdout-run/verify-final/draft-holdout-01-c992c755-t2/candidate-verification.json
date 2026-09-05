@@ -1,0 +1,57 @@
+{
+  "schema": "aigc-adapter-run/v1",
+  "package": "humanize-academic-chinese",
+  "action": "verify-candidate",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r2\\holdout-run\\verify-final\\draft-holdout-01-c992c755-t2",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r2\\holdout-run\\sources\\draft-holdout-01-c992c755.tex",
+    "sha256": "3c0394d71f9979aab87d6573a44fb2bbf31ea0aa581f3286ffc639b8740420e3",
+    "bytes": 473,
+    "suffix": ".tex"
+  },
+  "protected_inventory": {
+    "numbers": {
+      "0.155": 1,
+      "0.423": 1,
+      "0.662": 1,
+      "100": 1,
+      "2000": 1
+    },
+    "tex_commands": {},
+    "tex_keys": {},
+    "inline_math": {},
+    "dollar_display_math": {},
+    "display_math": {},
+    "math_environments": {},
+    "code_fences": {},
+    "urls": {}
+  },
+  "tex_semantic_contract": {
+    "status": "pass",
+    "before": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r2\\holdout-run\\sources\\draft-holdout-01-c992c755.tex",
+    "after": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r2\\holdout-run\\authoring\\draft-holdout-01-c992c755-t2.tex",
+    "scene": "GENERAL",
+    "errors": 0,
+    "warnings": 0,
+    "findings": [],
+    "number_diff": {
+      "removed": [],
+      "introduced": []
+    }
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r2\\holdout-run\\authoring\\draft-holdout-01-c992c755-t2.tex",
+    "sha256": "879fbf9dba0c58dd1fe53cc3ebe3f185dd765aeb31be734729e8e92a0e0b673d",
+    "bytes": 436,
+    "suffix": ".tex"
+  },
+  "human_review_required": true
+}

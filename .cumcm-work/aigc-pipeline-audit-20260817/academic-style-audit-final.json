@@ -1,0 +1,547 @@
+{
+  "schema": "aigc-academic-candidate-audit/v1",
+  "status": "fail",
+  "scope": "mechanical academic-style release gate; not authorship detection or final naturalness clearance",
+  "source": {
+    "path": "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main.tex",
+    "sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+    "tree_files": 1,
+    "tree_sha256": "49d9f41f4fcc7bff1657b26cedcfd3b7b8158b245a5095f7ebaab38b8497978d"
+  },
+  "candidate": {
+    "path": "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main_aigc_candidate.tex",
+    "sha256": "14dab4cbd902ad43275689e295cebca4fe2ddc47ca5702780f3b330121363ab4",
+    "tree_files": 1,
+    "tree_sha256": "da43484d4bb8df92b44da852fa875ad76b8c725dcc8d99287f47919b7836002d"
+  },
+  "decisions": {
+    "path": null,
+    "sha256": null
+  },
+  "dependencies": [
+    {
+      "role": "humanize-lexical-scanner",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\scripts\\scan_humanize_chinese.py",
+      "sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "bytes": 87413
+    },
+    {
+      "role": "humanize-lexical-signals",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\lexical-signals.json",
+      "sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "bytes": 5001788
+    },
+    {
+      "role": "protected-rewrite-contract",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_rewrite_contract.py",
+      "sha256": "72d897f7623ec2c34d62eaeedc1fe2f63d1272aecf86ea8f92614c9cf859cf33",
+      "bytes": 7729
+    },
+    {
+      "role": "section-voice-audit",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_voice_mode.py",
+      "sha256": "d925c441a3754e1d884e8020ddb6e0b1c23fe7339159773a06df166e8cb45daa",
+      "bytes": 11395
+    },
+    {
+      "role": "paragraph-rhythm-audit",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_style_rhythm.py",
+      "sha256": "da87dc3a15c7dcfcbe49b25fdf8e3bcb1557b5c71238ed78265b4033e60e9a0e",
+      "bytes": 8502
+    },
+    {
+      "role": "relative-style-comparison",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\compare_style_revision.py",
+      "sha256": "f8a40d11bcf5cb134f2293ca2709b94b90ef8474e976ac655f0feecac98b2db3",
+      "bytes": 5114
+    }
+  ],
+  "gates": [
+    {
+      "id": "humanize-lexical",
+      "required": true,
+      "status": "review",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\scripts\\scan_humanize_chinese.py",
+          "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main_aigc_candidate.tex",
+          "--scene",
+          "MODELING",
+          "--format",
+          "json"
+        ],
+        "returncode": 0,
+        "stderr": ""
+      },
+      "coverage": {
+        "status": "PASS",
+        "requested_count": 1,
+        "scanned_count": 1,
+        "skipped_count": 0,
+        "requested_files": [
+          "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main_aigc_candidate.tex"
+        ],
+        "scanned_files": [
+          "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main_aigc_candidate.tex"
+        ],
+        "skipped_files": []
+      },
+      "actionable_findings": 24,
+      "kept_by_position_bound_decision": 0,
+      "unresolved_findings": 24,
+      "signal_counts": {
+        "LEX-CONCLUDE-01": 1,
+        "LEX-STRICT-CORPUS-AUDIT-01": 6,
+        "LEX-STRICT-CORPUS-CERTAINTY-01": 1,
+        "LEX-STRICT-CORPUS-OUTLOOK-01": 4,
+        "LEX-STRICT-CORPUS-PROCESS-01": 9,
+        "LEX-STRICT-CORPUS-SCOPE-01": 1,
+        "LEX-STRICT-CORPUS-SELFPROOF-01": 1,
+        "LEX-STRICT-CORPUS-TRANSITION-01": 1
+      },
+      "unresolved": [
+        {
+          "signal_id": "LEX-STRICT-CORPUS-PROCESS-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 22,
+          "column": 74,
+          "matched": "先看",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "把过程播报改成直接承载对象、动作或结果的正文；学术正文不得保留助手工作台旁白。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-PROCESS-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 26,
+          "column": 30,
+          "matched": "先把",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "把过程播报改成直接承载对象、动作或结果的正文；学术正文不得保留助手工作台旁白。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-PROCESS-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 42,
+          "column": 10,
+          "matched": "先看",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "把过程播报改成直接承载对象、动作或结果的正文；学术正文不得保留助手工作台旁白。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-AUDIT-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 57,
+          "column": 4,
+          "matched": "最容易",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "正文若不是在讨论审计对象本身，应将治理状态词改回具体事实、检查动作或证据关系。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-OUTLOOK-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 59,
+          "column": 31,
+          "matched": "适合做",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "没有材料授权的建议和展望直接删除；真实后续工作必须绑定 supplied content。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-AUDIT-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 62,
+          "column": 8,
+          "matched": "不能直接",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "正文若不是在讨论审计对象本身，应将治理状态词改回具体事实、检查动作或证据关系。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-PROCESS-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 70,
+          "column": 88,
+          "matched": "再把",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "把过程播报改成直接承载对象、动作或结果的正文；学术正文不得保留助手工作台旁白。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-TRANSITION-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 178,
+          "column": 24,
+          "matched": "不能同时",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "删除可由段序和因果关系自行显现的路标；真实推导连接词需要位置级 KEEP 理由。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-PROCESS-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 200,
+          "column": 10,
+          "matched": "先看",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "把过程播报改成直接承载对象、动作或结果的正文；学术正文不得保留助手工作台旁白。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-OUTLOOK-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 202,
+          "column": 172,
+          "matched": "不能直接写",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "没有材料授权的建议和展望直接删除；真实后续工作必须绑定 supplied content。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-PROCESS-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 244,
+          "column": 235,
+          "matched": "说明当前",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "把过程播报改成直接承载对象、动作或结果的正文；学术正文不得保留助手工作台旁白。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-CERTAINTY-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 269,
+          "column": 81,
+          "matched": "更强",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "删除无证据的确定性包装或叠加缓和词，保持原文的主张力度和认识论边界。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-AUDIT-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 269,
+          "column": 93,
+          "matched": "应直接",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "正文若不是在讨论审计对象本身，应将治理状态词改回具体事实、检查动作或证据关系。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-SELFPROOF-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 289,
+          "column": 93,
+          "matched": "只能作",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "删除自动贡献、意义和支撑声明，改为问题、方法、观察或限制本身。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-AUDIT-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 312,
+          "column": 98,
+          "matched": "不能据此",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "正文若不是在讨论审计对象本身，应将治理状态词改回具体事实、检查动作或证据关系。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-PROCESS-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 426,
+          "column": 142,
+          "matched": "再把",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "把过程播报改成直接承载对象、动作或结果的正文；学术正文不得保留助手工作台旁白。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-AUDIT-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 435,
+          "column": 188,
+          "matched": "不能写成",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "正文若不是在讨论审计对象本身，应将治理状态词改回具体事实、检查动作或证据关系。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-OUTLOOK-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 480,
+          "column": 10,
+          "matched": "治理建议",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "没有材料授权的建议和展望直接删除；真实后续工作必须绑定 supplied content。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-PROCESS-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 481,
+          "column": 111,
+          "matched": "继续用",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "把过程播报改成直接承载对象、动作或结果的正文；学术正文不得保留助手工作台旁白。"
+        },
+        {
+          "signal_id": "LEX-CONCLUDE-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 488,
+          "column": 160,
+          "matched": "由此可见",
+          "severity": "medium",
+          "action": "REVIEW",
+          "rationale": "这些词可用于真正的总括，但不应成为每节、每题和每段的自动封口。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-PROCESS-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 493,
+          "column": 242,
+          "matched": "继续加",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "把过程播报改成直接承载对象、动作或结果的正文；学术正文不得保留助手工作台旁白。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-OUTLOOK-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 502,
+          "column": 92,
+          "matched": "直接改",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "没有材料授权的建议和展望直接删除；真实后续工作必须绑定 supplied content。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-SCOPE-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 505,
+          "column": 115,
+          "matched": "必须保留",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "减少连续的权限、范围和强制限定播报；保留真实边界时必须绑定具体对象和位置。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-AUDIT-01",
+          "relative_path": "main_aigc_candidate.tex",
+          "line": 507,
+          "column": 69,
+          "matched": "再回到",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "正文若不是在讨论审计对象本身，应将治理状态词改回具体事实、检查动作或证据关系。"
+        }
+      ],
+      "decision_errors": [],
+      "unused_decisions": []
+    },
+    {
+      "id": "protected-rewrite-contract",
+      "required": true,
+      "status": "fail",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_rewrite_contract.py",
+          "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main.tex",
+          "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main_aigc_candidate.tex",
+          "--format",
+          "json"
+        ],
+        "returncode": 1,
+        "stderr": ""
+      },
+      "errors": 6,
+      "warnings": 3,
+      "findings": [
+        {
+          "severity": "error",
+          "code": "MATH_CHANGED",
+          "before_count": 331,
+          "after_count": 305
+        },
+        {
+          "severity": "error",
+          "code": "REFERENCE_CHANGED",
+          "before_count": 38,
+          "after_count": 38
+        },
+        {
+          "severity": "error",
+          "code": "TEX_COMMAND_CHANGED",
+          "before_count": 668,
+          "after_count": 643
+        },
+        {
+          "severity": "error",
+          "code": "NUMBER_CHANGED",
+          "before_count": 578,
+          "after_count": 557
+        },
+        {
+          "severity": "error",
+          "code": "UNIT_CHANGED",
+          "before_count": 124,
+          "after_count": 116
+        },
+        {
+          "severity": "error",
+          "code": "CONSTRAINT_DIRECTION_CHANGED",
+          "before_count": 6,
+          "after_count": 9
+        },
+        {
+          "severity": "warning",
+          "code": "NEGATION_CHANGED",
+          "before_count": 130,
+          "after_count": 139
+        },
+        {
+          "severity": "warning",
+          "code": "CAUSAL_DIRECTION_MARKER_CHANGED",
+          "before_count": 4,
+          "after_count": 1
+        },
+        {
+          "severity": "warning",
+          "code": "CLAIM_STRENGTH_CHANGED",
+          "before_count": 41,
+          "after_count": 25
+        }
+      ],
+      "number_diff": {
+        "removed": [
+          "-3.4",
+          "-3.4",
+          "-3.40",
+          "-4.8",
+          "0",
+          "0",
+          "0",
+          "0",
+          "0.15",
+          "1",
+          "1",
+          "1",
+          "1.3",
+          "100",
+          "100",
+          "120",
+          "120",
+          "2",
+          "2.2",
+          "2.7"
+        ],
+        "introduced": [
+          "0.204",
+          "1.795",
+          "1.805",
+          "1.838",
+          "15",
+          "3.4",
+          "3.4",
+          "4.8",
+          "4.800",
+          "5",
+          "7",
+          "75",
+          "8"
+        ]
+      }
+    },
+    {
+      "id": "section-voice",
+      "required": true,
+      "status": "pass",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_voice_mode.py",
+          "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\aigc-academic-candidate-ehjm1364\\candidate-combined.tex",
+          "--format",
+          "json"
+        ],
+        "returncode": 0,
+        "stderr": ""
+      },
+      "summary": {
+        "segments": 37,
+        "modes": {
+          "prose": 37,
+          "evidence": 0,
+          "operator": 0
+        },
+        "findings": 0
+      },
+      "findings": []
+    },
+    {
+      "id": "paragraph-rhythm",
+      "required": true,
+      "status": "pass",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_style_rhythm.py",
+          "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\aigc-academic-candidate-ehjm1364\\candidate-combined.tex",
+          "--mode",
+          "auto",
+          "--format",
+          "json"
+        ],
+        "returncode": 0,
+        "stderr": ""
+      },
+      "summary": {
+        "segments_total": 37,
+        "segments_analyzed": 37,
+        "paragraphs_analyzed": 62,
+        "findings": 0
+      },
+      "findings": []
+    },
+    {
+      "id": "relative-style-comparison",
+      "required": false,
+      "status": "improved",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\compare_style_revision.py",
+          "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\aigc-academic-candidate-ehjm1364\\source-combined.tex",
+          "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\aigc-academic-candidate-ehjm1364\\candidate-combined.tex",
+          "--format",
+          "json"
+        ],
+        "returncode": 0,
+        "stderr": ""
+      },
+      "same_bytes": false,
+      "improvements": [
+        {
+          "metric": "rhythm_findings",
+          "source": 1,
+          "candidate": 0,
+          "delta": -1
+        }
+      ],
+      "regressions": []
+    }
+  ],
+  "summary": {
+    "required": 4,
+    "passed": 2,
+    "review": 1,
+    "failed": 1
+  }
+}

@@ -1,0 +1,37 @@
+\subsection{模型建立}
+问题三用Hastings-Powell三级食物链保留底层资源、中层消费者和顶层捕食者之间的反馈，在同一参数轴上比较“资源--消费者--捕食者”反馈下的轨道类型\cite{hp1991}：
+\begin{equation}
+\frac{\mathrm{d}X_1}{\mathrm{d}t}
+=rX_1\left(1-\frac{X_1}{K}\right)-\frac{a_1X_1X_2}{b_1+X_1},
+\end{equation}
+\begin{equation}
+\frac{\mathrm{d}X_2}{\mathrm{d}t}
+=\frac{a_1X_1X_2}{b_1+X_1}-\frac{a_2X_2X_3}{b_2+X_2}-d_1X_2,
+\end{equation}
+\begin{equation}
+\frac{\mathrm{d}X_3}{\mathrm{d}t}
+=\frac{a_2X_2X_3}{b_2+X_2}-d_2X_3.
+\end{equation}
+其中 $K$ 代表基础食物链有效承载力，可汇总营养输入、水质改善和污染冲击对基础食物链的作用。物种映射上，$X_1$ 对应底层资源层（问题一中 $R_j$ 的聚合），$X_2$ 对应中层消费者（四大家鱼功能群），$X_3$ 对应顶层捕食者（江豚等）。这里仅沿用营养级对应关系，用来解释三级食物链的生态位；问题一的参数数值不移入本模型。
+
+模型参数取值如表 \ref{tab:q3_hp_params} 所示，其中 $a_1,b_1,d_1$ 和 $a_2,b_2,d_2$ 分别控制中层和顶层的摄食与损失，$r$ 固定为 1，$K$ 作为扫描控制参数。
+\begin{table}[htbp]
+\centering
+\caption{问题三的 Hastings-Powell 模型参数取值}
+\label{tab:q3_hp_params}
+\begin{tabularx}{0.85\textwidth}{>{\raggedright\arraybackslash}p{1.5cm} >{\centering\arraybackslash}p{1.5cm} X}
+\toprule
+参数 & 取值 & 说明 \\
+\midrule
+$r$ & 1.0 & 底层资源内禀增长率，固定为归一化基准 \\
+$a_1$ & 5.0 & 中层对底层的摄食率，取自 Hastings \& Powell (1991) 默认值\cite{hp1991} \\
+$b_1$ & 1.0 & 中层摄食半饱和常数 \\
+$a_2$ & 0.1 & 顶层对中层的摄食率 \\
+$b_2$ & 2.0 & 顶层摄食半饱和常数 \\
+$d_1$ & 0.4 & 中层自然死亡率 \\
+$d_2$ & 0.01 & 顶层自然死亡率 \\
+$K$ & 扫描 & 承载力控制参数，扫描范围 $[1.4,4.8]$ \\
+\bottomrule
+\end{tabularx}
+\end{table}
+

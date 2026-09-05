@@ -1,0 +1,63 @@
+{
+  "arguments": {
+    "document_format": "markdown",
+    "fragment_mode": false,
+    "keep_reasons": {},
+    "mode": "REWRITE",
+    "output_format": "json",
+    "protected_terms": [],
+    "report_scope": {
+      "provided": false
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false,
+    "template_field_edit_scope": {
+      "provided": false
+    },
+    "warning_resolutions": {},
+    "warning_review_request_sha256": ""
+  },
+  "expected": {
+    "delivery_gate_status": "REVIEW",
+    "exit_code": 2,
+    "paired_quality_review_request_sha256": "c9c9e8d788a65387c30034cfb646d6bc15d73aa1498e8cdb128ff8088411c9b9"
+  },
+  "inputs": {
+    "after": {
+      "archive_path": "inputs/after.bin",
+      "original_suffix": ".md",
+      "sha256": "c37224a8157a2644639cbd0ccd5609452b8e28166906ed7fefa3c6798f217b02",
+      "size": 355
+    },
+    "before": {
+      "archive_path": "inputs/before.bin",
+      "original_suffix": ".md",
+      "sha256": "874bc69edc4622b1d4343c5c304fc0c13721af04d060139142bc1ad73e9660f5",
+      "size": 361
+    }
+  },
+  "invocation_sha256": "f2d486df3d90b3a6e9c0b4aae38815b0937bc753b643fd9349bb71fe481a86c0",
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "privacy": {
+    "contains_unredacted_proposal_text": false,
+    "reviewer_identifier_collected": false,
+    "source_locator_archived": false,
+    "stable_reviewer_pseudonym_archived": false
+  },
+  "reexecution": {
+    "reasons": [],
+    "status": "SUPPORTED"
+  },
+  "run_id": "hvr4-f2d486df3d90b3a6e9c0b4aae38815b0937bc753b643fd9349bb71fe481a86c0",
+  "schema": "humanize-validation-invocation/v4",
+  "validator_entrypoint": "scripts/validate_humanize_output.py"
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "aigc-blind-key/v1",
+  "seed": 20260820,
+  "dimensions": [
+    "naturalness",
+    "judgment_trajectory",
+    "specificity",
+    "content_density",
+    "semantic_fidelity"
+  ],
+  "pairs": [
+    {
+      "pair_id": "P0001",
+      "A": "a-shadow-intersection::source",
+      "B": "a-shadow-intersection::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0002",
+      "A": "a-shadow-intersection::humanize-academic-chinese::t2",
+      "B": "a-shadow-intersection::source"
+    },
+    {
+      "pair_id": "P0003",
+      "A": "a-shadow-intersection::source",
+      "B": "a-shadow-intersection::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0004",
+      "A": "b-symmetry-reduction::source",
+      "B": "b-symmetry-reduction::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0005",
+      "A": "b-symmetry-reduction::source",
+      "B": "b-symmetry-reduction::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0006",
+      "A": "b-symmetry-reduction::source",
+      "B": "b-symmetry-reduction::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0007",
+      "A": "c-classifier-validation::humanize-academic-chinese::t1",
+      "B": "c-classifier-validation::source"
+    },
+    {
+      "pair_id": "P0008",
+      "A": "c-classifier-validation::source",
+      "B": "c-classifier-validation::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0009",
+      "A": "c-classifier-validation::humanize-academic-chinese::t3",
+      "B": "c-classifier-validation::source"
+    }
+  ],
+  "packet_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r4\\blind\\evaluation-packet.json",
+  "packet_sha256": "88fe73c638886dc2da5bdc5465393aa891ad3c6a814f2805fea5b0b5281eae4c",
+  "source_pairs_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r4\\blind\\pairs.json",
+  "source_pairs_sha256": "5828d83cea482a7cd0c1d22ebcef81c930afcb5c2ca62453b0c6fa7f49ef9dd9"
+}

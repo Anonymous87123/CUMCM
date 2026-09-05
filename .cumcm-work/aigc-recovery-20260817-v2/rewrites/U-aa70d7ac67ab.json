@@ -1,0 +1,70 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-aa70d7ac67ab",
+  "chunk_binding_sha256": "730055177f2bbdf87d4709579ce41054fe32feb9bef5e66e998b43099c4b6d91",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "842ae235d7ee9818",
+    "prepare_integrity_sha256": "d29792bc3f5dc4de93f9af478012116f2e8efb1b3db0f52f6a68ea908266d04c",
+    "run_metadata_sha256": "3707a4069ea1f90054467e86965e07118cc2d6eb1b053b492b1a2336ba1fd561",
+    "policy_snapshot_sha256": "78c9d819ed643befe1459941693ca6ea078ca61644c28b531ba2fb612fd20234",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "unit_id": "U-aa70d7ac67ab",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 4801,
+      "end": 5573,
+      "start_line": 91,
+      "end_line": 114,
+      "source_span_sha256": "15775acd40c18d2ce3c4debf7b9f8d5dac6ffa34c1b00bcb007c3320930ef192",
+      "masked_text_sha256": "cfb1d875c8ed8bd621d2ec6a58c6bf3fd85920ed726016e694c26ef40ce2e753",
+      "chunk_binding_sha256": "730055177f2bbdf87d4709579ce41054fe32feb9bef5e66e998b43099c4b6d91"
+    },
+    "scene_route": {
+      "requested_scene": "MODELING",
+      "resolved_scene": "MODELING",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "dc2879394cd599df9329ea8a093ee557e816bf76a8dd50cbd43f851682969edd",
+      "routing_input_sha256": "f7b3600752641a21ecce4122a47f55bcb9bcfe3e838f70e1db1965a61e452a07"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-modeling",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "MODELING",
+      "profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "ed6509519f9602d4f092d2b2a6274accdb888f2f86790dc95ce1de9c7727021a"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00073:43078bdcbb52]]\n[[PROTECTED:F00001-P00074:bcdfe912634f]]\n[[PROTECTED:F00001-P00075:444090bde130]]\n[[PROTECTED:F00001-P00076:3435a93d56bc]]\n[[PROTECTED:F00001-P00077:52ba96c13f09]]\n[[PROTECTED:F00001-P00078:3000c3bd47e8]]\n符号 & 含义 [[PROTECTED:F00001-P00079:b11b4ca186c0]]\n[[PROTECTED:F00001-P00080:3f9db2ae5742]]\n[[PROTECTED:F00001-P00081:bb5a3823639f]] & 第 [[PROTECTED:F00001-P00082:27c5fdea0894]] 类底层资源：水草、浮游植物、浮游动物、底栖饵料 [[PROTECTED:F00001-P00083:b11b4ca186c0]]\n[[PROTECTED:F00001-P00084:94805d728f58]] & 第 [[PROTECTED:F00001-P00085:27c5fdea0894]] 类四大家鱼功能群：草鱼、鲢鱼、鳙鱼、青鱼 [[PROTECTED:F00001-P00086:b11b4ca186c0]]\n[[PROTECTED:F00001-P00087:071a3218db08]] & 中层共享猎物代理：中小型鱼类、幼鱼与鱼虾饵料 [[PROTECTED:F00001-P00088:b11b4ca186c0]]\n[[PROTECTED:F00001-P00089:693df853908b]] & 分别表示长江江豚、长江鲟和外来入侵强度 [[PROTECTED:F00001-P00090:b11b4ca186c0]]\n[[PROTECTED:F00001-P00091:9a7b4257cc01]] & 分别表示四大家鱼总量与底层资源总量 [[PROTECTED:F00001-P00092:b11b4ca186c0]]\n[[PROTECTED:F00001-P00093:909c445b37ed]] & 四大家鱼单网次捕获量代理（权重 1,1,1,0.7） [[PROTECTED:F00001-P00094:b11b4ca186c0]]\n[[PROTECTED:F00001-P00095:fc364a045055]] & 分别表示捕捞死亡率、污染强度和反事实捕捞压力 [[PROTECTED:F00001-P00096:b11b4ca186c0]]\n[[PROTECTED:F00001-P00097:cc3f66528ea8]] & 通道阻隔损失及长江鲟敏感性放大因子 [[PROTECTED:F00001-P00098:b11b4ca186c0]]\n[[PROTECTED:F00001-P00099:f2ea46cde50d]] & 分别表示中层猎物承载力基准、人工放流强度和三级食物链承载力 [[PROTECTED:F00001-P00100:b11b4ca186c0]]\n[[PROTECTED:F00001-P00101:30172e1bdc71]] & 食压指数，刻画消费者对底层资源的相对压力 [[PROTECTED:F00001-P00102:b11b4ca186c0]]\n[[PROTECTED:F00001-P00103:9f29cf8b0723]] & 最大李雅普诺夫指数 [[PROTECTED:F00001-P00104:b11b4ca186c0]]\n[[PROTECTED:F00001-P00105:7a702f97ebc7]] & 综合生态状态指数 [[PROTECTED:F00001-P00106:b11b4ca186c0]]\n[[PROTECTED:F00001-P00107:76ac79294e9f]]\n[[PROTECTED:F00001-P00108:fce4e77a7146]]\n[[PROTECTED:F00001-P00109:4cc1d10bd836]]\n\n",
+  "rewrite_intent": {
+    "summary": "TODO: edit masked_text, then replace this placeholder and populate operations, source_spans, and target_signals before finalize",
+    "operations": [],
+    "source_spans": [],
+    "target_signals": []
+  }
+}

@@ -1,0 +1,108 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-1c40fab058d2",
+  "chunk_binding_sha256": "21d824dde20faa4f13ed6c7045dc285ffa953372e74aeb21c5db1746d42df8d0",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "842ae235d7ee9818",
+    "prepare_integrity_sha256": "c38e1d6ea4a8467e7d26d083319b223bd567819e17070c0ac06e74de425e1aa2",
+    "run_metadata_sha256": "af8e27fded78b4cdf5593d7a49751c6f6e43e94172419e8103c4f33a166925b9",
+    "policy_snapshot_sha256": "78c9d819ed643befe1459941693ca6ea078ca61644c28b531ba2fb612fd20234",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "unit_id": "U-1c40fab058d2",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 20790,
+      "end": 21430,
+      "start_line": 432,
+      "end_line": 440,
+      "source_span_sha256": "b281aa32a0ee8603aa9b823454756398d19111fe3f840e8fadd49b6b3f8d5f77",
+      "masked_text_sha256": "011200c6a5c0000fa506d0312d06980972bf08d260ec2e3b75ace5c91b9ecaa0",
+      "chunk_binding_sha256": "21d824dde20faa4f13ed6c7045dc285ffa953372e74aeb21c5db1746d42df8d0"
+    },
+    "scene_route": {
+      "requested_scene": "MODELING",
+      "resolved_scene": "MODELING",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "a59c438e0da93882566a695c90e4183a70a3f735455c19db057c004fcacbaeb9",
+      "routing_input_sha256": "951e1f99918e211fc75570fd7d2137822ebbfb6c3b61d5364068e71bb380c3ff"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-modeling",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "MODELING",
+      "profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "7e7cfe26aa515cc11bbf389646a20a4e227fae7181912157507215ab7bc01872"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00579:7d00b3dbb993]]\n问题五沿用问题二的状态方程，污染强度、入侵初值和竞争强度需要按情景调整。问题一的基线轨迹对应[[PROTECTED:F00001-P00580:884f4d3ad5fe]]；污染情景则以[[PROTECTED:F00001-P00581:892e6215fed9]]重新积分，得到与污染设定一致的[[PROTECTED:F00001-P00582:0e84b2da1731]]和[[PROTECTED:F00001-P00583:697c89c96217]]，再接入问题二模块。\n\n考虑到污染和入侵会改变尾窗内的波动幅度，我们统一比较积分后期最后 200 个离散采样点上的平均指标，以减弱瞬时相位的影响。设第 [[PROTECTED:F00001-P00584:566ce35497d2]] 个情景在该尾窗上的四个平均指标分别为 [[PROTECTED:F00001-P00585:4570afca5ac6]]，其中食源、江豚和长江鲟为效益型指标，入侵压力为成本型指标。三种情景先构造正向化指标矩阵，随后分别计算熵权和 CRITIC 权重，并取两者平均作为组合权重。记组合权重为 [[PROTECTED:F00001-P00586:594e5e71e259]]，则综合得分定义为\n[[PROTECTED:F00001-P00587:eb0d41771a06]]\n在当前数据下，组合权重为 [[PROTECTED:F00001-P00588:1f303cf5aa3c]]，分别对应食源、江豚、长江鲟和入侵压力。该指标用于比较三种情景的相对状态，不对应外部生态健康的绝对量值。\n\n",
+  "rewrite_intent": {
+    "summary": "把污染情景的上游重算写成前问接口，简化指标矩阵与组合权重的衔接。",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "把污染情景的上游重算写成前问接口，简化指标矩阵与组合权重的衔接。"
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "把污染情景的上游重算写成前问接口，简化指标矩阵与组合权重的衔接。"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 2,
+        "end_line": 2,
+        "sha256": "f74204eb0281bfbe4003ef1299c9a7845d3e33baff5e7cf4f82426fd8d48d13d"
+      },
+      {
+        "id": "S2",
+        "start_line": 4,
+        "end_line": 4,
+        "sha256": "c9dfbfeee002d4c3922d4f57ec148907d6de2153d28bfa31e4edd84878196807"
+      }
+    ],
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  }
+}

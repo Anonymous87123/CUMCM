@@ -1,0 +1,539 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "candidate_assembly_exit_code": 2,
+  "candidate_assembly_status": "REVIEW",
+  "delivery_gate_exit_code": 2,
+  "delivery_gate_status": "REVIEW",
+  "draft_surface_source_check": {
+    "details": {},
+    "scope": [],
+    "semantic_entailment_certified": false,
+    "status": "N/A"
+  },
+  "evidence": {
+    "after_path": null,
+    "after_sha256": "b53147314a0dc1ff0af6ed8c784cf2a50d209cf8f74a3380af7300e4831b952b",
+    "before_path": null,
+    "before_sha256": "e53b47fb6df7f5b80fd5004a2a22607e7d44ea27796a911c714dcb9a6e3d4fb8",
+    "checker_executed": true,
+    "document_format": "tex",
+    "document_scope": "DOCUMENT",
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "source_path_archived": false
+  },
+  "evidence_bundle": {
+    "execution_record_path": "execution-record.json",
+    "invocation_path": "invocation-request.json",
+    "manifest_path": "evidence-manifest.json",
+    "paired_quality_request_path": "paired-quality-review-request.json",
+    "rendered_output_path": "rendered-output.txt",
+    "result_path": "validation-result.json",
+    "run_id": "hvr4-a6df36f4d6158e080ee21ebf763f97da47836bd0ecf4a54302ae626cfe8bb897",
+    "schema": "humanize-direct-validation-evidence/v5",
+    "status": "PERSISTED",
+    "stderr_path": "stderr.txt",
+    "warning_review_request_path": ""
+  },
+  "exit_code": 2,
+  "hard_invariant_layer_status": "PASS",
+  "humanize_quality_claim_allowed": false,
+  "introduced_findings": [],
+  "invariants": {
+    "advisories": [],
+    "errors": [],
+    "evidence": {
+      "document_scope": "DOCUMENT",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "speech_act_audit": {
+        "categories": {
+          "assumption": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "attribution_source": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "condition": {
+            "after": {
+              "若": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0003",
+                "column": 48,
+                "end": 48,
+                "end_column": 49,
+                "end_line": 1,
+                "line": 1,
+                "marker": "若",
+                "sentence_context": "若把四大家鱼并成一个消费者功能群，再将水草、浮游植物、浮游动物和底栖饵料合成单一资源总量，模型虽仍能贴合2025年资源量恢复至1.8倍的观测值，但无法判断哪一层资源先承压，也难以解释 这类底层生态退化",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 47
+              }
+            ],
+            "before": {
+              "若": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0003",
+                "column": 56,
+                "end": 56,
+                "end_column": 57,
+                "end_line": 1,
+                "line": 1,
+                "marker": "若",
+                "sentence_context": "若将四大家鱼合并为单一消费者功能群，将水草、浮游植物、浮游动物和底栖饵料简化为单一资源总量，虽仍能匹配2025年资源量恢复至1.8倍的观测事实，但无法揭示哪一层级资源率先承压，也难以解释题目中 等底层生态退化现象",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 55
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "definition_naming": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "focus_scope": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "logical_relation": {
+            "after": {
+              "因此": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0008",
+                "column": 154,
+                "end": 155,
+                "end_column": 156,
+                "end_line": 1,
+                "line": 1,
+                "marker": "因此",
+                "sentence_context": "因此，正式模型必须保留四类基础资源及其与四大家鱼的基本食性对应关系",
+                "sentence_id": "T0003",
+                "side": "after",
+                "start": 153
+              }
+            ],
+            "before": {
+              "因此": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0008",
+                "column": 168,
+                "end": 169,
+                "end_column": 170,
+                "end_line": 1,
+                "line": 1,
+                "marker": "因此",
+                "sentence_context": "因此，模型必须保留四类基础资源与四大家鱼的基本食性对应关系",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 167
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "modality_scope": {
+            "after": {
+              "必须": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0009",
+                "column": 161,
+                "end": 162,
+                "end_column": 163,
+                "end_line": 1,
+                "line": 1,
+                "marker": "必须",
+                "sentence_context": "因此，正式模型必须保留四类基础资源及其与四大家鱼的基本食性对应关系",
+                "sentence_id": "T0003",
+                "side": "after",
+                "start": 160
+              }
+            ],
+            "before": {
+              "必须": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0009",
+                "column": 173,
+                "end": 174,
+                "end_column": 175,
+                "end_line": 1,
+                "line": 1,
+                "marker": "必须",
+                "sentence_context": "因此，模型必须保留四类基础资源与四大家鱼的基本食性对应关系",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 172
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "negation": {
+            "after": {
+              "无": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0006",
+                "column": 121,
+                "end": 121,
+                "end_column": 122,
+                "end_line": 1,
+                "line": 1,
+                "marker": "无",
+                "sentence_context": "若把四大家鱼并成一个消费者功能群，再将水草、浮游植物、浮游动物和底栖饵料合成单一资源总量，模型虽仍能贴合2025年资源量恢复至1.8倍的观测值，但无法判断哪一层资源先承压，也难以解释 这类底层生态退化",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 120
+              }
+            ],
+            "before": {
+              "无": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0006",
+                "column": 129,
+                "end": 129,
+                "end_column": 130,
+                "end_line": 1,
+                "line": 1,
+                "marker": "无",
+                "sentence_context": "若将四大家鱼合并为单一消费者功能群，将水草、浮游植物、浮游动物和底栖饵料简化为单一资源总量，虽仍能匹配2025年资源量恢复至1.8倍的观测事实，但无法揭示哪一层级资源率先承压，也难以解释题目中 等底层生态退化现象",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 128
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "reporting_observation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          }
+        },
+        "claim_pairing": {
+          "after_claims": 9,
+          "before_claims": 9,
+          "unique_exact_pairs": 0,
+          "unpaired_after_claims": 9,
+          "unpaired_before_claims": 9
+        },
+        "protection": {
+          "after_ranges": 4,
+          "before_ranges": 4,
+          "line_column_basis": "NORMALIZED_LF_1_BASED_UNICODE_CODEPOINT",
+          "masking": "LENGTH_PRESERVING"
+        }
+      }
+    },
+    "hard_failure": false,
+    "status": "pass",
+    "summary": {
+      "advisories": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    "warnings": []
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 1,
+    "before_candidates": 1,
+    "introduced_candidates": 0,
+    "unexplained_high_candidates": 1
+  },
+  "mechanical_validation_exit_code": 2,
+  "mechanical_validation_status": "REVIEW",
+  "mode": "REWRITE",
+  "paired_quality_clearance_granted": false,
+  "paired_quality_review_local_clearance_supported": false,
+  "paired_quality_review_request": {
+    "artifact": {
+      "after_sha256": "b53147314a0dc1ff0af6ed8c784cf2a50d209cf8f74a3380af7300e4831b952b",
+      "before_sha256": "e53b47fb6df7f5b80fd5004a2a22607e7d44ea27796a911c714dcb9a6e3d4fb8"
+    },
+    "changes": [
+      {
+        "after": {
+          "end_line": 1,
+          "han_chars": 161,
+          "line_count": 1,
+          "sha256": "b53147314a0dc1ff0af6ed8c784cf2a50d209cf8f74a3380af7300e4831b952b",
+          "start_line": 1
+        },
+        "before": {
+          "end_line": 1,
+          "han_chars": 171,
+          "line_count": 1,
+          "sha256": "e53b47fb6df7f5b80fd5004a2a22607e7d44ea27796a911c714dcb9a6e3d4fb8",
+          "start_line": 1
+        },
+        "change_id": "QCH-7da45f54c78a9f46c39c",
+        "operation": "REPLACE",
+        "ordinal": 1
+      }
+    ],
+    "limitations": {
+      "academic_correctness": "NOT_EVALUATED",
+      "authorship": "NOT_EVALUATED",
+      "quality_clearance_granted": false
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "request_sha256": "6c4d0791aef59369c1f616722124b671025093032ed9fdf61e66fb4413b18022",
+    "review_contract": {
+      "empty_or_generic_benefit_is_clearance": false,
+      "local_model_or_caller_assertion_is_clearance": false,
+      "required_dimensions": [
+        "actionable_pathology_remaining",
+        "no_change_is_best_available_decision",
+        "problem_span_binding",
+        "independent_reading_benefit",
+        "subject_and_modifier_alignment",
+        "verb_object_collocation",
+        "logical_relation_preservation",
+        "template_field_role_and_authorization",
+        "information_density_and_rhythm",
+        "author_voice_non_regression"
+      ],
+      "required_per_change_verdicts": [
+        "ACCEPT",
+        "REVISE",
+        "REVERT"
+      ],
+      "validator_pass_is_quality_clearance": false
+    },
+    "schema": "humanize-paired-quality-review-request/v1",
+    "status": "BLOCKED_BY_MECHANICAL_GATE",
+    "template_field_changes": [],
+    "validation_context": {
+      "artifact_relation": "CHANGED",
+      "decision": "REWRITE",
+      "decision_eligible": false,
+      "document_format": "tex",
+      "document_scope": "DOCUMENT",
+      "mechanical_validation_status": "REVIEW",
+      "mode": "REWRITE",
+      "scene": "MODELING"
+    }
+  },
+  "paired_quality_review_status": "BLOCKED_BY_MECHANICAL_GATE",
+  "paired_style_delta_findings": [],
+  "paired_style_delta_layer_status": "NOT_APPLICABLE",
+  "paired_style_delta_summary": {
+    "authorship_inference": false,
+    "finding_count": 0,
+    "scope": "PAIRED_COURSE_VOICE_NON_REGRESSION_CANDIDATE",
+    "status": "NOT_APPLICABLE"
+  },
+  "pending_warnings": [],
+  "proposed_warning_resolutions": [],
+  "report_scope_check": {
+    "editable_range_count": 0,
+    "editable_ranges": [],
+    "extractor_replay_match": null,
+    "fragment_count": 0,
+    "outside_selection_unchanged": null,
+    "report_sha256": null,
+    "scope_path": null,
+    "scope_semantic_sha256": null,
+    "scope_sha256": null,
+    "source_sha256": null,
+    "status": "N/A"
+  },
+  "review_reasons": [
+    "unexplained_high_severity_signal",
+    "unexplained_strict_corpus_signal"
+  ],
+  "scene": "MODELING",
+  "semantic_source_check": "N/A",
+  "speech_act_diagnostics": [],
+  "speech_act_layer_status": "PASS",
+  "status": "REVIEW",
+  "strict_corpus_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 1,
+    "before_candidates": 1,
+    "clean_allowed_by_strict_layer": false,
+    "enabled": true,
+    "no_change_allowed": false,
+    "unexplained_candidates": 1
+  },
+  "style_signal_layer_status": "REVIEW",
+  "template_field_edit_scope_check": {
+    "authorized_edit_count": 0,
+    "authorized_edits": [],
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "provided": false,
+    "schema_version": null,
+    "scope_sha256": null,
+    "source_sha256": "e53b47fb6df7f5b80fd5004a2a22607e7d44ea27796a911c714dcb9a6e3d4fb8",
+    "status": "N/A"
+  },
+  "template_field_findings": [],
+  "template_field_layer_status": "PASS",
+  "template_field_summary": {
+    "authorized_edit_count": 0,
+    "finding_count": 0,
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "review_finding_count": 0,
+    "status": "PASS"
+  },
+  "unaccepted_warnings": [],
+  "unexplained_high_findings": [
+    {
+      "action": "REWRITE",
+      "column": 161,
+      "context": "量，模型虽仍能贴合2025年资源量恢复至1.8倍的观测值，但无法判断哪一层资源先承压，也难以解释\"水下荒漠\"这类底层生态退化。因此，正式模型必须保留四类基础资源及其与四大家鱼的基本食性对应关系。",
+      "count": 1,
+      "file": "after",
+      "finding_hash": "4576b4f51e22e19e1723e64bcb2fb92677fa1ad4d41798261a86276b3e6e167f",
+      "line": 1,
+      "matched": "必须保留",
+      "rationale": "减少连续的权限、范围和强制限定播报；保留真实边界时必须绑定具体对象和位置。",
+      "severity": "high",
+      "signal_id": "LEX-STRICT-CORPUS-SCOPE-01"
+    }
+  ],
+  "unexplained_strict_findings": [
+    {
+      "action": "REWRITE",
+      "column": 161,
+      "context": "量，模型虽仍能贴合2025年资源量恢复至1.8倍的观测值，但无法判断哪一层资源先承压，也难以解释\"水下荒漠\"这类底层生态退化。因此，正式模型必须保留四类基础资源及其与四大家鱼的基本食性对应关系。",
+      "count": 1,
+      "file": "after",
+      "finding_hash": "4576b4f51e22e19e1723e64bcb2fb92677fa1ad4d41798261a86276b3e6e167f",
+      "line": 1,
+      "matched": "必须保留",
+      "rationale": "减少连续的权限、范围和强制限定播报；保留真实边界时必须绑定具体对象和位置。",
+      "severity": "high",
+      "signal_id": "LEX-STRICT-CORPUS-SCOPE-01"
+    }
+  ],
+  "warning_proposal_state": {
+    "attestation_status": "NOT_PROVIDED",
+    "cross_record_reviewer_linkability": "NOT_RECORDED",
+    "identity_verified": false,
+    "proposal_source": "NOT_PROVIDED",
+    "proposed_warning_fingerprints": [],
+    "review_clearance_granted": false,
+    "reviewer_identifier_collected": false,
+    "stable_reviewer_pseudonym_recorded": false,
+    "warning_review_request_sha256": null
+  },
+  "warning_resolutions": {},
+  "warning_review_request": null,
+  "warnings_without_resolution_proposal": []
+}

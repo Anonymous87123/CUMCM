@@ -1,0 +1,354 @@
+{
+  "schema": "aigc-academic-candidate-audit/v1",
+  "status": "pass",
+  "scope": "mechanical academic-style release gate; not authorship detection or final naturalness clearance",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r3\\sources\\b-symmetry-reduction.txt",
+    "sha256": "537fdbf85c48c57c50686c2d23f40a5499b83b6881f1517315eba61cd38c1078",
+    "tree_files": 1,
+    "tree_sha256": "a25b47a60907e119459658ace3b40487ef0a5810207507553f173f2529addf3b"
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r3\\candidates-safe\\b-symmetry-reduction-t1.txt",
+    "sha256": "037d033dc56aaa0d5c46b6cc2828d4c9979811c545a584fd9b60cb4583220b70",
+    "tree_files": 1,
+    "tree_sha256": "4d1cf89d2ce8e3305dd813fe554306601cd2a91d94cbea3ad4aafeffdb8ab3a7"
+  },
+  "decisions": {
+    "path": null,
+    "sha256": null
+  },
+  "humanize_run": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r3\\humanize-runs-v2\\b-symmetry-reduction-t1\\hir1-z58t1xpv",
+    "status": "pass"
+  },
+  "dependencies": [
+    {
+      "role": "humanize-lexical-scanner",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\scripts\\scan_humanize_chinese.py",
+      "sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "bytes": 87413
+    },
+    {
+      "role": "humanize-inline-run-replayer",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\scripts\\run_humanize_inline.py",
+      "sha256": "26cb2315b428d796ea71a3a49511a818f18a15a4362142df43068ffad97351cf",
+      "bytes": 74524
+    },
+    {
+      "role": "humanize-lexical-signals",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\lexical-signals.json",
+      "sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "bytes": 5001788
+    },
+    {
+      "role": "protected-rewrite-contract",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_rewrite_contract.py",
+      "sha256": "319a31b07a42997aa38003a4e7457281ea37f204c367751e987e3c76964d3f12",
+      "bytes": 19655
+    },
+    {
+      "role": "section-voice-audit",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_voice_mode.py",
+      "sha256": "de66038bbca1c32cccfc97a2f9aa16471c97b4e08d9bb6db2fa4feb1dd795b4d",
+      "bytes": 11491
+    },
+    {
+      "role": "paragraph-rhythm-audit",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_style_rhythm.py",
+      "sha256": "da87dc3a15c7dcfcbe49b25fdf8e3bcb1557b5c71238ed78265b4033e60e9a0e",
+      "bytes": 8502
+    },
+    {
+      "role": "public-reasoning-scaffold-audit",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_reasoning_scaffold.py",
+      "sha256": "101f7e42bc85c0369bae3fabb79d69c295740d3c01792e0c099e94c8ba99b0d0",
+      "bytes": 12331
+    },
+    {
+      "role": "relative-style-comparison",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\compare_style_revision.py",
+      "sha256": "f8a40d11bcf5cb134f2293ca2709b94b90ef8474e976ac655f0feecac98b2db3",
+      "bytes": 5114
+    },
+    {
+      "role": "mcm-human-lexical-calibration",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_lexical_corpus_calibration.py",
+      "sha256": "e9514e4d807488cbac20f4a9fa6019b58efd89dddee1ead3c3e0abc6f4733df3",
+      "bytes": 5222
+    },
+    {
+      "role": "mcm-verified-human-corpus",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl",
+      "sha256": "e7cf1f7c31c66e9538897df96c61c74da0bf54f2086ef6983089e4e3c59383a5",
+      "bytes": 6173007
+    }
+  ],
+  "gates": [
+    {
+      "id": "humanize-lexical",
+      "required": true,
+      "status": "pass",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\scripts\\scan_humanize_chinese.py",
+          "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r3\\candidates-safe\\b-symmetry-reduction-t1.txt",
+          "--scene",
+          "MODELING",
+          "--format",
+          "json"
+        ],
+        "returncode": 0,
+        "stderr": ""
+      },
+      "source_execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\scripts\\scan_humanize_chinese.py",
+          "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r3\\sources\\b-symmetry-reduction.txt",
+          "--scene",
+          "MODELING",
+          "--format",
+          "json"
+        ],
+        "returncode": 0,
+        "stderr": ""
+      },
+      "coverage": {
+        "status": "PASS",
+        "requested_count": 1,
+        "scanned_count": 1,
+        "skipped_count": 0,
+        "requested_files": [
+          "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r3\\candidates-safe\\b-symmetry-reduction-t1.txt"
+        ],
+        "scanned_files": [
+          "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r3\\candidates-safe\\b-symmetry-reduction-t1.txt"
+        ],
+        "skipped_files": []
+      },
+      "actionable_findings": 0,
+      "kept_by_position_bound_decision": 0,
+      "kept_by_replayed_humanize_run": 0,
+      "unresolved_findings": 0,
+      "signal_counts": {},
+      "unresolved": [],
+      "human_corpus_calibration": {
+        "status": "pass",
+        "execution": {
+          "command": [
+            "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_lexical_corpus_calibration.py",
+            "--format",
+            "json"
+          ],
+          "returncode": 0,
+          "stderr": ""
+        },
+        "papers": 59,
+        "contextual_phrase_inventory": 19,
+        "contextual_findings": 0,
+        "findings": [],
+        "policy": "human-attested strict phrases remain visible but do not hard-block a modeling candidate on one lexical occurrence alone"
+      },
+      "decision_errors": [],
+      "unused_decisions": [],
+      "humanize_run_keep_evidence": {
+        "status": "pass",
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r3\\humanize-runs-v2\\b-symmetry-reduction-t1\\hir1-z58t1xpv",
+        "run_id": "hir1-z58t1xpv",
+        "run_json": {
+          "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r3\\humanize-runs-v2\\b-symmetry-reduction-t1\\hir1-z58t1xpv\\run.json",
+          "sha256": "568d68f760b647d4980d8017c70f1f1e67df98395d36d48d9db222d0d827f3b6"
+        },
+        "validation": {
+          "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r3\\humanize-runs-v2\\b-symmetry-reduction-t1\\hir1-z58t1xpv\\validation.json",
+          "sha256": "6defc1822ec6c1bd1004d2982d43ade7bccf06cd19ea5bbb3bcfc5fe5338005b"
+        },
+        "replay": {
+          "command": [
+            "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+            "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\scripts\\run_humanize_inline.py",
+            "emit",
+            "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r3\\humanize-runs-v2\\b-symmetry-reduction-t1\\hir1-z58t1xpv",
+            "--format",
+            "json"
+          ],
+          "returncode": 2,
+          "stderr": ""
+        },
+        "accepted_findings": 0,
+        "used_findings": 0,
+        "records": [],
+        "source_inheritance_policy": "a replayed KEEP may clear only the same strict phrase already present in the frozen source; it never clears semantic warnings or hard invariants",
+        "errors": []
+      }
+    },
+    {
+      "id": "protected-rewrite-contract",
+      "required": true,
+      "status": "pass",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_rewrite_contract.py",
+          "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r3\\sources\\b-symmetry-reduction.txt",
+          "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r3\\candidates-safe\\b-symmetry-reduction-t1.txt",
+          "--scene",
+          "MODELING",
+          "--format",
+          "json"
+        ],
+        "returncode": 0,
+        "stderr": ""
+      },
+      "errors": 0,
+      "warnings": 0,
+      "findings": [],
+      "adjudicated_warnings": [],
+      "unresolved_warnings": [],
+      "semantic_decision_errors": [],
+      "unused_semantic_decisions": [],
+      "number_diff": {
+        "removed": [],
+        "introduced": []
+      }
+    },
+    {
+      "id": "section-voice",
+      "required": true,
+      "status": "pass",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_voice_mode.py",
+          "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\aigc-academic-candidate-ggi_v2yu\\candidate-combined.tex",
+          "--format",
+          "json"
+        ],
+        "returncode": 0,
+        "stderr": ""
+      },
+      "summary": {
+        "segments": 1,
+        "modes": {
+          "prose": 1,
+          "evidence": 0,
+          "operator": 0
+        },
+        "findings": 0
+      },
+      "findings": [],
+      "candidate_file_map": [
+        {
+          "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r3\\candidates-safe\\b-symmetry-reduction-t1.txt",
+          "relative_path": "b-symmetry-reduction-t1.txt",
+          "combined_start_line": 2,
+          "combined_end_line": 3
+        }
+      ]
+    },
+    {
+      "id": "paragraph-rhythm",
+      "required": true,
+      "status": "pass",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_style_rhythm.py",
+          "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\aigc-academic-candidate-ggi_v2yu\\candidate-combined.tex",
+          "--mode",
+          "auto",
+          "--format",
+          "json"
+        ],
+        "returncode": 0,
+        "stderr": ""
+      },
+      "summary": {
+        "segments_total": 1,
+        "segments_analyzed": 1,
+        "paragraphs_analyzed": 1,
+        "findings": 0
+      },
+      "findings": [],
+      "candidate_file_map": [
+        {
+          "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r3\\candidates-safe\\b-symmetry-reduction-t1.txt",
+          "relative_path": "b-symmetry-reduction-t1.txt",
+          "combined_start_line": 2,
+          "combined_end_line": 3
+        }
+      ]
+    },
+    {
+      "id": "public-reasoning-scaffold",
+      "required": true,
+      "status": "pass",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_reasoning_scaffold.py",
+          "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\aigc-academic-candidate-ggi_v2yu\\candidate-combined.tex",
+          "--mode",
+          "auto",
+          "--format",
+          "json"
+        ],
+        "returncode": 0,
+        "stderr": ""
+      },
+      "summary": {
+        "segments_total": 1,
+        "segments_eligible": 0,
+        "distinct_sequences": 0,
+        "findings": 0
+      },
+      "findings": [],
+      "candidate_file_map": [
+        {
+          "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r3\\candidates-safe\\b-symmetry-reduction-t1.txt",
+          "relative_path": "b-symmetry-reduction-t1.txt",
+          "combined_start_line": 2,
+          "combined_end_line": 3
+        }
+      ]
+    },
+    {
+      "id": "relative-style-comparison",
+      "required": false,
+      "status": "unchanged",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\compare_style_revision.py",
+          "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\aigc-academic-candidate-ggi_v2yu\\source-combined.tex",
+          "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\aigc-academic-candidate-ggi_v2yu\\candidate-combined.tex",
+          "--format",
+          "json"
+        ],
+        "returncode": 2,
+        "stderr": ""
+      },
+      "same_bytes": false,
+      "improvements": [],
+      "regressions": []
+    }
+  ],
+  "recovery": {
+    "route": "READY_FOR_HUMAN_REVIEW",
+    "current_candidate_repair_allowed": false,
+    "source_rebase_required": false,
+    "lexical_findings_actionable_now": false,
+    "blocking_gate_ids": [],
+    "reason_codes": [],
+    "next_action": "Freeze the candidate and continue to source-hidden human review."
+  },
+  "summary": {
+    "required": 5,
+    "passed": 5,
+    "review": 0,
+    "failed": 0
+  }
+}

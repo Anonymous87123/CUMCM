@@ -1,0 +1,110 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-8f28215ff44b",
+  "chunk_binding_sha256": "b1ff66066ab4b858be456f437ebc31cb348e96d03a7d9071970aa722e291791c",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "842ae235d7ee9818",
+    "prepare_integrity_sha256": "c38e1d6ea4a8467e7d26d083319b223bd567819e17070c0ac06e74de425e1aa2",
+    "run_metadata_sha256": "af8e27fded78b4cdf5593d7a49751c6f6e43e94172419e8103c4f33a166925b9",
+    "policy_snapshot_sha256": "78c9d819ed643befe1459941693ca6ea078ca61644c28b531ba2fb612fd20234",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "unit_id": "U-8f28215ff44b",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 23598,
+      "end": 23977,
+      "start_line": 487,
+      "end_line": 491,
+      "source_span_sha256": "325d179538a5cd5758993f8428b06171fd5f1de025f26a5074432feb55b3a7aa",
+      "masked_text_sha256": "f6a296a2b1f4fd370530b52f5efd9b8cac07af0d16a438b06e476637107a9940",
+      "chunk_binding_sha256": "b1ff66066ab4b858be456f437ebc31cb348e96d03a7d9071970aa722e291791c"
+    },
+    "scene_route": {
+      "requested_scene": "MODELING",
+      "resolved_scene": "MODELING",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "1a681cd81848d7df05b196cc16d554db496a913c2e9fa9835eab54562068f518",
+      "routing_input_sha256": "ba6433df2c860f8c3d99b30d7c1427390c3adf9011fc6a6293cd0682a7eb2f5d"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-modeling",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "MODELING",
+      "profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "9da6c0abf880fdce2bae4f69d1829721d482b956630ebf97d4445013ff2f09ad"
+  },
+  "keep_reasons": {
+    "LEX-STRICT-CORPUS-OUTLOOK-01": "章节标题“治理建议”标明本段承担由模型结果转入条件性措施讨论的结构职责。"
+  },
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00657:37a48dfaaae7]]\n问题一中四大家鱼总量回升时，水草、浮游动物和底栖饵料仍可能下降；问题二中江豚与长江鲟对通道和放流的响应又不相同。治理重点不能只落在捕捞总量，还包括资源层和物种受限环节。监测同时保留四大家鱼总量、底层资源和食压指数，不只报告鱼类总量；鱼道、产卵场连通和放流节律也不按同一方案处理。\n\n问题五的污染情景中，部分过程量短时上升，珍稀物种终态和综合得分却下降。方向相反，所以局部过程改善并不等于系统整体好转。对鄱阳湖等支流湖泊，可将其作为高风险前沿，优先布设入侵物种早期监测、拦截和清除，并把水质、连通性和放流措施纳入同一比较。这里的模型给出措施先后；如果把情景排序直接解释为实际治理效果，结论不在模型能够支持的范围内。\n\n",
+  "rewrite_intent": {
+    "summary": "将治理建议绑定到各层指标差异，并声明情景计算不等同于实际治理效果。",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "将治理建议绑定到各层指标差异，并声明情景计算不等同于实际治理效果。"
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "将治理建议绑定到各层指标差异，并声明情景计算不等同于实际治理效果。"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 2,
+        "end_line": 2,
+        "sha256": "dd7170ec2428e946234ad38872ec0afba852e4575f62e4fccb0fdfc0da013c70"
+      },
+      {
+        "id": "S2",
+        "start_line": 4,
+        "end_line": 4,
+        "sha256": "c625af05149b44cf5d1a443d9e72028fa83875205222dd4c7a50397d9028427b"
+      }
+    ],
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  }
+}

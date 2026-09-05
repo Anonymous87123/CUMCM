@@ -1,0 +1,1572 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "candidate_assembly_exit_code": 1,
+  "candidate_assembly_status": "FAIL",
+  "delivery_gate_exit_code": 1,
+  "delivery_gate_status": "FAIL",
+  "draft_surface_source_check": {
+    "details": {},
+    "scope": [],
+    "semantic_entailment_certified": false,
+    "status": "N/A"
+  },
+  "evidence": {
+    "after_path": null,
+    "after_sha256": "e7a66828b24c9fcde05f7a6d3892cf71f3bd0ac2e4cc790ccedd6e517b01d51c",
+    "before_path": null,
+    "before_sha256": "874bc69edc4622b1d4343c5c304fc0c13721af04d060139142bc1ad73e9660f5",
+    "checker_executed": true,
+    "document_format": "markdown",
+    "document_scope": "DOCUMENT",
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "source_path_archived": false
+  },
+  "evidence_bundle": {
+    "execution_record_path": "execution-record.json",
+    "invocation_path": "invocation-request.json",
+    "manifest_path": "evidence-manifest.json",
+    "paired_quality_request_path": "paired-quality-review-request.json",
+    "rendered_output_path": "rendered-output.txt",
+    "result_path": "validation-result.json",
+    "run_id": "hvr4-8e84236388954d941b426cedb37bec605b98b2c4f7a680949cd851b16aa23c65",
+    "schema": "humanize-direct-validation-evidence/v5",
+    "status": "PERSISTED",
+    "stderr_path": "stderr.txt",
+    "warning_review_request_path": "warning-review-request.json"
+  },
+  "exit_code": 1,
+  "hard_invariant_layer_status": "FAIL",
+  "humanize_quality_claim_allowed": false,
+  "introduced_findings": [
+    {
+      "action": "REWRITE",
+      "column": 44,
+      "context": "依据决策图确定各项参数后，可按检查、装配、成品处理和拆解的顺序核算一次生产决策。题目中最明确且可以统一计量的指标是直接盈利值，故模型采用单一利润目标。丢弃产品的价值对应环保方面的影响，调换费用中还含有信誉损失；后两项虽会影响方案取舍",
+      "count": 1,
+      "file": "after",
+      "finding_hash": "952615dd0309d08d106f51cb12241bf7f5e16c573056989eb4140bf0f726ea06",
+      "line": 1,
+      "matched": "最明确",
+      "rationale": "删除无证据的确定性包装或叠加缓和词，保持原文的主张力度和认识论边界。",
+      "severity": "high",
+      "signal_id": "LEX-STRICT-CORPUS-CERTAINTY-01"
+    }
+  ],
+  "invariants": {
+    "advisories": [],
+    "errors": [
+      {
+        "code": "NUMBER_OR_UNIT_CHANGED",
+        "details": {
+          "added": [
+            {
+              "count": 1,
+              "value": "一次"
+            },
+            {
+              "count": 1,
+              "value": "两项"
+            }
+          ],
+          "after_count": 2,
+          "before_count": 0,
+          "first_difference": 0,
+          "removed": []
+        },
+        "message": "Numbers or units changed in count, content, or order.",
+        "severity": "error"
+      }
+    ],
+    "evidence": {
+      "document_scope": "DOCUMENT",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "speech_act_audit": {
+        "categories": {
+          "assumption": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "attribution_source": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "condition": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "definition_naming": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "focus_scope": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "logical_relation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "modality_scope": {
+            "after": {
+              "可": 1,
+              "可以": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 14,
+                "end": 14,
+                "end_column": 15,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "依据决策图确定各项参数后，可按检查、装配、成品处理和拆解的顺序核算一次生产决策",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 13
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0003",
+                "column": 48,
+                "end": 49,
+                "end_column": 50,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可以",
+                "sentence_context": "题目中最明确且可以统一计量的指标是直接盈利值，故模型采用单一利润目标",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 47
+              }
+            ],
+            "before": {
+              "可以": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 19,
+                "end": 20,
+                "end_column": 21,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可以",
+                "sentence_context": "分析决策图、将决策转换为决策参数后,可以将企业生产流程从零件的检查与装配开始分析到拆解环节",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 18
+              }
+            ],
+            "raw_delta": {
+              "added": {
+                "可": 1
+              },
+              "removed": {}
+            },
+            "residual_delta": [
+              {
+                "added": {
+                  "可": 1
+                },
+                "after_claim_id": null,
+                "after_occurrences": [
+                  {
+                    "category": "modality_scope",
+                    "claim_id": "C0002",
+                    "column": 14,
+                    "end": 14,
+                    "end_column": 15,
+                    "end_line": 1,
+                    "line": 1,
+                    "marker": "可",
+                    "sentence_context": "依据决策图确定各项参数后，可按检查、装配、成品处理和拆解的顺序核算一次生产决策",
+                    "sentence_id": "T0001",
+                    "side": "after",
+                    "start": 13
+                  },
+                  {
+                    "category": "modality_scope",
+                    "claim_id": "C0003",
+                    "column": 48,
+                    "end": 49,
+                    "end_column": 50,
+                    "end_line": 1,
+                    "line": 1,
+                    "marker": "可以",
+                    "sentence_context": "题目中最明确且可以统一计量的指标是直接盈利值，故模型采用单一利润目标",
+                    "sentence_id": "T0002",
+                    "side": "after",
+                    "start": 47
+                  }
+                ],
+                "before_claim_id": null,
+                "before_occurrences": [
+                  {
+                    "category": "modality_scope",
+                    "claim_id": "C0002",
+                    "column": 19,
+                    "end": 20,
+                    "end_column": 21,
+                    "end_line": 1,
+                    "line": 1,
+                    "marker": "可以",
+                    "sentence_context": "分析决策图、将决策转换为决策参数后,可以将企业生产流程从零件的检查与装配开始分析到拆解环节",
+                    "sentence_id": "T0001",
+                    "side": "before",
+                    "start": 18
+                  }
+                ],
+                "removed": {},
+                "scope": "UNALIGNED_POOL"
+              }
+            ],
+            "safe_compression_allowances": []
+          },
+          "negation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {
+              "不": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0003",
+                "column": 50,
+                "end": 50,
+                "end_column": 51,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "本题中不存在多目标规划,或者说存在一个最重要的指标:直接盈利值",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 49
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {
+                "不": 1
+              }
+            },
+            "residual_delta": [
+              {
+                "added": {},
+                "after_claim_id": null,
+                "after_occurrences": [],
+                "before_claim_id": null,
+                "before_occurrences": [
+                  {
+                    "category": "negation",
+                    "claim_id": "C0003",
+                    "column": 50,
+                    "end": 50,
+                    "end_column": 51,
+                    "end_line": 1,
+                    "line": 1,
+                    "marker": "不",
+                    "sentence_context": "本题中不存在多目标规划,或者说存在一个最重要的指标:直接盈利值",
+                    "sentence_id": "T0002",
+                    "side": "before",
+                    "start": 49
+                  }
+                ],
+                "removed": {
+                  "不": 1
+                },
+                "scope": "UNALIGNED_POOL"
+              }
+            ],
+            "safe_compression_allowances": []
+          },
+          "reporting_observation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          }
+        },
+        "claim_pairing": {
+          "after_claims": 8,
+          "before_claims": 8,
+          "unique_exact_pairs": 0,
+          "unpaired_after_claims": 8,
+          "unpaired_before_claims": 8
+        },
+        "protection": {
+          "after_ranges": 0,
+          "before_ranges": 0,
+          "line_column_basis": "NORMALIZED_LF_1_BASED_UNICODE_CODEPOINT",
+          "masking": "LENGTH_PRESERVING"
+        }
+      }
+    },
+    "hard_failure": true,
+    "status": "fail",
+    "summary": {
+      "advisories": 0,
+      "errors": 1,
+      "warnings": 2
+    },
+    "warnings": [
+      {
+        "code": "SPEECH_ACT_NEGATION_CHANGED",
+        "details": {
+          "after": {},
+          "after_occurrences": [],
+          "before": {
+            "不": 1
+          },
+          "before_occurrences": [
+            {
+              "category": "negation",
+              "claim_id": "C0003",
+              "column": 50,
+              "end": 50,
+              "end_column": 51,
+              "end_line": 1,
+              "line": 1,
+              "marker": "不",
+              "sentence_context": "本题中不存在多目标规划,或者说存在一个最重要的指标:直接盈利值",
+              "sentence_id": "T0002",
+              "side": "before",
+              "start": 49
+            }
+          ],
+          "raw_delta": {
+            "added": {},
+            "removed": {
+              "不": 1
+            }
+          },
+          "residual_delta": [
+            {
+              "added": {},
+              "after_claim_id": null,
+              "after_occurrences": [],
+              "before_claim_id": null,
+              "before_occurrences": [
+                {
+                  "category": "negation",
+                  "claim_id": "C0003",
+                  "column": 50,
+                  "end": 50,
+                  "end_column": 51,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "不",
+                  "sentence_context": "本题中不存在多目标规划,或者说存在一个最重要的指标:直接盈利值",
+                  "sentence_id": "T0002",
+                  "side": "before",
+                  "start": 49
+                }
+              ],
+              "removed": {
+                "不": 1
+              },
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+        "severity": "warning"
+      },
+      {
+        "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+        "details": {
+          "after": {
+            "可": 1,
+            "可以": 1
+          },
+          "after_occurrences": [
+            {
+              "category": "modality_scope",
+              "claim_id": "C0002",
+              "column": 14,
+              "end": 14,
+              "end_column": 15,
+              "end_line": 1,
+              "line": 1,
+              "marker": "可",
+              "sentence_context": "依据决策图确定各项参数后，可按检查、装配、成品处理和拆解的顺序核算一次生产决策",
+              "sentence_id": "T0001",
+              "side": "after",
+              "start": 13
+            },
+            {
+              "category": "modality_scope",
+              "claim_id": "C0003",
+              "column": 48,
+              "end": 49,
+              "end_column": 50,
+              "end_line": 1,
+              "line": 1,
+              "marker": "可以",
+              "sentence_context": "题目中最明确且可以统一计量的指标是直接盈利值，故模型采用单一利润目标",
+              "sentence_id": "T0002",
+              "side": "after",
+              "start": 47
+            }
+          ],
+          "before": {
+            "可以": 1
+          },
+          "before_occurrences": [
+            {
+              "category": "modality_scope",
+              "claim_id": "C0002",
+              "column": 19,
+              "end": 20,
+              "end_column": 21,
+              "end_line": 1,
+              "line": 1,
+              "marker": "可以",
+              "sentence_context": "分析决策图、将决策转换为决策参数后,可以将企业生产流程从零件的检查与装配开始分析到拆解环节",
+              "sentence_id": "T0001",
+              "side": "before",
+              "start": 18
+            }
+          ],
+          "raw_delta": {
+            "added": {
+              "可": 1
+            },
+            "removed": {}
+          },
+          "residual_delta": [
+            {
+              "added": {
+                "可": 1
+              },
+              "after_claim_id": null,
+              "after_occurrences": [
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0002",
+                  "column": 14,
+                  "end": 14,
+                  "end_column": 15,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "可",
+                  "sentence_context": "依据决策图确定各项参数后，可按检查、装配、成品处理和拆解的顺序核算一次生产决策",
+                  "sentence_id": "T0001",
+                  "side": "after",
+                  "start": 13
+                },
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0003",
+                  "column": 48,
+                  "end": 49,
+                  "end_column": 50,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "可以",
+                  "sentence_context": "题目中最明确且可以统一计量的指标是直接盈利值，故模型采用单一利润目标",
+                  "sentence_id": "T0002",
+                  "side": "after",
+                  "start": 47
+                }
+              ],
+              "before_claim_id": null,
+              "before_occurrences": [
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0002",
+                  "column": 19,
+                  "end": 20,
+                  "end_column": 21,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "可以",
+                  "sentence_context": "分析决策图、将决策转换为决策参数后,可以将企业生产流程从零件的检查与装配开始分析到拆解环节",
+                  "sentence_id": "T0001",
+                  "side": "before",
+                  "start": 18
+                }
+              ],
+              "removed": {},
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+        "severity": "warning"
+      }
+    ]
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 1,
+    "before_candidates": 0,
+    "introduced_candidates": 1,
+    "unexplained_high_candidates": 1
+  },
+  "mechanical_validation_exit_code": 1,
+  "mechanical_validation_status": "FAIL",
+  "mode": "REWRITE",
+  "paired_quality_clearance_granted": false,
+  "paired_quality_review_local_clearance_supported": false,
+  "paired_quality_review_request": {
+    "artifact": {
+      "after_sha256": "e7a66828b24c9fcde05f7a6d3892cf71f3bd0ac2e4cc790ccedd6e517b01d51c",
+      "before_sha256": "874bc69edc4622b1d4343c5c304fc0c13721af04d060139142bc1ad73e9660f5"
+    },
+    "changes": [
+      {
+        "after": {
+          "end_line": 1,
+          "han_chars": 124,
+          "line_count": 1,
+          "sha256": "e7a66828b24c9fcde05f7a6d3892cf71f3bd0ac2e4cc790ccedd6e517b01d51c",
+          "start_line": 1
+        },
+        "before": {
+          "end_line": 1,
+          "han_chars": 112,
+          "line_count": 1,
+          "sha256": "874bc69edc4622b1d4343c5c304fc0c13721af04d060139142bc1ad73e9660f5",
+          "start_line": 1
+        },
+        "change_id": "QCH-4928b6c0f55cab03ffb3",
+        "operation": "REPLACE",
+        "ordinal": 1
+      }
+    ],
+    "limitations": {
+      "academic_correctness": "NOT_EVALUATED",
+      "authorship": "NOT_EVALUATED",
+      "quality_clearance_granted": false
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "request_sha256": "620cdb61aea9aafc0232bee92de738cf2410c333419a0301cb2ac5cb4118b827",
+    "review_contract": {
+      "empty_or_generic_benefit_is_clearance": false,
+      "local_model_or_caller_assertion_is_clearance": false,
+      "required_dimensions": [
+        "actionable_pathology_remaining",
+        "no_change_is_best_available_decision",
+        "problem_span_binding",
+        "independent_reading_benefit",
+        "subject_and_modifier_alignment",
+        "verb_object_collocation",
+        "logical_relation_preservation",
+        "template_field_role_and_authorization",
+        "information_density_and_rhythm",
+        "author_voice_non_regression"
+      ],
+      "required_per_change_verdicts": [
+        "ACCEPT",
+        "REVISE",
+        "REVERT"
+      ],
+      "validator_pass_is_quality_clearance": false
+    },
+    "schema": "humanize-paired-quality-review-request/v1",
+    "status": "BLOCKED_BY_MECHANICAL_GATE",
+    "template_field_changes": [],
+    "validation_context": {
+      "artifact_relation": "CHANGED",
+      "decision": "REWRITE",
+      "decision_eligible": false,
+      "document_format": "markdown",
+      "document_scope": "DOCUMENT",
+      "mechanical_validation_status": "FAIL",
+      "mode": "REWRITE",
+      "scene": "MODELING"
+    }
+  },
+  "paired_quality_review_status": "BLOCKED_BY_MECHANICAL_GATE",
+  "paired_style_delta_findings": [],
+  "paired_style_delta_layer_status": "NOT_APPLICABLE",
+  "paired_style_delta_summary": {
+    "authorship_inference": false,
+    "finding_count": 0,
+    "scope": "PAIRED_COURSE_VOICE_NON_REGRESSION_CANDIDATE",
+    "status": "NOT_APPLICABLE"
+  },
+  "pending_warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "不": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0003",
+            "column": 50,
+            "end": 50,
+            "end_column": 51,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "本题中不存在多目标规划,或者说存在一个最重要的指标:直接盈利值",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 49
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "不": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0003",
+                "column": 50,
+                "end": 50,
+                "end_column": 51,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "本题中不存在多目标规划,或者说存在一个最重要的指标:直接盈利值",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 49
+              }
+            ],
+            "removed": {
+              "不": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "faadf0872bfeb015ccf14005b433eca8901fc947912291f189384019a4043c42"
+    },
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "可": 1,
+          "可以": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0002",
+            "column": 14,
+            "end": 14,
+            "end_column": 15,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可",
+            "sentence_context": "依据决策图确定各项参数后，可按检查、装配、成品处理和拆解的顺序核算一次生产决策",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 13
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0003",
+            "column": 48,
+            "end": 49,
+            "end_column": 50,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可以",
+            "sentence_context": "题目中最明确且可以统一计量的指标是直接盈利值，故模型采用单一利润目标",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 47
+          }
+        ],
+        "before": {
+          "可以": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0002",
+            "column": 19,
+            "end": 20,
+            "end_column": 21,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可以",
+            "sentence_context": "分析决策图、将决策转换为决策参数后,可以将企业生产流程从零件的检查与装配开始分析到拆解环节",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 18
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "可": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "可": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 14,
+                "end": 14,
+                "end_column": 15,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "依据决策图确定各项参数后，可按检查、装配、成品处理和拆解的顺序核算一次生产决策",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 13
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0003",
+                "column": 48,
+                "end": 49,
+                "end_column": 50,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可以",
+                "sentence_context": "题目中最明确且可以统一计量的指标是直接盈利值，故模型采用单一利润目标",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 47
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 19,
+                "end": 20,
+                "end_column": 21,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可以",
+                "sentence_context": "分析决策图、将决策转换为决策参数后,可以将企业生产流程从零件的检查与装配开始分析到拆解环节",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 18
+              }
+            ],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "dca94ff7c2d51ac268d36a19fbccf0db320727c412efc7ce95bf8188013fae4b"
+    }
+  ],
+  "proposed_warning_resolutions": [],
+  "report_scope_check": {
+    "editable_range_count": 0,
+    "editable_ranges": [],
+    "extractor_replay_match": null,
+    "fragment_count": 0,
+    "outside_selection_unchanged": null,
+    "report_sha256": null,
+    "scope_path": null,
+    "scope_semantic_sha256": null,
+    "scope_sha256": null,
+    "source_sha256": null,
+    "status": "N/A"
+  },
+  "review_reasons": [
+    "speech_act_warning",
+    "unexplained_high_severity_signal",
+    "unexplained_strict_corpus_signal",
+    "introduced_style_signal"
+  ],
+  "scene": "MODELING",
+  "semantic_source_check": "N/A",
+  "speech_act_diagnostics": [],
+  "speech_act_layer_status": "REVIEW",
+  "status": "FAIL",
+  "strict_corpus_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 1,
+    "before_candidates": 0,
+    "clean_allowed_by_strict_layer": false,
+    "enabled": true,
+    "no_change_allowed": false,
+    "unexplained_candidates": 1
+  },
+  "style_signal_layer_status": "REVIEW",
+  "template_field_edit_scope_check": {
+    "authorized_edit_count": 0,
+    "authorized_edits": [],
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "provided": false,
+    "schema_version": null,
+    "scope_sha256": null,
+    "source_sha256": "874bc69edc4622b1d4343c5c304fc0c13721af04d060139142bc1ad73e9660f5",
+    "status": "N/A"
+  },
+  "template_field_findings": [],
+  "template_field_layer_status": "PASS",
+  "template_field_summary": {
+    "authorized_edit_count": 0,
+    "finding_count": 0,
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "review_finding_count": 0,
+    "status": "PASS"
+  },
+  "unaccepted_warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "不": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0003",
+            "column": 50,
+            "end": 50,
+            "end_column": 51,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "本题中不存在多目标规划,或者说存在一个最重要的指标:直接盈利值",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 49
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "不": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0003",
+                "column": 50,
+                "end": 50,
+                "end_column": 51,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "本题中不存在多目标规划,或者说存在一个最重要的指标:直接盈利值",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 49
+              }
+            ],
+            "removed": {
+              "不": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "faadf0872bfeb015ccf14005b433eca8901fc947912291f189384019a4043c42"
+    },
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "可": 1,
+          "可以": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0002",
+            "column": 14,
+            "end": 14,
+            "end_column": 15,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可",
+            "sentence_context": "依据决策图确定各项参数后，可按检查、装配、成品处理和拆解的顺序核算一次生产决策",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 13
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0003",
+            "column": 48,
+            "end": 49,
+            "end_column": 50,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可以",
+            "sentence_context": "题目中最明确且可以统一计量的指标是直接盈利值，故模型采用单一利润目标",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 47
+          }
+        ],
+        "before": {
+          "可以": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0002",
+            "column": 19,
+            "end": 20,
+            "end_column": 21,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可以",
+            "sentence_context": "分析决策图、将决策转换为决策参数后,可以将企业生产流程从零件的检查与装配开始分析到拆解环节",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 18
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "可": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "可": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 14,
+                "end": 14,
+                "end_column": 15,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "依据决策图确定各项参数后，可按检查、装配、成品处理和拆解的顺序核算一次生产决策",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 13
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0003",
+                "column": 48,
+                "end": 49,
+                "end_column": 50,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可以",
+                "sentence_context": "题目中最明确且可以统一计量的指标是直接盈利值，故模型采用单一利润目标",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 47
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 19,
+                "end": 20,
+                "end_column": 21,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可以",
+                "sentence_context": "分析决策图、将决策转换为决策参数后,可以将企业生产流程从零件的检查与装配开始分析到拆解环节",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 18
+              }
+            ],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "dca94ff7c2d51ac268d36a19fbccf0db320727c412efc7ce95bf8188013fae4b"
+    }
+  ],
+  "unexplained_high_findings": [
+    {
+      "action": "REWRITE",
+      "column": 44,
+      "context": "依据决策图确定各项参数后，可按检查、装配、成品处理和拆解的顺序核算一次生产决策。题目中最明确且可以统一计量的指标是直接盈利值，故模型采用单一利润目标。丢弃产品的价值对应环保方面的影响，调换费用中还含有信誉损失；后两项虽会影响方案取舍",
+      "count": 1,
+      "file": "after",
+      "finding_hash": "952615dd0309d08d106f51cb12241bf7f5e16c573056989eb4140bf0f726ea06",
+      "line": 1,
+      "matched": "最明确",
+      "rationale": "删除无证据的确定性包装或叠加缓和词，保持原文的主张力度和认识论边界。",
+      "severity": "high",
+      "signal_id": "LEX-STRICT-CORPUS-CERTAINTY-01"
+    }
+  ],
+  "unexplained_strict_findings": [
+    {
+      "action": "REWRITE",
+      "column": 44,
+      "context": "依据决策图确定各项参数后，可按检查、装配、成品处理和拆解的顺序核算一次生产决策。题目中最明确且可以统一计量的指标是直接盈利值，故模型采用单一利润目标。丢弃产品的价值对应环保方面的影响，调换费用中还含有信誉损失；后两项虽会影响方案取舍",
+      "count": 1,
+      "file": "after",
+      "finding_hash": "952615dd0309d08d106f51cb12241bf7f5e16c573056989eb4140bf0f726ea06",
+      "line": 1,
+      "matched": "最明确",
+      "rationale": "删除无证据的确定性包装或叠加缓和词，保持原文的主张力度和认识论边界。",
+      "severity": "high",
+      "signal_id": "LEX-STRICT-CORPUS-CERTAINTY-01"
+    }
+  ],
+  "warning_proposal_state": {
+    "attestation_status": "NOT_PROVIDED",
+    "cross_record_reviewer_linkability": "NOT_RECORDED",
+    "identity_verified": false,
+    "proposal_source": "NOT_PROVIDED",
+    "proposed_warning_fingerprints": [],
+    "review_clearance_granted": false,
+    "reviewer_identifier_collected": false,
+    "stable_reviewer_pseudonym_recorded": false,
+    "warning_review_request_sha256": null
+  },
+  "warning_resolutions": {},
+  "warning_review_request": {
+    "artifact": {
+      "after_sha256": "e7a66828b24c9fcde05f7a6d3892cf71f3bd0ac2e4cc790ccedd6e517b01d51c",
+      "before_sha256": "874bc69edc4622b1d4343c5c304fc0c13721af04d060139142bc1ad73e9660f5"
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "request_sha256": "847a8d3ad7355b28aebe263c9e97ed3cd1f4b7d03ad4e0f98f5912937e4253f9",
+    "schema": "humanize-warning-review-request/v1",
+    "validation_context": {
+      "document_format": "markdown",
+      "document_scope": "DOCUMENT",
+      "mode": "REWRITE",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "scene": "MODELING",
+      "strict_speech_acts": false
+    },
+    "warnings": [
+      {
+        "code": "SPEECH_ACT_NEGATION_CHANGED",
+        "details": {
+          "after": {},
+          "after_occurrences": [],
+          "before": {
+            "不": 1
+          },
+          "before_occurrences": [
+            {
+              "category": "negation",
+              "claim_id": "C0003",
+              "column": 50,
+              "end": 50,
+              "end_column": 51,
+              "end_line": 1,
+              "line": 1,
+              "marker": "不",
+              "sentence_context": "本题中不存在多目标规划,或者说存在一个最重要的指标:直接盈利值",
+              "sentence_id": "T0002",
+              "side": "before",
+              "start": 49
+            }
+          ],
+          "raw_delta": {
+            "added": {},
+            "removed": {
+              "不": 1
+            }
+          },
+          "residual_delta": [
+            {
+              "added": {},
+              "after_claim_id": null,
+              "after_occurrences": [],
+              "before_claim_id": null,
+              "before_occurrences": [
+                {
+                  "category": "negation",
+                  "claim_id": "C0003",
+                  "column": 50,
+                  "end": 50,
+                  "end_column": 51,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "不",
+                  "sentence_context": "本题中不存在多目标规划,或者说存在一个最重要的指标:直接盈利值",
+                  "sentence_id": "T0002",
+                  "side": "before",
+                  "start": 49
+                }
+              ],
+              "removed": {
+                "不": 1
+              },
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+        "severity": "warning",
+        "warning_fingerprint": "faadf0872bfeb015ccf14005b433eca8901fc947912291f189384019a4043c42"
+      },
+      {
+        "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+        "details": {
+          "after": {
+            "可": 1,
+            "可以": 1
+          },
+          "after_occurrences": [
+            {
+              "category": "modality_scope",
+              "claim_id": "C0002",
+              "column": 14,
+              "end": 14,
+              "end_column": 15,
+              "end_line": 1,
+              "line": 1,
+              "marker": "可",
+              "sentence_context": "依据决策图确定各项参数后，可按检查、装配、成品处理和拆解的顺序核算一次生产决策",
+              "sentence_id": "T0001",
+              "side": "after",
+              "start": 13
+            },
+            {
+              "category": "modality_scope",
+              "claim_id": "C0003",
+              "column": 48,
+              "end": 49,
+              "end_column": 50,
+              "end_line": 1,
+              "line": 1,
+              "marker": "可以",
+              "sentence_context": "题目中最明确且可以统一计量的指标是直接盈利值，故模型采用单一利润目标",
+              "sentence_id": "T0002",
+              "side": "after",
+              "start": 47
+            }
+          ],
+          "before": {
+            "可以": 1
+          },
+          "before_occurrences": [
+            {
+              "category": "modality_scope",
+              "claim_id": "C0002",
+              "column": 19,
+              "end": 20,
+              "end_column": 21,
+              "end_line": 1,
+              "line": 1,
+              "marker": "可以",
+              "sentence_context": "分析决策图、将决策转换为决策参数后,可以将企业生产流程从零件的检查与装配开始分析到拆解环节",
+              "sentence_id": "T0001",
+              "side": "before",
+              "start": 18
+            }
+          ],
+          "raw_delta": {
+            "added": {
+              "可": 1
+            },
+            "removed": {}
+          },
+          "residual_delta": [
+            {
+              "added": {
+                "可": 1
+              },
+              "after_claim_id": null,
+              "after_occurrences": [
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0002",
+                  "column": 14,
+                  "end": 14,
+                  "end_column": 15,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "可",
+                  "sentence_context": "依据决策图确定各项参数后，可按检查、装配、成品处理和拆解的顺序核算一次生产决策",
+                  "sentence_id": "T0001",
+                  "side": "after",
+                  "start": 13
+                },
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0003",
+                  "column": 48,
+                  "end": 49,
+                  "end_column": 50,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "可以",
+                  "sentence_context": "题目中最明确且可以统一计量的指标是直接盈利值，故模型采用单一利润目标",
+                  "sentence_id": "T0002",
+                  "side": "after",
+                  "start": 47
+                }
+              ],
+              "before_claim_id": null,
+              "before_occurrences": [
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0002",
+                  "column": 19,
+                  "end": 20,
+                  "end_column": 21,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "可以",
+                  "sentence_context": "分析决策图、将决策转换为决策参数后,可以将企业生产流程从零件的检查与装配开始分析到拆解环节",
+                  "sentence_id": "T0001",
+                  "side": "before",
+                  "start": 18
+                }
+              ],
+              "removed": {},
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+        "severity": "warning",
+        "warning_fingerprint": "dca94ff7c2d51ac268d36a19fbccf0db320727c412efc7ce95bf8188013fae4b"
+      }
+    ]
+  },
+  "warnings_without_resolution_proposal": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "不": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0003",
+            "column": 50,
+            "end": 50,
+            "end_column": 51,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "本题中不存在多目标规划,或者说存在一个最重要的指标:直接盈利值",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 49
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "不": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0003",
+                "column": 50,
+                "end": 50,
+                "end_column": 51,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "本题中不存在多目标规划,或者说存在一个最重要的指标:直接盈利值",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 49
+              }
+            ],
+            "removed": {
+              "不": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "faadf0872bfeb015ccf14005b433eca8901fc947912291f189384019a4043c42"
+    },
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "可": 1,
+          "可以": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0002",
+            "column": 14,
+            "end": 14,
+            "end_column": 15,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可",
+            "sentence_context": "依据决策图确定各项参数后，可按检查、装配、成品处理和拆解的顺序核算一次生产决策",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 13
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0003",
+            "column": 48,
+            "end": 49,
+            "end_column": 50,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可以",
+            "sentence_context": "题目中最明确且可以统一计量的指标是直接盈利值，故模型采用单一利润目标",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 47
+          }
+        ],
+        "before": {
+          "可以": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0002",
+            "column": 19,
+            "end": 20,
+            "end_column": 21,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可以",
+            "sentence_context": "分析决策图、将决策转换为决策参数后,可以将企业生产流程从零件的检查与装配开始分析到拆解环节",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 18
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "可": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "可": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 14,
+                "end": 14,
+                "end_column": 15,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "依据决策图确定各项参数后，可按检查、装配、成品处理和拆解的顺序核算一次生产决策",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 13
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0003",
+                "column": 48,
+                "end": 49,
+                "end_column": 50,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可以",
+                "sentence_context": "题目中最明确且可以统一计量的指标是直接盈利值，故模型采用单一利润目标",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 47
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 19,
+                "end": 20,
+                "end_column": 21,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可以",
+                "sentence_context": "分析决策图、将决策转换为决策参数后,可以将企业生产流程从零件的检查与装配开始分析到拆解环节",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 18
+              }
+            ],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "dca94ff7c2d51ac268d36a19fbccf0db320727c412efc7ce95bf8188013fae4b"
+    }
+  ]
+}

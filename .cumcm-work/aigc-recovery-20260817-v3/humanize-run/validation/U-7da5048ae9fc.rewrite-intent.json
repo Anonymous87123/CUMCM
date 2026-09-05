@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "d71a43536ef67f493fd614f5cddf875187878c5b2a4e6e6787a6f7416957ab9c",
+    "before_sha256": "d71a43536ef67f493fd614f5cddf875187878c5b2a4e6e6787a6f7416957ab9c"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "646998ede77de980d426949a2936a3a4911042d0a0babc6bf94603a969662552",
+  "chunk_binding_sha256": "965a3b947853859ab2fb6b1e92721d42aa9f123557b4115a54100a133c0d3f10",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-7da5048ae9fc.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "fb7a1aa1e1d8c2168fc629adf24d190b41e8d8e7bcacd2ebc91028b67a814a95",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 5,
+        "id": "S1",
+        "sha256": "46cc7dc7e0e350e32d9699e30c34ee031b89461d983d0a0bc27127e670586da3",
+        "start_line": 1
+      }
+    ],
+    "reason": "本段分别报告珍稀物种响应差异和状态结构简化边界，未把相对比较外推为长期预测。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "c0303d19f6282815926966563beab98e1ac880af015d3994b18a0468afbd6e93",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-7da5048ae9fc"
+}

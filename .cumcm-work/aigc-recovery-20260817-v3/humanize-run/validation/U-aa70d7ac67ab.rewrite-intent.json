@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "15775acd40c18d2ce3c4debf7b9f8d5dac6ffa34c1b00bcb007c3320930ef192",
+    "before_sha256": "15775acd40c18d2ce3c4debf7b9f8d5dac6ffa34c1b00bcb007c3320930ef192"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "77d42bfa8f9140d55b862963d3026510b475f6c4c78a69a972bcf3aab8e912f8",
+  "chunk_binding_sha256": "730055177f2bbdf87d4709579ce41054fe32feb9bef5e66e998b43099c4b6d91",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-aa70d7ac67ab.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "b069dac6ccce40da47988f0380e35a24d5904c576f6ee3b6be23a843bab6e9dd",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 24,
+        "id": "S1",
+        "sha256": "cfb1d875c8ed8bd621d2ec6a58c6bf3fd85920ed726016e694c26ef40ce2e753",
+        "start_line": 1
+      }
+    ],
+    "reason": "符号表逐行绑定符号、含义与单位，改写或调序会破坏后续公式的指代关系。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "7fba292b4a8edb27aaf73a986fe044a1994649e03c0ef2e45bce79a111968e88",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-aa70d7ac67ab"
+}

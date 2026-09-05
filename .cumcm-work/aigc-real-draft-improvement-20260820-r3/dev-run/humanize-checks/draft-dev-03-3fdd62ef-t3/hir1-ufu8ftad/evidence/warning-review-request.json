@@ -1,0 +1,312 @@
+{
+  "artifact": {
+    "after_sha256": "136d2b246fe5122e46fa5959fa55a6d78ea4e60a5bb40c1c21d9ce1c3abf8b53",
+    "before_sha256": "04887035a8dceddd85cf185e4c9ba658447ff047bc5017e5e8a60c5aef2d936b"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "3ad693e359267b2cd6b7652abfa3afa2f1ee6493bd6ed9a0228a44fae5c6405b",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "tex",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0007",
+            "column": 103,
+            "end": 103,
+            "end_column": 104,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "为此，分析中分别记录不同营养级获得的恢复收益，再比较外部压力变化后各层分配怎样改变",
+            "sentence_id": "T0004",
+            "side": "after",
+            "start": 102
+          }
+        ],
+        "before": {
+          "不": 3
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0005",
+            "column": 79,
+            "end": 79,
+            "end_column": 80,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "我们因此不把注意力停在某一单项指标上，而是追踪恢复收益在不同营养级和不同外部压力下如何分配",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 78
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0006",
+            "column": 103,
+            "end": 103,
+            "end_column": 104,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "我们因此不把注意力停在某一单项指标上，而是追踪恢复收益在不同营养级和不同外部压力下如何分配",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 102
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0006",
+            "column": 109,
+            "end": 109,
+            "end_column": 110,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "我们因此不把注意力停在某一单项指标上，而是追踪恢复收益在不同营养级和不同外部压力下如何分配",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 108
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "不": 2
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0007",
+                "column": 103,
+                "end": 103,
+                "end_column": 104,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "为此，分析中分别记录不同营养级获得的恢复收益，再比较外部压力变化后各层分配怎样改变",
+                "sentence_id": "T0004",
+                "side": "after",
+                "start": 102
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0005",
+                "column": 79,
+                "end": 79,
+                "end_column": 80,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "我们因此不把注意力停在某一单项指标上，而是追踪恢复收益在不同营养级和不同外部压力下如何分配",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 78
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0006",
+                "column": 103,
+                "end": 103,
+                "end_column": 104,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "我们因此不把注意力停在某一单项指标上，而是追踪恢复收益在不同营养级和不同外部压力下如何分配",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 102
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0006",
+                "column": 109,
+                "end": 109,
+                "end_column": 110,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "我们因此不把注意力停在某一单项指标上，而是追踪恢复收益在不同营养级和不同外部压力下如何分配",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 108
+              }
+            ],
+            "removed": {
+              "不": 2
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "3a39dcbf885df5da2b2bf6d77338d4ea2a0c0a0b6302ec717edcda590dbb73c2"
+    },
+    {
+      "code": "SPEECH_ACT_REPORTING_OBSERVATION_CHANGED",
+      "details": {
+        "after": {
+          "表明": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "reporting_observation",
+            "claim_id": "C0003",
+            "column": 51,
+            "end": 52,
+            "end_column": 53,
+            "end_line": 1,
+            "line": 1,
+            "marker": "表明",
+            "sentence_context": "、通道受阻与入侵扩散又表明，收益传到食物链上层之前仍会受到抵消",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 50
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "表明": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "表明": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "reporting_observation",
+                "claim_id": "C0003",
+                "column": 51,
+                "end": 52,
+                "end_column": 53,
+                "end_line": 1,
+                "line": 1,
+                "marker": "表明",
+                "sentence_context": "、通道受阻与入侵扩散又表明，收益传到食物链上层之前仍会受到抵消",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 50
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'reporting_observation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "fb556b08f6d39061e019d2002a8e31ede19fc487747c8fbb05c421f394b5069a"
+    },
+    {
+      "code": "SPEECH_ACT_LOGICAL_RELATION_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "因此": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "logical_relation",
+            "claim_id": "C0005",
+            "column": 77,
+            "end": 78,
+            "end_column": 79,
+            "end_line": 1,
+            "line": 1,
+            "marker": "因此",
+            "sentence_context": "我们因此不把注意力停在某一单项指标上，而是追踪恢复收益在不同营养级和不同外部压力下如何分配",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 76
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "因此": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0005",
+                "column": 77,
+                "end": 78,
+                "end_column": 79,
+                "end_line": 1,
+                "line": 1,
+                "marker": "因此",
+                "sentence_context": "我们因此不把注意力停在某一单项指标上，而是追踪恢复收益在不同营养级和不同外部压力下如何分配",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 76
+              }
+            ],
+            "removed": {
+              "因此": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'logical_relation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "9d898bfd8a106a72125706f56b167e8be3fd3b27d5267bb236a0fefd3856bda6"
+    }
+  ]
+}

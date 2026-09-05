@@ -1,0 +1,425 @@
+{
+  "schema": "aigc-blind-score/v1",
+  "status": "pass",
+  "pairs": 8,
+  "ratings": 16,
+  "errors": 0,
+  "warnings": 8,
+  "counts": {
+    "naturalness": {
+      "source": 12,
+      "candidate": 2,
+      "TIE": 2
+    },
+    "judgment_trajectory": {
+      "source": 12,
+      "candidate": 2,
+      "TIE": 2
+    },
+    "specificity": {
+      "TIE": 5,
+      "source": 11
+    },
+    "content_density": {
+      "candidate": 2,
+      "source": 10,
+      "TIE": 4
+    },
+    "semantic_fidelity": {
+      "candidate": 3,
+      "TIE": 9,
+      "source": 4
+    }
+  },
+  "counts_by_rater_kind": {
+    "model": {
+      "naturalness": {
+        "source": 12,
+        "candidate": 2,
+        "TIE": 2
+      },
+      "judgment_trajectory": {
+        "source": 12,
+        "candidate": 2,
+        "TIE": 2
+      },
+      "specificity": {
+        "TIE": 5,
+        "source": 11
+      },
+      "content_density": {
+        "candidate": 2,
+        "source": 10,
+        "TIE": 4
+      },
+      "semantic_fidelity": {
+        "candidate": 3,
+        "TIE": 9,
+        "source": 4
+      }
+    }
+  },
+  "per_pair_counts": {
+    "abstract-q1": {
+      "naturalness": {
+        "source": 2
+      },
+      "judgment_trajectory": {
+        "source": 2
+      },
+      "specificity": {
+        "TIE": 1,
+        "source": 1
+      },
+      "content_density": {
+        "candidate": 1,
+        "source": 1
+      },
+      "semantic_fidelity": {
+        "candidate": 1,
+        "TIE": 1
+      }
+    },
+    "abstract-q2": {
+      "naturalness": {
+        "candidate": 2
+      },
+      "judgment_trajectory": {
+        "candidate": 2
+      },
+      "specificity": {
+        "source": 1,
+        "TIE": 1
+      },
+      "content_density": {
+        "source": 1,
+        "candidate": 1
+      },
+      "semantic_fidelity": {
+        "TIE": 2
+      }
+    },
+    "abstract-long-dynamics": {
+      "naturalness": {
+        "source": 2
+      },
+      "judgment_trajectory": {
+        "source": 2
+      },
+      "specificity": {
+        "source": 2
+      },
+      "content_density": {
+        "source": 2
+      },
+      "semantic_fidelity": {
+        "source": 1,
+        "TIE": 1
+      }
+    },
+    "analysis-data-scale": {
+      "naturalness": {
+        "source": 2
+      },
+      "judgment_trajectory": {
+        "source": 2
+      },
+      "specificity": {
+        "source": 2
+      },
+      "content_density": {
+        "TIE": 1,
+        "source": 1
+      },
+      "semantic_fidelity": {
+        "source": 1,
+        "TIE": 1
+      }
+    },
+    "analysis-robustness-design": {
+      "naturalness": {
+        "TIE": 2
+      },
+      "judgment_trajectory": {
+        "TIE": 2
+      },
+      "specificity": {
+        "TIE": 2
+      },
+      "content_density": {
+        "TIE": 2
+      },
+      "semantic_fidelity": {
+        "TIE": 2
+      }
+    },
+    "result-long-horizon-boundary": {
+      "naturalness": {
+        "source": 2
+      },
+      "judgment_trajectory": {
+        "source": 2
+      },
+      "specificity": {
+        "source": 1,
+        "TIE": 1
+      },
+      "content_density": {
+        "TIE": 1,
+        "source": 1
+      },
+      "semantic_fidelity": {
+        "source": 1,
+        "TIE": 1
+      }
+    },
+    "policy-pollution-invasion": {
+      "naturalness": {
+        "source": 2
+      },
+      "judgment_trajectory": {
+        "source": 2
+      },
+      "specificity": {
+        "source": 2
+      },
+      "content_density": {
+        "source": 2
+      },
+      "semantic_fidelity": {
+        "candidate": 2
+      }
+    },
+    "limitation-extrapolation": {
+      "naturalness": {
+        "source": 2
+      },
+      "judgment_trajectory": {
+        "source": 2
+      },
+      "specificity": {
+        "source": 2
+      },
+      "content_density": {
+        "source": 2
+      },
+      "semantic_fidelity": {
+        "source": 1,
+        "TIE": 1
+      }
+    }
+  },
+  "rater_notes": [
+    {
+      "pair_id": "abstract-q1",
+      "rater_id": "M1",
+      "rater_kind": "model",
+      "text": "B adds a clearer recovery interpretation; A is tighter and closer to the visible result wording."
+    },
+    {
+      "pair_id": "abstract-q2",
+      "rater_id": "M1",
+      "rater_kind": "model",
+      "text": "B reads more directly; A preserves more explicit model and scenario detail."
+    },
+    {
+      "pair_id": "abstract-long-dynamics",
+      "rater_id": "M1",
+      "rater_kind": "model",
+      "text": "B retains the 75-group test and gives a clearer model-to-result progression; A contains visibly damaged counts."
+    },
+    {
+      "pair_id": "analysis-data-scale",
+      "rater_id": "M1",
+      "rater_kind": "model",
+      "text": "B explicitly states differentiated use of the two observation scales."
+    },
+    {
+      "pair_id": "analysis-robustness-design",
+      "rater_id": "M1",
+      "rater_kind": "model",
+      "text": "The two visible passages are identical."
+    },
+    {
+      "pair_id": "result-long-horizon-boundary",
+      "rater_id": "M1",
+      "rater_kind": "model",
+      "text": "B states the expanded test result more readably, including 75 combinations and 5 initial-value groups."
+    },
+    {
+      "pair_id": "policy-pollution-invasion",
+      "rater_id": "M1",
+      "rater_kind": "model",
+      "text": "B is more direct and operational; A is more cautious and stays closer to the stated model-supported scope."
+    },
+    {
+      "pair_id": "limitation-extrapolation",
+      "rater_id": "M1",
+      "rater_kind": "model",
+      "text": "B clearly limits current use to directional comparison and specifies the data needed for stronger extrapolation."
+    },
+    {
+      "pair_id": "abstract-q1",
+      "rater_id": "M2",
+      "rater_kind": "model",
+      "text": "B has clearer problem framing and explicit scenario-to-result linkage; A ends with a compressed fragment."
+    },
+    {
+      "pair_id": "abstract-q2",
+      "rater_id": "M2",
+      "rater_kind": "model",
+      "text": "B is more concise and readable; both preserve the same listed scenarios, values, and conclusion."
+    },
+    {
+      "pair_id": "abstract-long-dynamics",
+      "rater_id": "M2",
+      "rater_kind": "model",
+      "text": "B makes the model setup, parameter progression, and test result sequence explicit; both retain the same numerical claims."
+    },
+    {
+      "pair_id": "analysis-data-scale",
+      "rater_id": "M2",
+      "rater_kind": "model",
+      "text": "B explicitly states that the two observations require differentiated use; the underlying scale mapping remains the same."
+    },
+    {
+      "pair_id": "analysis-robustness-design",
+      "rater_id": "M2",
+      "rater_kind": "model",
+      "text": "A and B are visibly identical, including robustness conditions and the conservative conclusion."
+    },
+    {
+      "pair_id": "result-long-horizon-boundary",
+      "rater_id": "M2",
+      "rater_kind": "model",
+      "text": "B supplies a clearer transition and readable spacing while retaining the same time horizons, values, and 6.7% result."
+    },
+    {
+      "pair_id": "policy-pollution-invasion",
+      "rater_id": "M2",
+      "rater_kind": "model",
+      "text": "B is more direct and actionable, but adds figurative wording about opening the recovery door; A states the model-support limitation more conservatively."
+    },
+    {
+      "pair_id": "limitation-extrapolation",
+      "rater_id": "M2",
+      "rater_kind": "model",
+      "text": "B states current applicability and required future data in a more direct progression; both preserve the same extrapolation limits."
+    }
+  ],
+  "variants": [
+    "candidate",
+    "source"
+  ],
+  "coverage": {
+    "abstract-q1": 2,
+    "abstract-q2": 2,
+    "abstract-long-dynamics": 2,
+    "analysis-data-scale": 2,
+    "analysis-robustness-design": 2,
+    "result-long-horizon-boundary": 2,
+    "policy-pollution-invasion": 2,
+    "limitation-extrapolation": 2
+  },
+  "human_coverage": {
+    "abstract-q1": 0,
+    "abstract-q2": 0,
+    "abstract-long-dynamics": 0,
+    "analysis-data-scale": 0,
+    "analysis-robustness-design": 0,
+    "result-long-horizon-boundary": 0,
+    "policy-pollution-invasion": 0,
+    "limitation-extrapolation": 0
+  },
+  "model_coverage": {
+    "abstract-q1": 2,
+    "abstract-q2": 2,
+    "abstract-long-dynamics": 2,
+    "analysis-data-scale": 2,
+    "analysis-robustness-design": 2,
+    "result-long-horizon-boundary": 2,
+    "policy-pollution-invasion": 2,
+    "limitation-extrapolation": 2
+  },
+  "unspecified_coverage": {
+    "abstract-q1": 0,
+    "abstract-q2": 0,
+    "abstract-long-dynamics": 0,
+    "analysis-data-scale": 0,
+    "analysis-robustness-design": 0,
+    "result-long-horizon-boundary": 0,
+    "policy-pollution-invasion": 0,
+    "limitation-extrapolation": 0
+  },
+  "formal_human_ready": false,
+  "evaluation_level": "PROBE_OR_HUMAN_PENDING",
+  "evidence": {
+    "key": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\blind-run\\evaluation-key.json",
+      "sha256": "eef3e787efa90d1425ef32332e4b9398624b6af1541ae55d47960e6e1a151448"
+    },
+    "ratings": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\blind-run\\model-ratings.csv",
+      "sha256": "379e3d33bbbcfcd6058d6b71bfa67043441a3a419d3fe059c7877b4fc7d400f1"
+    },
+    "packet": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\blind-run\\evaluation-packet.json",
+      "sha256": "ef1cf41c053b5a376f3dc71fcdb92fa8e72484a94ba457a7435e128aba2ffca8"
+    },
+    "source_pairs": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\blind-pairs-v4.json",
+      "sha256": "7f41726a68e4f67ba730aa6163eeb0f3896ca449c2e9a3f682fc9dffcbcc66cc"
+    }
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+      "pair_id": "abstract-q1",
+      "human_raters": 0
+    },
+    {
+      "severity": "warning",
+      "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+      "pair_id": "abstract-q2",
+      "human_raters": 0
+    },
+    {
+      "severity": "warning",
+      "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+      "pair_id": "abstract-long-dynamics",
+      "human_raters": 0
+    },
+    {
+      "severity": "warning",
+      "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+      "pair_id": "analysis-data-scale",
+      "human_raters": 0
+    },
+    {
+      "severity": "warning",
+      "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+      "pair_id": "analysis-robustness-design",
+      "human_raters": 0
+    },
+    {
+      "severity": "warning",
+      "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+      "pair_id": "result-long-horizon-boundary",
+      "human_raters": 0
+    },
+    {
+      "severity": "warning",
+      "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+      "pair_id": "policy-pollution-invasion",
+      "human_raters": 0
+    },
+    {
+      "severity": "warning",
+      "code": "PAIR_LACKS_TWO_HUMAN_RATERS",
+      "pair_id": "limitation-extrapolation",
+      "human_raters": 0
+    }
+  ],
+  "interpretation": "Counts report preferences from the declared rater kinds. Model probes are diagnostic only; formal release requires two human raters per pair. No count proves authorship or detector performance."
+}

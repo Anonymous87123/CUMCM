@@ -1,0 +1,93 @@
+{
+  "schema": "aigc-adapter-run/v1",
+  "package": "humanize-academic-chinese",
+  "action": "verify-candidate",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "CLAIM_STRENGTH_CHANGED",
+      "before_count": 1,
+      "after_count": 0,
+      "location_method": "changed-block-delta",
+      "before_examples": [
+        {
+          "value": "说明",
+          "matched": "说明",
+          "line": 1,
+          "column": 22,
+          "context": "四大家鱼回升、江豚回暖和长江鲟产卵场重现，说明禁渔后的恢复已经出现；“秃海”、通道受阻和入侵扩散又提示，这部分收益在食物链上行过程中还会被重新抵消。我们因此不把注意力停在某一单项指标上，而是追踪恢复收益在不同营养级和不同外部压力下如何分配。"
+        }
+      ],
+      "after_examples": [],
+      "before_sequence_sha256": "c7de4e592ba056f05e3584f5d3c8b491bb9d4b117965a5c3a27ed5ac0731ca12",
+      "after_sequence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+      "finding_sha256": "27738aaa8f698c0fa559c0ca4d85b6ff63a97f3babf2b1b82530bc48c60eef4d"
+    }
+  ],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r3\\dev-run\\verify-final\\draft-dev-03-3fdd62ef-t2",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r3\\dev-run\\sources\\draft-dev-03-3fdd62ef.tex",
+    "sha256": "04887035a8dceddd85cf185e4c9ba658447ff047bc5017e5e8a60c5aef2d936b",
+    "bytes": 362,
+    "suffix": ".tex"
+  },
+  "protected_inventory": {
+    "numbers": {},
+    "tex_commands": {},
+    "tex_keys": {},
+    "inline_math": {},
+    "dollar_display_math": {},
+    "display_math": {},
+    "math_environments": {},
+    "code_fences": {},
+    "urls": {}
+  },
+  "tex_semantic_contract": {
+    "status": "pass",
+    "before": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r3\\dev-run\\sources\\draft-dev-03-3fdd62ef.tex",
+    "after": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r3\\dev-run\\authoring\\draft-dev-03-3fdd62ef-t2.tex",
+    "scene": "GENERAL",
+    "errors": 0,
+    "warnings": 1,
+    "findings": [
+      {
+        "severity": "warning",
+        "code": "CLAIM_STRENGTH_CHANGED",
+        "before_count": 1,
+        "after_count": 0,
+        "location_method": "changed-block-delta",
+        "before_examples": [
+          {
+            "value": "说明",
+            "matched": "说明",
+            "line": 1,
+            "column": 22,
+            "context": "四大家鱼回升、江豚回暖和长江鲟产卵场重现，说明禁渔后的恢复已经出现；“秃海”、通道受阻和入侵扩散又提示，这部分收益在食物链上行过程中还会被重新抵消。我们因此不把注意力停在某一单项指标上，而是追踪恢复收益在不同营养级和不同外部压力下如何分配。"
+          }
+        ],
+        "after_examples": [],
+        "before_sequence_sha256": "c7de4e592ba056f05e3584f5d3c8b491bb9d4b117965a5c3a27ed5ac0731ca12",
+        "after_sequence_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "finding_sha256": "27738aaa8f698c0fa559c0ca4d85b6ff63a97f3babf2b1b82530bc48c60eef4d"
+      }
+    ],
+    "number_diff": {
+      "removed": [],
+      "introduced": []
+    }
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r3\\dev-run\\authoring\\draft-dev-03-3fdd62ef-t2.tex",
+    "sha256": "e0ce5ffff2daedaeb80a60b66369fea90d88f69474e7c37c74a03d2fe0b8cdcc",
+    "bytes": 370,
+    "suffix": ".tex"
+  },
+  "human_review_required": true
+}

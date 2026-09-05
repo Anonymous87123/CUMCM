@@ -1,0 +1,160 @@
+{
+  "artifact": {
+    "after_sha256": "7dc86f4420ebd18fad48c8ed08b7ea410dbdc0768fe00b88a46cc0edc0d2e255",
+    "before_sha256": "10ab89e0600db62714e6ff8dc76ded294748a04deee327aac859121f161952d5"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "ee35cf2b6b9b1bd5248ef4efce601173090de97ef8136f2df65cc424d63e8f3d",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "7b21832e129e242fbe9d172a5cd2134ce2ba04c9be4fa9d9f7bd102029281a29",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "markdown",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_LOGICAL_RELATION_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "因此": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "logical_relation",
+            "claim_id": "C0004",
+            "column": 58,
+            "end": 59,
+            "end_column": 60,
+            "end_line": 1,
+            "line": 1,
+            "marker": "因此",
+            "sentence_context": "因此本文选择偶相关性分析确定两种品类之间的相互关系",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 57
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "因此": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0004",
+                "column": 58,
+                "end": 59,
+                "end_column": 60,
+                "end_line": 1,
+                "line": 1,
+                "marker": "因此",
+                "sentence_context": "因此本文选择偶相关性分析确定两种品类之间的相互关系",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 57
+              }
+            ],
+            "removed": {
+              "因此": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'logical_relation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "c118ee09d3d30977b000e0aae876f8d5e3d9e1b8678acb28ca7ba0ece23345d7"
+    },
+    {
+      "code": "SPEECH_ACT_CONDITION_CHANGED",
+      "details": {
+        "after": {
+          "若": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "condition",
+            "claim_id": "C0003",
+            "column": 29,
+            "end": 29,
+            "end_column": 30,
+            "end_line": 1,
+            "line": 1,
+            "marker": "若",
+            "sentence_context": "若径行计算相关性，所得相关程度不能据以判断两种单品之问销基的关系",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 28
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "若": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "若": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0003",
+                "column": 29,
+                "end": 29,
+                "end_column": 30,
+                "end_line": 1,
+                "line": 1,
+                "marker": "若",
+                "sentence_context": "若径行计算相关性，所得相关程度不能据以判断两种单品之问销基的关系",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 28
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'condition'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "f84f3373d04505e1ba494b56ce808aca53322366f5f2be7fa65b19945987e892"
+    }
+  ]
+}

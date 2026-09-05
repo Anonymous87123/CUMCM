@@ -1,0 +1,228 @@
+{
+  "schema": "aigc-tex-blind-pair-spec/v1",
+  "source": {
+    "path": "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main.tex",
+    "sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609"
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\humanize-run\\rendered_review\\main.tex",
+    "sha256": "410300f4051bb153e0fb2452488987ed08286a17b2462903f9371e7d0d692592"
+  },
+  "sampling": {
+    "method": "seeded-section-round-robin/v1",
+    "seed": 20260818,
+    "requested": 12,
+    "eligible": 40,
+    "selected": 12,
+    "min_han": 60,
+    "excluded_source_lines": [
+      24,
+      26,
+      28,
+      59,
+      74,
+      420,
+      490,
+      526
+    ],
+    "exclude_spec": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\tex-pair-spec.json",
+      "sha256": "cc29ae73d56fc852d3854b33d044e24d74127fa2806042fd94011cfec2257346"
+    },
+    "quality_labels_used": false
+  },
+  "pairs": [
+    {
+      "id": "holdout-01-line-22",
+      "section": "摘要",
+      "source_lines": {
+        "start": 22,
+        "end": 22
+      },
+      "candidate_lines": {
+        "start": 22,
+        "end": 22
+      },
+      "sampling_metrics": {
+        "source_han": 166,
+        "candidate_han": 146
+      }
+    },
+    {
+      "id": "holdout-02-line-38",
+      "section": "问题重述",
+      "source_lines": {
+        "start": 38,
+        "end": 38
+      },
+      "candidate_lines": {
+        "start": 38,
+        "end": 38
+      },
+      "sampling_metrics": {
+        "source_han": 256,
+        "candidate_han": 247
+      }
+    },
+    {
+      "id": "holdout-03-line-54",
+      "section": "总体分析",
+      "source_lines": {
+        "start": 54,
+        "end": 54
+      },
+      "candidate_lines": {
+        "start": 54,
+        "end": 54
+      },
+      "sampling_metrics": {
+        "source_han": 160,
+        "candidate_han": 125
+      }
+    },
+    {
+      "id": "holdout-04-line-57",
+      "section": "问题一分析",
+      "source_lines": {
+        "start": 57,
+        "end": 57
+      },
+      "candidate_lines": {
+        "start": 57,
+        "end": 57
+      },
+      "sampling_metrics": {
+        "source_han": 171,
+        "candidate_han": 124
+      }
+    },
+    {
+      "id": "holdout-05-line-64",
+      "section": "问题二分析",
+      "source_lines": {
+        "start": 64,
+        "end": 64
+      },
+      "candidate_lines": {
+        "start": 64,
+        "end": 64
+      },
+      "sampling_metrics": {
+        "source_han": 86,
+        "candidate_han": 79
+      }
+    },
+    {
+      "id": "holdout-06-line-79",
+      "section": "问题五分析",
+      "source_lines": {
+        "start": 79,
+        "end": 79
+      },
+      "candidate_lines": {
+        "start": 79,
+        "end": 79
+      },
+      "sampling_metrics": {
+        "source_han": 90,
+        "candidate_han": 72
+      }
+    },
+    {
+      "id": "holdout-07-line-207",
+      "section": "结果与机制解释",
+      "source_lines": {
+        "start": 207,
+        "end": 207
+      },
+      "candidate_lines": {
+        "start": 207,
+        "end": 207
+      },
+      "sampling_metrics": {
+        "source_han": 249,
+        "candidate_han": 170
+      }
+    },
+    {
+      "id": "holdout-08-line-277",
+      "section": "情景结果与机制讨论",
+      "source_lines": {
+        "start": 277,
+        "end": 277
+      },
+      "candidate_lines": {
+        "start": 277,
+        "end": 277
+      },
+      "sampling_metrics": {
+        "source_han": 193,
+        "candidate_han": 129
+      }
+    },
+    {
+      "id": "holdout-09-line-422",
+      "section": "求解与结果",
+      "source_lines": {
+        "start": 422,
+        "end": 422
+      },
+      "candidate_lines": {
+        "start": 422,
+        "end": 422
+      },
+      "sampling_metrics": {
+        "source_han": 135,
+        "candidate_han": 116
+      }
+    },
+    {
+      "id": "holdout-10-line-488",
+      "section": "治理建议",
+      "source_lines": {
+        "start": 488,
+        "end": 488
+      },
+      "candidate_lines": {
+        "start": 488,
+        "end": 488
+      },
+      "sampling_metrics": {
+        "source_han": 135,
+        "candidate_han": 128
+      }
+    },
+    {
+      "id": "holdout-11-line-502",
+      "section": "单区食物网的解释边界",
+      "source_lines": {
+        "start": 502,
+        "end": 502
+      },
+      "candidate_lines": {
+        "start": 502,
+        "end": 502
+      },
+      "sampling_metrics": {
+        "source_han": 123,
+        "candidate_han": 116
+      }
+    },
+    {
+      "id": "holdout-12-line-524",
+      "section": "综合评价的排序可信度",
+      "source_lines": {
+        "start": 524,
+        "end": 524
+      },
+      "candidate_lines": {
+        "start": 524,
+        "end": 524
+      },
+      "sampling_metrics": {
+        "source_han": 140,
+        "candidate_han": 115
+      }
+    }
+  ]
+}

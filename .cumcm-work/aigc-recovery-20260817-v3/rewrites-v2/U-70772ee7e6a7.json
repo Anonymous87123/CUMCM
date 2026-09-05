@@ -1,0 +1,91 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-70772ee7e6a7",
+  "chunk_binding_sha256": "e274d81a149b5d1ab61fd2025d2df452f41cd4dfc6435d38c61a1d929c5b3345",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "842ae235d7ee9818",
+    "prepare_integrity_sha256": "c38e1d6ea4a8467e7d26d083319b223bd567819e17070c0ac06e74de425e1aa2",
+    "run_metadata_sha256": "af8e27fded78b4cdf5593d7a49751c6f6e43e94172419e8103c4f33a166925b9",
+    "policy_snapshot_sha256": "78c9d819ed643befe1459941693ca6ea078ca61644c28b531ba2fb612fd20234",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "unit_id": "U-70772ee7e6a7",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 25222,
+      "end": 25559,
+      "start_line": 509,
+      "end_line": 513,
+      "source_span_sha256": "8eccfe0249291e20e12cec7fc0580b0d72eaeb1e31e05b68da6c91da54448464",
+      "masked_text_sha256": "a8eda0a64da1ad917ab551a16b8734804e016928d35f2cd38aa3f16f9bd81c33",
+      "chunk_binding_sha256": "e274d81a149b5d1ab61fd2025d2df452f41cd4dfc6435d38c61a1d929c5b3345"
+    },
+    "scene_route": {
+      "requested_scene": "MODELING",
+      "resolved_scene": "MODELING",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "81c73e13e442782bb473203a054b20a8bcafea612580b289d87a49076a195bb6",
+      "routing_input_sha256": "acaa6461d77312095a53873e33a061ba2f81e5487cb32b25a39332e2e6871c58"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-modeling",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "MODELING",
+      "profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "1191c8d7739ec772c3d6432cabb147dc154d371c54c84feaf2c4fa74ad54cfe1"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00672:c399e2e3a443]]\nHastings-Powell 降维模型保留了[[PROTECTED:F00001-P00673:e0e72a0b0173]]的最小反馈闭环，使承载力变化与轨道类型之间的关系可以在单一参数轴上比较。在这一层抽象中，轨道形态会随 [[PROTECTED:F00001-P00674:68e2c657635f]] 改变。代表点 [[PROTECTED:F00001-P00675:4389878ec2fe]] 的后期统计量表明，随着 [[PROTECTED:F00001-P00676:68e2c657635f]] 增大，波动幅度和峰间隔离散程度同步放大，复杂非线性波动同时出现在轨道和后期统计量中。\n\n这一模型承担的是长期行为展示，而不是河段尺度的参数映射。[[PROTECTED:F00001-P00677:7fac8a16fd90]] 与前文功能群只保持营养级对应关系，不继承问题一的具体参数口径，因此它适合解释行为类型如何变化，而不适合反推具体河段的承载阈值；文中的 [[PROTECTED:F00001-P00678:68e2c657635f]] 只对应归一化结构压力水平。\n\n",
+  "rewrite_intent": {
+    "summary": "以轨道和后期统计量共同限定长期行为展示，不用评价壳强调结果。",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "以轨道和后期统计量共同限定长期行为展示，不用评价壳强调结果。"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 2,
+        "end_line": 2,
+        "sha256": "4fdf51f9621f97d1f7908ab185a550aae60e6ebc4d5adc6cacc2f95f34c87606"
+      }
+    ],
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  }
+}

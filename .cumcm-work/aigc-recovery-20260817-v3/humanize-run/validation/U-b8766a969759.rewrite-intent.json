@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "b9f69dd3d298c51f10bdaa022e46032e00082a10372570969cbec804ec7248a7",
+    "before_sha256": "b9f69dd3d298c51f10bdaa022e46032e00082a10372570969cbec804ec7248a7"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "75b74f97a5f511cdfc4dd3bed02f7f13cb7de232e597d6910c6baf1d24c8a77f",
+  "chunk_binding_sha256": "1ff933597d9f4447063f55d3d589f73457a22be1e854de4300b40a0c63bd85b2",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-b8766a969759.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "8b278fcdbbc76942c9161146746e76d7c3969ae51eed8275da4bb9d6c829559b",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 37,
+        "id": "S1",
+        "sha256": "56b108ea6c21f686ccfa29d7f94a8f2ca2147f57e08f4c965158843ad2f9d011",
+        "start_line": 1
+      }
+    ],
+    "reason": "参数附表逐行绑定默认值、依据和模型角色，保留原表可避免参数职责与数值错位。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "2e8ac9c37aa63b8571649e4be29ddf64aae10ddbfeb7d20396c40f6deb4f7ad3",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-b8766a969759"
+}

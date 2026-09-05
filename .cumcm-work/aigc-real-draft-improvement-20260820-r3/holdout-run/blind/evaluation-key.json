@@ -1,0 +1,62 @@
+{
+  "schema": "aigc-blind-key/v1",
+  "seed": 20260902,
+  "dimensions": [
+    "naturalness",
+    "judgment_trajectory",
+    "specificity",
+    "content_density",
+    "semantic_fidelity"
+  ],
+  "pairs": [
+    {
+      "pair_id": "P0001",
+      "A": "draft-holdout-01-eefb24f7::source",
+      "B": "draft-holdout-01-eefb24f7::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0002",
+      "A": "draft-holdout-01-eefb24f7::source",
+      "B": "draft-holdout-01-eefb24f7::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0003",
+      "A": "draft-holdout-01-eefb24f7::humanize-academic-chinese::t3",
+      "B": "draft-holdout-01-eefb24f7::source"
+    },
+    {
+      "pair_id": "P0004",
+      "A": "draft-holdout-02-bb289651::humanize-academic-chinese::t1",
+      "B": "draft-holdout-02-bb289651::source"
+    },
+    {
+      "pair_id": "P0005",
+      "A": "draft-holdout-02-bb289651::source",
+      "B": "draft-holdout-02-bb289651::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0006",
+      "A": "draft-holdout-02-bb289651::humanize-academic-chinese::t3",
+      "B": "draft-holdout-02-bb289651::source"
+    },
+    {
+      "pair_id": "P0007",
+      "A": "draft-holdout-03-cb2bd584::source",
+      "B": "draft-holdout-03-cb2bd584::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0008",
+      "A": "draft-holdout-03-cb2bd584::source",
+      "B": "draft-holdout-03-cb2bd584::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0009",
+      "A": "draft-holdout-03-cb2bd584::source",
+      "B": "draft-holdout-03-cb2bd584::humanize-academic-chinese::t3"
+    }
+  ],
+  "packet_path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r3\\holdout-run\\blind\\evaluation-packet.json",
+  "packet_sha256": "9348a3fce0a6d025dce99014b1290e41a8d0cc9c23b676a66ef232646ab45a99",
+  "source_pairs_path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r3\\holdout-run\\blind\\pairs.json",
+  "source_pairs_sha256": "2c8c4cee89a6f472ec5de44ecb2cbd9f7675224aaebd6fd60f88047c0ca7141a"
+}

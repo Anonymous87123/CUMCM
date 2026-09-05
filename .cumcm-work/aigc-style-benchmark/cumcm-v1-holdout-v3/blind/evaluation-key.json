@@ -1,0 +1,62 @@
+{
+  "schema": "aigc-blind-key/v1",
+  "seed": 20260821,
+  "dimensions": [
+    "naturalness",
+    "judgment_trajectory",
+    "specificity",
+    "content_density",
+    "semantic_fidelity"
+  ],
+  "pairs": [
+    {
+      "pair_id": "P0001",
+      "A": "a-search-error-boundary::humanize-academic-chinese::t1",
+      "B": "a-search-error-boundary::source"
+    },
+    {
+      "pair_id": "P0002",
+      "A": "a-search-error-boundary::source",
+      "B": "a-search-error-boundary::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0003",
+      "A": "a-search-error-boundary::source",
+      "B": "a-search-error-boundary::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0004",
+      "A": "b-strategy-stability::source",
+      "B": "b-strategy-stability::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0005",
+      "A": "b-strategy-stability::source",
+      "B": "b-strategy-stability::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0006",
+      "A": "b-strategy-stability::source",
+      "B": "b-strategy-stability::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0007",
+      "A": "c-sample-limit-improvement::humanize-academic-chinese::t1",
+      "B": "c-sample-limit-improvement::source"
+    },
+    {
+      "pair_id": "P0008",
+      "A": "c-sample-limit-improvement::source",
+      "B": "c-sample-limit-improvement::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0009",
+      "A": "c-sample-limit-improvement::source",
+      "B": "c-sample-limit-improvement::humanize-academic-chinese::t3"
+    }
+  ],
+  "packet_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-v3\\blind\\evaluation-packet.json",
+  "packet_sha256": "b3d2758e6f92d25862f25a054d1ada824d143fced05b6d91d5015ccd898b9d75",
+  "source_pairs_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-v3\\blind\\pairs.json",
+  "source_pairs_sha256": "754d75a1abc4a0e7af5a014251007e5cae11a8cce805011eddbad73271e7c06a"
+}

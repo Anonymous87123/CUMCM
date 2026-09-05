@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "459685933a67648953df5497d320befc852b3c77fbace3dd1b8f290bef24aba0",
+    "before_sha256": "459685933a67648953df5497d320befc852b3c77fbace3dd1b8f290bef24aba0"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "070c7ae1297ec4e3371eece7f615c663bd8efa3acdb7e37acc08df991d54ec8e",
+  "chunk_binding_sha256": "12f2a15c7a6032a929647d12f504d5549751676dc3576989b27c1ab70bd7c1a3",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-46fd651c1f35.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "92faeff92bfd49555744f2ef792c2fd4d02ba46259d18ebdf48b0e65ea001637",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 7,
+        "id": "S1",
+        "sha256": "4f95e6ab7c96785b8d668ecebd67078d08a40f38d104da2cb4233aac0c4fbbae",
+        "start_line": 1
+      }
+    ],
+    "reason": "参数标定段落按总量约束、局地对照和区间扫描报告实际计算，现有结构对应求解过程。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "97ecb0bc4f9f4bb5c7d54b34d44db2c7fce9edc084a9f2fd09f2b819cefe8e46",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-46fd651c1f35"
+}

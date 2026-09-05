@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "dd67bc11a9175c3459c23db41f955575e40892a93df55a1037fc64d2e7fd8c0f",
+    "before_sha256": "dd67bc11a9175c3459c23db41f955575e40892a93df55a1037fc64d2e7fd8c0f"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "5cda0ac006123a440284dbabdc4d04de4eafcecb44bf9d4dfc550328b40a2b3c",
+  "chunk_binding_sha256": "1a260c73a03d10d0fc9fcde03aa7a93b679df2539468b4aa30cbe3d73938afb3",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-39b744730e0f.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "99ecaffbef2ec2863153bb29ac8d5dee2443bece51102f2cedbfa1180d828d73",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 7,
+        "id": "S1",
+        "sha256": "6a23c7e5d20050b484831345a2889e340483ebffb265948eb0951d6a221c0707",
+        "start_line": 1
+      }
+    ],
+    "reason": "参考文献单元承担引用条目与附录边界结构，正文语言改写不适用于该结构范围。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "1289c88e92e91583e710f440ad0dc78cb3792926b285645f2c5e2c141cb5dcfb",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-39b744730e0f"
+}

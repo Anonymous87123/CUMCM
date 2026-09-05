@@ -1,0 +1,132 @@
+{
+  "artifact": {
+    "after_sha256": "3d4f906d4050e70683cfff567e91a68dbdb213e6a54a7d49f28303d744dd1af5",
+    "before_sha256": "42655d2784240dfde83e263394bff90604a9172bf8df92494f3a0842a875873e"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "971c78c516a93d86bb870f2fdb5640195a4f72d2a2890342c0d31ef2ebfff78b",
+  "chunk_binding_sha256": "aafe5aabe11afa1d39ccd25433b2e32900adadf93170e897e8e09b7cab5a3f35",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-015593fe61e9.diff",
+    "sha256": "4c4febeeba6d60cdf9f4643ed5883b5b9f48dc273e6c9e2c96f2e0ebae057bdd"
+  },
+  "evidence_sha256": "b8e02b4d09d3c6317e41e35eac9f8daa3f513e0277bea18345a624d592fe9b59",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "区分综合排序、分问职责与外推所需数据，拆除统一逻辑链和自动展望。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "区分综合排序、分问职责与外推所需数据，拆除统一逻辑链和自动展望。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O3",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S3"
+        ],
+        "summary": "区分综合排序、分问职责与外推所需数据，拆除统一逻辑链和自动展望。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O4",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S4"
+        ],
+        "summary": "区分综合排序、分问职责与外推所需数据，拆除统一逻辑链和自动展望。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "d1148a998c49cffb2456f66cdaefcc1add831511702183d72a2774707c9118cb",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "id": "S2",
+        "sha256": "b6e20fe895212f5e3f15615d3c2cad58781b1a0f051642e629f978587e9d0c9d",
+        "start_line": 4
+      },
+      {
+        "end_line": 6,
+        "id": "S3",
+        "sha256": "68ea1dbf5b036042c019d73926c73bc4a11ae76a38a442788142c83e4ca68cc7",
+        "start_line": 6
+      },
+      {
+        "end_line": 8,
+        "id": "S4",
+        "sha256": "7afe256ffaa5829c0f651b38e294c7ea26ec8a336994dfaa3f88b010f88b9c6f",
+        "start_line": 8
+      }
+    ],
+    "summary": "区分综合排序、分问职责与外推所需数据，拆除统一逻辑链和自动展望。",
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "operation": "REPLACE",
+        "start_line": 4
+      },
+      {
+        "end_line": 6,
+        "operation": "REPLACE",
+        "start_line": 6
+      },
+      {
+        "end_line": 8,
+        "operation": "REPLACE",
+        "start_line": 8
+      }
+    ],
+    "masked_after_sha256": "fbd9268ecae71326c66bbb9d0e028b140097fd77f8c6ca45eabd7ea2c51934bc",
+    "masked_before_sha256": "523f5d75fcf3f5cd5c0e3808294219b007676bf4fd2c3380e8b9630f9f995341",
+    "source_spans_covered": 4,
+    "source_spans_total": 4,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "80bf6dc080e8cb966110cc5d845aa69e218002c6deca4770521187d753ffd21d",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-015593fe61e9"
+}

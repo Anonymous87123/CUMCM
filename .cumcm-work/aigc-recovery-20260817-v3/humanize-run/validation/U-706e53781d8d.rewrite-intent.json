@@ -1,0 +1,110 @@
+{
+  "artifact": {
+    "after_sha256": "5c6ea9b9fc7a9b64f5565a42d845e1438f07d0bc303fe1ffb36ff2ef341e5340",
+    "before_sha256": "765994976a40e48b21f507daf5c47111c551ef67e9dee7daeac08528d23159b5"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "38a290fe84993a79efc425e6de2c3c18c665c10d87576a4525171d0d9ad9a2d4",
+  "chunk_binding_sha256": "c65983ac1f2c5a1681cba3a6dfbb10f0bed1c2c915550aea9cc8f0253c3f796b",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-706e53781d8d.diff",
+    "sha256": "f52635e2776dba43a351da53c4dd08d1d7fa65329b54647120d140cefc08972c"
+  },
+  "evidence_sha256": "6b3fea499c395630efc1e85a5244c79786099fedafe795c1a1003f070ca2f458",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "由扩展积分结果修正短时间窗阈值判断，明确只报告方向性结论。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "由扩展积分结果修正短时间窗阈值判断，明确只报告方向性结论。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O3",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S3"
+        ],
+        "summary": "由扩展积分结果修正短时间窗阈值判断，明确只报告方向性结论。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "95ebba85898b75da28ae8b6c3abd845a2f16c9e7375e9ab665deba0de8aef129",
+        "start_line": 2
+      },
+      {
+        "end_line": 22,
+        "id": "S2",
+        "sha256": "6917ec4691522860f22d9f89cda1c231c7c30b3499e32637b66f3ae4a11d20fb",
+        "start_line": 22
+      },
+      {
+        "end_line": 24,
+        "id": "S3",
+        "sha256": "4dfecfec815485f530aa59421f60b8a690d054c831cc0927083c22d6ba2cb1a3",
+        "start_line": 24
+      }
+    ],
+    "summary": "由扩展积分结果修正短时间窗阈值判断，明确只报告方向性结论。",
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      },
+      {
+        "end_line": 22,
+        "operation": "REPLACE",
+        "start_line": 22
+      },
+      {
+        "end_line": 24,
+        "operation": "REPLACE",
+        "start_line": 24
+      }
+    ],
+    "masked_after_sha256": "b6072791871d10abc822270aaecadf68339c896a50be3def91c0ee6228a3fb3d",
+    "masked_before_sha256": "f38f6572b5a1a2af346237e56b097822887fe785098476eb58cd5d78af53546b",
+    "source_spans_covered": 3,
+    "source_spans_total": 3,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "ce27d91c2e3aa0674528482a7c291abb095b54a313224f2d8eb5f13279d1c8dd",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-706e53781d8d"
+}

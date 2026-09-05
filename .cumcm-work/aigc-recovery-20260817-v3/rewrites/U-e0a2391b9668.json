@@ -1,0 +1,91 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-e0a2391b9668",
+  "chunk_binding_sha256": "7f8d8b1367ca4e74c89c7249f28498674885404a63a70c813827cce780527817",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "842ae235d7ee9818",
+    "prepare_integrity_sha256": "c38e1d6ea4a8467e7d26d083319b223bd567819e17070c0ac06e74de425e1aa2",
+    "run_metadata_sha256": "af8e27fded78b4cdf5593d7a49751c6f6e43e94172419e8103c4f33a166925b9",
+    "policy_snapshot_sha256": "78c9d819ed643befe1459941693ca6ea078ca61644c28b531ba2fb612fd20234",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "unit_id": "U-e0a2391b9668",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 18888,
+      "end": 19228,
+      "start_line": 396,
+      "end_line": 398,
+      "source_span_sha256": "e15a1551f384c232ad55c744ea36230cf914723389a6db7db273b41bcdb97d64",
+      "masked_text_sha256": "a8b0dd7abf0bd3e355f8a94f4d2534e445951ac600e6d1ddcfc8080d7378befc",
+      "chunk_binding_sha256": "7f8d8b1367ca4e74c89c7249f28498674885404a63a70c813827cce780527817"
+    },
+    "scene_route": {
+      "requested_scene": "MODELING",
+      "resolved_scene": "MODELING",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "bc1ae7c92474249870f67c2182c2d7b669d1b32dae83ffde982feb2ad325a766",
+      "routing_input_sha256": "867a929ff00a7801614c96650a7acc9d76ef17f1f98dbdd53985e66a808e8251"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-modeling",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "MODELING",
+      "profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "53cef84ca1f1883930709ffdff1bb1bc1c18cd1ec95769d7efb54c2de03be246"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00519:7d00b3dbb993]]\n我们在问题四中沿用问题三的方程组和参数集，仅将判别工具替换为 Benettin 型有限时间最大李雅普诺夫指数 [[PROTECTED:F00001-P00520:9f29cf8b0723]]。数值实现中，先由 Hastings-Powell 方程写出解析 Jacobian，再将状态方程与切向方程用四阶 Runge--Kutta 同步积分，切向向量在每个时间步归一化；[[PROTECTED:F00001-P00521:a4bd216fe59f]]指前 40 个时间单位的轨道不进入指数累计。基准设置取初值 [[PROTECTED:F00001-P00522:5abe95b787cd]]、步长 [[PROTECTED:F00001-P00523:a18294854351]] 和总积分时长 90；同时将总积分时长扩展到 150 和 200，并在 [[PROTECTED:F00001-P00524:1eb5f6b24dc1]] 与 [[PROTECTED:F00001-P00525:b01b2de0eb38]] 附近进行局部步长和初值复核，用以检验正指数起点对数值设置的敏感性。\n\n",
+  "rewrite_intent": {
+    "summary": "精简李雅普诺夫指数数值实现的步骤播报，保留复核设置。",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ],
+        "summary": "精简李雅普诺夫指数数值实现的步骤播报，保留复核设置。"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 2,
+        "end_line": 2,
+        "sha256": "9aa7948347f01f7cb6b463860a0f134bad42dfcbeafb52c208be462ff1e81c10"
+      }
+    ],
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  }
+}

@@ -1,0 +1,499 @@
+{
+  "artifact": {
+    "after_sha256": "1b6a8f4ddba3d7962010a070d1dc71626e1cacd0ad300a0b7d091174b7f2c456",
+    "before_sha256": "cde68256dde0feb36f6fe43636468a2c4baf555da137146c64b53a0ac2be6736"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "1d5899bdf65906f505a1f3fed478b5719492262b28601070e36efc5a35757a17",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "markdown",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "并非": 1,
+          "无": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0002",
+            "column": 25,
+            "end": 26,
+            "end_column": 27,
+            "end_line": 1,
+            "line": 1,
+            "marker": "并非",
+            "sentence_context": "题目中的 说明单一转运商是优先选择，并非每周都必须满足的条件",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 24
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0006",
+            "column": 77,
+            "end": 77,
+            "end_column": 78,
+            "end_line": 1,
+            "line": 1,
+            "marker": "无",
+            "sentence_context": "约束过弱则无法体现供应商与转运商相对固定的要求",
+            "sentence_id": "T0003",
+            "side": "after",
+            "start": 76
+          }
+        ],
+        "before": {
+          "无": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0002",
+            "column": 67,
+            "end": 67,
+            "end_column": 68,
+            "end_line": 1,
+            "line": 1,
+            "marker": "无",
+            "sentence_context": "若过于强烈的要求则可能会出现约束过强无法规划出最终结果的情况,且会使转运损耗提升,而弱化要求又恐与题意相眉",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 66
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "并非": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "并非": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0002",
+                "column": 25,
+                "end": 26,
+                "end_column": 27,
+                "end_line": 1,
+                "line": 1,
+                "marker": "并非",
+                "sentence_context": "题目中的 说明单一转运商是优先选择，并非每周都必须满足的条件",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 24
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0006",
+                "column": 77,
+                "end": 77,
+                "end_column": 78,
+                "end_line": 1,
+                "line": 1,
+                "marker": "无",
+                "sentence_context": "约束过弱则无法体现供应商与转运商相对固定的要求",
+                "sentence_id": "T0003",
+                "side": "after",
+                "start": 76
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0002",
+                "column": 67,
+                "end": 67,
+                "end_column": 68,
+                "end_line": 1,
+                "line": 1,
+                "marker": "无",
+                "sentence_context": "若过于强烈的要求则可能会出现约束过强无法规划出最终结果的情况,且会使转运损耗提升,而弱化要求又恐与题意相眉",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 66
+              }
+            ],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "d3d2a519b0f5b2d1a83c1bfd75e379b4ff2fcef85a2d841bbcc7fe3a5d8a4aae"
+    },
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "可": 2,
+          "可能": 2,
+          "必须": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0002",
+            "column": 30,
+            "end": 31,
+            "end_column": 32,
+            "end_line": 1,
+            "line": 1,
+            "marker": "必须",
+            "sentence_context": "题目中的 说明单一转运商是优先选择，并非每周都必须满足的条件",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 29
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0004",
+            "column": 48,
+            "end": 48,
+            "end_column": 49,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可",
+            "sentence_context": "若把它设为强制约束，可行方案可能消失，已有方案的转运损耗也可能上升",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 47
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0004",
+            "column": 52,
+            "end": 53,
+            "end_column": 54,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可能",
+            "sentence_context": "若把它设为强制约束，可行方案可能消失，已有方案的转运损耗也可能上升",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 51
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0005",
+            "column": 67,
+            "end": 68,
+            "end_column": 69,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可能",
+            "sentence_context": "若把它设为强制约束，可行方案可能消失，已有方案的转运损耗也可能上升",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 66
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0009",
+            "column": 128,
+            "end": 128,
+            "end_column": 129,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可",
+            "sentence_context": "综合企业更重视损耗的实际情况，本文对单一转运商条件作适度弱化，在可行性与题意之间保留余地",
+            "sentence_id": "T0004",
+            "side": "after",
+            "start": 127
+          }
+        ],
+        "before": {
+          "可能": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0002",
+            "column": 58,
+            "end": 59,
+            "end_column": 60,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可能",
+            "sentence_context": "若过于强烈的要求则可能会出现约束过强无法规划出最终结果的情况,且会使转运损耗提升,而弱化要求又恐与题意相眉",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 57
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "可": 2,
+            "可能": 1,
+            "必须": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "可": 2,
+              "可能": 1,
+              "必须": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 30,
+                "end": 31,
+                "end_column": 32,
+                "end_line": 1,
+                "line": 1,
+                "marker": "必须",
+                "sentence_context": "题目中的 说明单一转运商是优先选择，并非每周都必须满足的条件",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 29
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0004",
+                "column": 48,
+                "end": 48,
+                "end_column": 49,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "若把它设为强制约束，可行方案可能消失，已有方案的转运损耗也可能上升",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 47
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0004",
+                "column": 52,
+                "end": 53,
+                "end_column": 54,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可能",
+                "sentence_context": "若把它设为强制约束，可行方案可能消失，已有方案的转运损耗也可能上升",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 51
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0005",
+                "column": 67,
+                "end": 68,
+                "end_column": 69,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可能",
+                "sentence_context": "若把它设为强制约束，可行方案可能消失，已有方案的转运损耗也可能上升",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 66
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0009",
+                "column": 128,
+                "end": 128,
+                "end_column": 129,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "综合企业更重视损耗的实际情况，本文对单一转运商条件作适度弱化，在可行性与题意之间保留余地",
+                "sentence_id": "T0004",
+                "side": "after",
+                "start": 127
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 58,
+                "end": 59,
+                "end_column": 60,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可能",
+                "sentence_context": "若过于强烈的要求则可能会出现约束过强无法规划出最终结果的情况,且会使转运损耗提升,而弱化要求又恐与题意相眉",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 57
+              }
+            ],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "537efb68d39c4df4ddcc13b486f19c46843670e97239c017f2409ef3e1698975"
+    },
+    {
+      "code": "SPEECH_ACT_FOCUS_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "优先": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "focus_scope",
+            "claim_id": "C0001",
+            "column": 20,
+            "end": 21,
+            "end_column": 22,
+            "end_line": 1,
+            "line": 1,
+            "marker": "优先",
+            "sentence_context": "题目中的 说明单一转运商是优先选择，并非每周都必须满足的条件",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 19
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "优先": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "优先": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "focus_scope",
+                "claim_id": "C0001",
+                "column": 20,
+                "end": 21,
+                "end_column": 22,
+                "end_line": 1,
+                "line": 1,
+                "marker": "优先",
+                "sentence_context": "题目中的 说明单一转运商是优先选择，并非每周都必须满足的条件",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 19
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'focus_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "f841eb6ce00f62a3d6a4143dee3ae71849c3df444ba9cd9245fa227ed6fcc87e"
+    },
+    {
+      "code": "SPEECH_ACT_ASSUMPTION_CHANGED",
+      "details": {
+        "after": {
+          "设": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "assumption",
+            "claim_id": "C0003",
+            "column": 41,
+            "end": 41,
+            "end_column": 42,
+            "end_line": 1,
+            "line": 1,
+            "marker": "设",
+            "sentence_context": "若把它设为强制约束，可行方案可能消失，已有方案的转运损耗也可能上升",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 40
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "设": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "设": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "assumption",
+                "claim_id": "C0003",
+                "column": 41,
+                "end": 41,
+                "end_column": 42,
+                "end_line": 1,
+                "line": 1,
+                "marker": "设",
+                "sentence_context": "若把它设为强制约束，可行方案可能消失，已有方案的转运损耗也可能上升",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 40
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'assumption'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "548a50b08859549d0c84faaef10ecdc5d1690876680dd9d6c916d3ac17df95a4"
+    }
+  ]
+}

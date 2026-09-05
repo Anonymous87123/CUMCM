@@ -1,0 +1,61 @@
+{
+  "artifacts": {
+    "execution-record.json": {
+      "sha256": "33fb9f3278cec39e88a1ff40560c4eb429f3253be005bc72b64d4e5bb613aa85",
+      "size": 643
+    },
+    "inputs/after.bin": {
+      "sha256": "dbcc9ace09927befc9b0779d6eb0d7f0fb4ef7e42cdd4f39d9581bf260aa4f59",
+      "size": 450
+    },
+    "inputs/before.bin": {
+      "sha256": "403e09b6ce0a43648894665b84dcab855e37bb7069023affb5dcc60be3b1f135",
+      "size": 432
+    },
+    "invocation-request.json": {
+      "sha256": "1cc8cecea74af4ee52661384df06636b09d2963f7606d6a9812c57655a26de49",
+      "size": 2406
+    },
+    "paired-quality-review-request.json": {
+      "sha256": "2c9ac58989d390c08e3d26ee9c680a923c1c821ff6c903064fc4aa170210108c",
+      "size": 2899
+    },
+    "rendered-output.txt": {
+      "sha256": "ffe8b9328f637f3d624dd82f3f7b9bd692e4ff592a4caf8f0c3f25ce674e4e24",
+      "size": 21872
+    },
+    "stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    "validation-result.json": {
+      "sha256": "ffe8b9328f637f3d624dd82f3f7b9bd692e4ff592a4caf8f0c3f25ce674e4e24",
+      "size": 21872
+    }
+  },
+  "contains_source_content": true,
+  "delivery_gate_status": "REVIEW",
+  "exit_code": 2,
+  "external_anchor_status": "NOT_PROVIDED",
+  "integrity_scope": "SELF_CONSISTENCY_ONLY",
+  "invocation_request_sha256": "f661f9d3e6e43e61c7e8dfc2f749cecbad5af0bccbdbf8567e8819fa2c527119",
+  "manifest_sha256": "692c0f01ae8ddd92af25c21e5421a7643096a367746b841cd9eb05c26540cb8d",
+  "mode": "REWRITE",
+  "paired_quality_review_request_sha256": "15ca63705cf3fe07c875afdcb97340af19853cb030d8c35ff9f230725dd96af6",
+  "paired_quality_review_status": "PENDING_EXTERNAL_REVIEW",
+  "record_sha256": "0de122827b1ea435815b6fd2d380ca3c6294bd94b8abb6572bba24ca15270e8b",
+  "run_id": "hvr4-f661f9d3e6e43e61c7e8dfc2f749cecbad5af0bccbdbf8567e8819fa2c527119",
+  "scene": "MODELING",
+  "schema": "humanize-direct-validation-evidence/v5",
+  "source_bindings": {
+    "after": {
+      "sha256": "dbcc9ace09927befc9b0779d6eb0d7f0fb4ef7e42cdd4f39d9581bf260aa4f59",
+      "size": 450
+    },
+    "before": {
+      "sha256": "403e09b6ce0a43648894665b84dcab855e37bb7069023affb5dcc60be3b1f135",
+      "size": 432
+    }
+  },
+  "status": "REVIEW"
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "aigc-adapter-run/v1",
+  "package": "humanize-academic-chinese",
+  "action": "verify-candidate",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r2\\dev-run\\verify-final\\draft-dev-03-071a6d8e-t3",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r2\\dev-run\\sources\\draft-dev-03-071a6d8e.tex",
+    "sha256": "a1b48683e83b065adce2c0cead0ec74ead53f7e1d11ad12130ee76ca4464df55",
+    "bytes": 443,
+    "suffix": ".tex"
+  },
+  "protected_inventory": {
+    "numbers": {},
+    "tex_commands": {},
+    "tex_keys": {},
+    "inline_math": {},
+    "dollar_display_math": {},
+    "display_math": {},
+    "math_environments": {},
+    "code_fences": {},
+    "urls": {}
+  },
+  "tex_semantic_contract": {
+    "status": "pass",
+    "before": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r2\\dev-run\\sources\\draft-dev-03-071a6d8e.tex",
+    "after": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r2\\dev-run\\authoring\\draft-dev-03-071a6d8e-t3.tex",
+    "scene": "GENERAL",
+    "errors": 0,
+    "warnings": 0,
+    "findings": [],
+    "number_diff": {
+      "removed": [],
+      "introduced": []
+    }
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r2\\dev-run\\authoring\\draft-dev-03-071a6d8e-t3.tex",
+    "sha256": "5850abf0a8d851d0171d58ef3f28cf3b8a91ff60fcbe01fc7c7728c2c08bf117",
+    "bytes": 412,
+    "suffix": ".tex"
+  },
+  "human_review_required": true
+}

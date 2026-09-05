@@ -1,0 +1,149 @@
+{
+  "schema": "aigc-style-benchmark-manifest/v1",
+  "state": "CANDIDATES_READY",
+  "suite": {
+    "id": "cumcm-v1-dev",
+    "version": "2026-08-15",
+    "split": "dev",
+    "required_trials": 3,
+    "providers": [
+      "humanize-academic-chinese"
+    ],
+    "holdout_policy": null,
+    "definition": {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\benchmarks\\cumcm-v1-dev.json",
+      "sha256": "0726e3931295e0042f1c4270ca890af1840c3bbe010764758ca4481ad035de6e",
+      "bytes": 2000
+    }
+  },
+  "run_root": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-v3",
+  "cases": [
+    {
+      "id": "a-convergence-repair",
+      "scene": {
+        "document_type": "mcm",
+        "document_format": "plain",
+        "scope": "local"
+      },
+      "challenge_tags": [
+        "public-judgment",
+        "boundary-conditions",
+        "result-explanation",
+        "paragraph-rhythm"
+      ],
+      "source": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-v3\\sources\\a-convergence-repair.txt",
+        "sha256": "37c607f3e700be24e296ba6031796256e61ecfba607262a7af839658c404f329",
+        "bytes": 410
+      }
+    },
+    {
+      "id": "b-decision-boundary",
+      "scene": {
+        "document_type": "mcm",
+        "document_format": "plain",
+        "scope": "local"
+      },
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "boundary-conditions",
+        "content-density"
+      ],
+      "source": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-v3\\sources\\b-decision-boundary.txt",
+        "sha256": "81d3f3f287335a10ec05dd90cb6739f9b70c51aea4d96c72e8b84114a185ff0b",
+        "bytes": 903
+      }
+    },
+    {
+      "id": "c-correlation-boundary",
+      "scene": {
+        "document_type": "mcm",
+        "document_format": "plain",
+        "scope": "local"
+      },
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "causal-calibration",
+        "paragraph-rhythm"
+      ],
+      "source": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-v3\\sources\\c-correlation-boundary.txt",
+        "sha256": "10ab89e0600db62714e6ff8dc76ded294748a04deee327aac859121f161952d5",
+        "bytes": 246
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "id": "a-convergence-repair::humanize-academic-chinese::t1",
+      "case_id": "a-convergence-repair",
+      "provider": "humanize-academic-chinese",
+      "trial": 1,
+      "candidate": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-v3\\candidates\\a-convergence-repair\\humanize-academic-chinese-t1.md",
+        "sha256": "fc9719082db1c7b3799179847d15659894c2172f98e813db159937757c874608",
+        "bytes": 416
+      },
+      "verification": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-v3\\evidence\\a-convergence-repair\\humanize-academic-chinese-t1-verification.json",
+        "sha256": "55bd0a6c25095e89d16e3f4fe7cbcfc88cd26101b84363c37877507892e91ca7",
+        "bytes": 1351
+      },
+      "generation": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-v3\\evidence\\a-convergence-repair\\humanize-academic-chinese-t1-generation.json",
+        "sha256": "b17b9aa108c8ae98a407bd9643a192135d25890343aef714ff91c09c6be93daf",
+        "bytes": 1265,
+        "run_id": "hir1-1uxtkuja"
+      }
+    },
+    {
+      "id": "a-convergence-repair::humanize-academic-chinese::t2",
+      "case_id": "a-convergence-repair",
+      "provider": "humanize-academic-chinese",
+      "trial": 2,
+      "candidate": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-v3\\candidates\\a-convergence-repair\\humanize-academic-chinese-t2.md",
+        "sha256": "20f6935c0aa611ff9751a1f0ff3d8cb6f731385f74923e2e9cac60b837f5c303",
+        "bytes": 416
+      },
+      "verification": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-v3\\evidence\\a-convergence-repair\\humanize-academic-chinese-t2-verification.json",
+        "sha256": "f93fff64615916e1db97a31ff1bdfabd760cff25c4a3b5a1230780107d7b429b",
+        "bytes": 1351
+      },
+      "generation": {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-v3\\evidence\\a-convergence-repair\\humanize-academic-chinese-t2-generation.json",
+        "sha256": "2adcb625fdba8bce0e86f143fcafdd387fc06902d3289c7a822883ba85aea2f8",
+        "bytes": 1265,
+        "run_id": "hir1-i9xdbs9n"
+      }
+    }
+  ],
+  "blind": null,
+  "score": null,
+  "parent_manifest": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-v3\\registered-01.json",
+    "sha256": "93d7e5d15505413c7128703d9fbcbd1c1e8e68023e0905af88132bb048cc495c",
+    "bytes": 4196
+  },
+  "history": [
+    {
+      "event": "SOURCE_FROZEN"
+    },
+    {
+      "event": "REGISTER:a-convergence-repair::humanize-academic-chinese::t1",
+      "predecessor_sha256": "33fc12abc3cfa34b1fc7431dca46a01876a22097af1b0bc34618eb78649cecb8"
+    },
+    {
+      "event": "REGISTER:a-convergence-repair::humanize-academic-chinese::t2",
+      "predecessor_sha256": "93d7e5d15505413c7128703d9fbcbd1c1e8e68023e0905af88132bb048cc495c"
+    }
+  ],
+  "claims": {
+    "authorship_or_detector_verdict": false,
+    "automatic_winner_selection": false
+  }
+}

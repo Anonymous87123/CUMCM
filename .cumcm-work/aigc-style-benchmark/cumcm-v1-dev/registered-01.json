@@ -1,0 +1,123 @@
+{
+  "schema": "aigc-style-benchmark-manifest/v1",
+  "state": "CANDIDATES_READY",
+  "suite": {
+    "id": "cumcm-v1-dev",
+    "version": "2026-08-15",
+    "split": "dev",
+    "required_trials": 3,
+    "providers": [
+      "humanize-academic-chinese"
+    ],
+    "holdout_policy": null,
+    "definition": {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\benchmarks\\cumcm-v1-dev.json",
+      "sha256": "0726e3931295e0042f1c4270ca890af1840c3bbe010764758ca4481ad035de6e",
+      "bytes": 2000
+    }
+  },
+  "run_root": "\\\\?\\F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev",
+  "cases": [
+    {
+      "id": "a-convergence-repair",
+      "scene": {
+        "document_type": "mcm",
+        "document_format": "plain",
+        "scope": "local"
+      },
+      "challenge_tags": [
+        "public-judgment",
+        "boundary-conditions",
+        "result-explanation",
+        "paragraph-rhythm"
+      ],
+      "source": {
+        "path": "\\\\?\\F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev\\sources\\a-convergence-repair.txt",
+        "sha256": "37c607f3e700be24e296ba6031796256e61ecfba607262a7af839658c404f329",
+        "bytes": 410
+      }
+    },
+    {
+      "id": "b-decision-boundary",
+      "scene": {
+        "document_type": "mcm",
+        "document_format": "plain",
+        "scope": "local"
+      },
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "boundary-conditions",
+        "content-density"
+      ],
+      "source": {
+        "path": "\\\\?\\F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev\\sources\\b-decision-boundary.txt",
+        "sha256": "81d3f3f287335a10ec05dd90cb6739f9b70c51aea4d96c72e8b84114a185ff0b",
+        "bytes": 903
+      }
+    },
+    {
+      "id": "c-correlation-boundary",
+      "scene": {
+        "document_type": "mcm",
+        "document_format": "plain",
+        "scope": "local"
+      },
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "causal-calibration",
+        "paragraph-rhythm"
+      ],
+      "source": {
+        "path": "\\\\?\\F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev\\sources\\c-correlation-boundary.txt",
+        "sha256": "10ab89e0600db62714e6ff8dc76ded294748a04deee327aac859121f161952d5",
+        "bytes": 246
+      }
+    }
+  ],
+  "candidates": [
+    {
+      "id": "a-convergence-repair::humanize-academic-chinese::t1",
+      "case_id": "a-convergence-repair",
+      "provider": "humanize-academic-chinese",
+      "trial": 1,
+      "candidate": {
+        "path": "\\\\?\\F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev\\candidates\\a-convergence-repair\\humanize-academic-chinese-t1.md",
+        "sha256": "fc9719082db1c7b3799179847d15659894c2172f98e813db159937757c874608",
+        "bytes": 416
+      },
+      "verification": {
+        "path": "\\\\?\\F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev\\evidence\\a-convergence-repair\\humanize-academic-chinese-t1-verification.json",
+        "sha256": "9bf80f18749b85fc22e417fe28e89496b05cbfa6ecd5aca78f88323435070e87",
+        "bytes": 1349
+      },
+      "generation": {
+        "path": "\\\\?\\F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev\\evidence\\a-convergence-repair\\humanize-academic-chinese-t1-generation.json",
+        "sha256": "1d2732aaeb2f8a40bd07cae4a310e7650da1e0ac9bcaf59c490741a80011a794",
+        "bytes": 1099,
+        "run_id": "hir1-1uxtkuja"
+      }
+    }
+  ],
+  "blind": null,
+  "score": null,
+  "parent_manifest": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev\\benchmark-source-frozen.json",
+    "sha256": "fdaaeb7b3f237c75f33f1ae47347de81100d4194e4dc574a317a3dc6c9262945",
+    "bytes": 2676
+  },
+  "history": [
+    {
+      "event": "SOURCE_FROZEN"
+    },
+    {
+      "event": "REGISTER:a-convergence-repair::humanize-academic-chinese::t1",
+      "predecessor_sha256": "fdaaeb7b3f237c75f33f1ae47347de81100d4194e4dc574a317a3dc6c9262945"
+    }
+  ],
+  "claims": {
+    "authorship_or_detector_verdict": false,
+    "automatic_winner_selection": false
+  }
+}

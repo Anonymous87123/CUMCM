@@ -1,0 +1,71 @@
+{
+  "actual_content_changed": true,
+  "change_applied": false,
+  "invariant_baseline_sha256": "5088f7f76790a13a463be8798a5794c005fd928938f3021ccc9c65dc94d7d051",
+  "limitations": "non-STRUCTURAL run",
+  "non_structural_paragraph_order_check": {
+    "author_paragraphs_after": 6,
+    "author_paragraphs_before": 6,
+    "authorized_topology_operations": 0,
+    "detected_paragraph_merges": [],
+    "detected_paragraph_splits": [],
+    "light_sentence_reorder": false,
+    "match_evidence": [
+      {
+        "after_index": 0,
+        "before_index": 0,
+        "before_sha256": "",
+        "kind": "PROTECTED",
+        "method": "EXACT",
+        "protected_ids": [
+          "F00001-P00019"
+        ],
+        "similarity": 1.0
+      },
+      {
+        "after_index": 2,
+        "before_index": 2,
+        "before_sha256": "b792eab0f2e4a80b042230a86ab3ef1d93ae85b82a6511e2e6933f788bfeef53",
+        "kind": "AUTHOR",
+        "method": "NEAR_EXACT",
+        "protected_ids": [],
+        "similarity": 0.853974
+      },
+      {
+        "after_index": 4,
+        "before_index": 4,
+        "before_sha256": "8631970a23858a5e153585b03ad314a28bc34aeb037bf2dd2bf5eb7f4d4daba4",
+        "kind": "AUTHOR",
+        "method": "NEAR_EXACT",
+        "protected_ids": [],
+        "similarity": 0.846409
+      },
+      {
+        "after_index": 7,
+        "before_index": 7,
+        "before_sha256": "",
+        "kind": "PROTECTED",
+        "method": "EXACT",
+        "protected_ids": [
+          "F00001-P00032"
+        ],
+        "similarity": 1.0
+      }
+    ],
+    "matched_author_paragraphs": 2,
+    "matched_elements": 4,
+    "matched_protected_anchors": 2,
+    "moved_paragraph_sha256": [],
+    "near_exact_reordered": false,
+    "paragraph_topology_changed": false,
+    "protected_anchor_reordered": false,
+    "reordered": false,
+    "scope": "NON_STRUCTURAL_PARAGRAPH_TOPOLOGY_AND_ORDER",
+    "status": "PASS",
+    "topology_authorization_error": "",
+    "topology_authorization_status": "NOT_REQUIRED",
+    "topology_operation_evidence": []
+  },
+  "semantic_review_status": "NOT_ISSUED",
+  "status": "NOT_APPLICABLE"
+}

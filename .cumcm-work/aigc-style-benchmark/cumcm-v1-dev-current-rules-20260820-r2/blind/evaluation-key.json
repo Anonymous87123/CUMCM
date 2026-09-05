@@ -1,0 +1,62 @@
+{
+  "schema": "aigc-blind-key/v1",
+  "seed": 20260820,
+  "dimensions": [
+    "naturalness",
+    "judgment_trajectory",
+    "specificity",
+    "content_density",
+    "semantic_fidelity"
+  ],
+  "pairs": [
+    {
+      "pair_id": "P0001",
+      "A": "a-convergence-repair::source",
+      "B": "a-convergence-repair::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0002",
+      "A": "a-convergence-repair::humanize-academic-chinese::t2",
+      "B": "a-convergence-repair::source"
+    },
+    {
+      "pair_id": "P0003",
+      "A": "a-convergence-repair::source",
+      "B": "a-convergence-repair::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0004",
+      "A": "b-decision-boundary::source",
+      "B": "b-decision-boundary::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0005",
+      "A": "b-decision-boundary::source",
+      "B": "b-decision-boundary::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0006",
+      "A": "b-decision-boundary::source",
+      "B": "b-decision-boundary::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0007",
+      "A": "c-correlation-boundary::humanize-academic-chinese::t1",
+      "B": "c-correlation-boundary::source"
+    },
+    {
+      "pair_id": "P0008",
+      "A": "c-correlation-boundary::source",
+      "B": "c-correlation-boundary::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0009",
+      "A": "c-correlation-boundary::humanize-academic-chinese::t3",
+      "B": "c-correlation-boundary::source"
+    }
+  ],
+  "packet_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-current-rules-20260820-r2\\blind\\evaluation-packet.json",
+  "packet_sha256": "46357a977b1c307813f144ebb01be2d440a5d799f94170386200fb11e1fd0f00",
+  "source_pairs_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-current-rules-20260820-r2\\blind\\pairs.json",
+  "source_pairs_sha256": "d9f5793b4914626ec26d3614f663009f9c51c26a19407aefaca8fc05764964b4"
+}

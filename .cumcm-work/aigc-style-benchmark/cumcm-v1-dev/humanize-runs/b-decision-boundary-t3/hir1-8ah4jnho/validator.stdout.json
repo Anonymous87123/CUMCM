@@ -1,0 +1,3247 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "candidate_assembly_exit_code": 1,
+  "candidate_assembly_status": "FAIL",
+  "delivery_gate_exit_code": 1,
+  "delivery_gate_status": "FAIL",
+  "draft_surface_source_check": {
+    "details": {},
+    "scope": [],
+    "semantic_entailment_certified": false,
+    "status": "N/A"
+  },
+  "evidence": {
+    "after_path": null,
+    "after_sha256": "482e92208f472b62ee7004fef1697c5511a9f9f80f5097a578343d90a92008ea",
+    "before_path": null,
+    "before_sha256": "81d3f3f287335a10ec05dd90cb6739f9b70c51aea4d96c72e8b84114a185ff0b",
+    "checker_executed": true,
+    "document_format": "markdown",
+    "document_scope": "DOCUMENT",
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "03ba9601430e17a4c71cb21f9134e69273284d4dc15295cbfb3235737ed778bd",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "source_path_archived": false
+  },
+  "evidence_bundle": {
+    "execution_record_path": "execution-record.json",
+    "invocation_path": "invocation-request.json",
+    "manifest_path": "evidence-manifest.json",
+    "paired_quality_request_path": "paired-quality-review-request.json",
+    "rendered_output_path": "rendered-output.txt",
+    "result_path": "validation-result.json",
+    "run_id": "hvr4-3268c5f26b225a1fc99f0947c938a26e7a3e3a9b85c11cd5377df52f5d50d328",
+    "schema": "humanize-direct-validation-evidence/v5",
+    "status": "PERSISTED",
+    "stderr_path": "stderr.txt",
+    "warning_review_request_path": "warning-review-request.json"
+  },
+  "exit_code": 1,
+  "hard_invariant_layer_status": "FAIL",
+  "humanize_quality_claim_allowed": false,
+  "introduced_findings": [
+    {
+      "action": "REWRITE",
+      "column": 14,
+      "context": "在一般结点处，是否继续挖矿先看两项收益的大小关系。挖矿亏损时直接前往终点；对于另一种情形，下式左侧是这$T$天挖矿带来的收益，右侧是为挖矿绕行所付出的资源金额。当左侧小于",
+      "count": 1,
+      "file": "after",
+      "finding_hash": "4bfe4e28eeb7322643781b90d432e2e1b2312e0f98f1aa530c3b4bd5e54c7aea",
+      "line": 1,
+      "matched": "先看",
+      "rationale": "把过程播报改成直接承载对象、动作或结果的正文；学术正文不得保留助手工作台旁白。",
+      "severity": "high",
+      "signal_id": "LEX-STRICT-CORPUS-PROCESS-01"
+    }
+  ],
+  "invariants": {
+    "advisories": [],
+    "errors": [
+      {
+        "code": "PROTECTED_MATH_CHANGED",
+        "details": {
+          "added": [
+            {
+              "count": 1,
+              "value": "$T$"
+            }
+          ],
+          "after_count": 1,
+          "before_count": 0,
+          "first_difference": 0,
+          "removed": []
+        },
+        "message": "Math spans or environments changed in count, content, or order.",
+        "severity": "error"
+      },
+      {
+        "code": "DIRECT_QUOTATION_CHANGED",
+        "details": {
+          "added": [],
+          "after_count": 0,
+          "before_count": 2,
+          "first_difference": 0,
+          "removed": [
+            {
+              "count": 2,
+              "value": "“绕路”"
+            }
+          ]
+        },
+        "message": "Direct quotations changed in count, content, or order.",
+        "severity": "error"
+      },
+      {
+        "code": "NUMBER_OR_UNIT_CHANGED",
+        "details": {
+          "added": [
+            {
+              "count": 1,
+              "value": "两项"
+            }
+          ],
+          "after_count": 1,
+          "before_count": 2,
+          "first_difference": 0,
+          "removed": [
+            {
+              "count": 1,
+              "value": "第一"
+            },
+            {
+              "count": 1,
+              "value": "第二"
+            }
+          ]
+        },
+        "message": "Numbers or units changed in count, content, or order.",
+        "severity": "error"
+      }
+    ],
+    "evidence": {
+      "document_scope": "DOCUMENT",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "speech_act_audit": {
+        "categories": {
+          "assumption": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "attribution_source": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "condition": {
+            "after": {
+              "当": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0007",
+                "column": 81,
+                "end": 81,
+                "end_column": 82,
+                "end_line": 1,
+                "line": 1,
+                "marker": "当",
+                "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+                "sentence_id": "T0004",
+                "side": "after",
+                "start": 80
+              }
+            ],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {
+                "当": 1
+              },
+              "removed": {}
+            },
+            "residual_delta": [
+              {
+                "added": {
+                  "当": 1
+                },
+                "after_claim_id": null,
+                "after_occurrences": [
+                  {
+                    "category": "condition",
+                    "claim_id": "C0007",
+                    "column": 81,
+                    "end": 81,
+                    "end_column": 82,
+                    "end_line": 1,
+                    "line": 1,
+                    "marker": "当",
+                    "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+                    "sentence_id": "T0004",
+                    "side": "after",
+                    "start": 80
+                  }
+                ],
+                "before_claim_id": null,
+                "before_occurrences": [],
+                "removed": {},
+                "scope": "UNALIGNED_POOL"
+              }
+            ],
+            "safe_compression_allowances": []
+          },
+          "definition_naming": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "focus_scope": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "logical_relation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {
+              "因此": 1,
+              "所以": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0008",
+                "column": 114,
+                "end": 115,
+                "end_column": 116,
+                "end_line": 1,
+                "line": 1,
+                "marker": "因此",
+                "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 113
+              },
+              {
+                "category": "logical_relation",
+                "claim_id": "C0019",
+                "column": 288,
+                "end": 289,
+                "end_column": 290,
+                "end_line": 1,
+                "line": 1,
+                "marker": "所以",
+                "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                "sentence_id": "T0004",
+                "side": "before",
+                "start": 287
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {
+                "因此": 1,
+                "所以": 1
+              }
+            },
+            "residual_delta": [
+              {
+                "added": {},
+                "after_claim_id": null,
+                "after_occurrences": [],
+                "before_claim_id": null,
+                "before_occurrences": [
+                  {
+                    "category": "logical_relation",
+                    "claim_id": "C0008",
+                    "column": 114,
+                    "end": 115,
+                    "end_column": 116,
+                    "end_line": 1,
+                    "line": 1,
+                    "marker": "因此",
+                    "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+                    "sentence_id": "T0002",
+                    "side": "before",
+                    "start": 113
+                  },
+                  {
+                    "category": "logical_relation",
+                    "claim_id": "C0019",
+                    "column": 288,
+                    "end": 289,
+                    "end_column": 290,
+                    "end_line": 1,
+                    "line": 1,
+                    "marker": "所以",
+                    "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                    "sentence_id": "T0004",
+                    "side": "before",
+                    "start": 287
+                  }
+                ],
+                "removed": {
+                  "因此": 1,
+                  "所以": 1
+                },
+                "scope": "UNALIGNED_POOL"
+              }
+            ],
+            "safe_compression_allowances": []
+          },
+          "modality_scope": {
+            "after": {
+              "可": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0011",
+                "column": 153,
+                "end": 153,
+                "end_column": 154,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "同行食物按照最坏天气配置，即高温和N、沙暴天气同时出现时仍可走到终点",
+                "sentence_id": "T0005",
+                "side": "after",
+                "start": 152
+              }
+            ],
+            "before": {
+              "可": 1,
+              "应": 4
+            },
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0003",
+                "column": 26,
+                "end": 26,
+                "end_column": 27,
+                "end_line": 1,
+                "line": 1,
+                "marker": "应",
+                "sentence_context": "经过分析我们认为,参赛者在一般结点处,在下列情况下应选择直奔终点:第一种情况指挖矿产生亏损的情况",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 25
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0010",
+                "column": 168,
+                "end": 168,
+                "end_column": 169,
+                "end_line": 1,
+                "line": 1,
+                "marker": "应",
+                "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 167
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0015",
+                "column": 217,
+                "end": 217,
+                "end_column": 218,
+                "end_line": 1,
+                "line": 1,
+                "marker": "应",
+                "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 216
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0019",
+                "column": 295,
+                "end": 295,
+                "end_column": 296,
+                "end_line": 1,
+                "line": 1,
+                "marker": "应",
+                "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                "sentence_id": "T0004",
+                "side": "before",
+                "start": 294
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0020",
+                "column": 305,
+                "end": 305,
+                "end_column": 306,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                "sentence_id": "T0004",
+                "side": "before",
+                "start": 304
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {
+                "应": 4
+              }
+            },
+            "residual_delta": [
+              {
+                "added": {},
+                "after_claim_id": null,
+                "after_occurrences": [
+                  {
+                    "category": "modality_scope",
+                    "claim_id": "C0011",
+                    "column": 153,
+                    "end": 153,
+                    "end_column": 154,
+                    "end_line": 1,
+                    "line": 1,
+                    "marker": "可",
+                    "sentence_context": "同行食物按照最坏天气配置，即高温和N、沙暴天气同时出现时仍可走到终点",
+                    "sentence_id": "T0005",
+                    "side": "after",
+                    "start": 152
+                  }
+                ],
+                "before_claim_id": null,
+                "before_occurrences": [
+                  {
+                    "category": "modality_scope",
+                    "claim_id": "C0003",
+                    "column": 26,
+                    "end": 26,
+                    "end_column": 27,
+                    "end_line": 1,
+                    "line": 1,
+                    "marker": "应",
+                    "sentence_context": "经过分析我们认为,参赛者在一般结点处,在下列情况下应选择直奔终点:第一种情况指挖矿产生亏损的情况",
+                    "sentence_id": "T0001",
+                    "side": "before",
+                    "start": 25
+                  },
+                  {
+                    "category": "modality_scope",
+                    "claim_id": "C0010",
+                    "column": 168,
+                    "end": 168,
+                    "end_column": 169,
+                    "end_line": 1,
+                    "line": 1,
+                    "marker": "应",
+                    "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+                    "sentence_id": "T0003",
+                    "side": "before",
+                    "start": 167
+                  },
+                  {
+                    "category": "modality_scope",
+                    "claim_id": "C0015",
+                    "column": 217,
+                    "end": 217,
+                    "end_column": 218,
+                    "end_line": 1,
+                    "line": 1,
+                    "marker": "应",
+                    "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+                    "sentence_id": "T0003",
+                    "side": "before",
+                    "start": 216
+                  },
+                  {
+                    "category": "modality_scope",
+                    "claim_id": "C0019",
+                    "column": 295,
+                    "end": 295,
+                    "end_column": 296,
+                    "end_line": 1,
+                    "line": 1,
+                    "marker": "应",
+                    "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                    "sentence_id": "T0004",
+                    "side": "before",
+                    "start": 294
+                  },
+                  {
+                    "category": "modality_scope",
+                    "claim_id": "C0020",
+                    "column": 305,
+                    "end": 305,
+                    "end_column": 306,
+                    "end_line": 1,
+                    "line": 1,
+                    "marker": "可",
+                    "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                    "sentence_id": "T0004",
+                    "side": "before",
+                    "start": 304
+                  }
+                ],
+                "removed": {
+                  "应": 4
+                },
+                "scope": "UNALIGNED_POOL"
+              }
+            ],
+            "safe_compression_allowances": []
+          },
+          "negation": {
+            "after": {
+              "不能": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0008",
+                "column": 92,
+                "end": 93,
+                "end_column": 94,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不能",
+                "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+                "sentence_id": "T0004",
+                "side": "after",
+                "start": 91
+              }
+            ],
+            "before": {
+              "不": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0008",
+                "column": 131,
+                "end": 131,
+                "end_column": 132,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 130
+              }
+            ],
+            "raw_delta": {
+              "added": {
+                "不能": 1
+              },
+              "removed": {
+                "不": 1
+              }
+            },
+            "residual_delta": [
+              {
+                "added": {
+                  "不能": 1
+                },
+                "after_claim_id": null,
+                "after_occurrences": [
+                  {
+                    "category": "negation",
+                    "claim_id": "C0008",
+                    "column": 92,
+                    "end": 93,
+                    "end_column": 94,
+                    "end_line": 1,
+                    "line": 1,
+                    "marker": "不能",
+                    "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+                    "sentence_id": "T0004",
+                    "side": "after",
+                    "start": 91
+                  }
+                ],
+                "before_claim_id": null,
+                "before_occurrences": [
+                  {
+                    "category": "negation",
+                    "claim_id": "C0008",
+                    "column": 131,
+                    "end": 131,
+                    "end_column": 132,
+                    "end_line": 1,
+                    "line": 1,
+                    "marker": "不",
+                    "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+                    "sentence_id": "T0002",
+                    "side": "before",
+                    "start": 130
+                  }
+                ],
+                "removed": {
+                  "不": 1
+                },
+                "scope": "UNALIGNED_POOL"
+              }
+            ],
+            "safe_compression_allowances": []
+          },
+          "reporting_observation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          }
+        },
+        "claim_pairing": {
+          "after_claims": 14,
+          "before_claims": 20,
+          "unique_exact_pairs": 0,
+          "unpaired_after_claims": 14,
+          "unpaired_before_claims": 20
+        },
+        "protection": {
+          "after_ranges": 1,
+          "before_ranges": 2,
+          "line_column_basis": "NORMALIZED_LF_1_BASED_UNICODE_CODEPOINT",
+          "masking": "LENGTH_PRESERVING"
+        }
+      }
+    },
+    "hard_failure": true,
+    "status": "fail",
+    "summary": {
+      "advisories": 0,
+      "errors": 3,
+      "warnings": 4
+    },
+    "warnings": [
+      {
+        "code": "SPEECH_ACT_NEGATION_CHANGED",
+        "details": {
+          "after": {
+            "不能": 1
+          },
+          "after_occurrences": [
+            {
+              "category": "negation",
+              "claim_id": "C0008",
+              "column": 92,
+              "end": 93,
+              "end_column": 94,
+              "end_line": 1,
+              "line": 1,
+              "marker": "不能",
+              "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+              "sentence_id": "T0004",
+              "side": "after",
+              "start": 91
+            }
+          ],
+          "before": {
+            "不": 1
+          },
+          "before_occurrences": [
+            {
+              "category": "negation",
+              "claim_id": "C0008",
+              "column": 131,
+              "end": 131,
+              "end_column": 132,
+              "end_line": 1,
+              "line": 1,
+              "marker": "不",
+              "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+              "sentence_id": "T0002",
+              "side": "before",
+              "start": 130
+            }
+          ],
+          "raw_delta": {
+            "added": {
+              "不能": 1
+            },
+            "removed": {
+              "不": 1
+            }
+          },
+          "residual_delta": [
+            {
+              "added": {
+                "不能": 1
+              },
+              "after_claim_id": null,
+              "after_occurrences": [
+                {
+                  "category": "negation",
+                  "claim_id": "C0008",
+                  "column": 92,
+                  "end": 93,
+                  "end_column": 94,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "不能",
+                  "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+                  "sentence_id": "T0004",
+                  "side": "after",
+                  "start": 91
+                }
+              ],
+              "before_claim_id": null,
+              "before_occurrences": [
+                {
+                  "category": "negation",
+                  "claim_id": "C0008",
+                  "column": 131,
+                  "end": 131,
+                  "end_column": 132,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "不",
+                  "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+                  "sentence_id": "T0002",
+                  "side": "before",
+                  "start": 130
+                }
+              ],
+              "removed": {
+                "不": 1
+              },
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+        "severity": "warning"
+      },
+      {
+        "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+        "details": {
+          "after": {
+            "可": 1
+          },
+          "after_occurrences": [
+            {
+              "category": "modality_scope",
+              "claim_id": "C0011",
+              "column": 153,
+              "end": 153,
+              "end_column": 154,
+              "end_line": 1,
+              "line": 1,
+              "marker": "可",
+              "sentence_context": "同行食物按照最坏天气配置，即高温和N、沙暴天气同时出现时仍可走到终点",
+              "sentence_id": "T0005",
+              "side": "after",
+              "start": 152
+            }
+          ],
+          "before": {
+            "可": 1,
+            "应": 4
+          },
+          "before_occurrences": [
+            {
+              "category": "modality_scope",
+              "claim_id": "C0003",
+              "column": 26,
+              "end": 26,
+              "end_column": 27,
+              "end_line": 1,
+              "line": 1,
+              "marker": "应",
+              "sentence_context": "经过分析我们认为,参赛者在一般结点处,在下列情况下应选择直奔终点:第一种情况指挖矿产生亏损的情况",
+              "sentence_id": "T0001",
+              "side": "before",
+              "start": 25
+            },
+            {
+              "category": "modality_scope",
+              "claim_id": "C0010",
+              "column": 168,
+              "end": 168,
+              "end_column": 169,
+              "end_line": 1,
+              "line": 1,
+              "marker": "应",
+              "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+              "sentence_id": "T0003",
+              "side": "before",
+              "start": 167
+            },
+            {
+              "category": "modality_scope",
+              "claim_id": "C0015",
+              "column": 217,
+              "end": 217,
+              "end_column": 218,
+              "end_line": 1,
+              "line": 1,
+              "marker": "应",
+              "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+              "sentence_id": "T0003",
+              "side": "before",
+              "start": 216
+            },
+            {
+              "category": "modality_scope",
+              "claim_id": "C0019",
+              "column": 295,
+              "end": 295,
+              "end_column": 296,
+              "end_line": 1,
+              "line": 1,
+              "marker": "应",
+              "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+              "sentence_id": "T0004",
+              "side": "before",
+              "start": 294
+            },
+            {
+              "category": "modality_scope",
+              "claim_id": "C0020",
+              "column": 305,
+              "end": 305,
+              "end_column": 306,
+              "end_line": 1,
+              "line": 1,
+              "marker": "可",
+              "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+              "sentence_id": "T0004",
+              "side": "before",
+              "start": 304
+            }
+          ],
+          "raw_delta": {
+            "added": {},
+            "removed": {
+              "应": 4
+            }
+          },
+          "residual_delta": [
+            {
+              "added": {},
+              "after_claim_id": null,
+              "after_occurrences": [
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0011",
+                  "column": 153,
+                  "end": 153,
+                  "end_column": 154,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "可",
+                  "sentence_context": "同行食物按照最坏天气配置，即高温和N、沙暴天气同时出现时仍可走到终点",
+                  "sentence_id": "T0005",
+                  "side": "after",
+                  "start": 152
+                }
+              ],
+              "before_claim_id": null,
+              "before_occurrences": [
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0003",
+                  "column": 26,
+                  "end": 26,
+                  "end_column": 27,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "应",
+                  "sentence_context": "经过分析我们认为,参赛者在一般结点处,在下列情况下应选择直奔终点:第一种情况指挖矿产生亏损的情况",
+                  "sentence_id": "T0001",
+                  "side": "before",
+                  "start": 25
+                },
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0010",
+                  "column": 168,
+                  "end": 168,
+                  "end_column": 169,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "应",
+                  "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+                  "sentence_id": "T0003",
+                  "side": "before",
+                  "start": 167
+                },
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0015",
+                  "column": 217,
+                  "end": 217,
+                  "end_column": 218,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "应",
+                  "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+                  "sentence_id": "T0003",
+                  "side": "before",
+                  "start": 216
+                },
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0019",
+                  "column": 295,
+                  "end": 295,
+                  "end_column": 296,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "应",
+                  "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                  "sentence_id": "T0004",
+                  "side": "before",
+                  "start": 294
+                },
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0020",
+                  "column": 305,
+                  "end": 305,
+                  "end_column": 306,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "可",
+                  "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                  "sentence_id": "T0004",
+                  "side": "before",
+                  "start": 304
+                }
+              ],
+              "removed": {
+                "应": 4
+              },
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+        "severity": "warning"
+      },
+      {
+        "code": "SPEECH_ACT_LOGICAL_RELATION_CHANGED",
+        "details": {
+          "after": {},
+          "after_occurrences": [],
+          "before": {
+            "因此": 1,
+            "所以": 1
+          },
+          "before_occurrences": [
+            {
+              "category": "logical_relation",
+              "claim_id": "C0008",
+              "column": 114,
+              "end": 115,
+              "end_column": 116,
+              "end_line": 1,
+              "line": 1,
+              "marker": "因此",
+              "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+              "sentence_id": "T0002",
+              "side": "before",
+              "start": 113
+            },
+            {
+              "category": "logical_relation",
+              "claim_id": "C0019",
+              "column": 288,
+              "end": 289,
+              "end_column": 290,
+              "end_line": 1,
+              "line": 1,
+              "marker": "所以",
+              "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+              "sentence_id": "T0004",
+              "side": "before",
+              "start": 287
+            }
+          ],
+          "raw_delta": {
+            "added": {},
+            "removed": {
+              "因此": 1,
+              "所以": 1
+            }
+          },
+          "residual_delta": [
+            {
+              "added": {},
+              "after_claim_id": null,
+              "after_occurrences": [],
+              "before_claim_id": null,
+              "before_occurrences": [
+                {
+                  "category": "logical_relation",
+                  "claim_id": "C0008",
+                  "column": 114,
+                  "end": 115,
+                  "end_column": 116,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "因此",
+                  "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+                  "sentence_id": "T0002",
+                  "side": "before",
+                  "start": 113
+                },
+                {
+                  "category": "logical_relation",
+                  "claim_id": "C0019",
+                  "column": 288,
+                  "end": 289,
+                  "end_column": 290,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "所以",
+                  "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                  "sentence_id": "T0004",
+                  "side": "before",
+                  "start": 287
+                }
+              ],
+              "removed": {
+                "因此": 1,
+                "所以": 1
+              },
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'logical_relation'; review semantic force manually.",
+        "severity": "warning"
+      },
+      {
+        "code": "SPEECH_ACT_CONDITION_CHANGED",
+        "details": {
+          "after": {
+            "当": 1
+          },
+          "after_occurrences": [
+            {
+              "category": "condition",
+              "claim_id": "C0007",
+              "column": 81,
+              "end": 81,
+              "end_column": 82,
+              "end_line": 1,
+              "line": 1,
+              "marker": "当",
+              "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+              "sentence_id": "T0004",
+              "side": "after",
+              "start": 80
+            }
+          ],
+          "before": {},
+          "before_occurrences": [],
+          "raw_delta": {
+            "added": {
+              "当": 1
+            },
+            "removed": {}
+          },
+          "residual_delta": [
+            {
+              "added": {
+                "当": 1
+              },
+              "after_claim_id": null,
+              "after_occurrences": [
+                {
+                  "category": "condition",
+                  "claim_id": "C0007",
+                  "column": 81,
+                  "end": 81,
+                  "end_column": 82,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "当",
+                  "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+                  "sentence_id": "T0004",
+                  "side": "after",
+                  "start": 80
+                }
+              ],
+              "before_claim_id": null,
+              "before_occurrences": [],
+              "removed": {},
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'condition'; review semantic force manually.",
+        "severity": "warning"
+      }
+    ]
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 1,
+    "before_candidates": 0,
+    "introduced_candidates": 1,
+    "unexplained_high_candidates": 1
+  },
+  "mechanical_validation_exit_code": 1,
+  "mechanical_validation_status": "FAIL",
+  "mode": "REWRITE",
+  "paired_quality_clearance_granted": false,
+  "paired_quality_review_local_clearance_supported": false,
+  "paired_quality_review_request": {
+    "artifact": {
+      "after_sha256": "482e92208f472b62ee7004fef1697c5511a9f9f80f5097a578343d90a92008ea",
+      "before_sha256": "81d3f3f287335a10ec05dd90cb6739f9b70c51aea4d96c72e8b84114a185ff0b"
+    },
+    "changes": [
+      {
+        "after": {
+          "end_line": 1,
+          "han_chars": 163,
+          "line_count": 1,
+          "sha256": "482e92208f472b62ee7004fef1697c5511a9f9f80f5097a578343d90a92008ea",
+          "start_line": 1
+        },
+        "before": {
+          "end_line": 1,
+          "han_chars": 287,
+          "line_count": 1,
+          "sha256": "81d3f3f287335a10ec05dd90cb6739f9b70c51aea4d96c72e8b84114a185ff0b",
+          "start_line": 1
+        },
+        "change_id": "QCH-d8989c42adbbb45dbc4d",
+        "operation": "REPLACE",
+        "ordinal": 1
+      }
+    ],
+    "limitations": {
+      "academic_correctness": "NOT_EVALUATED",
+      "authorship": "NOT_EVALUATED",
+      "quality_clearance_granted": false
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "03ba9601430e17a4c71cb21f9134e69273284d4dc15295cbfb3235737ed778bd",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "request_sha256": "58d44ca3d8dfca23e1a4793807f5a9063cc250fbf7379d11dd18975b47901e8c",
+    "review_contract": {
+      "empty_or_generic_benefit_is_clearance": false,
+      "local_model_or_caller_assertion_is_clearance": false,
+      "required_dimensions": [
+        "actionable_pathology_remaining",
+        "no_change_is_best_available_decision",
+        "problem_span_binding",
+        "independent_reading_benefit",
+        "subject_and_modifier_alignment",
+        "verb_object_collocation",
+        "logical_relation_preservation",
+        "template_field_role_and_authorization",
+        "information_density_and_rhythm",
+        "author_voice_non_regression"
+      ],
+      "required_per_change_verdicts": [
+        "ACCEPT",
+        "REVISE",
+        "REVERT"
+      ],
+      "validator_pass_is_quality_clearance": false
+    },
+    "schema": "humanize-paired-quality-review-request/v1",
+    "status": "BLOCKED_BY_MECHANICAL_GATE",
+    "template_field_changes": [],
+    "validation_context": {
+      "artifact_relation": "CHANGED",
+      "decision": "REWRITE",
+      "decision_eligible": false,
+      "document_format": "markdown",
+      "document_scope": "DOCUMENT",
+      "mechanical_validation_status": "FAIL",
+      "mode": "REWRITE",
+      "scene": "MODELING"
+    }
+  },
+  "paired_quality_review_status": "BLOCKED_BY_MECHANICAL_GATE",
+  "paired_style_delta_findings": [],
+  "paired_style_delta_layer_status": "NOT_APPLICABLE",
+  "paired_style_delta_summary": {
+    "authorship_inference": false,
+    "finding_count": 0,
+    "scope": "PAIRED_COURSE_VOICE_NON_REGRESSION_CANDIDATE",
+    "status": "NOT_APPLICABLE"
+  },
+  "pending_warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不能": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0008",
+            "column": 92,
+            "end": 93,
+            "end_column": 94,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不能",
+            "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+            "sentence_id": "T0004",
+            "side": "after",
+            "start": 91
+          }
+        ],
+        "before": {
+          "不": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0008",
+            "column": 131,
+            "end": 131,
+            "end_column": 132,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 130
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "不能": 1
+          },
+          "removed": {
+            "不": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "不能": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0008",
+                "column": 92,
+                "end": 93,
+                "end_column": 94,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不能",
+                "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+                "sentence_id": "T0004",
+                "side": "after",
+                "start": 91
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0008",
+                "column": 131,
+                "end": 131,
+                "end_column": 132,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 130
+              }
+            ],
+            "removed": {
+              "不": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "a687420f62fbe0616b83b4fabe722db2951bf7e27e17f37eab4121ab64ae88ee"
+    },
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "可": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0011",
+            "column": 153,
+            "end": 153,
+            "end_column": 154,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可",
+            "sentence_context": "同行食物按照最坏天气配置，即高温和N、沙暴天气同时出现时仍可走到终点",
+            "sentence_id": "T0005",
+            "side": "after",
+            "start": 152
+          }
+        ],
+        "before": {
+          "可": 1,
+          "应": 4
+        },
+        "before_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0003",
+            "column": 26,
+            "end": 26,
+            "end_column": 27,
+            "end_line": 1,
+            "line": 1,
+            "marker": "应",
+            "sentence_context": "经过分析我们认为,参赛者在一般结点处,在下列情况下应选择直奔终点:第一种情况指挖矿产生亏损的情况",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 25
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0010",
+            "column": 168,
+            "end": 168,
+            "end_column": 169,
+            "end_line": 1,
+            "line": 1,
+            "marker": "应",
+            "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 167
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0015",
+            "column": 217,
+            "end": 217,
+            "end_column": 218,
+            "end_line": 1,
+            "line": 1,
+            "marker": "应",
+            "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 216
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0019",
+            "column": 295,
+            "end": 295,
+            "end_column": 296,
+            "end_line": 1,
+            "line": 1,
+            "marker": "应",
+            "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+            "sentence_id": "T0004",
+            "side": "before",
+            "start": 294
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0020",
+            "column": 305,
+            "end": 305,
+            "end_column": 306,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可",
+            "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+            "sentence_id": "T0004",
+            "side": "before",
+            "start": 304
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "应": 4
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0011",
+                "column": 153,
+                "end": 153,
+                "end_column": 154,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "同行食物按照最坏天气配置，即高温和N、沙暴天气同时出现时仍可走到终点",
+                "sentence_id": "T0005",
+                "side": "after",
+                "start": 152
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0003",
+                "column": 26,
+                "end": 26,
+                "end_column": 27,
+                "end_line": 1,
+                "line": 1,
+                "marker": "应",
+                "sentence_context": "经过分析我们认为,参赛者在一般结点处,在下列情况下应选择直奔终点:第一种情况指挖矿产生亏损的情况",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 25
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0010",
+                "column": 168,
+                "end": 168,
+                "end_column": 169,
+                "end_line": 1,
+                "line": 1,
+                "marker": "应",
+                "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 167
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0015",
+                "column": 217,
+                "end": 217,
+                "end_column": 218,
+                "end_line": 1,
+                "line": 1,
+                "marker": "应",
+                "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 216
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0019",
+                "column": 295,
+                "end": 295,
+                "end_column": 296,
+                "end_line": 1,
+                "line": 1,
+                "marker": "应",
+                "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                "sentence_id": "T0004",
+                "side": "before",
+                "start": 294
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0020",
+                "column": 305,
+                "end": 305,
+                "end_column": 306,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                "sentence_id": "T0004",
+                "side": "before",
+                "start": 304
+              }
+            ],
+            "removed": {
+              "应": 4
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "d82c6ccb065f1c207c93de85fec879abe0c5b10cc79a221d2bc614fe520ae138"
+    },
+    {
+      "code": "SPEECH_ACT_LOGICAL_RELATION_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "因此": 1,
+          "所以": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "logical_relation",
+            "claim_id": "C0008",
+            "column": 114,
+            "end": 115,
+            "end_column": 116,
+            "end_line": 1,
+            "line": 1,
+            "marker": "因此",
+            "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 113
+          },
+          {
+            "category": "logical_relation",
+            "claim_id": "C0019",
+            "column": 288,
+            "end": 289,
+            "end_column": 290,
+            "end_line": 1,
+            "line": 1,
+            "marker": "所以",
+            "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+            "sentence_id": "T0004",
+            "side": "before",
+            "start": 287
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "因此": 1,
+            "所以": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0008",
+                "column": 114,
+                "end": 115,
+                "end_column": 116,
+                "end_line": 1,
+                "line": 1,
+                "marker": "因此",
+                "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 113
+              },
+              {
+                "category": "logical_relation",
+                "claim_id": "C0019",
+                "column": 288,
+                "end": 289,
+                "end_column": 290,
+                "end_line": 1,
+                "line": 1,
+                "marker": "所以",
+                "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                "sentence_id": "T0004",
+                "side": "before",
+                "start": 287
+              }
+            ],
+            "removed": {
+              "因此": 1,
+              "所以": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'logical_relation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "e898dff3d39eb93b36d049a33bd328831d75ad6808577affa45a8e10cf9056c3"
+    },
+    {
+      "code": "SPEECH_ACT_CONDITION_CHANGED",
+      "details": {
+        "after": {
+          "当": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "condition",
+            "claim_id": "C0007",
+            "column": 81,
+            "end": 81,
+            "end_column": 82,
+            "end_line": 1,
+            "line": 1,
+            "marker": "当",
+            "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+            "sentence_id": "T0004",
+            "side": "after",
+            "start": 80
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "当": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "当": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0007",
+                "column": 81,
+                "end": 81,
+                "end_column": 82,
+                "end_line": 1,
+                "line": 1,
+                "marker": "当",
+                "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+                "sentence_id": "T0004",
+                "side": "after",
+                "start": 80
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'condition'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "a494b26748c2d56d2a329d4b3fc3a7ea94ace6a7b7e70330faef96cd8949e35e"
+    }
+  ],
+  "proposed_warning_resolutions": [],
+  "report_scope_check": {
+    "editable_range_count": 0,
+    "editable_ranges": [],
+    "extractor_replay_match": null,
+    "fragment_count": 0,
+    "outside_selection_unchanged": null,
+    "report_sha256": null,
+    "scope_path": null,
+    "scope_semantic_sha256": null,
+    "scope_sha256": null,
+    "source_sha256": null,
+    "status": "N/A"
+  },
+  "review_reasons": [
+    "speech_act_warning",
+    "unexplained_high_severity_signal",
+    "unexplained_strict_corpus_signal",
+    "introduced_style_signal"
+  ],
+  "scene": "MODELING",
+  "semantic_source_check": "N/A",
+  "speech_act_diagnostics": [],
+  "speech_act_layer_status": "REVIEW",
+  "status": "FAIL",
+  "strict_corpus_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 1,
+    "before_candidates": 0,
+    "clean_allowed_by_strict_layer": false,
+    "enabled": true,
+    "no_change_allowed": false,
+    "unexplained_candidates": 1
+  },
+  "style_signal_layer_status": "REVIEW",
+  "template_field_edit_scope_check": {
+    "authorized_edit_count": 0,
+    "authorized_edits": [],
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "provided": false,
+    "schema_version": null,
+    "scope_sha256": null,
+    "source_sha256": "81d3f3f287335a10ec05dd90cb6739f9b70c51aea4d96c72e8b84114a185ff0b",
+    "status": "N/A"
+  },
+  "template_field_findings": [],
+  "template_field_layer_status": "PASS",
+  "template_field_summary": {
+    "authorized_edit_count": 0,
+    "finding_count": 0,
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "review_finding_count": 0,
+    "status": "PASS"
+  },
+  "unaccepted_warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不能": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0008",
+            "column": 92,
+            "end": 93,
+            "end_column": 94,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不能",
+            "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+            "sentence_id": "T0004",
+            "side": "after",
+            "start": 91
+          }
+        ],
+        "before": {
+          "不": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0008",
+            "column": 131,
+            "end": 131,
+            "end_column": 132,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 130
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "不能": 1
+          },
+          "removed": {
+            "不": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "不能": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0008",
+                "column": 92,
+                "end": 93,
+                "end_column": 94,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不能",
+                "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+                "sentence_id": "T0004",
+                "side": "after",
+                "start": 91
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0008",
+                "column": 131,
+                "end": 131,
+                "end_column": 132,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 130
+              }
+            ],
+            "removed": {
+              "不": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "a687420f62fbe0616b83b4fabe722db2951bf7e27e17f37eab4121ab64ae88ee"
+    },
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "可": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0011",
+            "column": 153,
+            "end": 153,
+            "end_column": 154,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可",
+            "sentence_context": "同行食物按照最坏天气配置，即高温和N、沙暴天气同时出现时仍可走到终点",
+            "sentence_id": "T0005",
+            "side": "after",
+            "start": 152
+          }
+        ],
+        "before": {
+          "可": 1,
+          "应": 4
+        },
+        "before_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0003",
+            "column": 26,
+            "end": 26,
+            "end_column": 27,
+            "end_line": 1,
+            "line": 1,
+            "marker": "应",
+            "sentence_context": "经过分析我们认为,参赛者在一般结点处,在下列情况下应选择直奔终点:第一种情况指挖矿产生亏损的情况",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 25
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0010",
+            "column": 168,
+            "end": 168,
+            "end_column": 169,
+            "end_line": 1,
+            "line": 1,
+            "marker": "应",
+            "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 167
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0015",
+            "column": 217,
+            "end": 217,
+            "end_column": 218,
+            "end_line": 1,
+            "line": 1,
+            "marker": "应",
+            "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 216
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0019",
+            "column": 295,
+            "end": 295,
+            "end_column": 296,
+            "end_line": 1,
+            "line": 1,
+            "marker": "应",
+            "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+            "sentence_id": "T0004",
+            "side": "before",
+            "start": 294
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0020",
+            "column": 305,
+            "end": 305,
+            "end_column": 306,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可",
+            "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+            "sentence_id": "T0004",
+            "side": "before",
+            "start": 304
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "应": 4
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0011",
+                "column": 153,
+                "end": 153,
+                "end_column": 154,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "同行食物按照最坏天气配置，即高温和N、沙暴天气同时出现时仍可走到终点",
+                "sentence_id": "T0005",
+                "side": "after",
+                "start": 152
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0003",
+                "column": 26,
+                "end": 26,
+                "end_column": 27,
+                "end_line": 1,
+                "line": 1,
+                "marker": "应",
+                "sentence_context": "经过分析我们认为,参赛者在一般结点处,在下列情况下应选择直奔终点:第一种情况指挖矿产生亏损的情况",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 25
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0010",
+                "column": 168,
+                "end": 168,
+                "end_column": 169,
+                "end_line": 1,
+                "line": 1,
+                "marker": "应",
+                "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 167
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0015",
+                "column": 217,
+                "end": 217,
+                "end_column": 218,
+                "end_line": 1,
+                "line": 1,
+                "marker": "应",
+                "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 216
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0019",
+                "column": 295,
+                "end": 295,
+                "end_column": 296,
+                "end_line": 1,
+                "line": 1,
+                "marker": "应",
+                "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                "sentence_id": "T0004",
+                "side": "before",
+                "start": 294
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0020",
+                "column": 305,
+                "end": 305,
+                "end_column": 306,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                "sentence_id": "T0004",
+                "side": "before",
+                "start": 304
+              }
+            ],
+            "removed": {
+              "应": 4
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "d82c6ccb065f1c207c93de85fec879abe0c5b10cc79a221d2bc614fe520ae138"
+    },
+    {
+      "code": "SPEECH_ACT_LOGICAL_RELATION_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "因此": 1,
+          "所以": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "logical_relation",
+            "claim_id": "C0008",
+            "column": 114,
+            "end": 115,
+            "end_column": 116,
+            "end_line": 1,
+            "line": 1,
+            "marker": "因此",
+            "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 113
+          },
+          {
+            "category": "logical_relation",
+            "claim_id": "C0019",
+            "column": 288,
+            "end": 289,
+            "end_column": 290,
+            "end_line": 1,
+            "line": 1,
+            "marker": "所以",
+            "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+            "sentence_id": "T0004",
+            "side": "before",
+            "start": 287
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "因此": 1,
+            "所以": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0008",
+                "column": 114,
+                "end": 115,
+                "end_column": 116,
+                "end_line": 1,
+                "line": 1,
+                "marker": "因此",
+                "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 113
+              },
+              {
+                "category": "logical_relation",
+                "claim_id": "C0019",
+                "column": 288,
+                "end": 289,
+                "end_column": 290,
+                "end_line": 1,
+                "line": 1,
+                "marker": "所以",
+                "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                "sentence_id": "T0004",
+                "side": "before",
+                "start": 287
+              }
+            ],
+            "removed": {
+              "因此": 1,
+              "所以": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'logical_relation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "e898dff3d39eb93b36d049a33bd328831d75ad6808577affa45a8e10cf9056c3"
+    },
+    {
+      "code": "SPEECH_ACT_CONDITION_CHANGED",
+      "details": {
+        "after": {
+          "当": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "condition",
+            "claim_id": "C0007",
+            "column": 81,
+            "end": 81,
+            "end_column": 82,
+            "end_line": 1,
+            "line": 1,
+            "marker": "当",
+            "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+            "sentence_id": "T0004",
+            "side": "after",
+            "start": 80
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "当": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "当": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0007",
+                "column": 81,
+                "end": 81,
+                "end_column": 82,
+                "end_line": 1,
+                "line": 1,
+                "marker": "当",
+                "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+                "sentence_id": "T0004",
+                "side": "after",
+                "start": 80
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'condition'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "a494b26748c2d56d2a329d4b3fc3a7ea94ace6a7b7e70330faef96cd8949e35e"
+    }
+  ],
+  "unexplained_high_findings": [
+    {
+      "action": "REWRITE",
+      "column": 14,
+      "context": "在一般结点处，是否继续挖矿先看两项收益的大小关系。挖矿亏损时直接前往终点；对于另一种情形，下式左侧是这$T$天挖矿带来的收益，右侧是为挖矿绕行所付出的资源金额。当左侧小于",
+      "count": 1,
+      "file": "after",
+      "finding_hash": "4bfe4e28eeb7322643781b90d432e2e1b2312e0f98f1aa530c3b4bd5e54c7aea",
+      "line": 1,
+      "matched": "先看",
+      "rationale": "把过程播报改成直接承载对象、动作或结果的正文；学术正文不得保留助手工作台旁白。",
+      "severity": "high",
+      "signal_id": "LEX-STRICT-CORPUS-PROCESS-01"
+    }
+  ],
+  "unexplained_strict_findings": [
+    {
+      "action": "REWRITE",
+      "column": 14,
+      "context": "在一般结点处，是否继续挖矿先看两项收益的大小关系。挖矿亏损时直接前往终点；对于另一种情形，下式左侧是这$T$天挖矿带来的收益，右侧是为挖矿绕行所付出的资源金额。当左侧小于",
+      "count": 1,
+      "file": "after",
+      "finding_hash": "4bfe4e28eeb7322643781b90d432e2e1b2312e0f98f1aa530c3b4bd5e54c7aea",
+      "line": 1,
+      "matched": "先看",
+      "rationale": "把过程播报改成直接承载对象、动作或结果的正文；学术正文不得保留助手工作台旁白。",
+      "severity": "high",
+      "signal_id": "LEX-STRICT-CORPUS-PROCESS-01"
+    }
+  ],
+  "warning_proposal_state": {
+    "attestation_status": "NOT_PROVIDED",
+    "cross_record_reviewer_linkability": "NOT_RECORDED",
+    "identity_verified": false,
+    "proposal_source": "NOT_PROVIDED",
+    "proposed_warning_fingerprints": [],
+    "review_clearance_granted": false,
+    "reviewer_identifier_collected": false,
+    "stable_reviewer_pseudonym_recorded": false,
+    "warning_review_request_sha256": null
+  },
+  "warning_resolutions": {},
+  "warning_review_request": {
+    "artifact": {
+      "after_sha256": "482e92208f472b62ee7004fef1697c5511a9f9f80f5097a578343d90a92008ea",
+      "before_sha256": "81d3f3f287335a10ec05dd90cb6739f9b70c51aea4d96c72e8b84114a185ff0b"
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "03ba9601430e17a4c71cb21f9134e69273284d4dc15295cbfb3235737ed778bd",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "request_sha256": "b006eafefb62004477a0cfb133ab460050e77200b34de74e101dfc2879214c68",
+    "schema": "humanize-warning-review-request/v1",
+    "validation_context": {
+      "document_format": "markdown",
+      "document_scope": "DOCUMENT",
+      "mode": "REWRITE",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "scene": "MODELING",
+      "strict_speech_acts": false
+    },
+    "warnings": [
+      {
+        "code": "SPEECH_ACT_NEGATION_CHANGED",
+        "details": {
+          "after": {
+            "不能": 1
+          },
+          "after_occurrences": [
+            {
+              "category": "negation",
+              "claim_id": "C0008",
+              "column": 92,
+              "end": 93,
+              "end_column": 94,
+              "end_line": 1,
+              "line": 1,
+              "marker": "不能",
+              "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+              "sentence_id": "T0004",
+              "side": "after",
+              "start": 91
+            }
+          ],
+          "before": {
+            "不": 1
+          },
+          "before_occurrences": [
+            {
+              "category": "negation",
+              "claim_id": "C0008",
+              "column": 131,
+              "end": 131,
+              "end_column": 132,
+              "end_line": 1,
+              "line": 1,
+              "marker": "不",
+              "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+              "sentence_id": "T0002",
+              "side": "before",
+              "start": 130
+            }
+          ],
+          "raw_delta": {
+            "added": {
+              "不能": 1
+            },
+            "removed": {
+              "不": 1
+            }
+          },
+          "residual_delta": [
+            {
+              "added": {
+                "不能": 1
+              },
+              "after_claim_id": null,
+              "after_occurrences": [
+                {
+                  "category": "negation",
+                  "claim_id": "C0008",
+                  "column": 92,
+                  "end": 93,
+                  "end_column": 94,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "不能",
+                  "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+                  "sentence_id": "T0004",
+                  "side": "after",
+                  "start": 91
+                }
+              ],
+              "before_claim_id": null,
+              "before_occurrences": [
+                {
+                  "category": "negation",
+                  "claim_id": "C0008",
+                  "column": 131,
+                  "end": 131,
+                  "end_column": 132,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "不",
+                  "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+                  "sentence_id": "T0002",
+                  "side": "before",
+                  "start": 130
+                }
+              ],
+              "removed": {
+                "不": 1
+              },
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+        "severity": "warning",
+        "warning_fingerprint": "a687420f62fbe0616b83b4fabe722db2951bf7e27e17f37eab4121ab64ae88ee"
+      },
+      {
+        "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+        "details": {
+          "after": {
+            "可": 1
+          },
+          "after_occurrences": [
+            {
+              "category": "modality_scope",
+              "claim_id": "C0011",
+              "column": 153,
+              "end": 153,
+              "end_column": 154,
+              "end_line": 1,
+              "line": 1,
+              "marker": "可",
+              "sentence_context": "同行食物按照最坏天气配置，即高温和N、沙暴天气同时出现时仍可走到终点",
+              "sentence_id": "T0005",
+              "side": "after",
+              "start": 152
+            }
+          ],
+          "before": {
+            "可": 1,
+            "应": 4
+          },
+          "before_occurrences": [
+            {
+              "category": "modality_scope",
+              "claim_id": "C0003",
+              "column": 26,
+              "end": 26,
+              "end_column": 27,
+              "end_line": 1,
+              "line": 1,
+              "marker": "应",
+              "sentence_context": "经过分析我们认为,参赛者在一般结点处,在下列情况下应选择直奔终点:第一种情况指挖矿产生亏损的情况",
+              "sentence_id": "T0001",
+              "side": "before",
+              "start": 25
+            },
+            {
+              "category": "modality_scope",
+              "claim_id": "C0010",
+              "column": 168,
+              "end": 168,
+              "end_column": 169,
+              "end_line": 1,
+              "line": 1,
+              "marker": "应",
+              "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+              "sentence_id": "T0003",
+              "side": "before",
+              "start": 167
+            },
+            {
+              "category": "modality_scope",
+              "claim_id": "C0015",
+              "column": 217,
+              "end": 217,
+              "end_column": 218,
+              "end_line": 1,
+              "line": 1,
+              "marker": "应",
+              "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+              "sentence_id": "T0003",
+              "side": "before",
+              "start": 216
+            },
+            {
+              "category": "modality_scope",
+              "claim_id": "C0019",
+              "column": 295,
+              "end": 295,
+              "end_column": 296,
+              "end_line": 1,
+              "line": 1,
+              "marker": "应",
+              "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+              "sentence_id": "T0004",
+              "side": "before",
+              "start": 294
+            },
+            {
+              "category": "modality_scope",
+              "claim_id": "C0020",
+              "column": 305,
+              "end": 305,
+              "end_column": 306,
+              "end_line": 1,
+              "line": 1,
+              "marker": "可",
+              "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+              "sentence_id": "T0004",
+              "side": "before",
+              "start": 304
+            }
+          ],
+          "raw_delta": {
+            "added": {},
+            "removed": {
+              "应": 4
+            }
+          },
+          "residual_delta": [
+            {
+              "added": {},
+              "after_claim_id": null,
+              "after_occurrences": [
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0011",
+                  "column": 153,
+                  "end": 153,
+                  "end_column": 154,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "可",
+                  "sentence_context": "同行食物按照最坏天气配置，即高温和N、沙暴天气同时出现时仍可走到终点",
+                  "sentence_id": "T0005",
+                  "side": "after",
+                  "start": 152
+                }
+              ],
+              "before_claim_id": null,
+              "before_occurrences": [
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0003",
+                  "column": 26,
+                  "end": 26,
+                  "end_column": 27,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "应",
+                  "sentence_context": "经过分析我们认为,参赛者在一般结点处,在下列情况下应选择直奔终点:第一种情况指挖矿产生亏损的情况",
+                  "sentence_id": "T0001",
+                  "side": "before",
+                  "start": 25
+                },
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0010",
+                  "column": 168,
+                  "end": 168,
+                  "end_column": 169,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "应",
+                  "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+                  "sentence_id": "T0003",
+                  "side": "before",
+                  "start": 167
+                },
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0015",
+                  "column": 217,
+                  "end": 217,
+                  "end_column": 218,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "应",
+                  "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+                  "sentence_id": "T0003",
+                  "side": "before",
+                  "start": 216
+                },
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0019",
+                  "column": 295,
+                  "end": 295,
+                  "end_column": 296,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "应",
+                  "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                  "sentence_id": "T0004",
+                  "side": "before",
+                  "start": 294
+                },
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0020",
+                  "column": 305,
+                  "end": 305,
+                  "end_column": 306,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "可",
+                  "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                  "sentence_id": "T0004",
+                  "side": "before",
+                  "start": 304
+                }
+              ],
+              "removed": {
+                "应": 4
+              },
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+        "severity": "warning",
+        "warning_fingerprint": "d82c6ccb065f1c207c93de85fec879abe0c5b10cc79a221d2bc614fe520ae138"
+      },
+      {
+        "code": "SPEECH_ACT_LOGICAL_RELATION_CHANGED",
+        "details": {
+          "after": {},
+          "after_occurrences": [],
+          "before": {
+            "因此": 1,
+            "所以": 1
+          },
+          "before_occurrences": [
+            {
+              "category": "logical_relation",
+              "claim_id": "C0008",
+              "column": 114,
+              "end": 115,
+              "end_column": 116,
+              "end_line": 1,
+              "line": 1,
+              "marker": "因此",
+              "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+              "sentence_id": "T0002",
+              "side": "before",
+              "start": 113
+            },
+            {
+              "category": "logical_relation",
+              "claim_id": "C0019",
+              "column": 288,
+              "end": 289,
+              "end_column": 290,
+              "end_line": 1,
+              "line": 1,
+              "marker": "所以",
+              "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+              "sentence_id": "T0004",
+              "side": "before",
+              "start": 287
+            }
+          ],
+          "raw_delta": {
+            "added": {},
+            "removed": {
+              "因此": 1,
+              "所以": 1
+            }
+          },
+          "residual_delta": [
+            {
+              "added": {},
+              "after_claim_id": null,
+              "after_occurrences": [],
+              "before_claim_id": null,
+              "before_occurrences": [
+                {
+                  "category": "logical_relation",
+                  "claim_id": "C0008",
+                  "column": 114,
+                  "end": 115,
+                  "end_column": 116,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "因此",
+                  "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+                  "sentence_id": "T0002",
+                  "side": "before",
+                  "start": 113
+                },
+                {
+                  "category": "logical_relation",
+                  "claim_id": "C0019",
+                  "column": 288,
+                  "end": 289,
+                  "end_column": 290,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "所以",
+                  "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                  "sentence_id": "T0004",
+                  "side": "before",
+                  "start": 287
+                }
+              ],
+              "removed": {
+                "因此": 1,
+                "所以": 1
+              },
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'logical_relation'; review semantic force manually.",
+        "severity": "warning",
+        "warning_fingerprint": "e898dff3d39eb93b36d049a33bd328831d75ad6808577affa45a8e10cf9056c3"
+      },
+      {
+        "code": "SPEECH_ACT_CONDITION_CHANGED",
+        "details": {
+          "after": {
+            "当": 1
+          },
+          "after_occurrences": [
+            {
+              "category": "condition",
+              "claim_id": "C0007",
+              "column": 81,
+              "end": 81,
+              "end_column": 82,
+              "end_line": 1,
+              "line": 1,
+              "marker": "当",
+              "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+              "sentence_id": "T0004",
+              "side": "after",
+              "start": 80
+            }
+          ],
+          "before": {},
+          "before_occurrences": [],
+          "raw_delta": {
+            "added": {
+              "当": 1
+            },
+            "removed": {}
+          },
+          "residual_delta": [
+            {
+              "added": {
+                "当": 1
+              },
+              "after_claim_id": null,
+              "after_occurrences": [
+                {
+                  "category": "condition",
+                  "claim_id": "C0007",
+                  "column": 81,
+                  "end": 81,
+                  "end_column": 82,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "当",
+                  "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+                  "sentence_id": "T0004",
+                  "side": "after",
+                  "start": 80
+                }
+              ],
+              "before_claim_id": null,
+              "before_occurrences": [],
+              "removed": {},
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'condition'; review semantic force manually.",
+        "severity": "warning",
+        "warning_fingerprint": "a494b26748c2d56d2a329d4b3fc3a7ea94ace6a7b7e70330faef96cd8949e35e"
+      }
+    ]
+  },
+  "warnings_without_resolution_proposal": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不能": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0008",
+            "column": 92,
+            "end": 93,
+            "end_column": 94,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不能",
+            "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+            "sentence_id": "T0004",
+            "side": "after",
+            "start": 91
+          }
+        ],
+        "before": {
+          "不": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0008",
+            "column": 131,
+            "end": 131,
+            "end_column": 132,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 130
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "不能": 1
+          },
+          "removed": {
+            "不": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "不能": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0008",
+                "column": 92,
+                "end": 93,
+                "end_column": 94,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不能",
+                "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+                "sentence_id": "T0004",
+                "side": "after",
+                "start": 91
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0008",
+                "column": 131,
+                "end": 131,
+                "end_column": 132,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 130
+              }
+            ],
+            "removed": {
+              "不": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "a687420f62fbe0616b83b4fabe722db2951bf7e27e17f37eab4121ab64ae88ee"
+    },
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "可": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0011",
+            "column": 153,
+            "end": 153,
+            "end_column": 154,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可",
+            "sentence_context": "同行食物按照最坏天气配置，即高温和N、沙暴天气同时出现时仍可走到终点",
+            "sentence_id": "T0005",
+            "side": "after",
+            "start": 152
+          }
+        ],
+        "before": {
+          "可": 1,
+          "应": 4
+        },
+        "before_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0003",
+            "column": 26,
+            "end": 26,
+            "end_column": 27,
+            "end_line": 1,
+            "line": 1,
+            "marker": "应",
+            "sentence_context": "经过分析我们认为,参赛者在一般结点处,在下列情况下应选择直奔终点:第一种情况指挖矿产生亏损的情况",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 25
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0010",
+            "column": 168,
+            "end": 168,
+            "end_column": 169,
+            "end_line": 1,
+            "line": 1,
+            "marker": "应",
+            "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 167
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0015",
+            "column": 217,
+            "end": 217,
+            "end_column": 218,
+            "end_line": 1,
+            "line": 1,
+            "marker": "应",
+            "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 216
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0019",
+            "column": 295,
+            "end": 295,
+            "end_column": 296,
+            "end_line": 1,
+            "line": 1,
+            "marker": "应",
+            "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+            "sentence_id": "T0004",
+            "side": "before",
+            "start": 294
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0020",
+            "column": 305,
+            "end": 305,
+            "end_column": 306,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可",
+            "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+            "sentence_id": "T0004",
+            "side": "before",
+            "start": 304
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "应": 4
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0011",
+                "column": 153,
+                "end": 153,
+                "end_column": 154,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "同行食物按照最坏天气配置，即高温和N、沙暴天气同时出现时仍可走到终点",
+                "sentence_id": "T0005",
+                "side": "after",
+                "start": 152
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0003",
+                "column": 26,
+                "end": 26,
+                "end_column": 27,
+                "end_line": 1,
+                "line": 1,
+                "marker": "应",
+                "sentence_context": "经过分析我们认为,参赛者在一般结点处,在下列情况下应选择直奔终点:第一种情况指挖矿产生亏损的情况",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 25
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0010",
+                "column": 168,
+                "end": 168,
+                "end_column": 169,
+                "end_line": 1,
+                "line": 1,
+                "marker": "应",
+                "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 167
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0015",
+                "column": 217,
+                "end": 217,
+                "end_column": 218,
+                "end_line": 1,
+                "line": 1,
+                "marker": "应",
+                "sentence_context": "这两种情况下,参与者的决策应为:选择最短路径到达终点,决策函数的表达式为:结点集合中,到达终点距离最短的那个点的编号,参与者应选择这个点作为下一个结点",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 216
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0019",
+                "column": 295,
+                "end": 295,
+                "end_column": 296,
+                "end_line": 1,
+                "line": 1,
+                "marker": "应",
+                "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                "sentence_id": "T0004",
+                "side": "before",
+                "start": 294
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0020",
+                "column": 305,
+                "end": 305,
+                "end_column": 306,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                "sentence_id": "T0004",
+                "side": "before",
+                "start": 304
+              }
+            ],
+            "removed": {
+              "应": 4
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "d82c6ccb065f1c207c93de85fec879abe0c5b10cc79a221d2bc614fe520ae138"
+    },
+    {
+      "code": "SPEECH_ACT_LOGICAL_RELATION_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "因此": 1,
+          "所以": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "logical_relation",
+            "claim_id": "C0008",
+            "column": 114,
+            "end": 115,
+            "end_column": 116,
+            "end_line": 1,
+            "line": 1,
+            "marker": "因此",
+            "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 113
+          },
+          {
+            "category": "logical_relation",
+            "claim_id": "C0019",
+            "column": 288,
+            "end": 289,
+            "end_column": 290,
+            "end_line": 1,
+            "line": 1,
+            "marker": "所以",
+            "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+            "sentence_id": "T0004",
+            "side": "before",
+            "start": 287
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "因此": 1,
+            "所以": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0008",
+                "column": 114,
+                "end": 115,
+                "end_column": 116,
+                "end_line": 1,
+                "line": 1,
+                "marker": "因此",
+                "sentence_context": "对于第二种情况的下面一式,小于号左边的是参与者这T天挖矿带来的收益,右边是参与者因希望挖矿而 产生的资源消耗所对应的金额,因此该式指的是参与者挖矿所赚净收益不足以弥补其 产生的资源消耗所对应的金额",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 113
+              },
+              {
+                "category": "logical_relation",
+                "claim_id": "C0019",
+                "column": 288,
+                "end": 289,
+                "end_column": 290,
+                "end_line": 1,
+                "line": 1,
+                "marker": "所以",
+                "sentence_context": "此外,这种情况下参与者所带的食物要保证他能在最坏情况,即行进过程中均为高温同时又有N、的沙暴天气的情况下到达终点,所以其他情况则应尽量多带水和食物,可参考问题一的情况",
+                "sentence_id": "T0004",
+                "side": "before",
+                "start": 287
+              }
+            ],
+            "removed": {
+              "因此": 1,
+              "所以": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'logical_relation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "e898dff3d39eb93b36d049a33bd328831d75ad6808577affa45a8e10cf9056c3"
+    },
+    {
+      "code": "SPEECH_ACT_CONDITION_CHANGED",
+      "details": {
+        "after": {
+          "当": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "condition",
+            "claim_id": "C0007",
+            "column": 81,
+            "end": 81,
+            "end_column": 82,
+            "end_line": 1,
+            "line": 1,
+            "marker": "当",
+            "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+            "sentence_id": "T0004",
+            "side": "after",
+            "start": 80
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "当": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "当": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0007",
+                "column": 81,
+                "end": 81,
+                "end_column": 82,
+                "end_line": 1,
+                "line": 1,
+                "marker": "当",
+                "sentence_context": "当左侧小于右侧，净收益不能补偿绕行支出，决策函数便返回结点集合中到终点距离最短的编号",
+                "sentence_id": "T0004",
+                "side": "after",
+                "start": 80
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'condition'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "a494b26748c2d56d2a329d4b3fc3a7ea94ace6a7b7e70330faef96cd8949e35e"
+    }
+  ]
+}

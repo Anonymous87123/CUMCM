@@ -1,0 +1,255 @@
+{
+  "artifact": {
+    "after_sha256": "51c7e6166b0b8bc08f3fee1212c3d154ba56516ed988ce7d4fd0372f65909f10",
+    "before_sha256": "f45733b5a37e3f6c6f261ef2416fd1dc07a502b1209a3937f4f2a220f79fda27"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "f690cdf400597f027fb10ec4a980f1f7ca226895a0d077059d2d2ea5eb256e4f",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "markdown",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "可能": 1,
+          "需要": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0001",
+            "column": 4,
+            "end": 5,
+            "end_column": 6,
+            "end_line": 1,
+            "line": 1,
+            "marker": "需要",
+            "sentence_context": "求解时需要在局部改进和扩大搜索范围之间作出折中",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 3
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0004",
+            "column": 77,
+            "end": 78,
+            "end_column": 79,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可能",
+            "sentence_context": "普通局部搜索一旦落入当前最优邻域便难以继续移动，模拟退火则借鉴物质降温过程，在迭代初期保留接受较差状态的可能，并随着温度降低逐渐转向稳定搜索",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 76
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "可能": 1,
+            "需要": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "可能": 1,
+              "需要": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0001",
+                "column": 4,
+                "end": 5,
+                "end_column": 6,
+                "end_line": 1,
+                "line": 1,
+                "marker": "需要",
+                "sentence_context": "求解时需要在局部改进和扩大搜索范围之间作出折中",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 3
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0004",
+                "column": 77,
+                "end": 78,
+                "end_column": 79,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可能",
+                "sentence_context": "普通局部搜索一旦落入当前最优邻域便难以继续移动，模拟退火则借鉴物质降温过程，在迭代初期保留接受较差状态的可能，并随着温度降低逐渐转向稳定搜索",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 76
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "e6d6d03ef47d167e09c7c3d674364914e2bc2020ef6fd0ae71f43dcbddc8798d"
+    },
+    {
+      "code": "SPEECH_ACT_LOGICAL_RELATION_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "从而": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "logical_relation",
+            "claim_id": "C0007",
+            "column": 125,
+            "end": 126,
+            "end_column": 127,
+            "end_line": 1,
+            "line": 1,
+            "marker": "从而",
+            "sentence_context": "它是局部搜索算法的扩展,以一定的概率选择领域中目标值较大的状态,从而达到求解全局优化问题的目的",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 124
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "从而": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0007",
+                "column": 125,
+                "end": 126,
+                "end_column": 127,
+                "end_line": 1,
+                "line": 1,
+                "marker": "从而",
+                "sentence_context": "它是局部搜索算法的扩展,以一定的概率选择领域中目标值较大的状态,从而达到求解全局优化问题的目的",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 124
+              }
+            ],
+            "removed": {
+              "从而": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'logical_relation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "d6fa48eb6abb2ec471a96eeb366c9df7b6e1c94e22f5f9de068b0dfe4487f99d"
+    },
+    {
+      "code": "SPEECH_ACT_CONDITION_CHANGED",
+      "details": {
+        "after": {
+          "当": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "condition",
+            "claim_id": "C0002",
+            "column": 35,
+            "end": 35,
+            "end_column": 36,
+            "end_line": 1,
+            "line": 1,
+            "marker": "当",
+            "sentence_context": "普通局部搜索一旦落入当前最优邻域便难以继续移动，模拟退火则借鉴物质降温过程，在迭代初期保留接受较差状态的可能，并随着温度降低逐渐转向稳定搜索",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 34
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "当": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "当": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0002",
+                "column": 35,
+                "end": 35,
+                "end_column": 36,
+                "end_line": 1,
+                "line": 1,
+                "marker": "当",
+                "sentence_context": "普通局部搜索一旦落入当前最优邻域便难以继续移动，模拟退火则借鉴物质降温过程，在迭代初期保留接受较差状态的可能，并随着温度降低逐渐转向稳定搜索",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 34
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'condition'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "706dcd9351c2d6376fe379fa7a167cf330a18d0112d8d72bb9b1f525277ab87f"
+    }
+  ]
+}

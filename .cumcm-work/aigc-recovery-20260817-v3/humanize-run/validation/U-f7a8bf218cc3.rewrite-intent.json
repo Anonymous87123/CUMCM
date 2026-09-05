@@ -1,0 +1,88 @@
+{
+  "artifact": {
+    "after_sha256": "ce7933c2774f3ed41be4cb81072ae3d3115eeea9f1563a93edb9b6665a8a6487",
+    "before_sha256": "fd3e43abab2eddb48b792bba76a10de505587a9ade9113610f3b6a4eddf3f43b"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "86507485932ee90c47d5cb6542907a8a1ff57db59b2ed14053da7467ca05f0f2",
+  "chunk_binding_sha256": "8f73de851adfed5635e586980a907aae4a37f1c8ec35ad29f4c1685508478aed",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-f7a8bf218cc3.diff",
+    "sha256": "18d9c52abfb613033325355147e9133475b6615e4d2e1973a956b936a8ad281e"
+  },
+  "evidence_sha256": "523329a0488c68f56ec483e68b3002d4b56cabe6704e07b5004c755100a3dac2",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "按资源层、珍稀物种和长期轨道收束结论，删除口号式恢复链条。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "按资源层、珍稀物种和长期轨道收束结论，删除口号式恢复链条。",
+        "target_signals": [
+          "STYLE-MODELING-NATURAL-RHYTHM"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "7588cca876d9c600115ab30ac25813024346e876693ca5ffa5c43946e2701919",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "id": "S2",
+        "sha256": "18447ee063bfbc4c45d29e74df8e85517fbb8de4e48e6430e4cdb9280eca4f65",
+        "start_line": 4
+      }
+    ],
+    "summary": "按资源层、珍稀物种和长期轨道收束结论，删除口号式恢复链条。",
+    "target_signals": [
+      "STYLE-MODELING-NATURAL-RHYTHM"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "operation": "REPLACE",
+        "start_line": 4
+      }
+    ],
+    "masked_after_sha256": "23daab85803ec18aa3683dd96f3b301c1bedfcc115cccc577ba8ce9429e9a203",
+    "masked_before_sha256": "14e90ca049c8ca2dc645ddb493a884567263be8fc57de4c3c1c669c03c7894c6",
+    "source_spans_covered": 2,
+    "source_spans_total": 2,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "edc4255fb4b9268bf1935f8519f88a107c2717e487e82d3cb869f9bdac0b9450",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-f7a8bf218cc3"
+}

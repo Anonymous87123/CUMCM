@@ -1,0 +1,96 @@
+{
+  "artifact": {
+    "after_sha256": "02b6173cb50edbff02cd930e4725e5b9901cdde39af312163a5cd66d62e6660e",
+    "before_sha256": "561b719f2d88f5fa7355051e3d6f4d48185d9b0eb8dd76681127e06e90fbf89d"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "77a39c69ba4fdb14fe73b6ec617ad94d6b8791107a15faf2adb83f1da94dff04",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "tex",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "有必要": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0012",
+            "column": 246,
+            "end": 248,
+            "end_column": 249,
+            "end_line": 1,
+            "line": 1,
+            "marker": "有必要",
+            "sentence_context": "因此有必要构建统一的动力学模型，将 与 两个概念进行区分并分别评估",
+            "sentence_id": "T0006",
+            "side": "before",
+            "start": 245
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "有必要": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0012",
+                "column": 246,
+                "end": 248,
+                "end_column": 249,
+                "end_line": 1,
+                "line": 1,
+                "marker": "有必要",
+                "sentence_context": "因此有必要构建统一的动力学模型，将 与 两个概念进行区分并分别评估",
+                "sentence_id": "T0006",
+                "side": "before",
+                "start": 245
+              }
+            ],
+            "removed": {
+              "有必要": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "7b256601ad5579f3a02a9b8490d25489c07d9d82ca2694a3f4906f3942eb2d37"
+    }
+  ]
+}

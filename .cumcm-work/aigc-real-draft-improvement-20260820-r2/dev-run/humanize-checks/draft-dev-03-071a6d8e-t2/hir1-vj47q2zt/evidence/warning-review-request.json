@@ -1,0 +1,398 @@
+{
+  "artifact": {
+    "after_sha256": "b3590383f45e1dc0faa5767bec319684bc973ba38a85042b272c0e109e8d2f73",
+    "before_sha256": "a1b48683e83b065adce2c0cead0ec74ead53f7e1d11ad12130ee76ca4464df55"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "5d9dac2323ffaed52ce4ef72f24147c2ca8ffe280c2cc67bdb8fbd539da35a8c",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "tex",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不": 3,
+          "不能": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0001",
+            "column": 8,
+            "end": 8,
+            "end_column": 9,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "四大家鱼恢复并不代表底层资源同步改善：水草、浮游动物和底栖饵料可能继续下降",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 7
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0003",
+            "column": 55,
+            "end": 55,
+            "end_column": 56,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "江豚与长江鲟对通道、放流的响应又不一样，捕捞约束因而不能只作为治理的唯一着力点",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 54
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0004",
+            "column": 65,
+            "end": 66,
+            "end_column": 67,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不能",
+            "sentence_context": "江豚与长江鲟对通道、放流的响应又不一样，捕捞约束因而不能只作为治理的唯一着力点",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 64
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0006",
+            "column": 119,
+            "end": 119,
+            "end_column": 120,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "后续监测最好把鱼类总量、底层资源和食压指数放在一起核对，鱼道、产卵场与放流节律也不宜套用同一方案",
+            "sentence_id": "T0003",
+            "side": "after",
+            "start": 118
+          }
+        ],
+        "before": {
+          "不": 2,
+          "不能": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0005",
+            "column": 58,
+            "end": 58,
+            "end_column": 59,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "问题二里，江豚与长江鲟对通道和放流的响应又不一样",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 57
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0007",
+            "column": 74,
+            "end": 75,
+            "end_column": 76,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不能",
+            "sentence_context": "顺着这些现象看，治理重点不能只停留在捕捞约束本身",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 73
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0009",
+            "column": 138,
+            "end": 138,
+            "end_column": 139,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "鱼道修复、产卵场连通和放流节律也不宜照一套模板处理",
+            "sentence_id": "T0005",
+            "side": "before",
+            "start": 137
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "不": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "不": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0001",
+                "column": 8,
+                "end": 8,
+                "end_column": 9,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "四大家鱼恢复并不代表底层资源同步改善：水草、浮游动物和底栖饵料可能继续下降",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 7
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0003",
+                "column": 55,
+                "end": 55,
+                "end_column": 56,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "江豚与长江鲟对通道、放流的响应又不一样，捕捞约束因而不能只作为治理的唯一着力点",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 54
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0004",
+                "column": 65,
+                "end": 66,
+                "end_column": 67,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不能",
+                "sentence_context": "江豚与长江鲟对通道、放流的响应又不一样，捕捞约束因而不能只作为治理的唯一着力点",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 64
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0006",
+                "column": 119,
+                "end": 119,
+                "end_column": 120,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "后续监测最好把鱼类总量、底层资源和食压指数放在一起核对，鱼道、产卵场与放流节律也不宜套用同一方案",
+                "sentence_id": "T0003",
+                "side": "after",
+                "start": 118
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0005",
+                "column": 58,
+                "end": 58,
+                "end_column": 59,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "问题二里，江豚与长江鲟对通道和放流的响应又不一样",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 57
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0007",
+                "column": 74,
+                "end": 75,
+                "end_column": 76,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不能",
+                "sentence_context": "顺着这些现象看，治理重点不能只停留在捕捞约束本身",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 73
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0009",
+                "column": 138,
+                "end": 138,
+                "end_column": 139,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "鱼道修复、产卵场连通和放流节律也不宜照一套模板处理",
+                "sentence_id": "T0005",
+                "side": "before",
+                "start": 137
+              }
+            ],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "453b0185ea12e7f83f8048529856eff682bd913aef790f059507f19649cbee54"
+    },
+    {
+      "code": "SPEECH_ACT_FOCUS_SCOPE_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "重点": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "focus_scope",
+            "claim_id": "C0007",
+            "column": 72,
+            "end": 73,
+            "end_column": 74,
+            "end_line": 1,
+            "line": 1,
+            "marker": "重点",
+            "sentence_context": "顺着这些现象看，治理重点不能只停留在捕捞约束本身",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 71
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "重点": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "focus_scope",
+                "claim_id": "C0007",
+                "column": 72,
+                "end": 73,
+                "end_column": 74,
+                "end_line": 1,
+                "line": 1,
+                "marker": "重点",
+                "sentence_context": "顺着这些现象看，治理重点不能只停留在捕捞约束本身",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 71
+              }
+            ],
+            "removed": {
+              "重点": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'focus_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "fae676fe93067a77c7c853aa6f67bf217ae06a71ce85c21fe2ff91470f8f9a90"
+    },
+    {
+      "code": "SPEECH_ACT_LOGICAL_RELATION_CHANGED",
+      "details": {
+        "after": {
+          "因而": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "logical_relation",
+            "claim_id": "C0004",
+            "column": 63,
+            "end": 64,
+            "end_column": 65,
+            "end_line": 1,
+            "line": 1,
+            "marker": "因而",
+            "sentence_context": "江豚与长江鲟对通道、放流的响应又不一样，捕捞约束因而不能只作为治理的唯一着力点",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 62
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "因而": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "因而": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0004",
+                "column": 63,
+                "end": 64,
+                "end_column": 65,
+                "end_line": 1,
+                "line": 1,
+                "marker": "因而",
+                "sentence_context": "江豚与长江鲟对通道、放流的响应又不一样，捕捞约束因而不能只作为治理的唯一着力点",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 62
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'logical_relation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "215bc2de204a5e27e741ab19fbadd602fb779bf50d7f972a9a4aca0e1fa41e61"
+    }
+  ]
+}

@@ -1,0 +1,146 @@
+{
+  "schema": "aigc-portfolio-orchestration/v1",
+  "version": 2,
+  "source": {
+    "path": "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main.tex",
+    "snapshot": "F:\\CUMCM\\.cumcm-work\\aigc-pipeline-audit-20260817\\source.snapshot.tex",
+    "sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+    "bytes": 54496
+  },
+  "proxy": null,
+  "scene": {
+    "document_type": "mcm",
+    "document_format": "tex",
+    "intent": "compare",
+    "candidate_policy": "independent_same_source_branches",
+    "hard_gates": [
+      "evidence-bundle",
+      "model-code-result",
+      "result-sync",
+      "math-semantics",
+      "reproducibility",
+      "content-density",
+      "xelatex-compile"
+    ],
+    "human_gates": [
+      "blind-writing-review",
+      "rendered-page-review",
+      "candidate-decision"
+    ]
+  },
+  "stages": [
+    {
+      "provider": "deai-academic-writing",
+      "role": "content-owner",
+      "status": "requires_evidence",
+      "mandatory": true,
+      "required_evidence": [
+        "authority-map",
+        "whole-argument-map",
+        "scene-dispatch",
+        "fact-lock",
+        "rule-findings",
+        "gate-summary"
+      ],
+      "note": "Read the complete scene Skill and attach a source-bound role receipt; routing alone is not execution."
+    },
+    {
+      "provider": "mcm-cup-standard-write",
+      "role": "content-owner",
+      "status": "requires_evidence",
+      "mandatory": true,
+      "required_evidence": [
+        "problem-fact-map",
+        "modeling-workbench",
+        "reasoning-preflight",
+        "judgment-ledger",
+        "content-density-report",
+        "manuscript-audit"
+      ],
+      "note": "Read the complete scene Skill and attach a source-bound role receipt; routing alone is not execution."
+    },
+    {
+      "provider": "deai-modeling-writing",
+      "role": "content-owner",
+      "status": "requires_evidence",
+      "mandatory": true,
+      "required_evidence": [
+        "claim-ledger",
+        "parameter-ledger",
+        "protocol-ledger",
+        "equation-code-ledger",
+        "quantitative-reconciliation",
+        "gate-summary"
+      ],
+      "note": "Read the complete scene Skill and attach a source-bound role receipt; routing alone is not execution."
+    }
+  ],
+  "branches": [
+    {
+      "id": "H1",
+      "provider": "humanize-academic-chinese",
+      "role": "candidate",
+      "authority_source_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "parent_candidate": null,
+      "pass_count": 1,
+      "mandatory": true,
+      "scope": "document",
+      "selection_eligible": true,
+      "required_evidence": [
+        "audit-report",
+        "candidate-task",
+        "candidate-file",
+        "candidate-verification",
+        "native-run-report",
+        "change-report"
+      ],
+      "required_hard_gates": [
+        "candidate-verification",
+        "academic-style-release"
+      ],
+      "release_hard_gates": [
+        "evidence-bundle",
+        "model-code-result",
+        "result-sync",
+        "math-semantics",
+        "reproducibility",
+        "content-density",
+        "xelatex-compile"
+      ],
+      "input_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "input_path": "F:\\CUMCM\\.cumcm-work\\aigc-pipeline-audit-20260817\\source.snapshot.tex",
+      "input_format": "tex",
+      "status": "blocked",
+      "evidence": {},
+      "gate_results": {
+        "candidate-verification": "fail"
+      },
+      "code": "CANDIDATE_VERIFICATION_FAILED",
+      "preparation_report": "F:\\CUMCM\\.cumcm-work\\aigc-pipeline-audit-20260817\\branches\\H1\\prepare\\prepare-report.json",
+      "verification_report": "F:\\CUMCM\\.cumcm-work\\aigc-pipeline-audit-20260817\\branches\\H1\\verify\\candidate-verification.json",
+      "academic_style_report": null,
+      "rejected_candidate_path": "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main_aigc_candidate.tex",
+      "rejected_candidate_sha256": "14dab4cbd902ad43275689e295cebca4fe2ddc47ca5702780f3b330121363ab4"
+    }
+  ],
+  "reviewers": [],
+  "workbenches": [],
+  "selection": {
+    "status": "pending",
+    "accepted": null,
+    "reason": null,
+    "reviewer": null
+  },
+  "claims": {
+    "native_generation_ran": false,
+    "all_roles_complete": false,
+    "all_roles_resolved": false,
+    "human_quality_clearance": false,
+    "candidate_files_registered": 0
+  },
+  "next_actions": [
+    "Read each selected content Skill completely and attach a role receipt with every required evidence artifact.",
+    "Register each independent candidate from its recorded input branch; never use another candidate as input.",
+    "Run selected reviewers/workbenches and attach their source-bound receipts; waive only with an explicit fallback record."
+  ]
+}
