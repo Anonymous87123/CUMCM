@@ -1,0 +1,357 @@
+{
+ "schema": "cumcm-2018a-rebuild/v1",
+ "attachment": "F:\\CUMCM\\.cumcm-work\\blind-source-2018-a\\CUMCM.xlsx",
+ "diffusivity_m2_s": {
+  "I": 1.9849915274751876e-07,
+  "II": 2.043973041652856e-07,
+  "III": 3.513725392209836e-07,
+  "IV": 2.361075976051944e-05
+ },
+ "measurement": {
+  "points": 5401,
+  "start_c": 37.0,
+  "final_c": 48.08,
+  "duration_s": 5400.0
+ },
+ "calibration": {
+  "from_plateau": 8.6124149417633,
+  "from_history": 8.773940667129777,
+  "history_rmse_c": 0.4516612190608125,
+  "relative_gap": 0.018754986430485034
+ },
+ "q1_validation": {
+  "rmse_c": 0.4516612190608125,
+  "max_abs_c": 1.7971702757556542,
+  "final_model_c": 47.934716682627204,
+  "final_measured_c": 48.08,
+  "steady_state_closed_form_c": 47.934716682525966,
+  "holdout_last_30min_rmse_c": 0.1452833173901889,
+  "holdout_first_10min_rmse_c": 1.2798228014225121
+ },
+ "grid_convergence": [
+  {
+   "cells_per_thinnest_layer": 10,
+   "dt_s": 4.0,
+   "cells_total": 253,
+   "final_skin_c": 47.93471668250814,
+   "delta_vs_finest_c": 1.63069557856943e-09
+  },
+  {
+   "cells_per_thinnest_layer": 10,
+   "dt_s": 2.0,
+   "cells_total": 253,
+   "final_skin_c": 47.934716682516,
+   "delta_vs_finest_c": 1.6228369759119232e-09
+  },
+  {
+   "cells_per_thinnest_layer": 10,
+   "dt_s": 1.0,
+   "cells_total": 253,
+   "final_skin_c": 47.93471668254862,
+   "delta_vs_finest_c": 1.590215958913177e-09
+  },
+  {
+   "cells_per_thinnest_layer": 20,
+   "dt_s": 4.0,
+   "cells_total": 507,
+   "final_skin_c": 47.93471668255259,
+   "delta_vs_finest_c": 1.586244025020278e-09
+  },
+  {
+   "cells_per_thinnest_layer": 20,
+   "dt_s": 2.0,
+   "cells_total": 507,
+   "final_skin_c": 47.93471668263814,
+   "delta_vs_finest_c": 1.500694679634762e-09
+  },
+  {
+   "cells_per_thinnest_layer": 20,
+   "dt_s": 1.0,
+   "cells_total": 507,
+   "final_skin_c": 47.93471668250787,
+   "delta_vs_finest_c": 1.6309655848090188e-09
+  },
+  {
+   "cells_per_thinnest_layer": 40,
+   "dt_s": 4.0,
+   "cells_total": 1013,
+   "final_skin_c": 47.93471668267242,
+   "delta_vs_finest_c": 1.4664109926343372e-09
+  },
+  {
+   "cells_per_thinnest_layer": 40,
+   "dt_s": 2.0,
+   "cells_total": 1013,
+   "final_skin_c": 47.93471668187901,
+   "delta_vs_finest_c": 2.259824327666138e-09
+  },
+  {
+   "cells_per_thinnest_layer": 40,
+   "dt_s": 1.0,
+   "cells_total": 1013,
+   "final_skin_c": 47.934716682627204,
+   "delta_vs_finest_c": 1.51162993233811e-09
+  },
+  {
+   "cells_per_thinnest_layer": 80,
+   "dt_s": 4.0,
+   "cells_total": 2027,
+   "final_skin_c": 47.93471668147657,
+   "delta_vs_finest_c": 2.6622615223459434e-09
+  },
+  {
+   "cells_per_thinnest_layer": 80,
+   "dt_s": 2.0,
+   "cells_total": 2027,
+   "final_skin_c": 47.93471668240686,
+   "delta_vs_finest_c": 1.7319763401246746e-09
+  },
+  {
+   "cells_per_thinnest_layer": 80,
+   "dt_s": 1.0,
+   "cells_total": 2027,
+   "final_skin_c": 47.934716684138834,
+   "delta_vs_finest_c": 0.0
+  }
+ ],
+ "q2": {
+  "env_c": 65.0,
+  "window_min": 60,
+  "d4_mm_fixed": 5.5,
+  "result": {
+   "status": "optimal",
+   "d2_mm": 18.161,
+   "metrics": {
+    "peak_skin_c": 44.04500691911091,
+    "cap_ok": true,
+    "seconds_above_44": 300.0,
+    "soft_ok": true,
+    "first_cross_44_s": 3302.0,
+    "feasible": true
+   },
+   "monotonicity_note": "II 层越厚热阻越大、皮肤温度越低，可行集是上半区间，故用二分而非元启发式。"
+  }
+ },
+ "q3": {
+  "env_c": 80.0,
+  "window_min": 30,
+  "pareto_front": [
+   {
+    "d4_mm": 0.6,
+    "status": "infeasible_on_whole_range",
+    "d2_mm": null,
+    "peak_skin_c": null,
+    "seconds_above_44": null
+   },
+   {
+    "d4_mm": 0.8,
+    "status": "infeasible_on_whole_range",
+    "d2_mm": null,
+    "peak_skin_c": null,
+    "seconds_above_44": null
+   },
+   {
+    "d4_mm": 1.0,
+    "status": "infeasible_on_whole_range",
+    "d2_mm": null,
+    "peak_skin_c": null,
+    "seconds_above_44": null
+   },
+   {
+    "d4_mm": 1.2,
+    "status": "infeasible_on_whole_range",
+    "d2_mm": null,
+    "peak_skin_c": null,
+    "seconds_above_44": null
+   },
+   {
+    "d4_mm": 1.4,
+    "status": "infeasible_on_whole_range",
+    "d2_mm": null,
+    "peak_skin_c": null,
+    "seconds_above_44": null
+   },
+   {
+    "d4_mm": 1.6,
+    "status": "infeasible_on_whole_range",
+    "d2_mm": null,
+    "peak_skin_c": null,
+    "seconds_above_44": null
+   },
+   {
+    "d4_mm": 1.8,
+    "status": "infeasible_on_whole_range",
+    "d2_mm": null,
+    "peak_skin_c": null,
+    "seconds_above_44": null
+   },
+   {
+    "d4_mm": 2.0,
+    "status": "infeasible_on_whole_range",
+    "d2_mm": null,
+    "peak_skin_c": null,
+    "seconds_above_44": null
+   },
+   {
+    "d4_mm": 2.2,
+    "status": "infeasible_on_whole_range",
+    "d2_mm": null,
+    "peak_skin_c": null,
+    "seconds_above_44": null
+   },
+   {
+    "d4_mm": 2.4,
+    "status": "infeasible_on_whole_range",
+    "d2_mm": null,
+    "peak_skin_c": null,
+    "seconds_above_44": null
+   },
+   {
+    "d4_mm": 2.6,
+    "status": "infeasible_on_whole_range",
+    "d2_mm": null,
+    "peak_skin_c": null,
+    "seconds_above_44": null
+   },
+   {
+    "d4_mm": 2.8,
+    "status": "infeasible_on_whole_range",
+    "d2_mm": null,
+    "peak_skin_c": null,
+    "seconds_above_44": null
+   },
+   {
+    "d4_mm": 3.0,
+    "status": "infeasible_on_whole_range",
+    "d2_mm": null,
+    "peak_skin_c": null,
+    "seconds_above_44": null
+   },
+   {
+    "d4_mm": 3.2,
+    "status": "infeasible_on_whole_range",
+    "d2_mm": null,
+    "peak_skin_c": null,
+    "seconds_above_44": null
+   },
+   {
+    "d4_mm": 3.4,
+    "status": "infeasible_on_whole_range",
+    "d2_mm": null,
+    "peak_skin_c": null,
+    "seconds_above_44": null
+   },
+   {
+    "d4_mm": 3.6,
+    "status": "infeasible_on_whole_range",
+    "d2_mm": null,
+    "peak_skin_c": null,
+    "seconds_above_44": null
+   },
+   {
+    "d4_mm": 3.8,
+    "status": "optimal",
+    "d2_mm": 24.988,
+    "peak_skin_c": 45.04612900192438,
+    "seconds_above_44": 300.0
+   },
+   {
+    "d4_mm": 4.0,
+    "status": "optimal",
+    "d2_mm": 24.678,
+    "peak_skin_c": 45.02397835122824,
+    "seconds_above_44": 300.0
+   },
+   {
+    "d4_mm": 4.2,
+    "status": "optimal",
+    "d2_mm": 24.375,
+    "peak_skin_c": 45.001120829049505,
+    "seconds_above_44": 300.0
+   },
+   {
+    "d4_mm": 4.4,
+    "status": "optimal",
+    "d2_mm": 24.071,
+    "peak_skin_c": 44.979965256684636,
+    "seconds_above_44": 300.0
+   },
+   {
+    "d4_mm": 4.6,
+    "status": "optimal",
+    "d2_mm": 23.773,
+    "peak_skin_c": 44.95790941344721,
+    "seconds_above_44": 300.0
+   },
+   {
+    "d4_mm": 4.8,
+    "status": "optimal",
+    "d2_mm": 23.475,
+    "peak_skin_c": 44.93731441043248,
+    "seconds_above_44": 300.0
+   },
+   {
+    "d4_mm": 5.0,
+    "status": "optimal",
+    "d2_mm": 23.177,
+    "peak_skin_c": 44.918037737756634,
+    "seconds_above_44": 300.0
+   },
+   {
+    "d4_mm": 5.2,
+    "status": "optimal",
+    "d2_mm": 22.885,
+    "peak_skin_c": 44.89758982626913,
+    "seconds_above_44": 300.0
+   },
+   {
+    "d4_mm": 5.4,
+    "status": "optimal",
+    "d2_mm": 22.599,
+    "peak_skin_c": 44.87593498238924,
+    "seconds_above_44": 300.0
+   },
+   {
+    "d4_mm": 5.6,
+    "status": "optimal",
+    "d2_mm": 22.313,
+    "peak_skin_c": 44.85533077613933,
+    "seconds_above_44": 300.0
+   },
+   {
+    "d4_mm": 5.8,
+    "status": "optimal",
+    "d2_mm": 22.027,
+    "peak_skin_c": 44.83565452877078,
+    "seconds_above_44": 300.0
+   },
+   {
+    "d4_mm": 6.0,
+    "status": "optimal",
+    "d2_mm": 21.747,
+    "peak_skin_c": 44.814567528250926,
+    "seconds_above_44": 300.0
+   },
+   {
+    "d4_mm": 6.2,
+    "status": "optimal",
+    "d2_mm": 21.467,
+    "peak_skin_c": 44.79424201009942,
+    "seconds_above_44": 300.0
+   },
+   {
+    "d4_mm": 6.4,
+    "status": "optimal",
+    "d2_mm": 21.188,
+    "peak_skin_c": 44.77456653746745,
+    "seconds_above_44": 300.0
+   }
+  ],
+  "note": "两个目标方向相反（II 层要薄、IV 层要厚），不做相减标量化；报告前沿并说明所选点依据。",
+  "thinnest_total": {
+   "d2_mm": 21.188,
+   "d4_mm": 6.4,
+   "total_mm": 27.588
+  }
+ }
+}
