@@ -1,0 +1,153 @@
+{
+ "schema": "mcm-question-coverage/v1",
+ "body_start_label": "mcm-body-start",
+ "body_end_label": "mcm-body-end",
+ "max_manual_page_breaks": 2,
+ "questions": [
+  {
+   "id": "Q1",
+   "title": "在附件 2 的条件下算出温度分布并输出 Excel",
+   "start_label": "mcm-q1-start",
+   "end_label": "mcm-q1-end",
+   "section_titles": [
+    "问题一模型建立与求解",
+    "模型建立",
+    "求解方法与实现",
+    "标定与本问结果"
+   ],
+   "evidence": {
+    "problem_data_basis": [
+     "附件 2 的 \\$t=0\\$ 读数",
+     "附件 1"
+    ],
+    "variables_scope": [
+     "设四层总厚 \\$L=",
+     "格心控制体"
+    ],
+    "mathematical_relation": [
+     "\\\\label\\{eq:pde\\}",
+     "\\\\label\\{eq:interface\\}",
+     "\\\\label\\{eq:robin\\}"
+    ],
+    "solver_implementation": [
+     "\\\\label\\{eq:implicit\\}",
+     "三对角系统",
+     "带状矩阵"
+    ],
+    "result": [
+     "47\\.9347",
+     "稳态界面温度依次为"
+    ],
+    "interpretation": [
+     "空气层单独承担了总温降的六成",
+     "偏差集中在最初十分钟"
+    ],
+    "validation": [
+     "两条互不依赖的路线",
+     "相差 \\\\SI\\{1\\.88\\}"
+    ],
+    "boundary": [
+     "该假设在升温初段偏强",
+     "残差结构如实报告"
+    ]
+   }
+  },
+  {
+   "id": "Q2",
+   "title": "定第 II 层最优厚度（65 °C，60 min）",
+   "start_label": "mcm-q2-start",
+   "end_label": "mcm-q2-end",
+   "section_titles": [
+    "问题二模型建立与求解",
+    "约束的瞬态表达",
+    "搜索层与求解",
+    "本问结果与小结"
+   ],
+   "evidence": {
+    "problem_data_basis": [
+     "附件 1 给定为",
+     "环境温度改为 \\\\SI\\{65\\}"
+    ],
+    "variables_scope": [
+     "唯一新开放的量是 \\$d_2\\$",
+     "0\\.6\\\\le d_2\\\\le 25"
+    ],
+    "mathematical_relation": [
+     "\\\\label\\{eq:crit\\}",
+     "\\\\label\\{eq:opt2\\}"
+    ],
+    "solver_implementation": [
+     "一维二分求得",
+     "最小可行厚度可由"
+    ],
+    "result": [
+     "18\\.16",
+     "44\\.045",
+     "3302"
+    ],
+    "interpretation": [
+     "紧的是五分钟预算",
+     "可行性不是由峰值直接决定"
+    ],
+    "validation": [
+     "表~\\\\ref\\{tab:mono\\}",
+     "峰值随厚度单调不增"
+    ],
+    "boundary": [
+     "可辨识性有严重限制",
+     "不把它当作可直接使用的设计值"
+    ]
+   }
+  },
+  {
+   "id": "Q3",
+   "title": "同时定第 II、IV 层最优厚度（80 °C，30 min）",
+   "start_label": "mcm-q3-start",
+   "end_label": "mcm-q3-end",
+   "section_titles": [
+    "问题三模型建立与求解",
+    "双目标的处理",
+    "可行性边界与前沿",
+    "本问结果与小结"
+   ],
+   "evidence": {
+    "problem_data_basis": [
+     "范围分别是",
+     "环境温度升到 \\\\SI\\{80\\}"
+    ],
+    "variables_scope": [
+     "\\$d_2\\$ 与 \\$d_4\\$ 同时开放",
+     "\\\\label\\{eq:feas3\\}"
+    ],
+    "mathematical_relation": [
+     "\\\\label\\{eq:front3\\}",
+     "d_2\\^\\{\\*\\}\\(d_4\\)=\\\\min"
+    ],
+    "solver_implementation": [
+     "用问题二的二分求最小可行",
+     "扫描 \\$d_4\\$"
+    ],
+    "result": [
+     "21\\.188",
+     "27\\.588",
+     "表~\\\\ref\\{tab:front\\}"
+    ],
+    "interpretation": [
+     "空气层承担了总温降的六成",
+     "前沿单调"
+    ],
+    "validation": [
+     "当 \\$d_4\\\\le\\\\SI\\{3\\.6\\}\\{mm\\}\\$ 时",
+     "仍低于 \\\\SI\\{47\\}"
+    ],
+    "boundary": [
+     "可交付结论是一条前沿与一条可行性边界",
+     "同一条可辨识性限制"
+    ]
+   },
+   "waivers": {
+    "solver_implementation": "本问完整沿用问题一仿真器与问题二的二分，只新增第 IV 层为外层扫描量，不重复叙述离散与推进实现。"
+   }
+  }
+ ]
+}

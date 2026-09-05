@@ -46,6 +46,7 @@ $(d_4,d_2)=(3.8,24.99)$ 延伸到 $(6.4,21.19)$，总厚最小点为 \SI{21.188}
 \keywords{多层瞬态传热\quad 有限体积\quad 界面热流连续\quad 越阈时长约束\quad 可辨识区间}
 
 \section{问题重述}
+\label{mcm-body-start}
 
 高温作业服由三层织物构成，自外向内记为第 I、II、III 层，第 III 层与皮肤之间的空隙记为
 第 IV 层。把体温维持在 \SI{37}{\celsius} 的假人放入高温环境，测量其皮肤外侧温度，据此为
@@ -139,6 +140,7 @@ $a_i=\lambda_i/(\rho_i c_i)$，逐层计算后，第 I 至 III 层的扩散
 \end{table}
 
 \section{问题一模型建立与求解}
+\label{mcm-q1-start}
 
 \subsection{模型建立}
 
@@ -239,6 +241,8 @@ $h$ 由两条互不依赖的路线定出。第一条只用平台值：把附件 
 \end{figure}
 
 \section{问题二模型建立与求解}
+\label{mcm-q1-end}
+\label{mcm-q2-start}
 
 \subsection{约束的瞬态表达}
 
@@ -324,6 +328,8 @@ $[\num{0.6},\num{25}]\,\si{mm}$。题面的两条要求写成
 本问不把它当作可直接使用的设计值。
 
 \section{问题三模型建立与求解}
+\label{mcm-q2-end}
+\label{mcm-q3-start}
 
 \subsection{双目标的处理}
 
@@ -389,6 +395,7 @@ $[\num{0.6},\num{25}]\,\si{mm}$ 都不满足式~\eqref{eq:crit}；可行性边�
 \SI{21.188}{mm}。同一条可辨识性限制也适用于本问。
 
 \section{结果分析与模型检验}
+\label{mcm-q3-end}
 
 \subsection{结果解释}
 
@@ -515,6 +522,7 @@ $h$ 的跨环境温度可迁移性没有证据；问题二的解在标定精度�
 成本与厚度的折算关系，问题三的前沿即可收缩为单点，此时相减型标量化才有依据。
 第四，引入湿传递需要新的实验设计，不属于当前数据能支持的改进。
 
+\label{mcm-body-end}
 \section{参考文献}
 
 本文的数值结论只依赖官方附件 1、附件 2 与本文自编程序，未引用外部文献结果。
