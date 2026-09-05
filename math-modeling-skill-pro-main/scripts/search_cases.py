@@ -92,6 +92,18 @@ def score_cases(query: str, cases: list[dict[str, Any]]) -> list[tuple[float, di
     return ranked
 
 
+def parse_problem_key(value: str) -> tuple[str, str]:
+    match = re.fullmatch(r"\s*(\d{4})\s*[:\-/]?\s*([A-Ea-e])\s*", value)
+    if not match:
+        raise argparse.ArgumentTypeError(f"expected YEAR:LETTER such as 2025:C, got {value!r}")
+    return match.group(1), match.group(2).upper()
+
+
+def problem_key(case: dict[str, Any]) -> tuple[str, str]:
+    code = str(case.get("paper_code") or "").strip()
+    return str(case.get("year") or ""), code[:1].upper()
+
+
 def main() -> int:
     parser = argparse.ArgumentParser()
     parser.add_argument("query")
@@ -99,6 +111,16 @@ def main() -> int:
     parser.add_argument("--year", type=int)
     parser.add_argument("--type", dest="problem_type")
     parser.add_argument("--model")
+    parser.add_argument(
+        "--exclude-problem", action="append", default=[], metavar="YEAR:LETTER",
+        type=parse_problem_key,
+        help="hold a whole problem out of retrieval, e.g. --exclude-problem 2025:C. "
+             "Required when the query targets a problem that must stay blind.",
+    )
+    parser.add_argument(
+        "--exclude-case", action="append", default=[], metavar="CASE_ID",
+        help="hold individual case ids out of retrieval, e.g. --exclude-case case-136.",
+    )
     parser.add_argument("--json", action="store_true")
     parser.add_argument("--skill-root", type=Path, default=Path(__file__).resolve().parents[1])
     args = parser.parse_args()
@@ -113,16 +135,39 @@ def main() -> int:
     if args.model:
         needle = normalize(args.model)
         cases = [case for case in cases if needle in normalize(" ".join(case.get("models") or []))]
+    held_out: list[str] = []
+    if args.exclude_problem:
+        blocked = set(args.exclude_problem)
+        kept = [case for case in cases if problem_key(case) not in blocked]
+        held_out.extend(
+            case["case_id"] for case in cases if problem_key(case) in blocked
+        )
+        cases = kept
+    if args.exclude_case:
+        blocked_ids = {value.strip() for value in args.exclude_case}
+        held_out.extend(case["case_id"] for case in cases if case["case_id"] in blocked_ids)
+        cases = [case for case in cases if case["case_id"] not in blocked_ids]
     ranked = score_cases(args.query, cases)[:max(1, args.top)]
     if args.json:
-        print(json.dumps([
-            {"score": round(score, 3), "matched": matched, **case}
-            for score, case, matched in ranked
-        ], ensure_ascii=False, indent=2))
+        print(json.dumps({
+            "held_out_cases": sorted(set(held_out)),
+            "searched_cases": len(cases),
+            "results": [
+                {"score": round(score, 3), "matched": matched, **case}
+                for score, case, matched in ranked
+            ],
+        }, ensure_ascii=False, indent=2))
         return 0
+    if held_out:
+        print(
+            f"holdout: {len(set(held_out))} case(s) withheld "
+            f"({', '.join(sorted(set(held_out)))}); searched {len(cases)} of "
+            f"{len(payload['cases'])}."
+        )
     if not ranked:
         print("No matching cases.")
         return 1
+
     for index, (score, case, matched) in enumerate(ranked, start=1):
         print(
             f"{index}. [{case['case_id']}] {case['year']} "

@@ -1,0 +1,81 @@
+{
+ "schema": "cumcm-blind-test-isolation/v1",
+ "test_id": "BTV-20260905-CUMCMC",
+ "target": "2025 CUMCM C 题 NIPT 的时点选择与胎儿的异常判定",
+ "declared_at": "2026-09-05T09:20:24.422943+00:00",
+ "why_this_target": "现有正式记录只有 2019-A、2018-B、2025-MCM-C；CUMCM 自身的 C 型（记录粒度、集合隔离、校准、有限解释）没有记录。2025 C 的获奖论文与赛题评述均未读取。",
+ "allowed_inputs": [
+  {
+   "path": "2025/CUMCM2025Problems/C题/C题.pdf",
+   "exists": true,
+   "bytes": 357653,
+   "sha256": "d54400f4bb9920c0d37f15f5b6bc161aa281c4b32c03c063efdeb739716eac08"
+  },
+  {
+   "path": "2025/CUMCM2025Problems/C题/附件.xlsx",
+   "exists": true,
+   "bytes": 481734,
+   "sha256": "14827156218bd4f7e4f16db4aa6d9f757c6648379e038ae6c6b58383648614af"
+  },
+  {
+   "path": "2025/CUMCM2025Problems/format2025.doc",
+   "exists": true,
+   "bytes": 70144,
+   "sha256": "69fc08c6a446c08e7116be35e8f99986377255318971d63d691fc11a9013917a"
+  }
+ ],
+ "forbidden_inputs": [
+  {
+   "path": "2025/C023.pdf",
+   "exists": true,
+   "sha256": "19eba37bee16f7a8089abd5435073c24c9633987a08f044fb312490950681949",
+   "read": false
+  },
+  {
+   "path": "2025/C132.pdf",
+   "exists": true,
+   "sha256": "f8ff3139ce8c36e96afa336b2ee72f9d99f1a71a8c2e5e01f8ad9392c4e71a5e",
+   "read": false
+  },
+  {
+   "path": "2025/“NIPT的时点选择与胎儿的异常判定”赛题评述_赖欣.pdf",
+   "exists": true,
+   "sha256": "787663f09ae0bb80fc90341da4c5d2b625861c727b59edd37df17dd1dc0e5dd6",
+   "read": false
+  }
+ ],
+ "status": "ABORTED_CONTAMINATED",
+ "aborted_at": "2026-09-05T09:30:16.908126+00:00",
+ "abort_reason": "math-modeling-skill 的 139 张案例卡覆盖 2012-2025 全部 A/B/C 题。按结构检索 2025 C 的四个阶段时，case-136 (2025 C023) 与 case-137 (2025 C132) 直接返回该题的完整模型清单（线性混合效应模型/REML/高斯过程回归/动态规划/潜在风险最小化/FDR 校正/DeepHit/LightGBM），违反 blind-test-abc-protocol.md 第 26 节第 1 条「题目和附件是否未进入本次检索提示」。",
+ "structural_finding": {
+  "issue": "既有盲测协议只约束 mcm-cup-standard-write 的 59 篇文风语料，未约束 math-modeling-skill 的案例库。两个 Skill 组成 pipeline 后出现协议未覆盖的泄漏路径。",
+  "evidence": {
+   "case_library_coverage_2020_2025": {
+    "2020": "A4 B3 C4",
+    "2021": "A3 B4 C4",
+    "2022": "A3 B3 C2",
+    "2023": "A1 B3 C3",
+    "2024": "A5 B3 C4",
+    "2025": "A1 B2 C2"
+   },
+   "zero_coverage_targets_with_local_statement": [],
+   "note": "2019 A 是案例库中唯一 0 覆盖的盲测目标，但它已有正式记录（blind-test-2019-cumcm-a.md）。手头 2020-2025 的题面全部被案例库覆盖，因此本机没有可用的干净盲测目标。"
+  },
+  "remediation_applied": {
+   "script": "math-modeling-skill-pro-main/scripts/search_cases.py",
+   "added": [
+    "--exclude-problem YEAR:LETTER",
+    "--exclude-case CASE_ID"
+   ],
+   "behaviour": "文本模式打印 holdout 行、JSON 模式返回 held_out_cases 与 searched_cases，使盲测记录可以引用「本轮检索排除了哪些卡」。",
+   "verified": [
+    "2025:C 排除后 case-136/137 不再返回",
+    "多次排除可叠加",
+    "非法 YEAR:LETTER 由 argparse 报错",
+    "validate_repository/validate_skill_content 通过"
+   ]
+  },
+  "next_clean_target": "2026 年赛题发布后，或从案例库中显式划出 holdout 题目并用 --exclude-problem 锁定。"
+ },
+ "contamination_note_2018a": "2018 A 已不能作为本次盲测目标：.cumcm-work/blind-source-2018-a-full/problem.txt 表面是题面，实际是完整参考论文（含摘要、三问模型、有限差分格式、优化解 5.5mm/5.6mm 与全部 MATLAB 代码），已被读取。按 blind-test-abc-protocol.md 的隔离要求，该题在本会话中作废。"
+}
