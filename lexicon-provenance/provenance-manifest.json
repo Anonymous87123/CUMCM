@@ -20,7 +20,7 @@
   "test_files": 115
  },
  "candidate_corpus": {
-  "root": "D:\\code LateX\\humanize-reports\\humanize-strict-lexicon-20260803-rootgraph-v19-second-round",
+  "root": "D:\\aigc-corpus\\humanize-strict-lexicon-20260803-rootgraph-v19-second-round",
   "in_repo": false,
   "reason": "all_candidates_after_exact_rescan.csv 为 1.34 GB，超出 GitHub 单文件上限，按路径+哈希引用。",
   "main_csv": {
@@ -64,7 +64,8 @@
    "streaming_finalize_report.md",
    "strict_ai_phrase_inventory_expanded.json",
    "strict_ai_phrase_rankings_expanded.csv"
-  ]
+  ],
+  "moved_from": "D:\\code LateX\\humanize-reports\\humanize-strict-lexicon-20260803-rootgraph-v19-second-round"
  },
  "curation_evidence": {
   "machine_publish_strict_rows": 34948,
@@ -98,7 +99,7 @@
   "tmp"
  ],
  "build_run_archive": {
-  "root": "D:\\code LateX\\humanize-reports\\physics-build-archive-20260905",
+  "root": "D:\\aigc-corpus\\physics-build-archive-20260905",
   "in_repo": false,
   "reason": "340 MB 的 humanize 迭代运行产物（maturity v10-v35、generator-projection、direct-validation、capture、fresh-*、full-test-audit 日志）。知识已由 reports/ 与 toolchain/ 承载，原始运行产物移出 git，按路径引用。",
   "moved_from": "D:\\code LateX\\elegantbook\\physics\\build",
@@ -111,7 +112,8 @@
    "build/physics1.pdf",
    "build/physics2.aux",
    "build/physics2.pdf"
-  ]
+  ],
+  "moved_from_previous": "D:\\code LateX\\humanize-reports\\physics-build-archive-20260905"
  },
  "source_cleanup": {
   "repo": "D:\\code LateX  (branch main)",
@@ -119,7 +121,10 @@
   "tracked_before": 12861,
   "tracked_after": 152,
   "staged_deletions": 12709,
-  "committed": false,
-  "note": "删除已 staged 未提交。同仓库 elegantbook/DiscreteMathematics/ 有无关改动，提交时勿一并纳入。"
- }
+  "committed": true,
+  "note": "删除已提交并推送。humanize-reports/ 整体移出仓库并加入 .gitignore；此前未提交的 elegantbook 改动（CET6 / DiscreteMathematics / physics2.tex）已一并提交。",
+  "commit": "401fcce7",
+  "pushed_to": "git@github.com:Anonymous87123/code-LateX.git main"
+ },
+ "store_note": "AIGC 语料与运行产物统一存放在 D:\\aigc-corpus\\，不在任何 git 仓库内。原先它们位于 D:\\code LateX（LaTeX 教材仓库），其中 4 个文件超过 GitHub 单文件 100MB 上限，导致该仓库长期无法 push；移出后已恢复同步。本清单是它们与 lexical-signals.json 之间唯一的可追溯绑定。"
 }
