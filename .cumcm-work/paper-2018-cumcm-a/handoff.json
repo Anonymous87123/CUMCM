@@ -3,7 +3,7 @@
  "paper_id": "PAP-20260905-CUMCMA2018",
  "target": "2018 CUMCM A 高温作业专用服装设计，25--30 页正文",
  "prepared_at": "2026-09-05T10:18:06.837760+00:00",
- "status": "DRAFT_WRITTEN_GATES_PARTIAL",
+ "status": "FOUR_GATES_PASS_COMPILED_13_PAGES",
  "done": [
   {
    "step": "modeling-workbench.md §4.1 归档冻结源",
@@ -52,6 +52,22 @@
   {
    "step": "audit_content_density.py --problem-type A",
    "result": "PASS errors=0 warnings=0；Q1 12 段 7 式、Q2 9 段 2 式、Q3 6 段 2 式"
+  },
+  {
+   "step": "build_math_contract.py + audit_math_semantics.py",
+   "result": "PASS errors=0。契约含 5 符号 / 2 目标 / 3 约束 / 4 代码映射 / 14 项 recheck；每项 recheck 的 expected 取自 run-report.json 字段、manuscript_literal 取自正文，正文与求解器一旦漂移即失败。已逐项确认 5 个符号的 definition 与 use 都真实命中，9 条 manuscript_patterns 全部命中，检查非空转"
+  },
+  {
+   "step": "build_result_manifest.py + audit_result_sync.py",
+   "result": "PASS errors=0。4 个来源按 sha256 钉住，27 条 claim 实际命中数均达标，5 条 forbidden（2.6311、a=0.082、最优厚度为 5.5/5.6）确认为 0 次"
+  },
+  {
+   "step": "build_figures.py",
+   "result": "3 张图由同一仿真器生成：实测对比+残差、厚度扫描、敏感性带。一图一判断"
+  },
+  {
+   "step": "XeLaTeX 编译",
+   "result": "3 遍编译，13 页，无未定义引用；仅剩 SimSun 粗体字形缺失警告（默认替代）"
   }
  ],
  "blocked_by": {
@@ -98,7 +114,7 @@
    "sha256": "07a4ee0ed4f4dc50f58f43c2e5307b1539ad6fea24730c22bbba9539fb0be5ba"
   }
  },
- "updated_at": "2026-09-05T11:04:26.562751+00:00",
+ "updated_at": "2026-09-05T11:33:07.630727+00:00",
  "approval_received": {
   "mode": "rehearsal_blanket_approval",
   "verbatim": "这次只是彩排，你就当我认可了接着做",
@@ -107,24 +123,23 @@
  },
  "remaining": [
   {
-   "gate": "audit_math_semantics.py",
-   "needs": "--contract 数学语义契约文件，尚未构建"
+   "gate": "audit_competition_length.py",
+   "needs": "coverage 文件（每问 start_label/end_label + evidence），正文需先加分问 label"
   },
   {
-   "gate": "audit_result_sync.py",
-   "needs": "--manifest 结果同步清单，尚未构建"
+   "gate": "audit_judgment_ledger.py / audit_section_judgment_bridges.py / audit_reasoning_scaffold.py",
+   "needs": "各自输入未构建"
   },
   {
-   "gate": "audit_repro_manifest.py / audit_judgment_ledger.py / audit_section_judgment_bridges.py / audit_reasoning_scaffold.py",
-   "needs": "逐个构建输入"
-  },
-  {
-   "gate": "XeLaTeX 编译 + 逐页复核",
-   "needs": "cumcmthesis.cls 在 thesis template/ 下，需复制或设 TEXINPUTS"
+   "gate": "audit_repro_manifest.py",
+   "needs": "复现清单未构建"
   },
   {
    "gate": "run_longform_portfolio.py run-gates",
-   "needs": "以上各项齐备后一次性跑完 20 道门"
+   "needs": "以上齐备后一次跑完 20 道门"
+  },
+  {
+   "issue": "篇幅 13 页低于语料 A 类中位数 44.5 [36.5,58]。缺口主要在附录未附完整源码清单、结果分析可再展开。本稿密度不低（汉字 6720、公式 11、表 5、图 3），但页数距 25--30 页目标仍有差距"
   }
  ],
  "soft_hints_not_obeyed": {
@@ -134,5 +149,12 @@
    "evaluation 9.5% 高于 3.6%"
   ],
   "judgment": "validation 与 evaluation 超标来自病态性发现与可辨识区间讨论，那是本稿主要实质结论，按 2019-A 盲测记录的先例不因超过语料四分位而删除。background 确实偏长，问题重述可再压缩，留作下一轮。model 项原本 13.5% 低于下沿，已通过补入式(9)优化陈述与式(11)(12)可行集/前沿定义修正到区间内。"
+ },
+ "gate_status": {
+  "audit_manuscript": "PASS errors=0 warnings=0",
+  "audit_content_density": "PASS errors=0 warnings=0（figures 0->3）",
+  "audit_math_semantics": "PASS errors=0 warnings=0",
+  "audit_result_sync": "PASS errors=0",
+  "xelatex_compile": "PASS 13 页"
  }
 }

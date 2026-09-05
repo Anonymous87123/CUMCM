@@ -1,0 +1,168 @@
+{
+ "schema": "mcm-result-sync-manifest/v1",
+ "note": "正文数值与 solver 输出同源的锁。sources 用哈希钉住来源文件；claims 钉住正文实际断言的字面量；forbidden 列出不得出现的过期值。",
+ "sources": [
+  {
+   "path": "results/run-report.json",
+   "sha256": "2daab7b127123a519139b7f6acd2d05d3ef24a1411906fbc9b6001c7dee4b30d"
+  },
+  {
+   "path": "results/conclusions.json",
+   "sha256": "ba8f795fc94e573cb24686940aaac5c663cb08b9ea954680ddb19e44533d1e31"
+  },
+  {
+   "path": "solver/simulator.py",
+   "sha256": "e2cab80c2a8b5e9af5ecfbaa155752e05eb787f0a94830dd4b18bef721303eb5"
+  },
+  {
+   "path": "inputs/attachment.xlsx",
+   "sha256": "2026d561054055516d5fbcc3fa22f8add5d786eba2b16c4f76636ae08794c2b3"
+  }
+ ],
+ "claims": [
+  {
+   "id": "calibration-two-routes",
+   "literal": "8.6124",
+   "min_occurrences": 1
+  },
+  {
+   "id": "calibration-selected",
+   "literal": "8.7739",
+   "min_occurrences": 2
+  },
+  {
+   "id": "calibration-gap",
+   "literal": "1.88",
+   "min_occurrences": 1
+  },
+  {
+   "id": "q1-rmse",
+   "literal": "0.4517",
+   "min_occurrences": 2
+  },
+  {
+   "id": "q1-last-30min",
+   "literal": "0.1453",
+   "min_occurrences": 2
+  },
+  {
+   "id": "q1-first-10min",
+   "literal": "1.2798",
+   "min_occurrences": 2
+  },
+  {
+   "id": "q1-steady-agreement",
+   "literal": "47.934716682526",
+   "min_occurrences": 1
+  },
+  {
+   "id": "grid-convergence",
+   "literal": "2.7e-9",
+   "min_occurrences": 2
+  },
+  {
+   "id": "air-diffusivity",
+   "literal": "2.361e-5",
+   "min_occurrences": 3
+  },
+  {
+   "id": "stack-resistance",
+   "literal": "0.282105",
+   "min_occurrences": 1
+  },
+  {
+   "id": "air-layer-drop",
+   "literal": "17.040",
+   "min_occurrences": 2
+  },
+  {
+   "id": "q2-optimum",
+   "literal": "18.16",
+   "min_occurrences": 3
+  },
+  {
+   "id": "q2-peak",
+   "literal": "44.045",
+   "min_occurrences": 2
+  },
+  {
+   "id": "q2-crossing-second",
+   "literal": "3302",
+   "min_occurrences": 1
+  },
+  {
+   "id": "q2-crossing-minute",
+   "literal": "55.0",
+   "min_occurrences": 1
+  },
+  {
+   "id": "q3-boundary",
+   "literal": "3.8",
+   "min_occurrences": 2
+  },
+  {
+   "id": "q3-thinnest-d2",
+   "literal": "21.188",
+   "min_occurrences": 3
+  },
+  {
+   "id": "q3-total",
+   "literal": "27.588",
+   "min_occurrences": 1
+  },
+  {
+   "id": "sens-minus-2",
+   "literal": "19.19",
+   "min_occurrences": 2
+  },
+  {
+   "id": "sens-plus-2",
+   "literal": "17.04",
+   "min_occurrences": 2
+  },
+  {
+   "id": "sens-plateau",
+   "literal": "44.1425",
+   "min_occurrences": 1
+  },
+  {
+   "id": "sens-slope-55min",
+   "literal": "0.0112",
+   "min_occurrences": 2
+  },
+  {
+   "id": "reference-q2-value",
+   "literal": "3256",
+   "min_occurrences": 1
+  },
+  {
+   "id": "reference-q3-peak-a",
+   "literal": "48.97",
+   "min_occurrences": 1
+  },
+  {
+   "id": "reference-q3-peak-b",
+   "literal": "48.01",
+   "min_occurrences": 1
+  },
+  {
+   "id": "no-stale-diffusivity",
+   "literal": "扩散系数",
+   "min_occurrences": 3,
+   "forbidden": [
+    "2.6311",
+    "a =0.082",
+    "a=0.082"
+   ]
+  },
+  {
+   "id": "no-stale-optimum",
+   "literal": "最小可行厚度",
+   "min_occurrences": 2,
+   "forbidden": [
+    "最优厚度为 5.5",
+    "最优厚度为 5.6"
+   ]
+  }
+ ]
+}

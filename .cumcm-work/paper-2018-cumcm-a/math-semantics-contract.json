@@ -1,0 +1,273 @@
+{
+ "schema": "mcm-math-semantics-contract/v1",
+ "note": "契约把正文的每个关键数值绑回 results/run-report.json 的具体字段，并把目标、约束与代码接口逐项对应。它不证明模型正确，只保证正文与运行输出同源。",
+ "symbols": [
+  {
+   "name": "h_skin",
+   "definition_pattern": "h\\$ & 皮肤侧散热系数",
+   "use_pattern": "h=\\\\SI\\{8\\.7739\\}"
+  },
+  {
+   "name": "theta",
+   "definition_pattern": "\\\\theta\\(t\\)\\$ & 皮肤外侧温度",
+   "use_pattern": "\\\\theta\\(t\\)=T\\(L,t\\)"
+  },
+  {
+   "name": "diffusivity",
+   "definition_pattern": "a_i=\\\\lambda_i/\\(\\\\rho_i c_i\\)",
+   "use_pattern": "空气层的 \\$a=\\\\SI\\{2\\.361e-5\\}"
+  },
+  {
+   "name": "d2",
+   "definition_pattern": "d_i\\$ & 第 \\$i\\$ 层厚度",
+   "use_pattern": "d_2\\^\\{\\*\\}"
+  },
+  {
+   "name": "R_stack",
+   "definition_pattern": "R\\$ & 四层串联总热阻",
+   "use_pattern": "R=\\\\sum_\\{i=1\\}\\^\\{4\\}"
+  }
+ ],
+ "objectives": [
+  {
+   "name": "q2-min-thickness",
+   "manuscript_patterns": [
+    "\\\\min_\\{d_2\\}\\\\ d_2",
+    "目标函数取 \\$d_2\\$ 本身"
+   ],
+   "forbidden_patterns": [
+    "\\\\min\\(d_2-d_4\\)\\s*为本文",
+    "取 \\$\\\\min\\(d_2-d_4\\)\\$"
+   ],
+   "code_path": "solver/simulator.py",
+   "code_patterns": [
+    "def minimal_feasible_d2",
+    "low, high = BOUNDS_MM\\[\\\"II\\\"\\]"
+   ]
+  },
+  {
+   "name": "q3-front-not-scalarised",
+   "manuscript_patterns": [
+    "d_2\\^\\{\\*\\}\\(d_4\\)=\\\\min",
+    "保留双目标"
+   ],
+   "forbidden_patterns": [],
+   "code_path": "solver/simulator.py",
+   "code_patterns": [
+    "def pareto_d2_d4"
+   ]
+  }
+ ],
+ "constraints": [
+  {
+   "name": "cap-47",
+   "manuscript_patterns": [
+    "\\\\max_\\{0\\\\le t\\\\le T_\\{\\\\mathrm\\{w\\}\\}\\}\\\\theta\\(t\\)\\\\le \\\\SI\\{47\\}"
+   ],
+   "code_path": "solver/simulator.py",
+   "code_patterns": [
+    "cap_c: float = 47\\.0",
+    "peak <= cap_c"
+   ]
+  },
+  {
+   "name": "budget-44-300s",
+   "manuscript_patterns": [
+    "\\\\le \\\\SI\\{300\\}\\{s\\}",
+    "越阈累计时长"
+   ],
+   "code_path": "solver/simulator.py",
+   "code_patterns": [
+    "soft_c: float = 44\\.0",
+    "soft_budget_s: float = 300\\.0",
+    "above_soft <= soft_budget_s"
+   ]
+  },
+  {
+   "name": "thickness-bounds",
+   "manuscript_patterns": [
+    "0\\.6\\\\le d_2\\\\le 25"
+   ],
+   "code_path": "solver/simulator.py",
+   "code_patterns": [
+    "\\\"II\\\": \\(0\\.6, 25\\.0\\)",
+    "\\\"IV\\\": \\(0\\.6, 6\\.4\\)"
+   ]
+  }
+ ],
+ "code_map": [
+  {
+   "name": "harmonic-face-conductance",
+   "manuscript_patterns": [
+    "K_\\{j\\+1/2\\}=",
+    "调和平均"
+   ],
+   "code_path": "solver/simulator.py",
+   "code_patterns": [
+    "self\\.face = 1\\.0 / \\(half_left \\+ half_right\\)"
+   ]
+  },
+  {
+   "name": "backward-euler",
+   "manuscript_patterns": [
+    "后向 Euler",
+    "三对角"
+   ],
+   "code_path": "solver/simulator.py",
+   "code_patterns": [
+    "solve_banded"
+   ]
+  },
+  {
+   "name": "skin-face-recovery",
+   "manuscript_patterns": [
+    "皮肤外侧温度不是最后一格的格心值"
+   ],
+   "code_path": "solver/simulator.py",
+   "code_patterns": [
+    "def _skin_face"
+   ]
+  },
+  {
+   "name": "robin-boundary",
+   "manuscript_patterns": [
+    "-\\\\lambda_4 \\\\left\\.",
+    "T_\\{\\\\mathrm\\{core\\}\\}"
+   ],
+   "code_path": "solver/simulator.py",
+   "code_patterns": [
+    "BODY_CORE_C = 37\\.0",
+    "skin_conductance"
+   ]
+  }
+ ],
+ "rechecks": [
+  {
+   "name": "calibration-plateau",
+   "source": "results/run-report.json",
+   "json_path": "calibration.from_plateau",
+   "operation": "literal",
+   "expected": 8.6124149417633,
+   "tolerance": 0.0001,
+   "manuscript_literal": "8.6124"
+  },
+  {
+   "name": "calibration-history",
+   "source": "results/run-report.json",
+   "json_path": "calibration.from_history",
+   "operation": "literal",
+   "expected": 8.773940667129777,
+   "tolerance": 0.0001,
+   "manuscript_literal": "8.7739"
+  },
+  {
+   "name": "q1-rmse",
+   "source": "results/run-report.json",
+   "json_path": "q1_validation.rmse_c",
+   "operation": "literal",
+   "expected": 0.4516612190608125,
+   "tolerance": 0.0001,
+   "manuscript_literal": "0.4517"
+  },
+  {
+   "name": "q1-max-abs",
+   "source": "results/run-report.json",
+   "json_path": "q1_validation.max_abs_c",
+   "operation": "literal",
+   "expected": 1.7971702757556542,
+   "tolerance": 0.0001,
+   "manuscript_literal": "1.7972"
+  },
+  {
+   "name": "q1-last-30min",
+   "source": "results/run-report.json",
+   "json_path": "q1_validation.holdout_last_30min_rmse_c",
+   "operation": "literal",
+   "expected": 0.1452833173901889,
+   "tolerance": 0.0001,
+   "manuscript_literal": "0.1453"
+  },
+  {
+   "name": "q1-first-10min",
+   "source": "results/run-report.json",
+   "json_path": "q1_validation.holdout_first_10min_rmse_c",
+   "operation": "literal",
+   "expected": 1.2798228014225121,
+   "tolerance": 0.0001,
+   "manuscript_literal": "1.2798"
+  },
+  {
+   "name": "q1-final-model",
+   "source": "results/run-report.json",
+   "json_path": "q1_validation.final_model_c",
+   "operation": "literal",
+   "expected": 47.934716682627204,
+   "tolerance": 0.0001,
+   "manuscript_literal": "47.9347"
+  },
+  {
+   "name": "q1-steady-closed-form",
+   "source": "results/run-report.json",
+   "json_path": "q1_validation.steady_state_closed_form_c",
+   "operation": "literal",
+   "expected": 47.934716682525966,
+   "tolerance": 1e-09,
+   "manuscript_literal": "47.934716682526"
+  },
+  {
+   "name": "air-layer-diffusivity",
+   "source": "results/run-report.json",
+   "json_path": "diffusivity_m2_s.IV",
+   "operation": "literal",
+   "expected": 2.361075976051944e-05,
+   "tolerance": 1e-09,
+   "manuscript_literal": "2.361e-5"
+  },
+  {
+   "name": "q2-d2-star",
+   "source": "results/run-report.json",
+   "json_path": "q2.result.d2_mm",
+   "operation": "literal",
+   "expected": 18.161,
+   "tolerance": 1e-06,
+   "manuscript_literal": "18.16"
+  },
+  {
+   "name": "q2-peak",
+   "source": "results/run-report.json",
+   "json_path": "q2.result.metrics.peak_skin_c",
+   "operation": "literal",
+   "expected": 44.04500691911091,
+   "tolerance": 0.001,
+   "manuscript_literal": "44.045"
+  },
+  {
+   "name": "q2-first-cross",
+   "source": "results/run-report.json",
+   "json_path": "q2.result.metrics.first_cross_44_s",
+   "operation": "literal",
+   "expected": 3302.0,
+   "tolerance": 1e-06,
+   "manuscript_literal": "3302"
+  },
+  {
+   "name": "q2-budget-tight",
+   "source": "results/run-report.json",
+   "json_path": "q2.result.metrics.seconds_above_44",
+   "operation": "literal",
+   "expected": 300.0,
+   "tolerance": 1e-06,
+   "manuscript_literal": "300"
+  },
+  {
+   "name": "grid-convergence-bound",
+   "values": [
+    2.6622615223459434e-09
+   ],
+   "operation": "literal",
+   "expected": 2.6622615223459434e-09,
+   "tolerance": 1e-12,
+   "manuscript_literal": "2.7e-9"
+  }
+ ]
+}
