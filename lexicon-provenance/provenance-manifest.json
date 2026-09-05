@@ -126,5 +126,155 @@
   "commit": "401fcce7",
   "pushed_to": "git@github.com:Anonymous87123/code-LateX.git main"
  },
- "store_note": "AIGC 语料与运行产物统一存放在 D:\\aigc-corpus\\，不在任何 git 仓库内。原先它们位于 D:\\code LateX（LaTeX 教材仓库），其中 4 个文件超过 GitHub 单文件 100MB 上限，导致该仓库长期无法 push；移出后已恢复同步。本清单是它们与 lexical-signals.json 之间唯一的可追溯绑定。"
+ "store_note": "AIGC 语料与运行产物统一存放在 D:\\aigc-corpus\\，不在任何 git 仓库内。原先它们位于 D:\\code LateX（LaTeX 教材仓库），其中 4 个文件超过 GitHub 单文件 100MB 上限，导致该仓库长期无法 push；移出后已恢复同步。本清单是它们与 lexical-signals.json 之间唯一的可追溯绑定。",
+ "section_b_cet6_evidence": {
+  "moved_from": "D:\\code LateX\\elegantbook\\CET6\\cet 6\\_analysis_output",
+  "moved_at": "2026-09-05",
+  "why": "real-trial-lessons.md 的 Section B 实战观察逐字引用了这两个哈希，但文件此前只存在于 elegantbook CET6 教材目录，router 侧无法对账。移入本目录后引用闭合。",
+  "cited_artifacts": [
+   {
+    "path": "lexicon-provenance/section-b-cet6-20260816/section_b_final_conclusions_report_v2.aigc-candidate.pdf",
+    "bytes": 695303,
+    "sha256": "10727F49B36B25CF4D09831816F03EB5E723DE0F585CD9B5109CA12828145E87",
+    "cited_as": "candidate_pdf",
+    "cited_by": "AIGC/aigc-writing-router/references/real-trial-lessons.md"
+   },
+   {
+    "path": "lexicon-provenance/section-b-cet6-20260816/section_b_final_conclusions_report_v2.aigc-candidate.tex",
+    "bytes": 98821,
+    "sha256": "7E912AC85E8F1F5894F3D9DA222635CD7240BCD3872BD6D0BBC6E2B1281086E5",
+    "cited_as": "candidate_tex",
+    "cited_by": "AIGC/aigc-writing-router/references/real-trial-lessons.md"
+   }
+  ],
+  "build_products": [
+   {
+    "path": "lexicon-provenance/section-b-cet6-20260816/$out/section_b_final_conclusions_report_v2.aigc-candidate.aux",
+    "bytes": 21912,
+    "sha256": "8CAC757DF00882E0527266B4A58B9D63B8B242E7A69D1A14957EF2A60D413D8F"
+   },
+   {
+    "path": "lexicon-provenance/section-b-cet6-20260816/$out/section_b_final_conclusions_report_v2.aigc-candidate.fdb_latexmk",
+    "bytes": 18312,
+    "sha256": "B1A64DB6DEBA0F22E46923C60B282FF39ACBB01924B4876B912DA9A87FFD5A5A"
+   },
+   {
+    "path": "lexicon-provenance/section-b-cet6-20260816/$out/section_b_final_conclusions_report_v2.aigc-candidate.fls",
+    "bytes": 22654,
+    "sha256": "DA0169343189F555E375C4B343A599C1FE6B62F6D82A634C92499F6CCECFE3FA"
+   },
+   {
+    "path": "lexicon-provenance/section-b-cet6-20260816/$out/section_b_final_conclusions_report_v2.aigc-candidate.log",
+    "bytes": 35814,
+    "sha256": "E702B3CA6F9467480DDB06844896C6F1596D0E83D3BEC387A49F946449CC68A0"
+   },
+   {
+    "path": "lexicon-provenance/section-b-cet6-20260816/$out/section_b_final_conclusions_report_v2.aigc-candidate.out",
+    "bytes": 24849,
+    "sha256": "8711158FA83822A762407DF73910A862F0FDBA95FDA77102112D330CE2FA5389"
+   },
+   {
+    "path": "lexicon-provenance/section-b-cet6-20260816/$out/section_b_final_conclusions_report_v2.aigc-candidate.pdf",
+    "bytes": 690591,
+    "sha256": "836132F4EDA4E4A7CD7CE31778A9AB9D92547E581FCB62230744801A91A3B34B"
+   },
+   {
+    "path": "lexicon-provenance/section-b-cet6-20260816/$out/section_b_final_conclusions_report_v2.aigc-candidate.toc",
+    "bytes": 12194,
+    "sha256": "D63692F9C05AFAD1A379EB39F5A5B819B680424D4DFDEFF1B528BC68B6DBE017"
+   },
+   {
+    "path": "lexicon-provenance/section-b-cet6-20260816/$out/section_b_final_conclusions_report_v2.aigc-candidate.xdv",
+    "bytes": 675548,
+    "sha256": "93CC0ED43A2D34A5CC3E17A5AFB51CF76E0315AB79F256237D8EF592E98989F8"
+   }
+  ],
+  "frozen_source_left_in_place": {
+   "dir": "D:\\code LateX\\elegantbook\\CET6\\cet 6\\_analysis_output",
+   "reason": "源稿属于 CET6 课程材料，按 router 规则「源稿始终保留」，只登记哈希不搬迁。",
+   "files": {
+    "section_b_final_conclusions_report_v2.tex": {
+     "bytes": 98080,
+     "sha256": "5687DD8DDA136DBC9843C635DC9A9ACF4D88B8DE40024062F86CF982F9C69253"
+    },
+    "section_b_final_conclusions_report_unified59.tex": {
+     "bytes": 98518,
+     "sha256": "9EBEF5F364B06B9C3DCAFC0CA40ABEDA3A1D50D8D597FE216EE8692268080FA0"
+    },
+    "section_b_final_conclusions_report.tex": {
+     "bytes": 44752,
+     "sha256": "2E27968E0772C731E25497D87668464FCD2A92BB090ABDB1C3E3A092AD293C77"
+    },
+    "section_b_final_conclusions_report.md": {
+     "bytes": 32345,
+     "sha256": "28D64C6351ED7BD138A96EB27D62BDC36D6195FF68F6567253ADBEE49C067F08"
+    }
+   }
+  }
+ },
+ "closure_verifier": {
+  "path": "lexicon-provenance/verify_aigc_closure.py",
+  "checks": [
+   "roots",
+   "discovery",
+   "rule-snapshot",
+   "role-contracts",
+   "mcm-route",
+   "release-binding",
+   "provenance"
+  ],
+  "note": "只读校验三处入口是否指向同一真源、技能可发现性、规则快照完整性、责任链、发布哈希互锁与来源对账；不产出文风或检测结论。"
+ },
+ "entry_points": {
+  "truth": "F:\\CUMCM\\AIGC (+ 仓库根的 5 个内容 skill 与 math-modeling-skill-pro-main)",
+  "mechanism": "Windows 目录联接 (mklink /J)。三处读写同一份文件，结构上不可能再漂移；代价是 F: 盘不可用时另两处入口同时失效。",
+  "claude_skills": {
+   "count": 20,
+   "links": {
+    "academic-humanizer": "F:\\CUMCM\\AIGC\\academic-humanizer-main",
+    "ai-check": "F:\\CUMCM\\AIGC\\humanize-main\\ai-check",
+    "aigc-writing-router": "F:\\CUMCM\\AIGC\\aigc-writing-router",
+    "baibaiAIGC": "F:\\CUMCM\\AIGC\\baibaiAIGC",
+    "deai-academic-writing": "F:\\CUMCM\\deai-academic-writing",
+    "deai-course-notes": "F:\\CUMCM\\deai-course-notes",
+    "deai-modeling-writing": "F:\\CUMCM\\deai-modeling-writing",
+    "deai-research-writing": "F:\\CUMCM\\deai-research-writing",
+    "humanize-academic-chinese": "F:\\CUMCM\\AIGC\\humanize-academic-chinese",
+    "humanize-chinese-copy-lab": "F:\\CUMCM\\AIGC\\humanize-main",
+    "humanize-english-editor": "F:\\CUMCM\\AIGC\\humanize-main\\humanize",
+    "humanize-tiany-candidate-lab": "F:\\CUMCM\\AIGC\\humanize-main(Tiany)",
+    "humanizer": "F:\\CUMCM\\AIGC\\humanizer",
+    "humanizer-brandonwise": "F:\\CUMCM\\AIGC\\humanizer-main(brandonwise)",
+    "humanizer-medical-academic": "F:\\CUMCM\\AIGC\\humanizer_academic-main",
+    "humanizer-voice-profile": "F:\\CUMCM\\AIGC\\humanizer-skill-0.1.0\\skills\\humanizer",
+    "humanizer-zh": "F:\\CUMCM\\AIGC\\Humanizer-zh-main",
+    "math-modeling-skill": "F:\\CUMCM\\math-modeling-skill-pro-main",
+    "mcm-cup-standard-write": "F:\\CUMCM\\mcm-cup-standard-write",
+    "patina": "F:\\CUMCM\\AIGC\\patina-7.0.0"
+   }
+  },
+  "codex_skills": {
+   "count": 17,
+   "links": {
+    "academic-humanizer": "F:\\CUMCM\\AIGC\\academic-humanizer-main",
+    "ai-check": "F:\\CUMCM\\AIGC\\humanize-main\\ai-check",
+    "AIGC": "F:\\CUMCM\\AIGC",
+    "deai-academic-writing": "F:\\CUMCM\\deai-academic-writing",
+    "deai-course-notes": "F:\\CUMCM\\deai-course-notes",
+    "deai-modeling-writing": "F:\\CUMCM\\deai-modeling-writing",
+    "deai-research-writing": "F:\\CUMCM\\deai-research-writing",
+    "humanize-chinese-copy-lab": "F:\\CUMCM\\AIGC\\humanize-main",
+    "humanize-english-editor": "F:\\CUMCM\\AIGC\\humanize-main\\humanize",
+    "humanize-tiany-candidate-lab": "F:\\CUMCM\\AIGC\\humanize-main(Tiany)",
+    "humanizer-brandonwise": "F:\\CUMCM\\AIGC\\humanizer-main(brandonwise)",
+    "humanizer-medical-academic": "F:\\CUMCM\\AIGC\\humanizer_academic-main",
+    "humanizer-voice-profile": "F:\\CUMCM\\AIGC\\humanizer-skill-0.1.0\\skills\\humanizer",
+    "humanizer-zh": "F:\\CUMCM\\AIGC\\Humanizer-zh-main",
+    "math-modeling-skill": "F:\\CUMCM\\math-modeling-skill-pro-main",
+    "mcm-cup-standard-write": "F:\\CUMCM\\mcm-cup-standard-write",
+    "patina": "F:\\CUMCM\\AIGC\\patina-7.0.0"
+   }
+  },
+  "verified_by": "lexicon-provenance/verify_aigc_closure.py"
+ }
 }
