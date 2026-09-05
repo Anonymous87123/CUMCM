@@ -1,0 +1,66 @@
+{
+  "artifact": {
+    "after_sha256": "45452e956d6de8d539e4798dabdb42aa698019ddc79284f8d38fd6aa335a2965",
+    "before_sha256": "e2b05381ab3d2e8896c7431bea5ab9cc32956b1f15056438f08e20b26cede7ba"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v3",
+  "bundle_sha256": "cd284af509d098927546b0b2437775af5e72b626ba55b0227422213f97ae66bb",
+  "chunk_binding_sha256": "e162c56c74cda408d93d16e81b920963def9f841e60d47358ace5947a30ce95b",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-70d08851119b.diff",
+    "sha256": "a4284df8e4d60b799a4f050a607f0a1b893634bf51c266d8680e669d432df21c"
+  },
+  "evidence_sha256": "29062905e6453fcb8e60ece0b42ea5da7d907dfb607d5ceec4bef38f5ca234e7",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "删除失去强调作用的程式化提示语",
+        "target_signals": [
+          "LEX-EMPH-01"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "1e6e3b1dee14c838354a8e61f22bfd86b725b9dd66bf537569c4336424875713",
+        "start_line": 2
+      }
+    ],
+    "summary": "删除失去强调作用的程式化提示语",
+    "target_signals": [
+      "LEX-EMPH-01"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      }
+    ],
+    "masked_after_sha256": "cb5bb56e2ebd637e773e9781603475102d365eeb95588c7edcea61215a8b6db4",
+    "masked_before_sha256": "d5495a6f2682edda42d1ad6cd4b4b7f3200ebdb0d56cf0d397b46d7986da56d1",
+    "source_spans_covered": 1,
+    "source_spans_total": 1,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "830debaad3248e787d151ca24782649be33a479fdafdaff3703388c500c3354d",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-70d08851119b"
+}

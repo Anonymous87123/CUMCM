@@ -1,0 +1,198 @@
+﻿{
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "evidence": {
+    "after_path": "D:\\code LateX\\elegantbook\\physics\\tests\\fixtures\\humanize_usability_red_blue\\research_fresh_body.md",
+    "after_sha256": "3c7e6b27894cc02528d3b46f4103eb3e6b1a8872ed39bac8593829e1ec9b0765",
+    "before_path": "D:\\code LateX\\elegantbook\\physics\\tests\\fixtures\\humanize_usability_red_blue\\research_before.md",
+    "before_sha256": "1663417697e6a238437c88dc43dabd6ee880910a8c581b42b2e6538d3efbd3d5",
+    "checker_executed": true,
+    "document_format": "markdown",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    }
+  },
+  "exit_code": 2,
+  "introduced_findings": [],
+  "invariants": {
+    "errors": [],
+    "evidence": {
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      }
+    },
+    "hard_failure": false,
+    "status": "pass",
+    "summary": {
+      "errors": 0,
+      "warnings": 5
+    },
+    "warnings": [
+      {
+        "code": "SPEECH_ACT_NEGATION_CHANGED",
+        "details": {
+          "after": {
+            "不": 2,
+            "不能": 2,
+            "并非": 1
+          },
+          "before": {
+            "不": 3,
+            "不能": 1,
+            "并不意味着": 1
+          }
+        },
+        "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+        "severity": "warning"
+      },
+      {
+        "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+        "details": {
+          "after": {
+            "可": 1,
+            "可能": 2
+          },
+          "before": {
+            "可": 1,
+            "可能": 2,
+            "或许": 1
+          }
+        },
+        "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+        "severity": "warning"
+      },
+      {
+        "code": "SPEECH_ACT_DEFINITION_NAMING_CHANGED",
+        "details": {
+          "after": {
+            "定义为": 1
+          },
+          "before": {
+            "定义为": 1,
+            "意味着": 2
+          }
+        },
+        "message": "Speech-act markers changed in category 'definition_naming'; review semantic force manually.",
+        "severity": "warning"
+      },
+      {
+        "code": "SPEECH_ACT_REPORTING_OBSERVATION_CHANGED",
+        "details": {
+          "after": {
+            "实验结果表明": 1,
+            "表明": 2
+          },
+          "before": {
+            "结果表明": 1
+          }
+        },
+        "message": "Speech-act markers changed in category 'reporting_observation'; review semantic force manually.",
+        "severity": "warning"
+      },
+      {
+        "code": "SPEECH_ACT_ATTRIBUTION_SOURCE_CHANGED",
+        "details": {
+          "after": {
+            "已有研究": 1
+          },
+          "before": {}
+        },
+        "message": "Speech-act markers changed in category 'attribution_source'; review semantic force manually.",
+        "severity": "warning"
+      }
+    ]
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 3,
+    "before_candidates": 11,
+    "introduced_candidates": 0,
+    "unexplained_high_candidates": 0
+  },
+  "review_reasons": [
+    "speech_act_warning"
+  ],
+  "scene": "RESEARCH",
+  "status": "REVIEW",
+  "unaccepted_warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不": 2,
+          "不能": 2,
+          "并非": 1
+        },
+        "before": {
+          "不": 3,
+          "不能": 1,
+          "并不意味着": 1
+        }
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning"
+    },
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "可": 1,
+          "可能": 2
+        },
+        "before": {
+          "可": 1,
+          "可能": 2,
+          "或许": 1
+        }
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning"
+    },
+    {
+      "code": "SPEECH_ACT_DEFINITION_NAMING_CHANGED",
+      "details": {
+        "after": {
+          "定义为": 1
+        },
+        "before": {
+          "定义为": 1,
+          "意味着": 2
+        }
+      },
+      "message": "Speech-act markers changed in category 'definition_naming'; review semantic force manually.",
+      "severity": "warning"
+    },
+    {
+      "code": "SPEECH_ACT_REPORTING_OBSERVATION_CHANGED",
+      "details": {
+        "after": {
+          "实验结果表明": 1,
+          "表明": 2
+        },
+        "before": {
+          "结果表明": 1
+        }
+      },
+      "message": "Speech-act markers changed in category 'reporting_observation'; review semantic force manually.",
+      "severity": "warning"
+    },
+    {
+      "code": "SPEECH_ACT_ATTRIBUTION_SOURCE_CHANGED",
+      "details": {
+        "after": {
+          "已有研究": 1
+        },
+        "before": {}
+      },
+      "message": "Speech-act markers changed in category 'attribution_source'; review semantic force manually.",
+      "severity": "warning"
+    }
+  ],
+  "unexplained_high_findings": []
+}

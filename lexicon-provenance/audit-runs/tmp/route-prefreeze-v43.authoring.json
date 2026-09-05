@@ -1,0 +1,186 @@
+{
+  "authoring_integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+  "completion_claim_allowed": false,
+  "configuration": {
+    "intensity": "BALANCED",
+    "mode": "REWRITE",
+    "protected_terms": [],
+    "requested_output": "PATCH",
+    "requested_scene": "AUTO",
+    "resolved_scene": "MODELING",
+    "source_kind": "DOCUMENT",
+    "span_suggestion_mode": "FOCUS"
+  },
+  "explicit_conflicts": [],
+  "focus_spans": [
+    {
+      "end_byte": 730,
+      "focus_id": "F001",
+      "source_text": "我们的方案因此应明确分成两条账：",
+      "source_text_sha256": "5f38ee5a39a74e2bced338250b01423ac96d09a1c5947a7517d3a2df2d672278",
+      "start_byte": 682
+    },
+    {
+      "end_byte": 1579,
+      "focus_id": "F002",
+      "source_text": "工程上，下一阶段先完成三件事：",
+      "source_text_sha256": "e5484759b5fdfe10d54438f8a5f0898f90a816692ec56c30251d838de4be5216",
+      "start_byte": 1534
+    },
+    {
+      "end_byte": 2305,
+      "focus_id": "F003",
+      "source_text": "下一阶段不再追求单一benchmark上的表面命中率，而是先证明极少随机样本在未见函数族和千维场景下确实具有稳定路由价值，再用预算受控的数学确认补足边界样例。",
+      "source_text_sha256": "332a6f49cb27faf43964d49fb3cfdfb4502650208b51d5b6e76ac9bfa7ac68d9",
+      "start_byte": 2086
+    }
+  ],
+  "high_findings": [],
+  "humanize_quality_claim_allowed": false,
+  "hunks": [],
+  "inventory_sha256": "b89bec7893f448447d4131e1c40908158385099588c836c8378ecf8b7cabcd43",
+  "lexical_resolutions": [],
+  "policy_hashes": {
+    "authoring_tool_sha256": "f3514b25630b8632adf22810731ce6ce591036f0f050925a424b9eeccdb21ac8",
+    "coverage_builder_sha256": "d878de837f25a91c171a6c19e71cae83cdd5e440e574238a18d0662f00013001",
+    "lexicon_sha256": "52191aaa422515e03e14c9f5981f4e190320b1f6fa203e370041abb742e6937c",
+    "runtime_contract_sha256": "a5f10e87196bf5517f8da41649b663c7a3b6b070253c8fdb3bfa6aa8168c6fd6",
+    "scanner_sha256": "4237049cafe1c06e81afa33115ffaf00d9ba5d69c86baaada96b387d3c70c048",
+    "scene_router_sha256": "9c76dda8f36977925738d2f7a66516a27013d2aafe89ea361ef8fddeb9a5ccbe",
+    "scene_routing_policy_sha256": "8d0f916d91b5753fd94d358c4b32e9a6c02b1f30120f43b4cbb2165dc1684450"
+  },
+  "scene_route": {
+    "ambiguous_scenes": [],
+    "authoring_allowed": true,
+    "document_format": "markdown",
+    "evidence": [
+      {
+        "bounded_occurrences": 1,
+        "contribution": 2,
+        "occurrences": 1,
+        "rule_id": "MODELING-CONTRACT-01",
+        "scene": "MODELING",
+        "scope": "body"
+      },
+      {
+        "bounded_occurrences": 1,
+        "contribution": 6,
+        "occurrences": 1,
+        "rule_id": "MODELING-RESULT-01",
+        "scene": "MODELING",
+        "scope": "body"
+      }
+    ],
+    "margin": 8,
+    "policy_revision": 2,
+    "policy_schema_version": "humanize-scene-routing-policy/v1",
+    "policy_sha256": "8d0f916d91b5753fd94d358c4b32e9a6c02b1f30120f43b4cbb2165dc1684450",
+    "reason_code": "AUTO_UNIQUE_SCORE_ABOVE_THRESHOLD",
+    "requested_scene": "AUTO",
+    "resolved_scene": "MODELING",
+    "route_record_sha256": "9d07d143113fa3b516f7a28b916133f1be313d99c914ec1bf2fa0f513a8a7296",
+    "router_sha256": "9c76dda8f36977925738d2f7a66516a27013d2aafe89ea361ef8fddeb9a5ccbe",
+    "routing_input_scope": "FULL_SOURCE_PROTECTED_CONTENT_MASKED",
+    "routing_input_sha256": "375282ff9e450b529cc47a57830d0836f5c7d1b78df9d86f26be15f5c9702dc6",
+    "schema_version": "humanize-short-patch-scene-route/v1",
+    "scores": {
+      "COURSE": 0,
+      "MODELING": 8,
+      "RESEARCH": 0
+    },
+    "source_sha256": "9e32f2099d4ed90d5ce8564f319aaf68ecf0ea82f663382cebe97d4832825b70",
+    "source_size_bytes": 2306,
+    "status": "ROUTED",
+    "top_score": 8
+  },
+  "schema_version": "humanize-short-patch-selection-authoring/v4",
+  "selected_spans": [],
+  "source": {
+    "document_format": "markdown",
+    "encoding": "utf-8",
+    "offset_unit": "UTF8_BYTES",
+    "scan_scene": "AUTO",
+    "sha256": "9e32f2099d4ed90d5ce8564f319aaf68ecf0ea82f663382cebe97d4832825b70",
+    "size_bytes": 2306
+  },
+  "span_suggestion_policy": {
+    "candidate_roles": [
+      "CANDIDATE"
+    ],
+    "decision_authority": false,
+    "max_clause_bytes": 600,
+    "max_paragraph_bytes": 4000,
+    "max_sentence_bytes": 1200,
+    "mode": "FOCUS",
+    "protected_overlap_policy": "SUPPRESS_ANY_OVERLAP",
+    "schema_version": "humanize-short-patch-span-suggestion/v1",
+    "trim_policy": "EDGE_WHITESPACE_ONLY_PRESERVE_INTERNAL_BYTES"
+  },
+  "span_suggestions": [
+    {
+      "boundary_variant": "EXACT",
+      "end_byte": 730,
+      "finding_ids": [],
+      "kind": "FOCUS",
+      "reason_codes": [
+        "CALLER_DIAGNOSIS_REQUIRED",
+        "FOCUS_ID:F001"
+      ],
+      "source_text_sha256": "5f38ee5a39a74e2bced338250b01423ac96d09a1c5947a7517d3a2df2d672278",
+      "span_id": "A001",
+      "start_byte": 682,
+      "status": "AVAILABLE",
+      "suggestion_id": "SG001"
+    },
+    {
+      "boundary_variant": "EXACT",
+      "end_byte": 1579,
+      "finding_ids": [],
+      "kind": "FOCUS",
+      "reason_codes": [
+        "CALLER_DIAGNOSIS_REQUIRED",
+        "FOCUS_ID:F002"
+      ],
+      "source_text_sha256": "e5484759b5fdfe10d54438f8a5f0898f90a816692ec56c30251d838de4be5216",
+      "span_id": "A002",
+      "start_byte": 1534,
+      "status": "AVAILABLE",
+      "suggestion_id": "SG002"
+    },
+    {
+      "boundary_variant": "EXACT",
+      "end_byte": 2305,
+      "finding_ids": [],
+      "kind": "FOCUS",
+      "reason_codes": [
+        "CALLER_DIAGNOSIS_REQUIRED",
+        "FOCUS_ID:F003"
+      ],
+      "source_text_sha256": "332a6f49cb27faf43964d49fb3cfdfb4502650208b51d5b6e76ac9bfa7ac68d9",
+      "span_id": "A003",
+      "start_byte": 2086,
+      "status": "AVAILABLE",
+      "suggestion_id": "SG003"
+    }
+  ],
+  "spans": [
+    {
+      "finding_ids": [],
+      "source_text": "我们的方案因此应明确分成两条账：",
+      "span_id": "A001",
+      "start_byte": 682
+    },
+    {
+      "finding_ids": [],
+      "source_text": "工程上，下一阶段先完成三件事：",
+      "span_id": "A002",
+      "start_byte": 1534
+    },
+    {
+      "finding_ids": [],
+      "source_text": "下一阶段不再追求单一benchmark上的表面命中率，而是先证明极少随机样本在未见函数族和千维场景下确实具有稳定路由价值，再用预算受控的数学确认补足边界样例。",
+      "span_id": "A003",
+      "start_byte": 2086
+    }
+  ]
+}

@@ -1,0 +1,847 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "candidate_assembly_exit_code": 1,
+  "candidate_assembly_status": "FAIL",
+  "delivery_gate_exit_code": 1,
+  "delivery_gate_status": "FAIL",
+  "draft_surface_source_check": {
+    "details": {},
+    "scope": [],
+    "semantic_entailment_certified": false,
+    "status": "N/A"
+  },
+  "evidence": {
+    "after_path": null,
+    "after_sha256": "a476dc96c62062747d25a7defa8ba7e8aefdbdfb333287a4d4fd55940099e3ec",
+    "before_path": null,
+    "before_sha256": "b28dc286b43b7b581f95482d31d53be57a1d0cf743a0e890f58b1f3121fe934b",
+    "checker_executed": true,
+    "document_format": "tex",
+    "document_scope": "FRAGMENT",
+    "policy_hashes": {
+      "invariant_checker_sha256": "d8ad41a41f7cc63feeede8c23106cad605ca90985012a3c96dbfcc0e2c363b12",
+      "lexicon_sha256": "52191aaa422515e03e14c9f5981f4e190320b1f6fa203e370041abb742e6937c",
+      "paired_quality_contract_sha256": "aa1d2be0d399dd4b30f15c04fe8f61afe46174faee9dd3f1f063a13b29149846",
+      "paired_quality_verifier_sha256": "ccfb1e53af76cdc15e41214747a0adf2d89a8347a06dd7c14f38622bd5b7685d",
+      "report_extractor_sha256": "49266ff31c35fbbc4b87479866503f9f71649e9df29e7088ea700ab544f62a02",
+      "runtime_contract_sha256": "36faecb4300ad79e254d75664d4069dfe29f78bd6ab6d270c84193d6562e9e42",
+      "scanner_sha256": "4237049cafe1c06e81afa33115ffaf00d9ba5d69c86baaada96b387d3c70c048",
+      "validator_sha256": "972911b3ec19e250afd009baeb100aa02bac21c52cb588394f8591f35d0ab65f"
+    },
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "source_path_archived": false
+  },
+  "evidence_bundle": {
+    "execution_record_path": "execution-record.json",
+    "invocation_path": "invocation-request.json",
+    "manifest_path": "evidence-manifest.json",
+    "paired_quality_request_path": "paired-quality-review-request.json",
+    "rendered_output_path": "rendered-output.txt",
+    "result_path": "validation-result.json",
+    "run_id": "hvr2-a5f06b82b4cb56495142f447d6413537106ce277e96266f538b4bff427a78425",
+    "schema": "humanize-direct-validation-evidence/v3",
+    "status": "PERSISTED",
+    "stderr_path": "stderr.txt",
+    "warning_review_request_path": "warning-review-request.json"
+  },
+  "exit_code": 1,
+  "hard_invariant_layer_status": "FAIL",
+  "humanize_quality_claim_allowed": false,
+  "introduced_findings": [],
+  "invariants": {
+    "advisories": [],
+    "errors": [
+      {
+        "code": "PROTECTED_MATH_CHANGED",
+        "details": {
+          "added": [],
+          "after_count": 9,
+          "before_count": 10,
+          "first_difference": 7,
+          "removed": [
+            {
+              "count": 1,
+              "value": "\\(\\theta\\)"
+            }
+          ]
+        },
+        "message": "Math spans or environments changed in count, content, or order.",
+        "severity": "error"
+      }
+    ],
+    "evidence": {
+      "document_scope": "FRAGMENT",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "speech_act_audit": {
+        "categories": {
+          "assumption": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "attribution_source": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "condition": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "definition_naming": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "focus_scope": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "modality_scope": {
+            "after": {
+              "应": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0008",
+                "column": 9,
+                "end": 175,
+                "end_column": 10,
+                "end_line": 3,
+                "line": 3,
+                "marker": "应",
+                "sentence_context": "水平方向合力与相应的加速度分别为",
+                "sentence_id": "T0005",
+                "side": "after",
+                "start": 174
+              }
+            ],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {
+                "应": 1
+              },
+              "removed": {}
+            },
+            "residual_delta": [
+              {
+                "added": {
+                  "应": 1
+                },
+                "after_claim_id": null,
+                "after_occurrences": [
+                  {
+                    "category": "modality_scope",
+                    "claim_id": "C0008",
+                    "column": 9,
+                    "end": 175,
+                    "end_column": 10,
+                    "end_line": 3,
+                    "line": 3,
+                    "marker": "应",
+                    "sentence_context": "水平方向合力与相应的加速度分别为",
+                    "sentence_id": "T0005",
+                    "side": "after",
+                    "start": 174
+                  }
+                ],
+                "before_claim_id": null,
+                "before_occurrences": [],
+                "removed": {},
+                "scope": "UNALIGNED_POOL"
+              }
+            ],
+            "safe_compression_allowances": []
+          },
+          "negation": {
+            "after": {
+              "无": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0007",
+                "column": 109,
+                "end": 109,
+                "end_column": 110,
+                "end_line": 1,
+                "line": 1,
+                "marker": "无",
+                "sentence_context": "竖直方向无加速度，",
+                "sentence_id": "T0004",
+                "side": "after",
+                "start": 108
+              }
+            ],
+            "before": {
+              "无": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0007",
+                "column": 110,
+                "end": 110,
+                "end_column": 111,
+                "end_line": 1,
+                "line": 1,
+                "marker": "无",
+                "sentence_context": "竖直方向无加速度，",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 109
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "reporting_observation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          }
+        },
+        "claim_pairing": {
+          "after_claims": 10,
+          "before_claims": 11,
+          "unique_exact_pairs": 1,
+          "unpaired_after_claims": 9,
+          "unpaired_before_claims": 10
+        },
+        "protection": {
+          "after_ranges": 9,
+          "before_ranges": 10,
+          "line_column_basis": "NORMALIZED_LF_1_BASED_UNICODE_CODEPOINT",
+          "masking": "LENGTH_PRESERVING"
+        }
+      }
+    },
+    "hard_failure": true,
+    "status": "fail",
+    "summary": {
+      "advisories": 0,
+      "errors": 1,
+      "warnings": 1
+    },
+    "warnings": [
+      {
+        "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+        "details": {
+          "after": {
+            "应": 1
+          },
+          "after_occurrences": [
+            {
+              "category": "modality_scope",
+              "claim_id": "C0008",
+              "column": 9,
+              "end": 175,
+              "end_column": 10,
+              "end_line": 3,
+              "line": 3,
+              "marker": "应",
+              "sentence_context": "水平方向合力与相应的加速度分别为",
+              "sentence_id": "T0005",
+              "side": "after",
+              "start": 174
+            }
+          ],
+          "before": {},
+          "before_occurrences": [],
+          "raw_delta": {
+            "added": {
+              "应": 1
+            },
+            "removed": {}
+          },
+          "residual_delta": [
+            {
+              "added": {
+                "应": 1
+              },
+              "after_claim_id": null,
+              "after_occurrences": [
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0008",
+                  "column": 9,
+                  "end": 175,
+                  "end_column": 10,
+                  "end_line": 3,
+                  "line": 3,
+                  "marker": "应",
+                  "sentence_context": "水平方向合力与相应的加速度分别为",
+                  "sentence_id": "T0005",
+                  "side": "after",
+                  "start": 174
+                }
+              ],
+              "before_claim_id": null,
+              "before_occurrences": [],
+              "removed": {},
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+        "severity": "warning"
+      }
+    ]
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 0,
+    "introduced_candidates": 0,
+    "unexplained_high_candidates": 0
+  },
+  "mechanical_validation_exit_code": 1,
+  "mechanical_validation_status": "FAIL",
+  "mode": "REWRITE",
+  "paired_quality_clearance_granted": false,
+  "paired_quality_review_local_clearance_supported": false,
+  "paired_quality_review_request": {
+    "artifact": {
+      "after_sha256": "a476dc96c62062747d25a7defa8ba7e8aefdbdfb333287a4d4fd55940099e3ec",
+      "before_sha256": "b28dc286b43b7b581f95482d31d53be57a1d0cf743a0e890f58b1f3121fe934b"
+    },
+    "changes": [
+      {
+        "after": {
+          "end_line": 1,
+          "han_chars": 66,
+          "line_count": 1,
+          "sha256": "6f77b7ed81d53bfb25754f0f0e2e07e8d60f51fda5e1e8dc3372b2392873a9a3",
+          "start_line": 1
+        },
+        "before": {
+          "end_line": 1,
+          "han_chars": 67,
+          "line_count": 1,
+          "sha256": "36c6ade09c388f38d93787d354adf02a72cbd32879a40d256ab5ffbab0862e8c",
+          "start_line": 1
+        },
+        "change_id": "QCH-27ddabc9695b771ec828",
+        "operation": "REPLACE",
+        "ordinal": 1
+      },
+      {
+        "after": {
+          "end_line": 3,
+          "han_chars": 16,
+          "line_count": 1,
+          "sha256": "001c97aa34b391f5458f8f745019f75cd0af25b0b0d74527b9842f971060c7ff",
+          "start_line": 3
+        },
+        "before": {
+          "end_line": 3,
+          "han_chars": 7,
+          "line_count": 1,
+          "sha256": "32a901f457c7e0ef7186ade6620fca664ef978bad4f7e441f76e84a5ed8980a2",
+          "start_line": 3
+        },
+        "change_id": "QCH-86e7f03614d5cb05c314",
+        "operation": "REPLACE",
+        "ordinal": 2
+      },
+      {
+        "after": {
+          "end_line": null,
+          "han_chars": 0,
+          "line_count": 0,
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "start_line": null
+        },
+        "before": {
+          "end_line": 5,
+          "han_chars": 2,
+          "line_count": 1,
+          "sha256": "92b16ff82786ce53acd0ae246c8773a8c322dc47efd26b910f832f0d9c75bdce",
+          "start_line": 5
+        },
+        "change_id": "QCH-cb2115bcffe60e1c1e02",
+        "operation": "DELETE",
+        "ordinal": 3
+      },
+      {
+        "after": {
+          "end_line": 6,
+          "han_chars": 4,
+          "line_count": 1,
+          "sha256": "fdff85dab9b645fd7b2a50bd29564b7602cdc3c1d5adf800b6b92beb48fa3ed5",
+          "start_line": 6
+        },
+        "before": {
+          "end_line": 7,
+          "han_chars": 5,
+          "line_count": 1,
+          "sha256": "c7326240b9c285da693931282e01473ae214730511aa6b9a49f4188a84ec475a",
+          "start_line": 7
+        },
+        "change_id": "QCH-d4de6ec90d287f08fdb3",
+        "operation": "REPLACE",
+        "ordinal": 4
+      },
+      {
+        "after": {
+          "end_line": 8,
+          "han_chars": 2,
+          "line_count": 1,
+          "sha256": "24f10d83a6d5daf9bee4a162d77057c6faa04c241178d462629fd61abee376d4",
+          "start_line": 8
+        },
+        "before": {
+          "end_line": 9,
+          "han_chars": 2,
+          "line_count": 1,
+          "sha256": "d1d866e19de85768899ae2264144dfc1240d96abc666fd9e3637419d3b034975",
+          "start_line": 9
+        },
+        "change_id": "QCH-c1f0113db87f166b2972",
+        "operation": "REPLACE",
+        "ordinal": 5
+      }
+    ],
+    "limitations": {
+      "academic_correctness": "NOT_EVALUATED",
+      "authorship": "NOT_EVALUATED",
+      "quality_clearance_granted": false
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "d8ad41a41f7cc63feeede8c23106cad605ca90985012a3c96dbfcc0e2c363b12",
+      "lexicon_sha256": "52191aaa422515e03e14c9f5981f4e190320b1f6fa203e370041abb742e6937c",
+      "paired_quality_contract_sha256": "aa1d2be0d399dd4b30f15c04fe8f61afe46174faee9dd3f1f063a13b29149846",
+      "paired_quality_verifier_sha256": "ccfb1e53af76cdc15e41214747a0adf2d89a8347a06dd7c14f38622bd5b7685d",
+      "report_extractor_sha256": "49266ff31c35fbbc4b87479866503f9f71649e9df29e7088ea700ab544f62a02",
+      "runtime_contract_sha256": "36faecb4300ad79e254d75664d4069dfe29f78bd6ab6d270c84193d6562e9e42",
+      "scanner_sha256": "4237049cafe1c06e81afa33115ffaf00d9ba5d69c86baaada96b387d3c70c048",
+      "validator_sha256": "972911b3ec19e250afd009baeb100aa02bac21c52cb588394f8591f35d0ab65f"
+    },
+    "request_sha256": "8b834acb8158803e03cfac109cd8062eb0e394f3b846c8dd9ea00d08488f954e",
+    "review_contract": {
+      "empty_or_generic_benefit_is_clearance": false,
+      "local_model_or_caller_assertion_is_clearance": false,
+      "required_dimensions": [
+        "actionable_pathology_remaining",
+        "no_change_is_best_available_decision",
+        "problem_span_binding",
+        "independent_reading_benefit",
+        "subject_and_modifier_alignment",
+        "verb_object_collocation",
+        "logical_relation_preservation",
+        "information_density_and_rhythm",
+        "author_voice_non_regression"
+      ],
+      "required_per_change_verdicts": [
+        "ACCEPT",
+        "REVISE",
+        "REVERT"
+      ],
+      "validator_pass_is_quality_clearance": false
+    },
+    "schema": "humanize-paired-quality-review-request/v1",
+    "status": "BLOCKED_BY_MECHANICAL_GATE",
+    "validation_context": {
+      "decision": "REWRITE",
+      "document_format": "tex",
+      "document_scope": "FRAGMENT",
+      "mechanical_validation_status": "FAIL",
+      "mode": "REWRITE",
+      "scene": "COURSE"
+    }
+  },
+  "paired_quality_review_status": "BLOCKED_BY_MECHANICAL_GATE",
+  "pending_warnings": [
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "应": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0008",
+            "column": 9,
+            "end": 175,
+            "end_column": 10,
+            "end_line": 3,
+            "line": 3,
+            "marker": "应",
+            "sentence_context": "水平方向合力与相应的加速度分别为",
+            "sentence_id": "T0005",
+            "side": "after",
+            "start": 174
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "应": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "应": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0008",
+                "column": 9,
+                "end": 175,
+                "end_column": 10,
+                "end_line": 3,
+                "line": 3,
+                "marker": "应",
+                "sentence_context": "水平方向合力与相应的加速度分别为",
+                "sentence_id": "T0005",
+                "side": "after",
+                "start": 174
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "cc831206e42db08c698cf9be083d552bd1f6b9a5d852de263bbf0bef44c717de"
+    }
+  ],
+  "proposed_warning_resolutions": [],
+  "report_scope_check": {
+    "editable_range_count": 0,
+    "editable_ranges": [],
+    "extractor_replay_match": null,
+    "fragment_count": 0,
+    "outside_selection_unchanged": null,
+    "report_sha256": null,
+    "scope_path": null,
+    "scope_semantic_sha256": null,
+    "scope_sha256": null,
+    "source_sha256": null,
+    "status": "N/A"
+  },
+  "review_reasons": [
+    "speech_act_warning"
+  ],
+  "scene": "COURSE",
+  "semantic_source_check": "N/A",
+  "speech_act_diagnostics": [],
+  "speech_act_layer_status": "REVIEW",
+  "status": "FAIL",
+  "style_signal_layer_status": "PASS",
+  "unaccepted_warnings": [
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "应": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0008",
+            "column": 9,
+            "end": 175,
+            "end_column": 10,
+            "end_line": 3,
+            "line": 3,
+            "marker": "应",
+            "sentence_context": "水平方向合力与相应的加速度分别为",
+            "sentence_id": "T0005",
+            "side": "after",
+            "start": 174
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "应": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "应": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0008",
+                "column": 9,
+                "end": 175,
+                "end_column": 10,
+                "end_line": 3,
+                "line": 3,
+                "marker": "应",
+                "sentence_context": "水平方向合力与相应的加速度分别为",
+                "sentence_id": "T0005",
+                "side": "after",
+                "start": 174
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "cc831206e42db08c698cf9be083d552bd1f6b9a5d852de263bbf0bef44c717de"
+    }
+  ],
+  "unexplained_high_findings": [],
+  "warning_proposal_state": {
+    "attestation_status": "NOT_PROVIDED",
+    "cross_record_reviewer_linkability": "NOT_RECORDED",
+    "identity_verified": false,
+    "proposal_source": "NOT_PROVIDED",
+    "proposed_warning_fingerprints": [],
+    "review_clearance_granted": false,
+    "reviewer_identifier_collected": false,
+    "stable_reviewer_pseudonym_recorded": false,
+    "warning_review_request_sha256": null
+  },
+  "warning_resolutions": {},
+  "warning_review_request": {
+    "artifact": {
+      "after_sha256": "a476dc96c62062747d25a7defa8ba7e8aefdbdfb333287a4d4fd55940099e3ec",
+      "before_sha256": "b28dc286b43b7b581f95482d31d53be57a1d0cf743a0e890f58b1f3121fe934b"
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "d8ad41a41f7cc63feeede8c23106cad605ca90985012a3c96dbfcc0e2c363b12",
+      "lexicon_sha256": "52191aaa422515e03e14c9f5981f4e190320b1f6fa203e370041abb742e6937c",
+      "paired_quality_contract_sha256": "aa1d2be0d399dd4b30f15c04fe8f61afe46174faee9dd3f1f063a13b29149846",
+      "paired_quality_verifier_sha256": "ccfb1e53af76cdc15e41214747a0adf2d89a8347a06dd7c14f38622bd5b7685d",
+      "report_extractor_sha256": "49266ff31c35fbbc4b87479866503f9f71649e9df29e7088ea700ab544f62a02",
+      "runtime_contract_sha256": "36faecb4300ad79e254d75664d4069dfe29f78bd6ab6d270c84193d6562e9e42",
+      "scanner_sha256": "4237049cafe1c06e81afa33115ffaf00d9ba5d69c86baaada96b387d3c70c048",
+      "validator_sha256": "972911b3ec19e250afd009baeb100aa02bac21c52cb588394f8591f35d0ab65f"
+    },
+    "request_sha256": "cbac640f67970b7de754332ee15fcd221f11bfc0f1dbc051dddbdcf75b84d55c",
+    "schema": "humanize-warning-review-request/v1",
+    "validation_context": {
+      "document_format": "tex",
+      "document_scope": "FRAGMENT",
+      "mode": "REWRITE",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "scene": "COURSE",
+      "strict_speech_acts": false
+    },
+    "warnings": [
+      {
+        "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+        "details": {
+          "after": {
+            "应": 1
+          },
+          "after_occurrences": [
+            {
+              "category": "modality_scope",
+              "claim_id": "C0008",
+              "column": 9,
+              "end": 175,
+              "end_column": 10,
+              "end_line": 3,
+              "line": 3,
+              "marker": "应",
+              "sentence_context": "水平方向合力与相应的加速度分别为",
+              "sentence_id": "T0005",
+              "side": "after",
+              "start": 174
+            }
+          ],
+          "before": {},
+          "before_occurrences": [],
+          "raw_delta": {
+            "added": {
+              "应": 1
+            },
+            "removed": {}
+          },
+          "residual_delta": [
+            {
+              "added": {
+                "应": 1
+              },
+              "after_claim_id": null,
+              "after_occurrences": [
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0008",
+                  "column": 9,
+                  "end": 175,
+                  "end_column": 10,
+                  "end_line": 3,
+                  "line": 3,
+                  "marker": "应",
+                  "sentence_context": "水平方向合力与相应的加速度分别为",
+                  "sentence_id": "T0005",
+                  "side": "after",
+                  "start": 174
+                }
+              ],
+              "before_claim_id": null,
+              "before_occurrences": [],
+              "removed": {},
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+        "severity": "warning",
+        "warning_fingerprint": "cc831206e42db08c698cf9be083d552bd1f6b9a5d852de263bbf0bef44c717de"
+      }
+    ]
+  },
+  "warnings_without_resolution_proposal": [
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "应": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0008",
+            "column": 9,
+            "end": 175,
+            "end_column": 10,
+            "end_line": 3,
+            "line": 3,
+            "marker": "应",
+            "sentence_context": "水平方向合力与相应的加速度分别为",
+            "sentence_id": "T0005",
+            "side": "after",
+            "start": 174
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "应": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "应": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0008",
+                "column": 9,
+                "end": 175,
+                "end_column": 10,
+                "end_line": 3,
+                "line": 3,
+                "marker": "应",
+                "sentence_context": "水平方向合力与相应的加速度分别为",
+                "sentence_id": "T0005",
+                "side": "after",
+                "start": 174
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "cc831206e42db08c698cf9be083d552bd1f6b9a5d852de263bbf0bef44c717de"
+    }
+  ]
+}

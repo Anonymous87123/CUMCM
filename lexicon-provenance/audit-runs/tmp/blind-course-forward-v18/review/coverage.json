@@ -1,0 +1,208 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "coverage_basis": [
+    "CURRENT_SCANNER_HIGH_AUDIT_VIEW",
+    "CALLER_BOUND_SELECTED_SPANS",
+    "CALLER_DECLARED_CONFLICT_PAIRS"
+  ],
+  "coverage_claim_scope": "ENUMERATED_HIGH_AND_BOUND_DECLARATIONS_ONLY",
+  "coverage_completion_claim_allowed": true,
+  "coverage_limitations": [
+    "NO_COMPLETE_NATURAL_LANGUAGE_SEMANTIC_DISCOVERY",
+    "CONFLICT_INVENTORY_IS_CALLER_DECLARED_ONLY",
+    "KEEP_REASONS_ARE_NOT_EXTERNAL_QUALITY_CLEARANCE",
+    "SELF_CONSISTENCY_ONLY_WITHOUT_EXTERNAL_REQUEST_ANCHOR"
+  ],
+  "coverage_sha256": "911a0a4660421a5a897fcff392ea8ecb704e3b220eb25a9fe853bc440c039af3",
+  "declarations": {
+    "explicit_conflicts": [],
+    "lexical_keeps": [],
+    "selected_spans": [
+      {
+        "decision": "HUNK",
+        "end_byte": 101,
+        "hunk_id": "H001",
+        "reason": "连续阅读发现同句重复“会变小”，本次绑定为局部节奏改写。",
+        "selection_id": "S001",
+        "source_text": "会变小，但支持力也会减小，从而摩擦力",
+        "source_text_sha256": "589f8ac8f58358de6ac1f07ea9a3907ab4ddb1ea06aa3a262088dfad8c3ac676",
+        "start_byte": 47
+      },
+      {
+        "decision": "HUNK",
+        "end_byte": 418,
+        "hunk_id": "H002",
+        "reason": "该独立推进词仅充当公式字幕，本次绑定为删除句壳。",
+        "selection_id": "S002",
+        "source_text": "因此",
+        "source_text_sha256": "a07bd3196be556cf1da60a815f550697856ad03b04707a4f3a592d70c7de682e",
+        "start_byte": 412
+      },
+      {
+        "decision": "HUNK",
+        "end_byte": 485,
+        "hunk_id": "H003",
+        "reason": "与后续两个相邻中文 span 共同压缩使令式求极值表述。",
+        "selection_id": "S003",
+        "source_text": "令 ",
+        "source_text_sha256": "2495ba226d28146fd63da0c145957aa5715dcc0d67757d0d5d29e2b51eb7f617",
+        "start_byte": 481
+      },
+      {
+        "decision": "HUNK",
+        "end_byte": 503,
+        "hunk_id": "H004",
+        "reason": "绑定变量关系连接语，公式本身不进入改写范围。",
+        "selection_id": "S004",
+        "source_text": " 对 ",
+        "source_text_sha256": "8d2cc5a977a97bf3a4c0393148ed013392e17363f6972318b4dd9886166e038b",
+        "start_byte": 498
+      },
+      {
+        "decision": "HUNK",
+        "end_byte": 526,
+        "hunk_id": "H005",
+        "reason": "绑定求极值句尾中文，使其与前置动作自然衔接。",
+        "selection_id": "S005",
+        "source_text": " 取极值：",
+        "source_text_sha256": "0c5b2adfc77f5a6f0313f09f33e57a199d83478900d27d77ceeefa27c8d39cb0",
+        "start_byte": 513
+      },
+      {
+        "decision": "HUNK",
+        "end_byte": 609,
+        "hunk_id": "H006",
+        "reason": "该独立推进词不提供新增解释，本次绑定为删除句壳。",
+        "selection_id": "S006",
+        "source_text": "于是",
+        "source_text_sha256": "3617c85a661849c1dfe98bc959d0493f90edcff61c9da841f3f1d3a468ea2952",
+        "start_byte": 603
+      }
+    ],
+    "source_kind": "DOCUMENT"
+  },
+  "declarations_sha256": "354bcb9f12154044f833f0be80e302146e8caf78e0c28b3bf8dc0b0d4fd4d9ec",
+  "humanize_quality_claim_allowed": false,
+  "inventories": {
+    "explicit_conflicts": [],
+    "lexical_high": [],
+    "selected_spans": [
+      {
+        "decision": "HUNK",
+        "disposition": {
+          "decision": "REWRITE",
+          "hunk_id": "H001",
+          "reason": "连续阅读发现同句重复“会变小”，本次绑定为局部节奏改写。"
+        },
+        "end_byte": 101,
+        "hunk_id": "H001",
+        "reason": "连续阅读发现同句重复“会变小”，本次绑定为局部节奏改写。",
+        "selection_id": "S001",
+        "source_text": "会变小，但支持力也会减小，从而摩擦力",
+        "source_text_sha256": "589f8ac8f58358de6ac1f07ea9a3907ab4ddb1ea06aa3a262088dfad8c3ac676",
+        "start_byte": 47
+      },
+      {
+        "decision": "HUNK",
+        "disposition": {
+          "decision": "DELETE_STYLE_SHELL",
+          "hunk_id": "H002",
+          "reason": "该独立推进词仅充当公式字幕，本次绑定为删除句壳。"
+        },
+        "end_byte": 418,
+        "hunk_id": "H002",
+        "reason": "该独立推进词仅充当公式字幕，本次绑定为删除句壳。",
+        "selection_id": "S002",
+        "source_text": "因此",
+        "source_text_sha256": "a07bd3196be556cf1da60a815f550697856ad03b04707a4f3a592d70c7de682e",
+        "start_byte": 412
+      },
+      {
+        "decision": "HUNK",
+        "disposition": {
+          "decision": "REWRITE",
+          "hunk_id": "H003",
+          "reason": "与后续两个相邻中文 span 共同压缩使令式求极值表述。"
+        },
+        "end_byte": 485,
+        "hunk_id": "H003",
+        "reason": "与后续两个相邻中文 span 共同压缩使令式求极值表述。",
+        "selection_id": "S003",
+        "source_text": "令 ",
+        "source_text_sha256": "2495ba226d28146fd63da0c145957aa5715dcc0d67757d0d5d29e2b51eb7f617",
+        "start_byte": 481
+      },
+      {
+        "decision": "HUNK",
+        "disposition": {
+          "decision": "REWRITE",
+          "hunk_id": "H004",
+          "reason": "绑定变量关系连接语，公式本身不进入改写范围。"
+        },
+        "end_byte": 503,
+        "hunk_id": "H004",
+        "reason": "绑定变量关系连接语，公式本身不进入改写范围。",
+        "selection_id": "S004",
+        "source_text": " 对 ",
+        "source_text_sha256": "8d2cc5a977a97bf3a4c0393148ed013392e17363f6972318b4dd9886166e038b",
+        "start_byte": 498
+      },
+      {
+        "decision": "HUNK",
+        "disposition": {
+          "decision": "REWRITE",
+          "hunk_id": "H005",
+          "reason": "绑定求极值句尾中文，使其与前置动作自然衔接。"
+        },
+        "end_byte": 526,
+        "hunk_id": "H005",
+        "reason": "绑定求极值句尾中文，使其与前置动作自然衔接。",
+        "selection_id": "S005",
+        "source_text": " 取极值：",
+        "source_text_sha256": "0c5b2adfc77f5a6f0313f09f33e57a199d83478900d27d77ceeefa27c8d39cb0",
+        "start_byte": 513
+      },
+      {
+        "decision": "HUNK",
+        "disposition": {
+          "decision": "DELETE_STYLE_SHELL",
+          "hunk_id": "H006",
+          "reason": "该独立推进词不提供新增解释，本次绑定为删除句壳。"
+        },
+        "end_byte": 609,
+        "hunk_id": "H006",
+        "reason": "该独立推进词不提供新增解释，本次绑定为删除句壳。",
+        "selection_id": "S006",
+        "source_text": "于是",
+        "source_text_sha256": "3617c85a661849c1dfe98bc959d0493f90edcff61c9da841f3f1d3a468ea2952",
+        "start_byte": 603
+      }
+    ]
+  },
+  "mechanical_coverage_status": "PASS",
+  "policy_hashes": {
+    "coverage_builder_sha256": "d878de837f25a91c171a6c19e71cae83cdd5e440e574238a18d0662f00013001",
+    "lexicon_sha256": "67ecc7acdee15e71b7fc2f321fd7e34d2e48c6f60aa1d3d97c3faaf86b75da20",
+    "runtime_contract_sha256": "a5f10e87196bf5517f8da41649b663c7a3b6b070253c8fdb3bfa6aa8168c6fd6",
+    "scanner_sha256": "9086c9662af4b13bf3e89083582996ceb27061fe095ab13da412251ce36902e0"
+  },
+  "schema_version": "humanize-short-patch-coverage/v2",
+  "semantic_completeness_claim_allowed": false,
+  "source": {
+    "document_format": "tex",
+    "encoding": "utf-8",
+    "offset_unit": "UTF8_BYTES",
+    "scan_scene": "AUTO",
+    "scene": "COURSE",
+    "sha256": "b28dc286b43b7b581f95482d31d53be57a1d0cf743a0e890f58b1f3121fe934b",
+    "size_bytes": 632,
+    "source_kind": "DOCUMENT"
+  },
+  "summary": {
+    "explicit_conflicts_total": 0,
+    "lexical_candidate_total": 0,
+    "lexical_disposition_counts": {},
+    "lexical_high_total": 0,
+    "selected_spans_total": 6
+  }
+}

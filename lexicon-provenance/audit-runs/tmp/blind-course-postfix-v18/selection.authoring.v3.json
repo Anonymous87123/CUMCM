@@ -1,0 +1,493 @@
+{
+  "authoring_integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+  "completion_claim_allowed": false,
+  "configuration": {
+    "intensity": "BALANCED",
+    "mode": "REWRITE",
+    "protected_terms": [],
+    "requested_output": "PATCH",
+    "requested_scene": "COURSE",
+    "resolved_scene": "COURSE",
+    "source_kind": "DOCUMENT",
+    "span_suggestion_mode": "CLAUSE_AND_SENTENCE"
+  },
+  "explicit_conflicts": [],
+  "focus_spans": [
+    {
+      "end_byte": 485,
+      "focus_id": "F001",
+      "source_text": "令 ",
+      "source_text_sha256": "2495ba226d28146fd63da0c145957aa5715dcc0d67757d0d5d29e2b51eb7f617",
+      "start_byte": 481
+    },
+    {
+      "end_byte": 503,
+      "focus_id": "F002",
+      "source_text": " 对 ",
+      "source_text_sha256": "8d2cc5a977a97bf3a4c0393148ed013392e17363f6972318b4dd9886166e038b",
+      "start_byte": 498
+    },
+    {
+      "end_byte": 526,
+      "focus_id": "F003",
+      "source_text": " 取极值：",
+      "source_text_sha256": "0c5b2adfc77f5a6f0313f09f33e57a199d83478900d27d77ceeefa27c8d39cb0",
+      "start_byte": 513
+    },
+    {
+      "end_byte": 337,
+      "focus_id": "F004",
+      "source_text": "\n",
+      "source_text_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "start_byte": 336
+    },
+    {
+      "end_byte": 419,
+      "focus_id": "F005",
+      "source_text": "\n",
+      "source_text_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "start_byte": 418
+    },
+    {
+      "end_byte": 527,
+      "focus_id": "F006",
+      "source_text": "\n",
+      "source_text_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "start_byte": 526
+    },
+    {
+      "end_byte": 610,
+      "focus_id": "F007",
+      "source_text": "\n",
+      "source_text_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "start_byte": 609
+    }
+  ],
+  "high_findings": [],
+  "humanize_quality_claim_allowed": false,
+  "hunks": [
+    {
+      "hunk_id": "H001",
+      "span_id": "A002",
+      "decision": "DELETE_STYLE_SHELL",
+      "replacement": "",
+      "reason": "取消对象字幕与其公式之间的独占换行，保留原有空格和全部文字。"
+    },
+    {
+      "hunk_id": "H002",
+      "span_id": "A004",
+      "decision": "DELETE_STYLE_SHELL",
+      "replacement": "",
+      "reason": "取消因果字幕与加速度公式之间的独占换行，因果 marker 原样保留。"
+    },
+    {
+      "hunk_id": "H003",
+      "span_id": "A005",
+      "decision": "DELETE_STYLE_SHELL",
+      "replacement": "",
+      "reason": "删除命令式句首，极值动作仍由同一行其余文字和公式完整表达。"
+    },
+    {
+      "hunk_id": "H004",
+      "span_id": "A006",
+      "decision": "REWRITE",
+      "replacement": " 关于 ",
+      "reason": "把命令式搭配改成函数关于变量的直接说明，不改变两个数学对象。"
+    },
+    {
+      "hunk_id": "H005",
+      "span_id": "A007",
+      "decision": "REWRITE",
+      "replacement": " 的极值条件为：",
+      "reason": "让后接导数方程直接承担极值条件，保留原有推导职责。"
+    },
+    {
+      "hunk_id": "H006",
+      "span_id": "A008",
+      "decision": "DELETE_STYLE_SHELL",
+      "replacement": "",
+      "reason": "取消极值条件与导数方程之间的独占换行，公式源码保持不变。"
+    },
+    {
+      "hunk_id": "H007",
+      "span_id": "A010",
+      "decision": "DELETE_STYLE_SHELL",
+      "replacement": "",
+      "reason": "取消推论字幕与末式之间的独占换行，推导 marker 原样保留。"
+    }
+  ],
+  "inventory_sha256": "5a8520c21ec0e55145c9d6b9e464678b254f44ecbf4b733e5a98f6d7ebbe4624",
+  "lexical_resolutions": [],
+  "policy_hashes": {
+    "authoring_tool_sha256": "f3514b25630b8632adf22810731ce6ce591036f0f050925a424b9eeccdb21ac8",
+    "coverage_builder_sha256": "d878de837f25a91c171a6c19e71cae83cdd5e440e574238a18d0662f00013001",
+    "lexicon_sha256": "0fa2e65f2a68ec420bd21bf19da39e139fad376b9576218f38a405942ee4d810",
+    "runtime_contract_sha256": "a5f10e87196bf5517f8da41649b663c7a3b6b070253c8fdb3bfa6aa8168c6fd6",
+    "scanner_sha256": "9086c9662af4b13bf3e89083582996ceb27061fe095ab13da412251ce36902e0",
+    "scene_router_sha256": "b9129fd04021394a8e474233e6c9ed95ef98f7a8afa48847619f1ab227f6d1ce",
+    "scene_routing_policy_sha256": "fa460a93142173f1a89f343f5aeb771db0a19933c4b04785c823ea7181e12e81"
+  },
+  "scene_route": {
+    "ambiguous_scenes": [],
+    "authoring_allowed": true,
+    "document_format": "tex",
+    "evidence": [],
+    "margin": 0,
+    "policy_revision": 3,
+    "policy_schema_version": "humanize-scene-routing-policy/v1",
+    "policy_sha256": "fa460a93142173f1a89f343f5aeb771db0a19933c4b04785c823ea7181e12e81",
+    "reason_code": "USER_EXPLICIT_SCENE",
+    "requested_scene": "COURSE",
+    "resolved_scene": "COURSE",
+    "route_record_sha256": "f6e2dda820ec6c9947292914e65a1902013c8934a93284f89d8bd69f206a0226",
+    "router_sha256": "b9129fd04021394a8e474233e6c9ed95ef98f7a8afa48847619f1ab227f6d1ce",
+    "routing_input_scope": "FULL_SOURCE_PROTECTED_CONTENT_MASKED",
+    "routing_input_sha256": "5df6b5d37a1053d5bfcc5ec6e14d4f8532bc65c7fba346c78d6f2c00dfaaddbc",
+    "schema_version": "humanize-short-patch-scene-route/v1",
+    "scores": {
+      "COURSE": 0,
+      "MODELING": 0,
+      "RESEARCH": 0
+    },
+    "source_sha256": "b28dc286b43b7b581f95482d31d53be57a1d0cf743a0e890f58b1f3121fe934b",
+    "source_size_bytes": 632,
+    "status": "EXPLICIT",
+    "top_score": 0
+  },
+  "schema_version": "humanize-short-patch-selection-authoring/v4",
+  "selected_spans": [
+    {
+      "selection_id": "S001",
+      "span_id": "A002",
+      "decision": "HUNK",
+      "hunk_id": "H001",
+      "reason": "连续的独占字幕与公式交替形成机械卡片节奏，本次合并为同一物理行。"
+    },
+    {
+      "selection_id": "S002",
+      "span_id": "A004",
+      "decision": "HUNK",
+      "hunk_id": "H002",
+      "reason": "连续的独占字幕与公式交替形成机械卡片节奏，本次合并为同一物理行。"
+    },
+    {
+      "selection_id": "S003",
+      "span_id": "A005",
+      "decision": "HUNK",
+      "hunk_id": "H003",
+      "reason": "命令式句首不是独立命题，删除后数学对象与极值条件仍逐字保留。"
+    },
+    {
+      "selection_id": "S004",
+      "span_id": "A006",
+      "decision": "HUNK",
+      "hunk_id": "H004",
+      "reason": "调整非保护中文搭配，使函数与变量关系直接进入主句。"
+    },
+    {
+      "selection_id": "S005",
+      "span_id": "A007",
+      "decision": "HUNK",
+      "hunk_id": "H005",
+      "reason": "把操作命令改成极值条件说明，保留后接导数方程的职责。"
+    },
+    {
+      "selection_id": "S006",
+      "span_id": "A008",
+      "decision": "HUNK",
+      "hunk_id": "H006",
+      "reason": "取消字幕卡片换行，同时保留极值条件与公式之间的直接关系。"
+    },
+    {
+      "selection_id": "S007",
+      "span_id": "A010",
+      "decision": "HUNK",
+      "hunk_id": "H007",
+      "reason": "取消字幕卡片换行，同时保留于是这一原有推导关系。"
+    }
+  ],
+  "source": {
+    "document_format": "tex",
+    "encoding": "utf-8",
+    "offset_unit": "UTF8_BYTES",
+    "scan_scene": "AUTO",
+    "sha256": "b28dc286b43b7b581f95482d31d53be57a1d0cf743a0e890f58b1f3121fe934b",
+    "size_bytes": 632
+  },
+  "span_suggestion_policy": {
+    "candidate_roles": [
+      "CANDIDATE"
+    ],
+    "decision_authority": false,
+    "max_clause_bytes": 600,
+    "max_paragraph_bytes": 4000,
+    "max_sentence_bytes": 1200,
+    "mode": "CLAUSE_AND_SENTENCE",
+    "protected_overlap_policy": "SUPPRESS_ANY_OVERLAP",
+    "schema_version": "humanize-short-patch-span-suggestion/v1",
+    "trim_policy": "EDGE_WHITESPACE_ONLY_PRESERVE_INTERNAL_BYTES"
+  },
+  "span_suggestions": [
+    {
+      "boundary_variant": "CORE",
+      "end_byte": 336,
+      "finding_ids": [],
+      "kind": "CLAUSE",
+      "reason_codes": [
+        "CALLER_DECISION_REQUIRED",
+        "ADVISORY_NON_HIGH_SIGNAL:medium:LEX-COURSE-FORMULA-CAPTION-01"
+      ],
+      "source_text_sha256": "d3623bf3d254b34eb969f833c316e24a867f01d42c24c3b083040c56327137b0",
+      "span_id": "A001",
+      "start_byte": 315,
+      "status": "AVAILABLE",
+      "suggestion_id": "SG001"
+    },
+    {
+      "boundary_variant": "EXACT",
+      "end_byte": 337,
+      "finding_ids": [],
+      "kind": "FOCUS",
+      "reason_codes": [
+        "CALLER_DIAGNOSIS_REQUIRED",
+        "FOCUS_ID:F004"
+      ],
+      "source_text_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "span_id": "A002",
+      "start_byte": 336,
+      "status": "AVAILABLE",
+      "suggestion_id": "SG002"
+    },
+    {
+      "boundary_variant": "CORE",
+      "end_byte": 418,
+      "finding_ids": [],
+      "kind": "CLAUSE",
+      "reason_codes": [
+        "CALLER_DECISION_REQUIRED",
+        "ADVISORY_NON_HIGH_SIGNAL:medium:LEX-COURSE-FORMULA-CAPTION-01"
+      ],
+      "source_text_sha256": "a07bd3196be556cf1da60a815f550697856ad03b04707a4f3a592d70c7de682e",
+      "span_id": "A003",
+      "start_byte": 412,
+      "status": "AVAILABLE",
+      "suggestion_id": "SG003"
+    },
+    {
+      "boundary_variant": "EXACT",
+      "end_byte": 419,
+      "finding_ids": [],
+      "kind": "FOCUS",
+      "reason_codes": [
+        "CALLER_DIAGNOSIS_REQUIRED",
+        "FOCUS_ID:F005"
+      ],
+      "source_text_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "span_id": "A004",
+      "start_byte": 418,
+      "status": "AVAILABLE",
+      "suggestion_id": "SG004"
+    },
+    {
+      "boundary_variant": "CORE",
+      "end_byte": 523,
+      "finding_ids": [],
+      "kind": "CLAUSE",
+      "reason_codes": [
+        "FINDING_NOT_FULLY_COVERED",
+        "PROTECTED_SPAN_OVERLAP",
+        "TEX_CONTROL_SEQUENCE_OVERLAP",
+        "ADVISORY_NON_HIGH_SIGNAL:medium:LEX-COURSE-FORMULA-CAPTION-01"
+      ],
+      "source_text_sha256": "444561522fd3e90a2a022c7485be10346614de6926ba27389344a81c1096cec4",
+      "span_id": null,
+      "start_byte": 481,
+      "status": "SUPPRESSED",
+      "suggestion_id": "SG005"
+    },
+    {
+      "boundary_variant": "RIGHT_DELIMITER",
+      "end_byte": 526,
+      "finding_ids": [],
+      "kind": "CLAUSE",
+      "reason_codes": [
+        "PROTECTED_SPAN_OVERLAP",
+        "TEX_CONTROL_SEQUENCE_OVERLAP",
+        "ADVISORY_NON_HIGH_SIGNAL:medium:LEX-COURSE-FORMULA-CAPTION-01"
+      ],
+      "source_text_sha256": "735759f3fa18ce75c76fa44c5d10a1bf7ac52150a2517d92edbb3b597bc872b0",
+      "span_id": null,
+      "start_byte": 481,
+      "status": "SUPPRESSED",
+      "suggestion_id": "SG006"
+    },
+    {
+      "boundary_variant": "FULL",
+      "end_byte": 526,
+      "finding_ids": [],
+      "kind": "SENTENCE",
+      "reason_codes": [
+        "PROTECTED_SPAN_OVERLAP",
+        "TEX_CONTROL_SEQUENCE_OVERLAP",
+        "ADVISORY_NON_HIGH_SIGNAL:medium:LEX-COURSE-FORMULA-CAPTION-01"
+      ],
+      "source_text_sha256": "735759f3fa18ce75c76fa44c5d10a1bf7ac52150a2517d92edbb3b597bc872b0",
+      "span_id": null,
+      "start_byte": 481,
+      "status": "SUPPRESSED",
+      "suggestion_id": "SG007"
+    },
+    {
+      "boundary_variant": "EXACT",
+      "end_byte": 485,
+      "finding_ids": [],
+      "kind": "FOCUS",
+      "reason_codes": [
+        "CALLER_DIAGNOSIS_REQUIRED",
+        "FOCUS_ID:F001"
+      ],
+      "source_text_sha256": "2495ba226d28146fd63da0c145957aa5715dcc0d67757d0d5d29e2b51eb7f617",
+      "span_id": "A005",
+      "start_byte": 481,
+      "status": "AVAILABLE",
+      "suggestion_id": "SG008"
+    },
+    {
+      "boundary_variant": "EXACT",
+      "end_byte": 503,
+      "finding_ids": [],
+      "kind": "FOCUS",
+      "reason_codes": [
+        "CALLER_DIAGNOSIS_REQUIRED",
+        "FOCUS_ID:F002"
+      ],
+      "source_text_sha256": "8d2cc5a977a97bf3a4c0393148ed013392e17363f6972318b4dd9886166e038b",
+      "span_id": "A006",
+      "start_byte": 498,
+      "status": "AVAILABLE",
+      "suggestion_id": "SG009"
+    },
+    {
+      "boundary_variant": "EXACT",
+      "end_byte": 526,
+      "finding_ids": [],
+      "kind": "FOCUS",
+      "reason_codes": [
+        "CALLER_DIAGNOSIS_REQUIRED",
+        "FOCUS_ID:F003"
+      ],
+      "source_text_sha256": "0c5b2adfc77f5a6f0313f09f33e57a199d83478900d27d77ceeefa27c8d39cb0",
+      "span_id": "A007",
+      "start_byte": 513,
+      "status": "AVAILABLE",
+      "suggestion_id": "SG010"
+    },
+    {
+      "boundary_variant": "EXACT",
+      "end_byte": 527,
+      "finding_ids": [],
+      "kind": "FOCUS",
+      "reason_codes": [
+        "CALLER_DIAGNOSIS_REQUIRED",
+        "FOCUS_ID:F006"
+      ],
+      "source_text_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "span_id": "A008",
+      "start_byte": 526,
+      "status": "AVAILABLE",
+      "suggestion_id": "SG011"
+    },
+    {
+      "boundary_variant": "CORE",
+      "end_byte": 609,
+      "finding_ids": [],
+      "kind": "CLAUSE",
+      "reason_codes": [
+        "CALLER_DECISION_REQUIRED",
+        "ADVISORY_NON_HIGH_SIGNAL:medium:LEX-COURSE-FORMULA-CAPTION-01"
+      ],
+      "source_text_sha256": "3617c85a661849c1dfe98bc959d0493f90edcff61c9da841f3f1d3a468ea2952",
+      "span_id": "A009",
+      "start_byte": 603,
+      "status": "AVAILABLE",
+      "suggestion_id": "SG012"
+    },
+    {
+      "boundary_variant": "EXACT",
+      "end_byte": 610,
+      "finding_ids": [],
+      "kind": "FOCUS",
+      "reason_codes": [
+        "CALLER_DIAGNOSIS_REQUIRED",
+        "FOCUS_ID:F007"
+      ],
+      "source_text_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+      "span_id": "A010",
+      "start_byte": 609,
+      "status": "AVAILABLE",
+      "suggestion_id": "SG013"
+    }
+  ],
+  "spans": [
+    {
+      "finding_ids": [],
+      "source_text": "水平方向合力为",
+      "span_id": "A001",
+      "start_byte": 315
+    },
+    {
+      "finding_ids": [],
+      "source_text": "\n",
+      "span_id": "A002",
+      "start_byte": 336
+    },
+    {
+      "finding_ids": [],
+      "source_text": "因此",
+      "span_id": "A003",
+      "start_byte": 412
+    },
+    {
+      "finding_ids": [],
+      "source_text": "\n",
+      "span_id": "A004",
+      "start_byte": 418
+    },
+    {
+      "finding_ids": [],
+      "source_text": "令 ",
+      "span_id": "A005",
+      "start_byte": 481
+    },
+    {
+      "finding_ids": [],
+      "source_text": " 对 ",
+      "span_id": "A006",
+      "start_byte": 498
+    },
+    {
+      "finding_ids": [],
+      "source_text": " 取极值：",
+      "span_id": "A007",
+      "start_byte": 513
+    },
+    {
+      "finding_ids": [],
+      "source_text": "\n",
+      "span_id": "A008",
+      "start_byte": 526
+    },
+    {
+      "finding_ids": [],
+      "source_text": "于是",
+      "span_id": "A009",
+      "start_byte": 603
+    },
+    {
+      "finding_ids": [],
+      "source_text": "\n",
+      "span_id": "A010",
+      "start_byte": 609
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "e02a531978ff9fd29f422edad7b942ca3212b8dc6ae68cbf637c844236bb804a",
+    "before_sha256": "e02a531978ff9fd29f422edad7b942ca3212b8dc6ae68cbf637c844236bb804a"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v3",
+  "bundle_sha256": "732ab2f0c76ae41878ae5a36e8e24d2dc92d9b4e71454189282de74bda29f000",
+  "chunk_binding_sha256": "a7449c2a33c397a43287324ad47c21d21e6ffba2e58b3d17ced9dd7fe3658329",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-aa5d01e7cb66.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "cbc29cd1d131ced4d94f8c6982b61f75d8d1ffee0481d5db60123617b2ecfcfb",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "3ab69e397603706613707cf08e197563c2d6e99bb4bfa3a5da8fe57c98c852cb",
+        "start_line": 2
+      }
+    ],
+    "reason": "该定义段落保留测量对象、适用范围和记录条件"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "73b05785ba4f3365b9c78d6c54fc9987e766dff6a8a9e4d5a74af5a801dac516",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-aa5d01e7cb66"
+}

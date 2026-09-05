@@ -1,0 +1,32 @@
+{
+  "bundle_sha256": "de1f2f538dc47098f650a8b3404b620862b424349a9dbaa71c8425e5ac620835",
+  "completion_claim_allowed": false,
+  "effective_output": "PATCH",
+  "hunks": [
+    {
+      "decision": "REWRITE",
+      "end_byte": 27,
+      "hunk_id": "H001",
+      "reason": "引入格式敏感的百分号以测试格式绑定。",
+      "replacement": "这里保留原有结论。% 新注释",
+      "replacement_sha256": "b728e8092e3ad4aafec334fc643787452896b62e6e413da4e87cc6f6bc480092",
+      "source_text": "这里保留原有结论。",
+      "source_text_sha256": "28261463600ecfab747e4e09755dc289c26825bf175799ddff0e7c4ef75c5dd9",
+      "start_byte": 0
+    }
+  ],
+  "intensity": "LIGHT",
+  "mode": "REWRITE",
+  "offset_unit": "UTF8_BYTES",
+  "patch_hunks_source_partition": "NON_OVERLAPPING",
+  "protected_terms": [],
+  "requested_output": "PATCH",
+  "scene": "GENERAL",
+  "schema_version": "humanize-short-patch/v1",
+  "selection_spec_sha256": "ceed53e479c3313338bac0dc9ac5d88c93f09e96c519e0095122a37a7d4a0e34",
+  "semantic_judgment": "NOT_EVALUATED",
+  "source_encoding": "utf-8",
+  "source_sha256": "74c0c69223a5c22fe07fa542fccdc1121f20fb4562ae14858c78aa5995186e43",
+  "source_size_bytes": 28,
+  "unlisted_source_policy": "COPY_EXACT"
+}

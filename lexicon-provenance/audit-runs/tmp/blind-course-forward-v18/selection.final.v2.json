@@ -1,0 +1,113 @@
+{
+  "coverage": {
+    "explicit_conflicts": [],
+    "lexical_keeps": [],
+    "selected_spans": [
+      {
+        "decision": "HUNK",
+        "hunk_id": "H001",
+        "reason": "连续阅读发现同句重复“会变小”，本次绑定为局部节奏改写。",
+        "selection_id": "S001",
+        "source_text": "会变小，但支持力也会减小，从而摩擦力",
+        "start_byte": 47
+      },
+      {
+        "decision": "HUNK",
+        "hunk_id": "H002",
+        "reason": "该独立推进词仅充当公式字幕，整行删除以免留下 TeX 空段。",
+        "selection_id": "S002",
+        "source_text": "因此\n",
+        "start_byte": 412
+      },
+      {
+        "decision": "HUNK",
+        "hunk_id": "H003",
+        "reason": "与后续两个相邻中文 span 共同压缩使令式求极值表述。",
+        "selection_id": "S003",
+        "source_text": "令 ",
+        "start_byte": 481
+      },
+      {
+        "decision": "HUNK",
+        "hunk_id": "H004",
+        "reason": "绑定变量关系连接语，公式本身不进入改写范围。",
+        "selection_id": "S004",
+        "source_text": " 对 ",
+        "start_byte": 498
+      },
+      {
+        "decision": "HUNK",
+        "hunk_id": "H005",
+        "reason": "绑定求极值句尾中文，使其与前置动作自然衔接。",
+        "selection_id": "S005",
+        "source_text": " 取极值：",
+        "start_byte": 513
+      },
+      {
+        "decision": "HUNK",
+        "hunk_id": "H006",
+        "reason": "该独立推进词不提供新增解释，整行删除以免留下 TeX 空段。",
+        "selection_id": "S006",
+        "source_text": "于是\n",
+        "start_byte": 603
+      }
+    ],
+    "source_kind": "DOCUMENT"
+  },
+  "hunks": [
+    {
+      "decision": "REWRITE",
+      "hunk_id": "H001",
+      "reason": "压缩同句内重复的“会变小”，让两种变化关系直接承接。",
+      "replacement": "变小；支持力随之减小，摩擦力",
+      "source_text": "会变小，但支持力也会减小，从而摩擦力",
+      "start_byte": 47
+    },
+    {
+      "decision": "DELETE_STYLE_SHELL",
+      "hunk_id": "H002",
+      "reason": "前后公式已直接承接，连同该字幕行换行删除以避免产生空段。",
+      "replacement": "",
+      "source_text": "因此\n",
+      "start_byte": 412
+    },
+    {
+      "decision": "REWRITE",
+      "hunk_id": "H003",
+      "reason": "把“令……取极值”的主持式写法改为直接给出求解动作。",
+      "replacement": "求 ",
+      "source_text": "令 ",
+      "start_byte": 481
+    },
+    {
+      "decision": "REWRITE",
+      "hunk_id": "H004",
+      "reason": "与同句的“求……的极值”组成自然的变量关系表述。",
+      "replacement": " 关于 ",
+      "source_text": " 对 ",
+      "start_byte": 498
+    },
+    {
+      "decision": "REWRITE",
+      "hunk_id": "H005",
+      "reason": "保留求极值动作，同时去掉重复的使令结构。",
+      "replacement": " 的极值：",
+      "source_text": " 取极值：",
+      "start_byte": 513
+    },
+    {
+      "decision": "DELETE_STYLE_SHELL",
+      "hunk_id": "H006",
+      "reason": "结论公式紧接极值条件，连同字幕行换行删除以避免产生空段。",
+      "replacement": "",
+      "source_text": "于是\n",
+      "start_byte": 603
+    }
+  ],
+  "intensity": "BALANCED",
+  "mode": "REWRITE",
+  "protected_terms": [],
+  "requested_output": "PATCH",
+  "scene": "COURSE",
+  "schema_version": "humanize-short-patch-selection/v2"
+}

@@ -1,0 +1,236 @@
+﻿{
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "evidence": {
+    "after_path": "D:\\code LateX\\elegantbook\\physics\\tests\\fixtures\\humanize_usability_red_blue\\research_final_body.md",
+    "after_sha256": "3e12888ad27cf3b29253f661c50ea6d8517a734128633aac4fb1c809c6d75e61",
+    "before_path": "D:\\code LateX\\elegantbook\\physics\\tests\\fixtures\\humanize_usability_red_blue\\research_before.md",
+    "before_sha256": "1663417697e6a238437c88dc43dabd6ee880910a8c581b42b2e6538d3efbd3d5",
+    "checker_executed": true,
+    "document_format": "markdown",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    }
+  },
+  "exit_code": 2,
+  "introduced_findings": [
+    {
+      "action": "REVIEW",
+      "column": 86,
+      "context": "及更深层的机制问题。不过，这并不意味着可以排除仪器漂移或样品老化的影响。正如原始记录所写：“46 ℃ 附近出现短暂平台，重复测量后仍可见。”综上，本研究深刻揭示了该现象的内在机制，并为后续研究奠定了坚实基础。",
+      "count": 1,
+      "file": "tests\\fixtures\\humanize_usability_red_blue\\research_final_body.md",
+      "finding_hash": "0be7d386c6cbfc72fadc14fce7fb3f81220887838e14562cb7964ceac4b4703a",
+      "line": 3,
+      "matched": "综上，",
+      "rationale": "这些词可用于真正的总括，但不应成为每节、每题和每段的自动封口。",
+      "severity": "medium",
+      "signal_id": "LEX-CONCLUDE-01"
+    }
+  ],
+  "invariants": {
+    "errors": [],
+    "evidence": {
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      }
+    },
+    "hard_failure": false,
+    "status": "pass",
+    "summary": {
+      "errors": 0,
+      "warnings": 4
+    },
+    "warnings": [
+      {
+        "code": "SPEECH_ACT_NEGATION_CHANGED",
+        "details": {
+          "after": {
+            "不": 2,
+            "不能": 1,
+            "并不意味着": 1,
+            "并非": 1
+          },
+          "before": {
+            "不": 3,
+            "不能": 1,
+            "并不意味着": 1
+          }
+        },
+        "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+        "severity": "warning"
+      },
+      {
+        "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+        "details": {
+          "after": {
+            "可": 1,
+            "可以": 1,
+            "可能": 2
+          },
+          "before": {
+            "可": 1,
+            "可能": 2,
+            "或许": 1
+          }
+        },
+        "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+        "severity": "warning"
+      },
+      {
+        "code": "SPEECH_ACT_DEFINITION_NAMING_CHANGED",
+        "details": {
+          "after": {
+            "定义为": 1,
+            "意味着": 1
+          },
+          "before": {
+            "定义为": 1,
+            "意味着": 2
+          }
+        },
+        "message": "Speech-act markers changed in category 'definition_naming'; review semantic force manually.",
+        "severity": "warning"
+      },
+      {
+        "code": "SPEECH_ACT_REPORTING_OBSERVATION_CHANGED",
+        "details": {
+          "after": {
+            "结果显示": 1
+          },
+          "before": {
+            "结果表明": 1
+          }
+        },
+        "message": "Speech-act markers changed in category 'reporting_observation'; review semantic force manually.",
+        "severity": "warning"
+      }
+    ]
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 7,
+    "before_candidates": 11,
+    "introduced_candidates": 1,
+    "unexplained_high_candidates": 3
+  },
+  "review_reasons": [
+    "speech_act_warning",
+    "unexplained_high_severity_signal",
+    "introduced_style_signal"
+  ],
+  "scene": "RESEARCH",
+  "status": "REVIEW",
+  "unaccepted_warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不": 2,
+          "不能": 1,
+          "并不意味着": 1,
+          "并非": 1
+        },
+        "before": {
+          "不": 3,
+          "不能": 1,
+          "并不意味着": 1
+        }
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning"
+    },
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "可": 1,
+          "可以": 1,
+          "可能": 2
+        },
+        "before": {
+          "可": 1,
+          "可能": 2,
+          "或许": 1
+        }
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning"
+    },
+    {
+      "code": "SPEECH_ACT_DEFINITION_NAMING_CHANGED",
+      "details": {
+        "after": {
+          "定义为": 1,
+          "意味着": 1
+        },
+        "before": {
+          "定义为": 1,
+          "意味着": 2
+        }
+      },
+      "message": "Speech-act markers changed in category 'definition_naming'; review semantic force manually.",
+      "severity": "warning"
+    },
+    {
+      "code": "SPEECH_ACT_REPORTING_OBSERVATION_CHANGED",
+      "details": {
+        "after": {
+          "结果显示": 1
+        },
+        "before": {
+          "结果表明": 1
+        }
+      },
+      "message": "Speech-act markers changed in category 'reporting_observation'; review semantic force manually.",
+      "severity": "warning"
+    }
+  ],
+  "unexplained_high_findings": [
+    {
+      "action": "REWRITE",
+      "column": 116,
+      "context": "超过 0.15 的温度范围。结果显示，在 40 ℃ 至 46 ℃ 范围内，两条曲线的最大差值为 0.23；其余区间的差值均不超过 0.08。值得注意的是，这一结果在一定程度上可能暗示界面重排，但现有数据尚不能证明该过程是唯一原因。 这并非简单的测量误差问题，而涉及更深层的机制问题。不过，这",
+      "count": 1,
+      "file": "tests\\fixtures\\humanize_usability_red_blue\\research_final_body.md",
+      "finding_hash": "dc81a4e44b73b36e7ce9e02c62b4c6d66a91c2dfd2b4c18b811164fbefbc7239",
+      "line": 1,
+      "matched": "值得注意的是",
+      "rationale": "重点应由句位、具体名词和篇幅体现，而不是由统一提示壳宣布。",
+      "severity": "high",
+      "signal_id": "LEX-EMPH-01"
+    },
+    {
+      "action": "REWRITE",
+      "column": 92,
+      "context": "制问题。不过，这并不意味着可以排除仪器漂移或样品老化的影响。正如原始记录所写：“46 ℃ 附近出现短暂平台，重复测量后仍可见。”综上，本研究深刻揭示了该现象的内在机制，并为后续研究奠定了坚实基础。",
+      "count": 1,
+      "file": "tests\\fixtures\\humanize_usability_red_blue\\research_final_body.md",
+      "finding_hash": "6f8f3801967b238cbc7b1015e6488d740b39209ab398bb67d6ba2876f73be342",
+      "line": 3,
+      "matched": "深刻揭示",
+      "rationale": "抽象价值判断和创新宣告常替代具体变化，应改回对象、动作或差异。",
+      "severity": "high",
+      "signal_id": "LEX-MARKET-01"
+    },
+    {
+      "action": "DELETE",
+      "column": 107,
+      "context": "排除仪器漂移或样品老化的影响。正如原始记录所写：“46 ℃ 附近出现短暂平台，重复测量后仍可见。”综上，本研究深刻揭示了该现象的内在机制，并为后续研究奠定了坚实基础。",
+      "count": 1,
+      "file": "tests\\fixtures\\humanize_usability_red_blue\\research_final_body.md",
+      "finding_hash": "1c7a992cc35e147ed28ec6cc792d0920fd0020353ee45b8cde9396d2b19330e7",
+      "line": 3,
+      "matched": "为后续研究奠定了坚实基础",
+      "rationale": "章节关系或未来任务通常由内容自然承接，不需要在段尾反复验收、预告或把原有观察包装成后续工作的线索。",
+      "severity": "high",
+      "signal_id": "LEX-FOUNDATION-01"
+    }
+  ]
+}

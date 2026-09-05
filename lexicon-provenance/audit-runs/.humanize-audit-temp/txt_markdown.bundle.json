@@ -1,0 +1,89 @@
+{
+  "bundle_sha256": "9fa8ae04dbeaca5140c10dcb060e8e6452d42e7e77aea602fea637e42e7a86db",
+  "completion_claim_allowed": false,
+  "coverage": {
+    "academic_correctness": "NOT_EVALUATED",
+    "coverage_basis": [
+      "CURRENT_SCANNER_HIGH_AUDIT_VIEW",
+      "CALLER_BOUND_SELECTED_SPANS",
+      "CALLER_DECLARED_CONFLICT_PAIRS"
+    ],
+    "coverage_claim_scope": "ENUMERATED_HIGH_AND_BOUND_DECLARATIONS_ONLY",
+    "coverage_completion_claim_allowed": true,
+    "coverage_limitations": [
+      "NO_COMPLETE_NATURAL_LANGUAGE_SEMANTIC_DISCOVERY",
+      "CONFLICT_INVENTORY_IS_CALLER_DECLARED_ONLY",
+      "KEEP_REASONS_ARE_NOT_EXTERNAL_QUALITY_CLEARANCE",
+      "SELF_CONSISTENCY_ONLY_WITHOUT_EXTERNAL_REQUEST_ANCHOR"
+    ],
+    "coverage_sha256": "59c62341549a65596281257e85f417b0639c653193488628cc3afc64009921ba",
+    "declarations": {
+      "explicit_conflicts": [],
+      "lexical_keeps": [],
+      "selected_spans": [],
+      "source_kind": "DOCUMENT"
+    },
+    "declarations_sha256": "ac7a98ae8188e3cdf772044a3bc76fa251a3e735f7c7b3c6e5a0a6b00b3f31d9",
+    "humanize_quality_claim_allowed": false,
+    "inventories": {
+      "explicit_conflicts": [],
+      "lexical_high": [],
+      "selected_spans": []
+    },
+    "mechanical_coverage_status": "PASS",
+    "policy_hashes": {
+      "coverage_builder_sha256": "d878de837f25a91c171a6c19e71cae83cdd5e440e574238a18d0662f00013001",
+      "lexicon_sha256": "a2ccecd134da33adfa3dcc5402efad8201782f097373e5d8d379b69cec59aa21",
+      "runtime_contract_sha256": "a5f10e87196bf5517f8da41649b663c7a3b6b070253c8fdb3bfa6aa8168c6fd6",
+      "scanner_sha256": "1753891b4383dcbf129fa7b1c21f060cb9daa339f17c8442f4641152c3b7848e"
+    },
+    "schema_version": "humanize-short-patch-coverage/v2",
+    "semantic_completeness_claim_allowed": false,
+    "source": {
+      "document_format": "markdown",
+      "encoding": "utf-8",
+      "offset_unit": "UTF8_BYTES",
+      "scan_scene": "AUTO",
+      "scene": "GENERAL",
+      "sha256": "74c0c69223a5c22fe07fa542fccdc1121f20fb4562ae14858c78aa5995186e43",
+      "size_bytes": 28,
+      "source_kind": "DOCUMENT"
+    },
+    "summary": {
+      "explicit_conflicts_total": 0,
+      "lexical_candidate_total": 0,
+      "lexical_disposition_counts": {},
+      "lexical_high_total": 0,
+      "selected_spans_total": 0
+    }
+  },
+  "document_format": "markdown",
+  "effective_output": "PATCH",
+  "hunks": [
+    {
+      "decision": "REWRITE",
+      "end_byte": 27,
+      "hunk_id": "H001",
+      "reason": "引入格式敏感的百分号以测试格式绑定。",
+      "replacement": "这里保留原有结论。% 新注释",
+      "replacement_sha256": "b728e8092e3ad4aafec334fc643787452896b62e6e413da4e87cc6f6bc480092",
+      "source_text": "这里保留原有结论。",
+      "source_text_sha256": "28261463600ecfab747e4e09755dc289c26825bf175799ddff0e7c4ef75c5dd9",
+      "start_byte": 0
+    }
+  ],
+  "intensity": "LIGHT",
+  "mode": "REWRITE",
+  "offset_unit": "UTF8_BYTES",
+  "patch_hunks_source_partition": "NON_OVERLAPPING",
+  "protected_terms": [],
+  "requested_output": "PATCH",
+  "scene": "GENERAL",
+  "schema_version": "humanize-short-patch/v2",
+  "selection_spec_sha256": "0829c0a79c9f440fd507514c59ff9ae8dfc757685f47e9e23b30ad8f7546059b",
+  "semantic_judgment": "NOT_EVALUATED",
+  "source_encoding": "utf-8",
+  "source_sha256": "74c0c69223a5c22fe07fa542fccdc1121f20fb4562ae14858c78aa5995186e43",
+  "source_size_bytes": 28,
+  "unlisted_source_policy": "COPY_EXACT"
+}

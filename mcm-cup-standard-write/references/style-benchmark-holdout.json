@@ -1,0 +1,26 @@
+{
+  "schema": "cumcm-style-holdout-reservations/v2",
+  "version": "2026-08-20",
+  "purpose": "Prevent all sealed CUMCM holdout passages from appearing in normal style retrieval. The reservation applies to retrieval only; it does not claim that any evaluator lacks broader corpus knowledge.",
+  "benchmarks": [
+    {
+      "router_skill": "AIGC/aigc-writing-router",
+      "suite_id": "cumcm-v1-holdout",
+      "suite_definition": "references/benchmarks/cumcm-v1-holdout.json"
+    },
+    {
+      "router_skill": "AIGC/aigc-writing-router",
+      "suite_id": "cumcm-v2-holdout",
+      "suite_definition": "references/benchmarks/cumcm-v2-holdout.json"
+    }
+  ],
+  "reserved_record_ids": [
+    "2020_A195_P0262",
+    "2020_B108_P0662",
+    "2020_C142_P1378",
+    "2020_A212_P0338",
+    "2024_B195_P6543",
+    "2021_C169_P3092"
+  ],
+  "access_rule": "Default fulltext queries exclude all listed records. Use --include-reserved-holdout only to prepare the corresponding frozen benchmark itself, never for routine CUMCM drafting or rule tuning."
+}

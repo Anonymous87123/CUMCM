@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <style>.risk::before { content: "样式伪标注"; }</style>
+  <script>document.body.innerHTML = '<mark>脚本伪标注</mark>';</script>
+</head>
+<body>
+  <mark>第一段需要改写。</mark>
+  <span class="aigc-highlight">第二段<strong>需要</strong>改写。</span>
+  <div data-risk-level="high">重复片段。</div>
+  <div data-risk-level="high">重复片段。</div>
+  <p data-state="flagged">属性值标注。</p>
+  <p id="detected-42">唯一文本。</p>
+  <a href="https://example.invalid/should-not-be-opened"><mark>链接内标注文本。</mark></a>
+  <mark>ＡＩＧＣ   规范化
+  映射。</mark>
+  <noscript><mark>无脚本伪标注</mark></noscript>
+</body>
+</html>

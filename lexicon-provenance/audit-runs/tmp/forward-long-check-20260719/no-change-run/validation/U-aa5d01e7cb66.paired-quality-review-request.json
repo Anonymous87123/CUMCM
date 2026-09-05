@@ -1,0 +1,54 @@
+{
+  "artifact": {
+    "after_sha256": "e02a531978ff9fd29f422edad7b942ca3212b8dc6ae68cbf637c844236bb804a",
+    "before_sha256": "e02a531978ff9fd29f422edad7b942ca3212b8dc6ae68cbf637c844236bb804a"
+  },
+  "changes": [],
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "authorship": "NOT_EVALUATED",
+    "quality_clearance_granted": false
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "d8ad41a41f7cc63feeede8c23106cad605ca90985012a3c96dbfcc0e2c363b12",
+    "lexicon_sha256": "52191aaa422515e03e14c9f5981f4e190320b1f6fa203e370041abb742e6937c",
+    "paired_quality_contract_sha256": "aa1d2be0d399dd4b30f15c04fe8f61afe46174faee9dd3f1f063a13b29149846",
+    "paired_quality_verifier_sha256": "ccfb1e53af76cdc15e41214747a0adf2d89a8347a06dd7c14f38622bd5b7685d",
+    "report_extractor_sha256": "49266ff31c35fbbc4b87479866503f9f71649e9df29e7088ea700ab544f62a02",
+    "runtime_contract_sha256": "0b75231f6eefe9412dfc6f137674f2be8edb8cc087bd62ffaa2a285b895599ea",
+    "scanner_sha256": "4237049cafe1c06e81afa33115ffaf00d9ba5d69c86baaada96b387d3c70c048",
+    "validator_sha256": "972911b3ec19e250afd009baeb100aa02bac21c52cb588394f8591f35d0ab65f"
+  },
+  "request_sha256": "73b05785ba4f3365b9c78d6c54fc9987e766dff6a8a9e4d5a74af5a801dac516",
+  "review_contract": {
+    "empty_or_generic_benefit_is_clearance": false,
+    "local_model_or_caller_assertion_is_clearance": false,
+    "required_dimensions": [
+      "actionable_pathology_remaining",
+      "no_change_is_best_available_decision",
+      "problem_span_binding",
+      "independent_reading_benefit",
+      "subject_and_modifier_alignment",
+      "verb_object_collocation",
+      "logical_relation_preservation",
+      "information_density_and_rhythm",
+      "author_voice_non_regression"
+    ],
+    "required_per_change_verdicts": [
+      "ACCEPT",
+      "REVISE",
+      "REVERT"
+    ],
+    "validator_pass_is_quality_clearance": false
+  },
+  "schema": "humanize-paired-quality-review-request/v1",
+  "status": "PENDING_EXTERNAL_REVIEW",
+  "validation_context": {
+    "decision": "NO_CHANGE",
+    "document_format": "markdown",
+    "document_scope": "FRAGMENT",
+    "mechanical_validation_status": "PASS",
+    "mode": "REWRITE",
+    "scene": "GENERAL"
+  }
+}

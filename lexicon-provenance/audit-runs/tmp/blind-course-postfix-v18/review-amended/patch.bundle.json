@@ -1,0 +1,615 @@
+{
+  "amendment": {
+    "amendment_depth": 1,
+    "amendment_sha256": "fb5f1adb4b0081ac2f43dac418b2fcc71699fc1916aca38c370a29e855c41f99",
+    "amendment_spec_sha256": "c868767ec50c6d1bb28ec7d3462723f960562cd91c82d7dd78cf9e7866d4d504",
+    "changed_hunks": [
+      {
+        "after_hunk_sha256": "b4957b37816f11b5bd7946adedc6ff4766c72965744825bd19b2580785073e93",
+        "before_hunk_sha256": "ac9b2c1cbff019c6e7b9e1f60207301243e630809f85ac101f637ed52031db11",
+        "hunk_id": "H002"
+      },
+      {
+        "after_hunk_sha256": "53915536071e313dcb7dd3478500404ed417bb08423072e1943377c5b679a048",
+        "before_hunk_sha256": "a69d8d97f47669134c97aab39b444d995626b220d6828fd2887c99e5d81b0d45",
+        "hunk_id": "H006"
+      }
+    ],
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "integrity_scope": "SELF_CONSISTENCY_ONLY",
+    "parent_bundle": {
+      "bundle_sha256": "5023d24c0c79e055eb57bafd5626d0565c3db5fe4bc40a02ae81366ae53630ee",
+      "completion_claim_allowed": false,
+      "coverage": {
+        "academic_correctness": "NOT_EVALUATED",
+        "coverage_basis": [
+          "CURRENT_SCANNER_HIGH_AUDIT_VIEW",
+          "CALLER_BOUND_SELECTED_SPANS",
+          "CALLER_DECLARED_CONFLICT_PAIRS"
+        ],
+        "coverage_claim_scope": "ENUMERATED_HIGH_AND_BOUND_DECLARATIONS_ONLY",
+        "coverage_completion_claim_allowed": true,
+        "coverage_limitations": [
+          "NO_COMPLETE_NATURAL_LANGUAGE_SEMANTIC_DISCOVERY",
+          "CONFLICT_INVENTORY_IS_CALLER_DECLARED_ONLY",
+          "KEEP_REASONS_ARE_NOT_EXTERNAL_QUALITY_CLEARANCE",
+          "SELF_CONSISTENCY_ONLY_WITHOUT_EXTERNAL_REQUEST_ANCHOR"
+        ],
+        "coverage_sha256": "c5ba22d54d0814c6b680d86d4412ff11cdd27cd41b973ed419c102f3113119d6",
+        "declarations": {
+          "explicit_conflicts": [],
+          "lexical_keeps": [],
+          "selected_spans": [
+            {
+              "decision": "HUNK",
+              "end_byte": 336,
+              "hunk_id": "H001",
+              "reason": "连续字幕使推导呈现机械卡片节奏，本次改为实际方向切换。",
+              "selection_id": "S001",
+              "source_text": "水平方向合力为",
+              "source_text_sha256": "d3623bf3d254b34eb969f833c316e24a867f01d42c24c3b083040c56327137b0",
+              "start_byte": 315
+            },
+            {
+              "decision": "HUNK",
+              "end_byte": 418,
+              "hunk_id": "H002",
+              "reason": "连续字幕使推导呈现机械卡片节奏，本次由加速度对象直接承接。",
+              "selection_id": "S002",
+              "source_text": "因此",
+              "source_text_sha256": "a07bd3196be556cf1da60a815f550697856ad03b04707a4f3a592d70c7de682e",
+              "start_byte": 412
+            },
+            {
+              "decision": "HUNK",
+              "end_byte": 485,
+              "hunk_id": "H003",
+              "reason": "命令式句首不是独立命题，删除后公式与极值条件仍逐字保留。",
+              "selection_id": "S003",
+              "source_text": "令 ",
+              "source_text_sha256": "2495ba226d28146fd63da0c145957aa5715dcc0d67757d0d5d29e2b51eb7f617",
+              "start_byte": 481
+            },
+            {
+              "decision": "HUNK",
+              "end_byte": 503,
+              "hunk_id": "H004",
+              "reason": "调整非保护中文搭配，使函数与变量关系直接进入主句。",
+              "selection_id": "S004",
+              "source_text": " 对 ",
+              "source_text_sha256": "8d2cc5a977a97bf3a4c0393148ed013392e17363f6972318b4dd9886166e038b",
+              "start_byte": 498
+            },
+            {
+              "decision": "HUNK",
+              "end_byte": 526,
+              "hunk_id": "H005",
+              "reason": "把公式字幕改成极值条件说明，保留原有推导职责。",
+              "selection_id": "S005",
+              "source_text": " 取极值：",
+              "source_text_sha256": "0c5b2adfc77f5a6f0313f09f33e57a199d83478900d27d77ceeefa27c8d39cb0",
+              "start_byte": 513
+            },
+            {
+              "decision": "HUNK",
+              "end_byte": 609,
+              "hunk_id": "H006",
+              "reason": "用具体求解关系替换泛化推进词，末式仍保持原样。",
+              "selection_id": "S006",
+              "source_text": "于是",
+              "source_text_sha256": "3617c85a661849c1dfe98bc959d0493f90edcff61c9da841f3f1d3a468ea2952",
+              "start_byte": 603
+            }
+          ],
+          "source_kind": "DOCUMENT"
+        },
+        "declarations_sha256": "3cddeae8547036c397561e64a0d921eab08717f1842d37c66bb080263c35451c",
+        "humanize_quality_claim_allowed": false,
+        "inventories": {
+          "explicit_conflicts": [],
+          "lexical_high": [],
+          "selected_spans": [
+            {
+              "decision": "HUNK",
+              "disposition": {
+                "decision": "REWRITE",
+                "hunk_id": "H001",
+                "reason": "连续字幕使推导呈现机械卡片节奏，本次改为实际方向切换。"
+              },
+              "end_byte": 336,
+              "hunk_id": "H001",
+              "reason": "连续字幕使推导呈现机械卡片节奏，本次改为实际方向切换。",
+              "selection_id": "S001",
+              "source_text": "水平方向合力为",
+              "source_text_sha256": "d3623bf3d254b34eb969f833c316e24a867f01d42c24c3b083040c56327137b0",
+              "start_byte": 315
+            },
+            {
+              "decision": "HUNK",
+              "disposition": {
+                "decision": "REWRITE",
+                "hunk_id": "H002",
+                "reason": "连续字幕使推导呈现机械卡片节奏，本次由加速度对象直接承接。"
+              },
+              "end_byte": 418,
+              "hunk_id": "H002",
+              "reason": "连续字幕使推导呈现机械卡片节奏，本次由加速度对象直接承接。",
+              "selection_id": "S002",
+              "source_text": "因此",
+              "source_text_sha256": "a07bd3196be556cf1da60a815f550697856ad03b04707a4f3a592d70c7de682e",
+              "start_byte": 412
+            },
+            {
+              "decision": "HUNK",
+              "disposition": {
+                "decision": "DELETE_STYLE_SHELL",
+                "hunk_id": "H003",
+                "reason": "命令式句首不是独立命题，删除后公式与极值条件仍逐字保留。"
+              },
+              "end_byte": 485,
+              "hunk_id": "H003",
+              "reason": "命令式句首不是独立命题，删除后公式与极值条件仍逐字保留。",
+              "selection_id": "S003",
+              "source_text": "令 ",
+              "source_text_sha256": "2495ba226d28146fd63da0c145957aa5715dcc0d67757d0d5d29e2b51eb7f617",
+              "start_byte": 481
+            },
+            {
+              "decision": "HUNK",
+              "disposition": {
+                "decision": "REWRITE",
+                "hunk_id": "H004",
+                "reason": "调整非保护中文搭配，使函数与变量关系直接进入主句。"
+              },
+              "end_byte": 503,
+              "hunk_id": "H004",
+              "reason": "调整非保护中文搭配，使函数与变量关系直接进入主句。",
+              "selection_id": "S004",
+              "source_text": " 对 ",
+              "source_text_sha256": "8d2cc5a977a97bf3a4c0393148ed013392e17363f6972318b4dd9886166e038b",
+              "start_byte": 498
+            },
+            {
+              "decision": "HUNK",
+              "disposition": {
+                "decision": "REWRITE",
+                "hunk_id": "H005",
+                "reason": "把公式字幕改成极值条件说明，保留原有推导职责。"
+              },
+              "end_byte": 526,
+              "hunk_id": "H005",
+              "reason": "把公式字幕改成极值条件说明，保留原有推导职责。",
+              "selection_id": "S005",
+              "source_text": " 取极值：",
+              "source_text_sha256": "0c5b2adfc77f5a6f0313f09f33e57a199d83478900d27d77ceeefa27c8d39cb0",
+              "start_byte": 513
+            },
+            {
+              "decision": "HUNK",
+              "disposition": {
+                "decision": "REWRITE",
+                "hunk_id": "H006",
+                "reason": "用具体求解关系替换泛化推进词，末式仍保持原样。"
+              },
+              "end_byte": 609,
+              "hunk_id": "H006",
+              "reason": "用具体求解关系替换泛化推进词，末式仍保持原样。",
+              "selection_id": "S006",
+              "source_text": "于是",
+              "source_text_sha256": "3617c85a661849c1dfe98bc959d0493f90edcff61c9da841f3f1d3a468ea2952",
+              "start_byte": 603
+            }
+          ]
+        },
+        "mechanical_coverage_status": "PASS",
+        "policy_hashes": {
+          "coverage_builder_sha256": "d878de837f25a91c171a6c19e71cae83cdd5e440e574238a18d0662f00013001",
+          "lexicon_sha256": "0fa2e65f2a68ec420bd21bf19da39e139fad376b9576218f38a405942ee4d810",
+          "runtime_contract_sha256": "a5f10e87196bf5517f8da41649b663c7a3b6b070253c8fdb3bfa6aa8168c6fd6",
+          "scanner_sha256": "9086c9662af4b13bf3e89083582996ceb27061fe095ab13da412251ce36902e0"
+        },
+        "schema_version": "humanize-short-patch-coverage/v2",
+        "semantic_completeness_claim_allowed": false,
+        "source": {
+          "document_format": "tex",
+          "encoding": "utf-8",
+          "offset_unit": "UTF8_BYTES",
+          "scan_scene": "AUTO",
+          "scene": "COURSE",
+          "sha256": "b28dc286b43b7b581f95482d31d53be57a1d0cf743a0e890f58b1f3121fe934b",
+          "size_bytes": 632,
+          "source_kind": "DOCUMENT"
+        },
+        "summary": {
+          "explicit_conflicts_total": 0,
+          "lexical_candidate_total": 0,
+          "lexical_disposition_counts": {},
+          "lexical_high_total": 0,
+          "selected_spans_total": 6
+        }
+      },
+      "document_format": "tex",
+      "effective_output": "PATCH",
+      "hunks": [
+        {
+          "decision": "REWRITE",
+          "end_byte": 336,
+          "hunk_id": "H001",
+          "reason": "把独占行的对象标签改为方向切换，保留水平方向合力这一原有职责。",
+          "replacement": "转到水平方向，合力为",
+          "replacement_sha256": "61d8b6895bdd2adecbe426e212faea2440e89393c2579a86e886c282f48dc112",
+          "source_text": "水平方向合力为",
+          "source_text_sha256": "d3623bf3d254b34eb969f833c316e24a867f01d42c24c3b083040c56327137b0",
+          "start_byte": 315
+        },
+        {
+          "decision": "REWRITE",
+          "end_byte": 418,
+          "hunk_id": "H002",
+          "reason": "由公式对象直接承接前式，减少连续的泛化推进字幕。",
+          "replacement": "加速度为",
+          "replacement_sha256": "da620e46677ac2c9438080b5ce116719511e5602bd0dfde42e257af35d49ff39",
+          "source_text": "因此",
+          "source_text_sha256": "a07bd3196be556cf1da60a815f550697856ad03b04707a4f3a592d70c7de682e",
+          "start_byte": 412
+        },
+        {
+          "decision": "DELETE_STYLE_SHELL",
+          "end_byte": 485,
+          "hunk_id": "H003",
+          "reason": "删除命令式句首，极值动作仍由同一行其余文字和公式完整表达。",
+          "replacement": "",
+          "replacement_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "source_text": "令 ",
+          "source_text_sha256": "2495ba226d28146fd63da0c145957aa5715dcc0d67757d0d5d29e2b51eb7f617",
+          "start_byte": 481
+        },
+        {
+          "decision": "REWRITE",
+          "end_byte": 503,
+          "hunk_id": "H004",
+          "reason": "把命令式搭配改成函数关于变量的直接说明，不改变两个数学对象。",
+          "replacement": " 关于 ",
+          "replacement_sha256": "9dfc20fc4da1956bdd930000041f5f4d016cc4aeae1a12f7ebec6ccd05c05597",
+          "source_text": " 对 ",
+          "source_text_sha256": "8d2cc5a977a97bf3a4c0393148ed013392e17363f6972318b4dd9886166e038b",
+          "start_byte": 498
+        },
+        {
+          "decision": "REWRITE",
+          "end_byte": 526,
+          "hunk_id": "H005",
+          "reason": "让后接导数方程直接承担极值条件，避免为公式另配操作命令。",
+          "replacement": " 的极值条件为：",
+          "replacement_sha256": "ba024eccce460d610bf6c939f77825ba24938fa7a59040c9b8227efb816022d2",
+          "source_text": " 取极值：",
+          "source_text_sha256": "0c5b2adfc77f5a6f0313f09f33e57a199d83478900d27d77ceeefa27c8d39cb0",
+          "start_byte": 513
+        },
+        {
+          "decision": "REWRITE",
+          "end_byte": 609,
+          "hunk_id": "H006",
+          "reason": "明确末式来自上一行方程求解，替换泛化的推导推进词。",
+          "replacement": "解得",
+          "replacement_sha256": "14cbdb573d0e685d859d6b63886f16a878003cc531d04b6bd78bbf41bd6b030d",
+          "source_text": "于是",
+          "source_text_sha256": "3617c85a661849c1dfe98bc959d0493f90edcff61c9da841f3f1d3a468ea2952",
+          "start_byte": 603
+        }
+      ],
+      "intensity": "BALANCED",
+      "mode": "REWRITE",
+      "offset_unit": "UTF8_BYTES",
+      "patch_hunks_source_partition": "NON_OVERLAPPING",
+      "protected_terms": [],
+      "requested_output": "PATCH",
+      "scene": "COURSE",
+      "schema_version": "humanize-short-patch/v2",
+      "selection_spec_sha256": "e834962d4f00eb15bba9780acaa2deb65cd2c6c0212092a4375b4d99de6f1b5d",
+      "semantic_judgment": "NOT_EVALUATED",
+      "source_encoding": "utf-8",
+      "source_sha256": "b28dc286b43b7b581f95482d31d53be57a1d0cf743a0e890f58b1f3121fe934b",
+      "source_size_bytes": 632,
+      "unlisted_source_policy": "COPY_EXACT"
+    },
+    "parent_candidate_sha256": "ce871475374ffd87705e4a7bc6cccaa4ea269679073b33c61eaa1d59417becd5",
+    "parent_manifest_sha256": "df34b84d03c598587ccd041a44255c2f5b9565e3d391a9f4fa976ab6b7dfb4df",
+    "schema_version": "humanize-short-patch-amendment-lineage/v1"
+  },
+  "bundle_sha256": "c4693fa0b2b674db5f6bff8bb60a0e545bcb695d3c7cc80cceb490749242d7ec",
+  "completion_claim_allowed": false,
+  "coverage": {
+    "academic_correctness": "NOT_EVALUATED",
+    "coverage_basis": [
+      "CURRENT_SCANNER_HIGH_AUDIT_VIEW",
+      "CALLER_BOUND_SELECTED_SPANS",
+      "CALLER_DECLARED_CONFLICT_PAIRS"
+    ],
+    "coverage_claim_scope": "ENUMERATED_HIGH_AND_BOUND_DECLARATIONS_ONLY",
+    "coverage_completion_claim_allowed": true,
+    "coverage_limitations": [
+      "NO_COMPLETE_NATURAL_LANGUAGE_SEMANTIC_DISCOVERY",
+      "CONFLICT_INVENTORY_IS_CALLER_DECLARED_ONLY",
+      "KEEP_REASONS_ARE_NOT_EXTERNAL_QUALITY_CLEARANCE",
+      "SELF_CONSISTENCY_ONLY_WITHOUT_EXTERNAL_REQUEST_ANCHOR"
+    ],
+    "coverage_sha256": "c5ba22d54d0814c6b680d86d4412ff11cdd27cd41b973ed419c102f3113119d6",
+    "declarations": {
+      "explicit_conflicts": [],
+      "lexical_keeps": [],
+      "selected_spans": [
+        {
+          "decision": "HUNK",
+          "end_byte": 336,
+          "hunk_id": "H001",
+          "reason": "连续字幕使推导呈现机械卡片节奏，本次改为实际方向切换。",
+          "selection_id": "S001",
+          "source_text": "水平方向合力为",
+          "source_text_sha256": "d3623bf3d254b34eb969f833c316e24a867f01d42c24c3b083040c56327137b0",
+          "start_byte": 315
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 418,
+          "hunk_id": "H002",
+          "reason": "连续字幕使推导呈现机械卡片节奏，本次由加速度对象直接承接。",
+          "selection_id": "S002",
+          "source_text": "因此",
+          "source_text_sha256": "a07bd3196be556cf1da60a815f550697856ad03b04707a4f3a592d70c7de682e",
+          "start_byte": 412
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 485,
+          "hunk_id": "H003",
+          "reason": "命令式句首不是独立命题，删除后公式与极值条件仍逐字保留。",
+          "selection_id": "S003",
+          "source_text": "令 ",
+          "source_text_sha256": "2495ba226d28146fd63da0c145957aa5715dcc0d67757d0d5d29e2b51eb7f617",
+          "start_byte": 481
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 503,
+          "hunk_id": "H004",
+          "reason": "调整非保护中文搭配，使函数与变量关系直接进入主句。",
+          "selection_id": "S004",
+          "source_text": " 对 ",
+          "source_text_sha256": "8d2cc5a977a97bf3a4c0393148ed013392e17363f6972318b4dd9886166e038b",
+          "start_byte": 498
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 526,
+          "hunk_id": "H005",
+          "reason": "把公式字幕改成极值条件说明，保留原有推导职责。",
+          "selection_id": "S005",
+          "source_text": " 取极值：",
+          "source_text_sha256": "0c5b2adfc77f5a6f0313f09f33e57a199d83478900d27d77ceeefa27c8d39cb0",
+          "start_byte": 513
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 609,
+          "hunk_id": "H006",
+          "reason": "用具体求解关系替换泛化推进词，末式仍保持原样。",
+          "selection_id": "S006",
+          "source_text": "于是",
+          "source_text_sha256": "3617c85a661849c1dfe98bc959d0493f90edcff61c9da841f3f1d3a468ea2952",
+          "start_byte": 603
+        }
+      ],
+      "source_kind": "DOCUMENT"
+    },
+    "declarations_sha256": "3cddeae8547036c397561e64a0d921eab08717f1842d37c66bb080263c35451c",
+    "humanize_quality_claim_allowed": false,
+    "inventories": {
+      "explicit_conflicts": [],
+      "lexical_high": [],
+      "selected_spans": [
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H001",
+            "reason": "连续字幕使推导呈现机械卡片节奏，本次改为实际方向切换。"
+          },
+          "end_byte": 336,
+          "hunk_id": "H001",
+          "reason": "连续字幕使推导呈现机械卡片节奏，本次改为实际方向切换。",
+          "selection_id": "S001",
+          "source_text": "水平方向合力为",
+          "source_text_sha256": "d3623bf3d254b34eb969f833c316e24a867f01d42c24c3b083040c56327137b0",
+          "start_byte": 315
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H002",
+            "reason": "连续字幕使推导呈现机械卡片节奏，本次由加速度对象直接承接。"
+          },
+          "end_byte": 418,
+          "hunk_id": "H002",
+          "reason": "连续字幕使推导呈现机械卡片节奏，本次由加速度对象直接承接。",
+          "selection_id": "S002",
+          "source_text": "因此",
+          "source_text_sha256": "a07bd3196be556cf1da60a815f550697856ad03b04707a4f3a592d70c7de682e",
+          "start_byte": 412
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "DELETE_STYLE_SHELL",
+            "hunk_id": "H003",
+            "reason": "命令式句首不是独立命题，删除后公式与极值条件仍逐字保留。"
+          },
+          "end_byte": 485,
+          "hunk_id": "H003",
+          "reason": "命令式句首不是独立命题，删除后公式与极值条件仍逐字保留。",
+          "selection_id": "S003",
+          "source_text": "令 ",
+          "source_text_sha256": "2495ba226d28146fd63da0c145957aa5715dcc0d67757d0d5d29e2b51eb7f617",
+          "start_byte": 481
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H004",
+            "reason": "调整非保护中文搭配，使函数与变量关系直接进入主句。"
+          },
+          "end_byte": 503,
+          "hunk_id": "H004",
+          "reason": "调整非保护中文搭配，使函数与变量关系直接进入主句。",
+          "selection_id": "S004",
+          "source_text": " 对 ",
+          "source_text_sha256": "8d2cc5a977a97bf3a4c0393148ed013392e17363f6972318b4dd9886166e038b",
+          "start_byte": 498
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H005",
+            "reason": "把公式字幕改成极值条件说明，保留原有推导职责。"
+          },
+          "end_byte": 526,
+          "hunk_id": "H005",
+          "reason": "把公式字幕改成极值条件说明，保留原有推导职责。",
+          "selection_id": "S005",
+          "source_text": " 取极值：",
+          "source_text_sha256": "0c5b2adfc77f5a6f0313f09f33e57a199d83478900d27d77ceeefa27c8d39cb0",
+          "start_byte": 513
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H006",
+            "reason": "用具体求解关系替换泛化推进词，末式仍保持原样。"
+          },
+          "end_byte": 609,
+          "hunk_id": "H006",
+          "reason": "用具体求解关系替换泛化推进词，末式仍保持原样。",
+          "selection_id": "S006",
+          "source_text": "于是",
+          "source_text_sha256": "3617c85a661849c1dfe98bc959d0493f90edcff61c9da841f3f1d3a468ea2952",
+          "start_byte": 603
+        }
+      ]
+    },
+    "mechanical_coverage_status": "PASS",
+    "policy_hashes": {
+      "coverage_builder_sha256": "d878de837f25a91c171a6c19e71cae83cdd5e440e574238a18d0662f00013001",
+      "lexicon_sha256": "0fa2e65f2a68ec420bd21bf19da39e139fad376b9576218f38a405942ee4d810",
+      "runtime_contract_sha256": "a5f10e87196bf5517f8da41649b663c7a3b6b070253c8fdb3bfa6aa8168c6fd6",
+      "scanner_sha256": "9086c9662af4b13bf3e89083582996ceb27061fe095ab13da412251ce36902e0"
+    },
+    "schema_version": "humanize-short-patch-coverage/v2",
+    "semantic_completeness_claim_allowed": false,
+    "source": {
+      "document_format": "tex",
+      "encoding": "utf-8",
+      "offset_unit": "UTF8_BYTES",
+      "scan_scene": "AUTO",
+      "scene": "COURSE",
+      "sha256": "b28dc286b43b7b581f95482d31d53be57a1d0cf743a0e890f58b1f3121fe934b",
+      "size_bytes": 632,
+      "source_kind": "DOCUMENT"
+    },
+    "summary": {
+      "explicit_conflicts_total": 0,
+      "lexical_candidate_total": 0,
+      "lexical_disposition_counts": {},
+      "lexical_high_total": 0,
+      "selected_spans_total": 6
+    }
+  },
+  "document_format": "tex",
+  "effective_output": "PATCH",
+  "hunks": [
+    {
+      "decision": "REWRITE",
+      "end_byte": 336,
+      "hunk_id": "H001",
+      "reason": "把独占行的对象标签改为方向切换，保留水平方向合力这一原有职责。",
+      "replacement": "转到水平方向，合力为",
+      "replacement_sha256": "61d8b6895bdd2adecbe426e212faea2440e89393c2579a86e886c282f48dc112",
+      "source_text": "水平方向合力为",
+      "source_text_sha256": "d3623bf3d254b34eb969f833c316e24a867f01d42c24c3b083040c56327137b0",
+      "start_byte": 315
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 418,
+      "hunk_id": "H002",
+      "reason": "保留原有因果 marker，并让加速度对象直接承接后接公式。",
+      "replacement": "因此，加速度为",
+      "replacement_sha256": "6ea0ed8f33a7d3142947192bfe1fea45dc8792b7aea5393214f2de2cd83d1625",
+      "source_text": "因此",
+      "source_text_sha256": "a07bd3196be556cf1da60a815f550697856ad03b04707a4f3a592d70c7de682e",
+      "start_byte": 412
+    },
+    {
+      "decision": "DELETE_STYLE_SHELL",
+      "end_byte": 485,
+      "hunk_id": "H003",
+      "reason": "删除命令式句首，极值动作仍由同一行其余文字和公式完整表达。",
+      "replacement": "",
+      "replacement_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_text": "令 ",
+      "source_text_sha256": "2495ba226d28146fd63da0c145957aa5715dcc0d67757d0d5d29e2b51eb7f617",
+      "start_byte": 481
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 503,
+      "hunk_id": "H004",
+      "reason": "把命令式搭配改成函数关于变量的直接说明，不改变两个数学对象。",
+      "replacement": " 关于 ",
+      "replacement_sha256": "9dfc20fc4da1956bdd930000041f5f4d016cc4aeae1a12f7ebec6ccd05c05597",
+      "source_text": " 对 ",
+      "source_text_sha256": "8d2cc5a977a97bf3a4c0393148ed013392e17363f6972318b4dd9886166e038b",
+      "start_byte": 498
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 526,
+      "hunk_id": "H005",
+      "reason": "让后接导数方程直接承担极值条件，避免为公式另配操作命令。",
+      "replacement": " 的极值条件为：",
+      "replacement_sha256": "ba024eccce460d610bf6c939f77825ba24938fa7a59040c9b8227efb816022d2",
+      "source_text": " 取极值：",
+      "source_text_sha256": "0c5b2adfc77f5a6f0313f09f33e57a199d83478900d27d77ceeefa27c8d39cb0",
+      "start_byte": 513
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 609,
+      "hunk_id": "H006",
+      "reason": "保留原有推导 marker，同时用求解动作明确末式与上一方程的关系。",
+      "replacement": "于是解得",
+      "replacement_sha256": "eac1d089021ae27bba00b45b077b3c5302e1f716402c5a44d7a9126f94a2e3cb",
+      "source_text": "于是",
+      "source_text_sha256": "3617c85a661849c1dfe98bc959d0493f90edcff61c9da841f3f1d3a468ea2952",
+      "start_byte": 603
+    }
+  ],
+  "intensity": "BALANCED",
+  "mode": "REWRITE",
+  "offset_unit": "UTF8_BYTES",
+  "patch_hunks_source_partition": "NON_OVERLAPPING",
+  "protected_terms": [],
+  "requested_output": "PATCH",
+  "scene": "COURSE",
+  "schema_version": "humanize-short-patch/v3",
+  "selection_spec_sha256": "af1f7b4e57904f6275e92ea48d4bccd36146b00ca490c152009e34b35e557ef0",
+  "semantic_judgment": "NOT_EVALUATED",
+  "source_encoding": "utf-8",
+  "source_sha256": "b28dc286b43b7b581f95482d31d53be57a1d0cf743a0e890f58b1f3121fe934b",
+  "source_size_bytes": 632,
+  "unlisted_source_policy": "COPY_EXACT"
+}

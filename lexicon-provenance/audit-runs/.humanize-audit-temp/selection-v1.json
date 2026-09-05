@@ -1,0 +1,18 @@
+{
+  "schema_version": "humanize-short-patch-selection/v1",
+  "requested_output": "PATCH",
+  "mode": "REWRITE",
+  "scene": "GENERAL",
+  "intensity": "LIGHT",
+  "protected_terms": [],
+  "hunks": [
+    {
+      "hunk_id": "H001",
+      "decision": "REWRITE",
+      "source_text": "这里保留原有结论。",
+      "start_byte": null,
+      "replacement": "这里保留原有结论。% 新注释",
+      "reason": "引入格式敏感的百分号以测试格式绑定。"
+    }
+  ]
+}

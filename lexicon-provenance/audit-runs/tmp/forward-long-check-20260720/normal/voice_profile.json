@@ -1,0 +1,51 @@
+{
+  "binding_scene": "COURSE",
+  "claims": {
+    "academic_correctness": "NOT_EVALUATED",
+    "author_personality_inferred": false,
+    "identity_verified": false,
+    "sample_text_embedded": false
+  },
+  "confidence": "DEFAULT",
+  "defaults": {
+    "disclosure_required": true,
+    "personal_voice_claim_allowed": false,
+    "reason": "NO_AUTHOR_SAMPLES",
+    "scene": "COURSE",
+    "use_scene_default": true
+  },
+  "features": [],
+  "negative_controls": [],
+  "policy_binding": {
+    "dedup_policy_sha256": "87c7d9ae280a4b64b840b1c43e02ba8aaa64eec08fd75159b189b5e3eb07007d",
+    "feature_extractor_policy_sha256": "6c8f0d72c0221dd60700d032705d63dd1b630e83cf2c56c8a77b74c70b1a48df",
+    "feature_registry_sha256": "1070e19cc8968fb260053380a3b34c5b114e1feb41389c815151251bf7876dd9",
+    "role_policy_sha256": "e092658ff701c6e4e8d03b04b9eeb54f2a5da3bb5bb777e9d4e81caa63c988cc",
+    "scene_default_policy_sha256": "9ec0ecba7b41ee2782e5c9fa70e5929ae008afa101383c380ad1f9671df536d1"
+  },
+  "profile_id": "scene-default-course",
+  "profile_kind": "DEFAULT",
+  "profile_sha256": "e8271e953d604cab9c4b4c0b6dd670d69145c0e44ee46c1ea5d40410903ce16c",
+  "revision": 1,
+  "sample_binding": {
+    "manifest_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+    "readable_author_chars": 0,
+    "sample_scenes": [],
+    "unique_analysis_units": 0,
+    "unique_complete_units": 0
+  },
+  "scene_default": {
+    "policy_version": 1,
+    "style_codes": [
+      "NATURAL_EXPLANATION",
+      "SELECTIVE_EXPANSION",
+      "SLOW_AT_DIFFICULTY",
+      "COMPRESS_ROUTINE_STEPS"
+    ]
+  },
+  "schema_version": "humanize-voice-profile/v1",
+  "source_kind": "SCENE_DEFAULT",
+  "supersedes_profile_sha256": null,
+  "validation_status": "PASS",
+  "version": 1
+}

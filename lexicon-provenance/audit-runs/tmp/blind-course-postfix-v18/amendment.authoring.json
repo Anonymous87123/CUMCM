@@ -1,0 +1,70 @@
+{
+  "authoring_integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+  "base": {
+    "bundle_schema_version": "humanize-short-patch/v2",
+    "bundle_sha256": "5023d24c0c79e055eb57bafd5626d0565c3db5fe4bc40a02ae81366ae53630ee",
+    "candidate_sha256": "ce871475374ffd87705e4a7bc6cccaa4ea269679073b33c61eaa1d59417becd5",
+    "coverage_sha256": "030a38b8562a23d28f715bfed23304873803928e27cf2f901005158ec2e52d30",
+    "live_source_required": false,
+    "manifest_sha256": "df34b84d03c598587ccd041a44255c2f5b9565e3d391a9f4fa976ab6b7dfb4df",
+    "selection_spec_sha256": "e834962d4f00eb15bba9780acaa2deb65cd2c6c0212092a4375b4d99de6f1b5d",
+    "source_sha256": "b28dc286b43b7b581f95482d31d53be57a1d0cf743a0e890f58b1f3121fe934b"
+  },
+  "changes": [
+    {
+      "after": {
+        "decision": "REWRITE",
+      "reason": "保留原有因果 marker，并让加速度对象直接承接后接公式。",
+      "replacement": "因此，加速度为"
+      },
+      "before": {
+        "decision": "REWRITE",
+        "end_byte": 418,
+        "hunk_id": "H002",
+        "reason": "由公式对象直接承接前式，减少连续的泛化推进字幕。",
+        "replacement": "加速度为",
+        "replacement_sha256": "da620e46677ac2c9438080b5ce116719511e5602bd0dfde42e257af35d49ff39",
+        "source_text": "因此",
+        "source_text_sha256": "a07bd3196be556cf1da60a815f550697856ad03b04707a4f3a592d70c7de682e",
+        "start_byte": 412
+      },
+      "hunk_id": "H002"
+    },
+    {
+      "after": {
+        "decision": "REWRITE",
+      "reason": "保留原有推导 marker，同时用求解动作明确末式与上一方程的关系。",
+      "replacement": "于是解得"
+      },
+      "before": {
+        "decision": "REWRITE",
+        "end_byte": 609,
+        "hunk_id": "H006",
+        "reason": "明确末式来自上一行方程求解，替换泛化的推导推进词。",
+        "replacement": "解得",
+        "replacement_sha256": "14cbdb573d0e685d859d6b63886f16a878003cc531d04b6bd78bbf41bd6b030d",
+        "source_text": "于是",
+        "source_text_sha256": "3617c85a661849c1dfe98bc959d0493f90edcff61c9da841f3f1d3a468ea2952",
+        "start_byte": 603
+      },
+      "hunk_id": "H006"
+    }
+  ],
+  "completion_claim_allowed": false,
+  "humanize_quality_claim_allowed": false,
+  "policy_hashes": {
+    "amend_tool_sha256": "24ffb2b92a312960ff65317f62dbef3915e06af3c8cd28e7559f2b97d9079c32",
+    "applicator_sha256": "2f91aa9ff472e1f60080cb040c8ed3a435f9d8e8fc5283dd5f24bf466f41bdc1",
+    "builder_sha256": "b3b4ba3e25b298bb97af518b9d807fac8ae255df03e2cddb2c2d1659215e877a",
+    "invariant_checker_sha256": "a5feeffb38fd862cd82f813447ecd0513b141dc5e5485f9e671eb8a7bf0b7a40",
+    "lexicon_sha256": "0fa2e65f2a68ec420bd21bf19da39e139fad376b9576218f38a405942ee4d810",
+    "paired_quality_contract_sha256": "aa1d2be0d399dd4b30f15c04fe8f61afe46174faee9dd3f1f063a13b29149846",
+    "paired_quality_verifier_sha256": "ccfb1e53af76cdc15e41214747a0adf2d89a8347a06dd7c14f38622bd5b7685d",
+    "report_extractor_sha256": "49266ff31c35fbbc4b87479866503f9f71649e9df29e7088ea700ab544f62a02",
+    "runtime_contract_sha256": "36faecb4300ad79e254d75664d4069dfe29f78bd6ab6d270c84193d6562e9e42",
+    "scanner_sha256": "9086c9662af4b13bf3e89083582996ceb27061fe095ab13da412251ce36902e0",
+    "validator_sha256": "41f23c5adf9f1005b913882ddd923962f12665302251d78a79594a22f5775199",
+    "verifier_sha256": "0e2e00333ecb23e3a6302937cee47bd0c836c75916064bcf3af23f4de62b8859"
+  },
+  "schema_version": "humanize-short-patch-amend-authoring/v1"
+}

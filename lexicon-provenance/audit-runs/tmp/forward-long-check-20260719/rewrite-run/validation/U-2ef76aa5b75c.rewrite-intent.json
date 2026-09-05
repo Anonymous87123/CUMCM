@@ -1,0 +1,66 @@
+{
+  "artifact": {
+    "after_sha256": "ae6bf1fe20f5c712f9d711f4662091bc19de90b4c76b883e9707fb27a22ac43f",
+    "before_sha256": "b993c2d36bb1f9458165f8495f984fbacf3b17490535c84788d2e704d7374a5a"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v3",
+  "bundle_sha256": "f82ce88c1ff7d7262ed69c6e834f6bb06d6a02e9eff29bb294831a4811f55429",
+  "chunk_binding_sha256": "b3663c5386ddfe8fd7d730731e13931c550b4bdb9c7b7bbfbe44f0db1dec52b5",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-2ef76aa5b75c.diff",
+    "sha256": "21963de41474d525b8e2e7805a4aa093db998fb542c3b34cc68c8873f579c9bf"
+  },
+  "evidence_sha256": "24e7764397d5919923dfbd3d7722b5bf4494bc12dc6a0781e4b8ed0ae6cd974e",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "删除空泛收尾并保留材料范围",
+        "target_signals": [
+          "STYLE-EMPTY-ENDING"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "cad3ac7384017ed9db4b52809cc7dcb2a8b637eb3bcb1a7105757961b7658c8d",
+        "start_line": 2
+      }
+    ],
+    "summary": "删除空泛收尾并保留材料范围",
+    "target_signals": [
+      "STYLE-EMPTY-ENDING"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      }
+    ],
+    "masked_after_sha256": "b5d7a194ebe08af92b8451029339faab764c5f1b11de041a43ba5e1ccb6c35c4",
+    "masked_before_sha256": "15fd11a93eeb74fe3526a9b4daf5fd2d9b79740ed5161a00c07948ee492298d3",
+    "source_spans_covered": 1,
+    "source_spans_total": 1,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "1fdbd1ddf78c58e58c683b0d747e8c9712817a458d72641b62847450662f6119",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-2ef76aa5b75c"
+}

@@ -1,0 +1,95 @@
+{
+  "schema_version": "1.1",
+  "purpose": "2026-07-13 独立红蓝队实用性评估的蓝队原始正文输出与验证索引；不作为 gold 标准答案。",
+  "artifacts": {
+    "red_team": {
+      "final_review": "red_team_final_review.md",
+      "score": "15/28",
+      "default_generation": "not_qualified",
+      "full_generation_qualification": "NOT_EVALUATED"
+    },
+    "diagnose": {
+      "fresh_output": "diagnose_fresh_output.md",
+      "mode": "DIAGNOSE",
+      "scene": "RESEARCH",
+      "review_note": "独立代理超时；该输出按固定合同人工最小复现，仅验证表头和只诊断约束，非独立蓝队通过证据。"
+    },
+    "validation": {
+      "course_postfix_retry": "validation/course_postfix_retry.json",
+      "research_fresh": "validation/research_fresh.json",
+      "research_final": "validation/research_final.json",
+      "exit_codes": "validation/exit_codes.json"
+    },
+    "tex_e2e": {
+      "before": "tex_e2e_before.tex",
+      "result": "tex_e2e_result.json",
+      "scope": "one_unit_probe",
+      "compile_check": "NOT_RUN"
+    }
+  },
+  "cases": [
+    {
+      "id": "USABILITY-BLUE-COURSE-01",
+      "scene": "COURSE",
+      "mode": "REWRITE",
+      "before": "course_before.md",
+      "after": "course_blue_body.md",
+      "scope": "short_text",
+      "agent_context": "fresh"
+    },
+    {
+      "id": "USABILITY-BLUE-RESEARCH-01",
+      "scene": "RESEARCH",
+      "mode": "REWRITE",
+      "before": "research_before.md",
+      "after": "research_blue_body.md",
+      "scope": "short_text",
+      "agent_context": "fresh"
+    },
+    {
+      "id": "USABILITY-POSTFIX-COURSE-01",
+      "scene": "COURSE",
+      "mode": "REWRITE",
+      "before": "course_before.md",
+      "after": "course_postfix_body.md",
+      "scope": "short_text",
+      "agent_context": "fresh_after_red_team_fix"
+    },
+    {
+      "id": "USABILITY-POSTFIX-RESEARCH-01",
+      "scene": "RESEARCH",
+      "mode": "REWRITE",
+      "before": "research_before.md",
+      "after": "research_postfix_body.md",
+      "scope": "short_text",
+      "agent_context": "fresh_after_red_team_fix"
+    },
+    {
+      "id": "USABILITY-POSTFIX-COURSE-RETRY-01",
+      "scene": "COURSE",
+      "mode": "REWRITE",
+      "before": "course_before.md",
+      "after": "course_postfix_retry_body.md",
+      "scope": "short_text",
+      "agent_context": "fresh_after_math_boundary_fix"
+    },
+    {
+      "id": "USABILITY-POSTFIX-RESEARCH-FRESH-01",
+      "scene": "RESEARCH",
+      "mode": "REWRITE",
+      "before": "research_before.md",
+      "after": "research_fresh_body.md",
+      "scope": "short_text",
+      "agent_context": "fresh_after_bridge_and_math_boundary_fixes"
+    },
+    {
+      "id": "USABILITY-POSTFIX-RESEARCH-FINAL-01",
+      "scene": "RESEARCH",
+      "mode": "REWRITE",
+      "before": "research_before.md",
+      "after": "research_final_body.md",
+      "scope": "short_text",
+      "agent_context": "fresh_after_source_boundary_prompt_fix"
+    }
+  ]
+}

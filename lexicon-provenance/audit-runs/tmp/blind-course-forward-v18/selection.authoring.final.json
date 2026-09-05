@@ -1,0 +1,339 @@
+{
+  "authoring_integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+  "completion_claim_allowed": false,
+  "configuration": {
+    "intensity": "BALANCED",
+    "mode": "REWRITE",
+    "protected_terms": [],
+    "requested_output": "PATCH",
+    "requested_scene": "COURSE",
+    "resolved_scene": "COURSE",
+    "source_kind": "DOCUMENT",
+    "span_suggestion_mode": "FOCUS"
+  },
+  "explicit_conflicts": [],
+  "focus_spans": [
+    {
+      "end_byte": 101,
+      "focus_id": "F001",
+      "source_text": "会变小，但支持力也会减小，从而摩擦力",
+      "source_text_sha256": "589f8ac8f58358de6ac1f07ea9a3907ab4ddb1ea06aa3a262088dfad8c3ac676",
+      "start_byte": 47
+    },
+    {
+      "end_byte": 419,
+      "focus_id": "F002",
+      "source_text": "因此\n",
+      "source_text_sha256": "92b16ff82786ce53acd0ae246c8773a8c322dc47efd26b910f832f0d9c75bdce",
+      "start_byte": 412
+    },
+    {
+      "end_byte": 485,
+      "focus_id": "F003",
+      "source_text": "令 ",
+      "source_text_sha256": "2495ba226d28146fd63da0c145957aa5715dcc0d67757d0d5d29e2b51eb7f617",
+      "start_byte": 481
+    },
+    {
+      "end_byte": 503,
+      "focus_id": "F004",
+      "source_text": " 对 ",
+      "source_text_sha256": "8d2cc5a977a97bf3a4c0393148ed013392e17363f6972318b4dd9886166e038b",
+      "start_byte": 498
+    },
+    {
+      "end_byte": 526,
+      "focus_id": "F005",
+      "source_text": " 取极值：",
+      "source_text_sha256": "0c5b2adfc77f5a6f0313f09f33e57a199d83478900d27d77ceeefa27c8d39cb0",
+      "start_byte": 513
+    },
+    {
+      "end_byte": 610,
+      "focus_id": "F006",
+      "source_text": "于是\n",
+      "source_text_sha256": "d1d866e19de85768899ae2264144dfc1240d96abc666fd9e3637419d3b034975",
+      "start_byte": 603
+    }
+  ],
+  "high_findings": [],
+  "humanize_quality_claim_allowed": false,
+  "hunks": [
+    {
+      "hunk_id": "H001",
+      "span_id": "A001",
+      "decision": "REWRITE",
+      "replacement": "变小；支持力随之减小，摩擦力",
+      "reason": "压缩同句内重复的“会变小”，让两种变化关系直接承接。"
+    },
+    {
+      "hunk_id": "H002",
+      "span_id": "A002",
+      "decision": "DELETE_STYLE_SHELL",
+      "replacement": "",
+      "reason": "前后公式已直接承接，连同该字幕行换行删除以避免产生空段。"
+    },
+    {
+      "hunk_id": "H003",
+      "span_id": "A003",
+      "decision": "REWRITE",
+      "replacement": "求 ",
+      "reason": "把“令……取极值”的主持式写法改为直接给出求解动作。"
+    },
+    {
+      "hunk_id": "H004",
+      "span_id": "A004",
+      "decision": "REWRITE",
+      "replacement": " 关于 ",
+      "reason": "与同句的“求……的极值”组成自然的变量关系表述。"
+    },
+    {
+      "hunk_id": "H005",
+      "span_id": "A005",
+      "decision": "REWRITE",
+      "replacement": " 的极值：",
+      "reason": "保留求极值动作，同时去掉重复的使令结构。"
+    },
+    {
+      "hunk_id": "H006",
+      "span_id": "A006",
+      "decision": "DELETE_STYLE_SHELL",
+      "replacement": "",
+      "reason": "结论公式紧接极值条件，连同字幕行换行删除以避免产生空段。"
+    }
+  ],
+  "inventory_sha256": "6b49712815714b0d98ebc9e0f376285ffd27bfb51b0abdbb99719eff75668e86",
+  "lexical_resolutions": [],
+  "policy_hashes": {
+    "authoring_tool_sha256": "f3514b25630b8632adf22810731ce6ce591036f0f050925a424b9eeccdb21ac8",
+    "coverage_builder_sha256": "d878de837f25a91c171a6c19e71cae83cdd5e440e574238a18d0662f00013001",
+    "lexicon_sha256": "67ecc7acdee15e71b7fc2f321fd7e34d2e48c6f60aa1d3d97c3faaf86b75da20",
+    "runtime_contract_sha256": "a5f10e87196bf5517f8da41649b663c7a3b6b070253c8fdb3bfa6aa8168c6fd6",
+    "scanner_sha256": "9086c9662af4b13bf3e89083582996ceb27061fe095ab13da412251ce36902e0",
+    "scene_router_sha256": "b9129fd04021394a8e474233e6c9ed95ef98f7a8afa48847619f1ab227f6d1ce",
+    "scene_routing_policy_sha256": "fa460a93142173f1a89f343f5aeb771db0a19933c4b04785c823ea7181e12e81"
+  },
+  "scene_route": {
+    "ambiguous_scenes": [],
+    "authoring_allowed": true,
+    "document_format": "tex",
+    "evidence": [],
+    "margin": 0,
+    "policy_revision": 3,
+    "policy_schema_version": "humanize-scene-routing-policy/v1",
+    "policy_sha256": "fa460a93142173f1a89f343f5aeb771db0a19933c4b04785c823ea7181e12e81",
+    "reason_code": "USER_EXPLICIT_SCENE",
+    "requested_scene": "COURSE",
+    "resolved_scene": "COURSE",
+    "route_record_sha256": "f6e2dda820ec6c9947292914e65a1902013c8934a93284f89d8bd69f206a0226",
+    "router_sha256": "b9129fd04021394a8e474233e6c9ed95ef98f7a8afa48847619f1ab227f6d1ce",
+    "routing_input_scope": "FULL_SOURCE_PROTECTED_CONTENT_MASKED",
+    "routing_input_sha256": "5df6b5d37a1053d5bfcc5ec6e14d4f8532bc65c7fba346c78d6f2c00dfaaddbc",
+    "schema_version": "humanize-short-patch-scene-route/v1",
+    "scores": {
+      "COURSE": 0,
+      "MODELING": 0,
+      "RESEARCH": 0
+    },
+    "source_sha256": "b28dc286b43b7b581f95482d31d53be57a1d0cf743a0e890f58b1f3121fe934b",
+    "source_size_bytes": 632,
+    "status": "EXPLICIT",
+    "top_score": 0
+  },
+  "schema_version": "humanize-short-patch-selection-authoring/v4",
+  "selected_spans": [
+    {
+      "selection_id": "S001",
+      "span_id": "A001",
+      "decision": "HUNK",
+      "hunk_id": "H001",
+      "reason": "连续阅读发现同句重复“会变小”，本次绑定为局部节奏改写。"
+    },
+    {
+      "selection_id": "S002",
+      "span_id": "A002",
+      "decision": "HUNK",
+      "hunk_id": "H002",
+      "reason": "该独立推进词仅充当公式字幕，整行删除以免留下 TeX 空段。"
+    },
+    {
+      "selection_id": "S003",
+      "span_id": "A003",
+      "decision": "HUNK",
+      "hunk_id": "H003",
+      "reason": "与后续两个相邻中文 span 共同压缩使令式求极值表述。"
+    },
+    {
+      "selection_id": "S004",
+      "span_id": "A004",
+      "decision": "HUNK",
+      "hunk_id": "H004",
+      "reason": "绑定变量关系连接语，公式本身不进入改写范围。"
+    },
+    {
+      "selection_id": "S005",
+      "span_id": "A005",
+      "decision": "HUNK",
+      "hunk_id": "H005",
+      "reason": "绑定求极值句尾中文，使其与前置动作自然衔接。"
+    },
+    {
+      "selection_id": "S006",
+      "span_id": "A006",
+      "decision": "HUNK",
+      "hunk_id": "H006",
+      "reason": "该独立推进词不提供新增解释，整行删除以免留下 TeX 空段。"
+    }
+  ],
+  "source": {
+    "document_format": "tex",
+    "encoding": "utf-8",
+    "offset_unit": "UTF8_BYTES",
+    "scan_scene": "AUTO",
+    "sha256": "b28dc286b43b7b581f95482d31d53be57a1d0cf743a0e890f58b1f3121fe934b",
+    "size_bytes": 632
+  },
+  "span_suggestion_policy": {
+    "candidate_roles": [
+      "CANDIDATE"
+    ],
+    "decision_authority": false,
+    "max_clause_bytes": 600,
+    "max_paragraph_bytes": 4000,
+    "max_sentence_bytes": 1200,
+    "mode": "FOCUS",
+    "protected_overlap_policy": "SUPPRESS_ANY_OVERLAP",
+    "schema_version": "humanize-short-patch-span-suggestion/v1",
+    "trim_policy": "EDGE_WHITESPACE_ONLY_PRESERVE_INTERNAL_BYTES"
+  },
+  "span_suggestions": [
+    {
+      "boundary_variant": "EXACT",
+      "end_byte": 101,
+      "finding_ids": [],
+      "kind": "FOCUS",
+      "reason_codes": [
+        "CALLER_DIAGNOSIS_REQUIRED",
+        "FOCUS_ID:F001"
+      ],
+      "source_text_sha256": "589f8ac8f58358de6ac1f07ea9a3907ab4ddb1ea06aa3a262088dfad8c3ac676",
+      "span_id": "A001",
+      "start_byte": 47,
+      "status": "AVAILABLE",
+      "suggestion_id": "SG001"
+    },
+    {
+      "boundary_variant": "EXACT",
+      "end_byte": 419,
+      "finding_ids": [],
+      "kind": "FOCUS",
+      "reason_codes": [
+        "CALLER_DIAGNOSIS_REQUIRED",
+        "FOCUS_ID:F002"
+      ],
+      "source_text_sha256": "92b16ff82786ce53acd0ae246c8773a8c322dc47efd26b910f832f0d9c75bdce",
+      "span_id": "A002",
+      "start_byte": 412,
+      "status": "AVAILABLE",
+      "suggestion_id": "SG002"
+    },
+    {
+      "boundary_variant": "EXACT",
+      "end_byte": 485,
+      "finding_ids": [],
+      "kind": "FOCUS",
+      "reason_codes": [
+        "CALLER_DIAGNOSIS_REQUIRED",
+        "FOCUS_ID:F003"
+      ],
+      "source_text_sha256": "2495ba226d28146fd63da0c145957aa5715dcc0d67757d0d5d29e2b51eb7f617",
+      "span_id": "A003",
+      "start_byte": 481,
+      "status": "AVAILABLE",
+      "suggestion_id": "SG003"
+    },
+    {
+      "boundary_variant": "EXACT",
+      "end_byte": 503,
+      "finding_ids": [],
+      "kind": "FOCUS",
+      "reason_codes": [
+        "CALLER_DIAGNOSIS_REQUIRED",
+        "FOCUS_ID:F004"
+      ],
+      "source_text_sha256": "8d2cc5a977a97bf3a4c0393148ed013392e17363f6972318b4dd9886166e038b",
+      "span_id": "A004",
+      "start_byte": 498,
+      "status": "AVAILABLE",
+      "suggestion_id": "SG004"
+    },
+    {
+      "boundary_variant": "EXACT",
+      "end_byte": 526,
+      "finding_ids": [],
+      "kind": "FOCUS",
+      "reason_codes": [
+        "CALLER_DIAGNOSIS_REQUIRED",
+        "FOCUS_ID:F005"
+      ],
+      "source_text_sha256": "0c5b2adfc77f5a6f0313f09f33e57a199d83478900d27d77ceeefa27c8d39cb0",
+      "span_id": "A005",
+      "start_byte": 513,
+      "status": "AVAILABLE",
+      "suggestion_id": "SG005"
+    },
+    {
+      "boundary_variant": "EXACT",
+      "end_byte": 610,
+      "finding_ids": [],
+      "kind": "FOCUS",
+      "reason_codes": [
+        "CALLER_DIAGNOSIS_REQUIRED",
+        "FOCUS_ID:F006"
+      ],
+      "source_text_sha256": "d1d866e19de85768899ae2264144dfc1240d96abc666fd9e3637419d3b034975",
+      "span_id": "A006",
+      "start_byte": 603,
+      "status": "AVAILABLE",
+      "suggestion_id": "SG006"
+    }
+  ],
+  "spans": [
+    {
+      "finding_ids": [],
+      "source_text": "会变小，但支持力也会减小，从而摩擦力",
+      "span_id": "A001",
+      "start_byte": 47
+    },
+    {
+      "finding_ids": [],
+      "source_text": "因此\n",
+      "span_id": "A002",
+      "start_byte": 412
+    },
+    {
+      "finding_ids": [],
+      "source_text": "令 ",
+      "span_id": "A003",
+      "start_byte": 481
+    },
+    {
+      "finding_ids": [],
+      "source_text": " 对 ",
+      "span_id": "A004",
+      "start_byte": 498
+    },
+    {
+      "finding_ids": [],
+      "source_text": " 取极值：",
+      "span_id": "A005",
+      "start_byte": 513
+    },
+    {
+      "finding_ids": [],
+      "source_text": "于是\n",
+      "span_id": "A006",
+      "start_byte": 603
+    }
+  ]
+}

@@ -1,0 +1,56 @@
+{
+  "artifacts": [
+    {
+      "bytes": 2110,
+      "path": "chunks/U-70d08851119b.json",
+      "sha256": "7578556e1da3214ac8a66c21a66d5cee5dc98d815e22f1a542fb8926ce8078c0"
+    },
+    {
+      "bytes": 1114,
+      "path": "coverage_ledger.csv",
+      "sha256": "033bb964ec3e7464f160f5683d29378a88720574fbc9c3c3eec703e9e1d4e460"
+    },
+    {
+      "bytes": 395,
+      "path": "file_manifest.csv",
+      "sha256": "fd0ee36182f71d8acb34cb82c21c9da1e5f6a38e31fe963f239845ebc2994da9"
+    },
+    {
+      "bytes": 237,
+      "path": "protected_spans.jsonl",
+      "sha256": "988db1fb0d61da112d8de393929a5c0b14806f5fe769981a1447a1cd555f5b03"
+    },
+    {
+      "bytes": 3951,
+      "path": "run_metadata.json",
+      "sha256": "f00395aa337e6e73c30d5ee2391a603de2f752a84ebb4d3702db8f1911b1d6fe"
+    },
+    {
+      "bytes": 3703,
+      "path": "scene_routing_policy.json",
+      "sha256": "62129f865176fd54a7d2d8748e1619f9348f927223fd3b3c82ac21213b959e18"
+    },
+    {
+      "bytes": 792,
+      "path": "snapshot.json",
+      "sha256": "388bc7fa574000bb4024dc1cacd74c5c93f4e7bba696cca25fde037a134e5cf2"
+    },
+    {
+      "bytes": 1174,
+      "path": "structural_transaction_inventory.json",
+      "sha256": "104566bb37548b0021020765ef0ad0bdc4339b45476ce5dadd12c19b506d3ce6"
+    },
+    {
+      "bytes": 1719,
+      "path": "units.jsonl",
+      "sha256": "c9766744ce640e3cb744cad171056529bd91406430ef2937e55c5956dbcbad18"
+    },
+    {
+      "bytes": 1810,
+      "path": "voice_profile.json",
+      "sha256": "8d958eb651b7956729fb969e0cd288e4fac2f5eba2013d06e7dec1f8f4e45e59"
+    }
+  ],
+  "purpose": "Strict integrity seal for prepare artifacts; finalize must verify and independently rebuild state before trusting unit or transaction candidates.",
+  "schema_version": 2
+}

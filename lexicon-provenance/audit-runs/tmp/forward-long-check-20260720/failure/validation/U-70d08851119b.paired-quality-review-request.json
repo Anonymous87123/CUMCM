@@ -1,0 +1,74 @@
+{
+  "artifact": {
+    "after_sha256": "45452e956d6de8d539e4798dabdb42aa698019ddc79284f8d38fd6aa335a2965",
+    "before_sha256": "e2b05381ab3d2e8896c7431bea5ab9cc32956b1f15056438f08e20b26cede7ba"
+  },
+  "changes": [
+    {
+      "after": {
+        "end_line": 2,
+        "han_chars": 10,
+        "line_count": 1,
+        "sha256": "9e09b0320a1af2fe3d7e4578de86f51f44e2ecb7ea89f112816075544ea4d8e7",
+        "start_line": 2
+      },
+      "before": {
+        "end_line": 2,
+        "han_chars": 16,
+        "line_count": 1,
+        "sha256": "36bc2bf854acc93d2c3e10cf837033db5e0f5ef44f2718676c5d60186d1a65e7",
+        "start_line": 2
+      },
+      "change_id": "QCH-6b7545f8392e14d8107c",
+      "operation": "REPLACE",
+      "ordinal": 1
+    }
+  ],
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "authorship": "NOT_EVALUATED",
+    "quality_clearance_granted": false
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "d8ad41a41f7cc63feeede8c23106cad605ca90985012a3c96dbfcc0e2c363b12",
+    "lexicon_sha256": "52191aaa422515e03e14c9f5981f4e190320b1f6fa203e370041abb742e6937c",
+    "paired_quality_contract_sha256": "aa1d2be0d399dd4b30f15c04fe8f61afe46174faee9dd3f1f063a13b29149846",
+    "paired_quality_verifier_sha256": "ccfb1e53af76cdc15e41214747a0adf2d89a8347a06dd7c14f38622bd5b7685d",
+    "report_extractor_sha256": "49266ff31c35fbbc4b87479866503f9f71649e9df29e7088ea700ab544f62a02",
+    "runtime_contract_sha256": "0b75231f6eefe9412dfc6f137674f2be8edb8cc087bd62ffaa2a285b895599ea",
+    "scanner_sha256": "4237049cafe1c06e81afa33115ffaf00d9ba5d69c86baaada96b387d3c70c048",
+    "validator_sha256": "972911b3ec19e250afd009baeb100aa02bac21c52cb588394f8591f35d0ab65f"
+  },
+  "request_sha256": "830debaad3248e787d151ca24782649be33a479fdafdaff3703388c500c3354d",
+  "review_contract": {
+    "empty_or_generic_benefit_is_clearance": false,
+    "local_model_or_caller_assertion_is_clearance": false,
+    "required_dimensions": [
+      "actionable_pathology_remaining",
+      "no_change_is_best_available_decision",
+      "problem_span_binding",
+      "independent_reading_benefit",
+      "subject_and_modifier_alignment",
+      "verb_object_collocation",
+      "logical_relation_preservation",
+      "information_density_and_rhythm",
+      "author_voice_non_regression"
+    ],
+    "required_per_change_verdicts": [
+      "ACCEPT",
+      "REVISE",
+      "REVERT"
+    ],
+    "validator_pass_is_quality_clearance": false
+  },
+  "schema": "humanize-paired-quality-review-request/v1",
+  "status": "PENDING_EXTERNAL_REVIEW",
+  "validation_context": {
+    "decision": "REWRITE",
+    "document_format": "tex",
+    "document_scope": "FRAGMENT",
+    "mechanical_validation_status": "PASS",
+    "mode": "REWRITE",
+    "scene": "COURSE"
+  }
+}

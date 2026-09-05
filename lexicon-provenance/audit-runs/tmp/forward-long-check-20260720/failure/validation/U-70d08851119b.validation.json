@@ -1,0 +1,380 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "candidate_assembly_exit_code": 0,
+  "candidate_assembly_status": "PASS",
+  "delivery_gate_exit_code": 2,
+  "delivery_gate_status": "REVIEW",
+  "draft_surface_source_check": {
+    "details": {},
+    "scope": [],
+    "semantic_entailment_certified": false,
+    "status": "N/A"
+  },
+  "evidence": {
+    "after_path": "validation/U-70d08851119b.after.tex",
+    "after_sha256": "45452e956d6de8d539e4798dabdb42aa698019ddc79284f8d38fd6aa335a2965",
+    "before_path": "validation/U-70d08851119b.before.tex",
+    "before_sha256": "e2b05381ab3d2e8896c7431bea5ab9cc32956b1f15056438f08e20b26cede7ba",
+    "checker_executed": true,
+    "document_format": "tex",
+    "document_scope": "FRAGMENT",
+    "policy_hashes": {
+      "invariant_checker_sha256": "d8ad41a41f7cc63feeede8c23106cad605ca90985012a3c96dbfcc0e2c363b12",
+      "lexicon_sha256": "52191aaa422515e03e14c9f5981f4e190320b1f6fa203e370041abb742e6937c",
+      "paired_quality_contract_sha256": "aa1d2be0d399dd4b30f15c04fe8f61afe46174faee9dd3f1f063a13b29149846",
+      "paired_quality_verifier_sha256": "ccfb1e53af76cdc15e41214747a0adf2d89a8347a06dd7c14f38622bd5b7685d",
+      "report_extractor_sha256": "49266ff31c35fbbc4b87479866503f9f71649e9df29e7088ea700ab544f62a02",
+      "runtime_contract_sha256": "0b75231f6eefe9412dfc6f137674f2be8edb8cc087bd62ffaa2a285b895599ea",
+      "scanner_sha256": "4237049cafe1c06e81afa33115ffaf00d9ba5d69c86baaada96b387d3c70c048",
+      "validator_sha256": "972911b3ec19e250afd009baeb100aa02bac21c52cb588394f8591f35d0ab65f"
+    },
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "source_path_archived": false
+  },
+  "exit_code": 2,
+  "hard_invariant_layer_status": "PASS",
+  "humanize_quality_claim_allowed": false,
+  "introduced_findings": [],
+  "invariants": {
+    "advisories": [],
+    "errors": [],
+    "evidence": {
+      "document_scope": "FRAGMENT",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "speech_act_audit": {
+        "categories": {
+          "assumption": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "attribution_source": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "condition": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "definition_naming": {
+            "after": {
+              "定义": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "definition_naming",
+                "claim_id": "C0001",
+                "column": 11,
+                "end": 12,
+                "end_column": 13,
+                "end_line": 1,
+                "line": 1,
+                "marker": "定义",
+                "sentence_context": "\\\\section{定义}",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 10
+              }
+            ],
+            "before": {
+              "定义": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "definition_naming",
+                "claim_id": "C0001",
+                "column": 11,
+                "end": 12,
+                "end_column": 13,
+                "end_line": 1,
+                "line": 1,
+                "marker": "定义",
+                "sentence_context": "\\\\section{定义}",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 10
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "focus_scope": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "modality_scope": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "negation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "reporting_observation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          }
+        },
+        "claim_pairing": {
+          "after_claims": 2,
+          "before_claims": 3,
+          "unique_exact_pairs": 2,
+          "unpaired_after_claims": 0,
+          "unpaired_before_claims": 1
+        },
+        "protection": {
+          "after_ranges": 0,
+          "before_ranges": 0,
+          "line_column_basis": "NORMALIZED_LF_1_BASED_UNICODE_CODEPOINT",
+          "masking": "LENGTH_PRESERVING"
+        }
+      }
+    },
+    "hard_failure": false,
+    "status": "pass",
+    "summary": {
+      "advisories": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    "warnings": []
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 1,
+    "introduced_candidates": 0,
+    "unexplained_high_candidates": 0
+  },
+  "mechanical_validation_exit_code": 0,
+  "mechanical_validation_status": "PASS",
+  "mode": "REWRITE",
+  "paired_quality_clearance_granted": false,
+  "paired_quality_review_local_clearance_supported": false,
+  "paired_quality_review_request": {
+    "artifact": {
+      "after_sha256": "45452e956d6de8d539e4798dabdb42aa698019ddc79284f8d38fd6aa335a2965",
+      "before_sha256": "e2b05381ab3d2e8896c7431bea5ab9cc32956b1f15056438f08e20b26cede7ba"
+    },
+    "changes": [
+      {
+        "after": {
+          "end_line": 2,
+          "han_chars": 10,
+          "line_count": 1,
+          "sha256": "9e09b0320a1af2fe3d7e4578de86f51f44e2ecb7ea89f112816075544ea4d8e7",
+          "start_line": 2
+        },
+        "before": {
+          "end_line": 2,
+          "han_chars": 16,
+          "line_count": 1,
+          "sha256": "36bc2bf854acc93d2c3e10cf837033db5e0f5ef44f2718676c5d60186d1a65e7",
+          "start_line": 2
+        },
+        "change_id": "QCH-6b7545f8392e14d8107c",
+        "operation": "REPLACE",
+        "ordinal": 1
+      }
+    ],
+    "limitations": {
+      "academic_correctness": "NOT_EVALUATED",
+      "authorship": "NOT_EVALUATED",
+      "quality_clearance_granted": false
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "d8ad41a41f7cc63feeede8c23106cad605ca90985012a3c96dbfcc0e2c363b12",
+      "lexicon_sha256": "52191aaa422515e03e14c9f5981f4e190320b1f6fa203e370041abb742e6937c",
+      "paired_quality_contract_sha256": "aa1d2be0d399dd4b30f15c04fe8f61afe46174faee9dd3f1f063a13b29149846",
+      "paired_quality_verifier_sha256": "ccfb1e53af76cdc15e41214747a0adf2d89a8347a06dd7c14f38622bd5b7685d",
+      "report_extractor_sha256": "49266ff31c35fbbc4b87479866503f9f71649e9df29e7088ea700ab544f62a02",
+      "runtime_contract_sha256": "0b75231f6eefe9412dfc6f137674f2be8edb8cc087bd62ffaa2a285b895599ea",
+      "scanner_sha256": "4237049cafe1c06e81afa33115ffaf00d9ba5d69c86baaada96b387d3c70c048",
+      "validator_sha256": "972911b3ec19e250afd009baeb100aa02bac21c52cb588394f8591f35d0ab65f"
+    },
+    "request_sha256": "830debaad3248e787d151ca24782649be33a479fdafdaff3703388c500c3354d",
+    "review_contract": {
+      "empty_or_generic_benefit_is_clearance": false,
+      "local_model_or_caller_assertion_is_clearance": false,
+      "required_dimensions": [
+        "actionable_pathology_remaining",
+        "no_change_is_best_available_decision",
+        "problem_span_binding",
+        "independent_reading_benefit",
+        "subject_and_modifier_alignment",
+        "verb_object_collocation",
+        "logical_relation_preservation",
+        "information_density_and_rhythm",
+        "author_voice_non_regression"
+      ],
+      "required_per_change_verdicts": [
+        "ACCEPT",
+        "REVISE",
+        "REVERT"
+      ],
+      "validator_pass_is_quality_clearance": false
+    },
+    "schema": "humanize-paired-quality-review-request/v1",
+    "status": "PENDING_EXTERNAL_REVIEW",
+    "validation_context": {
+      "decision": "REWRITE",
+      "document_format": "tex",
+      "document_scope": "FRAGMENT",
+      "mechanical_validation_status": "PASS",
+      "mode": "REWRITE",
+      "scene": "COURSE"
+    }
+  },
+  "paired_quality_review_status": "PENDING_EXTERNAL_REVIEW",
+  "pending_warnings": [],
+  "proposed_warning_resolutions": [],
+  "report_scope_check": {
+    "editable_range_count": 0,
+    "editable_ranges": [],
+    "extractor_replay_match": null,
+    "fragment_count": 0,
+    "outside_selection_unchanged": null,
+    "report_sha256": null,
+    "scope_path": null,
+    "scope_semantic_sha256": null,
+    "scope_sha256": null,
+    "source_sha256": null,
+    "status": "N/A"
+  },
+  "review_reasons": [
+    "paired_quality_not_evaluated"
+  ],
+  "scene": "COURSE",
+  "semantic_source_check": "N/A",
+  "speech_act_diagnostics": [],
+  "speech_act_layer_status": "PASS",
+  "status": "REVIEW",
+  "structural_plan_check": {
+    "actual_content_changed": true,
+    "change_applied": false,
+    "invariant_baseline_sha256": "d5495a6f2682edda42d1ad6cd4b4b7f3200ebdb0d56cf0d397b46d7986da56d1",
+    "limitations": "non-STRUCTURAL run",
+    "non_structural_paragraph_order_check": {
+      "author_paragraphs_after": 1,
+      "author_paragraphs_before": 1,
+      "authorized_topology_operations": 0,
+      "detected_paragraph_merges": [],
+      "detected_paragraph_splits": [],
+      "light_sentence_reorder": false,
+      "match_evidence": [
+        {
+          "after_index": 0,
+          "before_index": 0,
+          "before_sha256": "9d26cb6c08dae00f4e668d15db7353429b95818df9fdf48705af166321a80e11",
+          "kind": "AUTHOR",
+          "method": "NEAR_EXACT",
+          "protected_ids": [],
+          "similarity": 0.947368
+        }
+      ],
+      "matched_author_paragraphs": 1,
+      "matched_elements": 1,
+      "matched_protected_anchors": 0,
+      "moved_paragraph_sha256": [],
+      "near_exact_reordered": false,
+      "paragraph_topology_changed": false,
+      "protected_anchor_reordered": false,
+      "reordered": false,
+      "scope": "NON_STRUCTURAL_PARAGRAPH_TOPOLOGY_AND_ORDER",
+      "status": "PASS",
+      "topology_authorization_error": "",
+      "topology_authorization_status": "NOT_REQUIRED",
+      "topology_operation_evidence": []
+    },
+    "semantic_review_status": "NOT_ISSUED",
+    "status": "NOT_APPLICABLE"
+  },
+  "style_signal_layer_status": "PASS",
+  "unaccepted_warnings": [],
+  "unexplained_high_findings": [],
+  "warning_proposal_state": {
+    "attestation_status": "NOT_PROVIDED",
+    "cross_record_reviewer_linkability": "NOT_RECORDED",
+    "identity_verified": false,
+    "proposal_source": "NOT_PROVIDED",
+    "proposed_warning_fingerprints": [],
+    "review_clearance_granted": false,
+    "reviewer_identifier_collected": false,
+    "stable_reviewer_pseudonym_recorded": false,
+    "warning_review_request_sha256": null
+  },
+  "warning_resolutions": {},
+  "warning_review_request": null,
+  "warnings_without_resolution_proposal": []
+}

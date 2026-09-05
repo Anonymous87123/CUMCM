@@ -1,0 +1,148 @@
+{
+  "version": "1.0.0",
+  "scene_labels": {
+    "course_notes": "课堂学习与课程笔记",
+    "modeling_engineering": "数学建模与工程仿真",
+    "research_journal": "高端科研与期刊论文",
+    "not_applicable": "非目标正文或审计排除层"
+  },
+  "exclusion_rules": [
+    {
+      "id": "EXC-DEPENDENCY",
+      "contains": [
+        "\\program files\\",
+        "\\microsoft vs code\\",
+        "\\qt\\",
+        "\\node_modules\\",
+        "\\site-packages\\",
+        "\\vendor\\",
+        "\\third_party\\",
+        "\\.codex\\skills\\",
+        "\\.codex\\plugins\\",
+        "\\.codex\\.tmp\\",
+        "d:\\umi-ocr_paddle_v2.1.5\\"
+      ],
+      "eligibility": "excluded_dependency",
+      "note": "Tool, dependency, plugin, or installed-skill documentation; retain in the audit manifest but do not use as academic style evidence."
+    },
+    {
+      "id": "EXC-RECYCLE",
+      "contains": ["\\$recycle.bin\\"],
+      "eligibility": "excluded_archive",
+      "note": "Recycle-bin copy with unstable authority."
+    },
+    {
+      "id": "EXC-CODEX-META",
+      "contains": [
+        "\\.codex\\reports\\",
+        "\\.codex\\attachments\\",
+        "\\.codex\\archived_sessions\\",
+        "\\.codex\\sessions\\"
+      ],
+      "eligibility": "supporting_meta",
+      "note": "Corpus/report/session material used for provenance or method, not as target academic prose."
+    }
+  ],
+  "override_rules": [
+    {
+      "id": "OVR-AGENT-INSTRUCTION",
+      "contains": ["c:\\users\\lenovo\\.codex\\agents.md"],
+      "scene": "not_applicable",
+      "eligibility": "supporting_meta",
+      "note": "Agent instruction file, not an academic manuscript."
+    },
+    {
+      "id": "OVR-META-REPORT",
+      "contains": [
+        "\\physics\\gpt_chinese_style_report",
+        "\\physics\\manual_reading_ledger.md",
+        "\\physics\\academic_style_",
+        "\\physics\\full_style_reorganization_plan.md"
+      ],
+      "scene": "not_applicable",
+      "eligibility": "supporting_meta",
+      "note": "Analysis artifacts describe the corpus; they are not source academic manuscripts."
+    },
+    {
+      "id": "OVR-XWECHAT-MODEL",
+      "contains": ["\\documents\\xwechat_files\\", "\\msg\\file\\2026-05\\main.tex"],
+      "scene": "modeling_engineering",
+      "eligibility": "target",
+      "note": "User-confirmed generated modeling manuscript received through WeChat."
+    },
+    {
+      "id": "OVR-PROBET-VIS",
+      "contains": ["d:\\probet\\lsgo_visualization_assets\\"],
+      "scene": "modeling_engineering",
+      "eligibility": "target",
+      "note": "Engineering visualization, closure audit, and reproducibility material."
+    },
+    {
+      "id": "OVR-PROBET-PAPERS",
+      "contains": ["d:\\probet\\papers_probe_related\\"],
+      "scene": "research_journal",
+      "eligibility": "target",
+      "note": "Research-paper reading and source-to-project transfer notes."
+    }
+  ],
+  "scene_rules": [
+    {
+      "id": "SCN-RESEARCH",
+      "scene": "research_journal",
+      "contains": [
+        "d:\\2026-byd-arxiv\\",
+        "d:\\probet\\",
+        "\\journal\\",
+        "\\arxiv\\",
+        "\\literature_review",
+        "\\论文精读"
+      ],
+      "note": "Research manuscripts, journal drafts, theoretical method papers, and literature synthesis."
+    },
+    {
+      "id": "SCN-MODELING",
+      "scene": "modeling_engineering",
+      "contains": [
+        "d:\\lsgo-platform\\",
+        "d:\\project-costrict\\",
+        "d:\\student_score_management_system\\",
+        "d:\\linuxdo-level-monitor\\",
+        "d:\\【赛题相关】",
+        "\\mathematical_model",
+        "\\simulation",
+        "\\experiment_protocol",
+        "\\model_pipeline"
+      ],
+      "note": "Modeling, simulation, algorithm engineering, experimental protocol, and reproducibility documentation."
+    },
+    {
+      "id": "SCN-COURSE",
+      "scene": "course_notes",
+      "contains": [
+        "d:\\code latex\\",
+        "d:\\code latex_backup\\",
+        "d:\\高中时期资料\\",
+        "d:\\code c++\\",
+        "d:\\电脑管家迁移文件\\",
+        "\\past-exams\\",
+        "\\cet6\\",
+        "\\course\\",
+        "\\lecture\\",
+        "\\exercise\\"
+      ],
+      "note": "Course notes, textbooks, worked derivations, exam solutions, and learning review."
+    }
+  ],
+  "archive_markers": [
+    "d:\\code latex_backup\\",
+    "\\.claude\\worktrees\\",
+    "\\backup\\",
+    "\\archive\\"
+  ],
+  "non_prose_markers": [
+    "\\build\\",
+    "\\data\\experiment_record.",
+    "\\manifest.md",
+    "\\fields.md"
+  ]
+}

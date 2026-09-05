@@ -1,0 +1,90 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v3",
+  "unit_id": "U-70d08851119b",
+  "chunk_binding_sha256": "e162c56c74cda408d93d16e81b920963def9f841e60d47358ace5947a30ce95b",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "e8271e953d604cab9c4b4c0b6dd670d69145c0e44ee46c1ea5d40410903ce16c",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "2eb3147139916068",
+    "prepare_integrity_sha256": "b98ece4adfbc3fccbe9792644c95e595e64a8bb780b50d9ef2dff164ad790382",
+    "run_metadata_sha256": "f00395aa337e6e73c30d5ee2391a603de2f752a84ebb4d3702db8f1911b1d6fe",
+    "policy_snapshot_sha256": "c3511adfd6a50bd4468f479168de858fa65f4622475ff0e108592a8210948aec",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "29c69bda39c34bcb78ba7428a28664fc3dfddfe723f04fbbe6386c18102afff8",
+      "unit_id": "U-70d08851119b",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 0,
+      "end": 33,
+      "start_line": 1,
+      "end_line": 2,
+      "source_span_sha256": "29c69bda39c34bcb78ba7428a28664fc3dfddfe723f04fbbe6386c18102afff8",
+      "masked_text_sha256": "d5495a6f2682edda42d1ad6cd4b4b7f3200ebdb0d56cf0d397b46d7986da56d1",
+      "chunk_binding_sha256": "e162c56c74cda408d93d16e81b920963def9f841e60d47358ace5947a30ce95b"
+    },
+    "scene_route": {
+      "requested_scene": "COURSE",
+      "resolved_scene": "COURSE",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "fa460a93142173f1a89f343f5aeb771db0a19933c4b04785c823ea7181e12e81",
+      "policy_revision": 3,
+      "heading_path_sha256": "a41da611e04d53f3050c35dba68ba8b7beafe827c1a625f42be4a84713161d55",
+      "routing_input_sha256": "43bf5d767bb3f3557e0da18dfbe1caef2aa8f1462ee1c7a90e60d90cbb6cd273"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-course",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "COURSE",
+      "profile_sha256": "e8271e953d604cab9c4b4c0b6dd670d69145c0e44ee46c1ea5d40410903ce16c"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "3d4b73086fcb8ac3136985e5068a0efea5fc1ec6c411a3a20c281ac8569960a3"
+  },
+  "keep_reasons": {},
+  "masked_text": "[[PROTECTED:F00001-P00001:b11b4ca186c0]]section{定义}\n该段文字保持自然表达。\n",
+  "rewrite_intent": {
+    "summary": "删除失去强调作用的程式化提示语",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "LEX-EMPH-01"
+        ],
+        "summary": "删除失去强调作用的程式化提示语"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 2,
+        "end_line": 2,
+        "sha256": "1e6e3b1dee14c838354a8e61f22bfd86b725b9dd66bf537569c4336424875713"
+      }
+    ],
+    "target_signals": [
+      "LEX-EMPH-01"
+    ]
+  }
+}

@@ -1,0 +1,83 @@
+{
+  "schema": "cumcm-style-benchmark-runs/v1",
+  "active_runs_root": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark",
+  "active_manifests": {
+    "dev": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-dev-v3\\blind-ready-v10.json",
+      "sha256": "e61ea85e0c8c9a7ddebabc84e326ba0b58213f7edae49d6ee80b332677343aae",
+      "historical_transport_only": true
+    },
+    "holdout": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v1-holdout-v3\\blind-ready-v10.json",
+      "sha256": "41f60646e702e66f87ea78d1a24b0090884a0a8ab93b6e2029e231591a165518",
+      "historical_transport_only": true
+    }
+  },
+  "current_rule_suites": {
+    "dev": {
+      "suite_id": "cumcm-v2-dev",
+      "definition_path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\benchmarks\\cumcm-v2-dev.json",
+      "definition_sha256": "e58e4de2aa9b65c71a71be95f7df771aebcc96555be4c2bfbe680e4299cb9158",
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-dev-current-rules-20260820-r12\\blind-ready.json",
+      "sha256": "4c86a16684d7463b3f90562de7e8e945c23404e1f12a1771324cc53d3b2fdf00",
+      "benchmark_goal": "preservation",
+      "state": "BLIND_READY",
+      "rule_freshness": "current-bound",
+      "candidates": 9
+    },
+    "holdout": {
+      "suite_id": "cumcm-v2-holdout",
+      "definition_path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\benchmarks\\cumcm-v2-holdout.json",
+      "definition_sha256": "727b9f0a4aa5881c7ca7c461860dd1e4269395edc81c0affa4f3fa84b7231c49",
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-holdout-current-rules-20260820-r12\\blind-ready.json",
+      "sha256": "0d4de53e986f37995cfbff88256c2f41bb93095f8ff760650a9fd96eab34c5e6",
+      "benchmark_goal": "preservation",
+      "state": "BLIND_READY",
+      "rule_freshness": "current-bound",
+      "candidates": 9
+    }
+  },
+  "current_improvement_suites": {
+    "build_report": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r3\\build-report.json",
+      "sha256": "b243ddc72c33d53c933dfd4f6ee896d22dcb7baee238472f4435e24e0317b959"
+    },
+    "source": {
+      "path": "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main.tex",
+      "sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609"
+    },
+    "dev": {
+      "suite_id": "real-draft-20260820-r3-dev",
+      "benchmark_goal": "improvement",
+      "definition_path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r3\\dev\\suite.json",
+      "definition_sha256": "9f08e9e78330cdf6c2dd86749f6161336e6e525591a3439ea37e166532312f90",
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r3\\dev-run\\blind-ready.json",
+      "sha256": "72253471e229ad6c45b177fad7e5615086bdd9748b9c4b094cffdbd42c660fb4",
+      "state": "BLIND_READY",
+      "rule_freshness": "current-bound",
+      "candidates": 9
+    },
+    "holdout": {
+      "suite_id": "real-draft-20260820-r3-holdout",
+      "benchmark_goal": "improvement",
+      "definition_path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r3\\holdout\\suite.json",
+      "definition_sha256": "ce0aade76e03ca272fa2ea04d755defc80226dae3258cb14ffb94be59a6abef0",
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r3\\holdout-run\\blind-ready.json",
+      "sha256": "1a5ddcdaced43c534bfb07233f7008a6bc4287440f84cc6ed0c9d360917509cb",
+      "state": "BLIND_READY",
+      "rule_freshness": "current-bound",
+      "candidates": 9
+    }
+  },
+  "real_draft_holdouts": [
+    {
+      "id": "yangtze-aigc-v6d-20260818",
+      "kind": "historical_transport_only",
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\blind-review-v6d\\review-addendum-v2.json",
+      "sha256": "603e94e6ef36486b5ec42fb4c2c456d1a01bb4e62a6a26fe6d848eefd48f4d7c",
+      "current_release_validation": false,
+      "purpose": "Real mathematical-modeling draft-to-candidate blind review; review transport upgraded without replacing historical generation-rule hashes."
+    }
+  ],
+  "purpose": "Discover frozen CUMCM dev/holdout manifests and real draft-to-candidate review evidence. Passing still requires suite, candidate, generation, anonymous review bundle, blind-packet and source hash verification; historical addenda never prove the current release."
+}

@@ -1,0 +1,113 @@
+{
+  "coverage": {
+    "explicit_conflicts": [],
+    "lexical_keeps": [],
+    "selected_spans": [
+      {
+        "decision": "HUNK",
+        "hunk_id": "H001",
+        "reason": "连续字幕使推导呈现机械卡片节奏，本次改为实际方向切换。",
+        "selection_id": "S001",
+        "source_text": "水平方向合力为",
+        "start_byte": 315
+      },
+      {
+        "decision": "HUNK",
+        "hunk_id": "H002",
+        "reason": "连续字幕使推导呈现机械卡片节奏，本次由加速度对象直接承接。",
+        "selection_id": "S002",
+        "source_text": "因此",
+        "start_byte": 412
+      },
+      {
+        "decision": "HUNK",
+        "hunk_id": "H003",
+        "reason": "命令式句首不是独立命题，删除后公式与极值条件仍逐字保留。",
+        "selection_id": "S003",
+        "source_text": "令 ",
+        "start_byte": 481
+      },
+      {
+        "decision": "HUNK",
+        "hunk_id": "H004",
+        "reason": "调整非保护中文搭配，使函数与变量关系直接进入主句。",
+        "selection_id": "S004",
+        "source_text": " 对 ",
+        "start_byte": 498
+      },
+      {
+        "decision": "HUNK",
+        "hunk_id": "H005",
+        "reason": "把公式字幕改成极值条件说明，保留原有推导职责。",
+        "selection_id": "S005",
+        "source_text": " 取极值：",
+        "start_byte": 513
+      },
+      {
+        "decision": "HUNK",
+        "hunk_id": "H006",
+        "reason": "用具体求解关系替换泛化推进词，末式仍保持原样。",
+        "selection_id": "S006",
+        "source_text": "于是",
+        "start_byte": 603
+      }
+    ],
+    "source_kind": "DOCUMENT"
+  },
+  "hunks": [
+    {
+      "decision": "REWRITE",
+      "hunk_id": "H001",
+      "reason": "把独占行的对象标签改为方向切换，保留水平方向合力这一原有职责。",
+      "replacement": "转到水平方向，合力为",
+      "source_text": "水平方向合力为",
+      "start_byte": 315
+    },
+    {
+      "decision": "REWRITE",
+      "hunk_id": "H002",
+      "reason": "由公式对象直接承接前式，减少连续的泛化推进字幕。",
+      "replacement": "加速度为",
+      "source_text": "因此",
+      "start_byte": 412
+    },
+    {
+      "decision": "DELETE_STYLE_SHELL",
+      "hunk_id": "H003",
+      "reason": "删除命令式句首，极值动作仍由同一行其余文字和公式完整表达。",
+      "replacement": "",
+      "source_text": "令 ",
+      "start_byte": 481
+    },
+    {
+      "decision": "REWRITE",
+      "hunk_id": "H004",
+      "reason": "把命令式搭配改成函数关于变量的直接说明，不改变两个数学对象。",
+      "replacement": " 关于 ",
+      "source_text": " 对 ",
+      "start_byte": 498
+    },
+    {
+      "decision": "REWRITE",
+      "hunk_id": "H005",
+      "reason": "让后接导数方程直接承担极值条件，避免为公式另配操作命令。",
+      "replacement": " 的极值条件为：",
+      "source_text": " 取极值：",
+      "start_byte": 513
+    },
+    {
+      "decision": "REWRITE",
+      "hunk_id": "H006",
+      "reason": "明确末式来自上一行方程求解，替换泛化的推导推进词。",
+      "replacement": "解得",
+      "source_text": "于是",
+      "start_byte": 603
+    }
+  ],
+  "intensity": "BALANCED",
+  "mode": "REWRITE",
+  "protected_terms": [],
+  "requested_output": "PATCH",
+  "scene": "COURSE",
+  "schema_version": "humanize-short-patch-selection/v2"
+}

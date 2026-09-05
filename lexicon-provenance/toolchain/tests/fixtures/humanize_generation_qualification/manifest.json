@@ -1,0 +1,35 @@
+{
+  "schema_version": "humanize-generation-qualification-manifest/v1",
+  "tests_total": 999999,
+  "cases": [],
+  "archived_failures": [
+    {
+      "id": "ARCHIVED-E1-PASS-001",
+      "artifacts": {
+        "input": {
+          "path": "fixtures/humanize_forward_v6/blind_research_input.md",
+          "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"
+        },
+        "output": {
+          "path": "fixtures/humanize_forward_v6/blind_research_output.md",
+          "sha256": "70e3425e285824e38714f54fa0badddcc67535fde3fad49e937ce1e83609e804"
+        }
+      },
+      "assertions": [
+        {
+          "id": "ARCHIVED-E1-ASSERT-001",
+          "result": "PASS"
+        }
+      ],
+      "claims": [
+        {
+          "claim_id": "ARCHIVED-E1-CLAIM-001",
+          "atom_id": "MODE-02",
+          "assertion_ids": [
+            "ARCHIVED-E1-ASSERT-001"
+          ]
+        }
+      ]
+    }
+  ]
+}

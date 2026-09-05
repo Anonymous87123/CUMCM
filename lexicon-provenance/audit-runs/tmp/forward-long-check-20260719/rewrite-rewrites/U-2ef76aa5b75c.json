@@ -1,0 +1,90 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v3",
+  "unit_id": "U-2ef76aa5b75c",
+  "chunk_binding_sha256": "b3663c5386ddfe8fd7d730731e13931c550b4bdb9c7b7bbfbe44f0db1dec52b5",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "3b4eeeaeb3af397378ead360550371ff4632cbce6fceca8923479c53de23a112",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "32b2a27a98352e35",
+    "prepare_integrity_sha256": "6b56c85cf17856751741aaec9df8fb6d5c02a7c70d245d8b0db9fa82e59dce6f",
+    "run_metadata_sha256": "972d61085d05e155a222deba79d78e453d0f75693437cc33719155b9292fccae",
+    "policy_snapshot_sha256": "a7c8cc2b3598f65e2e2fc3e95261836c56eba69f22c36ed69fe972539b95d28b",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "1d2af073ed254aa3f048fac9f202e79c94de8a16239f56c7aeda14ee5de3114d",
+      "unit_id": "U-2ef76aa5b75c",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 0,
+      "end": 50,
+      "start_line": 1,
+      "end_line": 5,
+      "source_span_sha256": "1d2af073ed254aa3f048fac9f202e79c94de8a16239f56c7aeda14ee5de3114d",
+      "masked_text_sha256": "15fd11a93eeb74fe3526a9b4daf5fd2d9b79740ed5161a00c07948ee492298d3",
+      "chunk_binding_sha256": "b3663c5386ddfe8fd7d730731e13931c550b4bdb9c7b7bbfbe44f0db1dec52b5"
+    },
+    "scene_route": {
+      "requested_scene": "GENERAL",
+      "resolved_scene": "GENERAL",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "fa460a93142173f1a89f343f5aeb771db0a19933c4b04785c823ea7181e12e81",
+      "policy_revision": 3,
+      "heading_path_sha256": "3cef912ce8819fff2ed202243014dc2c3aebaff713a3b7cc0779eb1c618f5186",
+      "routing_input_sha256": "6fedcd067f9c462505548b9cad41cf88b7f0786b6075a714ff3eb7c76f799747"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-general",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "GENERAL",
+      "profile_sha256": "3b4eeeaeb3af397378ead360550371ff4632cbce6fceca8923479c53de23a112"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "8930e9e63cfd984d94afe901957db1e349b6555b4d213fb715f6b90fe21ecf4f"
+  },
+  "keep_reasons": {},
+  "masked_text": "[[PROTECTED:F00001-P00001:b3b27bc49769]]\n材料范围限于已经登记的记录，相关说明仍限于这些记录。\n\n下一段保留原有对象与限定条件。\n",
+  "rewrite_intent": {
+    "summary": "删除空泛收尾并保留材料范围",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_STYLE_SHELL",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "STYLE-EMPTY-ENDING"
+        ],
+        "summary": "删除空泛收尾并保留材料范围"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 2,
+        "end_line": 2,
+        "sha256": "cad3ac7384017ed9db4b52809cc7dcb2a8b637eb3bcb1a7105757961b7658c8d"
+      }
+    ],
+    "target_signals": [
+      "STYLE-EMPTY-ENDING"
+    ]
+  }
+}

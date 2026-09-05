@@ -24,6 +24,10 @@ __pycache__/
 tmp/
 .playwright-cli/
 
+# 例外：lexicon-provenance 是从 physics 迁入的词库来源证据，
+# 其 audit-runs/tmp 是原始运行产物，属于 provenance 的一部分，必须入库
+!lexicon-provenance/audit-runs/tmp/
+
 # OCR/raster-review 截图证据，由 .cumcm-work/build_deep_evidence.py 等脚本再生
 .cumcm-work/deep-evidence/
 

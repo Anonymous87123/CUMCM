@@ -1,0 +1,125 @@
+{
+ "schema": "humanize-lexicon-provenance/v1",
+ "generated_at": "2026-09-05T07:37:10.347446+00:00",
+ "purpose": "记录 1417 条 strict_phrase_inventory 的挖掘来源、工具链与人工筛选证据。迁移自 D:\\code LateX\\elegantbook\\physics（该目录是 elegantbook 物理教材仓库，审计文件不属于它）。本清单不构成检测分数、作者身份或 AIGC 概率结论。",
+ "owns_lexicon": {
+  "path": "AIGC/humanize-academic-chinese/references/lexical-signals.json",
+  "schema_version": "1.5.0",
+  "signals": 51,
+  "strict_phrase_inventory_entries": 1417,
+  "inventory_manifest_sha256": "3282de02a7664e70befc4bfe9ee4ab1dbd775b6c7b0c8ad91b04c2d7b52bbe66"
+ },
+ "toolchain": {
+  "expander": {
+   "path": "lexicon-provenance/toolchain/scripts/expand_humanize_strict_lexicon.py",
+   "sha256": "aca0d1ae31abd72ecc10017fc6e7beeb74cb1739bb6a469ff2f1bba1a01c29cc",
+   "recorded_expander_sha256": "aca0d1ae31abd72ecc10017fc6e7beeb74cb1739bb6a469ff2f1bba1a01c29cc",
+   "matches_recorded": true
+  },
+  "script_files": 15,
+  "test_files": 115
+ },
+ "candidate_corpus": {
+  "root": "D:\\code LateX\\humanize-reports\\humanize-strict-lexicon-20260803-rootgraph-v19-second-round",
+  "in_repo": false,
+  "reason": "all_candidates_after_exact_rescan.csv 为 1.34 GB，超出 GitHub 单文件上限，按路径+哈希引用。",
+  "main_csv": {
+   "name": "all_candidates_after_exact_rescan.csv",
+   "bytes": 1340486919,
+   "sha256": "733bde097a3f5793bdf078efb923dd28442ad203811ccb7af8658ea42e517e08",
+   "recorded_candidate_csv_sha256": "733bde097a3f5793bdf078efb923dd28442ad203811ccb7af8658ea42e517e08",
+   "matches_recorded": true,
+   "candidate_rows": 894778
+  },
+  "siblings": [
+   "aggregate_root_probe_discovery_audit.csv",
+   "all_candidates_after_exact_rescan.csv",
+   "chat_snapshot.json",
+   "chat_snapshot_manifest.csv",
+   "confirmed_parent_root_probe_audit.csv",
+   "csv_decomposition_parent_manifest.csv",
+   "csv_decomposition_subphrase_candidates.csv",
+   "document_ngram_candidate_audit.csv",
+   "document_ngram_selected_for_exact_rescan.csv",
+   "document_root_discovery_audit.csv",
+   "document_roots_selected_for_graph.csv",
+   "document_snapshot.json",
+   "document_snapshot_manifest.csv",
+   "preselection_pool_drops.csv",
+   "preselection_rejections.csv",
+   "raw_short_core_candidate_audit.csv",
+   "root_empirical_shells.sqlite3",
+   "root_first_discovery_audit.csv",
+   "root_first_selected_roots.csv",
+   "root_inversion_discovery_audit.csv",
+   "root_inversion_family_candidate_audit.csv",
+   "root_inversion_selected_roots.csv",
+   "root_inversion_selected_roots.json",
+   "root_release_accounting.csv",
+   "root_release_accounting.json",
+   "run_metadata.json",
+   "semantic_release_decisions.csv",
+   "single_character_root_rankings.csv",
+   "single_character_root_rankings.json",
+   "streaming_finalize_report.md",
+   "strict_ai_phrase_inventory_expanded.json",
+   "strict_ai_phrase_rankings_expanded.csv"
+  ]
+ },
+ "curation_evidence": {
+  "machine_publish_strict_rows": 34948,
+  "machine_audit_only_rows": 859830,
+  "human_released_entries": 1417,
+  "released_is_subset_of_machine_publish_strict": true,
+  "machine_rows_rejected_by_human_review": 33531,
+  "note": "机器 publish_strict 含大量数学与技术词（多项式、正则化、行列式、三角形、无向图、适应度、激活函 等）。1417 条是人工筛选结果，不能用机器判定直接扩表。"
+ },
+ "reports": [
+  "academic_scenario_classification_report.md",
+  "academic_scene_skill_cluster_report.md",
+  "academic_style_analysis_execution_plan.md",
+  "academic_style_reorganization_plan.md",
+  "findings.txt",
+  "full_style_reorganization_plan.md",
+  "gpt_chinese_style_report.md",
+  "gpt_chinese_style_report_detailed.md",
+  "gpt_chinese_style_report_restructured.md",
+  "humanize_academic_chinese_usability_red_blue_report.md",
+  "humanize_corpus_action_red_blue_report.md",
+  "legacy_aigc_skill_distillation_report.md",
+  "manual_reading_ledger.md",
+  "mine_findings.txt",
+  "pure_academic_humanize_skill_report.md"
+ ],
+ "audit_runs": [
+  "._humanize_blind_forward_research_blue",
+  ".codex-retry-check",
+  ".humanize-audit-temp",
+  "tmp"
+ ],
+ "build_run_archive": {
+  "root": "D:\\code LateX\\humanize-reports\\physics-build-archive-20260905",
+  "in_repo": false,
+  "reason": "340 MB 的 humanize 迭代运行产物（maturity v10-v35、generator-projection、direct-validation、capture、fresh-*、full-test-audit 日志）。知识已由 reports/ 与 toolchain/ 承载，原始运行产物移出 git，按路径引用。",
+  "moved_from": "D:\\code LateX\\elegantbook\\physics\\build",
+  "moved_at": "2026-09-05T08:02:34.527702+00:00",
+  "file_count": 12351,
+  "bytes": 329002598,
+  "top_level_entries": 535,
+  "retained_in_physics": [
+   "build/physics1.aux",
+   "build/physics1.pdf",
+   "build/physics2.aux",
+   "build/physics2.pdf"
+  ]
+ },
+ "source_cleanup": {
+  "repo": "D:\\code LateX  (branch main)",
+  "path_prefix": "elegantbook/physics/",
+  "tracked_before": 12861,
+  "tracked_after": 152,
+  "staged_deletions": 12709,
+  "committed": false,
+  "note": "删除已 staged 未提交。同仓库 elegantbook/DiscreteMathematics/ 有无关改动，提交时勿一并纳入。"
+ }
+}

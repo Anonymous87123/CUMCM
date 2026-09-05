@@ -1,0 +1,872 @@
+{
+  "bundle_sha256": "99584f6665797f93b91df68f0ea362ff35a923391b5b77b6b0efee7f22442ca0",
+  "completion_claim_allowed": false,
+  "coverage": {
+    "academic_correctness": "NOT_EVALUATED",
+    "coverage_basis": [
+      "CURRENT_SCANNER_HIGH_AUDIT_VIEW",
+      "CALLER_BOUND_SELECTED_SPANS",
+      "CALLER_DECLARED_CONFLICT_PAIRS"
+    ],
+    "coverage_claim_scope": "ENUMERATED_HIGH_AND_BOUND_DECLARATIONS_ONLY",
+    "coverage_completion_claim_allowed": true,
+    "coverage_limitations": [
+      "NO_COMPLETE_NATURAL_LANGUAGE_SEMANTIC_DISCOVERY",
+      "CONFLICT_INVENTORY_IS_CALLER_DECLARED_ONLY",
+      "KEEP_REASONS_ARE_NOT_EXTERNAL_QUALITY_CLEARANCE",
+      "SELF_CONSISTENCY_ONLY_WITHOUT_EXTERNAL_REQUEST_ANCHOR"
+    ],
+    "coverage_sha256": "1ae4eb39074d42a155f26e136ddd9e126d415649650df493664b1e6a6cf81340",
+    "declarations": {
+      "explicit_conflicts": [],
+      "lexical_keeps": [],
+      "selected_spans": [
+        {
+          "decision": "HUNK",
+          "end_byte": 121,
+          "hunk_id": "H001",
+          "reason": "显式处理说明书式后台开场。",
+          "selection_id": "S001",
+          "source_text": "本文档不是实验流水账，而是给论文写作使用的",
+          "source_text_sha256": "24977837b88b3290d1bfb0b663fd87f170efc29c6ff389e3da816af32437dd95",
+          "start_byte": 58
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 231,
+          "hunk_id": "H003",
+          "reason": "显式处理自问式主张目录。",
+          "selection_id": "S003",
+          "source_text": "我们现在最强的主张到底是什么。",
+          "source_text_sha256": "90d585464533ce7aa8532e45b02ad8fa5d4407f2b3b02d551ec84520f24dbf38",
+          "start_byte": 186
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 289,
+          "hunk_id": "H004",
+          "reason": "显式处理结果验收式问句。",
+          "selection_id": "S004",
+          "source_text": "哪些结果已经足够进入论文主表与主图。",
+          "source_text_sha256": "efce1ff559e21060af547badcc7d3fe199608ca68ec002edf9a3125e4f080102",
+          "start_byte": 235
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 353,
+          "hunk_id": "H005",
+          "reason": "显式处理第二梯队工单语汇。",
+          "selection_id": "S005",
+          "source_text": "哪些结果只能作为第二梯队支持或边界条件。",
+          "source_text_sha256": "288a192a13ad6d62812adcf0da5cac1ac822e2a4114c6a95c7a8441c6283b146",
+          "start_byte": 293
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 434,
+          "hunk_id": "H006",
+          "reason": "显式处理口语化正反追问。",
+          "selection_id": "S006",
+          "source_text": "到底证明了什么、没证明什么。",
+          "source_text_sha256": "2f75cd51c710c98caca2cc93f23bbb8016aeda35736ce105ef7b6fc88f2b5dc3",
+          "start_byte": 392
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 492,
+          "hunk_id": "H007",
+          "reason": "显式处理预演审稿回复口吻。",
+          "selection_id": "S007",
+          "source_text": "审稿人可能怎么质疑，我们该如何回应。",
+          "source_text_sha256": "0ca965c5e73b4afeac3f2c83c369d8ea0a8367e090579a67f7f87a609ac5bfd6",
+          "start_byte": 438
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 558,
+          "hunk_id": "H008",
+          "reason": "显式处理后台章节裁决口吻。",
+          "selection_id": "S008",
+          "source_text": "论文 Results/Discussion 现在最合理的写法是什么。",
+          "source_text_sha256": "c0b278bcceace46447e4dff3427ad35a6e03bf815376bcd680661b22d933855e",
+          "start_byte": 496
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 666,
+          "hunk_id": "H009",
+          "reason": "显式处理空泛的主张强度自评。",
+          "selection_id": "S009",
+          "source_text": "当前数据支持一个分层、谨慎但已经相当有力的主张：",
+          "source_text_sha256": "581c90138b5a25c5333381755655b64b8e87dc87cbd2091184eb2df723dc2d89",
+          "start_byte": 594
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 1051,
+          "hunk_id": "H010",
+          "reason": "显式处理无信息递进报幕。",
+          "selection_id": "S010",
+          "source_text": "更进一步，在 ",
+          "source_text_sha256": "8c8d48b900e5975afbf458803ecc5bff9f59cf7c4f48e07482605a0e7f8ba2ba",
+          "start_byte": 1032
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 1131,
+          "hunk_id": "H011",
+          "reason": "显式处理作者在场式实验报幕。",
+          "selection_id": "S011",
+          "source_text": " 的独立预算 method-line 实验里，我们已经看到：",
+          "source_text_sha256": "70a2c55daa6cc5d07f54185907a35d9d61a32a794c29f6ecb6f17c24af177494",
+          "start_byte": 1069
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 1397,
+          "hunk_id": "H012",
+          "reason": "显式处理口语化成本评价。",
+          "selection_id": "S012",
+          "source_text": "purity 很低、但 geometry-first 的便宜分解器",
+          "source_text_sha256": "21aca7ea2c9528a2eedd2ccc6cdea680f3208e65e9e6a40e7103e70a1adcf9ef",
+          "start_byte": 1344
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 1441,
+          "hunk_id": "H013",
+          "reason": "显式处理防御式范围引入。",
+          "selection_id": "S013",
+          "source_text": "更谨慎地说，这仍然不是一个",
+          "source_text_sha256": "001637b6ec9005910cdf754bfa7019ebe76c0be39a09a6a37b06811ad9ff52fd",
+          "start_byte": 1402
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 1536,
+          "hunk_id": "H014",
+          "reason": "显式处理万能定理口语标签。",
+          "selection_id": "S014",
+          "source_text": "的万能定理。",
+          "source_text_sha256": "165a501bc8e47b1b7052ab9eb298ca1df398ccdd6d57582a56e6af4ef647b2f7",
+          "start_byte": 1518
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 1751,
+          "hunk_id": "H015",
+          "reason": "显式处理论文必须的编辑命令。",
+          "selection_id": "S015",
+          "source_text": "因此论文必须采用",
+          "source_text_sha256": "80e807832da7caafa87677cede83762a7bb17159ee98c48c5acbbb17d17bde16",
+          "start_byte": 1727
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 1820,
+          "hunk_id": "H016",
+          "reason": "显式处理叙事施工与一刀切口吻。",
+          "selection_id": "S016",
+          "source_text": "的叙事，而不是一刀切。",
+          "source_text_sha256": "d9dd36004f3e09aaf4a94461a3d544dbbb215ef2eddd82afabaadb66badd6003",
+          "start_byte": 1787
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 1900,
+          "hunk_id": "H017",
+          "reason": "显式处理主结果准入式标题。",
+          "selection_id": "S017",
+          "source_text": "### 2.1 强证据：可以进入论文主结果",
+          "source_text_sha256": "0fbddeebe91ceda87a132965d431f4e270a5fb8cd7faafe2bd7310e98d883157",
+          "start_byte": 1853
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 4272,
+          "hunk_id": "H018",
+          "reason": "显式处理单独小节准入判断。",
+          "selection_id": "S018",
+          "source_text": "Method-line 的 independent paper 已经足够进入一个单独 Results 小节。",
+          "source_text_sha256": "bd15acb512af8f75a4ed932e2e6fe8f6e7fa55d19abf97899da971b225562d24",
+          "start_byte": 4190
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 5209,
+          "hunk_id": "H019",
+          "reason": "显式处理中等证据工单标签。",
+          "selection_id": "S019",
+          "source_text": "### 2.2 中等证据：可以作为第二梯队支持",
+          "source_text_sha256": "dafa31eb6256c84487e480b4d62d07ab5b919f5294541d55d55620c4b00a0238",
+          "start_byte": 5156
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 6010,
+          "hunk_id": "H020",
+          "reason": "显式处理口语化指标提醒。",
+          "selection_id": "S020",
+          "source_text": "不过这些函数的收敛过程更复杂，不能只看单一指标。",
+          "source_text_sha256": "b106a20f504badf22d0db64432df71f82ecb0571d2e74f8cad9c0ece22df6962",
+          "start_byte": 5938
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 6098,
+          "hunk_id": "H021",
+          "reason": "显式处理证据链验收闭合句。",
+          "selection_id": "S021",
+          "source_text": "证据链派生表和图已经足以把几何、性能、统计归因连起来。",
+          "source_text_sha256": "b2845e1c9b0b0f180c6294991d7f0d2f01b4c42ea7eb82e65bd8505b550fdc31",
+          "start_byte": 6017
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 6124,
+          "hunk_id": "H022",
+          "reason": "显式处理分析工件的主线标签。",
+          "selection_id": "S022",
+          "source_text": "主线 analysis：",
+          "source_text_sha256": "5d35b6a1dc8dc9d03a90ad7e6b71cb14fdbdc121e1fd722a1594c8fb25f15c15",
+          "start_byte": 6106
+        },
+        {
+          "decision": "HUNK",
+          "end_byte": 6209,
+          "hunk_id": "H023",
+          "reason": "显式处理图工件的主线标签。",
+          "selection_id": "S023",
+          "source_text": "主线图：",
+          "source_text_sha256": "51649b74c9eaa3571f39f518ee0a121c29ac0155225d8ef4ed8771b69002243a",
+          "start_byte": 6197
+        }
+      ],
+      "source_kind": "DOCUMENT"
+    },
+    "declarations_sha256": "0b50d59651e8b018e205e586db0e97816c9b10595c84f4dde430c5756b1b9388",
+    "humanize_quality_claim_allowed": false,
+    "inventories": {
+      "explicit_conflicts": [],
+      "lexical_high": [],
+      "selected_spans": [
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H001",
+            "reason": "显式处理说明书式后台开场。"
+          },
+          "end_byte": 121,
+          "hunk_id": "H001",
+          "reason": "显式处理说明书式后台开场。",
+          "selection_id": "S001",
+          "source_text": "本文档不是实验流水账，而是给论文写作使用的",
+          "source_text_sha256": "24977837b88b3290d1bfb0b663fd87f170efc29c6ff389e3da816af32437dd95",
+          "start_byte": 58
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H003",
+            "reason": "显式处理自问式主张目录。"
+          },
+          "end_byte": 231,
+          "hunk_id": "H003",
+          "reason": "显式处理自问式主张目录。",
+          "selection_id": "S003",
+          "source_text": "我们现在最强的主张到底是什么。",
+          "source_text_sha256": "90d585464533ce7aa8532e45b02ad8fa5d4407f2b3b02d551ec84520f24dbf38",
+          "start_byte": 186
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H004",
+            "reason": "显式处理结果验收式问句。"
+          },
+          "end_byte": 289,
+          "hunk_id": "H004",
+          "reason": "显式处理结果验收式问句。",
+          "selection_id": "S004",
+          "source_text": "哪些结果已经足够进入论文主表与主图。",
+          "source_text_sha256": "efce1ff559e21060af547badcc7d3fe199608ca68ec002edf9a3125e4f080102",
+          "start_byte": 235
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H005",
+            "reason": "显式处理第二梯队工单语汇。"
+          },
+          "end_byte": 353,
+          "hunk_id": "H005",
+          "reason": "显式处理第二梯队工单语汇。",
+          "selection_id": "S005",
+          "source_text": "哪些结果只能作为第二梯队支持或边界条件。",
+          "source_text_sha256": "288a192a13ad6d62812adcf0da5cac1ac822e2a4114c6a95c7a8441c6283b146",
+          "start_byte": 293
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H006",
+            "reason": "显式处理口语化正反追问。"
+          },
+          "end_byte": 434,
+          "hunk_id": "H006",
+          "reason": "显式处理口语化正反追问。",
+          "selection_id": "S006",
+          "source_text": "到底证明了什么、没证明什么。",
+          "source_text_sha256": "2f75cd51c710c98caca2cc93f23bbb8016aeda35736ce105ef7b6fc88f2b5dc3",
+          "start_byte": 392
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H007",
+            "reason": "显式处理预演审稿回复口吻。"
+          },
+          "end_byte": 492,
+          "hunk_id": "H007",
+          "reason": "显式处理预演审稿回复口吻。",
+          "selection_id": "S007",
+          "source_text": "审稿人可能怎么质疑，我们该如何回应。",
+          "source_text_sha256": "0ca965c5e73b4afeac3f2c83c369d8ea0a8367e090579a67f7f87a609ac5bfd6",
+          "start_byte": 438
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H008",
+            "reason": "显式处理后台章节裁决口吻。"
+          },
+          "end_byte": 558,
+          "hunk_id": "H008",
+          "reason": "显式处理后台章节裁决口吻。",
+          "selection_id": "S008",
+          "source_text": "论文 Results/Discussion 现在最合理的写法是什么。",
+          "source_text_sha256": "c0b278bcceace46447e4dff3427ad35a6e03bf815376bcd680661b22d933855e",
+          "start_byte": 496
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H009",
+            "reason": "显式处理空泛的主张强度自评。"
+          },
+          "end_byte": 666,
+          "hunk_id": "H009",
+          "reason": "显式处理空泛的主张强度自评。",
+          "selection_id": "S009",
+          "source_text": "当前数据支持一个分层、谨慎但已经相当有力的主张：",
+          "source_text_sha256": "581c90138b5a25c5333381755655b64b8e87dc87cbd2091184eb2df723dc2d89",
+          "start_byte": 594
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "DELETE_STYLE_SHELL",
+            "hunk_id": "H010",
+            "reason": "显式处理无信息递进报幕。"
+          },
+          "end_byte": 1051,
+          "hunk_id": "H010",
+          "reason": "显式处理无信息递进报幕。",
+          "selection_id": "S010",
+          "source_text": "更进一步，在 ",
+          "source_text_sha256": "8c8d48b900e5975afbf458803ecc5bff9f59cf7c4f48e07482605a0e7f8ba2ba",
+          "start_byte": 1032
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H011",
+            "reason": "显式处理作者在场式实验报幕。"
+          },
+          "end_byte": 1131,
+          "hunk_id": "H011",
+          "reason": "显式处理作者在场式实验报幕。",
+          "selection_id": "S011",
+          "source_text": " 的独立预算 method-line 实验里，我们已经看到：",
+          "source_text_sha256": "70a2c55daa6cc5d07f54185907a35d9d61a32a794c29f6ecb6f17c24af177494",
+          "start_byte": 1069
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H012",
+            "reason": "显式处理口语化成本评价。"
+          },
+          "end_byte": 1397,
+          "hunk_id": "H012",
+          "reason": "显式处理口语化成本评价。",
+          "selection_id": "S012",
+          "source_text": "purity 很低、但 geometry-first 的便宜分解器",
+          "source_text_sha256": "21aca7ea2c9528a2eedd2ccc6cdea680f3208e65e9e6a40e7103e70a1adcf9ef",
+          "start_byte": 1344
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H013",
+            "reason": "显式处理防御式范围引入。"
+          },
+          "end_byte": 1441,
+          "hunk_id": "H013",
+          "reason": "显式处理防御式范围引入。",
+          "selection_id": "S013",
+          "source_text": "更谨慎地说，这仍然不是一个",
+          "source_text_sha256": "001637b6ec9005910cdf754bfa7019ebe76c0be39a09a6a37b06811ad9ff52fd",
+          "start_byte": 1402
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H014",
+            "reason": "显式处理万能定理口语标签。"
+          },
+          "end_byte": 1536,
+          "hunk_id": "H014",
+          "reason": "显式处理万能定理口语标签。",
+          "selection_id": "S014",
+          "source_text": "的万能定理。",
+          "source_text_sha256": "165a501bc8e47b1b7052ab9eb298ca1df398ccdd6d57582a56e6af4ef647b2f7",
+          "start_byte": 1518
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H015",
+            "reason": "显式处理论文必须的编辑命令。"
+          },
+          "end_byte": 1751,
+          "hunk_id": "H015",
+          "reason": "显式处理论文必须的编辑命令。",
+          "selection_id": "S015",
+          "source_text": "因此论文必须采用",
+          "source_text_sha256": "80e807832da7caafa87677cede83762a7bb17159ee98c48c5acbbb17d17bde16",
+          "start_byte": 1727
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H016",
+            "reason": "显式处理叙事施工与一刀切口吻。"
+          },
+          "end_byte": 1820,
+          "hunk_id": "H016",
+          "reason": "显式处理叙事施工与一刀切口吻。",
+          "selection_id": "S016",
+          "source_text": "的叙事，而不是一刀切。",
+          "source_text_sha256": "d9dd36004f3e09aaf4a94461a3d544dbbb215ef2eddd82afabaadb66badd6003",
+          "start_byte": 1787
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H017",
+            "reason": "显式处理主结果准入式标题。"
+          },
+          "end_byte": 1900,
+          "hunk_id": "H017",
+          "reason": "显式处理主结果准入式标题。",
+          "selection_id": "S017",
+          "source_text": "### 2.1 强证据：可以进入论文主结果",
+          "source_text_sha256": "0fbddeebe91ceda87a132965d431f4e270a5fb8cd7faafe2bd7310e98d883157",
+          "start_byte": 1853
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H018",
+            "reason": "显式处理单独小节准入判断。"
+          },
+          "end_byte": 4272,
+          "hunk_id": "H018",
+          "reason": "显式处理单独小节准入判断。",
+          "selection_id": "S018",
+          "source_text": "Method-line 的 independent paper 已经足够进入一个单独 Results 小节。",
+          "source_text_sha256": "bd15acb512af8f75a4ed932e2e6fe8f6e7fa55d19abf97899da971b225562d24",
+          "start_byte": 4190
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H019",
+            "reason": "显式处理中等证据工单标签。"
+          },
+          "end_byte": 5209,
+          "hunk_id": "H019",
+          "reason": "显式处理中等证据工单标签。",
+          "selection_id": "S019",
+          "source_text": "### 2.2 中等证据：可以作为第二梯队支持",
+          "source_text_sha256": "dafa31eb6256c84487e480b4d62d07ab5b919f5294541d55d55620c4b00a0238",
+          "start_byte": 5156
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H020",
+            "reason": "显式处理口语化指标提醒。"
+          },
+          "end_byte": 6010,
+          "hunk_id": "H020",
+          "reason": "显式处理口语化指标提醒。",
+          "selection_id": "S020",
+          "source_text": "不过这些函数的收敛过程更复杂，不能只看单一指标。",
+          "source_text_sha256": "b106a20f504badf22d0db64432df71f82ecb0571d2e74f8cad9c0ece22df6962",
+          "start_byte": 5938
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H021",
+            "reason": "显式处理证据链验收闭合句。"
+          },
+          "end_byte": 6098,
+          "hunk_id": "H021",
+          "reason": "显式处理证据链验收闭合句。",
+          "selection_id": "S021",
+          "source_text": "证据链派生表和图已经足以把几何、性能、统计归因连起来。",
+          "source_text_sha256": "b2845e1c9b0b0f180c6294991d7f0d2f01b4c42ea7eb82e65bd8505b550fdc31",
+          "start_byte": 6017
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H022",
+            "reason": "显式处理分析工件的主线标签。"
+          },
+          "end_byte": 6124,
+          "hunk_id": "H022",
+          "reason": "显式处理分析工件的主线标签。",
+          "selection_id": "S022",
+          "source_text": "主线 analysis：",
+          "source_text_sha256": "5d35b6a1dc8dc9d03a90ad7e6b71cb14fdbdc121e1fd722a1594c8fb25f15c15",
+          "start_byte": 6106
+        },
+        {
+          "decision": "HUNK",
+          "disposition": {
+            "decision": "REWRITE",
+            "hunk_id": "H023",
+            "reason": "显式处理图工件的主线标签。"
+          },
+          "end_byte": 6209,
+          "hunk_id": "H023",
+          "reason": "显式处理图工件的主线标签。",
+          "selection_id": "S023",
+          "source_text": "主线图：",
+          "source_text_sha256": "51649b74c9eaa3571f39f518ee0a121c29ac0155225d8ef4ed8771b69002243a",
+          "start_byte": 6197
+        }
+      ]
+    },
+    "mechanical_coverage_status": "PASS",
+    "policy_hashes": {
+      "coverage_builder_sha256": "d878de837f25a91c171a6c19e71cae83cdd5e440e574238a18d0662f00013001",
+      "lexicon_sha256": "9f3b750df017d2c8bfb51e232c753637b6c60bebf5c12c0bd361c10e805988c7",
+      "runtime_contract_sha256": "a5f10e87196bf5517f8da41649b663c7a3b6b070253c8fdb3bfa6aa8168c6fd6",
+      "scanner_sha256": "66706b99d68a4f03fc3af05f22a9711648c36027d4584480b2f78aacefe4d992"
+    },
+    "schema_version": "humanize-short-patch-coverage/v2",
+    "semantic_completeness_claim_allowed": false,
+    "source": {
+      "document_format": "markdown",
+      "encoding": "utf-8",
+      "offset_unit": "UTF8_BYTES",
+      "scan_scene": "AUTO",
+      "scene": "RESEARCH",
+      "sha256": "e3ad758c3840c8242f6159a305eab58bdeb5d97e3868aef6f35726385badf805",
+      "size_bytes": 6242,
+      "source_kind": "DOCUMENT"
+    },
+    "summary": {
+      "explicit_conflicts_total": 0,
+      "lexical_candidate_total": 0,
+      "lexical_disposition_counts": {},
+      "lexical_high_total": 0,
+      "selected_spans_total": 22
+    }
+  },
+  "document_format": "markdown",
+  "effective_output": "PATCH",
+  "hunks": [
+    {
+      "decision": "REWRITE",
+      "end_byte": 121,
+      "hunk_id": "H001",
+      "reason": "删除说明书式反向自我界定，直接说明文档承担的论证边界职责。",
+      "replacement": "本文档汇总现有结果的论证边界，标题为",
+      "replacement_sha256": "1fc9c88880a188672fbce251a44b3b996e56814a3418787f711f0588ef4ab4b9",
+      "source_text": "本文档不是实验流水账，而是给论文写作使用的",
+      "source_text_sha256": "24977837b88b3290d1bfb0b663fd87f170efc29c6ff389e3da816af32437dd95",
+      "start_byte": 58
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 231,
+      "hunk_id": "H003",
+      "reason": "将后台自问改为可直接核对的名词性范围项。",
+      "replacement": "当前数据能够支持的最强主张。",
+      "replacement_sha256": "025b5fbffed832518b971f4e62c429ed3d88c414ab9758c44d8c44652c4315c2",
+      "source_text": "我们现在最强的主张到底是什么。",
+      "source_text_sha256": "90d585464533ce7aa8532e45b02ad8fa5d4407f2b3b02d551ec84520f24dbf38",
+      "start_byte": 186
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 289,
+      "hunk_id": "H004",
+      "reason": "去掉问句和足够进入的验收口吻，保留结果展示层级。",
+      "replacement": "可纳入论文主表与主图的结果。",
+      "replacement_sha256": "fe2a75e2814dc8cd90f994f7d2a734df72bed1cceee861c36ed1e70bcb62e34c",
+      "source_text": "哪些结果已经足够进入论文主表与主图。",
+      "source_text_sha256": "efce1ff559e21060af547badcc7d3fe199608ca68ec002edf9a3125e4f080102",
+      "start_byte": 235
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 353,
+      "hunk_id": "H005",
+      "reason": "将第二梯队的工单分层改为补充证据层级，保留边界条件。",
+      "replacement": "仅能作为补充证据或边界条件的结果。",
+      "replacement_sha256": "f472982291140d01c702f7273fdea05f7c6c52cbae064fe170a5af7c8f8f19d4",
+      "source_text": "哪些结果只能作为第二梯队支持或边界条件。",
+      "source_text_sha256": "288a192a13ad6d62812adcf0da5cac1ac822e2a4114c6a95c7a8441c6283b146",
+      "start_byte": 293
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 434,
+      "hunk_id": "H006",
+      "reason": "去掉到底什么没什么的口语追问，并保留支持范围的正反边界。",
+      "replacement": "能够及不能支持的结论。",
+      "replacement_sha256": "e9f1202a250903a082faece906ba1a6c6b7ea8493e74248c2f9c181dd737acc5",
+      "source_text": "到底证明了什么、没证明什么。",
+      "source_text_sha256": "2f75cd51c710c98caca2cc93f23bbb8016aeda35736ce105ef7b6fc88f2b5dc3",
+      "start_byte": 392
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 492,
+      "hunk_id": "H007",
+      "reason": "压缩预演审稿回复的对话口吻，不删除质疑与回应这一范围。",
+      "replacement": "潜在的审稿质疑与回应。",
+      "replacement_sha256": "2f40d14810895ca7a40cee7c2eb627601451cb530d0c0d0ef7045d5d16c56237",
+      "source_text": "审稿人可能怎么质疑，我们该如何回应。",
+      "source_text_sha256": "0ca965c5e73b4afeac3f2c83c369d8ea0a8367e090579a67f7f87a609ac5bfd6",
+      "start_byte": 438
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 558,
+      "hunk_id": "H008",
+      "reason": "去掉现在最合理的后台裁决口吻，仅保留章节组织事项。",
+      "replacement": "论文 Results/Discussion 的组织方式。",
+      "replacement_sha256": "35fec44d62236e0d8ad7ad46e99b4984ae18bd46d52fc24df3cfdc1e06dba31e",
+      "source_text": "论文 Results/Discussion 现在最合理的写法是什么。",
+      "source_text_sha256": "c0b278bcceace46447e4dff3427ad35a6e03bf815376bcd680661b22d933855e",
+      "start_byte": 496
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 666,
+      "hunk_id": "H009",
+      "reason": "删除谨慎且有力的自评强度，让后续具体主张承担说服功能。",
+      "replacement": "当前数据支持以下分层主张：",
+      "replacement_sha256": "09d16a17777f30b5760b226a814c5f69058724e1ced791c15f70f62af3f1368d",
+      "source_text": "当前数据支持一个分层、谨慎但已经相当有力的主张：",
+      "source_text_sha256": "581c90138b5a25c5333381755655b64b8e87dc87cbd2091184eb2df723dc2d89",
+      "start_byte": 594
+    },
+    {
+      "decision": "DELETE_STYLE_SHELL",
+      "end_byte": 1051,
+      "hunk_id": "H010",
+      "reason": "删除没有增加逻辑关系的递进报幕，实验对象直接进入句首。",
+      "replacement": "",
+      "replacement_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "source_text": "更进一步，在 ",
+      "source_text_sha256": "8c8d48b900e5975afbf458803ecc5bff9f59cf7c4f48e07482605a0e7f8ba2ba",
+      "start_byte": 1032
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 1131,
+      "hunk_id": "H011",
+      "reason": "保留实验报告状态，去掉我们已经看到的作者在场式报幕。",
+      "replacement": " 的独立预算 method-line 实验显示：",
+      "replacement_sha256": "06ccc61f401bb5fcf3bad666577d63efc5f0daa2d86af5a1006bdc4545f0e75a",
+      "source_text": " 的独立预算 method-line 实验里，我们已经看到：",
+      "source_text_sha256": "70a2c55daa6cc5d07f54185907a35d9d61a32a794c29f6ecb6f17c24af177494",
+      "start_byte": 1069
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 1397,
+      "hunk_id": "H012",
+      "reason": "保留很低这一程度判断，把便宜的口语评价改为低成本表述。",
+      "replacement": "purity 很低但采用 geometry-first 的低成本分解器",
+      "replacement_sha256": "20c799f54282bdd8d79e437618801733d027740714883e088ce16b9a6c858e04",
+      "source_text": "purity 很低、但 geometry-first 的便宜分解器",
+      "source_text_sha256": "21aca7ea2c9528a2eedd2ccc6cdea680f3208e65e9e6a40e7103e70a1adcf9ef",
+      "start_byte": 1344
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 1441,
+      "hunk_id": "H013",
+      "reason": "将谨慎地说的防御姿态改为直接的主张范围限定。",
+      "replacement": "这一主张仍不意味着",
+      "replacement_sha256": "e569b91e14230be64a8ec9fe33852fe42068ae3091576d20f6ae9db5520df7b7",
+      "source_text": "更谨慎地说，这仍然不是一个",
+      "source_text_sha256": "001637b6ec9005910cdf754bfa7019ebe76c0be39a09a6a37b06811ad9ff52fd",
+      "start_byte": 1402
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 1536,
+      "hunk_id": "H014",
+      "reason": "删除万能定理的口语化标签，保留引号内非普遍性命题。",
+      "replacement": "。",
+      "replacement_sha256": "eb0d5884569b398e475b89e77a068c6c575a0064ff6a72fafc173102c4cfcd57",
+      "source_text": "的万能定理。",
+      "source_text_sha256": "165a501bc8e47b1b7052ab9eb298ca1df398ccdd6d57582a56e6af4ef647b2f7",
+      "start_byte": 1518
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 1751,
+      "hunk_id": "H015",
+      "reason": "把论文必须采用的编辑命令改为结果展开方式。",
+      "replacement": "因此，结果需按",
+      "replacement_sha256": "7bb48622363ea6f3bc19b54387e59bab0919d7578a734546315ea32c25346d6e",
+      "source_text": "因此论文必须采用",
+      "source_text_sha256": "80e807832da7caafa87677cede83762a7bb17159ee98c48c5acbbb17d17bde16",
+      "start_byte": 1727
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 1820,
+      "hunk_id": "H016",
+      "reason": "去掉叙事施工词，保留不可一刀切解释的范围约束。",
+      "replacement": "展开，不能作一刀切解释。",
+      "replacement_sha256": "ab16bf6532fb2e93b8112009e879423f7d863aad212bc686287e7bb5b07f0083",
+      "source_text": "的叙事，而不是一刀切。",
+      "source_text_sha256": "d9dd36004f3e09aaf4a94461a3d544dbbb215ef2eddd82afabaadb66badd6003",
+      "start_byte": 1787
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 1900,
+      "hunk_id": "H017",
+      "reason": "删除可以进入主结果的验收式标题，只保留证据等级。",
+      "replacement": "### 2.1 强证据",
+      "replacement_sha256": "25cd48f84a3482f5d1896fd36b325c13c91f74d6fd4c6c339a53adf1ef6689ac",
+      "source_text": "### 2.1 强证据：可以进入论文主结果",
+      "source_text_sha256": "0fbddeebe91ceda87a132965d431f4e270a5fb8cd7faafe2bd7310e98d883157",
+      "start_byte": 1853
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 4272,
+      "hunk_id": "H018",
+      "reason": "去掉足够进入单独小节的工单判断，标题改为结果与统计对象。",
+      "replacement": "Method-line 的 independent paper 结果与统计。",
+      "replacement_sha256": "3aadbb88aa468ab201d7deb99adb6622e2ac7ce689a6702fda7dc17ca34542b6",
+      "source_text": "Method-line 的 independent paper 已经足够进入一个单独 Results 小节。",
+      "source_text_sha256": "bd15acb512af8f75a4ed932e2e6fe8f6e7fa55d19abf97899da971b225562d24",
+      "start_byte": 4190
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 5209,
+      "hunk_id": "H019",
+      "reason": "删除第二梯队支持的项目分层语汇，只保留证据等级。",
+      "replacement": "### 2.2 中等证据",
+      "replacement_sha256": "99bf2eb0f2eab019fa1dc2af3d699c22f95d42d83ee69a4432898b7b443020ce",
+      "source_text": "### 2.2 中等证据：可以作为第二梯队支持",
+      "source_text_sha256": "dafa31eb6256c84487e480b4d62d07ab5b919f5294541d55d55620c4b00a0238",
+      "start_byte": 5156
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 6010,
+      "hunk_id": "H020",
+      "reason": "将不能只看的口语提醒改为单一指标不足以概括的范围判断。",
+      "replacement": "但这些函数的收敛过程更复杂，单一指标不足以概括。",
+      "replacement_sha256": "49ce3a8471ce8ca9fa7ea211107ddf2aac4cce4e96aafa11b40f0e27ce0a2078",
+      "source_text": "不过这些函数的收敛过程更复杂，不能只看单一指标。",
+      "source_text_sha256": "b106a20f504badf22d0db64432df71f82ecb0571d2e74f8cad9c0ece22df6962",
+      "start_byte": 5938
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 6098,
+      "hunk_id": "H021",
+      "reason": "删除已经足以连起来的验收闭合感，直接说明派生表图的呈现功能。",
+      "replacement": "证据链派生表和图联合呈现几何、性能与统计归因。",
+      "replacement_sha256": "083140978925bc75873b785f9a78e12363239314639f5b5a1d2d7debe2574ea2",
+      "source_text": "证据链派生表和图已经足以把几何、性能、统计归因连起来。",
+      "source_text_sha256": "b2845e1c9b0b0f180c6294991d7f0d2f01b4c42ea7eb82e65bd8505b550fdc31",
+      "start_byte": 6017
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 6124,
+      "hunk_id": "H022",
+      "reason": "删除主线这一内部编辑标签，保留工件类型和路径。",
+      "replacement": "analysis：",
+      "replacement_sha256": "9c119cffcc3c60c1d4b1fac9a9bd405f184747f9698bc0846d7f288786dff9f6",
+      "source_text": "主线 analysis：",
+      "source_text_sha256": "5d35b6a1dc8dc9d03a90ad7e6b71cb14fdbdc121e1fd722a1594c8fb25f15c15",
+      "start_byte": 6106
+    },
+    {
+      "decision": "REWRITE",
+      "end_byte": 6209,
+      "hunk_id": "H023",
+      "reason": "删除主线这一内部编辑标签，保留图工件路径。",
+      "replacement": "图：",
+      "replacement_sha256": "a0d2c208cdfb7dc1a50fe4d9925c63e1172eea0a4b4cd7ec556a91225e439bbe",
+      "source_text": "主线图：",
+      "source_text_sha256": "51649b74c9eaa3571f39f518ee0a121c29ac0155225d8ef4ed8771b69002243a",
+      "start_byte": 6197
+    }
+  ],
+  "intensity": "BALANCED",
+  "mode": "REWRITE",
+  "offset_unit": "UTF8_BYTES",
+  "patch_hunks_source_partition": "NON_OVERLAPPING",
+  "protected_terms": [],
+  "requested_output": "PATCH",
+  "scene": "RESEARCH",
+  "schema_version": "humanize-short-patch/v2",
+  "selection_spec_sha256": "f30020d86b1d8386b4a1887e586195c7244baa956ea440a3676d9f8fe480531d",
+  "semantic_judgment": "NOT_EVALUATED",
+  "source_encoding": "utf-8",
+  "source_sha256": "e3ad758c3840c8242f6159a305eab58bdeb5d97e3868aef6f35726385badf805",
+  "source_size_bytes": 6242,
+  "unlisted_source_policy": "COPY_EXACT"
+}

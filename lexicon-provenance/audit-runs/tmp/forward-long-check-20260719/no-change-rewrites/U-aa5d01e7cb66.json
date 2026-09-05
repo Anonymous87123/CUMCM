@@ -1,0 +1,71 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v3",
+  "unit_id": "U-aa5d01e7cb66",
+  "chunk_binding_sha256": "a7449c2a33c397a43287324ad47c21d21e6ffba2e58b3d17ced9dd7fe3658329",
+  "decision": "NO_CHANGE",
+  "voice_profile_sha256": "3b4eeeaeb3af397378ead360550371ff4632cbce6fceca8923479c53de23a112",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "75e44792f941a73b",
+    "prepare_integrity_sha256": "8b66372850eb5ff9b054d8513329cf84e48735808970fdcfdff550d3d5efe8ff",
+    "run_metadata_sha256": "030e30f14cfd8c3a52cf0e0543a2e7a304736a10d48e6d743de604c9d9aa2c42",
+    "policy_snapshot_sha256": "a7c8cc2b3598f65e2e2fc3e95261836c56eba69f22c36ed69fe972539b95d28b",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "c7470464df709cd3099895312f890545625177cf3aa15b3cd6a819950f5205c3",
+      "unit_id": "U-aa5d01e7cb66",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 0,
+      "end": 26,
+      "start_line": 1,
+      "end_line": 3,
+      "source_span_sha256": "c7470464df709cd3099895312f890545625177cf3aa15b3cd6a819950f5205c3",
+      "masked_text_sha256": "8c47ae135b6ef5a593dfad0921255aa2002c264240b43034372e1522a1c56241",
+      "chunk_binding_sha256": "a7449c2a33c397a43287324ad47c21d21e6ffba2e58b3d17ced9dd7fe3658329"
+    },
+    "scene_route": {
+      "requested_scene": "GENERAL",
+      "resolved_scene": "GENERAL",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "fa460a93142173f1a89f343f5aeb771db0a19933c4b04785c823ea7181e12e81",
+      "policy_revision": 3,
+      "heading_path_sha256": "b4d7d450f617bcaec4e5dc0d4dd308357ae13a6599e2f3851d45e265a092a4bb",
+      "routing_input_sha256": "c7da13d72a0e913a1c6c5d86bbfcc16b87569554ea8602da132b0da5bc212b6d"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-general",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "GENERAL",
+      "profile_sha256": "3b4eeeaeb3af397378ead360550371ff4632cbce6fceca8923479c53de23a112"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "1c24ba36df2a2882b4285cca358877d5ae4d59fedec79560fa3fb932db9057a5"
+  },
+  "keep_reasons": {},
+  "reason": "该定义段落保留测量对象、适用范围和记录条件",
+  "evidence_spans": [
+    {
+      "id": "S1",
+      "start_line": 2,
+      "end_line": 2,
+      "sha256": "3ab69e397603706613707cf08e197563c2d6e99bb4bfa3a5da8fe57c98c852cb"
+    }
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "arguments": {
+    "fragment_mode": false,
+    "keep_reasons": {},
+    "mode": "REWRITE",
+    "output_format": "json",
+    "protected_terms": [],
+    "report_scope": {
+      "provided": false
+    },
+    "scene": "COURSE",
+    "strict_speech_acts": false,
+    "warning_resolutions": {},
+    "warning_review_request_sha256": ""
+  },
+  "expected": {
+    "delivery_gate_status": "REVIEW",
+    "exit_code": 2,
+    "paired_quality_review_request_sha256": "980d700837caeefdf1d71392ef5cfbd97188189e906bd42ea9e6c32e0645e7e7"
+  },
+  "inputs": {
+    "after": {
+      "archive_path": "inputs/after.bin",
+      "original_suffix": ".tex",
+      "sha256": "ad2981e34f0a7e8c8871c54cde29f99b6d1ccf2636108e520b6b7535b7c49b84",
+      "size": 652
+    },
+    "before": {
+      "archive_path": "inputs/before.bin",
+      "original_suffix": ".tex",
+      "sha256": "b28dc286b43b7b581f95482d31d53be57a1d0cf743a0e890f58b1f3121fe934b",
+      "size": 632
+    }
+  },
+  "invocation_sha256": "571792f1f9c1eb8af01f3b50511b5bb477c301e6e074d4930e5f8f4ed3038cb9",
+  "policy_hashes": {
+    "invariant_checker_sha256": "7442ce4cc8a0be48554a6522acaca07501aaf7f6ce30bc63dff35d17d97abcd5",
+    "lexicon_sha256": "67ecc7acdee15e71b7fc2f321fd7e34d2e48c6f60aa1d3d97c3faaf86b75da20",
+    "paired_quality_contract_sha256": "aa1d2be0d399dd4b30f15c04fe8f61afe46174faee9dd3f1f063a13b29149846",
+    "paired_quality_verifier_sha256": "ccfb1e53af76cdc15e41214747a0adf2d89a8347a06dd7c14f38622bd5b7685d",
+    "report_extractor_sha256": "49266ff31c35fbbc4b87479866503f9f71649e9df29e7088ea700ab544f62a02",
+    "runtime_contract_sha256": "36faecb4300ad79e254d75664d4069dfe29f78bd6ab6d270c84193d6562e9e42",
+    "scanner_sha256": "a1e7f3aae9803efafb52dd8f01be8f08d6eca70cfb098126cd8102c34d86affa",
+    "validator_sha256": "972911b3ec19e250afd009baeb100aa02bac21c52cb588394f8591f35d0ab65f"
+  },
+  "privacy": {
+    "contains_unredacted_proposal_text": false,
+    "reviewer_identifier_collected": false,
+    "source_locator_archived": false,
+    "stable_reviewer_pseudonym_archived": false
+  },
+  "reexecution": {
+    "reasons": [],
+    "status": "SUPPORTED"
+  },
+  "run_id": "hvr2-571792f1f9c1eb8af01f3b50511b5bb477c301e6e074d4930e5f8f4ed3038cb9",
+  "schema": "humanize-validation-invocation/v2",
+  "validator_entrypoint": "scripts/validate_humanize_output.py"
+}

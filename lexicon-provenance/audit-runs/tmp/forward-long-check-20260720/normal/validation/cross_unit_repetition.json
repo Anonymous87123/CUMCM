@@ -1,0 +1,43 @@
+{
+  "action_catalog_sha256": "5a2faaf63751ecb1e34548e18d1a994ccc983106d5e08a75910383bfafc3b947",
+  "action_profile_sha256": "5239f66bb64e886e6e1e4f72ccac4c1c0f4e852f8de3acb1b98761d86b9b32db",
+  "action_profile_status": "PASS",
+  "active_detector_definition_sha256": [
+    "c45761c43a26679dbc315cd4f08efab24398658df70f81b17455d8ef38452a65"
+  ],
+  "after_blocks": 1,
+  "before_blocks": 1,
+  "before_logical_document_sha256": "46dbdad8ed30b3d10eec2c86d97a010605e8094d0af389764c89a18657e9d87e",
+  "blocking_unit_ids": [],
+  "candidate_logical_document_sha256": "4086ecd8e363d4fd19560c8036de08ff0de031a38a7e5f44a660f42225a64fc4",
+  "evaluated_units": 1,
+  "evaluation_scope": "FULL",
+  "expected_units": 1,
+  "finding_count": 0,
+  "findings": [],
+  "inherited_finding_count": 0,
+  "inherited_findings": [],
+  "lexical_policy_sha256": "52191aaa422515e03e14c9f5981f4e190320b1f6fa203e370041abb742e6937c",
+  "negative_guard_loader_version": "1.0.0",
+  "negative_guard_registry_sha256": "5239f66bb64e886e6e1e4f72ccac4c1c0f4e852f8de3acb1b98761d86b9b32db",
+  "negative_guard_registry_source_format": "FULL_AUDIT_CATALOG",
+  "negative_guard_registry_source_sha256": "5a2faaf63751ecb1e34548e18d1a994ccc983106d5e08a75910383bfafc3b947",
+  "negative_guard_registry_status": "PASS",
+  "policy": {
+    "author_view": "masked_text_without_protected_payload",
+    "boundary_minimum_units": 3,
+    "boundary_opening_han_chars": 6,
+    "comparison": "after must not introduce additional cross-unit coverage",
+    "corpus_negative_guards": true,
+    "repair_signal_categories": [
+      "repair-template-repetition"
+    ],
+    "template_normalization": "NFKC+remove-zero-width+remove-Han-internal-space",
+    "version": "cross-unit-repetition/v1"
+  },
+  "policy_sha256": "7a4c04be5ac964957cb29b2b17a455e8474381f94f28eb627b72e472c5f07d7b",
+  "review_reasons": [],
+  "schema_version": "humanize-cross-unit-repetition/v1",
+  "status": "PASS",
+  "unit_inventory_sha256": "b43f7faa9fded158ba6e449961937ba9d6922ee6a71473fbcd9f574865a6176e"
+}

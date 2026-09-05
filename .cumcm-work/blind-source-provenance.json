@@ -1,0 +1,48 @@
+{
+ "schema": "cumcm-blind-source-provenance/v1",
+ "generated_at": "2026-09-05T08:31:26.662744+00:00",
+ "purpose": "端到端盲测用的真实往届 CUMCM 解答来源。vendored 为普通文件（已移除嵌套 .git），按 remote+commit 可完整复现。仅作盲测对照材料，不作为本仓库作者的工作成果。",
+ "license_note": "四个上游仓库均未附带 LICENSE 文件；vendored 副本仅供本地盲测比对，不得再分发或写入论文成果。需要时按 remote+commit 重新 clone 即可。",
+ "sources": [
+  {
+   "dir": ".cumcm-work/blind-source-2018-a",
+   "remote": "https://github.com/zheruiqiu/CUMCM2018A.git",
+   "commit": "ae1347abbd7ada51216bf9d15dc16c4dede7433d",
+   "branch": "master",
+   "shallow_clone": true,
+   "vendored_files": 3,
+   "bytes": 1151712,
+   "has_license_file": false
+  },
+  {
+   "dir": ".cumcm-work/blind-source-2018-a-full",
+   "remote": "https://github.com/Done4/Hot-working-garment.git",
+   "commit": "1c2771af37883d11004c73df46e38f4f6af1cfbb",
+   "branch": "master",
+   "shallow_clone": true,
+   "vendored_files": 12,
+   "bytes": 666696,
+   "has_license_file": false
+  },
+  {
+   "dir": ".cumcm-work/blind-source-2018-b",
+   "remote": "https://github.com/zhyuX/2018CUMCM-B.git",
+   "commit": "ce86d424d9632226719bcab997e9d120c4bfa70e",
+   "branch": "master",
+   "shallow_clone": true,
+   "vendored_files": 19,
+   "bytes": 1794406,
+   "has_license_file": false
+  },
+  {
+   "dir": ".cumcm-work/blind-source-2019-a",
+   "remote": "https://github.com/boltma/CUMCM2019-A.git",
+   "commit": "19eb475c587d19a194b0a47e42b1dee566efa94c",
+   "branch": "master",
+   "shallow_clone": true,
+   "vendored_files": 27,
+   "bytes": 3424888,
+   "has_license_file": false
+  }
+ ]
+}

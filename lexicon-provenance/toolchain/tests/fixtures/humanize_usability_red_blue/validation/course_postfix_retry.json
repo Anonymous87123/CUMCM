@@ -1,0 +1,111 @@
+﻿{
+  "accepted_findings": [],
+  "accepted_warning_reasons": {
+    "SPEECH_ACT_MODALITY_SCOPE_CHANGED": "人工核对：删去的是无对象动员词；题干、导数符号、先减后增和两步判断链均保留，未扩大结论范围。",
+    "SPEECH_ACT_NEGATION_CHANGED": "人工核对：原文“不只套公式、不是死记”的纠偏功能已由“理解而非死记”与明确操作链保留，未新增否定结论。"
+  },
+  "accepted_warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "非": 1
+        },
+        "before": {
+          "不": 2
+        }
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "reason": "人工核对：原文“不只套公式、不是死记”的纠偏功能已由“理解而非死记”与明确操作链保留，未新增否定结论。",
+      "severity": "warning"
+    },
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {},
+        "before": {
+          "仅": 1,
+          "可": 1,
+          "必须": 1,
+          "需要": 2
+        }
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "reason": "人工核对：删去的是无对象动员词；题干、导数符号、先减后增和两步判断链均保留，未扩大结论范围。",
+      "severity": "warning"
+    }
+  ],
+  "evidence": {
+    "after_path": "D:\\code LateX\\elegantbook\\physics\\tests\\fixtures\\humanize_usability_red_blue\\course_postfix_retry_body.md",
+    "after_sha256": "700be20278ab20f1923c6dfbac88eaae5f9e785b979aa1ae631f5db02cf1125a",
+    "before_path": "D:\\code LateX\\elegantbook\\physics\\tests\\fixtures\\humanize_usability_red_blue\\course_before.md",
+    "before_sha256": "bcc7c9eb94ea8877931d6035b91d9c1ff2d7db7af4d3235af27bfeefb4d1a47d",
+    "checker_executed": true,
+    "document_format": "markdown",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    }
+  },
+  "exit_code": 0,
+  "introduced_findings": [],
+  "invariants": {
+    "errors": [],
+    "evidence": {
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      }
+    },
+    "hard_failure": false,
+    "status": "pass",
+    "summary": {
+      "errors": 0,
+      "warnings": 2
+    },
+    "warnings": [
+      {
+        "code": "SPEECH_ACT_NEGATION_CHANGED",
+        "details": {
+          "after": {
+            "非": 1
+          },
+          "before": {
+            "不": 2
+          }
+        },
+        "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+        "severity": "warning"
+      },
+      {
+        "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+        "details": {
+          "after": {},
+          "before": {
+            "仅": 1,
+            "可": 1,
+            "必须": 1,
+            "需要": 2
+          }
+        },
+        "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+        "severity": "warning"
+      }
+    ]
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 11,
+    "introduced_candidates": 0,
+    "unexplained_high_candidates": 0
+  },
+  "review_reasons": [],
+  "scene": "COURSE",
+  "status": "PASS",
+  "unaccepted_warnings": [],
+  "unexplained_high_findings": []
+}

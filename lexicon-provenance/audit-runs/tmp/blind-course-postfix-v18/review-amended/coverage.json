@@ -1,0 +1,208 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "coverage_basis": [
+    "CURRENT_SCANNER_HIGH_AUDIT_VIEW",
+    "CALLER_BOUND_SELECTED_SPANS",
+    "CALLER_DECLARED_CONFLICT_PAIRS"
+  ],
+  "coverage_claim_scope": "ENUMERATED_HIGH_AND_BOUND_DECLARATIONS_ONLY",
+  "coverage_completion_claim_allowed": true,
+  "coverage_limitations": [
+    "NO_COMPLETE_NATURAL_LANGUAGE_SEMANTIC_DISCOVERY",
+    "CONFLICT_INVENTORY_IS_CALLER_DECLARED_ONLY",
+    "KEEP_REASONS_ARE_NOT_EXTERNAL_QUALITY_CLEARANCE",
+    "SELF_CONSISTENCY_ONLY_WITHOUT_EXTERNAL_REQUEST_ANCHOR"
+  ],
+  "coverage_sha256": "c5ba22d54d0814c6b680d86d4412ff11cdd27cd41b973ed419c102f3113119d6",
+  "declarations": {
+    "explicit_conflicts": [],
+    "lexical_keeps": [],
+    "selected_spans": [
+      {
+        "decision": "HUNK",
+        "end_byte": 336,
+        "hunk_id": "H001",
+        "reason": "连续字幕使推导呈现机械卡片节奏，本次改为实际方向切换。",
+        "selection_id": "S001",
+        "source_text": "水平方向合力为",
+        "source_text_sha256": "d3623bf3d254b34eb969f833c316e24a867f01d42c24c3b083040c56327137b0",
+        "start_byte": 315
+      },
+      {
+        "decision": "HUNK",
+        "end_byte": 418,
+        "hunk_id": "H002",
+        "reason": "连续字幕使推导呈现机械卡片节奏，本次由加速度对象直接承接。",
+        "selection_id": "S002",
+        "source_text": "因此",
+        "source_text_sha256": "a07bd3196be556cf1da60a815f550697856ad03b04707a4f3a592d70c7de682e",
+        "start_byte": 412
+      },
+      {
+        "decision": "HUNK",
+        "end_byte": 485,
+        "hunk_id": "H003",
+        "reason": "命令式句首不是独立命题，删除后公式与极值条件仍逐字保留。",
+        "selection_id": "S003",
+        "source_text": "令 ",
+        "source_text_sha256": "2495ba226d28146fd63da0c145957aa5715dcc0d67757d0d5d29e2b51eb7f617",
+        "start_byte": 481
+      },
+      {
+        "decision": "HUNK",
+        "end_byte": 503,
+        "hunk_id": "H004",
+        "reason": "调整非保护中文搭配，使函数与变量关系直接进入主句。",
+        "selection_id": "S004",
+        "source_text": " 对 ",
+        "source_text_sha256": "8d2cc5a977a97bf3a4c0393148ed013392e17363f6972318b4dd9886166e038b",
+        "start_byte": 498
+      },
+      {
+        "decision": "HUNK",
+        "end_byte": 526,
+        "hunk_id": "H005",
+        "reason": "把公式字幕改成极值条件说明，保留原有推导职责。",
+        "selection_id": "S005",
+        "source_text": " 取极值：",
+        "source_text_sha256": "0c5b2adfc77f5a6f0313f09f33e57a199d83478900d27d77ceeefa27c8d39cb0",
+        "start_byte": 513
+      },
+      {
+        "decision": "HUNK",
+        "end_byte": 609,
+        "hunk_id": "H006",
+        "reason": "用具体求解关系替换泛化推进词，末式仍保持原样。",
+        "selection_id": "S006",
+        "source_text": "于是",
+        "source_text_sha256": "3617c85a661849c1dfe98bc959d0493f90edcff61c9da841f3f1d3a468ea2952",
+        "start_byte": 603
+      }
+    ],
+    "source_kind": "DOCUMENT"
+  },
+  "declarations_sha256": "3cddeae8547036c397561e64a0d921eab08717f1842d37c66bb080263c35451c",
+  "humanize_quality_claim_allowed": false,
+  "inventories": {
+    "explicit_conflicts": [],
+    "lexical_high": [],
+    "selected_spans": [
+      {
+        "decision": "HUNK",
+        "disposition": {
+          "decision": "REWRITE",
+          "hunk_id": "H001",
+          "reason": "连续字幕使推导呈现机械卡片节奏，本次改为实际方向切换。"
+        },
+        "end_byte": 336,
+        "hunk_id": "H001",
+        "reason": "连续字幕使推导呈现机械卡片节奏，本次改为实际方向切换。",
+        "selection_id": "S001",
+        "source_text": "水平方向合力为",
+        "source_text_sha256": "d3623bf3d254b34eb969f833c316e24a867f01d42c24c3b083040c56327137b0",
+        "start_byte": 315
+      },
+      {
+        "decision": "HUNK",
+        "disposition": {
+          "decision": "REWRITE",
+          "hunk_id": "H002",
+          "reason": "连续字幕使推导呈现机械卡片节奏，本次由加速度对象直接承接。"
+        },
+        "end_byte": 418,
+        "hunk_id": "H002",
+        "reason": "连续字幕使推导呈现机械卡片节奏，本次由加速度对象直接承接。",
+        "selection_id": "S002",
+        "source_text": "因此",
+        "source_text_sha256": "a07bd3196be556cf1da60a815f550697856ad03b04707a4f3a592d70c7de682e",
+        "start_byte": 412
+      },
+      {
+        "decision": "HUNK",
+        "disposition": {
+          "decision": "DELETE_STYLE_SHELL",
+          "hunk_id": "H003",
+          "reason": "命令式句首不是独立命题，删除后公式与极值条件仍逐字保留。"
+        },
+        "end_byte": 485,
+        "hunk_id": "H003",
+        "reason": "命令式句首不是独立命题，删除后公式与极值条件仍逐字保留。",
+        "selection_id": "S003",
+        "source_text": "令 ",
+        "source_text_sha256": "2495ba226d28146fd63da0c145957aa5715dcc0d67757d0d5d29e2b51eb7f617",
+        "start_byte": 481
+      },
+      {
+        "decision": "HUNK",
+        "disposition": {
+          "decision": "REWRITE",
+          "hunk_id": "H004",
+          "reason": "调整非保护中文搭配，使函数与变量关系直接进入主句。"
+        },
+        "end_byte": 503,
+        "hunk_id": "H004",
+        "reason": "调整非保护中文搭配，使函数与变量关系直接进入主句。",
+        "selection_id": "S004",
+        "source_text": " 对 ",
+        "source_text_sha256": "8d2cc5a977a97bf3a4c0393148ed013392e17363f6972318b4dd9886166e038b",
+        "start_byte": 498
+      },
+      {
+        "decision": "HUNK",
+        "disposition": {
+          "decision": "REWRITE",
+          "hunk_id": "H005",
+          "reason": "把公式字幕改成极值条件说明，保留原有推导职责。"
+        },
+        "end_byte": 526,
+        "hunk_id": "H005",
+        "reason": "把公式字幕改成极值条件说明，保留原有推导职责。",
+        "selection_id": "S005",
+        "source_text": " 取极值：",
+        "source_text_sha256": "0c5b2adfc77f5a6f0313f09f33e57a199d83478900d27d77ceeefa27c8d39cb0",
+        "start_byte": 513
+      },
+      {
+        "decision": "HUNK",
+        "disposition": {
+          "decision": "REWRITE",
+          "hunk_id": "H006",
+          "reason": "用具体求解关系替换泛化推进词，末式仍保持原样。"
+        },
+        "end_byte": 609,
+        "hunk_id": "H006",
+        "reason": "用具体求解关系替换泛化推进词，末式仍保持原样。",
+        "selection_id": "S006",
+        "source_text": "于是",
+        "source_text_sha256": "3617c85a661849c1dfe98bc959d0493f90edcff61c9da841f3f1d3a468ea2952",
+        "start_byte": 603
+      }
+    ]
+  },
+  "mechanical_coverage_status": "PASS",
+  "policy_hashes": {
+    "coverage_builder_sha256": "d878de837f25a91c171a6c19e71cae83cdd5e440e574238a18d0662f00013001",
+    "lexicon_sha256": "0fa2e65f2a68ec420bd21bf19da39e139fad376b9576218f38a405942ee4d810",
+    "runtime_contract_sha256": "a5f10e87196bf5517f8da41649b663c7a3b6b070253c8fdb3bfa6aa8168c6fd6",
+    "scanner_sha256": "9086c9662af4b13bf3e89083582996ceb27061fe095ab13da412251ce36902e0"
+  },
+  "schema_version": "humanize-short-patch-coverage/v2",
+  "semantic_completeness_claim_allowed": false,
+  "source": {
+    "document_format": "tex",
+    "encoding": "utf-8",
+    "offset_unit": "UTF8_BYTES",
+    "scan_scene": "AUTO",
+    "scene": "COURSE",
+    "sha256": "b28dc286b43b7b581f95482d31d53be57a1d0cf743a0e890f58b1f3121fe934b",
+    "size_bytes": 632,
+    "source_kind": "DOCUMENT"
+  },
+  "summary": {
+    "explicit_conflicts_total": 0,
+    "lexical_candidate_total": 0,
+    "lexical_disposition_counts": {},
+    "lexical_high_total": 0,
+    "selected_spans_total": 6
+  }
+}

@@ -1,0 +1,10 @@
+拉力越向上，水平分量 \(F\cos\theta\) 会变小，但支持力也会减小，从而摩擦力 \(\mu N\) 变小。最大加速度来自这两种效果的折中，所以要把水平合力写成 \(\theta\) 的函数再求极值。竖直方向无加速度，
+ \(N+F\sin\theta-mg=0 \implies N=mg-F\sin\theta.\) 
+水平方向合力为
+ \(F_{\text{合},x}=F\cos\theta-\mu N =F\cos\theta-\mu(mg-F\sin\theta).\) 
+因此
+ \(a(\theta)=\frac{F(\cos\theta+\mu\sin\theta)-\mu mg}{m}.\) 
+令 \(a(\theta)\) 对 \(\theta\) 取极值：
+ \(\dv{}{\theta}(\cos\theta+\mu\sin\theta) =-\sin\theta+\mu\cos\theta=0.\) 
+于是
+ \(\tan\theta=\mu.\) 

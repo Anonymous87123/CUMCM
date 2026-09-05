@@ -1,0 +1,50 @@
+{
+  "schema_version": "humanize-rewrite-scaffold/v5",
+  "run_dir_name": "normal",
+  "decision": "REWRITE",
+  "decision_map": {
+    "U-70d08851119b": "REWRITE"
+  },
+  "pending_units_total": 1,
+  "templates_total": 1,
+  "completion_claim_allowed": false,
+  "requires_manual_completion": true,
+  "metadata_scope": "SCAFFOLD_CREATION_TIME",
+  "template_hash_scope": "ORIGINAL_TEMPLATE_BYTES",
+  "preflight": {
+    "schema_version": "humanize-long-authoring-preflight/v1",
+    "status": "PASS",
+    "integrity_status": "PASS",
+    "policy_status": "PASS",
+    "route_replay_status": "PASS",
+    "voice_binding_status": "PASS",
+    "live_source_status": "MATCH",
+    "snapshot_id": "2eb3147139916068",
+    "run_state_sha256": "589e4aeb866fafc57a74a139e6bc21a7b334a9d9e01adc4f94e86ca06dfe700c",
+    "prepare_integrity_sha256": "31d16019693c2c46976cb080b86f545d054cf60d727422f1a0cbc435e55a2606",
+    "run_metadata_sha256": "d22be7d0275d55a21f8a9879eaa37b09f8da87fc3fae09e66b8ed7143c9659e9",
+    "policy_snapshot_sha256": "c3511adfd6a50bd4468f479168de858fa65f4622475ff0e108592a8210948aec",
+    "scene_routing_policy_sha256": "fa460a93142173f1a89f343f5aeb771db0a19933c4b04785c823ea7181e12e81",
+    "pending_units_total": 1,
+    "eligible_units_total": 1,
+    "source_change_units": [],
+    "completion_claim_allowed": false,
+    "preflight_sha256": "190028d1f5962c793e415db91de6193fbfa809f34cfc524802cbe0edff3fefa9"
+  },
+  "records": [
+    {
+      "unit_id": "U-70d08851119b",
+      "path": "U-70d08851119b.json",
+      "decision": "REWRITE",
+      "template_sha256": "e6ae1927b71ada83f9a6938c68d1c93dd67ab929493693cd8dde60ba9e69a08e",
+      "authoring_binding_sha256": "9fed580cf046a54fe172a6d44cd533f09e1f60ed4b037c15f402f49ef210a12e",
+      "scene_requested": "COURSE",
+      "scene_resolved": "COURSE",
+      "scene_routing_decision": "EXPLICIT",
+      "scene_routing_top_score": 0,
+      "scene_routing_margin": 0,
+      "source_span_sha256": "29c69bda39c34bcb78ba7428a28664fc3dfddfe723f04fbbe6386c18102afff8",
+      "chunk_binding_sha256": "e162c56c74cda408d93d16e81b920963def9f841e60d47358ace5947a30ce95b"
+    }
+  ]
+}

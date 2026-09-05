@@ -3698,7 +3698,13 @@
         "我可以再帮你",
         "我可以再顺手帮你",
         "可以再顺手帮你",
-        "我可以直接继续"
+        "我可以直接继续",
+        "你愿意",
+        "如果你愿意",
+        "若你愿意",
+        "如果愿意",
+        "你如果愿意",
+        "我愿意"
       ],
       "regex": [],
       "scenes": [
@@ -3730,14 +3736,14 @@
   "strict_corpus_policy": {
     "schema_version": "humanize-strict-corpus-policy/v4",
     "enabled_by_default": true,
-    "inventory_entries": 1417,
-    "minimum_inventory_entries": 1417,
+    "inventory_entries": 1423,
+    "minimum_inventory_entries": 1423,
     "enforcement": "BLOCK_CLEAN_UNLESS_REWRITTEN_OR_POSITION_KEEP",
     "no_change_allowed_with_unresolved_match": false,
     "protected_spans_are_exempt": true,
     "technical_term_exception": "POSITION_BOUND_KEEP_REASON_REQUIRED",
     "source_inventory_sha256": "41470b80596aae5f6e14fa5dda3b5c1556bbc2641f64f519baef682f0cdcfcfd",
-    "inventory_manifest_sha256": "3282de02a7664e70befc4bfe9ee4ab1dbd775b6c7b0c8ad91b04c2d7b52bbe66",
+    "inventory_manifest_sha256": "3dc5cab0eefe2331707de4115bdae5f45ca3997ba6a96bae8a453d16394b9941",
     "scan_summary": {
       "generated_at": "2026-08-03T02:52:53.746618+00:00",
       "script_version": "3.10.2",
@@ -3968,7 +3974,8 @@
       "root-inversion-family-pass8": 699,
       "raw-short-core-pass4": 16,
       "comparative-root-pass3": 49,
-      "document-short-core-pass7": 11
+      "document-short-core-pass7": 11,
+      "human-override-invitation-20260905": 6
     },
     "signal_ids": [
       "LEX-STRICT-CORPUS-PROCESS-01",
@@ -3983,6 +3990,25 @@
       "LEX-STRICT-CORPUS-OUTLOOK-01",
       "LEX-STRICT-CORPUS-CERTAINTY-01",
       "LEX-STRICT-CORPUS-INVITATION-01"
+    ],
+    "human_override_releases": [
+      {
+        "release_id": "invitation-family-20260905",
+        "phrases": [
+          "你愿意",
+          "如果你愿意",
+          "若你愿意",
+          "如果愿意",
+          "你如果愿意",
+          "我愿意"
+        ],
+        "entries_added": 6,
+        "baseline_entries": 1417,
+        "result_entries": 1423,
+        "evidence": "D:\\code LateX\\humanize-reports\\humanize-strict-lexicon-20260803-rootgraph-v19-second-round\u0007ll_candidates_after_exact_rescan.csv",
+        "evidence_sha256": "733bde097a3f5793bdf078efb923dd28442ad203811ccb7af8658ea42e517e08",
+        "note": "计数全部取自上述冻结候选表，未估算、未编造。"
+      }
     ]
   },
   "strict_phrase_inventory": [
@@ -155850,6 +155876,302 @@
       "combined_occurrences": 21,
       "combined_coverage": 21,
       "combined_score": 10.533127
+    },
+    {
+      "phrase": "你愿意",
+      "category": "interaction-invitation",
+      "source_kind": "raw-short-core-pass4",
+      "source_kinds": [
+        "raw-core-family-pass5",
+        "raw-short-core-pass4"
+      ],
+      "score": 0.0,
+      "evidence_scope": "chat-and-document",
+      "semantic_class": "ambiguous_frequent_expression",
+      "semantic_release_decision": "publish_strict",
+      "semantic_release_reason": "human_override_assistant_invitation_shell",
+      "semantic_release_roots": [],
+      "semantic_signals": {
+        "chat_coverage_share": 0.98775601,
+        "discourse_attachment_parent_count": 0,
+        "discourse_attachment_parent_ratio": 0.0,
+        "discourse_prefix_parent_count": 0,
+        "discourse_suffix_parent_count": 0,
+        "family_parent_count": 25,
+        "style_parent_ratio": 0.56,
+        "styled_parent_count": 14,
+        "tex_document_coverage_share": 0.07272727
+      },
+      "human_override": {
+        "machine_decision": "audit_only",
+        "machine_reason": "insufficient_relative_discourse_attachment",
+        "reviewed_at": "2026-09-05",
+        "rationale": "第二人称+意愿的助手式邀请句壳，在中文学术正文与 CUMCM 论文中没有合法用途；机器 audit_only 的理由是词根家族尚无已发布核心，不是误报风险。gpt_chinese_style_report.md 3.3 记录该表达在最终答复中约占 15%。",
+        "excluded_from_family": [
+          "愿意"
+        ],
+        "exclusion_reason": "裸词根 愿意 在问卷/支付意愿类建模正文中有合法用途。"
+      },
+      "chat_occurrences": 4477,
+      "chat_message_coverage": 4437,
+      "chat_message_coverage_rate": 0.02611505,
+      "md_occurrences": 51,
+      "md_unit_coverage": 51,
+      "md_file_coverage": 16,
+      "tex_occurrences": 4,
+      "tex_unit_coverage": 4,
+      "tex_file_coverage": 4,
+      "combined_occurrences": 4532,
+      "combined_coverage": 4492,
+      "combined_score": 25.779691
+    },
+    {
+      "phrase": "如果你愿意",
+      "category": "interaction-invitation",
+      "source_kind": "raw-core-family-pass5",
+      "source_kinds": [
+        "raw-core-family-pass5"
+      ],
+      "score": 0.0,
+      "evidence_scope": "chat-and-document",
+      "semantic_class": "unreleased_root_family",
+      "semantic_release_decision": "publish_strict",
+      "semantic_release_reason": "human_override_assistant_invitation_shell",
+      "semantic_release_roots": [],
+      "semantic_signals": {
+        "candidate_roots": [
+          "你愿",
+          "你愿意",
+          "如果你",
+          "愿意",
+          "果你",
+          "果你愿"
+        ],
+        "chat_coverage_share": 0.98816299,
+        "discovery_root_only_hits": [],
+        "family_anchor_roots": [],
+        "family_relative_attachment_roots": [],
+        "protected_content_hits": [
+          "如果"
+        ],
+        "tex_document_coverage_share": 0.07692308
+      },
+      "human_override": {
+        "machine_decision": "audit_only",
+        "machine_reason": "family_has_no_released_style_core:insufficient_relative_discourse_attachment",
+        "reviewed_at": "2026-09-05",
+        "rationale": "第二人称+意愿的助手式邀请句壳，在中文学术正文与 CUMCM 论文中没有合法用途；机器 audit_only 的理由是词根家族尚无已发布核心，不是误报风险。gpt_chinese_style_report.md 3.3 记录该表达在最终答复中约占 15%。",
+        "excluded_from_family": [
+          "愿意"
+        ],
+        "exclusion_reason": "裸词根 愿意 在问卷/支付意愿类建模正文中有合法用途。"
+      },
+      "chat_occurrences": 4381,
+      "chat_message_coverage": 4341,
+      "chat_message_coverage_rate": 0.02555002,
+      "md_occurrences": 48,
+      "md_unit_coverage": 48,
+      "md_file_coverage": 13,
+      "tex_occurrences": 4,
+      "tex_unit_coverage": 4,
+      "tex_file_coverage": 4,
+      "combined_occurrences": 4433,
+      "combined_coverage": 4393,
+      "combined_score": 26.073048
+    },
+    {
+      "phrase": "若你愿意",
+      "category": "interaction-invitation",
+      "source_kind": "raw-core-family-pass5",
+      "source_kinds": [
+        "raw-core-family-pass5"
+      ],
+      "score": 0.0,
+      "evidence_scope": "chat-only",
+      "semantic_class": "unreleased_root_family",
+      "semantic_release_decision": "publish_strict",
+      "semantic_release_reason": "human_override_assistant_invitation_shell",
+      "semantic_release_roots": [],
+      "semantic_signals": {
+        "candidate_roots": [
+          "你愿",
+          "你愿意",
+          "愿意"
+        ],
+        "chat_coverage_share": 1.0,
+        "discovery_root_only_hits": [],
+        "family_anchor_roots": [],
+        "family_relative_attachment_roots": [],
+        "protected_content_hits": [],
+        "tex_document_coverage_share": 0.0
+      },
+      "human_override": {
+        "machine_decision": "audit_only",
+        "machine_reason": "family_has_no_released_style_core:insufficient_relative_discourse_attachment",
+        "reviewed_at": "2026-09-05",
+        "rationale": "第二人称+意愿的助手式邀请句壳，在中文学术正文与 CUMCM 论文中没有合法用途；机器 audit_only 的理由是词根家族尚无已发布核心，不是误报风险。gpt_chinese_style_report.md 3.3 记录该表达在最终答复中约占 15%。",
+        "excluded_from_family": [
+          "愿意"
+        ],
+        "exclusion_reason": "裸词根 愿意 在问卷/支付意愿类建模正文中有合法用途。"
+      },
+      "chat_occurrences": 91,
+      "chat_message_coverage": 91,
+      "chat_message_coverage_rate": 0.0005356,
+      "md_occurrences": 0,
+      "md_unit_coverage": 0,
+      "md_file_coverage": 0,
+      "tex_occurrences": 0,
+      "tex_unit_coverage": 0,
+      "tex_file_coverage": 0,
+      "combined_occurrences": 91,
+      "combined_coverage": 91,
+      "combined_score": 14.285366
+    },
+    {
+      "phrase": "如果愿意",
+      "category": "interaction-invitation",
+      "source_kind": "raw-core-family-pass5",
+      "source_kinds": [
+        "raw-core-family-pass5"
+      ],
+      "score": 0.0,
+      "evidence_scope": "chat-only",
+      "semantic_class": "unreleased_root_family",
+      "semantic_release_decision": "publish_strict",
+      "semantic_release_reason": "human_override_assistant_invitation_shell",
+      "semantic_release_roots": [],
+      "semantic_signals": {
+        "candidate_roots": [
+          "愿意"
+        ],
+        "chat_coverage_share": 1.0,
+        "discovery_root_only_hits": [],
+        "family_anchor_roots": [],
+        "family_relative_attachment_roots": [],
+        "protected_content_hits": [
+          "如果"
+        ],
+        "tex_document_coverage_share": 0.0
+      },
+      "human_override": {
+        "machine_decision": "audit_only",
+        "machine_reason": "family_has_no_released_style_core:insufficient_relative_discourse_attachment",
+        "reviewed_at": "2026-09-05",
+        "rationale": "第二人称+意愿的助手式邀请句壳，在中文学术正文与 CUMCM 论文中没有合法用途；机器 audit_only 的理由是词根家族尚无已发布核心，不是误报风险。gpt_chinese_style_report.md 3.3 记录该表达在最终答复中约占 15%。",
+        "excluded_from_family": [
+          "愿意"
+        ],
+        "exclusion_reason": "裸词根 愿意 在问卷/支付意愿类建模正文中有合法用途。"
+      },
+      "chat_occurrences": 22,
+      "chat_message_coverage": 22,
+      "chat_message_coverage_rate": 0.00012949,
+      "md_occurrences": 0,
+      "md_unit_coverage": 0,
+      "md_file_coverage": 0,
+      "tex_occurrences": 0,
+      "tex_unit_coverage": 0,
+      "tex_file_coverage": 0,
+      "combined_occurrences": 22,
+      "combined_coverage": 22,
+      "combined_score": 10.126483
+    },
+    {
+      "phrase": "你如果愿意",
+      "category": "interaction-invitation",
+      "source_kind": "raw-core-family-pass5",
+      "source_kinds": [
+        "raw-core-family-pass5"
+      ],
+      "score": 0.0,
+      "evidence_scope": "chat-only",
+      "semantic_class": "unreleased_root_family",
+      "semantic_release_decision": "publish_strict",
+      "semantic_release_reason": "human_override_assistant_invitation_shell",
+      "semantic_release_roots": [],
+      "semantic_signals": {
+        "candidate_roots": [
+          "愿意"
+        ],
+        "chat_coverage_share": 1.0,
+        "discovery_root_only_hits": [],
+        "family_anchor_roots": [],
+        "family_relative_attachment_roots": [],
+        "protected_content_hits": [
+          "如果"
+        ],
+        "tex_document_coverage_share": 0.0
+      },
+      "human_override": {
+        "machine_decision": "audit_only",
+        "machine_reason": "family_has_no_released_style_core:insufficient_relative_discourse_attachment",
+        "reviewed_at": "2026-09-05",
+        "rationale": "第二人称+意愿的助手式邀请句壳，在中文学术正文与 CUMCM 论文中没有合法用途；机器 audit_only 的理由是词根家族尚无已发布核心，不是误报风险。gpt_chinese_style_report.md 3.3 记录该表达在最终答复中约占 15%。",
+        "excluded_from_family": [
+          "愿意"
+        ],
+        "exclusion_reason": "裸词根 愿意 在问卷/支付意愿类建模正文中有合法用途。"
+      },
+      "chat_occurrences": 22,
+      "chat_message_coverage": 22,
+      "chat_message_coverage_rate": 0.00012949,
+      "md_occurrences": 0,
+      "md_unit_coverage": 0,
+      "md_file_coverage": 0,
+      "tex_occurrences": 0,
+      "tex_unit_coverage": 0,
+      "tex_file_coverage": 0,
+      "combined_occurrences": 22,
+      "combined_coverage": 22,
+      "combined_score": 10.306483
+    },
+    {
+      "phrase": "我愿意",
+      "category": "interaction-invitation",
+      "source_kind": "raw-core-family-pass5",
+      "source_kinds": [
+        "raw-core-family-pass5"
+      ],
+      "score": 0.0,
+      "evidence_scope": "chat-only",
+      "semantic_class": "unreleased_root_family",
+      "semantic_release_decision": "publish_strict",
+      "semantic_release_reason": "human_override_assistant_invitation_shell",
+      "semantic_release_roots": [],
+      "semantic_signals": {
+        "candidate_roots": [
+          "愿意"
+        ],
+        "chat_coverage_share": 1.0,
+        "discovery_root_only_hits": [],
+        "family_anchor_roots": [],
+        "family_relative_attachment_roots": [],
+        "protected_content_hits": [],
+        "tex_document_coverage_share": 0.0
+      },
+      "human_override": {
+        "machine_decision": "audit_only",
+        "machine_reason": "family_has_no_released_style_core:insufficient_relative_discourse_attachment",
+        "reviewed_at": "2026-09-05",
+        "rationale": "第二人称+意愿的助手式邀请句壳，在中文学术正文与 CUMCM 论文中没有合法用途；机器 audit_only 的理由是词根家族尚无已发布核心，不是误报风险。gpt_chinese_style_report.md 3.3 记录该表达在最终答复中约占 15%。",
+        "excluded_from_family": [
+          "愿意"
+        ],
+        "exclusion_reason": "裸词根 愿意 在问卷/支付意愿类建模正文中有合法用途。"
+      },
+      "chat_occurrences": 22,
+      "chat_message_coverage": 21,
+      "chat_message_coverage_rate": 0.0001236,
+      "md_occurrences": 0,
+      "md_unit_coverage": 0,
+      "md_file_coverage": 0,
+      "tex_occurrences": 0,
+      "tex_unit_coverage": 0,
+      "tex_file_coverage": 0,
+      "combined_occurrences": 22,
+      "combined_coverage": 21,
+      "combined_score": 9.857579
     }
   ]
 }
