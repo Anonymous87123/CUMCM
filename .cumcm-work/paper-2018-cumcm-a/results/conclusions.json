@@ -1,0 +1,182 @@
+{
+ "schema": "cumcm-2018a-rebuild-conclusions/v1",
+ "rebuild_id": "RBD-20260905-CUMCMA2018",
+ "purpose": "按 review.json 的 if_rebuilt 六条重建 2018 A，用同一个瞬态仿真器服务三问，以此检验审查结论并给出可辩护的答案区间。",
+ "artifacts": {
+  "simulator": ".cumcm-work/rebuild-2018-cumcm-a/simulator.py",
+  "run_report": ".cumcm-work/rebuild-2018-cumcm-a/run-report.json",
+  "command": "python .cumcm-work/rebuild-2018-cumcm-a/simulator.py --self-test"
+ },
+ "model": {
+  "structure": "四层一维瞬态热传导，格心有限体积；界面导度取调和平均，热流连续为离散精确性质；时间推进用后向 Euler（隐式），因空气层扩散系数比其余层大两个量级，显式格式会被它卡住步长。",
+  "diffusivity_source": "逐层 a=λ/(ρc)，与附件1 F 列逐位一致；空气层 2.361e-05 未被压低。",
+  "grid": "按层厚分配格数，最薄层不少于 8 格；总格数 253..2027。",
+  "boundaries": {
+   "outer": "x=0 处 Dirichlet，等于环境温度（沿用题面「第Ⅰ层表面可瞬间达到环境温度」）",
+   "skin": "x=L 处 Robin：-λ∂T/∂x = h_skin (T - 37)，代表血流带走的热量。这是全模型唯一自由参数。"
+  },
+  "initial": "全场 37°C，与附件2 的 t=0 实测一致。"
+ },
+ "calibration": {
+  "parameter": "h_skin",
+  "route_1_closed_form_from_plateau": 8.6124,
+  "route_2_least_squares_over_5401_points": 8.7739,
+  "relative_gap": 0.0188,
+  "why_two_routes": "两条独立路线互为对照。若只用最小二乘，无法区分「拟合得好」与「结构对」；闭式路线只用平台值，不看瞬态形状，二者接近才说明结构没有被拟合掩盖。"
+ },
+ "q1_validation": {
+  "internal_correctness": {
+   "transient_endpoint_vs_analytic_steady_state": "47.934716682627 vs 47.934716682526（差 1e-10），瞬态解收敛到解析稳态解",
+   "grid_step_convergence": "格数 10→80、步长 4s→1s，终点温度最大偏差 2.7e-09 °C"
+  },
+  "predictive_evidence": {
+   "rmse_c": 0.4517,
+   "max_abs_c": 1.7972,
+   "last_30min_rmse_c": 0.1453,
+   "first_10min_rmse_c": 1.2798,
+   "honest_note": "误差集中在前 10 分钟。这指向题面假设「表面瞬间达到环境温度」在升温初段过强；本模型未修正该假设，因此前段偏差如实报告，不做掩饰。"
+  },
+  "comparative_evidence": "与论文的稳态代数解对账：论文 θ2=74.30/θ3=72.75/θ4=65.12/θ5=48.08 逐项复算正确（本重建给出 74.30/72.76/65.12/48.08）。论文问一的稳态算术没错，错的是瞬态代码系数与问二问三的模型选择。"
+ },
+ "verdict_on_paper": {
+  "method": "把论文报告的厚度直接代入本重建的瞬态模型，按题面原样判据检查。",
+  "rows": [
+   {
+    "case": "问二 论文 d2=5.5mm (65°C, 60min, d4=5.5)",
+    "peak_skin_c": 44.73,
+    "cap_47_ok": true,
+    "seconds_above_44": 3256,
+    "budget_s": 300,
+    "feasible": false,
+    "margin": "超预算 10.9 倍，不是临界判定"
+   },
+   {
+    "case": "问三 摘要 d2=5.6/d4=5.4 (80°C, 30min)",
+    "peak_skin_c": 48.97,
+    "cap_47_ok": false,
+    "seconds_above_44": 1644,
+    "budget_s": 300,
+    "feasible": false,
+    "margin": "直接突破 47°C 硬上限 1.97°C"
+   },
+   {
+    "case": "问三 正文 d2=5.6/d4=6.4 (80°C, 30min)",
+    "peak_skin_c": 48.01,
+    "cap_47_ok": false,
+    "seconds_above_44": 1626,
+    "budget_s": 300,
+    "feasible": false,
+    "margin": "同样突破 47°C 上限"
+   }
+  ],
+  "conclusion": "三组报告值在正确瞬态模型下全部不可行，且都不是边界附近的临界判定。这与 review.json 的 F2（报告值为硬编码常数）一致。"
+ },
+ "q2_result": {
+  "env_c": 65.0,
+  "window_min": 60,
+  "d4_mm_fixed": 5.5,
+  "d2_star_mm": 18.16,
+  "binding_constraint": "5 分钟预算，而非 47°C 上限（最优点峰值仅 44.045°C）",
+  "first_cross_44_min": 55.0,
+  "cross_check_with_paper": "论文正文写「55 分钟时假人皮肤超过 44℃」。55=60-5 正是该约束的紧致条件，本重建独立复现了这个时刻。论文的判据是对的，但其无时间维的稳态式算不出厚度，报告的 5.5mm 与判据无关。",
+  "monotonicity_verified": "峰值随 d2 单调不增（d2=0.6→25mm 时峰值 44.991→43.240°C），故用二分求最小可行厚度，不需要元启发式。已实测验证而非假设。"
+ },
+ "q3_result": {
+  "env_c": 80.0,
+  "window_min": 30,
+  "treatment": "保留双目标（II 层要薄、IV 层要厚），不做 min(d2-d4) 相减标量化；对每个 d4 求最小可行 d2，报告前沿。",
+  "feasibility_boundary_d4_mm": 3.8,
+  "note_below_boundary": "d4 ≤ 3.6mm 时，d2 取遍 [0.6,25] 均不可行。",
+  "front_range": "d4=3.8→6.4mm 对应 d2*=24.99→21.19mm",
+  "thinnest_total": {
+   "d2_mm": 21.188,
+   "d4_mm": 6.4,
+   "total_mm": 27.588
+  },
+  "constraint_note": "d2*≈21mm 超出题面示例的直觉量级，但仍在附件1 给的 [0.6,25] 内；d4=6.4mm 是附件1 上界。"
+ },
+ "identifiability_limit": {
+  "headline": "本重建对论文的判定是稳健的，但本重建自己的最优厚度不是。两件事必须分开说。",
+  "sensitivity_of_d2_star_to_h_skin": [
+   {
+    "h_skin": 7.0192,
+    "shift": "-20%",
+    "d2_star_mm": null,
+    "status": "infeasible_on_whole_range"
+   },
+   {
+    "h_skin": 7.8965,
+    "shift": "-10%",
+    "d2_star_mm": 22.47
+   },
+   {
+    "h_skin": 8.3352,
+    "shift": "-5%",
+    "d2_star_mm": 20.52
+   },
+   {
+    "h_skin": 8.5985,
+    "shift": "-2%",
+    "d2_star_mm": 19.19
+   },
+   {
+    "h_skin": 8.7739,
+    "shift": "0%",
+    "d2_star_mm": 18.18
+   },
+   {
+    "h_skin": 8.9494,
+    "shift": "+2%",
+    "d2_star_mm": 17.04
+   },
+   {
+    "h_skin": 9.2126,
+    "shift": "+5%",
+    "d2_star_mm": 14.9
+   },
+   {
+    "h_skin": 9.6513,
+    "shift": "+10%",
+    "d2_star_mm": 10.04
+   },
+   {
+    "h_skin": 10.5287,
+    "shift": "+20%",
+    "d2_star_mm": 0.6,
+    "status": "lower_bound_already_feasible"
+   }
+  ],
+  "range_within_calibration_precision": "标定两条路线相差 1.88%；对应 d2* 约 17.0..19.2mm。±5% 时扩到 14.9..20.5mm；±20% 时跨越整个可行域。",
+  "mechanism": {
+   "explanation": "最优点必然让平台温度贴着 44°C：本例平台为 44.14°C，仅高出阈值 0.14°C。而 t=55min 处曲线斜率只有 +0.0112 °C/min，几乎水平。平台移动 0.05°C 就能把 44°C 的穿越时刻推移数分钟，进而要求厚度大幅改变。",
+   "slope_c_per_min": {
+    "10min": 0.3405,
+    "30min": 0.0755,
+    "50min": 0.0165,
+    "55min": 0.0112,
+    "60min": 0.0077
+   },
+   "plateau_vs_threshold": {
+    "h-10%": 44.7174,
+    "h+0%": 44.1425,
+    "h+10%": 43.6473
+   }
+  },
+  "so_what": "「60 分钟窗口内超过 44°C 不超过 5 分钟」这一约束在本问是病态条件：最优解落在曲线几乎水平的区段，对唯一标定参数极度敏感。因此可辩护的交付物是区间加机理解释，不是一个三位有效数字的厚度。"
+ },
+ "missing_information": [
+  "只有一次 75°C 实验可用于标定。h_skin 在 65°C 与 80°C 下是否仍取同值未经验证；生理上血流灌注随热负荷变化，跨环境温度外推缺少证据。",
+  "若要把 d2* 收窄到工程可用精度，需要至少第二个环境温度下的实测曲线，或对皮肤侧散热做独立测量；否则应交付区间而非点值。",
+  "题面未给热流边界或散热系数，本重建以 Robin 条件代表；若真实机制含辐射或湿传递，结构性偏差会超过上面的参数敏感性。"
+ ],
+ "disclaimer": "本重建用于检验建模与论证的可辩护性，不构成任何防护装备设计建议，也不给出可用于实际生产的厚度取值。",
+ "fed_back_into_skill": {
+  "change": "knowledge/validation-methods.md 敏感性一节新增一条：当约束是阈值穿越时刻或越阈累计时长时，先看最优点附近斜率；最优解常把稳态值贴在阈值上，此时问题病态，必须交付可辨识区间与机理，并说明还需哪一次实验才能收窄。",
+  "why": "既有那条「若多个参数组合均可解释数据，报告等效区间」只给了补救办法，没给识别信号。本次重建把识别信号量化了：最优点平台 44.14°C 仅高于阈值 0.14°C，t=55min 斜率 0.0112 °C/min，h_skin ±2% 就让 d2* 从 17.0 变到 19.2mm。",
+  "not_added": "「报告等效区间而非虚假精确值」原文已覆盖，未重复添加。",
+  "verified": [
+   "validate_repository.py 通过",
+   "validate_skill_content.py 通过"
+  ]
+ }
+}

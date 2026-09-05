@@ -1,0 +1,275 @@
+#!/usr/bin/env python3
+"""Build modeling-workbench.json for the 2018 A paper from the frozen rebuild artifacts.
+
+Every anchor, route, check and interpretation below points at a file already in
+this workbench directory. Nothing here is invented: the numbers come from
+results/run-report.json and results/conclusions.json, the rejections come from
+results/prior-review.json.
+"""
+from __future__ import annotations
+
+import hashlib
+import json
+from pathlib import Path
+
+WORKBENCH = Path(__file__).resolve().parent
+SOURCE_ROLES = (
+    ("problem", "problem", "inputs/problem-restatement.txt"),
+    ("attachment", "data", "inputs/attachment.xlsx"),
+    ("solver", "code", "solver/simulator.py"),
+    ("run", "result", "results/run-report.json"),
+    ("conclusions", "result", "results/conclusions.json"),
+    ("review", "prior-output", "results/prior-review.json"),
+)
+
+
+def sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with open(path, "rb") as handle:
+        for block in iter(lambda: handle.read(1 << 20), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def sources() -> list[dict[str, str]]:
+    out = []
+    for ident, role, rel in SOURCE_ROLES:
+        path = WORKBENCH / rel
+        if not path.is_file():
+            raise FileNotFoundError(path)
+        out.append({"id": ident, "role": role, "path": rel, "sha256": sha256(path)})
+    return out
+
+
+def artifact(rel: str) -> dict[str, str]:
+    """Checks bind to a real file by path plus hash, not by a bare string."""
+    path = WORKBENCH / rel
+    if not path.is_file():
+        raise FileNotFoundError(path)
+    return {"path": rel, "sha256": sha256(path)}
+
+
+def question_one() -> dict[str, object]:
+    return {
+        "id": "1",
+        "anchors": [
+            {"id": "layer-properties", "kind": "data", "terms": ["密度", "比热", "热传导率"],
+             "source_ref": "附件1 第 I--IV 层 rho/c/lambda 与厚度", "source_ids": ["attachment"]},
+            {"id": "measured-plateau", "kind": "data", "terms": ["实测温度", "平台"],
+             "source_ref": "附件2 0..5400s 共 5401 点，t=0 为 37.00, 末值 48.08, 末 10min 波动 0.000",
+             "source_ids": ["attachment"]},
+            {"id": "given-scenario", "kind": "relation", "terms": ["环境温度", "工作时间"],
+             "source_ref": "题面问题 (1)：75C、II 层 6mm、IV 层 5mm、90 分钟",
+             "source_ids": ["problem"]},
+            {"id": "air-layer-diffusivity", "kind": "boundary", "terms": ["扩散系数", "空气层"],
+             "source_ref": "附件1 IV 层 rho=1.18 -> a=2.361e-05，比其余三层大两个量级",
+             "source_ids": ["attachment", "run"]},
+            {"id": "plateau-below-ambient", "kind": "result", "terms": ["散热"],
+             "source_ref": "附件2 平台 48.08C 远低于环境 75C",
+             "source_ids": ["attachment"]},
+        ],
+        "targets": [
+            {"id": "layered-pde", "terms": ["一维热传导", "界面条件"],
+             "source_ref": "四层介质内的瞬态方程与界面温度、热流连续"},
+            {"id": "skin-boundary", "terms": ["边界条件", "散热系数"],
+             "source_ref": "皮肤侧边界形式；唯一未知参数 h_skin"},
+            {"id": "time-stepping", "terms": ["时间步长", "稳定性"],
+             "source_ref": "空气层扩散系数决定推进方式的可行性"},
+            {"id": "grid-allocation", "terms": ["空间步长", "分层网格"],
+             "source_ref": "最薄层 0.6mm 与最厚层的格数分配"},
+        ],
+        "routes": [
+            {"id": "fv-implicit-robin", "name": "有限体积 + 调和平均界面导度 + 后向 Euler，皮肤侧 Robin 双路线标定",
+             "status": "selected", "terms": ["有限体积", "后向 Euler", "调和平均"],
+             "anchor_ids": ["layer-properties", "measured-plateau", "given-scenario",
+                            "air-layer-diffusivity", "plateau-below-ambient"],
+             "target_ids": ["layered-pde", "skin-boundary", "time-stepping", "grid-allocation"],
+             "evidence_ids": ["solver", "run"],
+             "evidence_ref": "solver/simulator.py Simulator.run 与 calibrate_skin_coefficient；results/run-report.json calibration"},
+            {"id": "forward-euler", "name": "向前 Euler 显式格式", "status": "rejected",
+             "terms": ["向前 Euler"], "anchor_ids": ["air-layer-diffusivity"],
+             "target_ids": ["time-stepping"], "evidence_ids": ["run"],
+             "reason": "空气层 a=2.361e-05 使稳定域 r=a*tau/h^2<=1/2 把时间步长压到远小于 1s；同一格式在系数被误取为 lambda 时反而稳定，稳定不能证明系数正确。",
+             "evidence_ref": "results/run-report.json diffusivity_m2_s"},
+            {"id": "adiabatic-skin", "name": "皮肤侧绝热", "status": "rejected",
+             "terms": ["绝热"], "anchor_ids": ["plateau-below-ambient"],
+             "target_ids": ["skin-boundary"], "evidence_ids": ["attachment"],
+             "reason": "绝热时全场最终趋于环境温度 75C，与附件2 的 48.08C 平台矛盾。",
+             "evidence_ref": "inputs/attachment.xlsx 附件2 末段"},
+        ],
+        "checks": [
+            {"id": "steady-limit", "kind": "derivation", "terms": ["解析稳态解"],
+             "result": "瞬态终点 47.934716682627 与解析稳态 47.934716682526 相差 1e-10",
+             "result_terms": ["解析稳态解"], "artifact": artifact("results/run-report.json")},
+            {"id": "mesh-convergence", "kind": "implementation", "terms": ["空间步长", "时间步长"],
+             "result": "格数 10->80、步长 4s->1s，终点温度最大偏差 2.7e-09 C",
+             "result_terms": ["空间步长"], "artifact": artifact("results/run-report.json")},
+            {"id": "residual-structure", "kind": "residual", "terms": ["残差"],
+             "result": "全程 RMSE 0.4517C；末 30min 0.1453C；前 10min 1.2798C",
+             "result_terms": ["残差"], "artifact": artifact("results/run-report.json")},
+            {"id": "diffusivity-units", "kind": "unit", "terms": ["扩散系数"],
+             "result": "逐层 a=lambda/(rho*c) 与附件1 预置列逐位一致，含空气层 2.361e-05",
+             "result_terms": ["扩散系数"], "artifact": artifact("inputs/attachment.xlsx")},
+        ],
+        "interpretations": [
+            {"id": "why-robin", "kind": "mechanism", "observation_terms": ["平台"],
+             "explanation_terms": ["散热"], "source_ids": ["attachment", "run"],
+             "source_ref": "附件2 平台 48.08C 低于环境 75C，需要皮肤侧持续取走热量"},
+            {"id": "early-transient-gap", "kind": "boundary", "observation_terms": ["残差"],
+             "explanation_terms": ["边界条件"], "source_ids": ["run"],
+             "source_ref": "前 10min 残差 1.2798C 远大于末 30min 的 0.1453C，题面「表面瞬间达到环境温度」在升温初段过强"},
+        ],
+        "drafting": {"mode": "relation_then_method", "public_route_id": "fv-implicit-robin",
+                     "keep_out_of_manuscript": "三对角求解与 solve_banded 的常规实现细节"},
+    }
+
+
+def question_two() -> dict[str, object]:
+    return {
+        "id": "2",
+        "anchors": [
+            {"id": "q2-constraint", "kind": "relation", "terms": ["工作时间", "上限", "累计时长"],
+             "source_ref": "题面问题 (2)：65C、IV 层 5.5mm、60 分钟内皮肤外侧不超过 47C 且超过 44C 不超过 5 分钟",
+             "source_ids": ["problem"]},
+            {"id": "q2-frozen-interface", "kind": "interface", "terms": ["仿真器", "散热系数"],
+             "source_ref": "冻结问一的仿真器与标定的 h_skin=8.7739；本问新开放量只有 II 层厚度",
+             "source_ids": ["solver", "run"]},
+            {"id": "q2-bounds", "kind": "constraint", "terms": ["厚度范围"],
+             "source_ref": "附件1 II 层厚度 0.6--25 mm", "source_ids": ["attachment"]},
+            {"id": "q2-monotone", "kind": "trial", "terms": ["单调"],
+             "source_ref": "实测 d2=0.6->25mm 时峰值 44.991->43.240C 单调不增",
+             "source_ids": ["conclusions"]},
+        ],
+        "targets": [
+            {"id": "transient-criteria", "terms": ["瞬态判据"],
+             "source_ref": "把两条约束写成逐时刻上限与越阈累计时长，而不是稳态温度"},
+            {"id": "search-layer", "terms": ["搜索层", "二分"],
+             "source_ref": "单调性决定搜索层只需一维二分"},
+        ],
+        "routes": [
+            {"id": "simulator-bisection", "name": "调用问一仿真器 + 一维二分求最小可行厚度",
+             "status": "selected", "terms": ["二分", "最小可行"],
+             "anchor_ids": ["q2-constraint", "q2-frozen-interface", "q2-bounds", "q2-monotone"],
+             "target_ids": ["transient-criteria", "search-layer"],
+             "evidence_ids": ["solver", "conclusions"],
+             "evidence_ref": "solver/simulator.py minimal_feasible_d2 与 constraint_metrics；results/conclusions.json q2_result"},
+            {"id": "steady-algebra", "name": "稳态串联界面方程组定厚度", "status": "rejected",
+             "terms": ["稳态"], "anchor_ids": ["q2-constraint", "q2-bounds"],
+             "target_ids": ["transient-criteria"], "evidence_ids": ["review"],
+             "reason": "该式 4 个方程对 theta2/theta3/theta4/q/d2 共 5 个未知量，扫描 d2=0.6..25mm 每个都有自洽解，以 min d2 为目标会落到下界 0.6mm；且稳态无时间维，无法表达 5 分钟这个量。",
+             "evidence_ref": "results/prior-review.json findings F2 与 F4"},
+            {"id": "metaheuristic", "name": "遗传算法等元启发式", "status": "rejected",
+             "terms": ["遗传算法"], "anchor_ids": ["q2-monotone"], "target_ids": ["search-layer"],
+             "evidence_ids": ["conclusions"],
+             "reason": "峰值随厚度单调不增已实测确认，一维二分即可给出最小可行厚度并保留可复算性；元启发式在此既无精度收益也给不出最优性界。",
+             "evidence_ref": "results/conclusions.json q2_result.monotonicity_verified"},
+        ],
+        "checks": [
+            {"id": "q2-monotonicity", "kind": "feasibility", "terms": ["单调"],
+             "result": "d2=0.6/3/6/10/14/18.161/22/25mm 峰值 44.991/44.864/44.710/44.513/44.318/44.045/43.649/43.240C，单调不增",
+             "result_terms": ["单调"], "artifact": artifact("results/conclusions.json")},
+            {"id": "q2-binding", "kind": "boundary", "terms": ["紧约束"],
+             "result": "最优点峰值 44.045C 未触 47C 上限，紧约束是 5 分钟预算",
+             "result_terms": ["紧约束"], "artifact": artifact("results/conclusions.json")},
+            {"id": "q2-parameter-sensitivity", "kind": "sensitivity", "terms": ["散热系数"],
+             "result": "h_skin 变动 -2%/+2% 时 d2* 为 19.19/17.04mm；-5%/+5% 为 20.52/14.90mm；-20% 整区间不可行、+20% 下界即可行",
+             "result_terms": ["散热系数"], "artifact": artifact("results/conclusions.json")},
+        ],
+        "interpretations": [
+            {"id": "q2-active", "kind": "active_constraint", "observation_terms": ["紧约束"],
+             "explanation_terms": ["累计时长"], "source_ids": ["conclusions"],
+             "source_ref": "results/conclusions.json q2_result.binding_constraint"},
+            {"id": "q2-crossing", "kind": "event_switch", "observation_terms": ["穿越时刻"],
+             "explanation_terms": ["累计时长"], "source_ids": ["conclusions"],
+             "source_ref": "首次超过 44C 在 t=55.0min，正是 60-5 的紧致条件"},
+            {"id": "q2-illcond", "kind": "uncertainty", "observation_terms": ["散热系数"],
+             "explanation_terms": ["可辨识区间"], "source_ids": ["conclusions"],
+             "source_ref": "最优点平台 44.14C 仅高于阈值 0.14C，t=55min 斜率 0.0112 C/min，故交付区间而非点值"},
+        ],
+        "drafting": {"mode": "interface_extension", "public_route_id": "simulator-bisection",
+                     "keep_out_of_manuscript": "二分的迭代次数与容差调参过程"},
+    }
+
+
+def question_three() -> dict[str, object]:
+    return {
+        "id": "3",
+        "anchors": [
+            {"id": "q3-constraint", "kind": "relation", "terms": ["工作时间", "上限", "累计时长"],
+             "source_ref": "题面问题 (3)：80C、30 分钟内皮肤外侧不超过 47C 且超过 44C 不超过 5 分钟",
+             "source_ids": ["problem"]},
+            {"id": "q3-frozen-interface", "kind": "interface", "terms": ["仿真器", "散热系数"],
+             "source_ref": "沿用同一仿真器与 h_skin；本问同时开放 II 层与 IV 层厚度",
+             "source_ids": ["solver", "run"]},
+            {"id": "q3-bounds", "kind": "constraint", "terms": ["厚度范围"],
+             "source_ref": "附件1 II 层 0.6--25mm、IV 层 0.6--6.4mm", "source_ids": ["attachment"]},
+            {"id": "q3-opposed-objectives", "kind": "structure", "terms": ["双目标"],
+             "source_ref": "降低成本要求 II 层薄，隔热要求 IV 层厚，两个方向相反",
+             "source_ids": ["problem"]},
+        ],
+        "targets": [
+            {"id": "bi-objective-handling", "terms": ["双目标", "前沿"],
+             "source_ref": "两目标的处理方式：保留前沿还是标量化"},
+            {"id": "feasibility-frontier", "terms": ["可行性边界"],
+             "source_ref": "IV 层厚度低于某值时整个 II 层区间是否还有可行解"},
+        ],
+        "routes": [
+            {"id": "front-by-d4", "name": "对每个 IV 层厚度求最小可行 II 层厚度，报告前沿",
+             "status": "selected", "terms": ["前沿", "最小可行"],
+             "anchor_ids": ["q3-constraint", "q3-frozen-interface", "q3-bounds", "q3-opposed-objectives"],
+             "target_ids": ["bi-objective-handling", "feasibility-frontier"],
+             "evidence_ids": ["solver", "conclusions"],
+             "evidence_ref": "solver/simulator.py pareto_d2_d4；results/conclusions.json q3_result"},
+            {"id": "difference-scalarization", "name": "min(d2 - d4) 相减标量化", "status": "rejected",
+             "terms": ["标量化"], "anchor_ids": ["q3-opposed-objectives"],
+             "target_ids": ["bi-objective-handling"], "evidence_ids": ["review"],
+             "reason": "两目标量纲相同但偏好含义未定义，相减等于规定 II 层减薄 1mm 与 IV 层增厚 1mm 等价，题面没有给出这个交换率。",
+             "evidence_ref": "results/prior-review.json traceability 问三行"},
+        ],
+        "checks": [
+            {"id": "q3-infeasible-region", "kind": "feasibility", "terms": ["可行性边界"],
+             "result": "IV 层 <=3.6mm 时 II 层取遍 0.6--25mm 均不可行；边界约在 3.8mm",
+             "result_terms": ["可行性边界"], "artifact": artifact("results/conclusions.json")},
+            {"id": "q3-front-endpoints", "kind": "boundary", "terms": ["前沿"],
+             "result": "IV 层 3.8->6.4mm 对应 II 层最小可行 24.99->21.19mm，总厚最小点 21.188+6.4mm",
+             "result_terms": ["前沿"], "artifact": artifact("results/conclusions.json")},
+        ],
+        "interpretations": [
+            {"id": "q3-boundary", "kind": "boundary", "observation_terms": ["可行性边界"],
+             "explanation_terms": ["前沿"], "source_ids": ["conclusions"],
+             "source_ref": "results/conclusions.json q3_result.feasibility_boundary_d4_mm"},
+            {"id": "q3-vs-paper", "kind": "comparison", "observation_terms": ["峰值"],
+             "explanation_terms": ["上限"], "source_ids": ["conclusions", "review"],
+             "source_ref": "参考论文两组报告值在本模型下峰值 48.97C 与 48.01C，均越过 47C 上限"},
+        ],
+        "drafting": {"mode": "interface_extension", "public_route_id": "front-by-d4",
+                     "keep_out_of_manuscript": "前沿扫描的步长选择过程"},
+    }
+
+
+def main() -> int:
+    workbench = {
+        "schema": "mcm-modeling-workbench/v1",
+        "sources": sources(),
+        "questions": [question_one(), question_two(), question_three()],
+    }
+    out = WORKBENCH / "modeling-workbench.json"
+    out.write_text(json.dumps(workbench, ensure_ascii=False, indent=1), encoding="utf-8")
+    selected = {
+        q["id"]: [r["id"] for r in q["routes"] if r["status"] == "selected"]
+        for q in workbench["questions"]
+    }
+    print(f"wrote {out}")
+    print(f"  sources={len(workbench['sources'])} questions={len(workbench['questions'])}")
+    for qid, routes in selected.items():
+        question = next(q for q in workbench["questions"] if q["id"] == qid)
+        print(f"  Q{qid}: selected={routes} anchors={len(question['anchors'])} "
+              f"targets={len(question['targets'])} routes={len(question['routes'])} "
+              f"checks={len(question['checks'])} interpretations={len(question['interpretations'])}")
+    return 0
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())
+
+

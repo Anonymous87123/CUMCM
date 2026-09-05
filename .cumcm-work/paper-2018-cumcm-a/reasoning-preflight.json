@@ -1,0 +1,89 @@
+{
+ "schema": "mcm-reasoning-preflight/v1",
+ "workbench_sha256": "490f43c8c7378977702f175104397ae6d05641c53a8dc5552d2ef36367603531",
+ "prepared_by": "model",
+ "prepared_note": "本文件是预审材料，不是批准记录。reasoning-preflight.md 明确「模型可以准备预审材料，但不能批准自己将要扩写的路线」，故 reviewer_kind 保持 model、decision 保持 pending。每问由负责该问的队员核对 basis/transition/change_trigger 后，把 reviewer 换成本人、reviewer_kind 改为 human、decision 改为 approve，再重跑审计器。",
+ "approvals": [
+  {
+   "question_id": "1",
+   "reviewer": "<待填：负责该问的队员姓名>",
+   "reviewer_kind": "model",
+   "anchor_ids": [
+    "layer-properties",
+    "measured-plateau",
+    "given-scenario",
+    "air-layer-diffusivity",
+    "plateau-below-ambient"
+   ],
+   "target_ids": [
+    "layered-pde",
+    "skin-boundary",
+    "time-stepping",
+    "grid-allocation"
+   ],
+   "source_ids": [
+    "attachment",
+    "problem",
+    "run"
+   ],
+   "route_id": "fv-implicit-robin",
+   "basis_confirmation": "附件2 的平台温度 48.08C 明显低于环境 75C，说明皮肤侧一直在把热量带走，四层物性与空气层的密度 1.18 又使它的扩散系数比其余三层大两个量级。",
+   "transition_confirmation": "把散热写成皮肤侧的边界条件后，未知量收敛到一个散热系数；空气层的扩散系数决定时间步长不能由显式稳定域控制，因此推进方式和分层网格一起确定。",
+   "change_trigger": "若附件2 更换为另一环境温度下的实测曲线，或题面改写第Ⅰ层表面的升温假设，应重新标定散热系数并重审边界形式。",
+   "decision": "pending"
+  },
+  {
+   "question_id": "2",
+   "reviewer": "<待填：负责该问的队员姓名>",
+   "reviewer_kind": "model",
+   "anchor_ids": [
+    "q2-constraint",
+    "q2-frozen-interface",
+    "q2-bounds",
+    "q2-monotone"
+   ],
+   "target_ids": [
+    "transient-criteria",
+    "search-layer"
+   ],
+   "source_ids": [
+    "attachment",
+    "conclusions",
+    "problem",
+    "run",
+    "solver"
+   ],
+   "route_id": "simulator-bisection",
+   "basis_confirmation": "题面把 60 分钟窗口、47C 上限和超过 44C 累计不超过 5 分钟同时给出，附件1 又限定 II 层厚度只能在 0.6 至 25mm 之间。",
+   "transition_confirmation": "两条约束必须写成逐时刻上限与越阈累计时长这两个瞬态判据；实测峰值随厚度单调不增，所以搜索层收缩为一维二分。",
+   "change_trigger": "若工作时间或阈值改变，紧约束可能从 5 分钟预算换成 47C 上限，需重判搜索目标。",
+   "decision": "pending"
+  },
+  {
+   "question_id": "3",
+   "reviewer": "<待填：负责该问的队员姓名>",
+   "reviewer_kind": "model",
+   "anchor_ids": [
+    "q3-constraint",
+    "q3-frozen-interface",
+    "q3-bounds",
+    "q3-opposed-objectives"
+   ],
+   "target_ids": [
+    "bi-objective-handling",
+    "feasibility-frontier"
+   ],
+   "source_ids": [
+    "attachment",
+    "problem",
+    "run",
+    "solver"
+   ],
+   "route_id": "front-by-d4",
+   "basis_confirmation": "题面在 80C、30 分钟下同时开放 II 层与 IV 层厚度，附件1 分别限定 0.6--25mm 与 0.6--6.4mm；降低成本要求 II 层薄、隔热要求 IV 层厚，两个方向相反。",
+   "transition_confirmation": "两目标方向相反且题面未给交换率，因此保留双目标：对每个 IV 层厚度求最小可行 II 层厚度，落到前沿与可行性边界这两个数学对象。",
+   "change_trigger": "若题面给出成本与厚度的具体折算，才可以把前沿收缩成单目标。",
+   "decision": "pending"
+  }
+ ]
+}

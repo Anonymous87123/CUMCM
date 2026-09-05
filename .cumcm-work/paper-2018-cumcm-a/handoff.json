@@ -1,0 +1,65 @@
+{
+ "schema": "mcm-paper-handoff/v1",
+ "paper_id": "PAP-20260905-CUMCMA2018",
+ "target": "2018 CUMCM A 高温作业专用服装设计，25--30 页正文",
+ "prepared_at": "2026-09-05T10:18:06.837760+00:00",
+ "status": "BLOCKED_ON_HUMAN_PREFLIGHT_APPROVAL",
+ "done": [
+  {
+   "step": "modeling-workbench.md §4.1 归档冻结源",
+   "result": "6 个源入台并逐个记 sha256：题面复述、官方附件、仿真器、运行报告、结论、前次审查"
+  },
+  {
+   "step": "modeling-workbench.md §4.2-4.3 逐问填锚点/数学落点/路线",
+   "result": "Q1 5 锚点 4 落点 3 路线 4 检查 2 解释；Q2 4/2/3/3/3；Q3 4/2/2/2/2。每问恰一条 selected，rejected 均带 reason 与 evidence_ref"
+  },
+  {
+   "step": "audit_modeling_workbench.py --phase preflight",
+   "result": "PASS phase=preflight questions=3/3 errors=0"
+  },
+  {
+   "step": "准备 reasoning-preflight.json 材料",
+   "result": "reviewer_kind=model、decision=pending，未自批"
+  },
+  {
+   "step": "audit_reasoning_preflight.py",
+   "result": "FAIL approvals=0，6 个 error：3×PREFLIGHT_REVIEWER_KIND_NOT_HUMAN + 3×PREFLIGHT_QUESTION_UNAPPROVED。这是门按设计生效，不是缺陷"
+  }
+ ],
+ "blocked_by": {
+  "gate": "audit_reasoning_preflight.py",
+  "rule": "reasoning-preflight.md：审计器要求 reviewer_kind 明确为 human；模型可以准备预审材料，但不能批准自己将要扩写的路线。",
+  "why_not_bypassed": "把 reviewer_kind 改成 human 等于伪造队员批准，且会让后续 25 页正文建立在未经人工确认的路线上——这正是该门要拦的流程错误。"
+ },
+ "what_the_reviewer_must_do": [
+  "打开 reasoning-preflight.json，逐问读三段确认文字：basis_confirmation（事实为何重要）、transition_confirmation（事实改了哪部分数学对象）、change_trigger（什么变化会推翻本路线）。",
+  "认可则把该问的 reviewer 换成本人姓名、reviewer_kind 改为 human、decision 改为 approve；不认可则改 decision 为 reject 并写明应换的路线，我再回到工作台改 selected。",
+  "三问可分别批准；未批准的问不会被扩写。",
+  "改完重跑：python <skill>/scripts/audit_reasoning_preflight.py modeling-workbench.json --approval reasoning-preflight.json --format text"
+ ],
+ "after_approval": [
+  "prepare_section_authoring_brief.py 生成逐节写作底稿（依赖已通过的预审）",
+  "prepare_section_drafting_packets.py 生成逐节 packet 与来源绑定的公开判断契约",
+  "按已批准的「锚点 -> 数学落点 -> 路线」写入正文实际位置，25--30 页",
+  "run_longform_portfolio.py run-gates 跑 20 道终门（含内容密度、结果同步、数学语义、公开判断桥、公开推理骨架、XeLaTeX 编译、逐页复核）"
+ ],
+ "known_provenance_limit": "本机没有 2018 A 官方题面 PDF（无 2018 目录）。inputs/problem-restatement.txt 摘自参考论文的「一、问题重述」，属复述而非官方原文；官方材料只有附件1/附件2。正式提交前应换成官方题面。",
+ "files": {
+  "modeling-workbench.json": {
+   "bytes": 18491,
+   "sha256": "490f43c8c7378977702f175104397ae6d05641c53a8dc5552d2ef36367603531"
+  },
+  "reasoning-preflight.json": {
+   "bytes": 3808,
+   "sha256": "1506cd2d57e80471c9f26c768421f98d32f9383858366de2a268be5eff6c35eb"
+  },
+  "build_workbench.py": {
+   "bytes": 17628,
+   "sha256": "e07546329939fabe6c4d08e247928a1f38066992d160f1929b5e3f1eab5f3f14"
+  },
+  "main.tex": {
+   "bytes": 284,
+   "sha256": "9cdf4c8df0fb4f2fdc9bebe5ceeaff1ae20598cb6513e1b2b23115a4f77890b6"
+  }
+ }
+}
