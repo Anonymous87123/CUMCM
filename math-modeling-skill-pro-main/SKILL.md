@@ -123,6 +123,7 @@ Produce a coherent outline from abstract through appendix. Ensure each section a
 - Do not recommend deep learning for small data without transfer learning, augmentation, or a defensible simulation source.
 - Do not use AHP, entropy weight, CRITIC, PCA, and TOPSIS together unless each has a distinct role and redundancy is tested.
 - Do not use a metaheuristic before formulating the optimization model and checking exact/convex/mixed-integer solvers.
+- Do not let the optimization stage bypass the model that answers the first subquestion. When one subquestion builds a simulator or estimator, later design or policy subquestions must call that same computation core; a separate closed-form shortcut for the optimization silently drops the dimensions the simulator carried.
 - Do not convert correlated predictors into causal claims.
 - Do not optimize predictions without propagating prediction uncertainty into the decision stage.
 - Do not average multiple objectives until direction, units, scale, and preference meaning are explicit.

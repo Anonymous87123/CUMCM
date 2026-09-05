@@ -1,0 +1,20 @@
+{
+ "schema": "cumcm-plan-review-target/v1",
+ "review_id": "RVW-20260905-CUMCMA2018",
+ "mode": "REVIEW_EXISTING_SOLUTION",
+ "why_review_not_blind": "本文已在盲测尝试中被完整读取（它表面是题面、实际是完整参考论文），因此不能再作盲测目标；改用 math-modeling-skill SKILL.md 声明的审查路径：把每个模型追溯到分问要求，标出无依据的复杂度、泄漏、无效指标、不可行约束与无支撑结论。",
+ "target": {
+  "path": ".cumcm-work/blind-source-2018-a-full/problem.txt",
+  "bytes": 63587,
+  "sha256": "93c27cbef3e444526b9fcf5fee37b886fbd4be6e649bc42ec4738031756cefd1",
+  "nature": "2018 CUMCM A 题「高温作业专用服装设计」的一份参考论文全文（含摘要、问题重述/分析/假设/符号、三问模型与求解、模型评价、参考文献、MATLAB 附录）"
+ },
+ "not_read": [
+  ".cumcm-work/blind-source-2018-a-full/程序/ 下 9 个 .m 文件",
+  ".cumcm-work/blind-source-2018-a-full/高温作业专用服装设计.pdf",
+  ".cumcm-work/blind-source-2018-a/first.m",
+  ".cumcm-work/blind-source-2018-a/U_x_t.mat"
+ ],
+ "note": "附录里内联的 MATLAB 代码属于本文正文的一部分，已随全文读取；上面列出的独立 .m/.mat/.pdf 文件未读取。",
+ "declared_at": "2026-09-05T09:33:46.520349+00:00"
+}
