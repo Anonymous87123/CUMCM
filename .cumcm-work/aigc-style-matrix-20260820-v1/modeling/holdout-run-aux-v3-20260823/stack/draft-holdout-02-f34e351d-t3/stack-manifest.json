@@ -1,0 +1,41 @@
+{
+  "schema": "aigc-stack-evaluation/v1",
+  "scene": {
+    "document_type": "modeling",
+    "intent": "rewrite",
+    "document_format": "tex",
+    "scope": "local"
+  },
+  "source": {
+    "path": "..\\..\\sources\\draft-holdout-02-f34e351d.tex",
+    "sha256": "a6d244fbbd9818876fa1acf459ed4d492d0c310601619936ebf13281316cf288"
+  },
+  "baseline_id": "source",
+  "candidate": {
+    "path": "..\\..\\authoring\\draft-holdout-02-f34e351d-t3.tex",
+    "sha256": "de5381c270f675ebcf7651be24a7e6b44e136612a2b52d2142fe214e2ce61037",
+    "id": "H1",
+    "provider": "humanize-academic-chinese"
+  },
+  "stage_evidence": [
+    {
+      "path": "stage-academic.json",
+      "sha256": "2d69ba8024a59ba28dc0fbdf538515375d1b50f13f9a602a108a73cd42c8274a"
+    },
+    {
+      "path": "stage-owner.json",
+      "sha256": "be1ae29876e1280128afdda9c655ebf49b0e5c2b1a7db6294eb43caebc57fbcd"
+    }
+  ],
+  "candidate_verification": {
+    "path": "..\\..\\verification\\draft-holdout-02-f34e351d-t3\\candidate-verification.json",
+    "sha256": "82afc38d6d856a96b6620fb30628c3650d2dc130c19c1712af3414233b4e939c"
+  },
+  "human_decision": {
+    "status": "pending"
+  },
+  "claims": [
+    "mechanical_fidelity",
+    "role_chain_complete"
+  ]
+}

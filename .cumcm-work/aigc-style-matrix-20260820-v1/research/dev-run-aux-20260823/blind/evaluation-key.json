@@ -1,0 +1,62 @@
+{
+  "schema": "aigc-blind-key/v1",
+  "seed": 20260823,
+  "dimensions": [
+    "naturalness",
+    "judgment_trajectory",
+    "specificity",
+    "content_density",
+    "semantic_fidelity"
+  ],
+  "pairs": [
+    {
+      "pair_id": "P0001",
+      "A": "draft-dev-01-cdb82386::source",
+      "B": "draft-dev-01-cdb82386::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0002",
+      "A": "draft-dev-01-cdb82386::humanize-academic-chinese::t2",
+      "B": "draft-dev-01-cdb82386::source"
+    },
+    {
+      "pair_id": "P0003",
+      "A": "draft-dev-01-cdb82386::source",
+      "B": "draft-dev-01-cdb82386::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0004",
+      "A": "draft-dev-02-d50907b7::humanize-academic-chinese::t1",
+      "B": "draft-dev-02-d50907b7::source"
+    },
+    {
+      "pair_id": "P0005",
+      "A": "draft-dev-02-d50907b7::source",
+      "B": "draft-dev-02-d50907b7::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0006",
+      "A": "draft-dev-02-d50907b7::source",
+      "B": "draft-dev-02-d50907b7::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0007",
+      "A": "draft-dev-03-4efc1919::source",
+      "B": "draft-dev-03-4efc1919::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0008",
+      "A": "draft-dev-03-4efc1919::humanize-academic-chinese::t2",
+      "B": "draft-dev-03-4efc1919::source"
+    },
+    {
+      "pair_id": "P0009",
+      "A": "draft-dev-03-4efc1919::source",
+      "B": "draft-dev-03-4efc1919::humanize-academic-chinese::t3"
+    }
+  ],
+  "packet_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\research\\dev-run-aux-20260823\\blind\\evaluation-packet.json",
+  "packet_sha256": "70d06cdb26129619817f4f1f624b9cf82f40c4563375285346bb2d3042241164",
+  "source_pairs_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\research\\dev-run-aux-20260823\\blind\\pairs.json",
+  "source_pairs_sha256": "1df15c99481fa59f991377c5c55fa052ea8edf569f5f9bbecf1c65d44bae449d"
+}

@@ -1,0 +1,53 @@
+{
+  "schema": "aigc-draft-improvement-suite-build/v1",
+  "status": "pass",
+  "source": {
+    "path": "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main.tex",
+    "sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609"
+  },
+  "builder": {
+    "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\prepare_draft_improvement_suite.py",
+    "sha256": "500ae6cade65db6b39862058d1a7cef47a27f76b3b26e857a80884066a47b584"
+  },
+  "seed": 20260907,
+  "document_type": "modeling",
+  "required_generation_evidence": [
+    "stack_evaluation"
+  ],
+  "eligible_paragraphs_before_exclusions": 26,
+  "eligible_paragraphs": 14,
+  "excluded_paragraphs": 12,
+  "exclusion_suites": [
+    {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r2\\dev\\suite.json",
+      "sha256": "70899a4d15e10401ad5ec9586b0e4eca3ddec25f2063a6b655fe7bd9312ba2e5",
+      "paragraphs": 3
+    },
+    {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r2\\holdout\\suite.json",
+      "sha256": "5384edc047d486870e213992229b3b9bc26402e29742200d8caa9f9443133af6",
+      "paragraphs": 3
+    },
+    {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r3\\dev\\suite.json",
+      "sha256": "9f08e9e78330cdf6c2dd86749f6161336e6e525591a3439ea37e166532312f90",
+      "paragraphs": 3
+    },
+    {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-real-draft-improvement-20260820-r3\\holdout\\suite.json",
+      "sha256": "ce0aade76e03ca272fa2ea04d755defc80226dae3258cb14ffb94be59a6abef0",
+      "paragraphs": 3
+    }
+  ],
+  "selection_uses_quality_labels": false,
+  "dev": {
+    "suite": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\dev\\suite.json",
+    "sha256": "ad5f434fcd6a35df06dad103fd307cf48632f6e0634ea192de9c43dc74b5f40e",
+    "cases": 3
+  },
+  "holdout": {
+    "suite": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout\\suite.json",
+    "sha256": "79efbc34c7c9ef32c25b74dca80e4b0735985852b943a4f08638b3ac4b4a1f1e",
+    "cases": 3
+  }
+}

@@ -1,0 +1,132 @@
+{
+  "artifact": {
+    "after_sha256": "f88bcbf90891fe8bf45283ca021d43d3d29a4efec908df2d2f4aaeaacc694a4b",
+    "before_sha256": "09768a659b55fc1006e8ccc0401d646b9ad3dc8d33d6257185fb567d8725c6ed"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "67b4c71bd282577eeb2959ddc1eb0bd05ed98cc9129fd9714fa9561a20360aff",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "tex",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_LOGICAL_RELATION_CHANGED",
+      "details": {
+        "after": {
+          "所以": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "logical_relation",
+            "claim_id": "C0005",
+            "column": 94,
+            "end": 95,
+            "end_column": 96,
+            "end_line": 1,
+            "line": 1,
+            "marker": "所以",
+            "sentence_context": "当前能稳定约束模型的是全流域平均恢复事实，所以我们先在统一尺度下观测禁渔的直接效应",
+            "sentence_id": "T0003",
+            "side": "after",
+            "start": 93
+          }
+        ],
+        "before": {
+          "因此": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "logical_relation",
+            "claim_id": "C0005",
+            "column": 94,
+            "end": 95,
+            "end_column": 96,
+            "end_line": 1,
+            "line": 1,
+            "marker": "因此",
+            "sentence_context": "当前能稳定约束模型的是全流域平均恢复事实，因此我们先在统一尺度下观测禁渔的直接效应",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 93
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "所以": 1
+          },
+          "removed": {
+            "因此": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "所以": 1
+            },
+            "after_claim_id": "C0005",
+            "after_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0005",
+                "column": 94,
+                "end": 95,
+                "end_column": 96,
+                "end_line": 1,
+                "line": 1,
+                "marker": "所以",
+                "sentence_context": "当前能稳定约束模型的是全流域平均恢复事实，所以我们先在统一尺度下观测禁渔的直接效应",
+                "sentence_id": "T0003",
+                "side": "after",
+                "start": 93
+              }
+            ],
+            "before_claim_id": "C0005",
+            "before_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0005",
+                "column": 94,
+                "end": 95,
+                "end_column": 96,
+                "end_line": 1,
+                "line": 1,
+                "marker": "因此",
+                "sentence_context": "当前能稳定约束模型的是全流域平均恢复事实，因此我们先在统一尺度下观测禁渔的直接效应",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 93
+              }
+            ],
+            "removed": {
+              "因此": 1
+            },
+            "scope": "CLAIM"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'logical_relation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "830599f1f9bd8e64d7e2169142c8f5d93f25a4b1502ee6cff56797c0fca861d6"
+    }
+  ]
+}

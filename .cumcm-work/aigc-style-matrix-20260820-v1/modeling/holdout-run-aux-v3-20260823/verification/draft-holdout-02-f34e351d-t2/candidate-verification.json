@@ -1,0 +1,59 @@
+{
+  "schema": "aigc-adapter-run/v1",
+  "package": "humanize-academic-chinese",
+  "action": "verify-candidate",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-v3-20260823\\verification\\draft-holdout-02-f34e351d-t2",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-v3-20260823\\sources\\draft-holdout-02-f34e351d.tex",
+    "sha256": "a6d244fbbd9818876fa1acf459ed4d492d0c310601619936ebf13281316cf288",
+    "bytes": 647,
+    "suffix": ".tex"
+  },
+  "protected_inventory": {
+    "numbers": {
+      "0.519": 1,
+      "0.610": 1,
+      "0.704": 1,
+      "0.856": 1,
+      "0.901": 1,
+      "1.133": 1,
+      "1.140": 1
+    },
+    "tex_commands": {},
+    "tex_keys": {},
+    "inline_math": {},
+    "dollar_display_math": {},
+    "display_math": {},
+    "math_environments": {},
+    "code_fences": {},
+    "urls": {}
+  },
+  "tex_semantic_contract": {
+    "status": "pass",
+    "before": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-v3-20260823\\sources\\draft-holdout-02-f34e351d.tex",
+    "after": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-v3-20260823\\authoring\\draft-holdout-02-f34e351d-t2.tex",
+    "scene": "GENERAL",
+    "errors": 0,
+    "warnings": 0,
+    "findings": [],
+    "number_diff": {
+      "removed": [],
+      "introduced": []
+    }
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-v3-20260823\\authoring\\draft-holdout-02-f34e351d-t2.tex",
+    "sha256": "5c7a05e76307970128df94e0c9491e6f477e09e2f05bd409be3f0cc37c17e0df",
+    "bytes": 666,
+    "suffix": ".tex"
+  },
+  "human_review_required": true
+}

@@ -1,0 +1,32 @@
+{
+  "schema": "aigc-draft-improvement-suite-build/v1",
+  "status": "pass",
+  "source": {
+    "path": "D:\\2026-BYI\\history\\sccd\\papers\\paper\\paper_CN.tex",
+    "sha256": "790fbc6c4c5af0350b3c391959ac6c394976cc6fdc01568b4ca7fe8980879959"
+  },
+  "builder": {
+    "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\prepare_draft_improvement_suite.py",
+    "sha256": "500ae6cade65db6b39862058d1a7cef47a27f76b3b26e857a80884066a47b584"
+  },
+  "seed": 20260909,
+  "document_type": "research",
+  "required_generation_evidence": [
+    "stack_evaluation"
+  ],
+  "eligible_paragraphs_before_exclusions": 34,
+  "eligible_paragraphs": 34,
+  "excluded_paragraphs": 0,
+  "exclusion_suites": [],
+  "selection_uses_quality_labels": false,
+  "dev": {
+    "suite": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\research\\dev\\suite.json",
+    "sha256": "f05714b47f0ef1b4bea5777105a362c24e5cbdf14cf3aaf308b9b1bb02e3c5f2",
+    "cases": 3
+  },
+  "holdout": {
+    "suite": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\research\\holdout\\suite.json",
+    "sha256": "6f4ac18556030ddb02b76bdab7ecd6159e3ea0d21067dc99fcb5940b2e0a55fd",
+    "cases": 3
+  }
+}

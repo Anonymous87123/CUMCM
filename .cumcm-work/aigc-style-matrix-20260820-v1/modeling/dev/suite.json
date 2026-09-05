@@ -1,0 +1,98 @@
+{
+  "schema": "aigc-style-benchmark-suite/v1",
+  "suite_id": "matrix-modeling-dev",
+  "version": "2026-08-20",
+  "split": "dev",
+  "benchmark_goal": "improvement",
+  "providers": [
+    "humanize-academic-chinese"
+  ],
+  "required_trials": 3,
+  "required_generation_evidence": [
+    "stack_evaluation"
+  ],
+  "purpose": "Forward draft-to-candidate benchmark sampled without quality labels.",
+  "cases": [
+    {
+      "id": "draft-dev-01-ab7c1a2e",
+      "scene": {
+        "document_type": "modeling",
+        "document_format": "tex",
+        "scope": "local"
+      },
+      "source": "sources/draft-dev-01-ab7c1a2e.tex",
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "content-density",
+        "semantic-fidelity",
+        "paragraph-rhythm"
+      ],
+      "provenance": {
+        "kind": "real-draft-section",
+        "source_document": "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main.tex",
+        "source_document_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+        "start_line": 495,
+        "end_line": 495,
+        "heading": "结论",
+        "paragraph_sha256": "ab7c1a2e7119bf48ae7ecb7b6ba22e8619c90f768a5b460c2fc68ac22b4fff47",
+        "selection_seed": 20260907,
+        "quality_label_used_for_selection": false
+      }
+    },
+    {
+      "id": "draft-dev-02-48a43abe",
+      "scene": {
+        "document_type": "modeling",
+        "document_format": "tex",
+        "scope": "local"
+      },
+      "source": "sources/draft-dev-02-48a43abe.tex",
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "content-density",
+        "semantic-fidelity",
+        "paragraph-rhythm"
+      ],
+      "provenance": {
+        "kind": "real-draft-section",
+        "source_document": "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main.tex",
+        "source_document_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+        "start_line": 478,
+        "end_line": 478,
+        "heading": "求解与结果",
+        "paragraph_sha256": "48a43abeef81c8d3bf8ddf888a8f753d01802bca0f74ce361013f9191e4d088b",
+        "selection_seed": 20260907,
+        "quality_label_used_for_selection": false
+      }
+    },
+    {
+      "id": "draft-dev-03-fcea71a5",
+      "scene": {
+        "document_type": "modeling",
+        "document_format": "tex",
+        "scope": "local"
+      },
+      "source": "sources/draft-dev-03-fcea71a5.tex",
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "content-density",
+        "semantic-fidelity",
+        "paragraph-rhythm"
+      ],
+      "provenance": {
+        "kind": "real-draft-section",
+        "source_document": "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main.tex",
+        "source_document_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+        "start_line": 117,
+        "end_line": 117,
+        "heading": "模型建立",
+        "paragraph_sha256": "fcea71a5d8af9d73bf9748c6e6f10e0be2fae7ec5a51d68c20ffb942ae3a7a5c",
+        "selection_seed": 20260907,
+        "quality_label_used_for_selection": false
+      }
+    }
+  ]
+}

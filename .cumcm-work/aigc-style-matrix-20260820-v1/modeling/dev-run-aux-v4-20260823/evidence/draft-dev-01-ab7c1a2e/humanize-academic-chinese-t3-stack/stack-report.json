@@ -1,0 +1,38 @@
+{
+  "schema": "aigc-stack-evaluation-report/v1",
+  "status": "MECHANICAL_PASS_HUMAN_PENDING",
+  "manifest": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\dev-run-aux-v4-20260823\\evidence\\draft-dev-01-ab7c1a2e\\humanize-academic-chinese-t3-stack\\stack-manifest.json",
+    "sha256": "02d2e5e4221b4c423013796255850cdc66c2af65e8c8fcd976cd3210d6ac4734"
+  },
+  "scene": {
+    "document_type": "modeling",
+    "intent": "rewrite",
+    "document_format": "tex",
+    "scope": "local"
+  },
+  "candidate": {
+    "id": "H1",
+    "provider": "humanize-academic-chinese",
+    "source_present": true,
+    "candidate_present": true,
+    "verification_present": true
+  },
+  "required_stage_providers": [
+    "deai-academic-writing",
+    "deai-modeling-writing"
+  ],
+  "covered_stage_providers": [
+    "deai-academic-writing",
+    "deai-modeling-writing"
+  ],
+  "decision_status": "pending",
+  "claims": [
+    "mechanical_fidelity",
+    "role_chain_complete"
+  ],
+  "errors": 0,
+  "warnings": 0,
+  "findings": [],
+  "interpretation": "Mechanical PASS proves frozen-source, role-evidence and protected-candidate contracts only. HUMAN_EVALUATED_PASS additionally records a locked blind comparison and an explicit human decision; neither status proves human authorship, detector performance, or academic correctness."
+}

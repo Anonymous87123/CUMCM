@@ -1,0 +1,96 @@
+{
+  "artifact": {
+    "after_sha256": "4b009f356cf2bf8c441d07268746e80bbab41568e972c1e174660d13e3562027",
+    "before_sha256": "17ff66db1ec3516b765ba969b795bffbb4978676b84a2945e6ca5227986d028b"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "f1522552bb8616e149e4ce091f7ee675744a7a9c54e095b15d04bd8ac3b09beb",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "tex",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_CONDITION_CHANGED",
+      "details": {
+        "after": {
+          "当": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "condition",
+            "claim_id": "C0010",
+            "column": 143,
+            "end": 143,
+            "end_column": 144,
+            "end_line": 1,
+            "line": 1,
+            "marker": "当",
+            "sentence_context": "从当前结果看，禁渔只是恢复链条的起点，后面能不能把收益留在系统内部，最终还得看水质、连通性、放流和入侵控制能不能跟上",
+            "sentence_id": "T0005",
+            "side": "after",
+            "start": 142
+          }
+        ],
+        "before": {},
+        "before_occurrences": [],
+        "raw_delta": {
+          "added": {
+            "当": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "当": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0010",
+                "column": 143,
+                "end": 143,
+                "end_column": 144,
+                "end_line": 1,
+                "line": 1,
+                "marker": "当",
+                "sentence_context": "从当前结果看，禁渔只是恢复链条的起点，后面能不能把收益留在系统内部，最终还得看水质、连通性、放流和入侵控制能不能跟上",
+                "sentence_id": "T0005",
+                "side": "after",
+                "start": 142
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'condition'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "cbf283189bfb822f53fd03716ef15b0aaf2b1ebcfd3ad7a50dc5a3baa33c139c"
+    }
+  ]
+}

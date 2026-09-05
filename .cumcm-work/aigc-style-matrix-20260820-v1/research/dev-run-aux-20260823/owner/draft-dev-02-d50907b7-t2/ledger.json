@@ -1,0 +1,25 @@
+{
+  "schema": "aigc-benchmark-owner-ledger/v1",
+  "document_type": "research",
+  "provider": "deai-research-writing",
+  "mode": "REWRITE",
+  "source_sha256": "9191f6c40d7e5741f32c2e937f11581b46c49f91582de8d5d39a88761c9a2f6c",
+  "candidate_sha256": "d738eaef0b23dd07ef477ea3849a1f55abac00110a1cd7c3fe901de0e36b9bfa",
+  "decisions": [
+    {
+      "source_anchor": "draft-dev-02-d50907b7.tex; frozen excerpt: 前文在数学层面建立了\"分组即子空间选择\"的映射（式~\\eqref{eq:subspace_hessian}--\\eqref{eq:elliptic_group_condition}），但这一映射是否在实际优化中产生可观测的后果，需要从最简单…",
+      "action": "REWRITE local prose candidate draft-dev-02-d50907b7-t2.tex; no second humanizer pass",
+      "claim": "Retain the existing research claim and expose its comparison or design implication without adding a new result.",
+      "evidence_boundary": "No experiment, citation, theorem, causal claim, or evidence grade is added; the candidate remains bounded by the frozen excerpt.",
+      "claim_strength": "The source modality, negation, comparison direction, scope qualifier, and empirical/theoretical status are unchanged.",
+      "preserved_objects": [
+        "All equations, references, algorithm names, result labels, condition qualifiers, and claim objects in the frozen source."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "claims": {
+    "hidden_reasoning_recorded": false,
+    "academic_correctness_proven": false
+  }
+}

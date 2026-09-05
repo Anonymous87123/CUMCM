@@ -1,0 +1,61 @@
+{
+  "artifacts": {
+    "execution-record.json": {
+      "sha256": "1651ff5096d19ee68dd82f37205775df9211f9d0d78396efb0725470f08f8678",
+      "size": 643
+    },
+    "inputs/after.bin": {
+      "sha256": "d996c50c674081312a4c0ceb8310c836b182f6ca5afcef23ea996e791cf72cfd",
+      "size": 380
+    },
+    "inputs/before.bin": {
+      "sha256": "1d307051d03dcf17977d54ae78d9b24ee3fd34ff3210cf347130f18d86258aff",
+      "size": 371
+    },
+    "invocation-request.json": {
+      "sha256": "07f81b8da957aca31f082362fab8aaf5f64c58e5af2a0285d92f3e2c65e2c6ad",
+      "size": 2404
+    },
+    "paired-quality-review-request.json": {
+      "sha256": "645f635f9dd5f7d1d1c677f787207423cb2809c06bdefc5d450553b5458faacd",
+      "size": 2903
+    },
+    "rendered-output.txt": {
+      "sha256": "0c1cbcf5e7c2960972a1efbd489cc8d279107a0052ad49f87a9c5eeb84c616d7",
+      "size": 19394
+    },
+    "stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    "validation-result.json": {
+      "sha256": "0c1cbcf5e7c2960972a1efbd489cc8d279107a0052ad49f87a9c5eeb84c616d7",
+      "size": 19394
+    }
+  },
+  "contains_source_content": true,
+  "delivery_gate_status": "FAIL",
+  "exit_code": 1,
+  "external_anchor_status": "NOT_PROVIDED",
+  "integrity_scope": "SELF_CONSISTENCY_ONLY",
+  "invocation_request_sha256": "077daa8cf70d37d3b7092e0934946c957d323e85b571d0a8a06efd5d7f2362c7",
+  "manifest_sha256": "61cd99a2d0b50e7b0ac3b47ce6f5f28effbc977ed43bb186544d272517b89b6c",
+  "mode": "REWRITE",
+  "paired_quality_review_request_sha256": "c23db75f3081c2d390e9b5ce199ee4e1906dc77c22dfaa112837085703791094",
+  "paired_quality_review_status": "BLOCKED_BY_MECHANICAL_GATE",
+  "record_sha256": "3dbeca582af38c6ea301e6aa2c22ff4b93795dc525005f79ae0f00139a9a409d",
+  "run_id": "hvr4-077daa8cf70d37d3b7092e0934946c957d323e85b571d0a8a06efd5d7f2362c7",
+  "scene": "MODELING",
+  "schema": "humanize-direct-validation-evidence/v5",
+  "source_bindings": {
+    "after": {
+      "sha256": "d996c50c674081312a4c0ceb8310c836b182f6ca5afcef23ea996e791cf72cfd",
+      "size": 380
+    },
+    "before": {
+      "sha256": "1d307051d03dcf17977d54ae78d9b24ee3fd34ff3210cf347130f18d86258aff",
+      "size": 371
+    }
+  },
+  "status": "FAIL"
+}

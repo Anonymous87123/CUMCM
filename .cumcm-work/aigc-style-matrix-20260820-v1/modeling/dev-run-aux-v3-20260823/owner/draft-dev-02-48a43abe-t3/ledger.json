@@ -1,0 +1,25 @@
+{
+  "schema": "aigc-benchmark-owner-ledger/v1",
+  "document_type": "modeling",
+  "provider": "deai-modeling-writing",
+  "mode": "REWRITE",
+  "source_sha256": "1d307051d03dcf17977d54ae78d9b24ee3fd34ff3210cf347130f18d86258aff",
+  "candidate_sha256": "2aca6010befd5fa678e625652935f9852c4d29bc06d45510ddcb0e943f67f413",
+  "decisions": [
+    {
+      "source_anchor": "draft-dev-02-48a43abe.tex; frozen excerpt: 熵权、CRITIC、等权和组合赋权得到的排序完全一致，围绕组合权重做 2000 次 $[0.85,1.15]$ 重归一扰动后，完整排序稳定率和“入侵情景最差”稳定率均为 100\\%。不同赋权下比较关系都没有改变，因此污染削弱禁渔收益、入侵进…",
+      "action": "REWRITE local prose candidate draft-dev-02-48a43abe-t3.tex; no second humanizer pass",
+      "problem_object": "The model object, evidence scale, comparison object, and result already named in the frozen paragraph.",
+      "mathematical_change": "No formula, number, unit, label, reference, objective direction, or constraint is changed; only local clause order or connection is revised.",
+      "modeling_decision": "Keep the source model and evidence-to-conclusion relation, while making the stated scale or comparison responsibility easier to follow.",
+      "preserved_results": [
+        "All source numbers, units, formulas, labels, references, comparison directions, and stated limitations."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "claims": {
+    "hidden_reasoning_recorded": false,
+    "academic_correctness_proven": false
+  }
+}

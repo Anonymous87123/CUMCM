@@ -1,0 +1,62 @@
+{
+  "schema": "aigc-blind-key/v1",
+  "seed": 20260823,
+  "dimensions": [
+    "naturalness",
+    "judgment_trajectory",
+    "specificity",
+    "content_density",
+    "semantic_fidelity"
+  ],
+  "pairs": [
+    {
+      "pair_id": "P0001",
+      "A": "draft-holdout-01-9cba4b9d::source",
+      "B": "draft-holdout-01-9cba4b9d::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0002",
+      "A": "draft-holdout-01-9cba4b9d::humanize-academic-chinese::t2",
+      "B": "draft-holdout-01-9cba4b9d::source"
+    },
+    {
+      "pair_id": "P0003",
+      "A": "draft-holdout-01-9cba4b9d::source",
+      "B": "draft-holdout-01-9cba4b9d::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0004",
+      "A": "draft-holdout-02-f34e351d::humanize-academic-chinese::t1",
+      "B": "draft-holdout-02-f34e351d::source"
+    },
+    {
+      "pair_id": "P0005",
+      "A": "draft-holdout-02-f34e351d::source",
+      "B": "draft-holdout-02-f34e351d::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0006",
+      "A": "draft-holdout-02-f34e351d::source",
+      "B": "draft-holdout-02-f34e351d::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0007",
+      "A": "draft-holdout-03-565787c0::source",
+      "B": "draft-holdout-03-565787c0::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0008",
+      "A": "draft-holdout-03-565787c0::humanize-academic-chinese::t2",
+      "B": "draft-holdout-03-565787c0::source"
+    },
+    {
+      "pair_id": "P0009",
+      "A": "draft-holdout-03-565787c0::source",
+      "B": "draft-holdout-03-565787c0::humanize-academic-chinese::t3"
+    }
+  ],
+  "packet_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-v3-20260823\\blind\\evaluation-packet.json",
+  "packet_sha256": "4ca70c2f8e4ac2105a8df8899f12fade773c8aa4200ad9167dced6a7674055df",
+  "source_pairs_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-v3-20260823\\blind\\pairs.json",
+  "source_pairs_sha256": "1f62d2b5cce23c1cfa15a3582cc074175fada352b3c942e87ed0401a96ed7163"
+}

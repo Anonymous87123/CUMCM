@@ -1,0 +1,25 @@
+{
+  "schema": "aigc-benchmark-owner-ledger/v1",
+  "document_type": "modeling",
+  "provider": "deai-modeling-writing",
+  "mode": "REWRITE",
+  "source_sha256": "17ff66db1ec3516b765ba969b795bffbb4978676b84a2945e6ca5227986d028b",
+  "candidate_sha256": "ac7ba517884e316cc33ae6f6a7b328a1f9bc3165ca34017474849e0ab430ae18",
+  "decisions": [
+    {
+      "source_anchor": "draft-dev-01-ab7c1a2e.tex; frozen excerpt: 承载力继续提高后，三级食物链不会一直维持规则振荡，而是会走向更复杂的长期波动。有限时间最大李雅普诺夫指数支持了这一方向，但还不足以给出唯一临界点；文中的 $K$ 也只表示归一化结构压力，而非长江某一实测承载量。污染和入侵则把另一层风险推了出…",
+      "action": "REWRITE local prose candidate draft-dev-01-ab7c1a2e-t1.tex; no second humanizer pass",
+      "problem_object": "The model object, evidence scale, comparison object, and result already named in the frozen paragraph.",
+      "mathematical_change": "No formula, number, unit, label, reference, objective direction, or constraint is changed; only local clause order or connection is revised.",
+      "modeling_decision": "Keep the source model and evidence-to-conclusion relation, while making the stated scale or comparison responsibility easier to follow.",
+      "preserved_results": [
+        "All source numbers, units, formulas, labels, references, comparison directions, and stated limitations."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "claims": {
+    "hidden_reasoning_recorded": false,
+    "academic_correctness_proven": false
+  }
+}

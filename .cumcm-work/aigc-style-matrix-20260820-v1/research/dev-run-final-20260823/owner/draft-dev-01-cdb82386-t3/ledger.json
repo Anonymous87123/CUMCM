@@ -1,0 +1,25 @@
+{
+  "schema": "aigc-benchmark-owner-ledger/v1",
+  "document_type": "research",
+  "provider": "deai-research-writing",
+  "mode": "REWRITE",
+  "source_sha256": "80dc1ed278c983275b3dac59fd1461a13ceabd6bad686b58e0c62bb78aa3b754",
+  "candidate_sha256": "da1aeeeac3b670d6b9fdec0d8c3453a6305ee71adba1134512b5e45ee6411a94",
+  "decisions": [
+    {
+      "source_anchor": "draft-dev-01-cdb82386.tex; frozen excerpt: §4.3 建立了几何指标与终点的统计关联，但关联不等于归因。一个更强的检验是：当两种分组器在结构纯度与局部条件性上产生方向相反的排序时，终点究竟跟随哪一方？DG2 以变量对交互检测为核心，在选定病态函数上几乎完美恢复了 benchmark …",
+      "action": "REWRITE local prose candidate draft-dev-01-cdb82386-t3.tex; no second humanizer pass",
+      "claim": "Retain the existing research claim and expose its comparison or design implication without adding a new result.",
+      "evidence_boundary": "No experiment, citation, theorem, causal claim, or evidence grade is added; the candidate remains bounded by the frozen excerpt.",
+      "claim_strength": "The source modality, negation, comparison direction, scope qualifier, and empirical/theoretical status are unchanged.",
+      "preserved_objects": [
+        "All equations, references, algorithm names, result labels, condition qualifiers, and claim objects in the frozen source."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "claims": {
+    "hidden_reasoning_recorded": false,
+    "academic_correctness_proven": false
+  }
+}

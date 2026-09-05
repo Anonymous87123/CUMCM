@@ -1,0 +1,62 @@
+{
+  "schema": "aigc-blind-key/v1",
+  "seed": 20260823,
+  "dimensions": [
+    "naturalness",
+    "judgment_trajectory",
+    "specificity",
+    "content_density",
+    "semantic_fidelity"
+  ],
+  "pairs": [
+    {
+      "pair_id": "P0001",
+      "A": "draft-dev-01-ab7c1a2e::source",
+      "B": "draft-dev-01-ab7c1a2e::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0002",
+      "A": "draft-dev-01-ab7c1a2e::humanize-academic-chinese::t2",
+      "B": "draft-dev-01-ab7c1a2e::source"
+    },
+    {
+      "pair_id": "P0003",
+      "A": "draft-dev-01-ab7c1a2e::source",
+      "B": "draft-dev-01-ab7c1a2e::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0004",
+      "A": "draft-dev-02-48a43abe::humanize-academic-chinese::t1",
+      "B": "draft-dev-02-48a43abe::source"
+    },
+    {
+      "pair_id": "P0005",
+      "A": "draft-dev-02-48a43abe::source",
+      "B": "draft-dev-02-48a43abe::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0006",
+      "A": "draft-dev-02-48a43abe::source",
+      "B": "draft-dev-02-48a43abe::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0007",
+      "A": "draft-dev-03-fcea71a5::source",
+      "B": "draft-dev-03-fcea71a5::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0008",
+      "A": "draft-dev-03-fcea71a5::humanize-academic-chinese::t2",
+      "B": "draft-dev-03-fcea71a5::source"
+    },
+    {
+      "pair_id": "P0009",
+      "A": "draft-dev-03-fcea71a5::source",
+      "B": "draft-dev-03-fcea71a5::humanize-academic-chinese::t3"
+    }
+  ],
+  "packet_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\dev-run-frozen-20260823\\blind\\evaluation-packet.json",
+  "packet_sha256": "dd0f72881f2c4a20277ee46e042ff29162f43cef00e0776d4ed35d3c61a6d561",
+  "source_pairs_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\dev-run-frozen-20260823\\blind\\pairs.json",
+  "source_pairs_sha256": "e38e3f4bff12f37ddf52709dfed5035b2dfbf27d532ab492c68996c7901932ca"
+}

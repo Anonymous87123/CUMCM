@@ -1,0 +1,25 @@
+{
+  "schema": "aigc-benchmark-owner-ledger/v1",
+  "document_type": "research",
+  "provider": "deai-research-writing",
+  "mode": "REWRITE",
+  "source_sha256": "f43ffb1e27fad66352ed729fb5e8aa71244ab419b8b41b67351feb8730d7a998",
+  "candidate_sha256": "6bf79638d58e1b032e64e9cb71f01efa08191e558528b418529d7a6bec41ed2d",
+  "decisions": [
+    {
+      "source_anchor": "draft-dev-03-4efc1919.tex; frozen excerpt: 本文的核心判断是：协同进化中的变量组不仅是交互集合，也是后端必须实际求解的诱导子问题。在本文固定的 CC+CMA-ES 设定下，Q1--Q3 共同表明，仅改变分组就足以改写局部条件性；恢复隐藏的原生结构能够显著改善最终性能；显式的条件性诊断…",
+      "action": "REWRITE local prose candidate draft-dev-03-4efc1919-t3.tex; no second humanizer pass",
+      "claim": "Retain the existing research claim and expose its comparison or design implication without adding a new result.",
+      "evidence_boundary": "No experiment, citation, theorem, causal claim, or evidence grade is added; the candidate remains bounded by the frozen excerpt.",
+      "claim_strength": "The source modality, negation, comparison direction, scope qualifier, and empirical/theoretical status are unchanged.",
+      "preserved_objects": [
+        "All equations, references, algorithm names, result labels, condition qualifiers, and claim objects in the frozen source."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "claims": {
+    "hidden_reasoning_recorded": false,
+    "academic_correctness_proven": false
+  }
+}

@@ -1,0 +1,186 @@
+{
+  "artifact": {
+    "after_sha256": "763ee0b5606f5aa0d42590fb8dc76b78b685c74f80cc062e3acd38bda95cef8c",
+    "before_sha256": "1d307051d03dcf17977d54ae78d9b24ee3fd34ff3210cf347130f18d86258aff"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "81dfab3be5a720e0c6bbcf7971c7dc3af9e0f115593bcc4316bc4f8cfff98858",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "tex",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不": 1,
+          "没有": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0004",
+            "column": 107,
+            "end": 108,
+            "end_column": 109,
+            "end_line": 1,
+            "line": 1,
+            "marker": "没有",
+            "sentence_context": "这一比较关系在四种赋权方法下都没有改变，因此污染削弱禁渔收益、入侵进一步恶化系统状态的次序判断并不依赖某一套特定赋权",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 106
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0005",
+            "column": 140,
+            "end": 140,
+            "end_column": 141,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "这一比较关系在四种赋权方法下都没有改变，因此污染削弱禁渔收益、入侵进一步恶化系统状态的次序判断并不依赖某一套特定赋权",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 139
+          }
+        ],
+        "before": {
+          "不": 2,
+          "没有": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0004",
+            "column": 92,
+            "end": 92,
+            "end_column": 93,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "不同赋权下比较关系都没有改变，因此污染削弱禁渔收益、入侵进一步恶化系统状态的次序判断并不依赖某一套特定赋权",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 91
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0004",
+            "column": 102,
+            "end": 103,
+            "end_column": 104,
+            "end_line": 1,
+            "line": 1,
+            "marker": "没有",
+            "sentence_context": "不同赋权下比较关系都没有改变，因此污染削弱禁渔收益、入侵进一步恶化系统状态的次序判断并不依赖某一套特定赋权",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 101
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0005",
+            "column": 135,
+            "end": 135,
+            "end_column": 136,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "不同赋权下比较关系都没有改变，因此污染削弱禁渔收益、入侵进一步恶化系统状态的次序判断并不依赖某一套特定赋权",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 134
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "不": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0004",
+                "column": 107,
+                "end": 108,
+                "end_column": 109,
+                "end_line": 1,
+                "line": 1,
+                "marker": "没有",
+                "sentence_context": "这一比较关系在四种赋权方法下都没有改变，因此污染削弱禁渔收益、入侵进一步恶化系统状态的次序判断并不依赖某一套特定赋权",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 106
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0004",
+                "column": 92,
+                "end": 92,
+                "end_column": 93,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "不同赋权下比较关系都没有改变，因此污染削弱禁渔收益、入侵进一步恶化系统状态的次序判断并不依赖某一套特定赋权",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 91
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0004",
+                "column": 102,
+                "end": 103,
+                "end_column": 104,
+                "end_line": 1,
+                "line": 1,
+                "marker": "没有",
+                "sentence_context": "不同赋权下比较关系都没有改变，因此污染削弱禁渔收益、入侵进一步恶化系统状态的次序判断并不依赖某一套特定赋权",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 101
+              }
+            ],
+            "removed": {
+              "不": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "43175c2beb1238cd7fd51a7e7807ea19cf9ed9c58ea5a2b695e0c5431956645b"
+    }
+  ]
+}

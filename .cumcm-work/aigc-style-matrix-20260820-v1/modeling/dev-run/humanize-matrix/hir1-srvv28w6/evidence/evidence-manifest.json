@@ -1,0 +1,65 @@
+{
+  "artifacts": {
+    "execution-record.json": {
+      "sha256": "2ea9af13614a8abbc6d99c47206368451ddf57ae91305188ff7a6ab215c50184",
+      "size": 643
+    },
+    "inputs/after.bin": {
+      "sha256": "165c16fdb2dabb57f2f1853c3c8b6c12c4ad083bb4dbe6cfc862ab63c9f79e46",
+      "size": 592
+    },
+    "inputs/before.bin": {
+      "sha256": "17ff66db1ec3516b765ba969b795bffbb4978676b84a2945e6ca5227986d028b",
+      "size": 601
+    },
+    "invocation-request.json": {
+      "sha256": "84720a21724d5c6fc43848bf4418d42fd802d1751e17db56f113d86dd75de8be",
+      "size": 2406
+    },
+    "paired-quality-review-request.json": {
+      "sha256": "56c008b1667d856a4a39be0a9157ed7a607bea2c530f588ac9a8fee2e9322bd9",
+      "size": 2905
+    },
+    "rendered-output.txt": {
+      "sha256": "56b6797de6d88158932d5bdab1274f663920e38f3d2a0bea8f26c4b049c7299d",
+      "size": 79690
+    },
+    "stderr.txt": {
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "size": 0
+    },
+    "validation-result.json": {
+      "sha256": "56b6797de6d88158932d5bdab1274f663920e38f3d2a0bea8f26c4b049c7299d",
+      "size": 79690
+    },
+    "warning-review-request.json": {
+      "sha256": "5525ac9e7733cce6e78f88c4804aec073f5f82fc514b91d442e4c3f4379d13c7",
+      "size": 10794
+    }
+  },
+  "contains_source_content": true,
+  "delivery_gate_status": "REVIEW",
+  "exit_code": 2,
+  "external_anchor_status": "NOT_PROVIDED",
+  "integrity_scope": "SELF_CONSISTENCY_ONLY",
+  "invocation_request_sha256": "fffd8de2030f4e551f0c2e95798503009c78d54355f1dbe730a2302924e4dabf",
+  "manifest_sha256": "3eb297e4fc163a770f3af58f18ab746817b8e1b42c7f3fc24a74f4a0a2bc0d87",
+  "mode": "REWRITE",
+  "paired_quality_review_request_sha256": "59e175cdb4362116f8c1c64a41b6503d438835de8ef2e9e453752417f3a313fb",
+  "paired_quality_review_status": "BLOCKED_BY_MECHANICAL_GATE",
+  "record_sha256": "98e8dcc0c2274a3d61209832459d734e00548d9f277a56b136c2006343502cc7",
+  "run_id": "hvr4-fffd8de2030f4e551f0c2e95798503009c78d54355f1dbe730a2302924e4dabf",
+  "scene": "MODELING",
+  "schema": "humanize-direct-validation-evidence/v5",
+  "source_bindings": {
+    "after": {
+      "sha256": "165c16fdb2dabb57f2f1853c3c8b6c12c4ad083bb4dbe6cfc862ab63c9f79e46",
+      "size": 592
+    },
+    "before": {
+      "sha256": "17ff66db1ec3516b765ba969b795bffbb4978676b84a2945e6ca5227986d028b",
+      "size": 601
+    }
+  },
+  "status": "REVIEW"
+}

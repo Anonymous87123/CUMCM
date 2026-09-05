@@ -1,0 +1,25 @@
+{
+  "schema": "aigc-benchmark-owner-ledger/v1",
+  "document_type": "modeling",
+  "provider": "deai-modeling-writing",
+  "mode": "REWRITE",
+  "source_sha256": "bb9084fa4956960ef64d1616db43153abbc955c582e8744cd91a7479aae94ccc",
+  "candidate_sha256": "d06a224778345bf6538a5d2048337b51f99f0a7983a9cc688f29fb299d6cb6e5",
+  "decisions": [
+    {
+      "source_anchor": "draft-holdout-01-9cba4b9d.tex; frozen excerpt: 系统长期动力学行为的识别比短期政策效应分析更依赖简洁的模型结构。若沿用前两问的高维划分，参数空间将急剧膨胀，反而难以归纳系统轨道类型。因此，我们在问题三中采用\"基础资源供给-中层鱼类转移-顶级捕食者反馈\"的最简三级食物链闭环，将环境承载力变…",
+      "action": "REWRITE local prose candidate draft-holdout-01-9cba4b9d-t1.tex; no second humanizer pass",
+      "problem_object": "The model object, evidence scale, comparison object, and result already named in the frozen paragraph.",
+      "mathematical_change": "No formula, number, unit, label, reference, objective direction, or constraint is changed; only local clause order or connection is revised.",
+      "modeling_decision": "Keep the source model and evidence-to-conclusion relation, while making the stated scale or comparison responsibility easier to follow.",
+      "preserved_results": [
+        "All source numbers, units, formulas, labels, references, comparison directions, and stated limitations."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "claims": {
+    "hidden_reasoning_recorded": false,
+    "academic_correctness_proven": false
+  }
+}

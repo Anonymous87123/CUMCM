@@ -1,0 +1,403 @@
+{
+  "artifact": {
+    "after_sha256": "86c5412f20a1fe60d465e846999c1fd85b62772d63832e0e866df121e009c083",
+    "before_sha256": "17ff66db1ec3516b765ba969b795bffbb4978676b84a2945e6ca5227986d028b"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "db77876640ba1f466f97bcf515c64b3a0f893016ae8d410b187f421c4a70a8b6",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "tex",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "MODELING",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不": 2,
+          "不能": 1,
+          "非": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0002",
+            "column": 15,
+            "end": 15,
+            "end_column": 16,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "承载力继续提高后，三级食物链不会一直维持规则振荡，而是会走向更复杂的长期波动",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 14
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0005",
+            "column": 63,
+            "end": 63,
+            "end_column": 64,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "有限时间最大李雅普诺夫指数支持了这一方向，但还不足以给出唯一临界点",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 62
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0007",
+            "column": 95,
+            "end": 95,
+            "end_column": 96,
+            "end_line": 1,
+            "line": 1,
+            "marker": "非",
+            "sentence_context": "文中的 也只表示归一化结构压力，而非长江某一实测承载量",
+            "sentence_id": "T0003",
+            "side": "after",
+            "start": 94
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0011",
+            "column": 160,
+            "end": 161,
+            "end_column": 162,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不能",
+            "sentence_context": "禁渔可以先把恢复链条拉回来，但收益能不能留在系统内部，水质、连通性、放流和入侵控制仍是后续约束",
+            "sentence_id": "T0005",
+            "side": "after",
+            "start": 159
+          }
+        ],
+        "before": {
+          "不": 2,
+          "不能": 2,
+          "非": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0002",
+            "column": 15,
+            "end": 15,
+            "end_column": 16,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "承载力继续提高后，三级食物链不会一直维持规则振荡，而是会走向更复杂的长期波动",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 14
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0005",
+            "column": 63,
+            "end": 63,
+            "end_column": 64,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "有限时间最大李雅普诺夫指数支持了这一方向，但还不足以给出唯一临界点",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 62
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0007",
+            "column": 95,
+            "end": 95,
+            "end_column": 96,
+            "end_line": 1,
+            "line": 1,
+            "marker": "非",
+            "sentence_context": "文中的 也只表示归一化结构压力，而非长江某一实测承载量",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 94
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0012",
+            "column": 167,
+            "end": 168,
+            "end_column": 169,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不能",
+            "sentence_context": "按我们的分析框架看，禁渔只是恢复链条的起点，后面能不能把收益留在系统内部，最终还得看水质、连通性、放流和入侵控制能不能跟上",
+            "sentence_id": "T0005",
+            "side": "before",
+            "start": 166
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0013",
+            "column": 199,
+            "end": 200,
+            "end_column": 201,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不能",
+            "sentence_context": "按我们的分析框架看，禁渔只是恢复链条的起点，后面能不能把收益留在系统内部，最终还得看水质、连通性、放流和入侵控制能不能跟上",
+            "sentence_id": "T0005",
+            "side": "before",
+            "start": 198
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "不能": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0011",
+                "column": 160,
+                "end": 161,
+                "end_column": 162,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不能",
+                "sentence_context": "禁渔可以先把恢复链条拉回来，但收益能不能留在系统内部，水质、连通性、放流和入侵控制仍是后续约束",
+                "sentence_id": "T0005",
+                "side": "after",
+                "start": 159
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0012",
+                "column": 167,
+                "end": 168,
+                "end_column": 169,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不能",
+                "sentence_context": "按我们的分析框架看，禁渔只是恢复链条的起点，后面能不能把收益留在系统内部，最终还得看水质、连通性、放流和入侵控制能不能跟上",
+                "sentence_id": "T0005",
+                "side": "before",
+                "start": 166
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0013",
+                "column": 199,
+                "end": 200,
+                "end_column": 201,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不能",
+                "sentence_context": "按我们的分析框架看，禁渔只是恢复链条的起点，后面能不能把收益留在系统内部，最终还得看水质、连通性、放流和入侵控制能不能跟上",
+                "sentence_id": "T0005",
+                "side": "before",
+                "start": 198
+              }
+            ],
+            "removed": {
+              "不能": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "73655fb535b533b6e3a334ae03d6c01cbb37b0e164d3267932bfc39f6bf84186"
+    },
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "只": 1,
+          "可以": 1,
+          "可能": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0006",
+            "column": 83,
+            "end": 83,
+            "end_column": 84,
+            "end_line": 1,
+            "line": 1,
+            "marker": "只",
+            "sentence_context": "文中的 也只表示归一化结构压力，而非长江某一实测承载量",
+            "sentence_id": "T0003",
+            "side": "after",
+            "start": 82
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0009",
+            "column": 128,
+            "end": 129,
+            "end_column": 130,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可能",
+            "sentence_context": "污染和入侵则把另一层风险推了出来：食源过程量可能和珍稀物种终态开始分离",
+            "sentence_id": "T0004",
+            "side": "after",
+            "start": 127
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0010",
+            "column": 144,
+            "end": 145,
+            "end_column": 146,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可以",
+            "sentence_context": "禁渔可以先把恢复链条拉回来，但收益能不能留在系统内部，水质、连通性、放流和入侵控制仍是后续约束",
+            "sentence_id": "T0005",
+            "side": "after",
+            "start": 143
+          }
+        ],
+        "before": {
+          "只": 2,
+          "可能": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0006",
+            "column": 83,
+            "end": 83,
+            "end_column": 84,
+            "end_line": 1,
+            "line": 1,
+            "marker": "只",
+            "sentence_context": "文中的 也只表示归一化结构压力，而非长江某一实测承载量",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 82
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0009",
+            "column": 128,
+            "end": 129,
+            "end_column": 130,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可能",
+            "sentence_context": "污染和入侵则把另一层风险推了出来：食源过程量可能和珍稀物种终态开始分离",
+            "sentence_id": "T0004",
+            "side": "before",
+            "start": 127
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0011",
+            "column": 154,
+            "end": 154,
+            "end_column": 155,
+            "end_line": 1,
+            "line": 1,
+            "marker": "只",
+            "sentence_context": "按我们的分析框架看，禁渔只是恢复链条的起点，后面能不能把收益留在系统内部，最终还得看水质、连通性、放流和入侵控制能不能跟上",
+            "sentence_id": "T0005",
+            "side": "before",
+            "start": 153
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "可以": 1
+          },
+          "removed": {
+            "只": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "可以": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0010",
+                "column": 144,
+                "end": 145,
+                "end_column": 146,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可以",
+                "sentence_context": "禁渔可以先把恢复链条拉回来，但收益能不能留在系统内部，水质、连通性、放流和入侵控制仍是后续约束",
+                "sentence_id": "T0005",
+                "side": "after",
+                "start": 143
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0011",
+                "column": 154,
+                "end": 154,
+                "end_column": 155,
+                "end_line": 1,
+                "line": 1,
+                "marker": "只",
+                "sentence_context": "按我们的分析框架看，禁渔只是恢复链条的起点，后面能不能把收益留在系统内部，最终还得看水质、连通性、放流和入侵控制能不能跟上",
+                "sentence_id": "T0005",
+                "side": "before",
+                "start": 153
+              }
+            ],
+            "removed": {
+              "只": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "e92e9a49babf9118ee066f3e1d2d7a4d406034ebbbc313c1842bf4f385606ef8"
+    }
+  ]
+}

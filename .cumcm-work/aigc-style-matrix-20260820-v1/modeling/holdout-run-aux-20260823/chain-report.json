@@ -1,0 +1,387 @@
+{
+  "schema": "aigc-matrix-dev-chain/v1",
+  "status": "pass",
+  "split": "holdout",
+  "document_type": "modeling",
+  "suite": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout\\suite.json",
+  "suite_id": "matrix-modeling-holdout",
+  "candidates": 9,
+  "records": [
+    {
+      "case_id": "draft-holdout-01-9cba4b9d",
+      "trial": 1,
+      "candidate": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\authoring\\draft-holdout-01-9cba4b9d-t1.tex",
+      "candidate_sha256": "d06a224778345bf6538a5d2048337b51f99f0a7983a9cc688f29fb299d6cb6e5",
+      "humanize_run": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\humanize\\draft-holdout-01-9cba4b9d-t1\\initial\\hir1-p8m6i1bs\\run.json",
+      "humanize_run_id": "hir1-p8m6i1bs",
+      "mechanical_validation_status": "PASS",
+      "strict_accepted_count": 0,
+      "verification": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\verification\\draft-holdout-01-9cba4b9d-t1\\candidate-verification.json",
+      "owner_audit": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\owner\\draft-holdout-01-9cba4b9d-t1\\audit.json",
+      "stack_report": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\stack\\draft-holdout-01-9cba4b9d-t1\\stack-report.json",
+      "generation": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\generation\\draft-holdout-01-9cba4b9d-t1\\generation.json",
+      "auxiliary_reviews": {
+        "ai_check": {
+          "provider": "ai-check",
+          "adapter_package": "humanize-main",
+          "report": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\draft-holdout-01-9cba4b9d-t1\\ai-check-adapter\\audit-report.json",
+          "sha256": "a0649ba8693cd538f86d0a615c00597a800d88ca3035269bd4940b8f32752eb7",
+          "execution_level": "ADAPTER_DIAGNOSTIC_ONLY",
+          "native_executed": false,
+          "claims": {
+            "authorship_or_detector_verdict": false,
+            "candidate_selection": false
+          }
+        },
+        "AI_paper_workbench": {
+          "provider": "AI_paper",
+          "plan": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\AI_paper\\workbench-plan.json",
+          "sha256": "cc383debf6b0133d8a0a1ef291627e182f7012e36da22827d07413c26445f787",
+          "execution_level": "WORKBENCH_PLAN_ONLY",
+          "native_executed": false,
+          "claims": {
+            "candidate_generation": false,
+            "candidate_selection": false
+          }
+        }
+      },
+      "registration_manifest": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\registration\\r01.json"
+    },
+    {
+      "case_id": "draft-holdout-01-9cba4b9d",
+      "trial": 2,
+      "candidate": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\authoring\\draft-holdout-01-9cba4b9d-t2.tex",
+      "candidate_sha256": "228e38397f7d0f7dd9023aaa8386d7a38ce8ab12f19168a55a0c8b308630f422",
+      "humanize_run": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\humanize\\draft-holdout-01-9cba4b9d-t2\\initial\\hir1-4t8ofl59\\run.json",
+      "humanize_run_id": "hir1-4t8ofl59",
+      "mechanical_validation_status": "PASS",
+      "strict_accepted_count": 0,
+      "verification": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\verification\\draft-holdout-01-9cba4b9d-t2\\candidate-verification.json",
+      "owner_audit": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\owner\\draft-holdout-01-9cba4b9d-t2\\audit.json",
+      "stack_report": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\stack\\draft-holdout-01-9cba4b9d-t2\\stack-report.json",
+      "generation": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\generation\\draft-holdout-01-9cba4b9d-t2\\generation.json",
+      "auxiliary_reviews": {
+        "ai_check": {
+          "provider": "ai-check",
+          "adapter_package": "humanize-main",
+          "report": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\draft-holdout-01-9cba4b9d-t2\\ai-check-adapter\\audit-report.json",
+          "sha256": "715e151d780972c02b6030eb68dad6e384514623193008c0315cba5f38dbe55f",
+          "execution_level": "ADAPTER_DIAGNOSTIC_ONLY",
+          "native_executed": false,
+          "claims": {
+            "authorship_or_detector_verdict": false,
+            "candidate_selection": false
+          }
+        },
+        "AI_paper_workbench": {
+          "provider": "AI_paper",
+          "plan": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\AI_paper\\workbench-plan.json",
+          "sha256": "cc383debf6b0133d8a0a1ef291627e182f7012e36da22827d07413c26445f787",
+          "execution_level": "WORKBENCH_PLAN_ONLY",
+          "native_executed": false,
+          "claims": {
+            "candidate_generation": false,
+            "candidate_selection": false
+          }
+        }
+      },
+      "registration_manifest": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\registration\\r02.json"
+    },
+    {
+      "case_id": "draft-holdout-01-9cba4b9d",
+      "trial": 3,
+      "candidate": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\authoring\\draft-holdout-01-9cba4b9d-t3.tex",
+      "candidate_sha256": "4ab4539ad2aeaf70ded60cd7c9154722166c4d65dffe3a032c0081edb6d7f443",
+      "humanize_run": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\humanize\\draft-holdout-01-9cba4b9d-t3\\initial\\hir1-wnp3a002\\run.json",
+      "humanize_run_id": "hir1-wnp3a002",
+      "mechanical_validation_status": "PASS",
+      "strict_accepted_count": 0,
+      "verification": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\verification\\draft-holdout-01-9cba4b9d-t3\\candidate-verification.json",
+      "owner_audit": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\owner\\draft-holdout-01-9cba4b9d-t3\\audit.json",
+      "stack_report": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\stack\\draft-holdout-01-9cba4b9d-t3\\stack-report.json",
+      "generation": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\generation\\draft-holdout-01-9cba4b9d-t3\\generation.json",
+      "auxiliary_reviews": {
+        "ai_check": {
+          "provider": "ai-check",
+          "adapter_package": "humanize-main",
+          "report": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\draft-holdout-01-9cba4b9d-t3\\ai-check-adapter\\audit-report.json",
+          "sha256": "2b8d59dadcab75f4bfc314180d2929fcabec8e9212eec49a2af2bb28e84fa966",
+          "execution_level": "ADAPTER_DIAGNOSTIC_ONLY",
+          "native_executed": false,
+          "claims": {
+            "authorship_or_detector_verdict": false,
+            "candidate_selection": false
+          }
+        },
+        "AI_paper_workbench": {
+          "provider": "AI_paper",
+          "plan": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\AI_paper\\workbench-plan.json",
+          "sha256": "cc383debf6b0133d8a0a1ef291627e182f7012e36da22827d07413c26445f787",
+          "execution_level": "WORKBENCH_PLAN_ONLY",
+          "native_executed": false,
+          "claims": {
+            "candidate_generation": false,
+            "candidate_selection": false
+          }
+        }
+      },
+      "registration_manifest": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\registration\\r03.json"
+    },
+    {
+      "case_id": "draft-holdout-02-f34e351d",
+      "trial": 1,
+      "candidate": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\authoring\\draft-holdout-02-f34e351d-t1.tex",
+      "candidate_sha256": "2e55953cad6322cd8129f22a51fcc6d8eb6783296e4413b7efc1d6fa81855c8f",
+      "humanize_run": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\humanize\\draft-holdout-02-f34e351d-t1\\initial\\hir1-oss1ge8n\\run.json",
+      "humanize_run_id": "hir1-oss1ge8n",
+      "mechanical_validation_status": "PASS",
+      "strict_accepted_count": 0,
+      "verification": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\verification\\draft-holdout-02-f34e351d-t1\\candidate-verification.json",
+      "owner_audit": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\owner\\draft-holdout-02-f34e351d-t1\\audit.json",
+      "stack_report": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\stack\\draft-holdout-02-f34e351d-t1\\stack-report.json",
+      "generation": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\generation\\draft-holdout-02-f34e351d-t1\\generation.json",
+      "auxiliary_reviews": {
+        "ai_check": {
+          "provider": "ai-check",
+          "adapter_package": "humanize-main",
+          "report": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\draft-holdout-02-f34e351d-t1\\ai-check-adapter\\audit-report.json",
+          "sha256": "fdca4070a2bbc9f51043b53f232856a327b930a105986b4c812beadae9827d3a",
+          "execution_level": "ADAPTER_DIAGNOSTIC_ONLY",
+          "native_executed": false,
+          "claims": {
+            "authorship_or_detector_verdict": false,
+            "candidate_selection": false
+          }
+        },
+        "AI_paper_workbench": {
+          "provider": "AI_paper",
+          "plan": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\AI_paper\\workbench-plan.json",
+          "sha256": "cc383debf6b0133d8a0a1ef291627e182f7012e36da22827d07413c26445f787",
+          "execution_level": "WORKBENCH_PLAN_ONLY",
+          "native_executed": false,
+          "claims": {
+            "candidate_generation": false,
+            "candidate_selection": false
+          }
+        }
+      },
+      "registration_manifest": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\registration\\r04.json"
+    },
+    {
+      "case_id": "draft-holdout-02-f34e351d",
+      "trial": 2,
+      "candidate": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\authoring\\draft-holdout-02-f34e351d-t2.tex",
+      "candidate_sha256": "5c7a05e76307970128df94e0c9491e6f477e09e2f05bd409be3f0cc37c17e0df",
+      "humanize_run": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\humanize\\draft-holdout-02-f34e351d-t2\\initial\\hir1-ccluv929\\run.json",
+      "humanize_run_id": "hir1-ccluv929",
+      "mechanical_validation_status": "PASS",
+      "strict_accepted_count": 0,
+      "verification": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\verification\\draft-holdout-02-f34e351d-t2\\candidate-verification.json",
+      "owner_audit": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\owner\\draft-holdout-02-f34e351d-t2\\audit.json",
+      "stack_report": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\stack\\draft-holdout-02-f34e351d-t2\\stack-report.json",
+      "generation": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\generation\\draft-holdout-02-f34e351d-t2\\generation.json",
+      "auxiliary_reviews": {
+        "ai_check": {
+          "provider": "ai-check",
+          "adapter_package": "humanize-main",
+          "report": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\draft-holdout-02-f34e351d-t2\\ai-check-adapter\\audit-report.json",
+          "sha256": "b2d5a6c4d29ccbe028b17e5f54ecd2a3c7ff9ceb3ea507e3aba85104f45c6726",
+          "execution_level": "ADAPTER_DIAGNOSTIC_ONLY",
+          "native_executed": false,
+          "claims": {
+            "authorship_or_detector_verdict": false,
+            "candidate_selection": false
+          }
+        },
+        "AI_paper_workbench": {
+          "provider": "AI_paper",
+          "plan": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\AI_paper\\workbench-plan.json",
+          "sha256": "cc383debf6b0133d8a0a1ef291627e182f7012e36da22827d07413c26445f787",
+          "execution_level": "WORKBENCH_PLAN_ONLY",
+          "native_executed": false,
+          "claims": {
+            "candidate_generation": false,
+            "candidate_selection": false
+          }
+        }
+      },
+      "registration_manifest": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\registration\\r05.json"
+    },
+    {
+      "case_id": "draft-holdout-02-f34e351d",
+      "trial": 3,
+      "candidate": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\authoring\\draft-holdout-02-f34e351d-t3.tex",
+      "candidate_sha256": "de5381c270f675ebcf7651be24a7e6b44e136612a2b52d2142fe214e2ce61037",
+      "humanize_run": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\humanize\\draft-holdout-02-f34e351d-t3\\initial\\hir1-mucornx6\\run.json",
+      "humanize_run_id": "hir1-mucornx6",
+      "mechanical_validation_status": "PASS",
+      "strict_accepted_count": 0,
+      "verification": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\verification\\draft-holdout-02-f34e351d-t3\\candidate-verification.json",
+      "owner_audit": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\owner\\draft-holdout-02-f34e351d-t3\\audit.json",
+      "stack_report": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\stack\\draft-holdout-02-f34e351d-t3\\stack-report.json",
+      "generation": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\generation\\draft-holdout-02-f34e351d-t3\\generation.json",
+      "auxiliary_reviews": {
+        "ai_check": {
+          "provider": "ai-check",
+          "adapter_package": "humanize-main",
+          "report": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\draft-holdout-02-f34e351d-t3\\ai-check-adapter\\audit-report.json",
+          "sha256": "8deebf38b255877323c5bf18c10fb54aa1512784cfcea570e6b85a1c28de9e14",
+          "execution_level": "ADAPTER_DIAGNOSTIC_ONLY",
+          "native_executed": false,
+          "claims": {
+            "authorship_or_detector_verdict": false,
+            "candidate_selection": false
+          }
+        },
+        "AI_paper_workbench": {
+          "provider": "AI_paper",
+          "plan": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\AI_paper\\workbench-plan.json",
+          "sha256": "cc383debf6b0133d8a0a1ef291627e182f7012e36da22827d07413c26445f787",
+          "execution_level": "WORKBENCH_PLAN_ONLY",
+          "native_executed": false,
+          "claims": {
+            "candidate_generation": false,
+            "candidate_selection": false
+          }
+        }
+      },
+      "registration_manifest": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\registration\\r06.json"
+    },
+    {
+      "case_id": "draft-holdout-03-565787c0",
+      "trial": 1,
+      "candidate": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\authoring\\draft-holdout-03-565787c0-t1.tex",
+      "candidate_sha256": "7f01d8524e85f322c7921804d1afaeb7622588eacea4b15529aa35f92b26b798",
+      "humanize_run": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\humanize\\draft-holdout-03-565787c0-t1\\initial\\hir1-u_058ebs\\run.json",
+      "humanize_run_id": "hir1-u_058ebs",
+      "mechanical_validation_status": "PASS",
+      "strict_accepted_count": 0,
+      "verification": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\verification\\draft-holdout-03-565787c0-t1\\candidate-verification.json",
+      "owner_audit": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\owner\\draft-holdout-03-565787c0-t1\\audit.json",
+      "stack_report": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\stack\\draft-holdout-03-565787c0-t1\\stack-report.json",
+      "generation": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\generation\\draft-holdout-03-565787c0-t1\\generation.json",
+      "auxiliary_reviews": {
+        "ai_check": {
+          "provider": "ai-check",
+          "adapter_package": "humanize-main",
+          "report": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\draft-holdout-03-565787c0-t1\\ai-check-adapter\\audit-report.json",
+          "sha256": "fdda793d18fe7309a18d0058324faf5401285a5307336df24ed01993521b514b",
+          "execution_level": "ADAPTER_DIAGNOSTIC_ONLY",
+          "native_executed": false,
+          "claims": {
+            "authorship_or_detector_verdict": false,
+            "candidate_selection": false
+          }
+        },
+        "AI_paper_workbench": {
+          "provider": "AI_paper",
+          "plan": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\AI_paper\\workbench-plan.json",
+          "sha256": "cc383debf6b0133d8a0a1ef291627e182f7012e36da22827d07413c26445f787",
+          "execution_level": "WORKBENCH_PLAN_ONLY",
+          "native_executed": false,
+          "claims": {
+            "candidate_generation": false,
+            "candidate_selection": false
+          }
+        }
+      },
+      "registration_manifest": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\registration\\r07.json"
+    },
+    {
+      "case_id": "draft-holdout-03-565787c0",
+      "trial": 2,
+      "candidate": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\authoring\\draft-holdout-03-565787c0-t2.tex",
+      "candidate_sha256": "c489ac8760e083977a9d751b8060980677e5962f64c5220f538af303710cb2b7",
+      "humanize_run": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\humanize\\draft-holdout-03-565787c0-t2\\initial\\hir1-brb9hyu5\\run.json",
+      "humanize_run_id": "hir1-brb9hyu5",
+      "mechanical_validation_status": "PASS",
+      "strict_accepted_count": 0,
+      "verification": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\verification\\draft-holdout-03-565787c0-t2\\candidate-verification.json",
+      "owner_audit": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\owner\\draft-holdout-03-565787c0-t2\\audit.json",
+      "stack_report": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\stack\\draft-holdout-03-565787c0-t2\\stack-report.json",
+      "generation": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\generation\\draft-holdout-03-565787c0-t2\\generation.json",
+      "auxiliary_reviews": {
+        "ai_check": {
+          "provider": "ai-check",
+          "adapter_package": "humanize-main",
+          "report": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\draft-holdout-03-565787c0-t2\\ai-check-adapter\\audit-report.json",
+          "sha256": "0cddd7b3983b986f8a2f1ccdc4bec732c2d3b9f7e10dadc698031b544baa6fb6",
+          "execution_level": "ADAPTER_DIAGNOSTIC_ONLY",
+          "native_executed": false,
+          "claims": {
+            "authorship_or_detector_verdict": false,
+            "candidate_selection": false
+          }
+        },
+        "AI_paper_workbench": {
+          "provider": "AI_paper",
+          "plan": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\AI_paper\\workbench-plan.json",
+          "sha256": "cc383debf6b0133d8a0a1ef291627e182f7012e36da22827d07413c26445f787",
+          "execution_level": "WORKBENCH_PLAN_ONLY",
+          "native_executed": false,
+          "claims": {
+            "candidate_generation": false,
+            "candidate_selection": false
+          }
+        }
+      },
+      "registration_manifest": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\registration\\r08.json"
+    },
+    {
+      "case_id": "draft-holdout-03-565787c0",
+      "trial": 3,
+      "candidate": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\authoring\\draft-holdout-03-565787c0-t3.tex",
+      "candidate_sha256": "bc3ac5abcb2f39d2c73ae77705c58078b57ee4e754ec0b796a3d9dded8b2a41a",
+      "humanize_run": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\humanize\\draft-holdout-03-565787c0-t3\\initial\\hir1-15hhdlz1\\run.json",
+      "humanize_run_id": "hir1-15hhdlz1",
+      "mechanical_validation_status": "PASS",
+      "strict_accepted_count": 0,
+      "verification": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\verification\\draft-holdout-03-565787c0-t3\\candidate-verification.json",
+      "owner_audit": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\owner\\draft-holdout-03-565787c0-t3\\audit.json",
+      "stack_report": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\stack\\draft-holdout-03-565787c0-t3\\stack-report.json",
+      "generation": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\generation\\draft-holdout-03-565787c0-t3\\generation.json",
+      "auxiliary_reviews": {
+        "ai_check": {
+          "provider": "ai-check",
+          "adapter_package": "humanize-main",
+          "report": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\draft-holdout-03-565787c0-t3\\ai-check-adapter\\audit-report.json",
+          "sha256": "dfe6cc4d37dc28ef4e0eb93d07640bc858a45a8f7bc980b4ce0e04b076519fb2",
+          "execution_level": "ADAPTER_DIAGNOSTIC_ONLY",
+          "native_executed": false,
+          "claims": {
+            "authorship_or_detector_verdict": false,
+            "candidate_selection": false
+          }
+        },
+        "AI_paper_workbench": {
+          "provider": "AI_paper",
+          "plan": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\AI_paper\\workbench-plan.json",
+          "sha256": "cc383debf6b0133d8a0a1ef291627e182f7012e36da22827d07413c26445f787",
+          "execution_level": "WORKBENCH_PLAN_ONLY",
+          "native_executed": false,
+          "claims": {
+            "candidate_generation": false,
+            "candidate_selection": false
+          }
+        }
+      },
+      "registration_manifest": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\registration\\r09.json"
+    }
+  ],
+  "auxiliary_roles": {
+    "AI_paper_workbench_plan": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\AI_paper\\workbench-plan.json",
+    "AI_paper_workbench_plan_sha256": "cc383debf6b0133d8a0a1ef291627e182f7012e36da22827d07413c26445f787",
+    "forensic_reviewer": "ai-check via humanize-main adapter",
+    "native_execution_claim": false
+  },
+  "manifest": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\benchmark-blind-ready.json",
+  "manifest_state": "BLIND_READY",
+  "mechanical_chain_complete": true,
+  "paired_human_quality_status": "PENDING_EXTERNAL_REVIEW",
+  "claims": {
+    "human_authorship_proven": false,
+    "academic_correctness_proven": false,
+    "detector_outcome_predicted": false,
+    "human_style_clearance_granted": false
+  }
+}

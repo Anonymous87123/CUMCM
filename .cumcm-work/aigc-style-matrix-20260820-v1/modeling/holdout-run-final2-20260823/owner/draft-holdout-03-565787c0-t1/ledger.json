@@ -1,0 +1,25 @@
+{
+  "schema": "aigc-benchmark-owner-ledger/v1",
+  "document_type": "modeling",
+  "provider": "deai-modeling-writing",
+  "mode": "REWRITE",
+  "source_sha256": "6c133b2ed44350e8e06bb313bdcbb45f8bbf964a430a8e3eb43b5c1582424a5e",
+  "candidate_sha256": "7f01d8524e85f322c7921804d1afaeb7622588eacea4b15529aa35f92b26b798",
+  "decisions": [
+    {
+      "source_anchor": "draft-holdout-03-565787c0.tex; frozen excerpt: 前四问研究表明，禁渔的恢复收益在生态系统不同层级并非同步传递：基础食源、经济鱼类、珍稀物种及系统长期动力学行为的响应存在明显差异。据此，我们在问题五中基于统一的时间窗和指标正向化规则，选取基础食源、长江江豚、长江鲟和外来入侵压力四类核心指标…",
+      "action": "REWRITE local prose candidate draft-holdout-03-565787c0-t1.tex; no second humanizer pass",
+      "problem_object": "The model object, evidence scale, comparison object, and result already named in the frozen paragraph.",
+      "mathematical_change": "No formula, number, unit, label, reference, objective direction, or constraint is changed; only local clause order or connection is revised.",
+      "modeling_decision": "Keep the source model and evidence-to-conclusion relation, while making the stated scale or comparison responsibility easier to follow.",
+      "preserved_results": [
+        "All source numbers, units, formulas, labels, references, comparison directions, and stated limitations."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "claims": {
+    "hidden_reasoning_recorded": false,
+    "academic_correctness_proven": false
+  }
+}

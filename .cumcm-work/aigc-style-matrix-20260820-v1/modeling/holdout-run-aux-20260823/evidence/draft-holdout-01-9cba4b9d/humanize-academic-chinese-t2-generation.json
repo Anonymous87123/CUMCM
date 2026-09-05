@@ -1,0 +1,826 @@
+{
+  "schema": "aigc-benchmark-generation/v1",
+  "provider": "humanize-academic-chinese",
+  "status": "pass",
+  "authoring_actor": "model",
+  "authoring_decision": "REWRITE",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\sources\\draft-holdout-01-9cba4b9d.tex",
+    "sha256": "bb9084fa4956960ef64d1616db43153abbc955c582e8744cd91a7479aae94ccc"
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\authoring\\draft-holdout-01-9cba4b9d-t2.tex",
+    "sha256": "228e38397f7d0f7dd9023aaa8386d7a38ce8ab12f19168a55a0c8b308630f422"
+  },
+  "execution": {
+    "mode": "model_authored_native_validated",
+    "native_action": "validate_and_emit_frozen_candidate",
+    "run_id": "hir1-4t8ofl59",
+    "role_chain_bound": true
+  },
+  "native_report": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\evidence\\draft-holdout-01-9cba4b9d\\humanize-academic-chinese-t2-native-report.json",
+    "sha256": "35aee0c59366b16f5ad83e21ce71ed3fa37d9e3d70a5e604138c7a0699437be8"
+  },
+  "writing_rule_snapshot": [
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\SKILL.md",
+      "sha256": "b239a580257fa46100bf73ea745b0c39a77a94646af6f15d01ac7ad9ae6cb8c6",
+      "bytes": 50270
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\route_aigc_tools.py",
+      "sha256": "d3a82ff3ee87892d824b00046336498a41f8863b913d772d0bc3634853e2e0c7",
+      "bytes": 29735
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\role-contracts.json",
+      "sha256": "5b97b22ecff2ad047fcba18ba5097f17f3a4d62eaccb827ab517d98a2776a7ab",
+      "bytes": 23956
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\content-role-contracts.json",
+      "sha256": "9224494071ad2445d31abba5a970bf88bfb4b37823073f1c3da7522d2ed20cfb",
+      "bytes": 3893
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\folder-utilization.json",
+      "sha256": "0879d0eae35b6efdb677d4285fdb25a62600c7c153bd5d1c5946aa63f3eee759",
+      "bytes": 13965
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\stack-registry.json",
+      "sha256": "4fcf42c5da6c74405bd31d6725933b56be53a994e0d42f30a1903bcd2bb8987d",
+      "bytes": 20144
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\workflow-contract.md",
+      "sha256": "6def7188a54054c98a26fca5a2ab9daa9f9a5868b44dff5e8f664f29f25db9ff",
+      "bytes": 19329
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\teacher-research-readiness.md",
+      "sha256": "073540dc0752bfaca31dfaeff9fe5313ba2176aaa1b6a9cbff3c76f2b44df3b3",
+      "bytes": 2001
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_academic_candidate.py",
+      "sha256": "f8ebd6c0518103bfb5278781550c28aaf0fa783a5d208f2b0502e3b60dee3103",
+      "bytes": 45975
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_voice_mode.py",
+      "sha256": "de66038bbca1c32cccfc97a2f9aa16471c97b4e08d9bb6db2fa4feb1dd795b4d",
+      "bytes": 11491
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_style_rhythm.py",
+      "sha256": "da87dc3a15c7dcfcbe49b25fdf8e3bcb1557b5c71238ed78265b4033e60e9a0e",
+      "bytes": 8502
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_reasoning_scaffold.py",
+      "sha256": "101f7e42bc85c0369bae3fabb79d69c295740d3c01792e0c099e94c8ba99b0d0",
+      "bytes": 12331
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\compare_style_revision.py",
+      "sha256": "f8a40d11bcf5cb134f2293ca2709b94b90ef8474e976ac655f0feecac98b2db3",
+      "bytes": 5114
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\run_longform_portfolio.py",
+      "sha256": "c4c3cef7da753f1a73c3b99e698b4e110277306a417b14e4d6844f6b09ea0879",
+      "bytes": 107165
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\run_aigc_adapter.py",
+      "sha256": "7f301914627662a2cb23b5e2bcfc04ed780d5ca180b084133b8890de2c2a97c1",
+      "bytes": 19705
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\prepare_benchmark_generation.py",
+      "sha256": "332ec66b1b90937990147a358512a5545715da39e11b30f224477e2f65affd37",
+      "bytes": 7323
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_benchmark_owner_ledger.py",
+      "sha256": "eabe47dc317fadf1e4fb7b5dff48e7f9f161f4dcd5e496b983a4130469c344cd",
+      "bytes": 7988
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\prepare_benchmark_stack.py",
+      "sha256": "b66f500c3872cb7fd1f522c4ed42fb49d1ab1d033b5e6354d8a773603bb2d2df",
+      "bytes": 5553
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\prepare_draft_improvement_suite.py",
+      "sha256": "500ae6cade65db6b39862058d1a7cef47a27f76b3b26e857a80884066a47b584",
+      "bytes": 12612
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_style_benchmark_matrix.py",
+      "sha256": "7b7a8ecd69dbee624ec838a7484939101020a0537884d6ca472e79ab1ee77b52",
+      "bytes": 14609
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_research_draft_readiness.py",
+      "sha256": "055ef6b06fd4feb5924a699de80f4c5e491d5c8f159084544f48fc6c68688e05",
+      "bytes": 11349
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\build_matrix_dev_candidates.py",
+      "sha256": "70929ac416fb6eb42d0f7ebcdc9e4356a61be916cd2d6eb30fccd3462c921b69",
+      "bytes": 15983
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\run_matrix_dev_chain.py",
+      "sha256": "c6647d628bfac01873455be911a90376c31c0b0402b90f731164f810424aea3e",
+      "bytes": 20455
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\run_matrix_holdout_chain.py",
+      "sha256": "fe43d52feeec2e47b2f93d379cdb11ec40099c6e3dcac2d1decb01853f6d2884",
+      "bytes": 2244
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\build_style_benchmark_matrix.py",
+      "sha256": "086468881edb63a4045e10765eb654211b9fd28fd9ec861c93d84520f32446a0",
+      "bytes": 4031
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\prepare_stack_evaluation.py",
+      "sha256": "9535f9cbf1a03781ab2d8ec4e7266156432288a1531e078e2c5baa1a03eb2abe",
+      "bytes": 7603
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\run_stack_evaluation.py",
+      "sha256": "2ee6d11b8a65d104be203cd61db2d6a52fb451a61ef36a6b337fa02c4f5fa25b",
+      "bytes": 18103
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-main\\ai-check\\SKILL.md",
+      "sha256": "675276638c8faa9567611ae2acec1fef1af6b7f29fbc33e572b0a3489d2d923d",
+      "bytes": 27235
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\AI_paper\\main.py",
+      "sha256": "f4f5d3e9df34e4642290c28d35a449f4e6f56dc77718483980886df1e2d0d0d2",
+      "bytes": 1199
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\SKILL.md",
+      "sha256": "9ba1c1a600941e8ce14cd2ffb1f89576bab27c13b30bda648972699f8ef3a213",
+      "bytes": 28209
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\scripts\\scan_humanize_chinese.py",
+      "sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "bytes": 87413
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\lexical-signals.json",
+      "sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "bytes": 5001788
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\modeling-reasoning-preservation.md",
+      "sha256": "4bef51e2a4c0272d3a6c0b8ce75a0f4200e0dfe48f2f42cee679183dd3ecba74",
+      "bytes": 3258
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\scene-routing-policy.json",
+      "sha256": "e60248ed2fa3515c5fb10c4342ead7d95ab5547c367b8a86f5ffd45a839d9c22",
+      "bytes": 4126
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\operational-contract.md",
+      "sha256": "74f079128cd1e0bb974bd8fcd06c2b0c78eab9e4fae92b80d8efeaac5c393a54",
+      "bytes": 54437
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\style-gates.md",
+      "sha256": "f77db66e990f0fe574b918fd326b0e8ff6df59757683295ff15407d76697d77f",
+      "bytes": 15831
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\structural-rewrite-contract.md",
+      "sha256": "e9a29b35e730dc52da330d3ac307403f47655de597e2e0c48c05921e20346c44",
+      "bytes": 35713
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\paired-quality-clearance-contract.md",
+      "sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "bytes": 12490
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\benchmarks\\cumcm-v2-dev.json",
+      "sha256": "e58e4de2aa9b65c71a71be95f7df771aebcc96555be4c2bfbe680e4299cb9158",
+      "bytes": 2009
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\benchmarks\\cumcm-v2-holdout.json",
+      "sha256": "727b9f0a4aa5881c7ca7c461860dd1e4269395edc81c0affa4f3fa84b7231c49",
+      "bytes": 2142
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\SKILL.md",
+      "sha256": "8992843ba9c0adc833808b9471e68521cf54f2d76d598cd9de93a774e7363950",
+      "bytes": 39323
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_modeling_workbench.py",
+      "sha256": "51e34da5b641c2cc3d37ff1cc07c7c1def20b8b83a3cbdaa4252d3fea863ce24",
+      "bytes": 24535
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_reasoning_preflight.py",
+      "sha256": "4fd071f850cd7bc30ef344a3f2ee4ace2577aeafa98f4404c95c02d2d6d57ba8",
+      "bytes": 13299
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_section_authoring_brief.py",
+      "sha256": "7cf2d102d4a0b25fc62a977990995c8be8714f1f16a313e5fc26606b2448fdc0",
+      "bytes": 5753
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_section_drafting_packets.py",
+      "sha256": "d8ec46e6230b979c950529534f6a5578245bef4d7631ac5aebfa342358d5032c",
+      "bytes": 11432
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_section_drafting_usage.py",
+      "sha256": "0aaca0a9f6eb2712382fafa548ef46fe433c2746f4afa9925c691e7de49ee5c6",
+      "bytes": 8872
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_section_judgment_bridges.py",
+      "sha256": "94c8c6820ec692ddd764e7c91a23dc33dbf45817860c7464d6a7e2a4126e2a29",
+      "bytes": 15525
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_judgment_ledger.py",
+      "sha256": "4bb78dfc47f5adca9307588e5941817843c65bd5149d00d73fc40ab8590554ec",
+      "bytes": 19468
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_corpus_overlap.py",
+      "sha256": "84b81aab7ba1db80142cf292991b370ed8aaa9caf097c050240e15874f783e22",
+      "bytes": 6682
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_lexical_corpus_calibration.py",
+      "sha256": "e9514e4d807488cbac20f4a9fa6019b58efd89dddee1ead3c3e0abc6f4733df3",
+      "bytes": 5222
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_manuscript.py",
+      "sha256": "c66b3fc9ce522d60a18e28a80a71442c47ccac514e778888fff3b341de44281c",
+      "bytes": 53577
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_content_density.py",
+      "sha256": "aabf8c29cd5fa2844e679ba52ebb4cab8e133b0677cc509a2911101b94bf94b8",
+      "bytes": 34471
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_competition_length.py",
+      "sha256": "0f77f16b6f372adfcda87e8c4f8d4ac357a65e8b87a434c3ef20a970e1f8ef36",
+      "bytes": 9379
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_math_semantics.py",
+      "sha256": "31a91537a98d65fb40566b39888bf0fe3b38339dbba3ae7753b50459bf8f69bc",
+      "bytes": 10217
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_result_sync.py",
+      "sha256": "d4f956b9d9c92463592245dc268aa8dc9aa9845f026dd9c36540079f99eace98",
+      "bytes": 3676
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_repro_manifest.py",
+      "sha256": "1511c1a3f06987a4db18b8241c5fdaa02a7b584940d2de8c6b26e8dd4abd1e6a",
+      "bytes": 7359
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_reasoning_review.py",
+      "sha256": "0899364437304ee528ea6f7a28275f8204d8126d7b6db934d4c9312f2140e753",
+      "bytes": 7243
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_style_retrieval_plan.py",
+      "sha256": "a1f92b89895df768d70c7119459e4a036e6bd81b57e8e86612ca3f66a37c0fb0",
+      "bytes": 12585
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\prepare_section_authoring_brief.py",
+      "sha256": "d8e09016d8b36ac5e1750ac9afd4b9be280b5154f224c80e3e7f4bd90f949a36",
+      "bytes": 24991
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\prepare_section_drafting_packets.py",
+      "sha256": "44648707f47fbcc272670afc2cf51baaf56dbd14754ff89990bdb57e1fc063f8",
+      "bytes": 12350
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\prepare_section_drafting_usage.py",
+      "sha256": "18bd457827946e8104d41b2a7351c739fd3240cb53aaee7bed9b9fd550e4f66d",
+      "bytes": 7967
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\prepare_style_retrieval_plan.py",
+      "sha256": "045e6114cbe1de740d84ddda752907cf7b58a1475ed45aa56c0b8474864c6eca",
+      "bytes": 30491
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_rewrite_contract.py",
+      "sha256": "319a31b07a42997aa38003a4e7457281ea37f204c367751e987e3c76964d3f12",
+      "bytes": 19655
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\decision-moves.md",
+      "sha256": "52fc10d723b454803709610bbefd19ef51d3fc27a367742117d0df2a823e2519",
+      "bytes": 5904
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\reasoning-before-model.md",
+      "sha256": "95020368c4a2cdbbc070c86433228abf92c3eb96fe6834264b4698ad281b5f98",
+      "bytes": 17408
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\section-language.md",
+      "sha256": "71e7732e34804da907e1e8f63235e83e9e9900b167c53cb488cce6cdc6228307",
+      "bytes": 80235
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\human-style.md",
+      "sha256": "78661008ad8bcf698b3253bc600d46a6ce6e82faf7ddd7aa5f140b01c125f402",
+      "bytes": 235465
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\natural-reasoning.md",
+      "sha256": "c44893f58090ae0c977ece290c739697cabbde147d085ec6f32a35a5e6bacfe2",
+      "bytes": 5573
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\fulltext-style-stats.json",
+      "sha256": "d8e26e09325c4ba4b68dd94a62f873b83647ffb78b1a33164514686106c52ac7",
+      "bytes": 419556
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl",
+      "sha256": "e7cf1f7c31c66e9538897df96c61c74da0bf54f2086ef6983089e4e3c59383a5",
+      "bytes": 6173007
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\style-benchmark-holdout.json",
+      "sha256": "c3481442b8d09e4d7e150dceb103aacce321c75c4a36aced7cfc7fcfa6c437d9",
+      "bytes": 1042
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-academic-writing\\SKILL.md",
+      "sha256": "a0f95db5c9bbc72dc07a852885cdda066a347e23e5c5cc7e91b506231aa0d57d",
+      "bytes": 13319
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-academic-writing\\references\\aigc-tool-orchestration.md",
+      "sha256": "ed648617a4d1fa740ee090dadc45fc80b7661f000c8a202a443b2f7d4b9834e2",
+      "bytes": 16980
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-academic-writing\\references\\diagnostic-matrix.md",
+      "sha256": "4e86fc88e4dcfa3ac0dda007dc3cbb3a1be387328be2d7a59c7bd937edd03bba",
+      "bytes": 23162
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-academic-writing\\references\\genre-playbooks.md",
+      "sha256": "311c09eb9b68c0b4dd1cbafaebad9e02d1959da46968bb2e3d5c5ebc46c5b6ed",
+      "bytes": 17161
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-academic-writing\\references\\rewrite-patterns.md",
+      "sha256": "06efc164e8da46c870345b5558c162d2e633792e3b1724241f3fd81ffd634677",
+      "bytes": 31243
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-academic-writing\\references\\rules.md",
+      "sha256": "495a75478a6af724dab782a5a01603e576d6277afcdb1c80ac07a5e13710bbc9",
+      "bytes": 22185
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-academic-writing\\references\\scenario-case-map.md",
+      "sha256": "0935b33d3939a682da76b1c29dd80a7caa4824e47d7247936055f90b3be9dd8b",
+      "bytes": 2671
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-academic-writing\\references\\scenario-pattern-map.md",
+      "sha256": "edae864087da3da3ddefa4f2e3ccaac25782fac1b5beeae0a688e2d33affe787",
+      "bytes": 3503
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-academic-writing\\references\\scenario-playbook-map.md",
+      "sha256": "2ad87069938e94c24bec9326d2d38d00ad1653373d8e59632c36f22f1a79ccca",
+      "bytes": 1582
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-academic-writing\\references\\scenario-router.md",
+      "sha256": "c022cd69e06022a6ed8a0b83801c2b876667ef6e08867f37fda7441367b2543d",
+      "bytes": 5911
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-academic-writing\\references\\scenario-rule-map.md",
+      "sha256": "e1b2c60a2c28d6b7816de504ac72ff7823217aa707e18c8f15815f22e18b4983",
+      "bytes": 5088
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-academic-writing\\references\\system-prompt-contract.md",
+      "sha256": "1f97efe0e017073b41b63455d61196b7d896fab3ba7d21b909e3a71d99fbfcc7",
+      "bytes": 13982
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-academic-writing\\references\\validation-gates.md",
+      "sha256": "76a7c8453b213adc0370f9017db30ffda6e1eb3166decd4846e2de4643522700",
+      "bytes": 23239
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-modeling-writing\\SKILL.md",
+      "sha256": "ea6e9576191cd5594098f80603ee6d319a3de7ee2a02c2a3ae9f1e28ce9ffb71",
+      "bytes": 6410
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-modeling-writing\\references\\cases.md",
+      "sha256": "3f9b2c4c034ac8a2f8519d381709eacd7f69855f3bc020fee415e9daaf0c55dd",
+      "bytes": 9476
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-modeling-writing\\references\\diagnostic-matrix.md",
+      "sha256": "038536d490773f49cbd4d352297e93381363d9ff59fdbf12880b6c9f3e07cd99",
+      "bytes": 5175
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-modeling-writing\\references\\playbook.md",
+      "sha256": "88aeceb0f598a87115b19c4b8c07ca5cecb520a6a298522cef452b6785fc88cf",
+      "bytes": 5553
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-modeling-writing\\references\\rewrite-patterns.md",
+      "sha256": "f791d26a2e3c78afbc88dc04c9c74a4152d82d7fe55e0a096c15248b2fd324e0",
+      "bytes": 5592
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-modeling-writing\\references\\rules.md",
+      "sha256": "b948c8b3391a3c208946bc9d6649c68e4dbfc4f42d8852f002aae6a82558b500",
+      "bytes": 10533
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-modeling-writing\\references\\system-prompt-contract.md",
+      "sha256": "0162dfdbb42717b0f5eeca31bbc08281c1686ceb6cba16c07a56a9f6f9d8b374",
+      "bytes": 3804
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-modeling-writing\\references\\validation-gates.md",
+      "sha256": "6113c81d330af7475a17709210b3efc4801164f3e8e9148ea5d11da290b255d5",
+      "bytes": 5580
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-research-writing\\SKILL.md",
+      "sha256": "3cad2b3b4ce90a260ac3d7ec6f9f6f7a073fda9b4cd430218020e8c13a0d02b6",
+      "bytes": 9151
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-course-notes\\SKILL.md",
+      "sha256": "2b840f26544fbf162688beae78d69b1e0caabeff57c1135282486308b2cca953",
+      "bytes": 9012
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\competition-one-call.md",
+      "sha256": "44bfb095a5b99a724783278498b3f852029379fd126adba443513d64d76e709b",
+      "bytes": 6746
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\material-first-competition.md",
+      "sha256": "477d9f193cf79566a3c8612e906543a64086606f3bb9beabb281b17ffdc16909",
+      "bytes": 3879
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\portfolio-architecture.md",
+      "sha256": "a53ae5ace34067014f54a0ab045dac298a28411d3bf53517fede432f417a139c",
+      "bytes": 6698
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\package-playbooks.md",
+      "sha256": "461e3982fbeef8554dd6129f3c5147cb3a1832d1e10ca246ce6076d758a79a06",
+      "bytes": 14904
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\real-trial-lessons.md",
+      "sha256": "a2688768ff44dca234d26d7e1cadfe3b67b3d9c803495aa706e9ff065efccad2",
+      "bytes": 5752
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\human-blind-evaluation.md",
+      "sha256": "5010f29b0091c79fb86685bc916438d4cb044d1df833d74b8a1b4784bd82245f",
+      "bytes": 6678
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\stack-evaluation.md",
+      "sha256": "ecda3b85ef0d6f9d005a992fe1a291e5658e654b50e0ae80fac660ab33c5fcf8",
+      "bytes": 4689
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\style-benchmark.md",
+      "sha256": "0f039ccb1b3299e8e4939e857ba7efb3c41334944dfd7bb122156dd6d3cfc30f",
+      "bytes": 18343
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\detector-report-intake.md",
+      "sha256": "7c9838d368087a581d41f9c36aac0c094eebb85a3bff453b61703d015bd9f604",
+      "bytes": 10401
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\quick-checklist.md",
+      "sha256": "48f98f30e7bed1e7a516a1938e1cbb790a3b8e3bd27ae10cb4bbbbebee02a95e",
+      "bytes": 16528
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\short-patch-workflow.md",
+      "sha256": "53fa1aa2c3e5c31ae90262ebb6dfa9f9e6dd9f523f5f3f2b434df44934055336",
+      "bytes": 32073
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\scripts\\route_humanize_scene.py",
+      "sha256": "23c19fe30dd8f8fb2962d9746a379f100b18ca572e7e79e4cb4916d2cf48589a",
+      "bytes": 11126
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\voice-profile.md",
+      "sha256": "3eb79f3b27cd09d0a166d9ba391a5578c3ef8f2ce6af19c66cdccba2389ed158",
+      "bytes": 24105
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\source-provenance-trust.json",
+      "sha256": "4d0c6f9e5cd301088af56b10e5414c327cba6f6cb9a4116f5d6f04cdf2857607",
+      "bytes": 1636
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\evaluation-contract.md",
+      "sha256": "d6922089a988b5970941f2287c08ba09dce09620e87929d62b020199007775eb",
+      "bytes": 63668
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\long-document-workflow.md",
+      "sha256": "21cdc7bf4fd0b97cfae4167d7e83454d8ad70c4202beb2d09fffc806ccdf8012",
+      "bytes": 94222
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\fulltext-language-usage.md",
+      "sha256": "c709f953c5a1794711488bd4bed2d8685136c3ed81e09fba75430ffb7f54e52e",
+      "bytes": 19373
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\modeling-workbench.md",
+      "sha256": "7db4b3b32390f631837a77209bffe0e1bb0832818bbe9e6245fdb4a9d5034908",
+      "bytes": 11837
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\human-drafting.md",
+      "sha256": "9b06180f654ede651c05747fe764ca302f751838fb314607dc1c016390167096",
+      "bytes": 9139
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\corpus-overlap.md",
+      "sha256": "62b5988667923302e86ec0f30ea876194b4fb53d67da7afff7b2e59653ab7c24",
+      "bytes": 1070
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\fulltext-language-analysis.md",
+      "sha256": "35f67addad696cb27431b1d57c75d835b43060c1f4d82e574b0a1eba866101ac",
+      "bytes": 30600
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\paper-structure.md",
+      "sha256": "450939c47fcce7afaa68da2043145d8392336d5b9af3fd2a89de9af95fd2641f",
+      "bytes": 7548
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\problem-types-abc.md",
+      "sha256": "683f0652a777c0e35cac728730c4ce01e67f3e4bc9722c3fe522f05e1dddb65a",
+      "bytes": 46023
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\competition-longform.md",
+      "sha256": "ca97fb0f4c9d77772ff70a129257fe1259f6eee9783a15ea3a56b69708498404",
+      "bytes": 10089
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\reasoning-preflight.md",
+      "sha256": "481767a5f88f6c0df8f842226a9cd4675bcae6cac1b30d77e00aae9d20d224dd",
+      "bytes": 3652
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\section-authoring-brief.md",
+      "sha256": "dd3d03ae845a5b09e41595da9e00c2f3b182c8925f3bdd79454d48687c3b416c",
+      "bytes": 6985
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\reasoning-review.md",
+      "sha256": "3409573fbaf4bc4b19b55d3eff1bd35565a87235f510a0b7782ffd4de38f8932",
+      "bytes": 2153
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\public-judgment-ledger.md",
+      "sha256": "2c3f63f15da04759c6a91f1448a400aee4fe3ad24ea1a54a3cafde2a952c4ed6",
+      "bytes": 2512
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\template-contract.md",
+      "sha256": "56e970dbf0de0833cad85132b14b82655020aba6d53c54de47fc9e3729f5164a",
+      "bytes": 20297
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\contest-rules-2026.md",
+      "sha256": "25c0b2171bbb6f05fc041aa3838fa760415b8566d88b62b93d98c60a1887cff2",
+      "bytes": 4134
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\model-innovation.md",
+      "sha256": "939a16cb6210a15047bfb7a2c3e62be18c2544609ba6e22ea51613b1274a5bd6",
+      "bytes": 56497
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\quality-gates.md",
+      "sha256": "d4a258fae3920c95c1170b793ae5d8323afca2477b0e880fae6c0ba33e231154",
+      "bytes": 44827
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\single-pass-rewrite.md",
+      "sha256": "c3ef43d5ab65b1b3d9c5736d7852a0d32f213c18fec87643f0c04104686c4b42",
+      "bytes": 2842
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\blind-test-abc-protocol.md",
+      "sha256": "c1934b53c56e09399196b753f4929c62f5b5d510bea5aad4bca98c35dfb93218",
+      "bytes": 2874
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\blind-test-2019-cumcm-a.md",
+      "sha256": "8fab89521e1563f29add45ee59851c313b71f018afd192b942187e14c9be8111",
+      "bytes": 4082
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\blind-test-2018-cumcm-b.md",
+      "sha256": "9a183fffa71c753e045ed4caa70bd0aa4168703b6e920b458fb96e322660cec1",
+      "bytes": 4343
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\blind-test-2025-mcm-c.md",
+      "sha256": "d6e7a54697d844493d08fb426de13c8470f129a93717619eb8cb19088118962b",
+      "bytes": 10184
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\evidence-updates.md",
+      "sha256": "f25bf2421de0bd56cba4cbf1db349f0084298ddffea2a3384872787d0002dced",
+      "bytes": 183604
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\corpus-index.md",
+      "sha256": "1ebab0f66c419ccf461b48c8baed89941defebbe2bd9066d46fd880f40c28a60",
+      "bytes": 6732
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\language-coverage-audit-20260813.md",
+      "sha256": "28da3f4c371bc719f5a69ab0f782136729f89aec6260fa3a70eeeae36b8aa07a",
+      "bytes": 2831
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\release-state-regression-20260815.md",
+      "sha256": "661ad722a78313b392d057e9b622e3a2909321a95f0d6df5955312f4a64dd3e4",
+      "bytes": 3751
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-academic-writing\\references\\cases.md",
+      "sha256": "b06abefaf8acb0ff1f9e478dea8b2bc4bf2dc14aa423b08829de3bdc87639d78",
+      "bytes": 39378
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-research-writing\\references\\rules.md",
+      "sha256": "62a8d43f363f86a2c88cc6c22e037e8f202b5859e78cced8a25dc0848880b77f",
+      "bytes": 14911
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-research-writing\\references\\diagnostic-matrix.md",
+      "sha256": "6fc5ca9da573144d1518f38640895fc0fa7d819374ebe32e523bda6eafda160c",
+      "bytes": 9313
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-research-writing\\references\\validation-gates.md",
+      "sha256": "8c71f48fe37dfe5dbc28c53066207a5d43a8f1b320f3a27cf9e8d6238b0e794d",
+      "bytes": 11826
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-research-writing\\references\\cases.md",
+      "sha256": "69ceb2592fe41bd3a6ce101a9c9b5518dc2ea42b90f0d642eec5320a4c688efd",
+      "bytes": 9642
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-research-writing\\references\\rewrite-patterns.md",
+      "sha256": "f4bb3d5db4eeeb535569066d946c492552683e36a584f1610d7a085548cdeb1f",
+      "bytes": 9239
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-research-writing\\references\\playbook.md",
+      "sha256": "9377902c38c42fc64aa056d66f013668f21a40f72f903b1f02f3f8770f2cfa11",
+      "bytes": 8473
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-research-writing\\references\\system-prompt-contract.md",
+      "sha256": "a30662aadf71f7881554bca7db3689c31ba123ba1cbd4f425d4f7300f447bb82",
+      "bytes": 9133
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-course-notes\\references\\rules.md",
+      "sha256": "0edff0adb9b9190b50b68e962d73d422872a98b78c926875a7551f14448812f8",
+      "bytes": 17758
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-course-notes\\references\\diagnostic-matrix.md",
+      "sha256": "403bf81799553d97e06033623396e989e76f0d98a8443e0e3cf8bf40e97bb8c1",
+      "bytes": 9840
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-course-notes\\references\\validation-gates.md",
+      "sha256": "6ed6b33337b197652bdd7f56fdd785672784ced63e561039bbf03fad3e875cdc",
+      "bytes": 8694
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-course-notes\\references\\cases.md",
+      "sha256": "30d72a69421727f53561e316b3c7caba3ee3c982337a5bafe4d6777a6cb39b85",
+      "bytes": 14424
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-course-notes\\references\\playbook.md",
+      "sha256": "407454b0d2ad02a95921879fe5f00a1f6bed659ea9744a9896c513a2deb1de02",
+      "bytes": 7781
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-course-notes\\references\\rewrite-patterns.md",
+      "sha256": "c325500e02d26f6037b81bde4a58df12834e6ce4afc951a357e0b1b2ba358c79",
+      "bytes": 9670
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\deai-course-notes\\references\\system-prompt-contract.md",
+      "sha256": "17ca553dc486ba13a7c370f21237411c61784914afadfc1c04da019369f3becc",
+      "bytes": 8720
+    }
+  ],
+  "claims": {
+    "human_authorship_proven": false,
+    "native_generation_proven": false,
+    "validation_executed": true,
+    "external_style_clearance": false,
+    "mechanical_validation_only": true
+  },
+  "stack_evaluation": {
+    "report": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\evidence\\draft-holdout-01-9cba4b9d\\humanize-academic-chinese-t2-stack\\stack-report.json",
+      "sha256": "602b403fa8d3f3a56e555823100c9daaea5d2a3ff2facf370f764aec6c3dca4b",
+      "bytes": 1379
+    },
+    "manifest": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\evidence\\draft-holdout-01-9cba4b9d\\humanize-academic-chinese-t2-stack\\stack-manifest.json",
+      "sha256": "2e26b02bcf62189738f690e1a88ed1c9e419259813fb042f05b3c905d3172d02",
+      "bytes": 1962
+    },
+    "document_type": "modeling",
+    "required_stage_providers": [
+      "deai-academic-writing",
+      "deai-modeling-writing"
+    ]
+  },
+  "auxiliary_reviews": {
+    "ai_check": {
+      "provider": "ai-check",
+      "adapter_package": "humanize-main",
+      "report": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\draft-holdout-01-9cba4b9d-t2\\ai-check-adapter\\audit-report.json",
+      "sha256": "715e151d780972c02b6030eb68dad6e384514623193008c0315cba5f38dbe55f",
+      "execution_level": "ADAPTER_DIAGNOSTIC_ONLY",
+      "native_executed": false,
+      "claims": {
+        "authorship_or_detector_verdict": false,
+        "candidate_selection": false
+      }
+    },
+    "AI_paper_workbench": {
+      "provider": "AI_paper",
+      "plan": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\modeling\\holdout-run-aux-20260823\\auxiliary\\AI_paper\\workbench-plan.json",
+      "sha256": "cc383debf6b0133d8a0a1ef291627e182f7012e36da22827d07413c26445f787",
+      "execution_level": "WORKBENCH_PLAN_ONLY",
+      "native_executed": false,
+      "claims": {
+        "candidate_generation": false,
+        "candidate_selection": false
+      }
+    }
+  }
+}

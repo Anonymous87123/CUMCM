@@ -1,0 +1,93 @@
+{
+  "schema": "aigc-adapter-run/v1",
+  "package": "humanize-academic-chinese",
+  "action": "verify-candidate",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "NEGATION_CHANGED",
+      "before_count": 5,
+      "after_count": 4,
+      "location_method": "changed-block-delta",
+      "before_examples": [
+        {
+          "value": "不",
+          "matched": "不",
+          "line": 1,
+          "column": 350,
+          "context": "...续、部分修复、较弱保留或退化为边界证据。综合来看，本文在特定设定下给出的经验判断是明确的：分组质量不能仅靠交互保持来刻画，诱导子问题的局部条件性是另一条与最终性能直接相关的解释维度。由此得到的设计含义不是用几何替代交互，而是在保持交互结构之后，继续检查分组留给后端的局部条件性，并据此进行后续细化。"
+        }
+      ],
+      "after_examples": [],
+      "before_sequence_sha256": "6ceb623651611ac7da622af766da4dc834d64fbd21894f5aebe63bf473e6ec47",
+      "after_sequence_sha256": "ce668c4374c436672d4a451ded6b68452cd7883800f4b8f7e7ffc2e7b6dcae47",
+      "finding_sha256": "ae98b802e1422554b876e4d42904712848a4e32e373977d37382a6d04c14c22a"
+    }
+  ],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\research\\dev-run-final-20260823\\verification\\draft-dev-03-4efc1919-t3",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\research\\dev-run-final-20260823\\sources\\draft-dev-03-4efc1919.tex",
+    "sha256": "f43ffb1e27fad66352ed729fb5e8aa71244ab419b8b41b67351feb8730d7a998",
+    "bytes": 1140,
+    "suffix": ".tex"
+  },
+  "protected_inventory": {
+    "numbers": {},
+    "tex_commands": {},
+    "tex_keys": {},
+    "inline_math": {},
+    "dollar_display_math": {},
+    "display_math": {},
+    "math_environments": {},
+    "code_fences": {},
+    "urls": {}
+  },
+  "tex_semantic_contract": {
+    "status": "pass",
+    "before": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\research\\dev-run-final-20260823\\sources\\draft-dev-03-4efc1919.tex",
+    "after": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\research\\dev-run-final-20260823\\authoring\\draft-dev-03-4efc1919-t3.tex",
+    "scene": "GENERAL",
+    "errors": 0,
+    "warnings": 1,
+    "findings": [
+      {
+        "severity": "warning",
+        "code": "NEGATION_CHANGED",
+        "before_count": 5,
+        "after_count": 4,
+        "location_method": "changed-block-delta",
+        "before_examples": [
+          {
+            "value": "不",
+            "matched": "不",
+            "line": 1,
+            "column": 350,
+            "context": "...续、部分修复、较弱保留或退化为边界证据。综合来看，本文在特定设定下给出的经验判断是明确的：分组质量不能仅靠交互保持来刻画，诱导子问题的局部条件性是另一条与最终性能直接相关的解释维度。由此得到的设计含义不是用几何替代交互，而是在保持交互结构之后，继续检查分组留给后端的局部条件性，并据此进行后续细化。"
+          }
+        ],
+        "after_examples": [],
+        "before_sequence_sha256": "6ceb623651611ac7da622af766da4dc834d64fbd21894f5aebe63bf473e6ec47",
+        "after_sequence_sha256": "ce668c4374c436672d4a451ded6b68452cd7883800f4b8f7e7ffc2e7b6dcae47",
+        "finding_sha256": "ae98b802e1422554b876e4d42904712848a4e32e373977d37382a6d04c14c22a"
+      }
+    ],
+    "number_diff": {
+      "removed": [],
+      "introduced": []
+    }
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\research\\dev-run-final-20260823\\authoring\\draft-dev-03-4efc1919-t3.tex",
+    "sha256": "6bf79638d58e1b032e64e9cb71f01efa08191e558528b418529d7a6bec41ed2d",
+    "bytes": 1161,
+    "suffix": ".tex"
+  },
+  "human_review_required": true
+}

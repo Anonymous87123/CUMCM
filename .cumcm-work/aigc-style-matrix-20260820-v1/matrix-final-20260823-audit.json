@@ -1,0 +1,32 @@
+{
+  "schema": "aigc-style-benchmark-matrix-audit/v1",
+  "status": "pass",
+  "errors": 0,
+  "warnings": 0,
+  "entry_status": {
+    "modeling": "pass",
+    "course-notes": "pass",
+    "research": "pass"
+  },
+  "states": {
+    "modeling": {
+      "dev": "BLIND_READY",
+      "holdout": "BLIND_READY"
+    },
+    "course-notes": {
+      "dev": "BLIND_READY",
+      "holdout": "BLIND_READY"
+    },
+    "research": {
+      "dev": "BLIND_READY",
+      "holdout": "BLIND_READY"
+    }
+  },
+  "human_quality_status": "HUMAN_RATINGS_PENDING",
+  "findings": [],
+  "claims": {
+    "mechanical_role_chain_verified": true,
+    "human_style_quality_proven": false,
+    "authorship_proven": false
+  }
+}
