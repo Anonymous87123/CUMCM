@@ -1,0 +1,46 @@
+{
+  "schema": "aigc-adapter-run/v1",
+  "package": "humanize-main",
+  "action": "audit",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\course-notes\\holdout-run-aux-v2-20260823\\auxiliary\\draft-holdout-03-bebc4fdb-t2\\ai-check-adapter",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\course-notes\\holdout-run-aux-v2-20260823\\authoring\\draft-holdout-03-bebc4fdb-t2.tex",
+    "sha256": "c2f446e7a8a5624e5224af6d6aef486f1870bd8bb6536f49b7f24bfd1cf12900",
+    "bytes": 212,
+    "suffix": ".tex"
+  },
+  "protected_inventory": {
+    "numbers": {
+      "6": 1
+    },
+    "tex_commands": {},
+    "tex_keys": {},
+    "inline_math": {},
+    "dollar_display_math": {},
+    "display_math": {},
+    "math_environments": {},
+    "code_fences": {},
+    "urls": {}
+  },
+  "diagnostics": {
+    "characters": 80,
+    "non_whitespace_characters": 75,
+    "paragraphs": 1,
+    "sentences": 3,
+    "sentence_length_min": 12,
+    "sentence_length_max": 41,
+    "sentence_length_mean": 25.0,
+    "duplicate_paragraphs": [],
+    "boilerplate_hits": {},
+    "unresolved_placeholders": []
+  },
+  "interpretation": "Deterministic signals locate review targets only; they do not identify the author, prove academic quality, or predict an external detector."
+}

@@ -1,0 +1,62 @@
+{
+  "schema": "aigc-blind-key/v1",
+  "seed": 20260823,
+  "dimensions": [
+    "naturalness",
+    "judgment_trajectory",
+    "specificity",
+    "content_density",
+    "semantic_fidelity"
+  ],
+  "pairs": [
+    {
+      "pair_id": "P0001",
+      "A": "draft-holdout-01-a3fb55cc::source",
+      "B": "draft-holdout-01-a3fb55cc::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0002",
+      "A": "draft-holdout-01-a3fb55cc::humanize-academic-chinese::t2",
+      "B": "draft-holdout-01-a3fb55cc::source"
+    },
+    {
+      "pair_id": "P0003",
+      "A": "draft-holdout-01-a3fb55cc::source",
+      "B": "draft-holdout-01-a3fb55cc::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0004",
+      "A": "draft-holdout-02-b617b65f::humanize-academic-chinese::t1",
+      "B": "draft-holdout-02-b617b65f::source"
+    },
+    {
+      "pair_id": "P0005",
+      "A": "draft-holdout-02-b617b65f::source",
+      "B": "draft-holdout-02-b617b65f::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0006",
+      "A": "draft-holdout-02-b617b65f::source",
+      "B": "draft-holdout-02-b617b65f::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0007",
+      "A": "draft-holdout-03-bebc4fdb::source",
+      "B": "draft-holdout-03-bebc4fdb::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0008",
+      "A": "draft-holdout-03-bebc4fdb::humanize-academic-chinese::t2",
+      "B": "draft-holdout-03-bebc4fdb::source"
+    },
+    {
+      "pair_id": "P0009",
+      "A": "draft-holdout-03-bebc4fdb::source",
+      "B": "draft-holdout-03-bebc4fdb::humanize-academic-chinese::t3"
+    }
+  ],
+  "packet_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\course-notes\\holdout-run-aux-v3-20260823\\blind\\evaluation-packet.json",
+  "packet_sha256": "49c98528483011ad516ae623e8e2f7fcfd66abb4bcd589c2261a10bd39a064c1",
+  "source_pairs_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\course-notes\\holdout-run-aux-v3-20260823\\blind\\pairs.json",
+  "source_pairs_sha256": "8fea236feb1c7b462b916fb61e2f435db45dca7ba6345bccf1725cfe1630c4d0"
+}

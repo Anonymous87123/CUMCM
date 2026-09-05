@@ -1,0 +1,102 @@
+{
+  "schema": "aigc-style-benchmark-suite/v1",
+  "suite_id": "matrix-course-notes-holdout",
+  "version": "2026-08-20",
+  "split": "holdout",
+  "benchmark_goal": "improvement",
+  "providers": [
+    "humanize-academic-chinese"
+  ],
+  "required_trials": 3,
+  "required_generation_evidence": [
+    "stack_evaluation"
+  ],
+  "purpose": "Forward draft-to-candidate benchmark sampled without quality labels.",
+  "cases": [
+    {
+      "id": "draft-holdout-01-a3fb55cc",
+      "scene": {
+        "document_type": "course-notes",
+        "document_format": "tex",
+        "scope": "local"
+      },
+      "source": "sources/draft-holdout-01-a3fb55cc.tex",
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "content-density",
+        "semantic-fidelity",
+        "paragraph-rhythm"
+      ],
+      "provenance": {
+        "kind": "real-draft-section",
+        "source_document": "D:\\code LateX\\elegantbook\\CET6\\cet 6\\_analysis_output\\section_b_final_conclusions_report_v2.tex",
+        "source_document_sha256": "5687dd8dda136dbc9843c635dc9a9acf4d88b8de40024062f86cf982f9c69253",
+        "start_line": 2874,
+        "end_line": 2874,
+        "heading": "19.5 信息互补性最强的三题锚组合",
+        "paragraph_sha256": "a3fb55cc61f9b4dcdd00feba830c6bf4ddcec63bcdb86d5ee131ed4179b88be4",
+        "selection_seed": 20260908,
+        "quality_label_used_for_selection": false
+      }
+    },
+    {
+      "id": "draft-holdout-02-b617b65f",
+      "scene": {
+        "document_type": "course-notes",
+        "document_format": "tex",
+        "scope": "local"
+      },
+      "source": "sources/draft-holdout-02-b617b65f.tex",
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "content-density",
+        "semantic-fidelity",
+        "paragraph-rhythm"
+      ],
+      "provenance": {
+        "kind": "real-draft-section",
+        "source_document": "D:\\code LateX\\elegantbook\\CET6\\cet 6\\_analysis_output\\section_b_final_conclusions_report_v2.tex",
+        "source_document_sha256": "5687dd8dda136dbc9843c635dc9a9acf4d88b8de40024062f86cf982f9c69253",
+        "start_line": 2746,
+        "end_line": 2746,
+        "heading": "19. 附录 E：标准化分析证据（不是新策略版本）",
+        "paragraph_sha256": "b617b65f34ce57284d408000bd5da58773d321040c248d95d651b48945688814",
+        "selection_seed": 20260908,
+        "quality_label_used_for_selection": false
+      }
+    },
+    {
+      "id": "draft-holdout-03-bebc4fdb",
+      "scene": {
+        "document_type": "course-notes",
+        "document_format": "tex",
+        "scope": "local"
+      },
+      "source": "sources/draft-holdout-03-bebc4fdb.tex",
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "content-density",
+        "semantic-fidelity",
+        "paragraph-rhythm"
+      ],
+      "provenance": {
+        "kind": "real-draft-section",
+        "source_document": "D:\\code LateX\\elegantbook\\CET6\\cet 6\\_analysis_output\\section_b_final_conclusions_report_v2.tex",
+        "source_document_sha256": "5687dd8dda136dbc9843c635dc9a9acf4d88b8de40024062f86cf982f9c69253",
+        "start_line": 2944,
+        "end_line": 2944,
+        "heading": "19.8 同段重复清单",
+        "paragraph_sha256": "bebc4fdb1d88dda43e1a127e2318764d8e128ad3915a3de04f282dfa6f255c39",
+        "selection_seed": 20260908,
+        "quality_label_used_for_selection": false
+      }
+    }
+  ],
+  "holdout_policy": {
+    "curator": "队长",
+    "release_id": "matrix-course-notes-v1"
+  }
+}

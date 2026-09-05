@@ -1,0 +1,62 @@
+{
+  "schema": "aigc-blind-key/v1",
+  "seed": 20260823,
+  "dimensions": [
+    "naturalness",
+    "judgment_trajectory",
+    "specificity",
+    "content_density",
+    "semantic_fidelity"
+  ],
+  "pairs": [
+    {
+      "pair_id": "P0001",
+      "A": "draft-dev-01-2309fe1a::source",
+      "B": "draft-dev-01-2309fe1a::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0002",
+      "A": "draft-dev-01-2309fe1a::humanize-academic-chinese::t2",
+      "B": "draft-dev-01-2309fe1a::source"
+    },
+    {
+      "pair_id": "P0003",
+      "A": "draft-dev-01-2309fe1a::source",
+      "B": "draft-dev-01-2309fe1a::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0004",
+      "A": "draft-dev-02-30f7e86e::humanize-academic-chinese::t1",
+      "B": "draft-dev-02-30f7e86e::source"
+    },
+    {
+      "pair_id": "P0005",
+      "A": "draft-dev-02-30f7e86e::source",
+      "B": "draft-dev-02-30f7e86e::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0006",
+      "A": "draft-dev-02-30f7e86e::source",
+      "B": "draft-dev-02-30f7e86e::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0007",
+      "A": "draft-dev-03-2386aec9::source",
+      "B": "draft-dev-03-2386aec9::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0008",
+      "A": "draft-dev-03-2386aec9::humanize-academic-chinese::t2",
+      "B": "draft-dev-03-2386aec9::source"
+    },
+    {
+      "pair_id": "P0009",
+      "A": "draft-dev-03-2386aec9::source",
+      "B": "draft-dev-03-2386aec9::humanize-academic-chinese::t3"
+    }
+  ],
+  "packet_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\course-notes\\dev-run-final-20260823\\blind\\evaluation-packet.json",
+  "packet_sha256": "2d54398d922974e1c121590130eaec0c3ca8ca1f35d2629f7372d39a3c30ff42",
+  "source_pairs_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\course-notes\\dev-run-final-20260823\\blind\\pairs.json",
+  "source_pairs_sha256": "9c29189e48f94937efe8b8611f0fbe02e862a24a47dc5d12e9b4c9df2c5e3764"
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "aigc-benchmark-owner-ledger/v1",
+  "document_type": "course-notes",
+  "provider": "deai-course-notes",
+  "mode": "REWRITE",
+  "source_sha256": "21ad9061b92034b1bc9124ed434e79117a823cf41130ef5eef5a5ceeeec21c80",
+  "candidate_sha256": "d5f305271d4052492e55797b2f1b931b6871c1334b94ed3fef01ea78f0c2a06a",
+  "decisions": [
+    {
+      "source_anchor": "draft-dev-01-2309fe1a.tex; frozen excerpt: 为降低阅读混乱，本文将第 1-14 章作为最终主报告，第 15-21 章作为附录证据与操作手册。后文出现的“信息增益最大”“残余熵最低”等统计模型结论，只解释辅助价值，不替代第 14.1 节的最终实战口径。",
+      "action": "REWRITE local prose candidate draft-dev-01-2309fe1a-t1.tex; no second humanizer pass",
+      "source_identity": "A frozen local excerpt from the user-supplied course-note report, not an invented teaching example.",
+      "teaching_function": "Preserve the operational rule, data-scope distinction, or evidence/appendix responsibility expressed by the source paragraph.",
+      "decisive_step": "Keep the actual question order, source boundary, and named CodeInline anchors; revise only how the instruction is presented.",
+      "preserved_conditions": [
+        "All numbers, dates, CodeInline tokens, scope limitations, and do-not-replace qualifications in the frozen source."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "claims": {
+    "hidden_reasoning_recorded": false,
+    "academic_correctness_proven": false
+  }
+}

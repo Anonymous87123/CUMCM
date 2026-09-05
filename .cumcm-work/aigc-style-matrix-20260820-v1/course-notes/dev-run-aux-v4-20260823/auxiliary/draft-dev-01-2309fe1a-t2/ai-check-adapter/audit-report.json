@@ -1,0 +1,50 @@
+{
+  "schema": "aigc-adapter-run/v1",
+  "package": "humanize-main",
+  "action": "audit",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\course-notes\\dev-run-aux-v4-20260823\\auxiliary\\draft-dev-01-2309fe1a-t2\\ai-check-adapter",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\course-notes\\dev-run-aux-v4-20260823\\authoring\\draft-dev-01-2309fe1a-t2.tex",
+    "sha256": "fd2ac9f2719c8ed102d41da574b876e68747d3350f2fc8cd935f1025510ee380",
+    "bytes": 273,
+    "suffix": ".tex"
+  },
+  "protected_inventory": {
+    "numbers": {
+      "1": 1,
+      "14": 1,
+      "14.1": 1,
+      "15": 1,
+      "21": 1
+    },
+    "tex_commands": {},
+    "tex_keys": {},
+    "inline_math": {},
+    "dollar_display_math": {},
+    "display_math": {},
+    "math_environments": {},
+    "code_fences": {},
+    "urls": {}
+  },
+  "diagnostics": {
+    "characters": 104,
+    "non_whitespace_characters": 97,
+    "paragraphs": 1,
+    "sentences": 2,
+    "sentence_length_min": 44,
+    "sentence_length_max": 53,
+    "sentence_length_mean": 48.5,
+    "duplicate_paragraphs": [],
+    "boilerplate_hits": {},
+    "unresolved_placeholders": []
+  },
+  "interpretation": "Deterministic signals locate review targets only; they do not identify the author, prove academic quality, or predict an external detector."
+}

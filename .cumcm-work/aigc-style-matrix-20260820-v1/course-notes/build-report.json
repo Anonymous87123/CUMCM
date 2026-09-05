@@ -1,0 +1,32 @@
+{
+  "schema": "aigc-draft-improvement-suite-build/v1",
+  "status": "pass",
+  "source": {
+    "path": "D:\\code LateX\\elegantbook\\CET6\\cet 6\\_analysis_output\\section_b_final_conclusions_report_v2.tex",
+    "sha256": "5687dd8dda136dbc9843c635dc9a9acf4d88b8de40024062f86cf982f9c69253"
+  },
+  "builder": {
+    "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\prepare_draft_improvement_suite.py",
+    "sha256": "500ae6cade65db6b39862058d1a7cef47a27f76b3b26e857a80884066a47b584"
+  },
+  "seed": 20260908,
+  "document_type": "course-notes",
+  "required_generation_evidence": [
+    "stack_evaluation"
+  ],
+  "eligible_paragraphs_before_exclusions": 12,
+  "eligible_paragraphs": 12,
+  "excluded_paragraphs": 0,
+  "exclusion_suites": [],
+  "selection_uses_quality_labels": false,
+  "dev": {
+    "suite": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\course-notes\\dev\\suite.json",
+    "sha256": "b91daaae40cb9a68425e9489e632b6087c4269b910b3ee01c911dfb47e662ec5",
+    "cases": 3
+  },
+  "holdout": {
+    "suite": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\course-notes\\holdout\\suite.json",
+    "sha256": "9d9afbf3785a88fd3ea9b04b04df8620b7343aa9b396faa5a7c96c82a7394de6",
+    "cases": 3
+  }
+}

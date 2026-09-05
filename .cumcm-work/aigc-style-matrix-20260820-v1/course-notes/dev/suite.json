@@ -1,0 +1,98 @@
+{
+  "schema": "aigc-style-benchmark-suite/v1",
+  "suite_id": "matrix-course-notes-dev",
+  "version": "2026-08-20",
+  "split": "dev",
+  "benchmark_goal": "improvement",
+  "providers": [
+    "humanize-academic-chinese"
+  ],
+  "required_trials": 3,
+  "required_generation_evidence": [
+    "stack_evaluation"
+  ],
+  "purpose": "Forward draft-to-candidate benchmark sampled without quality labels.",
+  "cases": [
+    {
+      "id": "draft-dev-01-2309fe1a",
+      "scene": {
+        "document_type": "course-notes",
+        "document_format": "tex",
+        "scope": "local"
+      },
+      "source": "sources/draft-dev-01-2309fe1a.tex",
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "content-density",
+        "semantic-fidelity",
+        "paragraph-rhythm"
+      ],
+      "provenance": {
+        "kind": "real-draft-section",
+        "source_document": "D:\\code LateX\\elegantbook\\CET6\\cet 6\\_analysis_output\\section_b_final_conclusions_report_v2.tex",
+        "source_document_sha256": "5687dd8dda136dbc9843c635dc9a9acf4d88b8de40024062f86cf982f9c69253",
+        "start_line": 67,
+        "end_line": 67,
+        "heading": "摘要",
+        "paragraph_sha256": "2309fe1a885b35f7542c762d555d03d1ce0b61b76e564d7531664f699efd9574",
+        "selection_seed": 20260908,
+        "quality_label_used_for_selection": false
+      }
+    },
+    {
+      "id": "draft-dev-02-30f7e86e",
+      "scene": {
+        "document_type": "course-notes",
+        "document_format": "tex",
+        "scope": "local"
+      },
+      "source": "sources/draft-dev-02-30f7e86e.tex",
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "content-density",
+        "semantic-fidelity",
+        "paragraph-rhythm"
+      ],
+      "provenance": {
+        "kind": "real-draft-section",
+        "source_document": "D:\\code LateX\\elegantbook\\CET6\\cet 6\\_analysis_output\\section_b_final_conclusions_report_v2.tex",
+        "source_document_sha256": "5687dd8dda136dbc9843c635dc9a9acf4d88b8de40024062f86cf982f9c69253",
+        "start_line": 1438,
+        "end_line": 1438,
+        "heading": "14. 最终结论",
+        "paragraph_sha256": "30f7e86ecffcae5a39029967cb8e1f0f57833fd7a0dbdc7257f7c4f20b81cae0",
+        "selection_seed": 20260908,
+        "quality_label_used_for_selection": false
+      }
+    },
+    {
+      "id": "draft-dev-03-2386aec9",
+      "scene": {
+        "document_type": "course-notes",
+        "document_format": "tex",
+        "scope": "local"
+      },
+      "source": "sources/draft-dev-03-2386aec9.tex",
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "content-density",
+        "semantic-fidelity",
+        "paragraph-rhythm"
+      ],
+      "provenance": {
+        "kind": "real-draft-section",
+        "source_document": "D:\\code LateX\\elegantbook\\CET6\\cet 6\\_analysis_output\\section_b_final_conclusions_report_v2.tex",
+        "source_document_sha256": "5687dd8dda136dbc9843c635dc9a9acf4d88b8de40024062f86cf982f9c69253",
+        "start_line": 220,
+        "end_line": 220,
+        "heading": "2.2 历史上为何曾经出现两层口径",
+        "paragraph_sha256": "2386aec9e614cdf976aa6382a580c9cb34409ee43086ebcd496a972cf27551c5",
+        "selection_seed": 20260908,
+        "quality_label_used_for_selection": false
+      }
+    }
+  ]
+}

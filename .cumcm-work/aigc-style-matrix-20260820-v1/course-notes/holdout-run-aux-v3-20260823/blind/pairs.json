@@ -1,0 +1,122 @@
+{
+  "schema": "aigc-blind-pairs/v1",
+  "pairs": [
+    {
+      "id": "P0001",
+      "variants": [
+        {
+          "id": "draft-holdout-01-a3fb55cc::source",
+          "text": "\\textbf{解释}：在“做完三题后剩余题残余熵最低”这个指标下，\\textbf{Q38+Q40+Q42} 最优，因为它们分布在不同链条和中段区域，位置互补。这个结论不能直接翻译成“考场第一题先做 Q38”，因为起手还必须考虑题干是否好定位。\n"
+        },
+        {
+          "id": "draft-holdout-01-a3fb55cc::humanize-academic-chinese::t1",
+          "text": "\\textbf{解释}：按“做完三题后剩余题残余熵最低”这一指标，\\textbf{Q38+Q40+Q42} 的组合最优，原因是三题分布在不同链条和中段区域，彼此形成位置互补。这个统计结论不能翻译成“考场第一题先做 Q38”，因为真正起手时还必须考虑题干是否容易定位。"
+        }
+      ]
+    },
+    {
+      "id": "P0002",
+      "variants": [
+        {
+          "id": "draft-holdout-01-a3fb55cc::source",
+          "text": "\\textbf{解释}：在“做完三题后剩余题残余熵最低”这个指标下，\\textbf{Q38+Q40+Q42} 最优，因为它们分布在不同链条和中段区域，位置互补。这个结论不能直接翻译成“考场第一题先做 Q38”，因为起手还必须考虑题干是否好定位。\n"
+        },
+        {
+          "id": "draft-holdout-01-a3fb55cc::humanize-academic-chinese::t2",
+          "text": "\\textbf{解释}：在“做完三题后剩余题残余熵最低”这一指标下，\\textbf{Q38+Q40+Q42} 最优。三题分别落在不同链条和中段区域，位置互补。这个结论不能翻译成“考场第一题先做 Q38”，因为起手还必须考虑题干是否好定位。"
+        }
+      ]
+    },
+    {
+      "id": "P0003",
+      "variants": [
+        {
+          "id": "draft-holdout-01-a3fb55cc::source",
+          "text": "\\textbf{解释}：在“做完三题后剩余题残余熵最低”这个指标下，\\textbf{Q38+Q40+Q42} 最优，因为它们分布在不同链条和中段区域，位置互补。这个结论不能直接翻译成“考场第一题先做 Q38”，因为起手还必须考虑题干是否好定位。\n"
+        },
+        {
+          "id": "draft-holdout-01-a3fb55cc::humanize-academic-chinese::t3",
+          "text": "\\textbf{解释}：按“做完三题后剩余题残余熵最低”这一指标，最优组合为\\textbf{Q38+Q40+Q42}；它们分布在不同链条和中段区域，位置互补。这个结论不能等同于“考场第一题先做 Q38”，因为起手还必须考虑题干是否好定位。"
+        }
+      ]
+    },
+    {
+      "id": "P0004",
+      "variants": [
+        {
+          "id": "draft-holdout-02-b617b65f::source",
+          "text": "以下分析消除了段落数差异的影响，对附录 D 中的粗糙结论进行修正和深化。这里的“最优”均指某个统计指标下的最优，不等于考场执行顺序。完整计算：\\CodeInline{deep\\_analysis\\_round2.py} →\\allowbreak{} \\CodeInline{deep\\_analysis\\_round2.md}。\n"
+        },
+        {
+          "id": "draft-holdout-02-b617b65f::humanize-academic-chinese::t1",
+          "text": "以下分析先消除段落数差异的影响，再对附录 D 中较粗的结论作修正和深化。这里的“最优”始终指某个统计指标下的最优，不等于考场执行顺序。完整计算链为：\\CodeInline{deep\\_analysis\\_round2.py} →\\allowbreak{} \\CodeInline{deep\\_analysis\\_round2.md}。"
+        }
+      ]
+    },
+    {
+      "id": "P0005",
+      "variants": [
+        {
+          "id": "draft-holdout-02-b617b65f::source",
+          "text": "以下分析消除了段落数差异的影响，对附录 D 中的粗糙结论进行修正和深化。这里的“最优”均指某个统计指标下的最优，不等于考场执行顺序。完整计算：\\CodeInline{deep\\_analysis\\_round2.py} →\\allowbreak{} \\CodeInline{deep\\_analysis\\_round2.md}。\n"
+        },
+        {
+          "id": "draft-holdout-02-b617b65f::humanize-academic-chinese::t2",
+          "text": "消除段落数差异的影响后，以下分析再对附录 D 中的粗糙结论作相应修正和深化。这里的“最优”均指某个统计指标下的最优，不等于考场执行顺序。完整计算：\\CodeInline{deep\\_analysis\\_round2.py} →\\allowbreak{} \\CodeInline{deep\\_analysis\\_round2.md}。"
+        }
+      ]
+    },
+    {
+      "id": "P0006",
+      "variants": [
+        {
+          "id": "draft-holdout-02-b617b65f::source",
+          "text": "以下分析消除了段落数差异的影响，对附录 D 中的粗糙结论进行修正和深化。这里的“最优”均指某个统计指标下的最优，不等于考场执行顺序。完整计算：\\CodeInline{deep\\_analysis\\_round2.py} →\\allowbreak{} \\CodeInline{deep\\_analysis\\_round2.md}。\n"
+        },
+        {
+          "id": "draft-holdout-02-b617b65f::humanize-academic-chinese::t3",
+          "text": "以下分析消除段落数差异的影响后，再修正和深化附录 D 中的粗糙结论。这里的“最优”均指某个统计指标下的最优，不等于考场执行顺序。完整计算：\\CodeInline{deep\\_analysis\\_round2.py} →\\allowbreak{} \\CodeInline{deep\\_analysis\\_round2.md}。"
+        }
+      ]
+    },
+    {
+      "id": "P0007",
+      "variants": [
+        {
+          "id": "draft-holdout-03-bebc4fdb::source",
+          "text": "6 篇存在同字母重复。由于 Section B 题目说明允许同一段被多次选择，这些条目不能仅凭重复就判定为错误；它们更适合作为“重复段落现象”的样本清单：\n"
+        },
+        {
+          "id": "draft-holdout-03-bebc4fdb::humanize-academic-chinese::t1",
+          "text": "存在同字母重复的共有 6 篇。由于 Section B 题目说明允许同一段被多次选择，这些条目不能仅凭重复就判定为错误；它们更适合作为“重复段落现象”的样本清单。"
+        }
+      ]
+    },
+    {
+      "id": "P0008",
+      "variants": [
+        {
+          "id": "draft-holdout-03-bebc4fdb::source",
+          "text": "6 篇存在同字母重复。由于 Section B 题目说明允许同一段被多次选择，这些条目不能仅凭重复就判定为错误；它们更适合作为“重复段落现象”的样本清单：\n"
+        },
+        {
+          "id": "draft-holdout-03-bebc4fdb::humanize-academic-chinese::t2",
+          "text": "共有 6 篇存在同字母重复。由于 Section B 题目说明允许同一段被多次选择，不能仅凭这些重复条目判定为错误；把它们作为“重复段落现象”的样本清单更适合。"
+        }
+      ]
+    },
+    {
+      "id": "P0009",
+      "variants": [
+        {
+          "id": "draft-holdout-03-bebc4fdb::source",
+          "text": "6 篇存在同字母重复。由于 Section B 题目说明允许同一段被多次选择，这些条目不能仅凭重复就判定为错误；它们更适合作为“重复段落现象”的样本清单：\n"
+        },
+        {
+          "id": "draft-holdout-03-bebc4fdb::humanize-academic-chinese::t3",
+          "text": "同字母重复出现在 6 篇文章中。由于 Section B 题目说明允许同一段被多次选择，这些条目不能仅凭重复就判定为错误；作为“重复段落现象”的样本清单更适合。"
+        }
+      ]
+    }
+  ]
+}

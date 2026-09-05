@@ -1,0 +1,62 @@
+{
+  "schema": "aigc-blind-key/v1",
+  "seed": 20260820,
+  "dimensions": [
+    "naturalness",
+    "judgment_trajectory",
+    "specificity",
+    "content_density",
+    "semantic_fidelity"
+  ],
+  "pairs": [
+    {
+      "pair_id": "P0001",
+      "A": "a-reflection-boundary::source",
+      "B": "a-reflection-boundary::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0002",
+      "A": "a-reflection-boundary::humanize-academic-chinese::t2",
+      "B": "a-reflection-boundary::source"
+    },
+    {
+      "pair_id": "P0003",
+      "A": "a-reflection-boundary::source",
+      "B": "a-reflection-boundary::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0004",
+      "A": "b-resource-constraint::source",
+      "B": "b-resource-constraint::humanize-academic-chinese::t1"
+    },
+    {
+      "pair_id": "P0005",
+      "A": "b-resource-constraint::source",
+      "B": "b-resource-constraint::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0006",
+      "A": "b-resource-constraint::source",
+      "B": "b-resource-constraint::humanize-academic-chinese::t3"
+    },
+    {
+      "pair_id": "P0007",
+      "A": "c-model-comparison::humanize-academic-chinese::t1",
+      "B": "c-model-comparison::source"
+    },
+    {
+      "pair_id": "P0008",
+      "A": "c-model-comparison::source",
+      "B": "c-model-comparison::humanize-academic-chinese::t2"
+    },
+    {
+      "pair_id": "P0009",
+      "A": "c-model-comparison::humanize-academic-chinese::t3",
+      "B": "c-model-comparison::source"
+    }
+  ],
+  "packet_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-holdout-current-rules-20260820-r8\\blind\\evaluation-packet.json",
+  "packet_sha256": "c126bec9638766c0ce34d97d394864768d3b601db672659b30a04a6d1ef0ec5d",
+  "source_pairs_path": "F:\\CUMCM\\.cumcm-work\\aigc-style-benchmark\\cumcm-v2-holdout-current-rules-20260820-r8\\blind\\pairs.json",
+  "source_pairs_sha256": "42ae95dd0783f49d42da84b446e29b540757d4ad66c21ad79b62fcc85073b26c"
+}

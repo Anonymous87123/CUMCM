@@ -1,0 +1,46 @@
+{
+  "schema": "aigc-stack-evaluation/v1",
+  "scene": {
+    "document_type": "course-notes",
+    "intent": "rewrite",
+    "document_format": "tex",
+    "scope": "local"
+  },
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\course-notes\\dev-run-final-20260823\\sources\\draft-dev-01-2309fe1a.tex",
+    "sha256": "21ad9061b92034b1bc9124ed434e79117a823cf41130ef5eef5a5ceeeec21c80",
+    "bytes": 273
+  },
+  "baseline_id": "source",
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\course-notes\\dev-run-final-20260823\\candidates\\draft-dev-01-2309fe1a\\humanize-academic-chinese-t3.tex",
+    "sha256": "2cbaa9fb6cf23e2da0b1ac084cff3b0c4667604909f005a10b7f9567cc97f398",
+    "bytes": 297,
+    "id": "H1",
+    "provider": "humanize-academic-chinese"
+  },
+  "stage_evidence": [
+    {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\course-notes\\dev-run-final-20260823\\evidence\\draft-dev-01-2309fe1a\\humanize-academic-chinese-t3-stack\\stage-01.json",
+      "sha256": "5826f264ed8213967c7e20b1c7339c53145ee9cb19586ae8d3915b23e948282c",
+      "bytes": 629
+    },
+    {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\course-notes\\dev-run-final-20260823\\evidence\\draft-dev-01-2309fe1a\\humanize-academic-chinese-t3-stack\\stage-02.json",
+      "sha256": "35f7c780296f365ad1596fa3ec38b45d0b5b5721783978ea2353e7224bf5d353",
+      "bytes": 625
+    }
+  ],
+  "candidate_verification": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\course-notes\\dev-run-final-20260823\\evidence\\draft-dev-01-2309fe1a\\humanize-academic-chinese-t3-verification.json",
+    "sha256": "d75b67e4ab4724833359ad21935da709a822857fe3b9cf2f141739a2179a3e39",
+    "bytes": 1947
+  },
+  "human_decision": {
+    "status": "pending"
+  },
+  "claims": [
+    "mechanical_fidelity",
+    "role_chain_complete"
+  ]
+}

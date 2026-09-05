@@ -1,0 +1,818 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "candidate_assembly_exit_code": 1,
+  "candidate_assembly_status": "FAIL",
+  "delivery_gate_exit_code": 1,
+  "delivery_gate_status": "FAIL",
+  "draft_surface_source_check": {
+    "details": {},
+    "scope": [],
+    "semantic_entailment_certified": false,
+    "status": "N/A"
+  },
+  "evidence": {
+    "after_path": null,
+    "after_sha256": "aadfb5f144c03e6211fc5a57ae9f602c08c49c044b8ef73b1d9859d9ac5f32e1",
+    "before_path": null,
+    "before_sha256": "8189e21bb300b6c3df6b06e73572c2e8acbebd393e55420fe2976659125fe3f5",
+    "checker_executed": true,
+    "document_format": "tex",
+    "document_scope": "FRAGMENT",
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "source_path_archived": false
+  },
+  "evidence_bundle": {
+    "execution_record_path": "execution-record.json",
+    "invocation_path": "invocation-request.json",
+    "manifest_path": "evidence-manifest.json",
+    "paired_quality_request_path": "paired-quality-review-request.json",
+    "rendered_output_path": "rendered-output.txt",
+    "result_path": "validation-result.json",
+    "run_id": "hvr4-1faca92a93bdf5053797d110550a1404a2af0dd9df7b4ede169149e4409f0041",
+    "schema": "humanize-direct-validation-evidence/v5",
+    "status": "PERSISTED",
+    "stderr_path": "stderr.txt",
+    "warning_review_request_path": ""
+  },
+  "exit_code": 1,
+  "hard_invariant_layer_status": "FAIL",
+  "humanize_quality_claim_allowed": false,
+  "introduced_findings": [
+    {
+      "action": "REWRITE",
+      "column": 60,
+      "context": "同字母重复共涉及 6 篇。Section B 题目说明允许同一段被多次选择，因此重复本身不足以构成错误判据；这些条目更适合放入“重复段落现象”样本清单，供后续分析。",
+      "count": 1,
+      "file": "after",
+      "finding_hash": "99d1f0bb935fdb6b93949858ef86c1c29b74fd72bd2ef085184d5c3fff4d0fcd",
+      "line": 1,
+      "matched": "适合放",
+      "rationale": "正文若不是在讨论审计对象本身，应将治理状态词改回具体事实、检查动作或证据关系。",
+      "severity": "high",
+      "signal_id": "LEX-STRICT-CORPUS-AUDIT-01"
+    }
+  ],
+  "invariants": {
+    "advisories": [],
+    "errors": [
+      {
+        "code": "SPEECH_ACT_NEGATION_CHANGED",
+        "details": {
+          "after": {
+            "不": 1
+          },
+          "after_occurrences": [
+            {
+              "category": "negation",
+              "claim_id": "C0003",
+              "column": 45,
+              "end": 45,
+              "end_column": 46,
+              "end_line": 1,
+              "line": 1,
+              "marker": "不",
+              "sentence_context": "Section B 题目说明允许同一段被多次选择，因此重复本身不足以构成错误判据",
+              "sentence_id": "T0002",
+              "side": "after",
+              "start": 44
+            }
+          ],
+          "before": {
+            "不能": 1
+          },
+          "before_occurrences": [
+            {
+              "category": "negation",
+              "claim_id": "C0003",
+              "column": 44,
+              "end": 45,
+              "end_column": 46,
+              "end_line": 1,
+              "line": 1,
+              "marker": "不能",
+              "sentence_context": "由于 Section B 题目说明允许同一段被多次选择，这些条目不能仅凭重复就判定为错误",
+              "sentence_id": "T0002",
+              "side": "before",
+              "start": 43
+            }
+          ],
+          "raw_delta": {
+            "added": {
+              "不": 1
+            },
+            "removed": {
+              "不能": 1
+            }
+          },
+          "residual_delta": [
+            {
+              "added": {
+                "不": 1
+              },
+              "after_claim_id": null,
+              "after_occurrences": [
+                {
+                  "category": "negation",
+                  "claim_id": "C0003",
+                  "column": 45,
+                  "end": 45,
+                  "end_column": 46,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "不",
+                  "sentence_context": "Section B 题目说明允许同一段被多次选择，因此重复本身不足以构成错误判据",
+                  "sentence_id": "T0002",
+                  "side": "after",
+                  "start": 44
+                }
+              ],
+              "before_claim_id": null,
+              "before_occurrences": [
+                {
+                  "category": "negation",
+                  "claim_id": "C0003",
+                  "column": 44,
+                  "end": 45,
+                  "end_column": 46,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "不能",
+                  "sentence_context": "由于 Section B 题目说明允许同一段被多次选择，这些条目不能仅凭重复就判定为错误",
+                  "sentence_id": "T0002",
+                  "side": "before",
+                  "start": 43
+                }
+              ],
+              "removed": {
+                "不能": 1
+              },
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+        "severity": "error"
+      },
+      {
+        "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+        "details": {
+          "after": {},
+          "after_occurrences": [],
+          "before": {
+            "仅": 1
+          },
+          "before_occurrences": [
+            {
+              "category": "modality_scope",
+              "claim_id": "C0003",
+              "column": 46,
+              "end": 46,
+              "end_column": 47,
+              "end_line": 1,
+              "line": 1,
+              "marker": "仅",
+              "sentence_context": "由于 Section B 题目说明允许同一段被多次选择，这些条目不能仅凭重复就判定为错误",
+              "sentence_id": "T0002",
+              "side": "before",
+              "start": 45
+            }
+          ],
+          "raw_delta": {
+            "added": {},
+            "removed": {
+              "仅": 1
+            }
+          },
+          "residual_delta": [
+            {
+              "added": {},
+              "after_claim_id": null,
+              "after_occurrences": [],
+              "before_claim_id": null,
+              "before_occurrences": [
+                {
+                  "category": "modality_scope",
+                  "claim_id": "C0003",
+                  "column": 46,
+                  "end": 46,
+                  "end_column": 47,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "仅",
+                  "sentence_context": "由于 Section B 题目说明允许同一段被多次选择，这些条目不能仅凭重复就判定为错误",
+                  "sentence_id": "T0002",
+                  "side": "before",
+                  "start": 45
+                }
+              ],
+              "removed": {
+                "仅": 1
+              },
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+        "severity": "error"
+      },
+      {
+        "code": "SPEECH_ACT_LOGICAL_RELATION_CHANGED",
+        "details": {
+          "after": {
+            "因此": 1
+          },
+          "after_occurrences": [
+            {
+              "category": "logical_relation",
+              "claim_id": "C0003",
+              "column": 39,
+              "end": 40,
+              "end_column": 41,
+              "end_line": 1,
+              "line": 1,
+              "marker": "因此",
+              "sentence_context": "Section B 题目说明允许同一段被多次选择，因此重复本身不足以构成错误判据",
+              "sentence_id": "T0002",
+              "side": "after",
+              "start": 38
+            }
+          ],
+          "before": {},
+          "before_occurrences": [],
+          "raw_delta": {
+            "added": {
+              "因此": 1
+            },
+            "removed": {}
+          },
+          "residual_delta": [
+            {
+              "added": {
+                "因此": 1
+              },
+              "after_claim_id": null,
+              "after_occurrences": [
+                {
+                  "category": "logical_relation",
+                  "claim_id": "C0003",
+                  "column": 39,
+                  "end": 40,
+                  "end_column": 41,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "因此",
+                  "sentence_context": "Section B 题目说明允许同一段被多次选择，因此重复本身不足以构成错误判据",
+                  "sentence_id": "T0002",
+                  "side": "after",
+                  "start": 38
+                }
+              ],
+              "before_claim_id": null,
+              "before_occurrences": [],
+              "removed": {},
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'logical_relation'; review semantic force manually.",
+        "severity": "error"
+      }
+    ],
+    "evidence": {
+      "document_scope": "FRAGMENT",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "speech_act_audit": {
+        "categories": {
+          "assumption": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "attribution_source": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "condition": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "definition_naming": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "focus_scope": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "logical_relation": {
+            "after": {
+              "因此": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0003",
+                "column": 39,
+                "end": 40,
+                "end_column": 41,
+                "end_line": 1,
+                "line": 1,
+                "marker": "因此",
+                "sentence_context": "Section B 题目说明允许同一段被多次选择，因此重复本身不足以构成错误判据",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 38
+              }
+            ],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {
+                "因此": 1
+              },
+              "removed": {}
+            },
+            "residual_delta": [
+              {
+                "added": {
+                  "因此": 1
+                },
+                "after_claim_id": null,
+                "after_occurrences": [
+                  {
+                    "category": "logical_relation",
+                    "claim_id": "C0003",
+                    "column": 39,
+                    "end": 40,
+                    "end_column": 41,
+                    "end_line": 1,
+                    "line": 1,
+                    "marker": "因此",
+                    "sentence_context": "Section B 题目说明允许同一段被多次选择，因此重复本身不足以构成错误判据",
+                    "sentence_id": "T0002",
+                    "side": "after",
+                    "start": 38
+                  }
+                ],
+                "before_claim_id": null,
+                "before_occurrences": [],
+                "removed": {},
+                "scope": "UNALIGNED_POOL"
+              }
+            ],
+            "safe_compression_allowances": []
+          },
+          "modality_scope": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {
+              "仅": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0003",
+                "column": 46,
+                "end": 46,
+                "end_column": 47,
+                "end_line": 1,
+                "line": 1,
+                "marker": "仅",
+                "sentence_context": "由于 Section B 题目说明允许同一段被多次选择，这些条目不能仅凭重复就判定为错误",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 45
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {
+                "仅": 1
+              }
+            },
+            "residual_delta": [
+              {
+                "added": {},
+                "after_claim_id": null,
+                "after_occurrences": [],
+                "before_claim_id": null,
+                "before_occurrences": [
+                  {
+                    "category": "modality_scope",
+                    "claim_id": "C0003",
+                    "column": 46,
+                    "end": 46,
+                    "end_column": 47,
+                    "end_line": 1,
+                    "line": 1,
+                    "marker": "仅",
+                    "sentence_context": "由于 Section B 题目说明允许同一段被多次选择，这些条目不能仅凭重复就判定为错误",
+                    "sentence_id": "T0002",
+                    "side": "before",
+                    "start": 45
+                  }
+                ],
+                "removed": {
+                  "仅": 1
+                },
+                "scope": "UNALIGNED_POOL"
+              }
+            ],
+            "safe_compression_allowances": []
+          },
+          "negation": {
+            "after": {
+              "不": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0003",
+                "column": 45,
+                "end": 45,
+                "end_column": 46,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "Section B 题目说明允许同一段被多次选择，因此重复本身不足以构成错误判据",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 44
+              }
+            ],
+            "before": {
+              "不能": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0003",
+                "column": 44,
+                "end": 45,
+                "end_column": 46,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不能",
+                "sentence_context": "由于 Section B 题目说明允许同一段被多次选择，这些条目不能仅凭重复就判定为错误",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 43
+              }
+            ],
+            "raw_delta": {
+              "added": {
+                "不": 1
+              },
+              "removed": {
+                "不能": 1
+              }
+            },
+            "residual_delta": [
+              {
+                "added": {
+                  "不": 1
+                },
+                "after_claim_id": null,
+                "after_occurrences": [
+                  {
+                    "category": "negation",
+                    "claim_id": "C0003",
+                    "column": 45,
+                    "end": 45,
+                    "end_column": 46,
+                    "end_line": 1,
+                    "line": 1,
+                    "marker": "不",
+                    "sentence_context": "Section B 题目说明允许同一段被多次选择，因此重复本身不足以构成错误判据",
+                    "sentence_id": "T0002",
+                    "side": "after",
+                    "start": 44
+                  }
+                ],
+                "before_claim_id": null,
+                "before_occurrences": [
+                  {
+                    "category": "negation",
+                    "claim_id": "C0003",
+                    "column": 44,
+                    "end": 45,
+                    "end_column": 46,
+                    "end_line": 1,
+                    "line": 1,
+                    "marker": "不能",
+                    "sentence_context": "由于 Section B 题目说明允许同一段被多次选择，这些条目不能仅凭重复就判定为错误",
+                    "sentence_id": "T0002",
+                    "side": "before",
+                    "start": 43
+                  }
+                ],
+                "removed": {
+                  "不能": 1
+                },
+                "scope": "UNALIGNED_POOL"
+              }
+            ],
+            "safe_compression_allowances": []
+          },
+          "reporting_observation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          }
+        },
+        "claim_pairing": {
+          "after_claims": 5,
+          "before_claims": 4,
+          "unique_exact_pairs": 0,
+          "unpaired_after_claims": 5,
+          "unpaired_before_claims": 4
+        },
+        "protection": {
+          "after_ranges": 1,
+          "before_ranges": 1,
+          "line_column_basis": "NORMALIZED_LF_1_BASED_UNICODE_CODEPOINT",
+          "masking": "LENGTH_PRESERVING"
+        }
+      }
+    },
+    "hard_failure": true,
+    "status": "fail",
+    "summary": {
+      "advisories": 0,
+      "errors": 3,
+      "warnings": 0
+    },
+    "warnings": []
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 1,
+    "before_candidates": 0,
+    "introduced_candidates": 1,
+    "unexplained_high_candidates": 1
+  },
+  "mechanical_validation_exit_code": 1,
+  "mechanical_validation_status": "FAIL",
+  "mode": "REWRITE",
+  "paired_quality_clearance_granted": false,
+  "paired_quality_review_local_clearance_supported": false,
+  "paired_quality_review_request": {
+    "artifact": {
+      "after_sha256": "aadfb5f144c03e6211fc5a57ae9f602c08c49c044b8ef73b1d9859d9ac5f32e1",
+      "before_sha256": "8189e21bb300b6c3df6b06e73572c2e8acbebd393e55420fe2976659125fe3f5"
+    },
+    "changes": [
+      {
+        "after": {
+          "end_line": 1,
+          "han_chars": 62,
+          "line_count": 1,
+          "sha256": "aadfb5f144c03e6211fc5a57ae9f602c08c49c044b8ef73b1d9859d9ac5f32e1",
+          "start_line": 1
+        },
+        "before": {
+          "end_line": 1,
+          "han_chars": 58,
+          "line_count": 1,
+          "sha256": "8189e21bb300b6c3df6b06e73572c2e8acbebd393e55420fe2976659125fe3f5",
+          "start_line": 1
+        },
+        "change_id": "QCH-1202d6419311256145e9",
+        "operation": "REPLACE",
+        "ordinal": 1
+      }
+    ],
+    "limitations": {
+      "academic_correctness": "NOT_EVALUATED",
+      "authorship": "NOT_EVALUATED",
+      "quality_clearance_granted": false
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "request_sha256": "733e6086673a48b78d82a766acc829438717c8215701c45c7f545c86f569a73a",
+    "review_contract": {
+      "empty_or_generic_benefit_is_clearance": false,
+      "local_model_or_caller_assertion_is_clearance": false,
+      "required_dimensions": [
+        "actionable_pathology_remaining",
+        "no_change_is_best_available_decision",
+        "problem_span_binding",
+        "independent_reading_benefit",
+        "subject_and_modifier_alignment",
+        "verb_object_collocation",
+        "logical_relation_preservation",
+        "template_field_role_and_authorization",
+        "information_density_and_rhythm",
+        "author_voice_non_regression"
+      ],
+      "required_per_change_verdicts": [
+        "ACCEPT",
+        "REVISE",
+        "REVERT"
+      ],
+      "validator_pass_is_quality_clearance": false
+    },
+    "schema": "humanize-paired-quality-review-request/v1",
+    "status": "BLOCKED_BY_MECHANICAL_GATE",
+    "template_field_changes": [],
+    "validation_context": {
+      "artifact_relation": "CHANGED",
+      "decision": "REWRITE",
+      "decision_eligible": false,
+      "document_format": "tex",
+      "document_scope": "FRAGMENT",
+      "mechanical_validation_status": "FAIL",
+      "mode": "REWRITE",
+      "scene": "COURSE"
+    }
+  },
+  "paired_quality_review_status": "BLOCKED_BY_MECHANICAL_GATE",
+  "paired_style_delta_findings": [],
+  "paired_style_delta_layer_status": "PASS",
+  "paired_style_delta_summary": {
+    "authorship_inference": false,
+    "finding_count": 0,
+    "scope": "PAIRED_COURSE_VOICE_NON_REGRESSION_CANDIDATE",
+    "status": "PASS"
+  },
+  "pending_warnings": [],
+  "proposed_warning_resolutions": [],
+  "report_scope_check": {
+    "editable_range_count": 0,
+    "editable_ranges": [],
+    "extractor_replay_match": null,
+    "fragment_count": 0,
+    "outside_selection_unchanged": null,
+    "report_sha256": null,
+    "scope_path": null,
+    "scope_semantic_sha256": null,
+    "scope_sha256": null,
+    "source_sha256": null,
+    "status": "N/A"
+  },
+  "review_reasons": [
+    "unexplained_high_severity_signal",
+    "unexplained_strict_corpus_signal",
+    "introduced_style_signal"
+  ],
+  "scene": "COURSE",
+  "semantic_source_check": "N/A",
+  "speech_act_diagnostics": [],
+  "speech_act_layer_status": "PASS",
+  "status": "FAIL",
+  "strict_corpus_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 1,
+    "before_candidates": 0,
+    "clean_allowed_by_strict_layer": false,
+    "enabled": true,
+    "no_change_allowed": false,
+    "unexplained_candidates": 1
+  },
+  "style_signal_layer_status": "REVIEW",
+  "template_field_edit_scope_check": {
+    "authorized_edit_count": 0,
+    "authorized_edits": [],
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "provided": false,
+    "schema_version": null,
+    "scope_sha256": null,
+    "source_sha256": "8189e21bb300b6c3df6b06e73572c2e8acbebd393e55420fe2976659125fe3f5",
+    "status": "N/A"
+  },
+  "template_field_findings": [],
+  "template_field_layer_status": "PASS",
+  "template_field_summary": {
+    "authorized_edit_count": 0,
+    "finding_count": 0,
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "review_finding_count": 0,
+    "status": "PASS"
+  },
+  "unaccepted_warnings": [],
+  "unexplained_high_findings": [
+    {
+      "action": "REWRITE",
+      "column": 60,
+      "context": "同字母重复共涉及 6 篇。Section B 题目说明允许同一段被多次选择，因此重复本身不足以构成错误判据；这些条目更适合放入“重复段落现象”样本清单，供后续分析。",
+      "count": 1,
+      "file": "after",
+      "finding_hash": "99d1f0bb935fdb6b93949858ef86c1c29b74fd72bd2ef085184d5c3fff4d0fcd",
+      "line": 1,
+      "matched": "适合放",
+      "rationale": "正文若不是在讨论审计对象本身，应将治理状态词改回具体事实、检查动作或证据关系。",
+      "severity": "high",
+      "signal_id": "LEX-STRICT-CORPUS-AUDIT-01"
+    }
+  ],
+  "unexplained_strict_findings": [
+    {
+      "action": "REWRITE",
+      "column": 60,
+      "context": "同字母重复共涉及 6 篇。Section B 题目说明允许同一段被多次选择，因此重复本身不足以构成错误判据；这些条目更适合放入“重复段落现象”样本清单，供后续分析。",
+      "count": 1,
+      "file": "after",
+      "finding_hash": "99d1f0bb935fdb6b93949858ef86c1c29b74fd72bd2ef085184d5c3fff4d0fcd",
+      "line": 1,
+      "matched": "适合放",
+      "rationale": "正文若不是在讨论审计对象本身，应将治理状态词改回具体事实、检查动作或证据关系。",
+      "severity": "high",
+      "signal_id": "LEX-STRICT-CORPUS-AUDIT-01"
+    }
+  ],
+  "warning_proposal_state": {
+    "attestation_status": "NOT_PROVIDED",
+    "cross_record_reviewer_linkability": "NOT_RECORDED",
+    "identity_verified": false,
+    "proposal_source": "NOT_PROVIDED",
+    "proposed_warning_fingerprints": [],
+    "review_clearance_granted": false,
+    "reviewer_identifier_collected": false,
+    "stable_reviewer_pseudonym_recorded": false,
+    "warning_review_request_sha256": null
+  },
+  "warning_resolutions": {},
+  "warning_review_request": null,
+  "warnings_without_resolution_proposal": []
+}

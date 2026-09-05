@@ -1,0 +1,919 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "candidate_assembly_exit_code": 1,
+  "candidate_assembly_status": "FAIL",
+  "delivery_gate_exit_code": 1,
+  "delivery_gate_status": "FAIL",
+  "draft_surface_source_check": {
+    "details": {},
+    "scope": [],
+    "semantic_entailment_certified": false,
+    "status": "N/A"
+  },
+  "evidence": {
+    "after_path": null,
+    "after_sha256": "f7d094817388282220c337b0bee0ebe00fe69259d1920f431c00ed72a587104d",
+    "before_path": null,
+    "before_sha256": "b1e3076629209849a489eebc76198ca97312e3ba30a5609879804baa24cef96b",
+    "checker_executed": true,
+    "document_format": "tex",
+    "document_scope": "DOCUMENT",
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "source_path_archived": false
+  },
+  "evidence_bundle": {
+    "execution_record_path": "execution-record.json",
+    "invocation_path": "invocation-request.json",
+    "manifest_path": "evidence-manifest.json",
+    "paired_quality_request_path": "paired-quality-review-request.json",
+    "rendered_output_path": "rendered-output.txt",
+    "result_path": "validation-result.json",
+    "run_id": "hvr4-c42a519ddfdee635b6fd3a83363e7ba04f6a787f683f804018534ca20f6fbedd",
+    "schema": "humanize-direct-validation-evidence/v5",
+    "status": "PERSISTED",
+    "stderr_path": "stderr.txt",
+    "warning_review_request_path": "warning-review-request.json"
+  },
+  "exit_code": 1,
+  "hard_invariant_layer_status": "FAIL",
+  "humanize_quality_claim_allowed": false,
+  "introduced_findings": [],
+  "invariants": {
+    "advisories": [],
+    "errors": [
+      {
+        "code": "NUMBER_OR_UNIT_CHANGED",
+        "details": {
+          "added": [],
+          "after_count": 3,
+          "before_count": 3,
+          "first_difference": 0,
+          "removed": []
+        },
+        "message": "Numbers or units changed in count, content, or order.",
+        "severity": "error"
+      }
+    ],
+    "evidence": {
+      "document_scope": "DOCUMENT",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "speech_act_audit": {
+        "categories": {
+          "assumption": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "attribution_source": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "condition": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {
+              "当": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0002",
+                "column": 22,
+                "end": 22,
+                "end_column": 23,
+                "end_line": 1,
+                "line": 1,
+                "marker": "当",
+                "sentence_context": "旧版本分析里之所以必须区分两层口径，是因为当时有 \\CodeInline{3} 篇 2024 年 6 月文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 21
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {
+                "当": 1
+              }
+            },
+            "residual_delta": [
+              {
+                "added": {},
+                "after_claim_id": null,
+                "after_occurrences": [],
+                "before_claim_id": null,
+                "before_occurrences": [
+                  {
+                    "category": "condition",
+                    "claim_id": "C0002",
+                    "column": 22,
+                    "end": 22,
+                    "end_column": 23,
+                    "end_line": 1,
+                    "line": 1,
+                    "marker": "当",
+                    "sentence_context": "旧版本分析里之所以必须区分两层口径，是因为当时有 \\CodeInline{3} 篇 2024 年 6 月文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比",
+                    "sentence_id": "T0001",
+                    "side": "before",
+                    "start": 21
+                  }
+                ],
+                "removed": {
+                  "当": 1
+                },
+                "scope": "UNALIGNED_POOL"
+              }
+            ],
+            "safe_compression_allowances": []
+          },
+          "definition_naming": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "focus_scope": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "logical_relation": {
+            "after": {
+              "所以": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0001",
+                "column": 8,
+                "end": 9,
+                "end_column": 10,
+                "end_line": 1,
+                "line": 1,
+                "marker": "所以",
+                "sentence_context": "旧版本分析里之所以必须区分两层口径，是因为 2024 年 6 月有 \\CodeInline{3} 篇文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 7
+              }
+            ],
+            "before": {
+              "所以": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0001",
+                "column": 8,
+                "end": 9,
+                "end_column": 10,
+                "end_line": 1,
+                "line": 1,
+                "marker": "所以",
+                "sentence_context": "旧版本分析里之所以必须区分两层口径，是因为当时有 \\CodeInline{3} 篇 2024 年 6 月文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 7
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "modality_scope": {
+            "after": {
+              "只": 1,
+              "必须": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0001",
+                "column": 10,
+                "end": 11,
+                "end_column": 12,
+                "end_line": 1,
+                "line": 1,
+                "marker": "必须",
+                "sentence_context": "旧版本分析里之所以必须区分两层口径，是因为 2024 年 6 月有 \\CodeInline{3} 篇文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 9
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 53,
+                "end": 53,
+                "end_column": 54,
+                "end_line": 1,
+                "line": 1,
+                "marker": "只",
+                "sentence_context": "旧版本分析里之所以必须区分两层口径，是因为 2024 年 6 月有 \\CodeInline{3} 篇文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 52
+              }
+            ],
+            "before": {
+              "只": 1,
+              "必须": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0001",
+                "column": 10,
+                "end": 11,
+                "end_column": 12,
+                "end_line": 1,
+                "line": 1,
+                "marker": "必须",
+                "sentence_context": "旧版本分析里之所以必须区分两层口径，是因为当时有 \\CodeInline{3} 篇 2024 年 6 月文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 9
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 55,
+                "end": 55,
+                "end_column": 56,
+                "end_line": 1,
+                "line": 1,
+                "marker": "只",
+                "sentence_context": "旧版本分析里之所以必须区分两层口径，是因为当时有 \\CodeInline{3} 篇 2024 年 6 月文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 54
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "negation": {
+            "after": {
+              "没有": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0003",
+                "column": 66,
+                "end": 67,
+                "end_column": 68,
+                "end_line": 1,
+                "line": 1,
+                "marker": "没有",
+                "sentence_context": "旧版本分析里之所以必须区分两层口径，是因为 2024 年 6 月有 \\CodeInline{3} 篇文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 65
+              }
+            ],
+            "before": {
+              "没有": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0003",
+                "column": 68,
+                "end": 69,
+                "end_column": 70,
+                "end_line": 1,
+                "line": 1,
+                "marker": "没有",
+                "sentence_context": "旧版本分析里之所以必须区分两层口径，是因为当时有 \\CodeInline{3} 篇 2024 年 6 月文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 67
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "reporting_observation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          }
+        },
+        "claim_pairing": {
+          "after_claims": 3,
+          "before_claims": 3,
+          "unique_exact_pairs": 2,
+          "unpaired_after_claims": 1,
+          "unpaired_before_claims": 1
+        },
+        "protection": {
+          "after_ranges": 0,
+          "before_ranges": 0,
+          "line_column_basis": "NORMALIZED_LF_1_BASED_UNICODE_CODEPOINT",
+          "masking": "LENGTH_PRESERVING"
+        }
+      }
+    },
+    "hard_failure": true,
+    "status": "fail",
+    "summary": {
+      "advisories": 0,
+      "errors": 1,
+      "warnings": 1
+    },
+    "warnings": [
+      {
+        "code": "SPEECH_ACT_CONDITION_CHANGED",
+        "details": {
+          "after": {},
+          "after_occurrences": [],
+          "before": {
+            "当": 1
+          },
+          "before_occurrences": [
+            {
+              "category": "condition",
+              "claim_id": "C0002",
+              "column": 22,
+              "end": 22,
+              "end_column": 23,
+              "end_line": 1,
+              "line": 1,
+              "marker": "当",
+              "sentence_context": "旧版本分析里之所以必须区分两层口径，是因为当时有 \\CodeInline{3} 篇 2024 年 6 月文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比",
+              "sentence_id": "T0001",
+              "side": "before",
+              "start": 21
+            }
+          ],
+          "raw_delta": {
+            "added": {},
+            "removed": {
+              "当": 1
+            }
+          },
+          "residual_delta": [
+            {
+              "added": {},
+              "after_claim_id": null,
+              "after_occurrences": [],
+              "before_claim_id": null,
+              "before_occurrences": [
+                {
+                  "category": "condition",
+                  "claim_id": "C0002",
+                  "column": 22,
+                  "end": 22,
+                  "end_column": 23,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "当",
+                  "sentence_context": "旧版本分析里之所以必须区分两层口径，是因为当时有 \\CodeInline{3} 篇 2024 年 6 月文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比",
+                  "sentence_id": "T0001",
+                  "side": "before",
+                  "start": 21
+                }
+              ],
+              "removed": {
+                "当": 1
+              },
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'condition'; review semantic force manually.",
+        "severity": "warning"
+      }
+    ]
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 0,
+    "introduced_candidates": 0,
+    "unexplained_high_candidates": 0
+  },
+  "mechanical_validation_exit_code": 1,
+  "mechanical_validation_status": "FAIL",
+  "mode": "REWRITE",
+  "paired_quality_clearance_granted": false,
+  "paired_quality_review_local_clearance_supported": false,
+  "paired_quality_review_request": {
+    "artifact": {
+      "after_sha256": "f7d094817388282220c337b0bee0ebe00fe69259d1920f431c00ed72a587104d",
+      "before_sha256": "b1e3076629209849a489eebc76198ca97312e3ba30a5609879804baa24cef96b"
+    },
+    "changes": [
+      {
+        "after": {
+          "end_line": 1,
+          "han_chars": 53,
+          "line_count": 1,
+          "sha256": "f7d094817388282220c337b0bee0ebe00fe69259d1920f431c00ed72a587104d",
+          "start_line": 1
+        },
+        "before": {
+          "end_line": 1,
+          "han_chars": 55,
+          "line_count": 1,
+          "sha256": "b1e3076629209849a489eebc76198ca97312e3ba30a5609879804baa24cef96b",
+          "start_line": 1
+        },
+        "change_id": "QCH-49798d2b9a75bc1fa184",
+        "operation": "REPLACE",
+        "ordinal": 1
+      }
+    ],
+    "limitations": {
+      "academic_correctness": "NOT_EVALUATED",
+      "authorship": "NOT_EVALUATED",
+      "quality_clearance_granted": false
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "request_sha256": "aa76a123e23233dd5568bc84ff1c118252fad123ae4653c39d1ac692147f1fe6",
+    "review_contract": {
+      "empty_or_generic_benefit_is_clearance": false,
+      "local_model_or_caller_assertion_is_clearance": false,
+      "required_dimensions": [
+        "actionable_pathology_remaining",
+        "no_change_is_best_available_decision",
+        "problem_span_binding",
+        "independent_reading_benefit",
+        "subject_and_modifier_alignment",
+        "verb_object_collocation",
+        "logical_relation_preservation",
+        "template_field_role_and_authorization",
+        "information_density_and_rhythm",
+        "author_voice_non_regression"
+      ],
+      "required_per_change_verdicts": [
+        "ACCEPT",
+        "REVISE",
+        "REVERT"
+      ],
+      "validator_pass_is_quality_clearance": false
+    },
+    "schema": "humanize-paired-quality-review-request/v1",
+    "status": "BLOCKED_BY_MECHANICAL_GATE",
+    "template_field_changes": [],
+    "validation_context": {
+      "artifact_relation": "CHANGED",
+      "decision": "REWRITE",
+      "decision_eligible": false,
+      "document_format": "tex",
+      "document_scope": "DOCUMENT",
+      "mechanical_validation_status": "FAIL",
+      "mode": "REWRITE",
+      "scene": "COURSE"
+    }
+  },
+  "paired_quality_review_status": "BLOCKED_BY_MECHANICAL_GATE",
+  "paired_style_delta_findings": [],
+  "paired_style_delta_layer_status": "PASS",
+  "paired_style_delta_summary": {
+    "authorship_inference": false,
+    "finding_count": 0,
+    "scope": "PAIRED_COURSE_VOICE_NON_REGRESSION_CANDIDATE",
+    "status": "PASS"
+  },
+  "pending_warnings": [
+    {
+      "code": "SPEECH_ACT_CONDITION_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "当": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "condition",
+            "claim_id": "C0002",
+            "column": 22,
+            "end": 22,
+            "end_column": 23,
+            "end_line": 1,
+            "line": 1,
+            "marker": "当",
+            "sentence_context": "旧版本分析里之所以必须区分两层口径，是因为当时有 \\CodeInline{3} 篇 2024 年 6 月文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 21
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "当": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0002",
+                "column": 22,
+                "end": 22,
+                "end_column": 23,
+                "end_line": 1,
+                "line": 1,
+                "marker": "当",
+                "sentence_context": "旧版本分析里之所以必须区分两层口径，是因为当时有 \\CodeInline{3} 篇 2024 年 6 月文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 21
+              }
+            ],
+            "removed": {
+              "当": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'condition'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "046da291b777b2463337c104931e4f1064ec879c1a277abf26b9ff700eee1d14"
+    }
+  ],
+  "proposed_warning_resolutions": [],
+  "report_scope_check": {
+    "editable_range_count": 0,
+    "editable_ranges": [],
+    "extractor_replay_match": null,
+    "fragment_count": 0,
+    "outside_selection_unchanged": null,
+    "report_sha256": null,
+    "scope_path": null,
+    "scope_semantic_sha256": null,
+    "scope_sha256": null,
+    "source_sha256": null,
+    "status": "N/A"
+  },
+  "review_reasons": [
+    "speech_act_warning"
+  ],
+  "scene": "COURSE",
+  "semantic_source_check": "N/A",
+  "speech_act_diagnostics": [],
+  "speech_act_layer_status": "REVIEW",
+  "status": "FAIL",
+  "strict_corpus_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 0,
+    "clean_allowed_by_strict_layer": true,
+    "enabled": true,
+    "no_change_allowed": true,
+    "unexplained_candidates": 0
+  },
+  "style_signal_layer_status": "PASS",
+  "template_field_edit_scope_check": {
+    "authorized_edit_count": 0,
+    "authorized_edits": [],
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "provided": false,
+    "schema_version": null,
+    "scope_sha256": null,
+    "source_sha256": "b1e3076629209849a489eebc76198ca97312e3ba30a5609879804baa24cef96b",
+    "status": "N/A"
+  },
+  "template_field_findings": [],
+  "template_field_layer_status": "PASS",
+  "template_field_summary": {
+    "authorized_edit_count": 0,
+    "finding_count": 0,
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "review_finding_count": 0,
+    "status": "PASS"
+  },
+  "unaccepted_warnings": [
+    {
+      "code": "SPEECH_ACT_CONDITION_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "当": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "condition",
+            "claim_id": "C0002",
+            "column": 22,
+            "end": 22,
+            "end_column": 23,
+            "end_line": 1,
+            "line": 1,
+            "marker": "当",
+            "sentence_context": "旧版本分析里之所以必须区分两层口径，是因为当时有 \\CodeInline{3} 篇 2024 年 6 月文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 21
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "当": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0002",
+                "column": 22,
+                "end": 22,
+                "end_column": 23,
+                "end_line": 1,
+                "line": 1,
+                "marker": "当",
+                "sentence_context": "旧版本分析里之所以必须区分两层口径，是因为当时有 \\CodeInline{3} 篇 2024 年 6 月文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 21
+              }
+            ],
+            "removed": {
+              "当": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'condition'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "046da291b777b2463337c104931e4f1064ec879c1a277abf26b9ff700eee1d14"
+    }
+  ],
+  "unexplained_high_findings": [],
+  "unexplained_strict_findings": [],
+  "warning_proposal_state": {
+    "attestation_status": "NOT_PROVIDED",
+    "cross_record_reviewer_linkability": "NOT_RECORDED",
+    "identity_verified": false,
+    "proposal_source": "NOT_PROVIDED",
+    "proposed_warning_fingerprints": [],
+    "review_clearance_granted": false,
+    "reviewer_identifier_collected": false,
+    "stable_reviewer_pseudonym_recorded": false,
+    "warning_review_request_sha256": null
+  },
+  "warning_resolutions": {},
+  "warning_review_request": {
+    "artifact": {
+      "after_sha256": "f7d094817388282220c337b0bee0ebe00fe69259d1920f431c00ed72a587104d",
+      "before_sha256": "b1e3076629209849a489eebc76198ca97312e3ba30a5609879804baa24cef96b"
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "request_sha256": "5b0a629ba0cc5e2087103a233aed24795630c621c4a54057f40b4f0ad17274d5",
+    "schema": "humanize-warning-review-request/v1",
+    "validation_context": {
+      "document_format": "tex",
+      "document_scope": "DOCUMENT",
+      "mode": "REWRITE",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "scene": "COURSE",
+      "strict_speech_acts": false
+    },
+    "warnings": [
+      {
+        "code": "SPEECH_ACT_CONDITION_CHANGED",
+        "details": {
+          "after": {},
+          "after_occurrences": [],
+          "before": {
+            "当": 1
+          },
+          "before_occurrences": [
+            {
+              "category": "condition",
+              "claim_id": "C0002",
+              "column": 22,
+              "end": 22,
+              "end_column": 23,
+              "end_line": 1,
+              "line": 1,
+              "marker": "当",
+              "sentence_context": "旧版本分析里之所以必须区分两层口径，是因为当时有 \\CodeInline{3} 篇 2024 年 6 月文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比",
+              "sentence_id": "T0001",
+              "side": "before",
+              "start": 21
+            }
+          ],
+          "raw_delta": {
+            "added": {},
+            "removed": {
+              "当": 1
+            }
+          },
+          "residual_delta": [
+            {
+              "added": {},
+              "after_claim_id": null,
+              "after_occurrences": [],
+              "before_claim_id": null,
+              "before_occurrences": [
+                {
+                  "category": "condition",
+                  "claim_id": "C0002",
+                  "column": 22,
+                  "end": 22,
+                  "end_column": 23,
+                  "end_line": 1,
+                  "line": 1,
+                  "marker": "当",
+                  "sentence_context": "旧版本分析里之所以必须区分两层口径，是因为当时有 \\CodeInline{3} 篇 2024 年 6 月文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比",
+                  "sentence_id": "T0001",
+                  "side": "before",
+                  "start": 21
+                }
+              ],
+              "removed": {
+                "当": 1
+              },
+              "scope": "UNALIGNED_POOL"
+            }
+          ],
+          "safe_compression_allowances": []
+        },
+        "message": "Speech-act markers changed in category 'condition'; review semantic force manually.",
+        "severity": "warning",
+        "warning_fingerprint": "046da291b777b2463337c104931e4f1064ec879c1a277abf26b9ff700eee1d14"
+      }
+    ]
+  },
+  "warnings_without_resolution_proposal": [
+    {
+      "code": "SPEECH_ACT_CONDITION_CHANGED",
+      "details": {
+        "after": {},
+        "after_occurrences": [],
+        "before": {
+          "当": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "condition",
+            "claim_id": "C0002",
+            "column": 22,
+            "end": 22,
+            "end_column": 23,
+            "end_line": 1,
+            "line": 1,
+            "marker": "当",
+            "sentence_context": "旧版本分析里之所以必须区分两层口径，是因为当时有 \\CodeInline{3} 篇 2024 年 6 月文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 21
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "当": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0002",
+                "column": 22,
+                "end": 22,
+                "end_column": 23,
+                "end_line": 1,
+                "line": 1,
+                "marker": "当",
+                "sentence_context": "旧版本分析里之所以必须区分两层口径，是因为当时有 \\CodeInline{3} 篇 2024 年 6 月文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 21
+              }
+            ],
+            "removed": {
+              "当": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'condition'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "046da291b777b2463337c104931e4f1064ec879c1a277abf26b9ff700eee1d14"
+    }
+  ]
+}
