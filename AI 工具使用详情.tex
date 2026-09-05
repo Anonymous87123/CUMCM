@@ -1,213 +1,173 @@
-\documentclass[UTF8,a4paper,11pt]{ctexart}
+\documentclass[UTF8,a4paper,12pt]{ctexart}
 
-\usepackage[left=2.5cm,right=2.5cm,top=2.4cm,bottom=2.4cm]{geometry}
-\usepackage{array,booktabs,longtable,tabularx,enumitem,xcolor,amssymb}
+\usepackage[left=2.6cm,right=2.6cm,top=2.5cm,bottom=2.5cm]{geometry}
+\usepackage{booktabs,tabularx,enumitem,xcolor,amssymb}
 \usepackage{hyperref}
-
 \hypersetup{hidelinks}
+
 \setlength{\parindent}{2em}
-\setlength{\parskip}{0.35em}
-\renewcommand{\arraystretch}{1.35}
-\setlist[itemize]{leftmargin=2.4em,itemsep=0.15em,topsep=0.2em}
-\setlist[enumerate]{leftmargin=2.6em,itemsep=0.2em,topsep=0.2em}
+\setlength{\parskip}{0.3em}
+\renewcommand{\arraystretch}{1.4}
+\setlist[itemize]{leftmargin=2.2em,itemsep=0.2em,topsep=0.25em}
+\setlist[enumerate]{leftmargin=2.4em,itemsep=0.35em,topsep=0.25em}
 
 \newcolumntype{Y}{>{\raggedright\arraybackslash}X}
-\newcolumntype{P}[1]{>{\raggedright\arraybackslash}p{#1}}
 \newcommand{\Fill}[1]{\textcolor{gray}{\textit{#1}}}
-\newcommand{\BlankLine}{\par\noindent\rule{\linewidth}{0.35pt}\par}
-\newcommand{\LongField}[1]{\par\noindent\textbf{#1}\par\vspace{0.25em}\BlankLine\vspace{0.7em}\BlankLine}
-
-\title{2026 全国大学生数学建模竞赛\\[0.4em]AI 工具使用详情说明}
-\author{}
-\date{填写日期：\Fill{YYYY-MM-DD}}
+\newcommand{\Field}[1]{\par\noindent\textbf{#1}}
 
 \begin{document}
-\maketitle
 
-\noindent\fbox{\parbox{0.96\linewidth}{
-\textbf{填写前请先读：}本文件用于生成支撑材料文件 \texttt{AI 工具使用详情.pdf}，只记录竞赛期间真实发生的 AI 使用。使用过 AI 的参赛作品必须提交该文件；未使用的队伍不必为了填表而虚构记录。核心建模与分析由本队主导，除语言润色外的 AI 输出须经过人工审查与核实。本文档、论文附录和压缩包均不得出现队员、学校或赛区等身份信息，也不得放入 API Key、账号密码或其他敏感信息。
+\begin{center}
+  {\Large\bfseries AI 工具使用详情}
+\end{center}
+
+\vspace{0.6em}
+
+\noindent\fbox{\parbox{0.965\linewidth}{\small
+\textbf{本文件的依据与填写口径。}结构按《全国大学生数学建模竞赛人工智能工具使用规定
+（2026 年试行）》第 4 条的四项要求编排，四个小节与四项一一对应；版式参考指导教师建议的
+样例。本文件只记录竞赛期间真实发生的使用情况：没用过的工具不列，没发生的交互不编。
+文件名须为 \texttt{AI 工具使用详情.pdf}，随支撑材料提交。本文件、论文附录与支撑材料压缩包的
+任何位置（含文件夹名、文件名、文档属性）都不得出现队员姓名、学校或赛区信息，也不得写入
+账号、API Key 等敏感信息。
 }}
 
-\section{填写范围与官方口径}
+\section*{一、AI 工具名称和版本}
+\addcontentsline{toc}{section}{一、AI 工具名称和版本}
 
-本表按照 2026 年试行的《全国大学生数学建模竞赛人工智能工具使用规定》编排，该规定自 2026 年 9 月 1 日起试行。论文正文须在参考文献之前保留以下两种声明中的一种，且不得同时保留：
-
-\begin{itemize}
-  \item 未使用时：\textbf{本参赛队在竞赛过程中未使用任何 AI 工具。}
-  \item 使用时：\textbf{本参赛队在竞赛过程中使用了 AI 工具，主要用于【简要用途，如语言润色、代码调试等】，详细使用情况见支撑材料。}
-\end{itemize}
-
-本支撑材料只承担“使用了什么、用于什么、怎样交互、如何处理和核验”的记录功能，不替代论文正文中的模型推导、结果解释或参考文献。网上旧模板若要求在正文逐处标注 AI 生成内容或把 AI 工具列入参考文献，应以当届组委会书面要求为准；本文件默认采用 2026 年试行规定的披露方式。
-
-隐瞒或虚假填写 AI 使用情况，或者把未经必要人工审查和核实的 AI 生成内容直接作为核心建模与分析成果，可能被取消评奖资格。论文、附录和本支撑材料仍由本队对原创性、真实性和准确性负责。
-
-\section{AI 工具、版本与用途}
-
-只填写实际使用过的工具、版本或模型。没有使用的行删除，不要用“常见工具”等笼统名称代替版本信息。
-
-\begin{longtable}{P{0.8cm}P{3.0cm}P{3.2cm}P{6.0cm}}
-\caption{AI 工具清单}\label{tab:ai-tools}\\
-\toprule
-序号 & AI 工具名称 & 版本/型号/模型 & 本队实际用途 \\
-\midrule
-\endfirsthead
-\toprule
-序号 & AI 工具名称 & 版本/型号/模型 & 本队实际用途 \\
-\midrule
-\endhead
-1 & \Fill{例如：工具或平台名称} & \Fill{版本、模型或访问日期} & \Fill{语言润色、代码调试、资料整理等真实用途} \\
-2 & \Fill{待填写或删除} & \Fill{待填写或删除} & \Fill{待填写或删除} \\
-3 & \Fill{待填写或删除} & \Fill{待填写或删除} & \Fill{待填写或删除} \\
-4 & \Fill{待填写或删除} & \Fill{待填写或删除} & \Fill{待填写或删除} \\
-5 & \Fill{待填写或删除} & \Fill{待填写或删除} & \Fill{待填写或删除} \\
-\bottomrule
-\end{longtable}
-
-\section{论文环节与具体目的}
-
-“是否使用”按实际发生填写“是”或“否”，并在目的栏写清 AI 做了哪一小段工作。核心模型、参数、结果和结论不能因为填了“是”就默认由 AI 负责。
-
-\begin{longtable}{P{0.6cm}P{3.1cm}P{1.2cm}P{5.9cm}P{3.0cm}}
-\caption{AI 参与的论文环节}\label{tab:ai-stages}\\
-\toprule
-序号 & 论文写作环节 & 是否使用 & 具体使用目的 & 使用工具 \\
-\midrule
-\endfirsthead
-\toprule
-序号 & 论文写作环节 & 是否使用 & 具体使用目的 & 使用工具 \\
-\midrule
-\endhead
-1 & 问题理解与问题分析 & \Fill{是/否} & \Fill{例如：整理题面条件、检查分问之间的输入输出；不得把 AI 的建议直接当作建模结论。} & \Fill{工具及版本} \\
-2 & 模型假设与符号说明 & \Fill{是/否} & \Fill{例如：检查符号表和单位；假设由本队根据题面和数据决定。} & \Fill{工具及版本} \\
-3 & 模型与算法设计 & \Fill{是/否} & \Fill{例如：查阅算法接口或比较实现路径；最终模型结构和取舍由本队确定。} & \Fill{工具及版本} \\
-4 & 模型求解与程序编写 & \Fill{是/否} & \Fill{例如：解释报错、补充代码片段或生成测试用例；运行结果由本队复算。} & \Fill{工具及版本} \\
-5 & 结果分析与模型检验 & \Fill{是/否} & \Fill{例如：协助整理图表说明；数值、检验和结论逐项由本队核对。} & \Fill{工具及版本} \\
-6 & 论文写作与语言润色 & \Fill{是/否} & \Fill{例如：调整语句、压缩重复表达；不改变公式、数字、引用和论证关系。} & \Fill{工具及版本} \\
-7 & 文献、数据与图表辅助 & \Fill{是/否} & \Fill{例如：整理公开资料或绘图代码；外部资料仍按规范引用，数据来源由本队确认。} & \Fill{工具及版本} \\
-\bottomrule
-\end{longtable}
-
-\section{提示方式与工作过程}
-
-勾选或填写实际使用的提示方式。若没有使用某种方式，写“否”并删除后面的虚构说明。
-
-\begin{longtable}{P{0.6cm}P{4.0cm}P{1.2cm}P{8.1cm}}
-\caption{提示方式}\label{tab:prompt-modes}\\
-\toprule
-序号 & 提示方式 & 是否使用 & 简要说明 \\
-\midrule
-\endfirsthead
-\toprule
-序号 & 提示方式 & 是否使用 & 简要说明 \\
-\midrule
-\endhead
-1 & 网页或客户端对话 & \Fill{是/否} & \Fill{输入题面、代码、表格或文字并获得回复的实际过程。} \\
-2 & 代码编辑器中的 AI 助手 & \Fill{是/否} & \Fill{使用的编辑器、文件类型和实际协助范围。} \\
-3 & 上传文件或数据后提问 & \Fill{是/否} & \Fill{上传的文件类型、脱敏方式和实际用途；不得上传含身份信息的文件。} \\
-4 & AI Agent 或多步工作流 & \Fill{是/否} & \Fill{任务边界、人工确认节点和最终由谁执行的操作。} \\
-5 & 其他方式 & \Fill{是/否} & \Fill{写明工具、版本和过程；没有则删除本行。} \\
-\bottomrule
-\end{longtable}
-
-\subsection{过程摘要}
-\LongField{本队如何确定 AI 可以参与的范围（例如只做语言整理、只解释报错，或参与某个非核心辅助环节）}
-\LongField{本队如何保存输入、输出和版本信息，以及哪些内容由队员重新计算或重写}
-
-\section{典型交互记录}
-
-按实际情况保留 2--3 条有代表性的交互。每条记录应包含完整提示词、AI 回复的核心内容、本队是否直接采用或修改、修改了什么以及怎样人工核验。未发生的交互必须删除，不得为了使表格完整而编造对话。语言润色可以概括说明，但公式、代码、数据、结果和结论相关交互仍需写清核验动作。
-
-\subsection*{典型交互示例 1}
-\noindent\textbf{对应环节：}\Fill{问题分析/模型设计/代码调试/结果解释/语言润色等}\par
-\noindent\textbf{使用工具及版本：}\Fill{工具名称、版本或模型}\par
-\noindent\textbf{交互时间：}\Fill{YYYY-MM-DD HH:MM，可按实际精度填写}\par
-\LongField{本队提示词（尽量保留原文；删除密钥、账号等敏感信息）}
-\LongField{AI 回复核心内容（只摘录与本次处理有关的部分，不粘贴无关长对话）}
-\LongField{本队处理方式（直接采用/修改后采用/未采用；写明具体改动和原因）}
-\LongField{人工核验方式（重新推导、独立运行、对照题面、检查单位/边界/结果文件等）}
-
-\subsection*{典型交互示例 2}
-\noindent\textbf{对应环节：}\Fill{实际环节}\par
-\noindent\textbf{使用工具及版本：}\Fill{工具名称、版本或模型}\par
-\noindent\textbf{交互时间：}\Fill{YYYY-MM-DD HH:MM}\par
-\LongField{本队提示词}
-\LongField{AI 回复核心内容}
-\LongField{本队处理方式}
-\LongField{人工核验方式}
-
-\subsection*{典型交互示例 3（可选）}
-\noindent\textbf{对应环节：}\Fill{实际环节；没有第三条则删除本小节}\par
-\noindent\textbf{使用工具及版本：}\Fill{工具名称、版本或模型}\par
-\noindent\textbf{交互时间：}\Fill{YYYY-MM-DD HH:MM}\par
-\LongField{本队提示词}
-\LongField{AI 回复核心内容}
-\LongField{本队处理方式}
-\LongField{人工核验方式}
-
-\section{AI 输出的采纳、修改与核验}
-
-逐项填写采用情况。语言润色可以在本表中合并概括；涉及核心建模与分析的输出不能只写“已检查”，应写检查对象和动作。
-
-\begin{longtable}{P{3.2cm}P{1.9cm}P{4.5cm}P{4.5cm}}
-\caption{AI 输出处理记录}\label{tab:ai-adoption}\\
-\toprule
-AI 输出类别 & 处理结果 & 本队修改或舍弃内容 & 人工核验方式 \\
-\midrule
-\endfirsthead
-\toprule
-AI 输出类别 & 处理结果 & 本队修改或舍弃内容 & 人工核验方式 \\
-\midrule
-\endhead
-建模思路与方法建议 & \Fill{采用/修改/未采用} & \Fill{实际保留的局部内容，以及删改理由。} & \Fill{由题面、变量域、约束和小规模试算核对。} \\
-公式推导与理论参考 & \Fill{采用/修改/未采用} & \Fill{实际改写的符号、假设或推导步骤。} & \Fill{队员独立推导，检查单位、边界和代入结果。} \\
-代码编写与调试 & \Fill{采用/修改/未采用} & \Fill{实际使用的代码片段和人工改动。} & \Fill{在本队环境运行，比较日志、测试样例和结果文件。} \\
-结果分析与模型评价 & \Fill{采用/修改/未采用} & \Fill{实际采用的解释及删去的过度结论。} & \Fill{回到当前版本数据、图表、检验和代码复算。} \\
-论文核心论述（摘要/结论等） & \Fill{采用/修改/未采用} & \Fill{实际修改的事实、数字、限定条件和语气。} & \Fill{逐句与正文公式、表图、引用和结果版本对照。} \\
-其他内容 & \Fill{采用/修改/未采用} & \Fill{写明具体内容；没有则删除本行。} & \Fill{对应的人工检查动作。} \\
-\bottomrule
-\end{longtable}
-
-\section{本队主导完成的核心工作}
-
-本表用于明确 AI 辅助与队员主导工作的边界。不得把未实际完成的复算、推导或测试填写为已完成。
-
-\begin{longtable}{P{3.2cm}P{5.2cm}P{5.7cm}}
-\caption{核心工作确认表}\label{tab:team-led}\\
-\toprule
-核心工作 & 本队实际完成内容 & 可提供的核验材料或位置 \\
-\midrule
-\endfirsthead
-\toprule
-核心工作 & 本队实际完成内容 & 可提供的核验材料或位置 \\
-\midrule
-\endhead
-模型结构与创新 & \Fill{由哪位/哪些队员完成了哪些结构、假设和取舍；不填写姓名。} & \Fill{正文小节、推导记录或版本文件。} \\
-公式推导与求解 & \Fill{关键方程、边界条件、离散和求解步骤。} & \Fill{公式编号、独立计算或小样例。} \\
-程序逻辑与参数 & \Fill{入口、主要函数、参数来源、随机种子和运行方式。} & \Fill{源代码、运行日志和环境版本。} \\
-结果与核心结论 & \Fill{数据清洗、结果生成、检验和最终结论如何确认。} & \Fill{结果文件哈希、图表源文件或复算记录。} \\
-写作与图表 & \Fill{哪些内容由队员撰写、重写或审核；语言润色怎样受控。} & \Fill{正文版本、图表源文件和修改记录。} \\
-\bottomrule
-\end{longtable}
-
-\section{最终确认}
-
-请在提交前删除所有未发生的示例、灰色提示和空白记录，检查本文档的工具名称、版本、日期、正文声明与支撑材料文件名是否一致。
-
-\begin{itemize}
-  \item[$\square$] 论文在参考文献前只保留一种官方 AI 工具使用声明。
-  \item[$\square$] 使用 AI 时，本文件编译后的文件名严格为 \texttt{AI 工具使用详情.pdf}。
-  \item[$\square$] 工具、版本、使用环节和提示过程均来自竞赛期间真实记录。
-  \item[$\square$] 核心建模、分析、程序、结果和结论均由本队主导并完成必要人工核验。
-  \item[$\square$] 论文、附录、本文件和支撑材料均已删除队员、学校、赛区及其他身份信息。
-  \item[$\square$] 支撑材料中的代码可运行，论文附录的文件清单与压缩包内容一致。
-\end{itemize}
-
-\vspace{1em}
-\noindent\textbf{本队确认：}以上 AI 工具使用情况真实完整，无隐瞒、无虚假陈述。核心建模与分析由本队主导完成，所有 AI 输出内容（语言润色除外）均经过人工审查与核实。如有不实，本队愿承担相应责任。
-
-\vfill
 \begin{center}
-\small 本文件为填写模板；提交前应删除所有未使用项目的占位说明，并编译为规定文件名。
+  表 1\quad AI 工具名称、版本及使用目的
 \end{center}
+
+\noindent\begin{tabularx}{\linewidth}{p{3.2cm}p{3.4cm}Y}
+  \toprule
+  工具名称 & 版本或型号 & 具体使用目的和环节 \\
+  \midrule
+  \Fill{实际使用的工具名} & \Fill{版本号、模型名或访问日期} & \Fill{只写本队真实用到的环节} \\
+  \Fill{未用到则删除本行} & \Fill{---} & \Fill{---} \\
+  \bottomrule
+\end{tabularx}
+
+\vspace{0.4em}
+\noindent\textit{填写要点：}版本或型号要具体到可复核的粒度（如模型名加日期），不要写“最新版”
+或“常见大模型”。同一工具在不同环节使用时合并为一行，用途栏分列环节。
+
+\section*{二、具体使用目的与环节}
+\addcontentsline{toc}{section}{二、具体使用目的与环节}
+
+按实际发生的环节逐条写，每条说明“本队先做了什么、把什么交给 AI、AI 承担哪一小段”。
+核心建模与分析必须由本队主导，这一点不因某个环节用了 AI 而改变。
+
+\begin{enumerate}
+  \item \textbf{\Fill{环节名，如：剖析题目背景}}：\Fill{先独立完成了什么、在哪一步引入 AI、
+        给了什么材料、期望 AI 解决什么。}
+  \item \textbf{\Fill{环节名，如：代码语法检查与调试}}：\Fill{同上。}
+  \item \textbf{\Fill{环节名，如：图表优化}}：\Fill{同上。}
+  \item \textbf{\Fill{环节名，如：论文语言润色}}：\Fill{同上。语言润色在第四节可不列采纳记录，
+        但本节仍应写明。}
+\end{enumerate}
+
+\section*{三、主要提示方式与使用过程说明}
+\addcontentsline{toc}{section}{三、主要提示方式与使用过程说明}
+
+\subsection*{主要提示方式}
+
+\begin{itemize}
+  \item \Fill{网页对话框提问：输入待解决问题，或复制赛题片段、待润色正文向 AI 提问；}
+  \item \Fill{上传文件/图片或粘贴报错日志：把调试中遇到的报错截图或日志发给 AI；}
+  \item \Fill{智能体自动执行任务：通过提示词让 AI 直接修改代码或生成图表；}
+  \item \Fill{其他实际使用的方式，未用到的删除。}
+\end{itemize}
+
+\subsection*{典型交互示例}
+
+每个示例四栏齐全，重点是最后一栏：说明本队采纳、部分采纳还是不采纳，以及依据什么作出该判断。
+不采纳的例子同样应当保留，它比“全部采纳”更能说明人工审查真实发生过。
+
+\vspace{0.3em}
+\noindent\textbf{示例 1\quad 工具：\Fill{工具名与版本}}
+\Field{环节：}\Fill{对应第二节的哪一条}
+\Field{提问 / 提示词：}\Fill{原样或摘要照录，不事后美化}
+\Field{回答摘要：}\Fill{AI 实际给出的结论要点}
+\Field{队伍处理方式：}\Fill{采纳 / 部分采纳 / 不采纳，并写出理由，例如“附件未提供该参数，
+故改用可观测量替代，未直接采纳”}
+
+\vspace{0.5em}
+\noindent\rule{\linewidth}{0.35pt}
+
+\vspace{0.5em}
+\noindent\textbf{示例 2\quad 工具：\Fill{工具名与版本}}
+\Field{环节：}\Fill{}
+\Field{提问 / 提示词：}\Fill{}
+\Field{回答摘要：}\Fill{}
+\Field{队伍处理方式：}\Fill{}
+
+\vspace{0.5em}
+\noindent\rule{\linewidth}{0.35pt}
+
+\vspace{0.5em}
+\noindent\textbf{示例 3\quad 工具：\Fill{工具名与版本}}
+\Field{环节：}\Fill{}
+\Field{提问 / 提示词：}\Fill{}
+\Field{回答摘要：}\Fill{}
+\Field{队伍处理方式：}\Fill{}
+
+\section*{四、对 AI 输出的采纳、人工修改与核验的主要情况}
+\addcontentsline{toc}{section}{四、对 AI 输出的采纳、人工修改与核验的主要情况}
+
+按工具分组叙述。规定第 4 条第（4）项注明\textbf{语言润色除外}，因此纯润色环节不必在本节
+逐条列采纳记录；其余环节都要写清“AI 给了什么、本队改了什么、凭什么确认可用”。
+
+\vspace{0.3em}
+\noindent\textbf{工具：\Fill{工具名与版本}}
+
+\Fill{在哪个环节、对哪一处内容，AI 的输出被采纳、被修正还是被否决。修正的要写出改动前后的
+差别，例如“AI 建议把窗口收窄到 1600--2400 并由 5 条曲线减为 3 条；观察预览后改为收窄到
+1600--2100 并保留 5 条”。被否决的要写出否决依据。}
+
+\Field{核验方式：}\Fill{队内讨论、独立重算、量纲检查、公式推导、与附件数据对账、
+代码复跑、图表前后对比、查阅资料等，只写实际做过的。}
+
+\vspace{0.5em}
+\noindent\rule{\linewidth}{0.35pt}
+
+\vspace{0.5em}
+\noindent\textbf{工具：\Fill{工具名与版本}}
+
+\Fill{同上。}
+
+\Field{核验方式：}\Fill{同上。}
+
+\vspace{0.8em}
+\noindent\rule{\linewidth}{0.35pt}
+
+\vspace{0.5em}
+\noindent\textbf{总结段（按实际情况改写，不得照抄）}
+
+\Fill{本参赛队使用 AI 工具主要用于【实际用途】。上述 AI 参与完成的内容均已由队员逐项人工
+审查与核实，核验方式见各工具条目。【此处必须与事实一致：如果核心模型的建立、推导与求解
+确由本队自主完成，写明；如果某一部分由 AI 参与生成，则写明是哪一部分、由谁审查、如何核实，
+不要套用“仅作为辅助效率工具”这类与实际不符的表述。】}
+
+\vspace{1.2em}
+\noindent\fbox{\parbox{0.965\linewidth}{\small
+\textbf{正文侧还须完成两件事，本文件不能替代。}
+
+\textbf{（1）AI 工具使用声明。}按规定第 3 条，在论文\textbf{参考文献之前}设“AI 工具使用声明”，
+下列二者\textbf{择一}，不得同时保留：
+
+\begin{itemize}
+  \item 未使用：\textbf{本参赛队在竞赛过程中未使用任何 AI 工具。}
+  \item 使用：\textbf{本参赛队在竞赛过程中使用了 AI 工具，主要用于【简要用途，如语言润色、
+        代码调试等】，详细使用情况见支撑材料。}
+\end{itemize}
+
+\textbf{（2）赛区附加要求。}广东赛区《报名和参赛须知》（2026-04-10 修订）另要求：AI 生成的
+内容\textbf{在正文相应位置标注}，并\textbf{在参考文献中列出所用 AI 工具}。国规第 6 条写明
+“自 2026 年 9 月 1 日起试行，此前相关规定与本规定不一致的以本规定为准”，赛区须知的修订
+日期早于该日期，故国规在冲突处优先；但赛区须知同时声明“不遵守本参赛须知的队伍将失去评奖
+资格”。两者取并集不违反任何一方，因此\textbf{建议同时做到}：参考文献前放声明、正文标注
+AI 生成处、参考文献列出 AI 工具、支撑材料放本 PDF。最终以当届组委会与赛区的书面通知为准。
+}}
 
 \end{document}
