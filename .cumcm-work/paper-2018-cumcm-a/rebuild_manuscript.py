@@ -340,6 +340,95 @@ SUMMARY = r"""界面导度取调和平均使热流连续在离散层面精确成
 \end{table}
 """
 
+DIMLESS = r"""响应尾段。
+
+在写离散格式之前先看两个无量纲群，它们决定哪一层必须算清楚、哪一层可以粗一点。
+以皮肤侧散热系数作特征、以九十分钟窗口作时间尺度，各层的 Biot 数与 Fourier 数列在
+表~\ref{tab:dimless}。
+
+\begin{table}[htbp]
+  \centering
+  \caption{各层的 Biot 数与 Fourier 数（附件 2 条件，$t_{\mathrm{w}}=\SI{5400}{s}$）}
+  \label{tab:dimless}
+  \input{tables/tab-dimensionless.tex}
+\end{table}
+
+空气层的 $\mathit{Bi}=1.567$ 是四层中唯一大于 1 的：它两侧的温差主要由自身热阻造成，
+不能当成温度均匀的薄层处理。同时它的 $\mathit{Fo}\approx5100$ 远大于 1，说明在题目
+时间窗内它早已充分发展，瞬态信息不存在于这一层。两者合起来给出一个具体判断：
+空气层决定终态温度水平，而升温快慢由 $\mathit{Fo}$ 最小的第 II 层（$\mathit{Fo}=30.7$）
+控制。这正是问题二把第 II 层选作决策变量的物理理由，也解释了为什么问题三一旦把
+空气层压薄就整体不可行。
+"""
+
+BISECT = r"""二分结果为 $d_2^{*}=\SI{18.16}{mm}$。该点峰值 \SI{44.045}{\celsius}，
+距 \SI{47}{\celsius} 上限还有近 \SI{3}{\celsius}，越阈时长恰为 \SI{300}{s}：
+紧的是五分钟预算，不是温度上限。皮肤温度首次越过 \SI{44}{\celsius} 的时刻为
+\SI{3302}{s}，即第 \SI{55.0}{min}，与前一节由单调性推出的 $T_{\mathrm{w}}-\SI{300}{s}$
+一致。
+
+二分的收敛过程列在表~\ref{tab:bisect}，它同时是一份可复核的求解记录。
+
+\begin{table}[htbp]
+  \centering
+  \caption{问题二一维二分的收敛过程}
+  \label{tab:bisect}
+  \input{tables/tab-bisect.tex}
+\end{table}
+
+前两步就把区间从 \SI{24.4}{mm} 压到 \SI{6.1}{mm}：$d_2=\SI{12.8}{mm}$ 时越阈时长
+\SI{2152}{s}，远超预算；$d_2=\SI{18.9}{mm}$ 时降到 \SI{0}{s}，已经完全不越阈。
+中间几步的越阈时长从 \SI{1290}{s} 到 \SI{686}{s} 逐步收缩，说明判据在这一段对厚度
+高度敏感——同样的信息在图~\ref{fig:q2mono} 的右轴上表现为那段陡降。12 步后区间宽度
+小于 \SI{0.01}{mm}，取上界作为最小可行厚度。
+
+图~\ref{fig:q2hist} 给出最优点处的完整温度历程与两条阈值线。曲线全程不触
+\SI{47}{\celsius}，只在末尾五分钟略高于 \SI{44}{\celsius}，阴影区就是被预算允许的那段。
+这张图说明最优解的形态：它不是"把温度压到最低"，而是"把越阈时刻精确推到窗口末端"。
+
+\begin{figure}[htbp]
+  \centering
+  \includegraphics[width=0.84\textwidth]{figures/fig-q2-history.pdf}
+  \caption{问题二最优点的皮肤温度历程与两条阈值}
+  \label{fig:q2hist}
+\end{figure}
+"""
+
+MATSENS = r"""而是这道约束在这组条件下本身没有留出可辨识的余量。
+
+散热系数不是唯一的不确定来源，附件 1 的物性同样有测量误差。表~\ref{tab:matsens} 逐层把
+导热系数抬高 \SI{5}{\percent}，看最优厚度如何响应。
+
+\begin{table}[htbp]
+  \centering
+  \caption{逐层导热系数各抬高 \SI{5}{\percent} 时问题二最优厚度的变化}
+  \label{tab:matsens}
+  \input{tables/tab-material.tex}
+\end{table}
+
+响应强弱与表~\ref{tab:res} 的热阻占比一致：第 IV 层与第 III 层的扰动把厚度推动最多，
+第 I 层几乎无影响。值得注意的是抬高 $\lambda_2$ 反而要求更厚的第 II 层——因为该层导热
+变好后隔热能力下降，必须用厚度补回来。这一组扰动的幅度都小于散热系数 \SI{2}{\percent}
+带来的变化，因此可辨识性的主要瓶颈仍在散热系数，而不在物性。
+"""
+
+APPENDIX = r"""源程序见 \texttt{solver/simulator.py}。主要接口为：\texttt{read\_materials} 与
+\texttt{read\_measurement} 读取附件；\texttt{Simulator} 按层分配格心网格并按
+式~\eqref{eq:harmonic} 组装界面导度，\texttt{run} 按式~\eqref{eq:implicit} 逐步推进并按
+式~\eqref{eq:face} 还原面温；\texttt{calibrate\_skin\_coefficient} 给出两条标定路线；
+\texttt{constraint\_metrics} 按式~\eqref{eq:crit} 逐时刻判定；
+\texttt{minimal\_feasible\_d2} 在已确认的单调性上做二分；\texttt{pareto\_d2\_d4} 生成
+问题三前沿。
+
+正文中的每一张表与每一张图都由脚本从同一次求解生成，不存在手工录入的数值：
+\texttt{build\_tables.py} 生成物性、逐层热阻、网格收敛、温度演化、前沿、敏感性、
+逐段斜率与报告值判定八张表以及温度剖面、前沿两张图；
+\texttt{build\_tables2.py} 生成残差分段、两条标定路线与三问汇总三张表；
+\texttt{build\_tables3.py} 生成无量纲群、二分收敛、物性扰动三张表以及最优点历程图。
+复现顺序为：先运行 \texttt{solver/simulator.py --self-test} 得到
+\texttt{results/run-report.json}，再依次运行三个表格脚本，最后用 XeLaTeX 编译三遍。
+"""
+
 # (anchor, replacement) -- anchor 必须唯一命中，替换即插入
 EDITS: list[tuple[str, str]] = [
     (r"""    $T_{\mathrm{w}}$ & 工作时长，问题二为 \num{3600}、问题三为 \num{1800} & \si{s} \\
@@ -394,24 +483,66 @@ EDITS: list[tuple[str, str]] = [
 """, SLOPE),
     (r"""界面导度取调和平均使热流连续在离散层面精确成立，这是终点温度对网格几乎不敏感的原因。
 """, SUMMARY),
+    ("响应尾段。\n", DIMLESS),
+    (r"""二分结果为 $d_2^{*}=\SI{18.16}{mm}$。该点峰值 \SI{44.045}{\celsius}，
+距 \SI{47}{\celsius} 上限还有近 \SI{3}{\celsius}，越阈时长恰为 \SI{300}{s}：
+紧的是五分钟预算，不是温度上限。皮肤温度首次越过 \SI{44}{\celsius} 的时刻为
+\SI{3302}{s}，即第 \SI{55.0}{min}，与前一节由单调性推出的 $T_{\mathrm{w}}-\SI{300}{s}$
+一致。
+""", BISECT),
+    (r"""而是这道约束在这组条件下本身没有留出可辨识的余量。
+""", MATSENS),
+    (r"""源程序见 \texttt{solver/simulator.py}。主要接口为：\texttt{read\_materials} 与
+\texttt{read\_measurement} 读取附件；\texttt{Simulator} 按层分配格心网格并按
+式~\eqref{eq:harmonic} 组装界面导度，\texttt{run} 按式~\eqref{eq:implicit} 逐步推进并按
+式~\eqref{eq:face} 还原面温；\texttt{calibrate\_skin\_coefficient} 给出两条标定路线；
+\texttt{constraint\_metrics} 按式~\eqref{eq:crit} 逐时刻判定；
+\texttt{minimal\_feasible\_d2} 在已确认的单调性上做二分；\texttt{pareto\_d2\_d4} 生成
+问题三前沿。
+""", APPENDIX),
 ]
+
+
+def applied_marker(anchor: str, replacement: str) -> str:
+    """插入式编辑的判定特征：替换文本里最长的、锚点中不存在的一行。
+
+    不能直接取最后一行——多数块以 \\end{figure} 或 \\end{table} 结尾，那在全文里到处都有，
+    会把没打过的补丁误判成已打过。
+    """
+    candidates = [line.strip() for line in replacement.splitlines() if line.strip()]
+    fresh = [line for line in candidates if line not in anchor]
+    if not fresh:
+        raise SystemExit("replacement adds no new line; cannot build a marker")
+    return max(fresh, key=len)
 
 
 def main() -> int:
     text = MAIN.read_text(encoding="utf-8")
+    applied = skipped = 0
     for index, (anchor, replacement) in enumerate(EDITS, start=1):
+        # 多数编辑是"插入"式的：替换文本里仍包含锚点，所以必须先判断有没有打过，
+        # 否则锚点永远命中、补丁会被反复叠加。
+        marker = applied_marker(anchor, replacement)
+        if marker in text:
+            skipped += 1
+            continue
         count = text.count(anchor)
         if count != 1:
-            raise SystemExit(f"edit {index}: anchor matched {count} times, expected 1\n"
-                             f"anchor head: {anchor[:60]!r}")
+            raise SystemExit(
+                f"edit {index}: anchor matched {count} times and marker absent\n"
+                f"anchor head: {anchor[:60]!r}\nmarker: {marker[:60]!r}"
+            )
         text = text.replace(anchor, replacement, 1)
+        applied += 1
     MAIN.write_text(text, encoding="utf-8")
-    print(f"applied {len(EDITS)} edits; main.tex now {len(text.splitlines())} lines")
+    print(f"applied {applied}, already present {skipped}; "
+          f"main.tex now {len(text.splitlines())} lines")
     for name in ("tab-properties", "tab-resistance", "tab-grid", "tab-history", "tab-front",
                  "tab-sensitivity", "tab-slope", "tab-verdict", "tab-residual",
-                 "tab-calibration", "tab-summary"):
+                 "tab-calibration", "tab-summary", "tab-dimensionless", "tab-bisect",
+                 "tab-material"):
         assert f"tables/{name}.tex" in text, name
-    print("all 11 generated tables referenced")
+    print("all 14 generated tables referenced")
     return 0
 
 
