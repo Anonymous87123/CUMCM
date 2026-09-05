@@ -1,0 +1,164 @@
+{
+  "schema": "aigc-research-draft-readiness/v1",
+  "status": "fail",
+  "humanization_decision": "BLOCKED_CONTENT_INCOMPLETE",
+  "source": "C:\\Users\\Lenovo\\.codex\\attachments\\18d804e6-2ce9-4e2e-b463-1ede9f1bf7a0\\pasted-text.txt",
+  "source_files": [
+    "C:\\Users\\Lenovo\\.codex\\attachments\\18d804e6-2ce9-4e2e-b463-1ede9f1bf7a0\\pasted-text.txt"
+  ],
+  "errors": 12,
+  "warnings": 0,
+  "metrics": {
+    "tex_files": 1,
+    "sections": 5,
+    "abstract": {
+      "english_words": 3,
+      "cjk_chars": 0,
+      "meaningful_units": 3
+    },
+    "section_content": [
+      {
+        "title": "Introduction",
+        "line": 64,
+        "english_words": 136,
+        "cjk_chars": 0,
+        "meaningful_units": 136
+      },
+      {
+        "title": "Related Work",
+        "line": 74,
+        "english_words": 0,
+        "cjk_chars": 0,
+        "meaningful_units": 0
+      },
+      {
+        "title": "Methodology",
+        "line": 77,
+        "english_words": 924,
+        "cjk_chars": 0,
+        "meaningful_units": 924
+      },
+      {
+        "title": "Experiments",
+        "line": 285,
+        "english_words": 0,
+        "cjk_chars": 0,
+        "meaningful_units": 0
+      },
+      {
+        "title": "Conclusion and Future Work",
+        "line": 288,
+        "english_words": 3,
+        "cjk_chars": 0,
+        "meaningful_units": 3
+      }
+    ],
+    "placeholders": 1,
+    "duplicate_labels": 1,
+    "unresolved_references": 1
+  },
+  "findings": [
+    {
+      "severity": "error",
+      "code": "ABSTRACT_INCOMPLETE",
+      "english_words": 3,
+      "cjk_chars": 0,
+      "meaningful_units": 3,
+      "minimum": "80 English words or 120 CJK characters"
+    },
+    {
+      "severity": "error",
+      "code": "SECTION_EMPTY_OR_SHELL",
+      "title": "Related Work",
+      "line": 74,
+      "english_words": 0,
+      "cjk_chars": 0,
+      "meaningful_units": 0
+    },
+    {
+      "severity": "error",
+      "code": "SECTION_EMPTY_OR_SHELL",
+      "title": "Experiments",
+      "line": 285,
+      "english_words": 0,
+      "cjk_chars": 0,
+      "meaningful_units": 0
+    },
+    {
+      "severity": "error",
+      "code": "SECTION_EMPTY_OR_SHELL",
+      "title": "Conclusion and Future Work",
+      "line": 288,
+      "english_words": 3,
+      "cjk_chars": 0,
+      "meaningful_units": 3
+    },
+    {
+      "severity": "error",
+      "code": "UNRESOLVED_PLACEHOLDER",
+      "count": 1,
+      "locations": [
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\attachments\\18d804e6-2ce9-4e2e-b463-1ede9f1bf7a0\\pasted-text.txt",
+          "line": 126,
+          "excerpt": "% todo 刻画条件子问题的数学形式"
+        }
+      ]
+    },
+    {
+      "severity": "error",
+      "code": "DUPLICATE_LABELS",
+      "labels": {
+        "eq3": [
+          99,
+          178
+        ]
+      }
+    },
+    {
+      "severity": "error",
+      "code": "UNRESOLVED_INTERNAL_REFERENCES",
+      "labels": [
+        "analy"
+      ]
+    },
+    {
+      "severity": "error",
+      "code": "TEMPLATE_IDENTITY_RESIDUE",
+      "pattern": "IEEE_SAMPLE_AUTHOR",
+      "count": 2
+    },
+    {
+      "severity": "error",
+      "code": "TEMPLATE_IDENTITY_RESIDUE",
+      "pattern": "IEEE_SAMPLE_THANKS",
+      "count": 1
+    },
+    {
+      "severity": "error",
+      "code": "TEMPLATE_IDENTITY_RESIDUE",
+      "pattern": "IEEE_SAMPLE_HEADER",
+      "count": 2
+    },
+    {
+      "severity": "error",
+      "code": "TEMPLATE_IDENTITY_RESIDUE",
+      "pattern": "IEEE_SAMPLE_HISTORY",
+      "count": 1
+    },
+    {
+      "severity": "error",
+      "code": "CONTRIBUTION_PROMISE_EMPTY",
+      "english_words": 0,
+      "cjk_chars": 0,
+      "meaningful_units": 0
+    }
+  ],
+  "claims": {
+    "paper_shell_checks_passed": false,
+    "research_correctness_proven": false,
+    "mathematical_validity_proven": false,
+    "human_authorship_proven": false,
+    "detector_outcome_predicted": false
+  }
+}

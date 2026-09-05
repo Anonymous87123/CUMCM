@@ -1,0 +1,98 @@
+{
+  "schema": "aigc-style-benchmark-suite/v1",
+  "suite_id": "matrix-research-dev",
+  "version": "2026-08-20",
+  "split": "dev",
+  "benchmark_goal": "improvement",
+  "providers": [
+    "humanize-academic-chinese"
+  ],
+  "required_trials": 3,
+  "required_generation_evidence": [
+    "stack_evaluation"
+  ],
+  "purpose": "Forward draft-to-candidate benchmark sampled without quality labels.",
+  "cases": [
+    {
+      "id": "draft-dev-01-cdb82386",
+      "scene": {
+        "document_type": "research",
+        "document_format": "tex",
+        "scope": "local"
+      },
+      "source": "sources/draft-dev-01-cdb82386.tex",
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "content-density",
+        "semantic-fidelity",
+        "paragraph-rhythm"
+      ],
+      "provenance": {
+        "kind": "real-draft-section",
+        "source_document": "D:\\2026-BYI\\history\\sccd\\papers\\paper\\paper_CN.tex",
+        "source_document_sha256": "790fbc6c4c5af0350b3c391959ac6c394976cc6fdc01568b4ca7fe8980879959",
+        "start_line": 382,
+        "end_line": 382,
+        "heading": "作为冲突测试的 CURV\\_SORT 与 DG2",
+        "paragraph_sha256": "cdb823866a1b7768b55048445161b4eef7c198d6be2c0e2cbb3d3c591a4df709",
+        "selection_seed": 20260909,
+        "quality_label_used_for_selection": false
+      }
+    },
+    {
+      "id": "draft-dev-02-d50907b7",
+      "scene": {
+        "document_type": "research",
+        "document_format": "tex",
+        "scope": "local"
+      },
+      "source": "sources/draft-dev-02-d50907b7.tex",
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "content-density",
+        "semantic-fidelity",
+        "paragraph-rhythm"
+      ],
+      "provenance": {
+        "kind": "real-draft-section",
+        "source_document": "D:\\2026-BYI\\history\\sccd\\papers\\paper\\paper_CN.tex",
+        "source_document_sha256": "790fbc6c4c5af0350b3c391959ac6c394976cc6fdc01568b4ca7fe8980879959",
+        "start_line": 274,
+        "end_line": 274,
+        "heading": "F1 上的精确 Hessian 证据",
+        "paragraph_sha256": "d50907b7fb4a2fb31071b32d8b206fa060df41999e5b18038c8acb9db4000b3f",
+        "selection_seed": 20260909,
+        "quality_label_used_for_selection": false
+      }
+    },
+    {
+      "id": "draft-dev-03-4efc1919",
+      "scene": {
+        "document_type": "research",
+        "document_format": "tex",
+        "scope": "local"
+      },
+      "source": "sources/draft-dev-03-4efc1919.tex",
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "content-density",
+        "semantic-fidelity",
+        "paragraph-rhythm"
+      ],
+      "provenance": {
+        "kind": "real-draft-section",
+        "source_document": "D:\\2026-BYI\\history\\sccd\\papers\\paper\\paper_CN.tex",
+        "source_document_sha256": "790fbc6c4c5af0350b3c391959ac6c394976cc6fdc01568b4ca7fe8980879959",
+        "start_line": 574,
+        "end_line": 574,
+        "heading": "结论与未来工作",
+        "paragraph_sha256": "4efc19191ee5ec783335494accd1325d38f58d2fc204f51441be992e146dc4ac",
+        "selection_seed": 20260909,
+        "quality_label_used_for_selection": false
+      }
+    }
+  ]
+}

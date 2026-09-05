@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "d2d75dd45c766950a38872d54e5979c042bdebcf4485d1b818b32a5c24e9726a",
+    "before_sha256": "d2d75dd45c766950a38872d54e5979c042bdebcf4485d1b818b32a5c24e9726a"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "903fc3281291698549c32382dbd59e78210ee414ee33f84a94e109383feb42fe",
+  "chunk_binding_sha256": "a981b0e0dd60e2d2eef6ccd3b744ba3a84220fd1b210c1c02560db54cf48b6af",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-e2ef47edd600.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "fecf349f1474a5b11b3cdf4e514041529801d550fb49884798d7eb7f52af86bc",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 8,
+        "id": "S1",
+        "sha256": "b7d76164d574d21b63b0f999b9610a4df7c7ca00f6b6e1ca700c5cba95c3723f",
+        "start_line": 2
+      }
+    ],
+    "reason": "三级食物链段保留营养级映射与参数来源，现有结构承担模型定义职责。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "8f5d4ca8e98ea0085212aa91f509d28e83cb506ea91a446df36a3c1bcc166945",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-e2ef47edd600"
+}

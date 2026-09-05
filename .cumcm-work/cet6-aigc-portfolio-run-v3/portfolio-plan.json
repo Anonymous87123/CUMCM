@@ -1,0 +1,86 @@
+{
+  "schema": "aigc-portfolio-orchestration/v1",
+  "source": {
+    "path": "D:\\code LateX\\elegantbook\\CET6\\cet 6\\_analysis_output\\section_b_final_conclusions_report_v2.tex",
+    "snapshot": "F:\\CUMCM\\.cumcm-work\\cet6-aigc-portfolio-run-v3\\source.snapshot.tex",
+    "sha256": "5687dd8dda136dbc9843c635dc9a9acf4d88b8de40024062f86cf982f9c69253",
+    "bytes": 98080
+  },
+  "scene": {
+    "document_type": "research",
+    "document_format": "tex",
+    "intent": "compare",
+    "candidate_policy": "independent_same_source_branches"
+  },
+  "stages": [
+    {
+      "provider": "deai-academic-writing",
+      "role": "content-owner",
+      "status": "requires_stage_evidence",
+      "required_artifact": "content-or-reasoning-ledger.json",
+      "note": "No shared native adapter is registered; do not mark complete from routing alone."
+    },
+    {
+      "provider": "deai-research-writing",
+      "role": "content-owner",
+      "status": "requires_stage_evidence",
+      "required_artifact": "content-or-reasoning-ledger.json",
+      "note": "No shared native adapter is registered; do not mark complete from routing alone."
+    }
+  ],
+  "branches": [
+    {
+      "id": "H1",
+      "provider": "humanize-academic-chinese",
+      "input_sha256": "5687dd8dda136dbc9843c635dc9a9acf4d88b8de40024062f86cf982f9c69253",
+      "parent_candidate": null,
+      "pass_count": 1,
+      "status": "blocked",
+      "scope": "document",
+      "preparation_report": "F:\\CUMCM\\.cumcm-work\\cet6-aigc-portfolio-run-v3\\branches\\H1\\prepare\\prepare-report.json",
+      "adapter_status": "ready",
+      "code": "CANDIDATE_VERIFICATION_FAILED",
+      "verification_report": "F:\\CUMCM\\.cumcm-work\\cet6-aigc-portfolio-run-v3\\branches\\H1\\verify\\candidate-verification.json"
+    },
+    {
+      "id": "B1",
+      "provider": "baibai-aigc",
+      "input_sha256": "5687dd8dda136dbc9843c635dc9a9acf4d88b8de40024062f86cf982f9c69253",
+      "parent_candidate": null,
+      "pass_count": 1,
+      "status": "blocked",
+      "scope": "local",
+      "code": "FORMAT_NOT_SUPPORTED",
+      "supported_formats": [
+        "txt",
+        "docx"
+      ],
+      "note": "Use a separately frozen short prose proxy; never silently feed raw TeX to this branch."
+    }
+  ],
+  "reviewers": [
+    {
+      "provider": "patina",
+      "role": "reviewer",
+      "status": "requires_prose_proxy",
+      "code": "RAW_TEX_FORBIDDEN",
+      "note": "Reviewers receive extracted prose only; TeX remains authoritative."
+    }
+  ],
+  "selection": {
+    "status": "pending",
+    "accepted": null,
+    "reason": null
+  },
+  "claims": {
+    "native_generation_ran": false,
+    "all_roles_complete": false,
+    "human_quality_clearance": false,
+    "candidate_files_registered": 0
+  },
+  "next_actions": [
+    "Complete each content-owner stage and attach its evidence artifact.",
+    "Register independent H1/B1 candidate files; never use another candidate as input.",
+    "Run reviewers on a prose proxy, then record a human selection reason."
+  ]
+}

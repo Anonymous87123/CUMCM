@@ -1,0 +1,1598 @@
+{
+  "schemaVersion": 1,
+  "generatedBy": "node scripts/update-benchmark-ranges.mjs",
+  "generatedAt": "2026-07-02T06:02:27.984Z",
+  "fixtureCount": 49,
+  "tolerances": {
+    "cv": 0.025,
+    "mattr": 0.03,
+    "lexiconDensity": 5
+  },
+  "metrics": {
+    "en-ai-01": {
+      "path": "tests/fixtures/suspect-zones/en/ai/en-ai-01.md",
+      "lang": "en",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": true,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "low",
+      "cv_range": [
+        0.033,
+        0.083
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.898,
+        0.958
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "en-ai-02": {
+      "path": "tests/fixtures/suspect-zones/en/ai/en-ai-02.md",
+      "lang": "en",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": true,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "low",
+      "cv_range": [
+        0.065,
+        0.115
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.811,
+        0.871
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "en-ai-03": {
+      "path": "tests/fixtures/suspect-zones/en/ai/en-ai-03.md",
+      "lang": "en",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": true,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "low",
+      "cv_range": [
+        0.04,
+        0.09
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.798,
+        0.858
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "en-ai-04": {
+      "path": "tests/fixtures/suspect-zones/en/ai/en-ai-04.md",
+      "lang": "en",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": true,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "low",
+      "cv_range": [
+        0.045,
+        0.095
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.81,
+        0.87
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "en-ai-05": {
+      "path": "tests/fixtures/suspect-zones/en/ai/en-ai-05.md",
+      "lang": "en",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": true,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "low",
+      "cv_range": [
+        0.068,
+        0.118
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.849,
+        0.909
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "en-ai-06-chat-register": {
+      "path": "tests/fixtures/suspect-zones/en/ai/en-ai-06-chat-register.md",
+      "lang": "en",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": true,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "low",
+      "cv_range": [
+        0.009,
+        0.059
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.784,
+        0.844
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "en-ai-07-discourse-candor": {
+      "path": "tests/fixtures/suspect-zones/en/ai/en-ai-07-discourse-candor.md",
+      "lang": "en",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": true,
+        "thematicBreak": false
+      },
+      "cv_band": "mid",
+      "cv_range": [
+        0.333,
+        0.383
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.842,
+        0.902
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "en-nat-01": {
+      "path": "tests/fixtures/suspect-zones/en/natural/en-nat-01.md",
+      "lang": "en",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "high",
+      "cv_range": [
+        0.856,
+        0.906
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.868,
+        0.928
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "en-nat-02": {
+      "path": "tests/fixtures/suspect-zones/en/natural/en-nat-02.md",
+      "lang": "en",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "high",
+      "cv_range": [
+        0.861,
+        0.911
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.854,
+        0.914
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "en-nat-03": {
+      "path": "tests/fixtures/suspect-zones/en/natural/en-nat-03.md",
+      "lang": "en",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "high",
+      "cv_range": [
+        0.889,
+        0.939
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.852,
+        0.912
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "en-nat-04": {
+      "path": "tests/fixtures/suspect-zones/en/natural/en-nat-04.md",
+      "lang": "en",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "mid",
+      "cv_range": [
+        0.469,
+        0.519
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.824,
+        0.884
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "en-nat-05": {
+      "path": "tests/fixtures/suspect-zones/en/natural/en-nat-05.md",
+      "lang": "en",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "high",
+      "cv_range": [
+        0.828,
+        0.878
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.845,
+        0.905
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "en-nat-06-single-opener": {
+      "path": "tests/fixtures/suspect-zones/en/natural/en-nat-06-single-opener.md",
+      "lang": "en",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "high",
+      "cv_range": [
+        0.527,
+        0.577
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.81,
+        0.87
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ja-ai-01": {
+      "path": "tests/fixtures/suspect-zones/ja/ai/ja-ai-01.md",
+      "lang": "ja",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": true,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "low",
+      "cv_range": [
+        0.02,
+        0.07
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.803,
+        0.863
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ja-ai-02": {
+      "path": "tests/fixtures/suspect-zones/ja/ai/ja-ai-02.md",
+      "lang": "ja",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": true,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "low",
+      "cv_range": [
+        0.205,
+        0.255
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.755,
+        0.815
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ja-ai-03": {
+      "path": "tests/fixtures/suspect-zones/ja/ai/ja-ai-03.md",
+      "lang": "ja",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": true,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "low",
+      "cv_range": [
+        0.038,
+        0.088
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.765,
+        0.825
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ja-ai-04-lexicon": {
+      "path": "tests/fixtures/suspect-zones/ja/ai/ja-ai-04-lexicon.md",
+      "lang": "ja",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": true,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "high",
+      "cv_range": [
+        0.535,
+        0.585
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.773,
+        0.833
+      ],
+      "lexicon_density_range": [
+        58.83,
+        68.83
+      ],
+      "lexicon_hits": [
+        "まとめると",
+        "結論として",
+        "重要なのは",
+        "デジタル時代において",
+        "~が求められます",
+        "新たな可能性を切り開く",
+        "今後ますます重要になる",
+        "多様なニーズに応える",
+        "理解を深める"
+      ]
+    },
+    "ja-ai-05-formulaic-summary": {
+      "path": "tests/fixtures/suspect-zones/ja/ai/ja-ai-05-formulaic-summary.md",
+      "lang": "ja",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": true,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": true,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "low",
+      "cv_range": [
+        0.13,
+        0.18
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.74,
+        0.8
+      ],
+      "lexicon_density_range": [
+        69.074,
+        79.074
+      ],
+      "lexicon_hits": [
+        "まとめると",
+        "現代社会において",
+        "デジタル時代において",
+        "長期的に見ると",
+        "~につながります",
+        "新たな可能性を切り開く",
+        "持続可能な成長",
+        "ユーザー体験を向上させる",
+        "多様なニーズに応える",
+        "欠かせない存在"
+      ]
+    },
+    "ja-ai-06-broad-tech": {
+      "path": "tests/fixtures/suspect-zones/ja/ai/ja-ai-06-broad-tech.md",
+      "lang": "ja",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": true,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": true,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "low",
+      "cv_range": [
+        0.218,
+        0.268
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.735,
+        0.795
+      ],
+      "lexicon_density_range": [
+        68.77,
+        78.77
+      ],
+      "lexicon_hits": [
+        "結論として",
+        "テクノロジーの進化により",
+        "一方で~他方で",
+        "~と言えるでしょう",
+        "今後ますます重要になる",
+        "柔軟に対応する",
+        "価値を最大化する",
+        "幅広い分野で注目されています",
+        "新たな選択肢"
+      ]
+    },
+    "ja-nat-01": {
+      "path": "tests/fixtures/suspect-zones/ja/natural/ja-nat-01.md",
+      "lang": "ja",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "mid",
+      "cv_range": [
+        0.462,
+        0.512
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.689,
+        0.749
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ja-nat-02": {
+      "path": "tests/fixtures/suspect-zones/ja/natural/ja-nat-02.md",
+      "lang": "ja",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "high",
+      "cv_range": [
+        0.625,
+        0.675
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.766,
+        0.826
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ja-nat-03": {
+      "path": "tests/fixtures/suspect-zones/ja/natural/ja-nat-03.md",
+      "lang": "ja",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "mid",
+      "cv_range": [
+        0.37,
+        0.42
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.777,
+        0.837
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ja-nat-04-lexicon-cold": {
+      "path": "tests/fixtures/suspect-zones/ja/natural/ja-nat-04-lexicon-cold.md",
+      "lang": "ja",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "mid",
+      "cv_range": [
+        0.371,
+        0.421
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.722,
+        0.782
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ja-nat-05-station-note": {
+      "path": "tests/fixtures/suspect-zones/ja/natural/ja-nat-05-station-note.md",
+      "lang": "ja",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "high",
+      "cv_range": [
+        0.539,
+        0.589
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.792,
+        0.852
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ja-nat-06-maintenance-log": {
+      "path": "tests/fixtures/suspect-zones/ja/natural/ja-nat-06-maintenance-log.md",
+      "lang": "ja",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "high",
+      "cv_range": [
+        0.494,
+        0.544
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.85,
+        0.91
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ko-ai-01": {
+      "path": "tests/fixtures/suspect-zones/ko/ai/ko-ai-01.md",
+      "lang": "ko",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": true,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": true,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "low",
+      "cv_range": [
+        0.068,
+        0.118
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.947,
+        1.007
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ko-ai-02": {
+      "path": "tests/fixtures/suspect-zones/ko/ai/ko-ai-02.md",
+      "lang": "ko",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": true,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": true,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "low",
+      "cv_range": [
+        0.048,
+        0.098
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.79,
+        0.85
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ko-ai-03": {
+      "path": "tests/fixtures/suspect-zones/ko/ai/ko-ai-03.md",
+      "lang": "ko",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": true,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": true,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "low",
+      "cv_range": [
+        0.048,
+        0.098
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.76,
+        0.82
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ko-ai-04": {
+      "path": "tests/fixtures/suspect-zones/ko/ai/ko-ai-04.md",
+      "lang": "ko",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": true,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": true,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "low",
+      "cv_range": [
+        0.073,
+        0.123
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.823,
+        0.883
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ko-ai-05": {
+      "path": "tests/fixtures/suspect-zones/ko/ai/ko-ai-05.md",
+      "lang": "ko",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": true,
+        "koDiagnostics": true,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": true,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "low",
+      "cv_range": [
+        0.073,
+        0.123
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.823,
+        0.883
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ko-ai-06-chat-register": {
+      "path": "tests/fixtures/suspect-zones/ko/ai/ko-ai-06-chat-register.md",
+      "lang": "ko",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": true,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "low",
+      "cv_range": [
+        0.056,
+        0.106
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.97,
+        1.03
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ko-ai-07-ko-diagnostic": {
+      "path": "tests/fixtures/suspect-zones/ko/ai/ko-ai-07-ko-diagnostic.md",
+      "lang": "ko",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": true,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "mid",
+      "cv_range": [
+        0.392,
+        0.442
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.925,
+        0.985
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ko-nat-01": {
+      "path": "tests/fixtures/suspect-zones/ko/natural/ko-nat-01.md",
+      "lang": "ko",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "high",
+      "cv_range": [
+        0.692,
+        0.742
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.97,
+        1.03
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ko-nat-02": {
+      "path": "tests/fixtures/suspect-zones/ko/natural/ko-nat-02.md",
+      "lang": "ko",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "high",
+      "cv_range": [
+        0.527,
+        0.577
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.97,
+        1.03
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ko-nat-03": {
+      "path": "tests/fixtures/suspect-zones/ko/natural/ko-nat-03.md",
+      "lang": "ko",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "high",
+      "cv_range": [
+        0.655,
+        0.705
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.97,
+        1.03
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ko-nat-04": {
+      "path": "tests/fixtures/suspect-zones/ko/natural/ko-nat-04.md",
+      "lang": "ko",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "high",
+      "cv_range": [
+        0.746,
+        0.796
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.945,
+        1.005
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "ko-nat-05": {
+      "path": "tests/fixtures/suspect-zones/ko/natural/ko-nat-05.md",
+      "lang": "ko",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "high",
+      "cv_range": [
+        0.971,
+        1.021
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.968,
+        1.028
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "zh-ai-01": {
+      "path": "tests/fixtures/suspect-zones/zh/ai/zh-ai-01.md",
+      "lang": "zh",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": true,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "low",
+      "cv_range": [
+        0.037,
+        0.087
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.872,
+        0.932
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "zh-ai-02": {
+      "path": "tests/fixtures/suspect-zones/zh/ai/zh-ai-02.md",
+      "lang": "zh",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": true,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "low",
+      "cv_range": [
+        0.255,
+        0.305
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.704,
+        0.764
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "zh-ai-03": {
+      "path": "tests/fixtures/suspect-zones/zh/ai/zh-ai-03.md",
+      "lang": "zh",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": true,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "low",
+      "cv_range": [
+        0.058,
+        0.108
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.903,
+        0.963
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "zh-ai-04-lexicon": {
+      "path": "tests/fixtures/suspect-zones/zh/ai/zh-ai-04-lexicon.md",
+      "lang": "zh",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": true,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "high",
+      "cv_range": [
+        0.723,
+        0.773
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.864,
+        0.924
+      ],
+      "lexicon_density_range": [
+        87.593,
+        97.593
+      ],
+      "lexicon_hits": [
+        "总而言之",
+        "总的来说",
+        "值得注意的是",
+        "在数字时代",
+        "从长远来看",
+        "不仅~而且",
+        "为~提供了新的可能",
+        "优化整体流程",
+        "形成良性循环",
+        "为未来奠定基础"
+      ]
+    },
+    "zh-ai-05-formulaic-summary": {
+      "path": "tests/fixtures/suspect-zones/zh/ai/zh-ai-05-formulaic-summary.md",
+      "lang": "zh",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": true,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "mid",
+      "cv_range": [
+        0.385,
+        0.435
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.901,
+        0.961
+      ],
+      "lexicon_density_range": [
+        100.263,
+        110.263
+      ],
+      "lexicon_hits": [
+        "综上所述",
+        "值得注意的是",
+        "在数字时代",
+        "从长远来看",
+        "不仅~而且",
+        "为~提供了新的可能",
+        "提升用户体验",
+        "优化整体流程",
+        "形成良性循环",
+        "持续赋能",
+        "为未来奠定基础",
+        "成为不可或缺的一部分"
+      ]
+    },
+    "zh-ai-06-broad-tech": {
+      "path": "tests/fixtures/suspect-zones/zh/ai/zh-ai-06-broad-tech.md",
+      "lang": "zh",
+      "class": "ai",
+      "expected_hot": true,
+      "predicted_hot": true,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": true,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "mid",
+      "cv_range": [
+        0.418,
+        0.468
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.882,
+        0.942
+      ],
+      "lexicon_density_range": [
+        85.09,
+        95.09
+      ],
+      "lexicon_hits": [
+        "总而言之",
+        "需要指出的是",
+        "随着科技的发展",
+        "带来了新的机遇",
+        "面临新的挑战",
+        "打造更加",
+        "推动~高质量发展",
+        "有效提升",
+        "释放巨大潜力",
+        "展现出独特价值"
+      ]
+    },
+    "zh-nat-01": {
+      "path": "tests/fixtures/suspect-zones/zh/natural/zh-nat-01.md",
+      "lang": "zh",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "high",
+      "cv_range": [
+        0.481,
+        0.531
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.845,
+        0.905
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "zh-nat-02": {
+      "path": "tests/fixtures/suspect-zones/zh/natural/zh-nat-02.md",
+      "lang": "zh",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "high",
+      "cv_range": [
+        0.503,
+        0.553
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.906,
+        0.966
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "zh-nat-03": {
+      "path": "tests/fixtures/suspect-zones/zh/natural/zh-nat-03.md",
+      "lang": "zh",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "high",
+      "cv_range": [
+        0.555,
+        0.605
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.877,
+        0.937
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "zh-nat-04-lexicon-cold": {
+      "path": "tests/fixtures/suspect-zones/zh/natural/zh-nat-04-lexicon-cold.md",
+      "lang": "zh",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "mid",
+      "cv_range": [
+        0.362,
+        0.412
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.901,
+        0.961
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "zh-nat-05-market-note": {
+      "path": "tests/fixtures/suspect-zones/zh/natural/zh-nat-05-market-note.md",
+      "lang": "zh",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "high",
+      "cv_range": [
+        0.573,
+        0.623
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.861,
+        0.921
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    },
+    "zh-nat-06-maintenance-log": {
+      "path": "tests/fixtures/suspect-zones/zh/natural/zh-nat-06-maintenance-log.md",
+      "lang": "zh",
+      "class": "natural",
+      "expected_hot": false,
+      "predicted_hot": false,
+      "detectors": {
+        "burstiness": false,
+        "koDiagnostics": false,
+        "mattr": false,
+        "lexicon": false,
+        "endingMonotony": false,
+        "candor": false,
+        "thematicBreak": false
+      },
+      "cv_band": "high",
+      "cv_range": [
+        0.524,
+        0.574
+      ],
+      "mattr_band": "high",
+      "mattr_range": [
+        0.922,
+        0.982
+      ],
+      "lexicon_density_range": [
+        0,
+        5
+      ],
+      "lexicon_hits": []
+    }
+  }
+}

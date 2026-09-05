@@ -1,0 +1,636 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "candidate_assembly_exit_code": 2,
+  "candidate_assembly_status": "REVIEW",
+  "delivery_gate_exit_code": 2,
+  "delivery_gate_status": "REVIEW",
+  "draft_surface_source_check": {
+    "details": {},
+    "scope": [],
+    "semantic_entailment_certified": false,
+    "status": "N/A"
+  },
+  "evidence": {
+    "after_path": null,
+    "after_sha256": "9ba70d5d3714d53790db419cf8f6c882d7846878e723097c8952140de91a3820",
+    "before_path": null,
+    "before_sha256": "9191f6c40d7e5741f32c2e937f11581b46c49f91582de8d5d39a88761c9a2f6c",
+    "checker_executed": true,
+    "document_format": "tex",
+    "document_scope": "DOCUMENT",
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "source_path_archived": false
+  },
+  "evidence_bundle": {
+    "execution_record_path": "execution-record.json",
+    "invocation_path": "invocation-request.json",
+    "manifest_path": "evidence-manifest.json",
+    "paired_quality_request_path": "paired-quality-review-request.json",
+    "rendered_output_path": "rendered-output.txt",
+    "result_path": "validation-result.json",
+    "run_id": "hvr4-09f27eeffd6b2e9369deddda31d8628b21635bbe7279c0e243940ad611cd391d",
+    "schema": "humanize-direct-validation-evidence/v5",
+    "status": "PERSISTED",
+    "stderr_path": "stderr.txt",
+    "warning_review_request_path": ""
+  },
+  "exit_code": 2,
+  "hard_invariant_layer_status": "PASS",
+  "humanize_quality_claim_allowed": false,
+  "introduced_findings": [
+    {
+      "action": "REWRITE",
+      "column": 117,
+      "context": "essian}--\\eqref{eq:elliptic_group_condition}）。要判断这一映射是否在实际优化中产生可观测的后果，需要先处理最简单而且可精确验证的情形。F1 是对角椭球型函数，其 Hessian 呈严格对角形，因此每个组的条件数恰好等于组内最大与最小曲率尺度之",
+      "count": 1,
+      "file": "after",
+      "finding_hash": "55657e8256368e75fedbf96fbadb5f753bad9d9b7f26d8670a544ca312245606",
+      "line": 1,
+      "matched": "需要先",
+      "rationale": "把过程播报改成直接承载对象、动作或结果的正文；学术正文不得保留助手工作台旁白。",
+      "severity": "high",
+      "signal_id": "LEX-STRICT-CORPUS-PROCESS-01"
+    }
+  ],
+  "invariants": {
+    "advisories": [],
+    "errors": [],
+    "evidence": {
+      "document_scope": "DOCUMENT",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "speech_act_audit": {
+        "categories": {
+          "assumption": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "attribution_source": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "condition": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "definition_naming": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "focus_scope": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "logical_relation": {
+            "after": {
+              "因此": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0006",
+                "column": 165,
+                "end": 166,
+                "end_column": 167,
+                "end_line": 1,
+                "line": 1,
+                "marker": "因此",
+                "sentence_context": "F1 是对角椭球型函数，其 Hessian 呈严格对角形，因此每个组的条件数恰好等于组内最大与最小曲率尺度之比，无需任何采样近似",
+                "sentence_id": "T0003",
+                "side": "after",
+                "start": 164
+              }
+            ],
+            "before": {
+              "因此": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0006",
+                "column": 161,
+                "end": 162,
+                "end_column": 163,
+                "end_line": 1,
+                "line": 1,
+                "marker": "因此",
+                "sentence_context": "F1 是对角椭球型函数，其 Hessian 呈严格对角形，因此每个组的条件数恰好等于组内最大与最小曲率尺度之比，无需任何采样近似",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 160
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "modality_scope": {
+            "after": {
+              "仅": 2,
+              "可": 2,
+              "需要": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 110,
+                "end": 110,
+                "end_column": 111,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "要判断这一映射是否在实际优化中产生可观测的后果，需要先处理最简单而且可精确验证的情形",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 109
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0003",
+                "column": 117,
+                "end": 118,
+                "end_column": 119,
+                "end_line": 1,
+                "line": 1,
+                "marker": "需要",
+                "sentence_context": "要判断这一映射是否在实际优化中产生可观测的后果，需要先处理最简单而且可精确验证的情形",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 116
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0003",
+                "column": 127,
+                "end": 127,
+                "end_column": 128,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "要判断这一映射是否在实际优化中产生可观测的后果，需要先处理最简单而且可精确验证的情形",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 126
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0009",
+                "column": 243,
+                "end": 243,
+                "end_column": 244,
+                "end_line": 1,
+                "line": 1,
+                "marker": "仅",
+                "sentence_context": "表~ 汇总了在目标函数完全固定的前提下，仅改变分组所产生的条件数与终点差异",
+                "sentence_id": "T0004",
+                "side": "after",
+                "start": 242
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0011",
+                "column": 278,
+                "end": 278,
+                "end_column": 279,
+                "end_line": 1,
+                "line": 1,
+                "marker": "仅",
+                "sentence_context": "为紧凑起见，condition 列仅报告各诱导子问题条件数的均值",
+                "sentence_id": "T0005",
+                "side": "after",
+                "start": 277
+              }
+            ],
+            "before": {
+              "仅": 2,
+              "可": 2,
+              "需要": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 108,
+                "end": 108,
+                "end_column": 109,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "前文在数学层面建立了 的映射（式~ -- ），但这一映射是否在实际优化中产生可观测的后果，需要从最简单的可精确验证情形开始",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 107
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0003",
+                "column": 115,
+                "end": 116,
+                "end_column": 117,
+                "end_line": 1,
+                "line": 1,
+                "marker": "需要",
+                "sentence_context": "前文在数学层面建立了 的映射（式~ -- ），但这一映射是否在实际优化中产生可观测的后果，需要从最简单的可精确验证情形开始",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 114
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0003",
+                "column": 122,
+                "end": 122,
+                "end_column": 123,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "前文在数学层面建立了 的映射（式~ -- ），但这一映射是否在实际优化中产生可观测的后果，需要从最简单的可精确验证情形开始",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 121
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0009",
+                "column": 239,
+                "end": 239,
+                "end_column": 240,
+                "end_line": 1,
+                "line": 1,
+                "marker": "仅",
+                "sentence_context": "表~ 汇总了在目标函数完全固定的前提下，仅改变分组所产生的条件数与终点差异",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 238
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0011",
+                "column": 274,
+                "end": 274,
+                "end_column": 275,
+                "end_line": 1,
+                "line": 1,
+                "marker": "仅",
+                "sentence_context": "为紧凑起见，condition 列仅报告各诱导子问题条件数的均值",
+                "sentence_id": "T0004",
+                "side": "before",
+                "start": 273
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "negation": {
+            "after": {
+              "无": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0007",
+                "column": 192,
+                "end": 192,
+                "end_column": 193,
+                "end_line": 1,
+                "line": 1,
+                "marker": "无",
+                "sentence_context": "F1 是对角椭球型函数，其 Hessian 呈严格对角形，因此每个组的条件数恰好等于组内最大与最小曲率尺度之比，无需任何采样近似",
+                "sentence_id": "T0003",
+                "side": "after",
+                "start": 191
+              }
+            ],
+            "before": {
+              "无": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0007",
+                "column": 188,
+                "end": 188,
+                "end_column": 189,
+                "end_line": 1,
+                "line": 1,
+                "marker": "无",
+                "sentence_context": "F1 是对角椭球型函数，其 Hessian 呈严格对角形，因此每个组的条件数恰好等于组内最大与最小曲率尺度之比，无需任何采样近似",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 187
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "reporting_observation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          }
+        },
+        "claim_pairing": {
+          "after_claims": 11,
+          "before_claims": 11,
+          "unique_exact_pairs": 9,
+          "unpaired_after_claims": 2,
+          "unpaired_before_claims": 2
+        },
+        "protection": {
+          "after_ranges": 4,
+          "before_ranges": 4,
+          "line_column_basis": "NORMALIZED_LF_1_BASED_UNICODE_CODEPOINT",
+          "masking": "LENGTH_PRESERVING"
+        }
+      }
+    },
+    "hard_failure": false,
+    "status": "pass",
+    "summary": {
+      "advisories": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    "warnings": []
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 1,
+    "before_candidates": 0,
+    "introduced_candidates": 1,
+    "unexplained_high_candidates": 1
+  },
+  "mechanical_validation_exit_code": 2,
+  "mechanical_validation_status": "REVIEW",
+  "mode": "REWRITE",
+  "paired_quality_clearance_granted": false,
+  "paired_quality_review_local_clearance_supported": false,
+  "paired_quality_review_request": {
+    "artifact": {
+      "after_sha256": "9ba70d5d3714d53790db419cf8f6c882d7846878e723097c8952140de91a3820",
+      "before_sha256": "9191f6c40d7e5741f32c2e937f11581b46c49f91582de8d5d39a88761c9a2f6c"
+    },
+    "changes": [
+      {
+        "after": {
+          "end_line": 1,
+          "han_chars": 167,
+          "line_count": 1,
+          "sha256": "9ba70d5d3714d53790db419cf8f6c882d7846878e723097c8952140de91a3820",
+          "start_line": 1
+        },
+        "before": {
+          "end_line": 1,
+          "han_chars": 163,
+          "line_count": 1,
+          "sha256": "9191f6c40d7e5741f32c2e937f11581b46c49f91582de8d5d39a88761c9a2f6c",
+          "start_line": 1
+        },
+        "change_id": "QCH-f9f946071393dcdeca02",
+        "operation": "REPLACE",
+        "ordinal": 1
+      }
+    ],
+    "limitations": {
+      "academic_correctness": "NOT_EVALUATED",
+      "authorship": "NOT_EVALUATED",
+      "quality_clearance_granted": false
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "request_sha256": "94c92d01d39faed9d0695fef0fff8f51936b5381ec1d151d63938b4e666ee286",
+    "review_contract": {
+      "empty_or_generic_benefit_is_clearance": false,
+      "local_model_or_caller_assertion_is_clearance": false,
+      "required_dimensions": [
+        "actionable_pathology_remaining",
+        "no_change_is_best_available_decision",
+        "problem_span_binding",
+        "independent_reading_benefit",
+        "subject_and_modifier_alignment",
+        "verb_object_collocation",
+        "logical_relation_preservation",
+        "template_field_role_and_authorization",
+        "information_density_and_rhythm",
+        "author_voice_non_regression"
+      ],
+      "required_per_change_verdicts": [
+        "ACCEPT",
+        "REVISE",
+        "REVERT"
+      ],
+      "validator_pass_is_quality_clearance": false
+    },
+    "schema": "humanize-paired-quality-review-request/v1",
+    "status": "BLOCKED_BY_MECHANICAL_GATE",
+    "template_field_changes": [],
+    "validation_context": {
+      "artifact_relation": "CHANGED",
+      "decision": "REWRITE",
+      "decision_eligible": false,
+      "document_format": "tex",
+      "document_scope": "DOCUMENT",
+      "mechanical_validation_status": "REVIEW",
+      "mode": "REWRITE",
+      "scene": "RESEARCH"
+    }
+  },
+  "paired_quality_review_status": "BLOCKED_BY_MECHANICAL_GATE",
+  "paired_style_delta_findings": [],
+  "paired_style_delta_layer_status": "NOT_APPLICABLE",
+  "paired_style_delta_summary": {
+    "authorship_inference": false,
+    "finding_count": 0,
+    "scope": "PAIRED_COURSE_VOICE_NON_REGRESSION_CANDIDATE",
+    "status": "NOT_APPLICABLE"
+  },
+  "pending_warnings": [],
+  "proposed_warning_resolutions": [],
+  "report_scope_check": {
+    "editable_range_count": 0,
+    "editable_ranges": [],
+    "extractor_replay_match": null,
+    "fragment_count": 0,
+    "outside_selection_unchanged": null,
+    "report_sha256": null,
+    "scope_path": null,
+    "scope_semantic_sha256": null,
+    "scope_sha256": null,
+    "source_sha256": null,
+    "status": "N/A"
+  },
+  "review_reasons": [
+    "unexplained_high_severity_signal",
+    "unexplained_strict_corpus_signal",
+    "introduced_style_signal"
+  ],
+  "scene": "RESEARCH",
+  "semantic_source_check": "N/A",
+  "speech_act_diagnostics": [],
+  "speech_act_layer_status": "PASS",
+  "status": "REVIEW",
+  "strict_corpus_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 1,
+    "before_candidates": 0,
+    "clean_allowed_by_strict_layer": false,
+    "enabled": true,
+    "no_change_allowed": false,
+    "unexplained_candidates": 1
+  },
+  "style_signal_layer_status": "REVIEW",
+  "template_field_edit_scope_check": {
+    "authorized_edit_count": 0,
+    "authorized_edits": [],
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "provided": false,
+    "schema_version": null,
+    "scope_sha256": null,
+    "source_sha256": "9191f6c40d7e5741f32c2e937f11581b46c49f91582de8d5d39a88761c9a2f6c",
+    "status": "N/A"
+  },
+  "template_field_findings": [],
+  "template_field_layer_status": "PASS",
+  "template_field_summary": {
+    "authorized_edit_count": 0,
+    "finding_count": 0,
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "review_finding_count": 0,
+    "status": "PASS"
+  },
+  "unaccepted_warnings": [],
+  "unexplained_high_findings": [
+    {
+      "action": "REWRITE",
+      "column": 117,
+      "context": "essian}--\\eqref{eq:elliptic_group_condition}）。要判断这一映射是否在实际优化中产生可观测的后果，需要先处理最简单而且可精确验证的情形。F1 是对角椭球型函数，其 Hessian 呈严格对角形，因此每个组的条件数恰好等于组内最大与最小曲率尺度之",
+      "count": 1,
+      "file": "after",
+      "finding_hash": "55657e8256368e75fedbf96fbadb5f753bad9d9b7f26d8670a544ca312245606",
+      "line": 1,
+      "matched": "需要先",
+      "rationale": "把过程播报改成直接承载对象、动作或结果的正文；学术正文不得保留助手工作台旁白。",
+      "severity": "high",
+      "signal_id": "LEX-STRICT-CORPUS-PROCESS-01"
+    }
+  ],
+  "unexplained_strict_findings": [
+    {
+      "action": "REWRITE",
+      "column": 117,
+      "context": "essian}--\\eqref{eq:elliptic_group_condition}）。要判断这一映射是否在实际优化中产生可观测的后果，需要先处理最简单而且可精确验证的情形。F1 是对角椭球型函数，其 Hessian 呈严格对角形，因此每个组的条件数恰好等于组内最大与最小曲率尺度之",
+      "count": 1,
+      "file": "after",
+      "finding_hash": "55657e8256368e75fedbf96fbadb5f753bad9d9b7f26d8670a544ca312245606",
+      "line": 1,
+      "matched": "需要先",
+      "rationale": "把过程播报改成直接承载对象、动作或结果的正文；学术正文不得保留助手工作台旁白。",
+      "severity": "high",
+      "signal_id": "LEX-STRICT-CORPUS-PROCESS-01"
+    }
+  ],
+  "warning_proposal_state": {
+    "attestation_status": "NOT_PROVIDED",
+    "cross_record_reviewer_linkability": "NOT_RECORDED",
+    "identity_verified": false,
+    "proposal_source": "NOT_PROVIDED",
+    "proposed_warning_fingerprints": [],
+    "review_clearance_granted": false,
+    "reviewer_identifier_collected": false,
+    "stable_reviewer_pseudonym_recorded": false,
+    "warning_review_request_sha256": null
+  },
+  "warning_resolutions": {},
+  "warning_review_request": null,
+  "warnings_without_resolution_proposal": []
+}

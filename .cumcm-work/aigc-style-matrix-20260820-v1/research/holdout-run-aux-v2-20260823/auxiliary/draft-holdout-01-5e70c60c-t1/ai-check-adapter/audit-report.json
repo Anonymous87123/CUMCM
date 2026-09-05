@@ -1,0 +1,50 @@
+{
+  "schema": "aigc-adapter-run/v1",
+  "package": "humanize-main",
+  "action": "audit",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\research\\holdout-run-aux-v2-20260823\\auxiliary\\draft-holdout-01-5e70c60c-t1\\ai-check-adapter",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\research\\holdout-run-aux-v2-20260823\\authoring\\draft-holdout-01-5e70c60c-t1.tex",
+    "sha256": "3a81887e4c5f03e4b4cd44068cc28ef2fbd6dfaf152fe074aff504f4a4a3e3a0",
+    "bytes": 496,
+    "suffix": ".tex"
+  },
+  "protected_inventory": {
+    "numbers": {},
+    "tex_commands": {
+      "\\eqref": 1
+    },
+    "tex_keys": {
+      "\\eqref{eq:subspace_condition}": 1
+    },
+    "inline_math": {
+      "G": 1
+    },
+    "dollar_display_math": {},
+    "display_math": {},
+    "math_environments": {},
+    "code_fences": {},
+    "urls": {}
+  },
+  "diagnostics": {
+    "characters": 204,
+    "non_whitespace_characters": 195,
+    "paragraphs": 1,
+    "sentences": 4,
+    "sentence_length_min": 15,
+    "sentence_length_max": 103,
+    "sentence_length_mean": 48.75,
+    "duplicate_paragraphs": [],
+    "boilerplate_hits": {},
+    "unresolved_placeholders": []
+  },
+  "interpretation": "Deterministic signals locate review targets only; they do not identify the author, prove academic quality, or predict an external detector."
+}

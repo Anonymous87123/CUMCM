@@ -1,0 +1,174 @@
+{
+  "schema": "aigc-tex-blind-review-addendum/v1",
+  "state": "LEGACY_SEAL_REVIEW_READY",
+  "created_at_utc": "2026-08-18T12:33:15+00:00",
+  "release_id": "aigc-mcm-v6d-20260818",
+  "pair_count": 10,
+  "parent_seal": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\blind-review-v6d\\holdout-seal.json",
+    "sha256": "bafd340bbe3cf556cdfb0500ee83cd542c1dcfffd8c575c3a9c35d1af157e326",
+    "bytes": 4865
+  },
+  "inherited_artifacts": {
+    "spec": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\blind-review-v6d\\holdout-spec.json",
+      "bytes": 5294,
+      "sha256": "5a94ba6e0b4812f996b1e479475d81e950d16984fea2bb1bf10e9229f45f5f42",
+      "schema": "aigc-tex-blind-pair-spec/v1"
+    },
+    "pairs": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\blind-review-v6d\\holdout-pairs.json",
+      "bytes": 14288,
+      "sha256": "db45d783dcd11bd2e7f7dcbb516d5955859cbd645a571b724b8a261b02b4bc9e",
+      "schema": "aigc-blind-pairs/v1"
+    },
+    "key": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\blind-review-v6d\\blind-run\\evaluation-key.json",
+      "bytes": 1672,
+      "sha256": "81a820a2272db0c9ce673ca00ff3cd8cb124b31a35a6be856463af2b8055035e",
+      "schema": "aigc-blind-key/v1"
+    },
+    "packet": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\blind-review-v6d\\blind-run\\evaluation-packet.json",
+      "bytes": 10066,
+      "sha256": "8335d5f6c38c086fc40f6b43b9087a6592c87822215a284ba32a281fac15cba4",
+      "schema": "aigc-blind-packet/v1"
+    },
+    "ratings_template": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\blind-review-v6d\\blind-run\\ratings-template.csv",
+      "bytes": 404,
+      "sha256": "29175ddb7920f796557289387598bed1edcf70862a66dc3df1568f163a233af7"
+    }
+  },
+  "review_page": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\blind-review-v6d\\blind-run\\review-legacy.html",
+    "sha256": "7c8823345a2c57074158214247e3f4b22a024a4949635ccf02bb8979c9b0f7d1",
+    "bytes": 22947
+  },
+  "review_bundle": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\blind-review-v6d\\blind-run\\review-bundle-legacy.json",
+    "sha256": "47aadc322d447b09f8d8a39577d814177c6f1752545fe0e85608f29e7a9be6a3",
+    "bytes": 926
+  },
+  "historical_rule_snapshot": [
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\SKILL.md",
+      "bytes": 34551,
+      "sha256": "eb8542c8d37710811aef17719d7e6ced82c847eb5d6c736c49ba4a44d7d40367"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\route_aigc_tools.py",
+      "bytes": 25427,
+      "sha256": "e2052463b575f05cb05dbe5cef0513b116dd85f4fd1e2be8fbc1ffbd1298a084"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\adapter_core.py",
+      "bytes": 8710,
+      "sha256": "11037d85778242cdd72e9b2249ecdefdcccd8941e7688141ca234c8cbf9296cf"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\run_stack_evaluation.py",
+      "bytes": 16229,
+      "sha256": "771f9377df6de74f60af9eece0d88bb415dbe5ce21b2285e05f3e92ee0ace4fc"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\SKILL.md",
+      "bytes": 26716,
+      "sha256": "bc962c3b8007a177788edca1bfd11d7819b1d6a53d3854fe92b175cf73996e9e"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\modeling-reasoning-preservation.md",
+      "bytes": 3258,
+      "sha256": "4bef51e2a4c0272d3a6c0b8ce75a0f4200e0dfe48f2f42cee679183dd3ecba74"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\generator-projection-policy.json",
+      "bytes": 4955,
+      "sha256": "5c48cc5c0193075052b0b648231540f5a0c3e0c5d16879fdc948679074d79c4e"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\SKILL.md",
+      "bytes": 30381,
+      "sha256": "82a847645631e6f2d236048cb701bf01061a3833853d24c6770add0389438934"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_content_density.py",
+      "bytes": 26714,
+      "sha256": "64304d373789d7199145e3ea944a48461f0aaca2377e70517f62b51f7eba408b"
+    }
+  ],
+  "rule_state_observed_at_attachment": [
+    {
+      "index": 1,
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\SKILL.md",
+      "expected_sha256": "eb8542c8d37710811aef17719d7e6ced82c847eb5d6c736c49ba4a44d7d40367",
+      "current_sha256": "2364aaee2b37f8ebca0bf68326c064de916d934fa7305d74ca7607bd30b311e4",
+      "state": "drifted"
+    },
+    {
+      "index": 2,
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\route_aigc_tools.py",
+      "expected_sha256": "e2052463b575f05cb05dbe5cef0513b116dd85f4fd1e2be8fbc1ffbd1298a084",
+      "current_sha256": "8e0730af24f59a8a7e7803195b241ff7dcb63cb58996b4adafe0212501dcab68",
+      "state": "drifted"
+    },
+    {
+      "index": 3,
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\adapter_core.py",
+      "expected_sha256": "11037d85778242cdd72e9b2249ecdefdcccd8941e7688141ca234c8cbf9296cf",
+      "current_sha256": "11037d85778242cdd72e9b2249ecdefdcccd8941e7688141ca234c8cbf9296cf",
+      "state": "unchanged"
+    },
+    {
+      "index": 4,
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\run_stack_evaluation.py",
+      "expected_sha256": "771f9377df6de74f60af9eece0d88bb415dbe5ce21b2285e05f3e92ee0ace4fc",
+      "current_sha256": "771f9377df6de74f60af9eece0d88bb415dbe5ce21b2285e05f3e92ee0ace4fc",
+      "state": "unchanged"
+    },
+    {
+      "index": 5,
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\SKILL.md",
+      "expected_sha256": "bc962c3b8007a177788edca1bfd11d7819b1d6a53d3854fe92b175cf73996e9e",
+      "current_sha256": "bc962c3b8007a177788edca1bfd11d7819b1d6a53d3854fe92b175cf73996e9e",
+      "state": "unchanged"
+    },
+    {
+      "index": 6,
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\modeling-reasoning-preservation.md",
+      "expected_sha256": "4bef51e2a4c0272d3a6c0b8ce75a0f4200e0dfe48f2f42cee679183dd3ecba74",
+      "current_sha256": "4bef51e2a4c0272d3a6c0b8ce75a0f4200e0dfe48f2f42cee679183dd3ecba74",
+      "state": "unchanged"
+    },
+    {
+      "index": 7,
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\generator-projection-policy.json",
+      "expected_sha256": "5c48cc5c0193075052b0b648231540f5a0c3e0c5d16879fdc948679074d79c4e",
+      "current_sha256": "5c48cc5c0193075052b0b648231540f5a0c3e0c5d16879fdc948679074d79c4e",
+      "state": "unchanged"
+    },
+    {
+      "index": 8,
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\SKILL.md",
+      "expected_sha256": "82a847645631e6f2d236048cb701bf01061a3833853d24c6770add0389438934",
+      "current_sha256": "0e50c164acc4f9307a8c89c467fc5a0d8546c3c1d7e09aa5be10fffd95ff9e3f",
+      "state": "drifted"
+    },
+    {
+      "index": 9,
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_content_density.py",
+      "expected_sha256": "64304d373789d7199145e3ea944a48461f0aaca2377e70517f62b51f7eba408b",
+      "current_sha256": "64304d373789d7199145e3ea944a48461f0aaca2377e70517f62b51f7eba408b",
+      "state": "unchanged"
+    }
+  ],
+  "claims": {
+    "pairs_resampled": false,
+    "packet_changed": false,
+    "candidate_regenerated": false,
+    "historical_rule_hashes_replaced": false,
+    "current_release_validation": false,
+    "human_rating_completed": false
+  },
+  "interpretation": "This addendum upgrades only the anonymous review transport. It preserves the historical candidate, pair sample, packet, and recorded rule hashes; it is not evidence that the candidate was generated by the current rules."
+}

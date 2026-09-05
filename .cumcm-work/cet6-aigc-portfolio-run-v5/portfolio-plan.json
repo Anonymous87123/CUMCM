@@ -1,0 +1,202 @@
+{
+  "schema": "aigc-portfolio-orchestration/v1",
+  "version": 2,
+  "source": {
+    "path": "D:\\code LateX\\elegantbook\\CET6\\cet 6\\_analysis_output\\section_b_final_conclusions_report_v2.tex",
+    "snapshot": "F:\\CUMCM\\.cumcm-work\\cet6-aigc-portfolio-run-v5\\source.snapshot.tex",
+    "sha256": "5687dd8dda136dbc9843c635dc9a9acf4d88b8de40024062f86cf982f9c69253",
+    "bytes": 98080
+  },
+  "proxy": {
+    "snapshot": "F:\\CUMCM\\.cumcm-work\\cet6-aigc-portfolio-run-v5\\proxy.snapshot.txt",
+    "sha256": "393e338e6cfcc5efeda221107fccc09bce608e484bda6e6182e1fec6897a29c6",
+    "format": "txt",
+    "scope": "style-only"
+  },
+  "scene": {
+    "document_type": "research",
+    "document_format": "tex",
+    "intent": "compare",
+    "candidate_policy": "independent_same_source_branches",
+    "hard_gates": [
+      "claim-evidence",
+      "proof",
+      "citation-alignment",
+      "version-reconciliation",
+      "document-integrity"
+    ],
+    "human_gates": [
+      "blind-writing-review",
+      "candidate-decision"
+    ]
+  },
+  "stages": [
+    {
+      "provider": "deai-academic-writing",
+      "role": "content-owner",
+      "status": "requires_evidence",
+      "mandatory": true,
+      "required_evidence": [
+        "authority-map",
+        "whole-argument-map",
+        "scene-dispatch",
+        "fact-lock",
+        "rule-findings",
+        "gate-summary"
+      ],
+      "note": "Read the complete scene Skill and attach a source-bound role receipt; routing alone is not execution."
+    },
+    {
+      "provider": "deai-research-writing",
+      "role": "content-owner",
+      "status": "requires_evidence",
+      "mandatory": true,
+      "required_evidence": [
+        "authority-map",
+        "fact-lock",
+        "novelty-ledger",
+        "claim-evidence-matrix",
+        "proof-citation-version-gates",
+        "gate-summary"
+      ],
+      "note": "Read the complete scene Skill and attach a source-bound role receipt; routing alone is not execution."
+    }
+  ],
+  "branches": [
+    {
+      "id": "H1",
+      "provider": "humanize-academic-chinese",
+      "role": "candidate",
+      "authority_source_sha256": "5687dd8dda136dbc9843c635dc9a9acf4d88b8de40024062f86cf982f9c69253",
+      "parent_candidate": null,
+      "pass_count": 1,
+      "mandatory": true,
+      "scope": "document",
+      "selection_eligible": true,
+      "required_evidence": [
+        "audit-report",
+        "candidate-task",
+        "candidate-file",
+        "candidate-verification",
+        "change-report"
+      ],
+      "required_hard_gates": [
+        "claim-evidence",
+        "proof",
+        "citation-alignment",
+        "version-reconciliation",
+        "document-integrity"
+      ],
+      "input_sha256": "5687dd8dda136dbc9843c635dc9a9acf4d88b8de40024062f86cf982f9c69253",
+      "input_path": "F:\\CUMCM\\.cumcm-work\\cet6-aigc-portfolio-run-v5\\source.snapshot.tex",
+      "input_format": "tex",
+      "status": "ready",
+      "evidence": {},
+      "gate_results": {},
+      "code": null,
+      "preparation_report": "F:\\CUMCM\\.cumcm-work\\cet6-aigc-portfolio-run-v5\\branches\\H1\\prepare\\prepare-report.json"
+    },
+    {
+      "id": "B1",
+      "provider": "baibai-aigc",
+      "role": "candidate",
+      "authority_source_sha256": "5687dd8dda136dbc9843c635dc9a9acf4d88b8de40024062f86cf982f9c69253",
+      "parent_candidate": null,
+      "pass_count": 1,
+      "mandatory": false,
+      "scope": "local-proxy",
+      "selection_eligible": false,
+      "required_evidence": [
+        "audit-report",
+        "workbench-plan",
+        "candidate-task",
+        "candidate-file",
+        "candidate-verification"
+      ],
+      "required_hard_gates": [
+        "claim-evidence",
+        "proof",
+        "citation-alignment",
+        "version-reconciliation",
+        "document-integrity"
+      ],
+      "input_sha256": "393e338e6cfcc5efeda221107fccc09bce608e484bda6e6182e1fec6897a29c6",
+      "input_path": "F:\\CUMCM\\.cumcm-work\\cet6-aigc-portfolio-run-v5\\proxy.snapshot.txt",
+      "input_format": "txt",
+      "status": "ready",
+      "evidence": {},
+      "gate_results": {},
+      "code": null,
+      "preparation_report": "F:\\CUMCM\\.cumcm-work\\cet6-aigc-portfolio-run-v5\\branches\\B1\\prepare\\prepare-report.json"
+    }
+  ],
+  "reviewers": [
+    {
+      "provider": "patina",
+      "role": "reviewer",
+      "status": "ready_read_only",
+      "mandatory": true,
+      "required_evidence": [
+        "audit-report",
+        "native-run-report"
+      ],
+      "input_path": "F:\\CUMCM\\.cumcm-work\\cet6-aigc-portfolio-run-v5\\proxy.snapshot.txt",
+      "input_sha256": "393e338e6cfcc5efeda221107fccc09bce608e484bda6e6182e1fec6897a29c6",
+      "note": "Run the reviewer's complete read-only audit and attach its native/report evidence."
+    },
+    {
+      "provider": "ai-check",
+      "role": "reviewer",
+      "status": "ready_read_only",
+      "mandatory": true,
+      "required_evidence": [
+        "audit-report"
+      ],
+      "input_path": "F:\\CUMCM\\.cumcm-work\\cet6-aigc-portfolio-run-v5\\proxy.snapshot.txt",
+      "input_sha256": "393e338e6cfcc5efeda221107fccc09bce608e484bda6e6182e1fec6897a29c6",
+      "note": "Run the reviewer's complete read-only audit and attach its native/report evidence."
+    }
+  ],
+  "workbenches": [
+    {
+      "provider": "AI_paper",
+      "role": "workbench",
+      "status": "prepared",
+      "mandatory": true,
+      "required_evidence": [
+        "workbench-plan",
+        "audit-report",
+        "document-map",
+        "diff-report",
+        "export-artifact",
+        "candidate-verification"
+      ],
+      "code": null,
+      "plan_report": "F:\\CUMCM\\.cumcm-work\\cet6-aigc-portfolio-run-v5\\workbenches\\AI_paper\\plan\\workbench-plan.json",
+      "evidence": {
+        "workbench-plan": {
+          "path": "F:\\CUMCM\\.cumcm-work\\cet6-aigc-portfolio-run-v5\\workbenches\\AI_paper\\plan\\workbench-plan.json",
+          "sha256": "afd076bd9fd158228cab486f78c46abdc0ee8405c9910a92ac2ade4b679aced6"
+        }
+      }
+    }
+  ],
+  "selection": {
+    "status": "pending",
+    "accepted": null,
+    "reason": null,
+    "reviewer": null
+  },
+  "claims": {
+    "native_generation_ran": false,
+    "all_roles_complete": false,
+    "all_roles_resolved": false,
+    "human_quality_clearance": false,
+    "candidate_files_registered": 0
+  },
+  "next_actions": [
+    "Read each selected content Skill completely and attach a role receipt with every required evidence artifact.",
+    "Register each independent candidate from its recorded input branch; never use another candidate as input.",
+    "Run selected reviewers/workbenches and attach their source-bound receipts; waive only with an explicit fallback record."
+  ]
+}

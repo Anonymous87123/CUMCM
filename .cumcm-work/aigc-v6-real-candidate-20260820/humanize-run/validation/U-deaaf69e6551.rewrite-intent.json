@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "bbe3b06fc9e36932dad3a8eedc9d87c4889181d50b7ea0d755e9d9f3c7a48a1f",
+    "before_sha256": "bbe3b06fc9e36932dad3a8eedc9d87c4889181d50b7ea0d755e9d9f3c7a48a1f"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "7e90229dec4a686460c95e1912e0c15f0b06ece082d373a2685a46d3ddbf879a",
+  "chunk_binding_sha256": "f71f37fb87a56ac4b9ac6c242e4bbdec1f2472b7ab27958b3cce555a9be26020",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-deaaf69e6551.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "63dde460dcb5d6fae853b76687b6918f11e6f35a0ccffb1765fce085184d5b2c",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 4,
+        "id": "S1",
+        "sha256": "cc10764acdd7b96adc1dddacb0ab46613e7002c6ad5d5162b0f2a8d38981ef1f",
+        "start_line": 2
+      }
+    ],
+    "reason": "问题五分析区分四类指标与赋权复核，原段承担情景评价范围说明。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "3bb5b6901df2926528acf84d1137fb457968da22d098289a89c33fa2dde236b1",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-deaaf69e6551"
+}

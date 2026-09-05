@@ -1,0 +1,17 @@
+{
+  "schema": "aigc-longform-gates/v1",
+  "gates": [
+    {
+      "id": "manuscript",
+      "required": true,
+      "tool_path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_manuscript.py",
+      "command": "python \"C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_manuscript.py\" \"<human-selected-main.tex>\" --problem-type A --format json"
+    },
+    {
+      "id": "compile-and-render",
+      "required": true,
+      "command": "latexmk -xelatex -interaction=nonstopmode -halt-on-error \"<human-selected-main.tex>\"",
+      "manual_followup": "inspect the rendered PDF, warnings, references, figures, tables and page boundaries"
+    }
+  ]
+}

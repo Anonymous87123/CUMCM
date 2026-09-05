@@ -1,0 +1,6 @@
+interface:
+  display_name: "AI Check"
+  short_description: "Produce an advisory style report for ordinary prose"
+  default_prompt: "Use $ai-check to locate review targets in ordinary prose without inferring authorship or using the score as a verdict."
+policy:
+  allow_implicit_invocation: false

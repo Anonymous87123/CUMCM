@@ -1,0 +1,171 @@
+﻿[
+  {
+    "id": "2022_B035_P3696",
+    "year": 2022,
+    "problem_type": "B",
+    "paper": "B035",
+    "page_start": 8,
+    "page_end": 8,
+    "section": "model",
+    "quality": "medium",
+    "median_confidence": 0.9299,
+    "han_chars": 109,
+    "sentence_count": 5,
+    "actions": [
+      "equation_interface",
+      "result",
+      "statement"
+    ],
+    "action_sequence": [
+      "statement",
+      "result",
+      "statement",
+      "equation_interface",
+      "statement"
+    ],
+    "opening_family": "其他",
+    "closing_family": "其他",
+    "formula_nearby": true,
+    "visual_nearby": true,
+    "models": [],
+    "source_methods": [
+      "tesseract-chi_sim+eng-220dpi"
+    ],
+    "source": "2022/B035.pdf#page=8",
+    "text": "我们在直角坐标系下写出向量05!的表达式,BOS)=reosaosif+rsinausj.WICH线对应的向量即在OS,左乘一个对应转动角度为90°的旋转矩阵。由于旋转方向未知,会计算出两个不同的圆心。下面的公式中分别给出了硕时针和逆时针的旋转矩阵。加上上文中得出的圆的半径的计算,我们可以得到图心的坐标。",
+    "retrieval_eligible": false,
+    "index_line": 3696,
+    "score": 7,
+    "source_type": "fulltext",
+    "index_source": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:3696",
+    "previous_context": [
+      {
+        "source": "2022/B035.pdf#page=8",
+        "section": "model",
+        "text": "05;的中点。在等腰三角形AS\\00us,可以计算求得该圆的半径为Rss==,,同时ADAHhe=Ous对=5。同时这个图心在线段OS,的中生线上,满足这样的点一共有两个,分别记作Ous和Of,。"
+      }
+    ],
+    "next_context": [
+      {
+        "source": "2022/B035.pdf#page=9",
+        "section": "model",
+        "text": "最后我们需要在Oos:和O%s中确定准确的圆心。注意到如果待测飞机在准确位置处,os:最大为80°,由假设一可知,在实际测量中αos:=80°±10°,此时R和Oasi必然在线段0S,的同侧。故我们用叉积的方法排除另一个点。"
+      }
+    ]
+  },
+  {
+    "id": "2025_B157_P7832",
+    "year": 2025,
+    "problem_type": "B",
+    "paper": "B157",
+    "page_start": 15,
+    "page_end": 17,
+    "section": "model",
+    "quality": "medium",
+    "median_confidence": 0.9243,
+    "han_chars": 244,
+    "sentence_count": 5,
+    "actions": [
+      "choice",
+      "explanation",
+      "limitation",
+      "observation",
+      "result",
+      "statement",
+      "validation"
+    ],
+    "action_sequence": [
+      "observation",
+      "validation",
+      "choice",
+      "statement",
+      "explanation"
+    ],
+    "opening_family": "其他",
+    "closing_family": "其他",
+    "formula_nearby": true,
+    "visual_nearby": true,
+    "models": [
+      "最小二乘"
+    ],
+    "source_methods": [
+      "rapidocr-120dpi",
+      "tesseract-chi_sim+eng-220dpi"
+    ],
+    "source": "2025/B157.pdf#page=15",
+    "text": "4.频段稳健性检验”在有效波段内采用滑动窗口对不同子频段进行厚度拟合,图19结果显示厚度估计始终稳定在7.597.64hm之间,相对波动不足196。不同子带结果围绕全带拟合值上下波动,未出现系统性僚移。这表明模型对频段选择不敬感,具有和良好的SiC10°联合拟合、单角拟合残差频谱图SiC15°联合拟合、单角拟合残差频谱图5.参数不确定度与相关性分析”基于最小二乘法的雅可比矩阵计算得到的协方差结果表明,厚度参数了的相对标准差小于2%,AD刀的标准其也处于合理范围。相关性热图(图20)Sead54存在中等相关性,AD号的相关性较高,但均低于0.9,没有严重的共线性问题。说明参数可辨识性良好,厚度估计具有统计意义上的可信度。",
+    "retrieval_eligible": false,
+    "index_line": 7832,
+    "score": 7,
+    "source_type": "fulltext",
+    "index_source": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:7832",
+    "previous_context": [
+      {
+        "source": "2025/B157.pdf#page=15",
+        "section": "model",
+        "text": "3.双角一致性检验”在厚度估计结果上,由图18可得10*与15°单角拟合得到的厚度差异小于3%,联合拟合结果与二者平均值的葡异不超过2%,LETSHRARES上,联合拟合相比单角拟合能有效降低残差波动,并在两个角度下同时保持一致性。这说明模型在不同实验条件下具有较高的稳定性,联合拟合策铬能提升结果稳健性。"
+      }
+    ],
+    "next_context": [
+      {
+        "source": "2025/B157.pdf#page=17",
+        "section": "model",
+        "text": "6.敏感性分析对波数刻度误差(s)与人射角偏差(A6)的敏感性分析表明:Ze40.2%的波数伸缩和+0.3?的角度误差范围内,厚度相对变化率分别控制在40.2%与40.04%以内。可见模型对实验系统的小扰动具有较强的鲁棒性。"
+      }
+    ]
+  },
+  {
+    "id": "2022_B030_P3576",
+    "year": 2022,
+    "problem_type": "B",
+    "paper": "B030",
+    "page_start": 7,
+    "page_end": 8,
+    "section": "model",
+    "quality": "medium",
+    "median_confidence": 0.8739,
+    "han_chars": 189,
+    "sentence_count": 5,
+    "actions": [
+      "choice",
+      "derivation",
+      "statement"
+    ],
+    "action_sequence": [
+      "statement",
+      "choice",
+      "derivation",
+      "choice",
+      "derivation"
+    ],
+    "opening_family": "其他",
+    "closing_family": "其他",
+    "formula_nearby": true,
+    "visual_nearby": false,
+    "models": [],
+    "source_methods": [
+      "rapidocr-120dpi"
+    ],
+    "source": "2022/B030.pdf#page=7",
+    "text": "s,表示接收的信号角度Zok的值存在的偏差;由正弦定理可得如下等式:长度变量p,可通过式(1-2)分离所得:由于式(1-3)中的两个等式是等价的,下文将选取pα,的等式。角度变量6,可通过式(1-2)联立所得:联合式(1-3)、式(1-4),给出定位模型1:第一类下,b形态:,-0>元,,-<元指ok与oi所成夹角大于180°,ok与oj所成夹角小于180°。接收到的方向信息α,α,,通过几何角度表示如下:由正弦定理可得如下等式:长度变量,可通过式(1-7)分离所得:由于式(1-8)中的两个等式是等价的,下文将选取Ps,α,的等式。角度变量6可通过式(1-7)联立所得:联合式(1-8)、式(1-9),给出定位模型2:",
+    "retrieval_eligible": false,
+    "index_line": 3576,
+    "score": 6,
+    "source_type": "fulltext",
+    "index_source": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:3576",
+    "previous_context": [
+      {
+        "source": "2022/B030.pdf#page=6",
+        "section": "model",
+        "text": "指ok与oj、oi所成夹角均小于180°,其中,9,表示被动接收信号的无人机所对应位置上的无偏角度坐标"
+      }
+    ],
+    "next_context": [
+      {
+        "source": "2022/B030.pdf#page=9",
+        "section": "model",
+        "text": "此后4种状态的定位模型分析情况与上述分析一致,篇幅原因不再赞述,下文直接给出定位模型表达式:第一类下,形态:,->元,,-0>元"
+      }
+    ]
+  }
+]

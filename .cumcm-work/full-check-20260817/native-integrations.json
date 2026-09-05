@@ -1,0 +1,427 @@
+﻿{
+  "schema": "aigc-native-integration-test/v1",
+  "status": "pass",
+  "execute_safe": true,
+  "packages": 21,
+  "counts": {
+    "native_executed": 3,
+    "syntax_checked": 12,
+    "prompt_contract": 4,
+    "entrypoint_only": 2,
+    "blocked": 0
+  },
+  "execution_coverage": "partial",
+  "all_packages_natively_executed": false,
+  "results": [
+    {
+      "directory": "aigc-writing-router",
+      "kind": "router",
+      "tier": "syntax_checked",
+      "evidence": [
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\route_aigc_tools.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_role_contracts.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_academic_candidate.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_portfolio_selection.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_folder_utilization.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\prepare_stack_evaluation.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\run_stack_evaluation.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\run_style_benchmark.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\run_longform_portfolio.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\blind_pair_evaluation.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\test_academic_candidate.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\test_role_contracts.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\test_stack_evaluation.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\test_style_benchmark.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\test_longform_release.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\test_native_integrations.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\test_folder_utilization.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_invocation_policy.py",
+          "kind": "python-compile",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "directory": "humanize-academic-chinese",
+      "kind": "skill",
+      "tier": "syntax_checked",
+      "evidence": [
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\scripts\\run_humanize_inline.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\scripts\\scan_humanize_chinese.py",
+          "kind": "python-compile",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "directory": "baibaiAIGC",
+      "kind": "skill",
+      "tier": "syntax_checked",
+      "evidence": [
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\baibaiAIGC\\scripts\\run_aigc_round.py",
+          "kind": "python-compile",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "directory": "humanizer",
+      "kind": "skill",
+      "tier": "syntax_checked",
+      "evidence": [
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanizer\\scripts\\validate-package.py",
+          "kind": "python-compile",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "directory": "Humanizer-zh-main",
+      "kind": "skill",
+      "tier": "prompt_contract",
+      "evidence": [
+        {
+          "kind": "skill-entrypoint",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "directory": "academic-humanizer-main",
+      "kind": "imported-skill",
+      "tier": "prompt_contract",
+      "evidence": [
+        {
+          "kind": "skill-entrypoint",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "directory": "humanizer_academic-main",
+      "kind": "imported-skill",
+      "tier": "prompt_contract",
+      "evidence": [
+        {
+          "kind": "skill-entrypoint",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "directory": "patina-7.0.0",
+      "kind": "imported-skill",
+      "tier": "native_executed",
+      "evidence": [
+        {
+          "kind": "declared-offline-native",
+          "status": "pass",
+          "command": [
+            "node",
+            "bin/patina.js",
+            "--lang",
+            "zh",
+            "--score",
+            "--offline",
+            "--format",
+            "json",
+            "--quiet",
+            "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\aigc-native-integrations-mubhm4ll\\source.txt"
+          ],
+          "returncode": 0,
+          "stdout": "{\n  \"mode\": \"score\",\n  \"format\": \"json\",\n  \"overall\": 0,\n  \"categories\": [],\n  \"register\": null,\n  \"mps\": null,\n  \"gateResult\": null,\n  \"persona\": null,\n  \"output\": \"Overall: 0\\nInterpretation: human\\nScoring: deterministic only; LLM-judged categories unavailable.\\nParagraphs: 2\\nHot paragraphs: 0\\nSignal score: 0\\nEvidence floor: 0\\nSkipped signal: paragraphs<=2\",\n  \"scores\": {\n    \"llm\": null,\n    \"deterministic\": {\n      \"overall\": 0,\n      \"evidenceFloor\": 0,\n      \"shortFormFloor\": 0,\n      \"interpretation\": \"human\",\n      \"skipped\": true,\n      \"skipReason\": \"paragraphs<=2\",\n      \"paragraphCount\": 2,\n      \"hotParagraphs\": 0,\n      \"signalScore\": 0,\n      \"bands\": {\n        \"burstiness\": {\n          \"low\": 0,\n          \"mid\": 0,\n          \"high\": 0,\n          \"null\": 2\n        },\n        \"mattr\": {\n          \"low\": 0,\n          \"mid\": 0,\n          \"high\": 2,\n          \"null\": 0\n        },\n        \"lexicon\": {\n          \"hot\": 0,\n          \"threshold\": 3\n        },\n        \"koDiagnostics\": {\n          \"hot\": 0,\n          \"thresholds\": {\n            \"minSentences\": 4,\n            \"minEojeols\": 20,\n            \"spacing\": {\n              \"maxEojeolLengthCV\": 0.38\n            },\n            \"comma\": {\n              \"maxPerSentence\": 1\n            },\n            \"posProxy\": {\n              \"minMatchedCount\": 10,\n              \"maxClassDiversity\": 0.26\n            }\n          }\n        },\n        \"markupLeakage\": {\n          \"leaked\": false,\n          \"hits\": 0,\n          \"floor\": 90\n        },\n        \"discourseTells\": {\n          \"hot\": false,\n          \"fakeCandor\": {\n            \"count\": 0,\n            \"hits\": [],\n            \"hot\": false,\n            \"threshold\": 2\n          },\n          \"thematicBreaks\": {\n            \"count\": 0,\n            \"adjacentToHeading\": 0,\n            \"hot\": false,\n            \"threshold\": 3\n          }\n        },\n        \"structuralClassifier\": {\n          \"available\": false,\n          \"hot\": null,\n          \"score\": null,\n          \"floor\": 0\n        }\n      }\n    },\n    \"preference\": \"deterministic-only\"\n  }\n}\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "directory": "humanizer-main(brandonwise)",
+      "kind": "imported-skill",
+      "tier": "native_executed",
+      "evidence": [
+        {
+          "kind": "declared-offline-native",
+          "status": "pass",
+          "command": [
+            "node",
+            "src/cli.js",
+            "analyze",
+            "--json",
+            "-f",
+            "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\aigc-native-integrations-mubhm4ll\\source.txt"
+          ],
+          "returncode": 0,
+          "stdout": "{\n  \"score\": 0,\n  \"patternScore\": 0,\n  \"uniformityScore\": 0,\n  \"reliability\": {\n    \"level\": \"low\",\n    \"score\": 5,\n    \"reasons\": [\n      \"Sample is very short (<80 words).\",\n      \"Fewer than 4 sentences limits rhythm analysis.\",\n      \"Only one AI pattern family was detected.\",\n      \"Uniformity metrics were not applied (text too short or too sparse).\"\n    ],\n    \"recommendedMinWords\": 150,\n    \"recommendation\": \"Treat this score as directional. Re-run on 150+ words across multiple paragraphs before making high-stakes calls.\"\n  },\n  \"totalMatches\": 0,\n  \"wordCount\": 22,\n  \"stats\": {\n    \"wordCount\": 20,\n    \"uniqueWordCount\": 17,\n    \"sentenceCount\": 1,\n    \"paragraphCount\": 2,\n    \"avgWordLength\": 3.8,\n    \"avgSentenceLength\": 20,\n    \"sentenceLengthStdDev\": 0,\n    \"sentenceLengthVariation\": 0,\n    \"burstiness\": 0,\n    \"typeTokenRatio\": 0.85,\n    \"functionWordRatio\": 0.35,\n    \"trigramRepetition\": 0,\n    \"avgParagraphLength\": 10,\n    \"fleschKincaid\": 9.32,\n    \"sentenceLengths\": [\n      20\n    ]\n  },\n  \"categories\": {\n    \"content\": {\n      \"label\": \"Content patterns\",\n      \"matches\": 0,\n      \"weightedScore\": 0,\n      \"patternsDetected\": []\n    },\n    \"language\": {\n      \"label\": \"Language & grammar\",\n      \"matches\": 0,\n      \"weightedScore\": 0,\n      \"patternsDetected\": []\n    },\n    \"style\": {\n      \"label\": \"Style patterns\",\n      \"matches\": 0,\n      \"weightedScore\": 0,\n      \"patternsDetected\": []\n    },\n    \"communication\": {\n      \"label\": \"Communication artifacts\",\n      \"matches\": 0,\n      \"weightedScore\": 0,\n      \"patternsDetected\": []\n    },\n    \"filler\": {\n      \"label\": \"Filler & hedging\",\n      \"matches\": 0,\n      \"weightedScore\": 0,\n      \"patternsDetected\": []\n    }\n  },\n  \"findings\": [],\n  \"summary\": \"No significant AI writing patterns detected. The text looks human-written. Confidence: low. Treat this score as directional. Re-run on 150+ words across multiple paragraphs before making high-stakes calls.\"\n}\n",
+          "stderr": ""
+        }
+      ]
+    },
+    {
+      "directory": "humanizer-skill-0.1.0",
+      "kind": "imported-skill",
+      "tier": "prompt_contract",
+      "evidence": [
+        {
+          "kind": "skill-entrypoint",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "directory": "humanize-main",
+      "kind": "imported-skill",
+      "tier": "syntax_checked",
+      "evidence": [
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-main\\humanize.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-main\\scripts\\scoring_core.py",
+          "kind": "python-compile",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "directory": "AI-Cleaner",
+      "kind": "application",
+      "tier": "syntax_checked",
+      "evidence": [
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\AI-Cleaner\\backend\\app\\main.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\AI-Cleaner\\backend\\app\\aigc_detector.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\AI-Cleaner\\backend\\app\\nlp\\pipeline.py",
+          "kind": "python-compile",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "directory": "AI-content-detector-Humanizer-main",
+      "kind": "application",
+      "tier": "syntax_checked",
+      "evidence": [
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\AI-content-detector-Humanizer-main\\main.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\AI-content-detector-Humanizer-main\\pages\\ai_detection.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\AI-content-detector-Humanizer-main\\pages\\humanize_text.py",
+          "kind": "python-compile",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "directory": "AI_paper",
+      "kind": "application",
+      "tier": "syntax_checked",
+      "evidence": [
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\AI_paper\\main.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\AI_paper\\modules\\api_client.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\AI_paper\\modules\\ai_reducer.py",
+          "kind": "python-compile",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "directory": "BypassAIGC",
+      "kind": "application",
+      "tier": "syntax_checked",
+      "evidence": [
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\BypassAIGC\\package\\main.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\BypassAIGC\\package\\backend\\app\\models\\models.py",
+          "kind": "python-compile",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "directory": "GankAIGC-2.1.0",
+      "kind": "application",
+      "tier": "syntax_checked",
+      "evidence": [
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\GankAIGC-2.1.0\\package\\main.py",
+          "kind": "python-compile",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "directory": "fuck-your-ai-detection-rate-main",
+      "kind": "application",
+      "tier": "syntax_checked",
+      "evidence": [
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\fuck-your-ai-detection-rate-main\\scripts\\web_app.py",
+          "kind": "python-compile",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "directory": "ai-humanizer-main",
+      "kind": "application",
+      "tier": "entrypoint_only",
+      "evidence": [
+        {
+          "kind": "entrypoint-presence",
+          "status": "pass",
+          "detail": "runtime was not started because it is a GUI, server, remote client, or build-dependent entrypoint"
+        }
+      ]
+    },
+    {
+      "directory": "humanize-text",
+      "kind": "application",
+      "tier": "syntax_checked",
+      "evidence": [
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-text\\src\\standard\\pipeline.py",
+          "kind": "python-compile",
+          "status": "pass"
+        },
+        {
+          "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-text\\src\\standard\\llm_client.py",
+          "kind": "python-compile",
+          "status": "pass"
+        }
+      ]
+    },
+    {
+      "directory": "humanize-ai-main",
+      "kind": "library",
+      "tier": "entrypoint_only",
+      "evidence": [
+        {
+          "kind": "entrypoint-presence",
+          "status": "pass",
+          "detail": "runtime was not started because it is a GUI, server, remote client, or build-dependent entrypoint"
+        }
+      ]
+    },
+    {
+      "directory": "humanize-main(Tiany)",
+      "kind": "imported-skill",
+      "tier": "native_executed",
+      "evidence": [
+        {
+          "kind": "tiany-comparator",
+          "status": "pass",
+          "returncode": 0,
+          "stdout": "{\n  \"schema\": \"tiany-candidate-comparison/v1\",\n  \"source\": {\n    \"path\": \"C:\\\\Users\\\\Lenovo\\\\AppData\\\\Local\\\\Temp\\\\aigc-native-integrations-mubhm4ll\\\\source.txt\",\n    \"sha256\": \"5398c9c5cc442a292c2c74343f6c441ede20fca5cdfd0790b5dd63b6076d88ec\"\n  },\n  \"max_change_ratio\": 0.45,\n  \"candidates\": [\n    {\n      \"path\": \"C:\\\\Users\\\\Lenovo\\\\AppData\\\\Local\\\\Temp\\\\aigc-native-integrations-mubhm4ll\\\\candidate.txt\",\n      \"sha256\": \"5398c9c5cc442a292c2c74343f6c441ede20fca5cdfd0790b5dd63b6076d88ec\",\n      \"protected_status\": \"pass\",\n      \"protected_drift\": [],\n      \"change_ratio\": 0.0,\n      \"four_gram_repetition\": 0.0,\n      \"boilerplate_hits\": {},\n      \"characters\": 151\n    }\n  ],\n  \"recommended_for_human_review\": \"C:\\\\Users\\\\Lenovo\\\\AppData\\\\Local\\\\Temp\\\\aigc-native-integrations-mubhm4ll\\\\candidate.txt\",\n  \"human_review_required\": true,\n  \"automatic_acceptance\": false,\n  \"status\": \"pass\"\n}\n",
+          "stderr": ""
+        }
+      ]
+    }
+  ],
+  "interpretation": "native_executed proves only the listed offline command ran; syntax_checked, prompt_contract and entrypoint_only are deliberately weaker evidence. Without --execute-safe this report is static preflight and must remain REVIEW."
+}

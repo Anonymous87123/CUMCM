@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "dd67bc11a9175c3459c23db41f955575e40892a93df55a1037fc64d2e7fd8c0f",
+    "before_sha256": "dd67bc11a9175c3459c23db41f955575e40892a93df55a1037fc64d2e7fd8c0f"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "55c126b68e8a9aaace07b3566b2fe1fb893e232984990b135f49924d3c208d45",
+  "chunk_binding_sha256": "1a260c73a03d10d0fc9fcde03aa7a93b679df2539468b4aa30cbe3d73938afb3",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-39b744730e0f.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "0e0ba93f7466adce422c12d4ec70b7e2cfd1ef7de3e3f495a64f1686c1dad6aa",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 7,
+        "id": "S1",
+        "sha256": "6a23c7e5d20050b484831345a2889e340483ebffb265948eb0951d6a221c0707",
+        "start_line": 1
+      }
+    ],
+    "reason": "参考文献命令与附录标题属于文档结构接口，保持原有位置和排版职责。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "751b4cc92bbd7a3415b25fcd7c95196bcb9c8996aa18088e5c4ac83f000c53e0",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-39b744730e0f"
+}

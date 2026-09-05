@@ -1,0 +1,16 @@
+{
+  "pipeline": "../analysis/model_pipeline.py",
+  "diagnostics": "../analysis/diagnostics.py",
+  "data_directory": "../data",
+  "input_files": ["appendix1.xlsx", "appendix2.xlsx", "appendix3.xlsx"],
+  "units": {"time": "ms", "pressure": "MPa", "length": "mm", "mass": "mg"},
+  "random_seed": 20190913,
+  "pressure_grid_step_mpa": 0.01,
+  "final_integration_step_ms": 0.02,
+  "saved_step_ms": 1.0,
+  "q1_final_horizon_ms": 20000.0,
+  "q1_tail_ms": 5000.0,
+  "q23_final_horizon_ms": 10000.0,
+  "q23_tail_ms": 3000.0,
+  "generated_results": ["../analysis/results/summary.json", "../analysis/results/diagnostics.json"]
+}

@@ -1,0 +1,61 @@
+# GitHub Pages Jekyll configuration
+
+title: "humanize — AI text humanizer skill for Claude, ChatGPT, Codex, Gemini"
+description: "LLM-agnostic skills for static AI text humanization and detection. Drop-in humanize and ai-check skills for Claude Code, Codex CLI, ChatGPT, and any LLM agent. Grounded in 50+ peer-reviewed papers."
+url: "https://harshaneel.github.io"
+baseurl: "/humanize"
+lang: en
+
+# SEO author info
+author: Harshaneel Gokhale
+author_url: "https://github.com/harshaneel"
+# twitter_username: yourhandle   # uncomment when you have one
+
+# Keywords (comma-separated). Largely ignored by Google but used by Bing, DuckDuckGo, and the structured-data block.
+keywords: "AI text humanizer, AI text detector, GPT detector, ChatGPT detector, Claude skills, Codex skills, AI writing detection, humanize AI text, ai-check, LLM skills, static rule-based, peer-reviewed, prompt engineering, anti-AI-detection, RLHF detection"
+
+# Open Graph / Twitter card image. Drop a 1280x640 PNG in the repo root as social-card.png to enable.
+og_image: "/social-card.png"
+
+# Enables Cayman's built-in "View on GitHub" button in the page hero.
+repository: harshaneel/humanize
+github:
+  is_project_page: true
+  repository_url: "https://github.com/harshaneel/humanize"
+  repository_name: humanize
+  owner_name: harshaneel
+  owner_url: "https://github.com/harshaneel"
+show_downloads: true
+
+# Theme. Cayman is a common default; switch if you prefer another GitHub Pages theme.
+theme: jekyll-theme-cayman
+
+# Google Search Console verification token.
+# Paste the value from the meta tag Google gave you (just the content="..." value, not the whole tag).
+google_site_verification: "DVxmoms-RR4bpzJ64iXxI7rQwP8DLjWWI9bOYWeEu4Q"
+
+# Render the README as the homepage.
+markdown: kramdown
+plugins:
+  - jekyll-relative-links
+  - jekyll-sitemap
+  - jekyll-seo-tag
+relative_links:
+  enabled: true
+  collections: true
+include:
+  - README.md
+
+# Give README.md a single canonical URL (the root) so Jekyll doesn't also
+# serve it at /README.html, which would create a duplicate-content URL.
+defaults:
+  - scope:
+      path: "README.md"
+    values:
+      permalink: /
+
+# Keep test fixtures out of the search index and sitemap.
+exclude:
+  - tests/
+  - bench/
+  - "*.tool-versions"

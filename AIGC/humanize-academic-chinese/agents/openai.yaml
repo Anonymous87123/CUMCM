@@ -1,0 +1,6 @@
+interface:
+  display_name: "中文学术文风 Humanizer"
+  short_description: "中文学术材料约束起草、全文去模板、经验证样本声线约束与定点润色"
+  default_prompt: "Use $humanize-academic-chinese 对中文学术文本执行纯文风起草或改写，默认启用 STRICT_CORPUS：先扫描并逐处处理 1417 条已发布高频机器腔词或完整词组；894778 条候选仅作发现和审计；单字只作发现根，不禁裸字；未解释命中不得 NO_CHANGE/CLEAN。同时保护事实、术语、公式和引语，生成并机械验证待审候选，不优化检测结果，不判断作者身份或学术正确性，也不把机械 PASS 或 second pass 当作质量完成。"
+policy:
+  allow_implicit_invocation: false

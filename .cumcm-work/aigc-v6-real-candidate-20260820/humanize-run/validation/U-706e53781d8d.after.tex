@@ -1,0 +1,32 @@
+\subsection{求解与结果}
+基准时间窗下，$\lambda_{\max}$先在1.4--4.8粗网格上扫描，再在3.0--3.4加密。首个连续正区间位于$K=3.2186$附近，3.22--3.40保持为正。表\ref{tab:q4robust}表明，在总积分时长固定为90的前提下，$K=3.20$与$K=3.22$之间的符号跨越在相邻步长和微扰初值下仍可保留。
+
+\begin{table}[htbp]
+\centering
+\caption{问题四短时间窗局部复核}
+\label{tab:q4robust}
+\small
+\begin{tabularx}{0.95\textwidth}{>{\raggedright\arraybackslash}p{4.1cm} >{\centering\arraybackslash}p{1.9cm} >{\centering\arraybackslash}p{1.9cm} >{\centering\arraybackslash}p{1.9cm} X}
+\toprule
+设置 & $\lambda_{\max}(3.20)$ & $\lambda_{\max}(3.22)$ & 判别 & 说明 \\
+\midrule
+基准步长 $dt=0.010$ & $-0.00135$ & $0.00117$ & 符号跨越 & 3.22 附近进入正指数区间 \\
+较小步长 $dt=0.008$ & $-0.00134$ & $0.00117$ & 符号跨越 & 结果与基准设置一致 \\
+较大步长 $dt=0.012$ & $-0.00129$ & $0.00123$ & 符号跨越 & 结果与基准设置一致 \\
+微扰初值 $(0.8005,0.1995,0.2)$ & $-0.00087$ & $0.00165$ & 符号跨越 & 微扰后仍保留同样的符号关系 \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{table}
+
+积分时长改变后，短窗口给出的起点发生移动。时长150时，3.0--3.4加密区间全部为正；时长200时，连续正区间从3.11开始，$\lambda_{\max}(3.20)=0.00579$、$\lambda_{\max}(3.22)=0.00701$也都为正。由5组初值、5个步长和3个积分时长组成的75组测试中，仅5组（6.7\%）保留$\lambda_{\max}(3.20)<0<\lambda_{\max}(3.22)$。该局部跨越在扩展设置下不具备统计稳健性。
+
+基准短时间窗下，$K=3.2186$附近出现局部跨越；积分时长和数值设置放宽后，这个跨越难以保持，不能说明起点固定，因此$K=3.2186$不能作为唯一临界点。本文据此只保留“承载力提高会增强系统复杂性”的方向性判断；若要定位分岔值，仍须采用更长积分时长（$\ge 500$）并配合分岔图。图\ref{fig:q4}给出不同积分时长下的有限时间指数。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.92\textwidth]{fig04_q4_lyapunov_scan.png}
+\caption{问题四不同积分时长下的有限时间李雅普诺夫指数扫描}
+\label{fig:q4}
+\end{figure}
+

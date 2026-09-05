@@ -1,0 +1,54 @@
+{
+  "schema": "aigc-style-benchmark-suite/v1",
+  "suite_id": "cumcm-v1-holdout",
+  "version": "2026-08-15",
+  "split": "holdout",
+  "providers": ["humanize-academic-chinese"],
+  "required_trials": 3,
+  "holdout_policy": {
+    "curator": "CUMCM team maintainer",
+    "release_id": "cumcm-style-stack-v1"
+  },
+  "purpose": "Keep this suite out of default CUMCM style retrieval. Run it only after the writing rules and candidate strategy are frozen; do not use its ratings to tune this release.",
+  "cases": [
+    {
+      "id": "a-search-error-boundary",
+      "scene": {"document_type": "mcm", "document_format": "plain", "scope": "local"},
+      "source": "cumcm-v1-holdout/sources/a-search-error-boundary.txt",
+      "challenge_tags": ["public-judgment", "math-protection", "boundary-conditions", "semantic-fidelity"],
+      "provenance": {
+        "record_id": "2020_A195_P0262",
+        "paper": "2020/A195.pdf",
+        "page": 20,
+        "section": "validation",
+        "index": "mcm-cup-standard-write/references/fulltext-style-index.jsonl:262"
+      }
+    },
+    {
+      "id": "b-strategy-stability",
+      "scene": {"document_type": "mcm", "document_format": "plain", "scope": "local"},
+      "source": "cumcm-v1-holdout/sources/b-strategy-stability.txt",
+      "challenge_tags": ["public-judgment", "specificity", "boundary-conditions", "semantic-fidelity"],
+      "provenance": {
+        "record_id": "2020_B108_P0662",
+        "paper": "2020/B108.pdf",
+        "page": 22,
+        "section": "analysis",
+        "index": "mcm-cup-standard-write/references/fulltext-style-index.jsonl:662"
+      }
+    },
+    {
+      "id": "c-sample-limit-improvement",
+      "scene": {"document_type": "mcm", "document_format": "plain", "scope": "local"},
+      "source": "cumcm-v1-holdout/sources/c-sample-limit-improvement.txt",
+      "challenge_tags": ["public-judgment", "specificity", "causal-calibration", "semantic-fidelity"],
+      "provenance": {
+        "record_id": "2020_C142_P1378",
+        "paper": "2020/C142.pdf",
+        "page": 17,
+        "section": "result",
+        "index": "mcm-cup-standard-write/references/fulltext-style-index.jsonl:1378"
+      }
+    }
+  ]
+}

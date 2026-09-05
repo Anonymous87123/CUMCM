@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "459685933a67648953df5497d320befc852b3c77fbace3dd1b8f290bef24aba0",
+    "before_sha256": "459685933a67648953df5497d320befc852b3c77fbace3dd1b8f290bef24aba0"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "61d34573b7418bd11f667832e7da2cb0fe17045ff9dfeaf095aa7226b08b9b6a",
+  "chunk_binding_sha256": "12f2a15c7a6032a929647d12f504d5549751676dc3576989b27c1ab70bd7c1a3",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-46fd651c1f35.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "cbaeea462986eab2f8171e39d4026b469c72441b39253a5e14b60a7d7d904e39",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 6,
+        "id": "S1",
+        "sha256": "e33909a1dbf0a64634296101dbe43c6f27337347bd00612a2089b9eda919be59",
+        "start_line": 2
+      }
+    ],
+    "reason": "该段落区分观测约束、反事实参数和局地对照，保留参数说明职责与反事实条件。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "092621661cf0ea8ace551d5b45492c42ce1641fdc41410143bb89d700683610f",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-46fd651c1f35"
+}

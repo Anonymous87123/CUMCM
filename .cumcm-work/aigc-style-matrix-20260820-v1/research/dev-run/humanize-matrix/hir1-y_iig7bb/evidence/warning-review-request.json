@@ -1,0 +1,311 @@
+{
+  "artifact": {
+    "after_sha256": "8d99fd443fdbba5e96d0410ec9875eedf43112777da8d881431751a6610ff003",
+    "before_sha256": "80dc1ed278c983275b3dac59fd1461a13ceabd6bad686b58e0c62bb78aa3b754"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "689d97a98fccfc74879304d17bdfe722704ef8fffc614d4ddb694e52f8d9f466",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "tex",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "RESEARCH",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不": 2
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0008",
+            "column": 143,
+            "end": 143,
+            "end_column": 144,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "CURV\\_SORT 则完全不追踪交互，仅按曲率排序",
+            "sentence_id": "T0004",
+            "side": "after",
+            "start": 142
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0011",
+            "column": 175,
+            "end": 175,
+            "end_column": 176,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "按照独立预算协议，分组阶段只构造分组而不更新优化器状态，因此在给定函数上，两种方法均从相同的初始上下文目标值开始优化，且获得完全相同的搜索预算",
+            "sentence_id": "T0005",
+            "side": "after",
+            "start": 174
+          }
+        ],
+        "before": {
+          "不": 3
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0002",
+            "column": 25,
+            "end": 25,
+            "end_column": 26,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "§4.3 建立了几何指标与终点的统计关联，但关联不等于归因",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 24
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0008",
+            "column": 139,
+            "end": 139,
+            "end_column": 140,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "CURV\\_SORT 则完全不追踪交互，仅按曲率排序",
+            "sentence_id": "T0004",
+            "side": "before",
+            "start": 138
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0011",
+            "column": 171,
+            "end": 171,
+            "end_column": 172,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "按照独立预算协议，分组阶段只构造分组而不更新优化器状态，因此在给定函数上，两种方法均从相同的初始上下文目标值开始优化，且获得完全相同的搜索预算",
+            "sentence_id": "T0005",
+            "side": "before",
+            "start": 170
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "不": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0002",
+                "column": 25,
+                "end": 25,
+                "end_column": 26,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "§4.3 建立了几何指标与终点的统计关联，但关联不等于归因",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 24
+              }
+            ],
+            "removed": {
+              "不": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "7a0cf7ac3e4008806d705d78eda5c9be368e0e6f690fdb48bd88c32596e78a18"
+    },
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "仅": 1,
+          "只": 2,
+          "需要": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0001",
+            "column": 6,
+            "end": 6,
+            "end_column": 7,
+            "end_line": 1,
+            "line": 1,
+            "marker": "只",
+            "sentence_context": "§4.3 只建立了几何指标与终点之间的统计关联，归因需要另外的检验",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 5
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0002",
+            "column": 27,
+            "end": 28,
+            "end_column": 29,
+            "end_line": 1,
+            "line": 1,
+            "marker": "需要",
+            "sentence_context": "§4.3 只建立了几何指标与终点之间的统计关联，归因需要另外的检验",
+            "sentence_id": "T0001",
+            "side": "after",
+            "start": 26
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0009",
+            "column": 149,
+            "end": 149,
+            "end_column": 150,
+            "end_line": 1,
+            "line": 1,
+            "marker": "仅",
+            "sentence_context": "CURV\\_SORT 则完全不追踪交互，仅按曲率排序",
+            "sentence_id": "T0004",
+            "side": "after",
+            "start": 148
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0011",
+            "column": 169,
+            "end": 169,
+            "end_column": 170,
+            "end_line": 1,
+            "line": 1,
+            "marker": "只",
+            "sentence_context": "按照独立预算协议，分组阶段只构造分组而不更新优化器状态，因此在给定函数上，两种方法均从相同的初始上下文目标值开始优化，且获得完全相同的搜索预算",
+            "sentence_id": "T0005",
+            "side": "after",
+            "start": 168
+          }
+        ],
+        "before": {
+          "仅": 1,
+          "只": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0009",
+            "column": 145,
+            "end": 145,
+            "end_column": 146,
+            "end_line": 1,
+            "line": 1,
+            "marker": "仅",
+            "sentence_context": "CURV\\_SORT 则完全不追踪交互，仅按曲率排序",
+            "sentence_id": "T0004",
+            "side": "before",
+            "start": 144
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0011",
+            "column": 165,
+            "end": 165,
+            "end_column": 166,
+            "end_line": 1,
+            "line": 1,
+            "marker": "只",
+            "sentence_context": "按照独立预算协议，分组阶段只构造分组而不更新优化器状态，因此在给定函数上，两种方法均从相同的初始上下文目标值开始优化，且获得完全相同的搜索预算",
+            "sentence_id": "T0005",
+            "side": "before",
+            "start": 164
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "只": 1,
+            "需要": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "只": 1,
+              "需要": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0001",
+                "column": 6,
+                "end": 6,
+                "end_column": 7,
+                "end_line": 1,
+                "line": 1,
+                "marker": "只",
+                "sentence_context": "§4.3 只建立了几何指标与终点之间的统计关联，归因需要另外的检验",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 5
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 27,
+                "end": 28,
+                "end_column": 29,
+                "end_line": 1,
+                "line": 1,
+                "marker": "需要",
+                "sentence_context": "§4.3 只建立了几何指标与终点之间的统计关联，归因需要另外的检验",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 26
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "3673b8e38376dba8bbe8a3dc0ec2292d5545a771f63bb53bafff62154800af48"
+    }
+  ]
+}

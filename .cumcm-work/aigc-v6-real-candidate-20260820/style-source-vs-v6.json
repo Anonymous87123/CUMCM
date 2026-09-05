@@ -1,0 +1,49 @@
+{
+  "schema": "aigc-style-revision-comparison/v1",
+  "status": "improved",
+  "source": {
+    "path": "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main.tex",
+    "sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609"
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\humanize-run\\rendered_review\\main.tex",
+    "sha256": "5d5fe72a74a03a92a5a669333affc9cafe1447151440f2bcf2e3ec6b91aa8a6b"
+  },
+  "same_bytes": false,
+  "source_signals": {
+    "voice": {},
+    "rhythm": {
+      "CONTRAST_CORRECTION_SHELL": 1
+    },
+    "prose_inventory": {
+      "segments": 37,
+      "paragraphs": 72,
+      "list_blocks": 2,
+      "list_items": 10,
+      "one_item_lists": 0,
+      "labeled_list_items": 0
+    }
+  },
+  "candidate_signals": {
+    "voice": {},
+    "rhythm": {},
+    "prose_inventory": {
+      "segments": 37,
+      "paragraphs": 72,
+      "list_blocks": 2,
+      "list_items": 10,
+      "one_item_lists": 0,
+      "labeled_list_items": 0
+    }
+  },
+  "improvements": [
+    {
+      "metric": "rhythm_findings",
+      "source": 1,
+      "candidate": 0,
+      "delta": -1
+    }
+  ],
+  "regressions": [],
+  "interpretation": "Relative structural signal only. Adoption still requires semantic, mathematical, document, and source-bound paragraph review."
+}

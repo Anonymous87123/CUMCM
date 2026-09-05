@@ -1,0 +1,85 @@
+{
+  "max_manual_page_breaks": 2,
+  "questions": [
+    {
+      "id": "Q1",
+      "title": "2028 年国家奖牌与金牌预测",
+      "start_label": "mcm-q1-start",
+      "end_label": "mcm-q1-end",
+      "section_titles": [
+        "奖牌数预测模型",
+        "特征随届次向前构造",
+        "东道主状态校正",
+        "收缩预测的两部分",
+        "滚动验证",
+        "验证中的逐届差异",
+        "三类模型的实现约束",
+        "从目标变换到非负输出",
+        "一次预测的实际执行顺序",
+        "主要国家预测",
+        "点预测、区间与总量校准"
+      ],
+      "evidence": {
+        "problem_data_basis": ["国家--届次样本"],
+        "variables_scope": ["国家--届次"],
+        "mathematical_relation": ["总牌和金牌"],
+        "solver_implementation": ["随机森林"],
+        "result": ["124.27"],
+        "interpretation": ["状态切换"],
+        "validation": ["滚动验证"],
+        "boundary": ["不应写成确定名次"]
+      }
+    },
+    {
+      "id": "Q3",
+      "title": "比赛项目变化的边际作用",
+      "start_label": "mcm-q3-start",
+      "end_label": "mcm-q3-end",
+      "section_titles": ["项目增减的边际作用", "项目份额的构造与情景表", "多个项目变化时的组合约束"],
+      "evidence": {
+        "problem_data_basis": ["2028 项目列缺失"],
+        "variables_scope": ["项目"],
+        "mathematical_relation": ["边际增量"],
+        "solver_implementation": ["分配"],
+        "result": ["1.36"],
+        "interpretation": ["项目设置偏向谁"],
+        "validation": ["Spearman"],
+        "boundary": ["不假定主办国可以任意添加项目"]
+      }
+    },
+    {
+      "id": "Q2",
+      "title": "尚未获牌国家的首牌概率",
+      "start_label": "mcm-q2-start",
+      "end_label": "mcm-q2-end",
+      "section_titles": ["首枚奖牌概率", "首牌样本的生成与概率检验"],
+      "evidence": {
+        "problem_data_basis": ["此前总奖牌累计为零"],
+        "variables_scope": ["上一届参赛人数"],
+        "mathematical_relation": ["logit"],
+        "solver_implementation": ["Bernoulli"],
+        "result": ["5.08"],
+        "interpretation": ["相对次序"],
+        "validation": ["实际首牌率"],
+        "boundary": ["不能用于预测具体项目"]
+      }
+    },
+    {
+      "id": "Q4",
+      "title": "教练型跃升与投资建议",
+      "start_label": "mcm-q4-start",
+      "end_label": "mcm-q4-end",
+      "section_titles": ["教练型跃升识别与投资建议", "从项目残差中识别持续跃升", "三个投资情景", "投资情景的筛选顺序"],
+      "evidence": {
+        "problem_data_basis": ["运动员表没有教练字段"],
+        "variables_scope": ["国家--项目--届次"],
+        "mathematical_relation": ["z_{i,s,t}"],
+        "solver_implementation": ["Poisson 梯度提升"],
+        "result": ["30"],
+        "interpretation": ["资料核查范围"],
+        "validation": ["相邻两届"],
+        "boundary": ["不能当作可分配给教练的奖牌数"]
+      }
+    }
+  ]
+}

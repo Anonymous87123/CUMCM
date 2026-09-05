@@ -1,0 +1,60 @@
+{
+  "symbols": [
+    {
+      "name": "rho(P)",
+      "definition_pattern": "\\\\rho\\(P\\).*压力对应的燃油密度",
+      "use_pattern": "\\\\rho\\(P\\)"
+    }
+  ],
+  "units": [
+    {
+      "name": "pressure_and_time",
+      "manuscript_patterns": ["2\\.7900\\s*ms", "27\\.507\\s*rad/s", "101\\.8\\s*MPa"],
+      "forbidden_patterns": ["2\\.7900\\s*(?:cm|mm)", "27\\.507\\s*MPa"]
+    }
+  ],
+  "objectives": [
+    {
+      "name": "q2_mean_and_rmse",
+      "manuscript_patterns": ["RMSE加两倍均值偏差", "J_2\\(\\\\omega\\)"],
+      "code_path": "../analysis/model_pipeline.py",
+      "code_patterns": ["metrics\\[\"rmse_mpa\"\\] \\+ 2\\.0 \\* abs\\(metrics\\[\"mean_mpa\"\\] - 100\\.0\\)"]
+    }
+  ],
+  "constraints": [
+    {
+      "name": "nonnegative_orifice_flow",
+      "manuscript_patterns": ["压力差小于等于零", "孔口流量置零"],
+      "code_path": "../analysis/model_pipeline.py",
+      "code_patterns": ["if delta_p <= 0\\.0:", "return 0\\.0"]
+    }
+  ],
+  "code_map": [
+    {
+      "name": "pump_state_update",
+      "manuscript_patterns": ["一个时间步内先由凸轮相位决定柱塞体积", "最后依据减压阀的滞回状态"],
+      "code_path": "../analysis/model_pipeline.py",
+      "code_patterns": ["def simulate_pump_system\\(", "if pipe_pressure >= relief_high:", "pipe_density \\+= \\(inlet_mass - outlet_mass - relief_mass\\)"]
+    }
+  ],
+  "rechecks": [
+    {
+      "name": "q2_final_mean",
+      "source": "../analysis/results/summary.json",
+      "json_path": "problem2.metrics.mean_mpa",
+      "operation": "literal",
+      "expected": 100.00463406631323,
+      "tolerance": 0.000000000001,
+      "manuscript_literal": "100.0046"
+    },
+    {
+      "name": "relief_final_peak_to_peak",
+      "source": "../analysis/results/summary.json",
+      "json_path": "problem3.relief.metrics.peak_to_peak_mpa",
+      "operation": "literal",
+      "expected": 4.476901839865448,
+      "tolerance": 0.000000000001,
+      "manuscript_literal": "4.4769"
+    }
+  ]
+}

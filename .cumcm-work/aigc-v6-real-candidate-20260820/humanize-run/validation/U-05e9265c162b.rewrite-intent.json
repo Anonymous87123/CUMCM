@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "9ae12364f598e42360d28d9e1680bd8fa3e39012d18043b6625cbbc90c146892",
+    "before_sha256": "9ae12364f598e42360d28d9e1680bd8fa3e39012d18043b6625cbbc90c146892"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "7047bf97f011ff2dfe6ff94abcd164042286f307d78bb74433c05ada131064df",
+  "chunk_binding_sha256": "314b43eeb796cf9d3c766cf849865df83e1b5339f63b7e01c543c7f11e10db30",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-05e9265c162b.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "a7720d6edd4360e3aa618da4797ba5ee427740faba529ddd090348d798990169",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 4,
+        "id": "S1",
+        "sha256": "4d2bca686a2285b08e7a9b44484b642fdc908f0b4781849e37e70d628266b2ce",
+        "start_line": 2
+      }
+    ],
+    "reason": "问题三分析保留了降维原因和后期统计判据，段落职责是说明模型简化的依据。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "162133925625f213d66a9aded9732809143d7f39e27cb4522760cc38d2a90eea",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-05e9265c162b"
+}

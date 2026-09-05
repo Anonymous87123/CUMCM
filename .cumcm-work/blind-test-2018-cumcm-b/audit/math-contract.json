@@ -1,0 +1,125 @@
+{
+  "symbols": [
+    {
+      "name": "H",
+      "definition_pattern": "H=28800",
+      "use_pattern": "\\$H(?:=|\\$)"
+    },
+    {
+      "name": "z_i",
+      "definition_pattern": "z_i\\$ & CNC \\$i\\$ 的刀具类别",
+      "use_pattern": "z_i"
+    },
+    {
+      "name": "b(t)",
+      "definition_pattern": "b\\(t\\)\\$ & RGV 是否携带半成品",
+      "use_pattern": "b\\(t\\)"
+    }
+  ],
+  "units": [
+    {
+      "name": "time_output_and_rate",
+      "manuscript_patterns": [
+        "28800\\s*s",
+        "687\\s*s",
+        "分别为 356、336 和 366 件",
+        "0\\.9903"
+      ],
+      "forbidden_patterns": [
+        "28800\\s*(?:ms|min)",
+        "350\\.595\\s*s",
+        "0\\.9903\\s*(?:s|件)"
+      ]
+    }
+  ],
+  "objectives": [
+    {
+      "name": "maximize_completed_products",
+      "manuscript_patterns": ["最大化已完成第二工序并清洗的成品数", "\\\\max N\\(H\\)"],
+      "code_path": "../analysis/model_pipeline.py",
+      "code_patterns": [
+        "best_two = max\\(two_candidates",
+        "best_one_policy, best_one = max\\(one_results\\.items\\(\\)"
+      ]
+    }
+  ],
+  "constraints": [
+    {
+      "name": "allocation_range",
+      "manuscript_patterns": ["2\\\\leq .*\\\\leq6", "238"],
+      "code_path": "../analysis/model_pipeline.py",
+      "code_patterns": ["for first_count in range\\(2, 7\\)", "itertools\\.combinations"]
+    },
+    {
+      "name": "carrying_state_eligibility",
+      "manuscript_patterns": ["当 \\$b\\(t\\)=1\\$ 时", "只能寻找空闲或已完成的第二工序机"],
+      "code_path": "../analysis/model_pipeline.py",
+      "code_patterns": ["elif carrying_intermediate:", "cnc\\.stage == 2"]
+    },
+    {
+      "name": "count_only_within_shift",
+      "manuscript_patterns": ["清洗完成且时间不超过 \\$H\\$", "跨越班次边界"],
+      "code_path": "../analysis/model_pipeline.py",
+      "code_patterns": ["if time <= HORIZON:", "completed \\+= 1"]
+    },
+    {
+      "name": "resource_time_clipped_to_horizon",
+      "manuscript_patterns": ["忙碌和等待的累计也只取 \\$\\[0,H\\]\\$ 内的部分"],
+      "code_path": "../analysis/model_pipeline.py",
+      "code_patterns": ["min\\(service, max\\(0\\.0, HORIZON - time\\)\\)", "min\\(wait_duration, max\\(0\\.0, HORIZON - time\\)\\)"]
+    }
+  ],
+  "code_map": [
+    {
+      "name": "cnc_restart_before_rgv_clean",
+      "manuscript_patterns": ["CNC 新一轮加工从上下料结束时刻开始", "RGV 再执行清洗"],
+      "code_path": "../analysis/model_pipeline.py",
+      "code_patterns": ["begin_processing\\(cnc, time", "time \\+= params\\[\"clean\"\\]"]
+    },
+    {
+      "name": "failure_sampling",
+      "manuscript_patterns": ["若 \\$U<0\\.01\\$", "修复时间"],
+      "code_path": "../analysis/model_pipeline.py",
+      "code_patterns": ["rng\\.random\\(\\) < failure_probability", "fail_after = rng\\.uniform", "repair = rng\\.uniform\\(600\\.0, 1200\\.0\\)"]
+    }
+  ],
+  "rechecks": [
+    {
+      "name": "set1_one_stage_completed",
+      "source": "../analysis/results/summary.json",
+      "json_path": "deterministic.set1.one_stage.completed",
+      "operation": "literal",
+      "expected": 356,
+      "tolerance": 0,
+      "manuscript_literal": "356"
+    },
+    {
+      "name": "set3_two_stage_completed",
+      "source": "../analysis/results/summary.json",
+      "json_path": "deterministic.set3.two_stage.completed",
+      "operation": "literal",
+      "expected": 239,
+      "tolerance": 0,
+      "manuscript_literal": "239"
+    },
+    {
+      "name": "set3_two_stage_failure_mean_from_raw_runs",
+      "source": "../analysis/results/failure_runs.csv",
+      "csv_column": "completed",
+      "csv_filters": {"parameter_set": "set3", "case": "two_stage"},
+      "operation": "mean",
+      "expected": 220.99,
+      "tolerance": 0.000000000001,
+      "manuscript_literal": "220.990"
+    },
+    {
+      "name": "candidate_row_count",
+      "source": "../analysis/results/diagnostics.json",
+      "json_path": "checks.candidate_rows",
+      "operation": "literal",
+      "expected": 2151,
+      "tolerance": 0,
+      "manuscript_literal": "2151"
+    }
+  ]
+}

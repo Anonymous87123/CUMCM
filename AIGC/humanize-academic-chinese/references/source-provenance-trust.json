@@ -1,0 +1,64 @@
+{
+  "schema_version": "humanize-source-provenance-trust/v1",
+  "policy_version": "1.0.0",
+  "production_attestation": {
+    "enabled": false,
+    "external_verifier_required": true,
+    "accepted_schemes": [],
+    "local_claims_are_identity_proof": false
+  },
+  "origin_decisions": {
+    "HUMAN_CONFIRMED": {
+      "production_positive": false,
+      "assurance": "PROVISIONAL",
+      "allowed_uses": [
+        "AUDIT",
+        "EXPERIMENTAL_POSITIVE_REVIEW"
+      ],
+      "reason_code": "EXTERNAL_ATTESTATION_REQUIRED"
+    },
+    "MODEL_GENERATED": {
+      "production_positive": false,
+      "assurance": "NEGATIVE_ONLY",
+      "allowed_uses": [
+        "AUDIT",
+        "NEGATIVE_GUARD"
+      ],
+      "reason_code": "MODEL_TEXT_NEGATIVE_ONLY"
+    },
+    "MODEL_ORIGIN_UNRESOLVED": {
+      "production_positive": false,
+      "assurance": "NEGATIVE_ONLY",
+      "allowed_uses": [
+        "AUDIT",
+        "NEGATIVE_GUARD"
+      ],
+      "reason_code": "MODEL_ORIGIN_UNRESOLVED_NEGATIVE_ONLY"
+    },
+    "OCR_INHERITED": {
+      "production_positive": false,
+      "assurance": "NEGATIVE_ONLY",
+      "allowed_uses": [
+        "AUDIT"
+      ],
+      "reason_code": "OCR_PROVENANCE_NOT_AUTHOR_VOICE"
+    },
+    "THIRD_PARTY": {
+      "production_positive": false,
+      "assurance": "NEGATIVE_ONLY",
+      "allowed_uses": [
+        "AUDIT"
+      ],
+      "reason_code": "THIRD_PARTY_NOT_AUTHOR_VOICE"
+    },
+    "UNKNOWN": {
+      "production_positive": false,
+      "assurance": "PROVISIONAL",
+      "allowed_uses": [
+        "AUDIT",
+        "EXPERIMENTAL_POSITIVE_REVIEW"
+      ],
+      "reason_code": "ORIGIN_UNKNOWN"
+    }
+  }
+}

@@ -1,0 +1,110 @@
+{
+  "schema_version": "humanize-scene-routing-policy/v1",
+  "revision": 5,
+  "purpose": "Deterministic whole-unit routing for AUTO long-document humanization. Evidence records rule identifiers and counts only; it never exports matched source prose.",
+  "thresholds": {
+    "minimum_route_score": 2,
+    "minimum_route_margin": 1,
+    "minimum_document_prior_local_score": 1
+  },
+  "scenes": {
+    "COURSE": {
+      "rules": [
+        {
+          "id": "COURSE-HEADING-01",
+          "scope": "heading",
+          "regex": "(?:例题|习题|解题|题解|课堂|知识点|复习|易错|练习|答案(?:与解析)?|解答|章末小结|做题(?:规律|方法|策略|顺序)|考试(?:实战)?策略|备考(?:方法|策略)|答题(?:方法|策略)|阅读(?:理解)?技巧)",
+          "weight": 4,
+          "max_occurrences": 2
+        },
+        {
+          "id": "COURSE-TASK-01",
+          "scope": "body",
+          "regex": "(?:本题|题目要求|解题时|第一种解法|第二种解法|易错点|同学|学生|读者可以|参考答案)",
+          "weight": 2,
+          "max_occurrences": 3
+        },
+        {
+          "id": "COURSE-DERIVATION-01",
+          "scope": "body",
+          "regex": "(?:由题意|代入(?:公式|上式)|所以答案|据此可得)",
+          "weight": 1,
+          "max_occurrences": 2
+        },
+        {
+          "id": "COURSE-EXAM-STRATEGY-01",
+          "scope": "body",
+          "regex": "(?:做题时|做题顺序|拿到手以后先做|先做哪(?:几|一)道|更适合(?:先|后)做|下一道(?:更该)?往[^。；！？!?]{0,12}(?:找|查)|缩小(?:别题)?(?:的)?搜索范围|考试实战策略|做题策略)",
+          "weight": 2,
+          "max_occurrences": 3
+        },
+        {
+          "id": "COURSE-TEX-ROLE-01",
+          "scope": "body",
+          "regex": "(?i:\\{(?:solution|note)\\})",
+          "weight": 4,
+          "max_occurrences": 1
+        }
+      ]
+    },
+    "MODELING": {
+      "rules": [
+        {
+          "id": "MODELING-HEADING-01",
+          "scope": "heading",
+          "regex": "(?:问题[一二三四五六七八九十0-9]+|模型(?:建立|求解|检验|评价)|参数(?:设置|估计|分析)|灵敏度|情景分析|算法设计|数值模拟|仿真)",
+          "weight": 4,
+          "max_occurrences": 2
+        },
+        {
+          "id": "MODELING-CONTRACT-01",
+          "scope": "body",
+          "regex": "(?:建立[^。；！？!?]{0,12}模型|状态变量|目标函数|约束条件|参数(?:取值|设置|估计)|数值求解|仿真|情景|敏感性|权重|迭代|求解器)",
+          "weight": 2,
+          "max_occurrences": 3
+        },
+        {
+          "id": "MODELING-RESULT-01",
+          "scope": "body",
+          "regex": "(?:基线情景|对照情景|评价指标|综合指数|模型输出)",
+          "weight": 6,
+          "max_occurrences": 2
+        }
+      ]
+    },
+    "RESEARCH": {
+      "rules": [
+        {
+          "id": "RESEARCH-HEADING-01",
+          "scope": "heading",
+          "regex": "(?:相关工作|文献综述|研究方法|结果与讨论|讨论|局限性?|研究设计)",
+          "weight": 4,
+          "max_occurrences": 2
+        },
+        {
+          "id": "RESEARCH-SHARED-HEADING-01",
+          "scope": "heading",
+          "regex": "(?:摘要|引言|实验结果|结论)",
+          "weight": 1,
+          "max_occurrences": 1
+        },
+        {
+          "id": "RESEARCH-CLAIM-01",
+          "scope": "body",
+          "regex": "(?:本研究|研究问题|研究结果|实验结果|结果表明|已有研究|相关文献|研究对象|研究假设|证据表明|本文考察)",
+          "weight": 2,
+          "max_occurrences": 3
+        },
+        {
+          "id": "RESEARCH-DISCUSSION-01",
+          "scope": "body",
+          "regex": "(?:与已有研究|本文的贡献|讨论范围|研究局限|尚不能)",
+          "weight": 1,
+          "max_occurrences": 2
+        }
+      ]
+    }
+  },
+  "fallback_scene": "GENERAL",
+  "ambiguity_action": "Mark the unit UNRESOLVED and bind GENERAL only as a non-editable conservative placeholder until the route is resolved."
+}

@@ -1,0 +1,137 @@
+{
+  "artifact": {
+    "after_sha256": "f1fcb02a18d2c0ceedf7065bfb2929e3ad0efbdd139b49e3f4c24adb9975ea31",
+    "before_sha256": "617fa5c9455478a20c580bb58a557b07a3213f056bc00241f50374220910badd"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "359cf7b54f5f4464dfc0c05985aff28f78b9bf48190841f6e63ee766e91125b7",
+  "chunk_binding_sha256": "1504c82c5c699553012c4c03052c4f420bfb3cb08664c8bd88e135b91bd95166",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-b1bac710ec42.diff",
+    "sha256": "807baa9843f597796d459ebc8ea95c09ca5b8d31948ce401020e00408ccdc67e"
+  },
+  "evidence_sha256": "89a7303ca61087d3e9eb8f37c92259a72a7de8e6b9f1f213a973ebea9cbf7c88",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_MODELING_PROSE",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "按冻结事实调整段落组织或词壳，并保留原有限定与判断关系",
+        "target_signals": [
+          "SCENE-MODELING-JUDGMENT-PRESERVE",
+          "RHYTHM-VARY-SECTION-ACTION"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_MODELING_PROSE",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "按冻结事实调整段落组织或词壳，并保留原有限定与判断关系",
+        "target_signals": [
+          "SCENE-MODELING-JUDGMENT-PRESERVE",
+          "RHYTHM-VARY-SECTION-ACTION"
+        ]
+      },
+      {
+        "id": "O3",
+        "kind": "REWRITE_MODELING_PROSE",
+        "source_span_ids": [
+          "S3"
+        ],
+        "summary": "按冻结事实调整段落组织或词壳，并保留原有限定与判断关系",
+        "target_signals": [
+          "SCENE-MODELING-JUDGMENT-PRESERVE",
+          "RHYTHM-VARY-SECTION-ACTION"
+        ]
+      },
+      {
+        "id": "O4",
+        "kind": "REWRITE_MODELING_PROSE",
+        "source_span_ids": [
+          "S4"
+        ],
+        "summary": "按冻结事实调整段落组织或词壳，并保留原有限定与判断关系",
+        "target_signals": [
+          "SCENE-MODELING-JUDGMENT-PRESERVE",
+          "RHYTHM-VARY-SECTION-ACTION"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "6060f218b0eae94d15cfd2a5aa9db59c1d5a8bdef4727a13310931c02d5ce4e5",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "id": "S2",
+        "sha256": "3f4212a067ac637fc7f79a8367ff8ad97f85f5b5cf0b1e95fa2114d62198bfb1",
+        "start_line": 4
+      },
+      {
+        "end_line": 6,
+        "id": "S3",
+        "sha256": "d35d87392a58adaa8ac2b54c08d16b877da370279f3968495db1779f25974d9f",
+        "start_line": 6
+      },
+      {
+        "end_line": 14,
+        "id": "S4",
+        "sha256": "49964f2b575d9b7c21505b751ebdb4337d6cab0a96ab268e70aab0275a189858",
+        "start_line": 14
+      }
+    ],
+    "summary": "按冻结事实调整段落组织或词壳，并保留原有限定与判断关系",
+    "target_signals": [
+      "SCENE-MODELING-JUDGMENT-PRESERVE",
+      "RHYTHM-VARY-SECTION-ACTION"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      },
+      {
+        "end_line": 4,
+        "operation": "REPLACE",
+        "start_line": 4
+      },
+      {
+        "end_line": 6,
+        "operation": "REPLACE",
+        "start_line": 6
+      },
+      {
+        "end_line": 14,
+        "operation": "REPLACE",
+        "start_line": 14
+      }
+    ],
+    "masked_after_sha256": "7072009bb9059d0f696bb0ca11c25b7d0ccc89174ea37417f194d419fe578c56",
+    "masked_before_sha256": "73125f905376eb25f67f10f641b25ccb04d2c3f4843968acdb10678716db0ac5",
+    "source_spans_covered": 4,
+    "source_spans_total": 4,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "fa14f5f5e0c2201ba20b316bddade5bda4bcd556dd1bd6c12109e3af8731647b",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-b1bac710ec42"
+}

@@ -1,0 +1,25 @@
+{
+  "schema": "aigc-benchmark-owner-ledger/v1",
+  "document_type": "research",
+  "provider": "deai-research-writing",
+  "mode": "REWRITE",
+  "source_sha256": "62f20ebf51ab035d7d6bfd5b0eca8bf1ad6236dab2161390b416ba1687fad3bd",
+  "candidate_sha256": "e53bcb208af03781008ff82aa89226b606aa9b4aa2a561a4d4121536f8bca6a0",
+  "decisions": [
+    {
+      "source_anchor": "draft-holdout-03-a7d9f628.tex; frozen excerpt: 最后一个边界来自 F8 上的过程指标。DG2 在 log-AUC 与达到目标所需评估次数上略优于 CURV\\_SORT，但在最终历史最优目标值上却明显更差。本文因此始终把轨迹主张与终点主张分开处理：主文要回答的是终点能否被局部条件性解释得更…",
+      "action": "REWRITE local prose candidate draft-holdout-03-a7d9f628-t2.tex; no second humanizer pass",
+      "claim": "Retain the existing research claim and expose its comparison or design implication without adding a new result.",
+      "evidence_boundary": "No experiment, citation, theorem, causal claim, or evidence grade is added; the candidate remains bounded by the frozen excerpt.",
+      "claim_strength": "The source modality, negation, comparison direction, scope qualifier, and empirical/theoretical status are unchanged.",
+      "preserved_objects": [
+        "All equations, references, algorithm names, result labels, condition qualifiers, and claim objects in the frozen source."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "claims": {
+    "hidden_reasoning_recorded": false,
+    "academic_correctness_proven": false
+  }
+}

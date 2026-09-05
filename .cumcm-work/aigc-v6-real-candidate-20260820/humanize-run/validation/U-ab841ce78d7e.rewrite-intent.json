@@ -1,0 +1,68 @@
+{
+  "artifact": {
+    "after_sha256": "94f044f0cd4480908be43a258567d6c869981e5478566aaa17bb389d5345b8cc",
+    "before_sha256": "981e2b6b27d1f1d0fb3c978b7e99a9f7e16bc43a0f58459ef7e83e40218931ce"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "c61c42404c8bf05c28285dcd4e9c064c9bb44cd28b445b27d5094d03023c7cdf",
+  "chunk_binding_sha256": "723108ee17f060099d63f3f49979a7de3323324434695b42202eddae195fbc8d",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-ab841ce78d7e.diff",
+    "sha256": "f62f35d7e295cb73ea1be878d026857f31b1ebef1a9cf97ef0463e2e58a7ce88"
+  },
+  "evidence_sha256": "f4ff07d21c83592791ef448e283bb001fb4d3659962561c59940e9c3e02d85f5",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_MODELING_PROSE",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "按冻结事实调整段落组织或词壳，并保留原有限定与判断关系",
+        "target_signals": [
+          "SCENE-MODELING-JUDGMENT-PRESERVE",
+          "RHYTHM-VARY-SECTION-ACTION"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 19,
+        "id": "S1",
+        "sha256": "03a1aeceeb6fbcf5d517840bd6e610083f97ad7f21b826072426538e4fdb5faf",
+        "start_line": 19
+      }
+    ],
+    "summary": "按冻结事实调整段落组织或词壳，并保留原有限定与判断关系",
+    "target_signals": [
+      "SCENE-MODELING-JUDGMENT-PRESERVE",
+      "RHYTHM-VARY-SECTION-ACTION"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 19,
+        "operation": "REPLACE",
+        "start_line": 19
+      }
+    ],
+    "masked_after_sha256": "ee5daf82dbc2b255c0ffeaed906d1e0a7b9754e17c734a41d061502d5337ee06",
+    "masked_before_sha256": "854c7e57a3f9b4b697007bd1fa6c213592fd9b572db2ad870b992f2731142c65",
+    "source_spans_covered": 1,
+    "source_spans_total": 1,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "58b75b0f28dfabe8bb5e6846c5df8f8441fde52b09cff7aaf0b1f4355caad65c",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-ab841ce78d7e"
+}

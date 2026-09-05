@@ -1,0 +1,197 @@
+{
+  "schema": "aigc-writing-plan/v3",
+  "status": "pass",
+  "document_type": "mcm",
+  "intent": "rewrite",
+  "document_format": "tex",
+  "scope": "document",
+  "authority_must_be_frozen": true,
+  "accepted_rewrite_candidates_max": 1,
+  "candidate_policy": {
+    "providers": [
+      "humanize-academic-chinese"
+    ],
+    "branch_from_frozen_source": true,
+    "serial_rewrite_allowed": false,
+    "source_remains_candidate": true
+  },
+  "reviewer": "ai-check",
+  "reviewer_can_select_candidate": false,
+  "workbench": "AI_paper",
+  "manual_confirmation_required": false,
+  "stages": [
+    {
+      "order": 1,
+      "role": "academic-scene-orchestration",
+      "provider": "deai-academic-writing",
+      "mode": "ROUTE_AND_LOCK",
+      "responsibility": "own authority, provenance, scene contract, shared locks, and child-skill dispatch",
+      "writes_authority_file": false,
+      "role_contract": {
+        "authority": "external-scene-owner",
+        "completion_evidence": [
+          "source-hash",
+          "release-gates"
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "role": "competition-genre",
+      "provider": "mcm-cup-standard-write",
+      "mode": "REWRITE_OR_RECONCILE",
+      "responsibility": "complete CUMCM A/B/C manuscript responsibility",
+      "writes_authority_file": false,
+      "style_retrieval_required": true,
+      "style_retrieval_script": "python scripts/prepare_style_retrieval_plan.py <main.tex> --problem-type A|B|C --output style-retrieval-plan.json --minimum 3 --limit 8 --context-window 1",
+      "style_retrieval_policy": "bind 3-8 verified paragraphs per writable section; observe function and stopping point; do not copy sentences or import facts",
+      "role_contract": {
+        "authority": "external-scene-owner",
+        "completion_evidence": [
+          "source-hash",
+          "release-gates"
+        ]
+      }
+    },
+    {
+      "order": 3,
+      "role": "model-integrity",
+      "provider": "deai-modeling-writing",
+      "mode": "REWRITE_OR_RECONCILE",
+      "responsibility": "complete model-code-result and protocol gates",
+      "writes_authority_file": false,
+      "role_contract": {
+        "authority": "external-scene-owner",
+        "completion_evidence": [
+          "source-hash",
+          "release-gates"
+        ]
+      }
+    },
+    {
+      "order": 4,
+      "role": "academic-style-engine",
+      "provider": "humanize-academic-chinese",
+      "mode": "MODELING/PROTECTED_REWRITE",
+      "responsibility": "run the complete diagnose, protected candidate, mechanical validation, and emit workflow",
+      "writes_authority_file": false,
+      "branch_from": "SOURCE",
+      "scope": "document",
+      "role_contract": {
+        "package": "humanize-academic-chinese",
+        "role_class": "protected-editor",
+        "deliverables": [
+          "一次中文学术受保护候选",
+          "TeX、数字、数学、引用和术语核验记录"
+        ],
+        "completion_evidence": [
+          "audit-report",
+          "candidate-task",
+          "candidate-file",
+          "candidate-verification",
+          "native-run-report",
+          "change-report",
+          "human-decision"
+        ],
+        "fallback": "保护项或语义门失败时丢弃候选并保留冻结源。",
+        "must_not_claim": [
+          "禁用词清理等于自然文风",
+          "改写通过等于学术正确"
+        ]
+      }
+    },
+    {
+      "order": 5,
+      "role": "forensic-style-reviewer",
+      "provider": "ai-check",
+      "mode": "REPORT_ONLY",
+      "responsibility": "run the complete evidence-citing signal report without authorship or acceptance verdicts",
+      "writes_authority_file": false,
+      "read_only": true,
+      "role_contract": {
+        "package": "humanize-main",
+        "role_class": "candidate-and-review-lab",
+        "deliverables": [
+          "中文文案同源候选池或英文 source-bound 候选",
+          "ai-check 原文证据报告与 repair 记录"
+        ],
+        "completion_evidence": [
+          "audit-report",
+          "workbench-plan",
+          "candidate-task",
+          "candidate-file",
+          "candidate-verification",
+          "comparison-report",
+          "human-decision"
+        ],
+        "fallback": "评分模型或联网生成不可用时保留本地报告，不把 logit 当自然度真值。",
+        "must_not_claim": [
+          "BGE 分数等于人类偏好",
+          "客服文案规则适用于学术中文"
+        ]
+      }
+    },
+    {
+      "order": 6,
+      "role": "manual-review-workspace",
+      "provider": "AI_paper",
+      "mode": "WORKBENCH_PLAN_READ_ONLY",
+      "responsibility": "run the scene-filtered offline embedded-capability plan and record read-only findings; do not start the GUI or create another candidate",
+      "writes_authority_file": false,
+      "manual": false,
+      "embedded_capability_plan_required": true,
+      "embedded_capability_catalog": "references/folder-utilization.json",
+      "embedded_activation_command": "python scripts/run_aigc_adapter.py --package AI_paper --action workbench-plan --document-type mcm --format json",
+      "embedded_scope": "activate only scene-matched workbench units; no serial rewrite and no maintenance/research unit as CUMCM authority",
+      "role_contract": {
+        "package": "AI_paper",
+        "role_class": "authoring-workbench",
+        "deliverables": [
+          "项目、批注、历史和人工语法格式工作区",
+          "DOCX、LaTeX、TXT 或 PDF 导出及回验记录"
+        ],
+        "completion_evidence": [
+          "workbench-plan",
+          "audit-report",
+          "candidate-task",
+          "document-map",
+          "diff-report",
+          "export-artifact",
+          "candidate-verification",
+          "human-decision"
+        ],
+        "fallback": "配置或导出异常时保留原工程与源稿，禁止覆盖式修复。",
+        "must_not_claim": [
+          "导出成功等于内容正确",
+          "桌面批注替代领域审计"
+        ]
+      }
+    }
+  ],
+  "final_gates": [
+    "evidence-bundle",
+    "mcm-manuscript",
+    "model-code-result",
+    "result-sync",
+    "math-semantics",
+    "reproducibility",
+    "style-retrieval-plan",
+    "content-density",
+    "xelatex-compile",
+    "rendered-page-review",
+    "reviewer-report-manual-interpretation",
+    "offline-manual-review-workspace-plan"
+  ],
+  "findings": [
+    {
+      "severity": "note",
+      "code": "DEFAULT_FORENSIC_REVIEWER_ENABLED",
+      "reviewer": "ai-check"
+    },
+    {
+      "severity": "note",
+      "code": "DEFAULT_SCENE_WORKBENCH_ENABLED",
+      "application": "AI_paper"
+    }
+  ]
+}

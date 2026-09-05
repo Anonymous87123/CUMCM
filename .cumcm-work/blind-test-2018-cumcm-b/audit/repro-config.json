@@ -1,0 +1,25 @@
+{
+  "pipeline": "../analysis/model_pipeline.py",
+  "diagnostics": "../analysis/diagnostics.py",
+  "official_problem": "../official/problem.doc",
+  "workflow_attachment": "../data/appendix1.doc",
+  "units": {
+    "time": "s",
+    "distance": "CNC station intervals",
+    "output": "completed and cleaned products per 8-hour shift"
+  },
+  "random_seed": 20180915,
+  "horizon_seconds": 28800.0,
+  "policies": ["nearest", "earliest-finish", "balanced"],
+  "first_stage_cnc_count_range": [2, 6],
+  "unique_two_stage_allocations": 238,
+  "failure_probability_per_processing_start": 0.01,
+  "failure_repair_seconds": [600.0, 1200.0],
+  "failure_runs_per_case": 200,
+  "generated_results": [
+    "../analysis/results/summary.json",
+    "../analysis/results/diagnostics.json",
+    "../analysis/results/strategy_candidates.csv",
+    "../analysis/results/failure_runs.csv"
+  ]
+}

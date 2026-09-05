@@ -1,0 +1,850 @@
+# Korean Pattern Reference
+
+This page expands the Korean pattern packs into a browsable reference. It is generated from `patterns/ko-*.md`, so the numbers, names, watch words, fire conditions, and examples mirror the source pattern files.
+
+- Rewrite-capable patterns: 33
+- Score/audit-only viral-hook patterns: 9
+- Main selector: [PATTERNS.md](PATTERNS.md)
+
+## Pattern Index
+
+| # | Type | Pattern | Source |
+|---|------|---------|--------|
+| 1 | rewrite | 과도한 중요성 부여 | [ko-content.md](../patterns/ko-content.md) |
+| 2 | rewrite | 과도한 주목도/미디어 언급 | [ko-content.md](../patterns/ko-content.md) |
+| 3 | rewrite | ~하며/~하고 피상적 분석 | [ko-content.md](../patterns/ko-content.md) |
+| 4 | rewrite | 홍보성/광고성 언어 | [ko-content.md](../patterns/ko-content.md) |
+| 5 | rewrite | 모호한 출처 인용 | [ko-content.md](../patterns/ko-content.md) |
+| 6 | rewrite | 틀에 박힌 "과제와 전망" 섹션 | [ko-content.md](../patterns/ko-content.md) |
+| 7 | rewrite | AI 특유 어휘 남발 | [ko-language.md](../patterns/ko-language.md) |
+| 8 | rewrite | ~적(的) 접미사 남발 | [ko-language.md](../patterns/ko-language.md) |
+| 9 | rewrite | 부정 병렬구조 | [ko-language.md](../patterns/ko-language.md) |
+| 10 | rewrite | 3의 법칙 남발 | [ko-language.md](../patterns/ko-language.md) |
+| 11 | rewrite | 유의어 순환 | [ko-language.md](../patterns/ko-language.md) |
+| 12 | rewrite | ~에 있어서/~함에 있어 장황한 조사 사용 | [ko-language.md](../patterns/ko-language.md) |
+| 32 | rewrite | "보다" 비교부사 남용 | [ko-language.md](../patterns/ko-language.md) |
+| 33 | rewrite | 정의형 은유 등식 | [ko-language.md](../patterns/ko-language.md) |
+| 34 | rewrite | 무생물 행위주 (가짜 행위성) | [ko-language.md](../patterns/ko-language.md) |
+| 13 | rewrite | 과도한 연결 표현 | [ko-style.md](../patterns/ko-style.md) |
+| 14 | rewrite | 볼드체 남발 | [ko-style.md](../patterns/ko-style.md) |
+| 15 | rewrite | 인라인 헤더 목록 | [ko-style.md](../patterns/ko-style.md) |
+| 16 | rewrite | ~고 있다 진행형 남발 | [ko-style.md](../patterns/ko-style.md) |
+| 17 | rewrite | 이모지 | [ko-style.md](../patterns/ko-style.md) |
+| 18 | rewrite | 과도한 한자어/공식어 사용 | [ko-style.md](../patterns/ko-style.md) |
+| 37 | rewrite | 콜론 반전 연출 | [ko-style.md](../patterns/ko-style.md) |
+| 19 | rewrite | 챗봇 표현 | [ko-communication.md](../patterns/ko-communication.md) |
+| 20 | rewrite | 학습 데이터 기한 면책 | [ko-communication.md](../patterns/ko-communication.md) |
+| 21 | rewrite | 아첨하는 말투 | [ko-communication.md](../patterns/ko-communication.md) |
+| 29 | rewrite | 거짓 뉘앙스 (소급적 재해석) | [ko-communication.md](../patterns/ko-communication.md) |
+| 22 | rewrite | 채움 표현 | [ko-filler.md](../patterns/ko-filler.md) |
+| 23 | rewrite | 과도한 헤징 | [ko-filler.md](../patterns/ko-filler.md) |
+| 24 | rewrite | 막연한 긍정적 결론 | [ko-filler.md](../patterns/ko-filler.md) |
+| 31 | rewrite | 결론 신호어 남용 | [ko-filler.md](../patterns/ko-filler.md) |
+| 35 | rewrite | 뜸들이기 서두 | [ko-filler.md](../patterns/ko-filler.md) |
+| 36 | rewrite | 가짜 통찰 셋업 | [ko-filler.md](../patterns/ko-filler.md) |
+| 25 | rewrite | 구조적 반복 | [ko-structure.md](../patterns/ko-structure.md) |
+| 26 | rewrite | 번역체 | [ko-structure.md](../patterns/ko-structure.md) |
+| 27 | rewrite | 수동태 남용 | [ko-structure.md](../patterns/ko-structure.md) |
+| 28 | rewrite | 불필요한 외래어 남발 | [ko-structure.md](../patterns/ko-structure.md) |
+| 30 | rewrite | 수사적 질문 단락 시작 | [ko-structure.md](../patterns/ko-structure.md) |
+| VH-1 | score/audit only | 숫자 충격 훅 | [ko-viral-hook.md](../patterns/ko-viral-hook.md) |
+| VH-2 | score/audit only | 클릭베이트 미스터리 종결 | [ko-viral-hook.md](../patterns/ko-viral-hook.md) |
+| VH-3 | score/audit only | 검증 회피 단언 | [ko-viral-hook.md](../patterns/ko-viral-hook.md) |
+| VH-4 | score/audit only | 호흡 최적화 단문 배열 | [ko-viral-hook.md](../patterns/ko-viral-hook.md) |
+| VH-5 | score/audit only | AI 인플루언서 어휘 | [ko-viral-hook.md](../patterns/ko-viral-hook.md) |
+| VH-6 | score/audit only | 가짜 통계 인용 | [ko-viral-hook.md](../patterns/ko-viral-hook.md) |
+| VH-7 | score/audit only | 권위 타이틀 쌓기 | [ko-viral-hook.md](../patterns/ko-viral-hook.md) |
+| VH-8 | score/audit only | 미래의 나 / 친밀한 2인칭 약속 | [ko-viral-hook.md](../patterns/ko-viral-hook.md) |
+| VH-9 | score/audit only | 잠언형 펀치라인 / 독립 단문 선언 | [ko-viral-hook.md](../patterns/ko-viral-hook.md) |
+
+## 콘텐츠 패턴
+
+### 1. 과도한 중요성 부여
+
+- Source: [ko-content.md](../patterns/ko-content.md)
+- Type: rewrite-capable pattern
+- Watch words: ~의 핵심적/중추적/획기적인 역할, ~에 있어 중대한 의의, ~의 위상을 드높이다, ~의 토대를 마련하다, 패러다임의 전환, ~라는 점에서 의의가 크다, ~의 이정표, 전환점을 맞이하다, 새로운 지평을 열다, ~의 발자취
+- Fire condition: 같은 문단에 주의 어휘가 2개 이상 등장하거나, "획기적", "전환점" 같은 강한 표현이 일상적 사건·제품에 적용된 경우.
+- Example files: [failure](../examples/01-failure-01.md) · [success](../examples/01-success-01.md)
+
+Example before:
+
+> 한국 반도체 산업의 발전은 대한민국 경제 성장에 있어 핵심적인 역할을 했으며, 이는 국가 산업의 획기적인 전환점을 의미한다. 이러한 성과는 글로벌 기술 경쟁에서 대한민국의 위상을 드높이는 데 크게 기여하였다.
+
+Example after:
+
+> 삼성전자가 64K DRAM을 만든 게 1983년이다. 40년 지난 지금 한국이 메모리 반도체 시장의 60%를 갖고 있다.
+
+### 2. 과도한 주목도/미디어 언급
+
+- Source: [ko-content.md](../patterns/ko-content.md)
+- Type: rewrite-capable pattern
+- Watch words: 국내외 언론의 주목을 받다, ~에서 크게 보도되다, 세계적인 미디어의 관심, 활발한 활동을 이어가다
+- Fire condition: 구체적 매체명·기사 제목·날짜 없이 광범위한 주목·보도를 주장하는 경우. 매체명이 있더라도 맥락 없이 나열만 한 경우.
+- Example files: [failure](../examples/02-failure-01.md) · [success](../examples/02-success-01.md)
+
+Example before:
+
+> 그의 작품은 뉴욕타임스, BBC, 르몽드 등 세계적인 언론 매체에서 주목을 받았으며, 국내외에서 활발한 활동을 이어가고 있다.
+
+Example after:
+
+> 뉴욕타임스는 2023년 기사에서 그의 작품을 "한국 현대미술의 새로운 흐름"으로 소개했다.
+
+### 3. ~하며/~하고 피상적 분석
+
+- Source: [ko-content.md](../patterns/ko-content.md)
+- Type: rewrite-capable pattern
+- Watch words: ~을 보여주며, ~을 상징하고, ~에 기여하며, ~을 촉진하고, ~을 도모하며, ~의 장을 마련하고
+- Fire condition: 한 문장 또는 연속 절에 "~하며/~하고" 연결형이 3개 이상 나열되면서, 구체적 인과 설명 없이 나열만 한 경우.
+- Example files: [failure](../examples/03-failure-01.md) · [success](../examples/03-success-01.md)
+
+Example before:
+
+> 이 축제는 지역 문화의 다양성을 보여주며, 전통과 현대의 조화를 상징하고, 지역 경제 활성화에 기여하며, 세대 간 소통의 장을 마련하고 있다.
+
+Example after:
+
+> 축제에는 매년 약 50만 명이 방문하며, 기간 중 지역 상권 매출이 평소보다 30% 늘어난다.
+
+### 4. 홍보성/광고성 언어
+
+- Source: [ko-content.md](../patterns/ko-content.md)
+- Type: rewrite-capable pattern
+- Watch words: 수려한, 빼어난, 풍부한, 활기찬, 역동적인, ~의 보석, ~의 자랑, ~의 메카, 감동적인, 매혹적인, 아름다운, 잊을 수 없는, 가슴 뛰는, 숨막히는, 경이로운
+- Fire condition: 같은 대상에 홍보성 형용사가 2개 이상 붙거나, "~의 보석", "숨막히는" 같은 강한 수식어가 서술문(광고 인용이 아닌 본문)에 사용된 경우.
+- Example files: [failure](../examples/04-failure-01.md) · [success](../examples/04-success-01.md)
+
+Example before:
+
+> 제주도는 수려한 자연경관과 풍부한 문화유산이 조화를 이루는 아름다운 섬으로, 대한민국 관광의 보석이라 할 수 있다. 이곳의 매혹적인 풍경은 방문객들에게 잊을 수 없는 감동을 선사한다.
+
+Example after:
+
+> 제주도에는 한라산이랑 오름이 360개 정도 있다. 연간 1,500만 명이 온다. 사람이 너무 많아서 입장 제한을 거는 곳도 늘고 있다.
+
+### 5. 모호한 출처 인용
+
+- Source: [ko-content.md](../patterns/ko-content.md)
+- Type: rewrite-capable pattern
+- Watch words: 전문가들은, 업계 관계자에 따르면, 학계에서는, 일각에서는, 관련 연구에 따르면 (구체적 연구 없이)
+- Fire condition: 출처가 인명·기관·발표 날짜 없이 "전문가들", "업계 관계자", "관련 연구" 같은 익명 권위로만 제시된 경우.
+- Example files: [failure](../examples/05-failure-01.md) · [success](../examples/05-success-01.md)
+
+Example before:
+
+> 전문가들은 이 기술이 향후 산업 전반에 걸쳐 혁신적인 변화를 가져올 것으로 전망하고 있다. 업계 관계자에 따르면, 시장 규모는 지속적으로 성장할 것으로 예상된다.
+
+Example after:
+
+> 한국전자통신연구원(ETRI)의 2024년 보고서에 따르면, 국내 AI 반도체 시장은 2027년까지 연평균 25% 성장이 예상된다.
+
+### 6. 틀에 박힌 "과제와 전망" 섹션
+
+- Source: [ko-content.md](../patterns/ko-content.md)
+- Type: rewrite-capable pattern
+- Watch words: ~에도 불구하고 여전히 많은 과제가, 이러한 과제에도 불구하고, ~을 통해 극복해 나갈 것으로, 밝은 전망이 기대된다, 오늘날 급변하는 시대에, 최근 들어 ~이/가 급격히 변화하고 있다, ~의 시대가 도래하면서, 21세기 들어, 4차 산업혁명 시대를 맞이하여
+- Fire condition: 같은 문단이나 결론부에 모호한 과제 표현("여전히 많은 과제가")과 모호한 낙관 표현("밝은 전망이 기대된다")이 함께 등장하는 경우. 또는 도입부가 "오늘날 급변하는 ~", "4차 산업혁명 시대를 맞이하여" 같은 시대 공식으로 시작하는 경우.
+- Example files: [failure](../examples/06-failure-01.md) · [success](../examples/06-success-01.md)
+
+Example before:
+
+> 이러한 성과에도 불구하고 여전히 많은 과제가 남아 있다. 하지만 이러한 과제에도 불구하고, 지속적인 노력과 혁신을 통해 밝은 미래를 기대할 수 있다.
+
+Example after:
+
+> 2023년 감사원 보고서는 인력 부족과 예산 집행률 저조를 주요 문제로 지적했다. 시는 2024년 예산을 15% 늘리고 전문 인력 30명을 채용할 계획이다.
+
+## 언어/문법 패턴
+
+### 7. AI 특유 어휘 남발
+
+- Source: [ko-language.md](../patterns/ko-language.md)
+- Type: rewrite-capable pattern
+- Watch words: 다양한, 활발한, 주목할 만한, 혁신적인, 체계적인, 지속적인, 효과적인, 적극적인, 심층적인, 유기적인, 종합적인, 선도적인, 아울러, 나아가, 이를 통해, 이러한 맥락에서, 도모하다, 촉진하다, 극대화하다
+- Fire condition: 한 문단에 고빈도 AI 어휘가 3개 이상 등장하는 경우.
+- Example files: [failure](../examples/07-failure-01.md) · [success](../examples/07-success-01.md)
+
+Example before:
+
+> 아울러, 다양한 혁신적인 기술들이 활발하게 개발되고 있으며, 이를 통해 체계적이고 효과적인 솔루션을 제공하고 있다. 나아가, 이러한 지속적인 노력은 주목할 만한 성과를 거두고 있다.
+
+Example after:
+
+> 올해 나온 기술 중에는 배터리 수명을 20% 늘린 전력 관리 칩과, 처리 속도가 기존보다 두 배 빠른 NPU가 있다.
+
+### 8. ~적(的) 접미사 남발
+
+- Source: [ko-language.md](../patterns/ko-language.md)
+- Type: rewrite-capable pattern
+- Watch words: 혁신적, 체계적, 효과적, 효율적, 선도적, 진취적, 종합적, 핵심적, 전략적, 실질적, 근본적, 획기적
+- Fire condition: 한 문장에 "~적" 형용사가 3개 이상 등장하거나, 연속 2문장에 걸쳐 4개 이상 사용된 경우.
+- Example files: [failure](../examples/08-failure-01.md) · [success](../examples/08-success-01.md)
+
+Example before:
+
+> 혁신적이고 체계적인 접근 방식을 통해, 효과적이고 효율적인 결과를 도출하며, 선도적이고 진취적인 자세로 종합적인 발전을 추구하고 있다.
+
+Example after:
+
+> 팀은 기존 프로세스를 단순화하고, 불필요한 승인 단계를 빼서 배포 시간을 절반으로 줄였다.
+
+### 9. 부정 병렬구조
+
+- Source: [ko-language.md](../patterns/ko-language.md)
+- Type: rewrite-capable pattern
+- Watch words: ~에 그치지 않고, ~뿐만 아니라 ~도, 비단 ~뿐 아니라, ~을 넘어
+- Fire condition: 같은 문서에 "~뿐만 아니라", "~에 그치지 않고" 등의 부정 병렬 구조가 2회 이상 등장하거나, 긍정 서술만으로 더 간결하게 표현할 수 있는 곳에 단일 사용된 경우.
+- Example files: [failure](../examples/09-failure-01.md) · [success](../examples/09-success-01.md)
+
+Example before:
+
+> 이것은 단순한 기술 발전에 그치지 않고, 우리 사회 전반에 걸친 근본적인 변화를 의미한다. 이는 비단 경제적 측면뿐만 아니라, 사회적·문화적 측면에서도 중대한 함의를 지닌다.
+
+Example after:
+
+> 이 기술은 처음에 제조 공정에 적용됐고, 이후 물류와 고객 서비스에도 쓰이기 시작했다.
+
+### 10. 3의 법칙 남발
+
+- Source: [ko-language.md](../patterns/ko-language.md)
+- Type: rewrite-capable pattern
+- Watch words: Structural pattern; inspect the fire condition rather than a fixed vocabulary list.
+- Fire condition: 같은 문서에 3개 항목 나열이 2회 이상 등장하거나, 셋으로 묶은 근거가 자의적이어서 다른 개수도 동등하게 성립하는 경우.
+- Example files: [failure](../examples/10-failure-01.md) · [success](../examples/10-success-01.md)
+
+Example before:
+
+> 이 프로그램은 창의성, 혁신성, 그리고 지속가능성을 추구합니다. 참가자들은 영감, 통찰, 그리고 실질적인 경험을 얻을 수 있습니다.
+
+Example after:
+
+> 이 프로그램은 실무 프로젝트 중심으로 운영되며, 참가자들은 8주간 실제 제품 개발에 참여한다.
+
+### 11. 유의어 순환
+
+- Source: [ko-language.md](../patterns/ko-language.md)
+- Type: rewrite-capable pattern
+- Watch words: Structural pattern; inspect the fire condition rather than a fixed vocabulary list.
+- Fire condition: 같은 문단에서 동일 대상이 3개 이상의 다른 명칭·동의어로 지칭되는 경우.
+- Example files: [failure](../examples/11-failure-01.md) · [success](../examples/11-success-01.md)
+
+Example before:
+
+> 이 도시는 많은 관광객을 끌어모으고 있다. 이 지역은 다양한 문화 행사로 유명하다. 해당 지자체는 관광 인프라를 확충 중이다. 이곳은 연간 방문객이 100만 명에 달한다.
+
+Example after:
+
+> 이 도시에는 연간 100만 명이 방문한다. 문화 행사가 많고, 시는 관광 인프라에 500억 원을 투자하고 있다.
+
+### 12. ~에 있어서/~함에 있어 장황한 조사 사용
+
+- Source: [ko-language.md](../patterns/ko-language.md)
+- Type: rewrite-capable pattern
+- Watch words: ~에 있어서, ~함에 있어, ~(으)로서, ~(이)라는 점에서, ~의 관점에서 볼 때
+- Fire condition: 같은 문단에 장황한 조사 표현이 2개 이상 등장하거나, "~에서"로 충분한 곳에 "~에 있어서"가 사용된 경우.
+- Example files: [failure](../examples/12-failure-01.md) · [success](../examples/12-success-01.md)
+
+Example before:
+
+> 교육에 있어서 가장 중요한 것은 학생들의 참여를 이끌어 내는 것이며, 이를 달성함에 있어 교사의 역할이 핵심적이다. 학습 효과를 극대화함에 있어서는 개별화된 접근이 필요하다.
+
+Example after:
+
+> 교육에서 가장 중요한 것은 학생 참여다. 교사들은 학생별로 다른 과제를 내는 방식을 시도하고 있다.
+
+### 32. "보다" 비교부사 남용
+
+- Source: [ko-language.md](../patterns/ko-language.md)
+- Type: rewrite-capable pattern
+- Watch words: 보다 + 형용사/부사 형태 — "보다 구체적인", "보다 효율적인", "보다 심도 있는", "보다 다양한", "보다 명확한", "보다 적극적인", "보다 체계적인", "보다 효과적인", "보다 신중한", "보다 폭넓은"
+- Fire condition: 한 문서 안에 "보다 [형용사/부사 + 한]" 형태가 2회 이상 등장. 또는 한 단락 안에 "보다 X" 표현이 1회 등장하면서 같은 단락에 다른 격식체 마커("~을 위한", "~에 있어서", "~사료됩니다", "~할 것으로 보입니다")가 함께 있는 경우.
+- Example files: [failure](../examples/32-failure-01.md) · [success](../examples/32-success-01.md)
+
+Example before:
+
+> 프로젝트 일정과 관련하여 보다 구체적인 마일스톤 설정이 필요할 것으로 보입니다. 예산 배분에 있어서도 보다 효율적인 운영 방안에 대한 검토가 이루어져야 할 것으로 사료됩니다. 가능하시다면 다음 주 중 보다 심도 있는 논의를 진행하는 것이 어떨까 싶습니다.
+
+Example after:
+
+> 프로젝트 일정에 더 구체적인 마일스톤이 있어야 할 것 같습니다. 예산 운영 방안도 한 번 점검이 필요해 보입니다. 다음 주에 자세히 이야기 나누면 좋겠습니다.
+
+### 33. 정의형 은유 등식
+
+- Source: [ko-language.md](../patterns/ko-language.md)
+- Type: rewrite-capable pattern
+
+**주의 어휘:** X는 Z의 [추상명사]다 / X는 Z의 [추상명사]이다 — 추상명사 자리에 오는 신호어: 시그니처, 서명, 형태, 언어, 통화, 화폐, 건축물, 설계도, 골격, 척추, 엔진, 심장박동, 맥박, DNA, 초석, 주춧돌, 생명선, 혈류, 문법, 풍경
+
+**문제:** "X는 Z의 시그니처다", "대칭은 신뢰의 건축물이다"처럼 계사("~다/~이다")로 추상적 은유 등식을 단언해 깊이 있어 보이게 만든다. 구체적 근거 없이 거창한 동일시만으로 통찰을 가장하는 AI 특유의 수사다. 비유 자체가 검증되지 않고, 어떤 명사에든 끼워 넣어도 그럴듯하게 들리기 때문에 실제 정보량은 거의 없다.
+
+**발화 조건:** "A는 B의 [추상명사]다/이다" 형태의 계사 문장이 같은 글/섹션 안에 2회 이상 등장하고, 그 등식을 뒷받침하는 구체적 근거(데이터·사례·메커니즘)가 없는 경우. 단일 1회 사용은 audit hint로만 취급하고, 같은 부풀린 은유 등식이 반복될 때만 rewrite 대상으로 본다.
+
+- Example files: [failure](../examples/33-failure-01.md) · [success](../examples/33-success-01.md)
+**제외 조건:**
+- 사전적·기술적 정의 — "물은 만능 용매다", "미토콘드리아는 세포의 발전소다"처럼 교과서적으로 확립된 정의·관용 비유
+- "서울은 한국의 수도다"처럼 지명·직함 등 사실 등식
+- 구체적 근거로 뒷받침된 진짜 동일시 — 바로 뒤에 메커니즘·사례·데이터가 이어져 그 비유가 실제로 성립함을 보여주는 경우 ("재고 회전율은 이 회사의 심장박동이다 — 회전율이 2주만 늦어져도 현금이 마르고 발주가 멈춘다")
+- 인용·대화체 안에서의 등장
+
+**의미 위험도:** MEDIUM
+**보존 주의사항:** 은유 등식을 풀어쓸 때 원문이 전달하려던 실제 주장(X와 Z가 어떤 관계라는 것)을 잃지 않도록 주의. 비유를 걷어내되 글쓴이가 말하려던 인과·기능 관계는 구체적 서술로 남긴다. 비유가 사실 아무 내용도 담고 있지 않다면 문장을 통째로 삭제하는 것이 가장 정직한 교정이다.
+
+**이 패턴이 아닌 것:** 패턴 8(계사 회피)은 "~의 역할을 한다", "~로 기능한다"처럼 "~다/이다"를 **피하는** 것을 잡아 계사로 되돌린다. 반대로 패턴 33은 계사를 써서 만든 **부풀린 "X는 Z의 OO다" 은유 등식**을 잡는다. 둘은 정반대 방향이므로 혼동하지 말 것 — 8은 계사 복원, 33은 과장된 계사 등식 해체.
+
+**수정 전:**
+> 침묵은 권력의 언어다. 회의실에서 누가 말하지 않는가를 보면 조직의 진짜 위계가 드러난다. 신뢰는 모든 협업의 통화이며, 투명성은 그 신뢰의 건축물이다.
+
+**수정 후:**
+> 회의에서 누가 말하지 않는지를 보면 조직의 실제 위계가 보인다. 발언권은 대개 직급이 아니라 평가 권한을 쥔 사람에게 쏠린다. 협업이 굴러가려면 서로 정보를 숨기지 않아야 하고, 그건 진행 상황을 공개적으로 공유하는 습관에서 나온다.
+
+## 스타일 패턴
+
+### 34. 무생물 행위주 (가짜 행위성)
+
+- Source: [ko-language.md](../patterns/ko-language.md)
+- Type: rewrite-capable pattern
+
+**주의 어휘:** 데이터가 말해준다, 숫자가 증명한다, 결정이 내려지는 과정에서 자연스럽게, 문화가 바뀌었다, 논의가 ~쪽으로 흘러갔다, 시장이 보상한다, 시장이 선택한다, 이 기술이 ~을 가능하게 한다, 전략이 요구한다, 상황이 말해주듯, 결과가 스스로 증명한다
+
+**발화 조건:** 한 문서에서 무생물 주어가 인간의 행위(결정, 판단, 보상, 요구, 논의 주도)를 수행하는 문장이 2회 이상 나타나고, 문맥상 행위자를 특정할 수 있는데도 끝까지 이름이 등장하지 않을 때. 단독 1회는 audit 힌트로만.
+
+**제외 조건:**
+- 학술·보고서 인용 관행 ("본 연구는 ~을 보여준다", "보고서는 ~을 지적한다") — 저자에 대한 관용적 환유
+- 실제로 행위자 없는 과정 ("기온이 올랐다", "마감이 지났다", "시장이 폭락했다"처럼 집합적 사건)
+- 의도적 의인법이 장치로 일관되게 유지되는 문학적 문체, 정착된 관용구
+- 소프트웨어/시스템이 실제로 하는 동작 ("린터가 잡아낸다", "파이프라인이 재시도한다")
+
+**#26(번역체)과의 구분:** #26은 영어 구문의 직역 흔적("~에 의해 ~되다")을 잡는다. #34는 번역체 여부와 무관하게 **행위자 은폐** 자체를 잡는다 — 문장이 자연스러운 한국어라도 "결정이 내려졌다, 문화가 바뀌었다"가 쌓이며 사람이 한 명도 등장하지 않으면 발화한다.
+
+**의미 위험도:** HIGH
+**보존 주의사항:** 원문이 뒷받침하지 않는 행위자를 지어내지 않는다. 문맥상 행위자가 복원 가능하면(팀, 저자, "여러분") 그것을 쓰고, 복원 불가능하면 알려진 사실 중심으로 재구성한다. 행위자 날조는 문체 교정이 아니라 의미 위반이다.
+
+**문제:** AI는 추상물을 행위자로 승격시킨다 — 결정이 내려지고, 문화가 바뀌고, 데이터가 말하고, 시장이 보상한다. 누가 했는지 말하지 않고도 분석적으로 들리기 때문이다. 사람 글은 행위자를 짚거나 최소한 어딘가에 선다("우리", "여러분", "팀"). 티는 한 문장이 아니라 누적이다: 문단 전체에서 사건은 일어나는데 사람이 아무도 없다.
+
+**수정 전:**
+> 피드백 루프가 품질보다 속도를 보상하면서 분기 만에 조직 문화가 바뀌었다. 결정은 회의가 아니라 슬랙 스레드에서 자연스럽게 내려졌고, 로드맵은 지표가 요구하는 방향으로 휘어졌다.
+
+**수정 후:**
+> 경영진이 결함 수가 아니라 출시 속도에 보너스를 걸자, 분기 만에 엔지니어들은 다듬는 일을 그만뒀다. 사람들은 회의 대신 슬랙 스레드에서 결정을 내리기 시작했고, PM들은 그 주 대시보드 숫자에 맞춰 로드맵을 다시 썼다.
+
+### 13. 과도한 연결 표현
+
+- Source: [ko-style.md](../patterns/ko-style.md)
+- Type: rewrite-capable pattern
+- Watch words: 이를 통해, 이러한 점에서, 이러한 맥락에서, 한편, 또한, 더불어, 아울러, 이에 따라, 이와 관련하여, 이를 바탕으로
+- Fire condition: 연속 3문장 이상에서 매 문장 앞에 연결 표현이 붙는 경우, 또는 같은 문단에 주의 어휘가 3개 이상 등장하는 경우.
+- Example files: [failure](../examples/13-failure-01.md) · [success](../examples/13-success-01.md)
+
+Example before:
+
+> 이를 통해 기업의 경쟁력이 강화되었다. 이러한 점에서 이번 정책은 큰 의미를 지닌다. 한편, 일부에서는 우려의 목소리도 나오고 있다. 이러한 맥락에서 향후 정책 방향에 대한 논의가 필요하다.
+
+Example after:
+
+> 이번 정책 이후 수출 기업 10곳 중 7곳이 영업이익이 늘었다. 다만 중소기업연합회는 원자재 가격 상승 부담이 여전하다고 밝혔다.
+
+### 14. 볼드체 남발
+
+- Source: [ko-style.md](../patterns/ko-style.md)
+- Type: rewrite-capable pattern
+- Watch words: Structural pattern; inspect the fire condition rather than a fixed vocabulary list.
+- Fire condition: 한 문단에 볼드 처리된 단어/구가 3개 이상이거나, 문서 전체에 5개 이상인 경우.
+- Example files: [failure](../examples/14-failure-01.md) · [success](../examples/14-success-01.md)
+
+Example before:
+
+> **OKR(목표 및 핵심 결과)**, **KPI(핵심 성과 지표)**, 그리고 **BSC(균형 성과표)** 등 **다양한 성과 관리 프레임워크**를 통합적으로 활용합니다.
+
+Example after:
+
+> OKR, KPI, BSC 등 성과 관리 도구를 함께 활용한다.
+
+### 15. 인라인 헤더 목록
+
+- Source: [ko-style.md](../patterns/ko-style.md)
+- Type: rewrite-capable pattern
+- Watch words: Structural pattern; inspect the fire condition rather than a fixed vocabulary list.
+- Fire condition: 같은 목록에 "**레이블:** 설명" 형식의 항목이 2개 이상인 경우.
+- Example files: [failure](../examples/15-failure-01.md) · [success](../examples/15-success-01.md)
+
+Example before:
+
+> - **사용자 경험:** 새로운 인터페이스로 사용자 경험이 크게 개선되었습니다.
+> - **성능:** 알고리즘 최적화를 통해 성능이 향상되었습니다.
+> - **보안:** 종단간 암호화로 보안이 강화되었습니다.
+
+Example after:
+
+> 이번 업데이트는 인터페이스를 개선하고, 알고리즘 최적화로 속도를 높였으며, 종단간 암호화를 추가했다.
+
+### 16. ~고 있다 진행형 남발
+
+- Source: [ko-style.md](../patterns/ko-style.md)
+- Type: rewrite-capable pattern
+- Watch words: ~하고 있다, ~해 나가고 있다, ~을 추진하고 있다, ~을 이어가고 있다, ~에 박차를 가하고 있다
+- Fire condition: 같은 문단에서 "~고 있다" 계열 진행형이 3회 이상 사용된 경우, 또는 연속 2문장이 모두 "~고 있다"로 끝나는 경우.
+- Example files: [failure](../examples/16-failure-01.md) · [success](../examples/16-success-01.md)
+
+Example before:
+
+> 기업들은 새로운 시장을 개척하고 있으며, 기술 혁신을 추진하고 있고, 글로벌 파트너십을 확대하고 있다. 이를 통해 지속적인 성장을 이루어 나가고 있다.
+
+Example after:
+
+> 기업들은 올해 동남아 시장에 진출했고, 내년에는 유럽 진출을 계획 중이다.
+
+### 17. 이모지
+
+- Source: [ko-style.md](../patterns/ko-style.md)
+- Type: rewrite-capable pattern
+- Watch words: Structural pattern; inspect the fire condition rather than a fixed vocabulary list.
+- Fire condition: 전문적·학술적·편집 텍스트에 이모지가 1개라도 등장하는 경우.
+- Example files: [failure](../examples/17-failure-01.md) · [success](../examples/17-success-01.md)
+
+Example before:
+
+> 🚀 **출시 단계:** 제품은 3분기에 출시됩니다
+> 💡 **핵심 인사이트:** 사용자는 단순함을 선호합니다
+> ✅ **다음 단계:** 후속 미팅을 잡으세요
+
+Example after:
+
+> 제품은 3분기에 출시된다. 사용자 조사 결과 단순한 인터페이스를 선호했다. 다음 단계는 후속 미팅이다.
+
+### 18. 과도한 한자어/공식어 사용
+
+- Source: [ko-style.md](../patterns/ko-style.md)
+- Type: rewrite-capable pattern
+- Watch words: 도모하다, 기하다, 수립하다, 강구하다, 추진하다, 이행하다, 상기, 전술한, 본 사업, 관계 기관, 유기적, 복리 증진
+- Fire condition: 같은 문단에 공식어·관료적 한자어가 3개 이상 등장하거나, "본 사업", "전술한", "상기" 같은 공문서 전용 표현이 일반 산문에 사용된 경우.
+- Example files: [failure](../examples/18-failure-01.md) · [success](../examples/18-success-01.md)
+
+Example before:
+
+> 본 사업은 지역 경제 활성화 및 주민 복리 증진을 도모하기 위한 것으로, 관계 기관 간 유기적 협력 체계를 구축하여 효율적인 사업 추진을 기하고자 한다.
+
+Example after:
+
+> 이 사업은 지역 경제를 살리고 주민 생활을 개선하려는 것이다. 시청과 구청이 함께 진행한다.
+
+### 37. 콜론 반전 연출
+
+- Source: [ko-style.md](../patterns/ko-style.md)
+- Type: rewrite-capable pattern
+- Watch words: 반전:, 핵심은 이것:, 더 놀라운 건:, 진짜 이유:, 보너스:, 결과:
+- Fire condition: 짧은 명사구 뒤에 콜론을 붙여 나머지를 극적인 반전처럼 연출하는 문장이 산문에서 2회 이상 등장하거나, 1회라도 평서문으로 바꿔 잃는 것이 없는 경우. 목록·라벨·정의가 아닌 산문에 한정.
+- Example files: [failure](../examples/37-failure-01.md) · [success](../examples/37-success-01.md)
+
+Example before:
+
+> 주말 동안 마이그레이션을 끝냈다. 더 놀라운 건: 다운타임 제로. 반전: 엔지니어 두 명이 해냈다.
+
+Example after:
+
+> 주말 동안 엔지니어 두 명이 다운타임 없이 마이그레이션을 끝냈다.
+
+## 소통 패턴
+
+### 19. 챗봇 표현
+
+- Source: [ko-communication.md](../patterns/ko-communication.md)
+- Type: rewrite-capable pattern
+- Watch words: 도움이 되셨으면 좋겠습니다, 궁금한 점이 있으시면 말씀해 주세요, ~에 대해 알아보겠습니다, ~를 정리해 드리겠습니다, 더 자세한 내용이 필요하시면
+- Fire condition: 실시간 대화가 아닌 콘텐츠(기사, 보고서, 문서)에 챗봇 대화체 표현이 1개라도 등장하는 경우.
+- Example files: [failure](../examples/19-failure-01.md) · [success](../examples/19-success-01.md)
+
+Example before:
+
+> 프랑스 혁명에 대해 정리해 드리겠습니다. 도움이 되셨으면 좋겠습니다! 더 자세한 내용이 필요하시면 말씀해 주세요.
+
+Example after:
+
+> 프랑스 혁명은 1789년 재정 위기와 식량 부족으로 시작되었다.
+
+### 20. 학습 데이터 기한 면책
+
+- Source: [ko-communication.md](../patterns/ko-communication.md)
+- Type: rewrite-capable pattern
+- Watch words: ~년 기준으로, 최신 정보와 다를 수 있습니다, 구체적인 정보는 제한적이나, 확인 가능한 자료에 따르면
+- Fire condition: 편집·보도·분석 콘텐츠에 AI 학습 데이터 한계를 암시하는 자기 참조 또는 면책 표현이 1개라도 등장하는 경우.
+- Example files: [failure](../examples/20-failure-01.md) · [success](../examples/20-success-01.md)
+
+Example before:
+
+> 이 회사의 설립 배경에 대한 구체적인 정보는 제한적이나, 확인 가능한 자료에 따르면 1990년대에 설립된 것으로 보입니다.
+
+Example after:
+
+> 이 회사는 1994년에 설립되었다(사업자등록 기준).
+
+### 21. 아첨하는 말투
+
+- Source: [ko-communication.md](../patterns/ko-communication.md)
+- Type: rewrite-capable pattern
+- Watch words: Structural pattern; inspect the fire condition rather than a fixed vocabulary list.
+- Fire condition: 본론 앞에 아첨·비위 맞추기 표현이 1개라도 등장하는 경우.
+- Example files: [failure](../examples/21-failure-01.md) · [success](../examples/21-success-01.md)
+
+Example before:
+
+> 좋은 질문이십니다! 정확하게 짚어주셨는데요, 이 주제는 정말 중요합니다. 경제적 요인에 대한 지적이 정말 탁월하십니다.
+
+Example after:
+
+> 말씀하신 경제적 요인이 여기서 중요하다.
+
+### 29. 거짓 뉘앙스 (소급적 재해석)
+
+- Source: [ko-communication.md](../patterns/ko-communication.md)
+- Type: rewrite-capable pattern
+- Watch words: 사실 좀 더 미묘한 문제인데, 정확하게 말하자면, 단순하게 말하긴 어렵지만, 물론 현실은 더 복잡한데, 보다 정확히 말하면, 공정하게 보자면, 좀 더 깊이 들어가면
+- Fire condition: 앞선 주장을 새로운 증거·관점 없이 '미묘하다'는 프레이밍으로 바꿔 말하는 경우.
+
+Example before:
+
+> 재택근무는 생산성을 높입니다. 물론 이건 좀 더 미묘한 문제인데요, 재택근무가 특정 상황에서는 생산성을 높일 수 있지만 다른 상황에서는 어려움을 줄 수도 있고, 순효과는 조직 문화와 개인 업무 스타일에 따라 달라집니다.
+
+Example after:
+
+> 재택근무는 집중 작업에서 생산성을 높인다 — 스탠퍼드 연구에서 콜센터 직원 기준 13% 향상을 확인했다. 다만 즉흥적 협업에는 불리한데, 마이크로소프트 2021년 내부 데이터에 따르면 전면 재택 이후 팀 간 소통이 25% 줄었다.
+
+## 채움/완화 패턴
+
+### 22. 채움 표현
+
+- Source: [ko-filler.md](../patterns/ko-filler.md)
+- Type: rewrite-capable pattern
+- Watch words: Structural pattern; inspect the fire condition rather than a fixed vocabulary list.
+- Fire condition: 같은 문단에 채움 표현이 2개 이상 등장하거나, 삭제해도 의미가 전혀 변하지 않는 채움 표현이 단독으로 사용된 경우.
+- Example files: [failure](../examples/22-failure-01.md) · [success](../examples/22-success-01.md)
+
+Example transformations:
+
+> - "이 목표를 달성하기 위해서는" → "이 목표를 이루려면"
+> - "~라는 사실에 기인하여" → "~때문에"
+> - "현 시점에서 볼 때" → "지금"
+> - "~하는 경우에 한하여" → "~하면"
+> - "~할 수 있는 능력을 보유하고 있다" → "~할 수 있다"
+> - "주목할 만한 점은 ~라는 것이다" → 직접 서술
+
+### 23. 과도한 헤징
+
+- Source: [ko-filler.md](../patterns/ko-filler.md)
+- Type: rewrite-capable pattern
+- Watch words: Structural pattern; inspect the fire condition rather than a fixed vocabulary list.
+- Fire condition: 하나의 주장에 한정·완화 표현("~수도 있다", "~것으로 보인다", "어느 정도", "일정 부분")이 3개 이상 중첩되거나, 반박 가능한 주장이 전혀 없을 정도로 헤징된 경우.
+- Example files: [failure](../examples/23-failure-01.md) · [success](../examples/23-success-01.md)
+
+Example before:
+
+> 이 정책이 어느 정도의 효과를 가져올 수 있을 것으로 판단될 수도 있다는 점에서 일정 부분 긍정적인 측면이 있는 것으로 보입니다.
+
+Example after:
+
+> 이 정책은 효과가 있을 수 있다.
+
+### 24. 막연한 긍정적 결론
+
+- Source: [ko-filler.md](../patterns/ko-filler.md)
+- Type: rewrite-capable pattern
+- Watch words: Structural pattern; inspect the fire condition rather than a fixed vocabulary list.
+- Fire condition: 같은 문단이나 결론부에 막연한 낙관 표현("밝은 미래가 기대된다", "새로운 도약", "흥미진진한 여정")이 2개 이상 등장하거나, 구체적 주장 없이 낙관 표현만으로 구성된 마무리 문장이 있는 경우.
+- Example files: [failure](../examples/24-failure-01.md) · [success](../examples/24-success-01.md)
+
+Example before:
+
+> 앞으로 더욱 밝은 미래가 기대된다. 지속적인 발전과 혁신을 통해 새로운 도약을 이룰 것으로 전망된다. 흥미진진한 여정이 우리 앞에 펼쳐져 있다.
+
+Example after:
+
+> 회사는 내년에 매장 두 곳을 추가로 열 계획이다.
+
+### 31. 결론 신호어 남용
+
+- Source: [ko-filler.md](../patterns/ko-filler.md)
+- Type: rewrite-capable pattern
+- Watch words: 결론적으로, 결국, 궁극적으로, 요컨대, 종합하면, 종합해보면, 정리하면, 마지막으로
+- Fire condition: 글의 마지막 문단(또는 마지막에서 두 번째 문단) 첫 문장이 위 신호어 중 하나로 시작. 또는 같은 문서에 결론 신호어가 2회 이상 등장.
+- Example files: [failure](../examples/31-failure-01.md) · [success](../examples/31-success-01.md)
+
+Example before:
+
+> 결론적으로, 디지털 노마드 라이프스타일은 일시적인 유행이 아닌, 우리 사회 전반에 걸쳐 지속적으로 자리잡아갈 새로운 표준으로 자리매김하고 있다.
+
+Example after:
+
+> 디지털 노마드는 더 이상 유행이 아니다. 일하는 방식 하나가 바뀌었고, 사람들은 그 위에 새 일상을 짓고 있다.
+
+### 35. 뜸들이기 서두
+
+- Source: [ko-filler.md](../patterns/ko-filler.md)
+- Type: rewrite-capable pattern
+- Watch words: 솔직히 말하면, 분명히 말하자면, 확실히 짚고 넘어가자면, 까놓고 말해서, 불편한 진실은, 사실대로 말하면, 한 가지 분명한 것은
+- Fire condition: 문장이나 문단이 뜸들이기 표현으로 시작하고, 그 표현을 지워도 뒤따르는 주장에서 아무것도 사라지지 않는 경우. 뒤 문장이 곧 본론이면 1회로도 발화, 문서 전체에서 2회 이상이면 위치와 무관하게 발화.
+- Example files: [failure](../examples/35-failure-01.md) · [success](../examples/35-success-01.md)
+
+Example before:
+
+> 솔직히 말하면, 온보딩 이탈은 가격 문제가 아닙니다. 분명히 말하자면 사용자는 가입 폼에서 이미 떠날지를 정합니다.
+
+Example after:
+
+> 온보딩 이탈은 가격 문제가 아니다. 사용자는 가입 폼에서 이미 떠날지를 정한다.
+
+### 36. 가짜 통찰 셋업
+
+- Source: [ko-filler.md](../patterns/ko-filler.md)
+- Type: rewrite-capable pattern
+- Watch words: 아무도 말해주지 않는, 대부분이 잘못 알고 있는, 사람들이 놓치는, 남들이 말하지 않는 진실, 아무도 알려주지 않는
+- Fire condition: 다른 모든 사람을 무지한 쪽에 놓고 필자만 내부자로 세우는 프레임이 주장 앞에 붙는데, 그 프레임이 주장의 근거를 전혀 더하지 않는 경우. 설명문에서는 1회로도 발화, 마케팅 문체에서는 2회 이상.
+- Example files: [failure](../examples/36-failure-01.md) · [success](../examples/36-success-01.md)
+
+Example before:
+
+> 아무도 말해주지 않는 투자 유치의 진실: 소개가 자료보다 중요합니다. 대부분이 이걸 잘못 알고 있죠.
+
+Example after:
+
+> 소개가 자료보다 중요하다. 우리 기수 40개 팀 중 투자를 받은 팀은 전부 포트폴리오 창업자의 소개가 있었고, 콜드 메일만으로 받은 팀은 없었다.
+
+## 구조 패턴
+
+### 25. 구조적 반복
+
+- Source: [ko-structure.md](../patterns/ko-structure.md)
+- Type: rewrite-capable pattern
+- Watch words: Structural pattern; inspect the fire condition rather than a fixed vocabulary list.
+- Fire condition: 연속 3개 이상의 단락이 동일한 구조적 틀을 반복할 때. 예: 모든 단락이 "일반 진술 → 구체 사례/수치 → 의의/전망"으로 끝나는 경우. 또는 모든 단락이 "주제문 → 부연 → 요약" 동일 패턴.
+- Example files: [failure](../examples/25-failure-01.md) · [success](../examples/25-success-01.md)
+
+Example before:
+
+> 한국의 반도체 산업은 1980년대부터 본격적으로 성장했다. 삼성전자는 1983년 64K DRAM 개발에 성공했으며, 이후 세계 시장에서 두각을 나타냈다. 이러한 성과는 한국 경제 발전의 중요한 토대가 되었다.
+>
+> 한국의 자동차 산업도 비약적인 발전을 이루었다. 현대자동차는 1976년 포니를 출시하며 국산 자동차 시대를 열었고, 현재 글로벌 5위권의 자동차 제조사로 성장했다. 이는 한국 제조업의 경쟁력을 보여주는 대표적인 사례이다.
+>
+> 한국의 조선 산업 역시 세계적인 수준에 도달했다. 현대중공업은 1972년 설립 이후 꾸준히 기술력을 축적했으며, 세계 최대 조선소로 자리매김했다. 이러한 발전은 한국의 산업 다각화에 크게 기여하였다.
+
+Example after:
+
+> 한국 반도체의 시작은 의외로 단순하다. 1983년, 삼성전자가 64K DRAM을 만들었다. 40년 뒤인 지금, 메모리 반도체 세계 시장의 60%가 한국 것이다.
+>
+> 자동차는 좀 다른 길을 걸었다. 현대차 포니가 1976년에 나왔을 때 아무도 진지하게 안 봤다. 솔직히 품질이 안 좋았으니까. 근데 지금은 글로벌 5위다.
+>
+> 조선은? 이건 거의 기적에 가깝다. 바다도 안 보이는 울산 벌판에 1972년 조선소를 세웠는데, 배 한 척 안 만들어 본 사람들이 시작했다.
+
+### 26. 번역체
+
+- Source: [ko-structure.md](../patterns/ko-structure.md)
+- Type: rewrite-capable pattern
+- Watch words: ~것은 사실이다, ~라고 할 수 있다, ~하는 것이 가능하다, ~에 의해 ~되다, ~에 대해 ~하다 (영어 "about"의 직역), ~하는 경향이 있다 (tend to), ~에 기반하여 (based on), ~를 통해서 (through), 그것은 ~이다 (It is ~), 탐지기 우회 약속, detector-bypass 약속, ~보존 여부를 보여주다
+- Fire condition: 한 문단 내에 번역체 표현이 2개 이상 등장할 때. 단독 1회 사용은 허용 — 정상적인 한국어에서도 간혹 나타나는 표현이므로. 단, README·제품 소개·랜딩 카피처럼 첫인상이 중요한 문장에서는 뜻이 압축된 영어식 명사구가 독자의 이해를 막으면 1회만 있어도 교정한다.
+- Context guard: issue #352 — 구두점이나 단어만 1:1로 바꾸지 말고, `무 TUI` → `TUI 없이 완전 자율로 설치하려면 ...`, `"끝난 것 같아요"로는 부족한 열린 작업` → `"끝난 것 같아요"만으로는 부족한, 결과를 끝까지 확인해야 하는 열린 작업`처럼 절 관계를 한국어로 다시 짠다.
+- Example files: [failure](../examples/26-failure-01.md) · [success](../examples/26-success-01.md)
+
+Example before:
+
+> 이 기술이 유망하다는 것은 사실이다. 이 기술에 의해 많은 문제가 해결될 수 있다고 할 수 있다. 이 기술에 대해 관심을 갖는 것이 필요하며, 이 기술을 활용하는 것이 가능하다면 큰 성과를 거두는 것이 가능할 것이다.
+
+Example after:
+
+> 이 기술은 유망하다. 실제로 A사는 이걸로 불량률을 30% 줄였다. 관심 가질 만하고, 쓸 수 있으면 써보는 게 좋다.
+
+### 27. 수동태 남용
+
+- Source: [ko-structure.md](../patterns/ko-structure.md)
+- Type: rewrite-capable pattern
+- Watch words: ~되어지다, ~되어질 수 있다, ~되어져야 한다, ~되어지고 있다, ~되어진, ~에 의해 ~되다 (행위자가 분명한 경우)
+- Fire condition: 이중 피동("~되어지다" 계열) 1회 이상 사용, 또는 "~에 의해 ~되다" 수동 구문이 2회 이상 반복될 때.
+- Example files: [failure](../examples/27-failure-01.md) · [success](../examples/27-success-01.md)
+
+Example before:
+
+> 이 정책은 정부에 의해 시행되어지고 있다. 많은 변화가 이루어져야 한다고 판단되어진다. 국민의 의견이 반영되어져야 하며, 새로운 방안이 마련되어져야 할 것이다.
+
+Example after:
+
+> 정부가 이 정책을 시행하고 있다. 바꿀 게 많다. 국민 의견을 반영해야 하고, 새 방안도 필요하다.
+
+### 28. 불필요한 외래어 남발
+
+- Source: [ko-structure.md](../patterns/ko-structure.md)
+- Type: rewrite-capable pattern
+- Watch words: 인사이트, 임팩트, 레버리지, 이노베이션, 솔루션, 퍼포먼스, 거버넌스, 컨센서스, 시너지, 모멘텀, 마일스톤, 트리거, 매니징, 스케일업, 온보딩, 피드백 루프, 페인 포인트, 디시전 메이킹, 패러프레이저, 바이패스, 휴먼라이저, 제너레이터, 옵티마이저
+- Fire condition: 한 문단 내에 한국어 대안이 있는 외래어가 3개 이상 등장할 때. 업계에서 정착된 전문 용어(예: 마케팅, 브랜딩)는 제외. 공개 README·제품 소개·랜딩 카피에서는 "패러프레이저"처럼 독자층 밖에서는 바로 뜻이 안 잡히는 외래어가 첫 설명에 쓰이면 단독 1회도 교정 대상이다.
+- Example files: [failure](../examples/28-failure-01.md) · [success](../examples/28-success-01.md) · [success 02](../examples/28-success-02.md)
+
+Example before:
+
+> 이번 프로젝트의 인사이트를 레버리지하여 시너지를 극대화하고, 지속 가능한 모멘텀을 확보하는 것이 핵심 마일스톤이다. 팀의 퍼포먼스를 높이기 위해 온보딩 프로세스를 개선하고, 페인 포인트를 해결하는 솔루션을 도입해야 한다.
+
+Example after:
+
+> 이번 프로젝트에서 얻은 교훈을 활용해서 협력 효과를 높이고, 추진력을 유지하는 것이 핵심 목표다. 팀 성과를 높이려면 신규 합류자 적응 과정을 개선하고, 현장의 문제를 해결할 방법을 찾아야 한다.
+
+### 30. 수사적 질문 단락 시작
+
+- Source: [ko-structure.md](../patterns/ko-structure.md)
+- Type: rewrite-capable pattern
+- Watch words: Structural pattern; inspect the fire condition rather than a fixed vocabulary list.
+- Fire condition: 단락의 첫 문장이 의문형(`-까?`, `-는가?`, `-일까?`, `-는지?`)이고, 그 질문에 대한 답이 같은 단락 안에서 즉시 제시되는 경우. 또는 문서 전체에 단락 첫 문장으로 등장하는 수사적 질문이 2회 이상.
+- Example files: [failure](../examples/30-failure-01.md) · [success](../examples/30-success-01.md)
+
+Example before:
+
+> 그렇다면 한국 커피 문화는 왜 이렇게 빠르게 성장했을까? 답은 의외로 단순하다. 카페가 단순한 음료 판매 공간을 넘어 사회적 거점으로 자리잡았기 때문이다.
+>
+> 그렇다면 앞으로의 전망은 어떨까? 전문가들은 이 트렌드가 당분간 지속될 것으로 보고 있다.
+
+Example after:
+
+> 한국 커피 문화가 이렇게 빨리 자란 이유는 의외로 단순하다. 카페가 음료를 파는 곳을 넘어 사람들이 모이는 거점이 됐다.
+>
+> 이 흐름은 당분간 이어질 것 같다. 전문가들도 같은 의견이다.
+
+## 바이럴 훅 패턴 (score-only)
+
+### Viral 1. 숫자 충격 훅
+
+- Source: [ko-viral-hook.md](../patterns/ko-viral-hook.md)
+- Type: score/audit only; rewrite modes skip this pack
+- Watch words: 단 N일/시간/주 만에, 단 N개월 만에, N억/N만 명/N만 개/N만 회, 0원으로 N원, 단돈 N원에, N% 폭증, N배 성장
+- Fire condition: 단언에 충격적인 숫자(시간·규모·비율)가 등장하지만 같은 글 안에 출처·검증 경로가 없는 경우.
+
+Detection example:
+
+> 단 60일 만에 별 25만 개.
+> 0원으로 100억 매출.
+
+### Viral 2. 클릭베이트 미스터리 종결
+
+- Source: [ko-viral-hook.md](../patterns/ko-viral-hook.md)
+- Type: score/audit only; rewrite modes skip this pack
+- Watch words: ~이유가 뭘까, ~이유는 뭐였을까, ~이게 가능할까요, ~궁금하지 않나요, ~정말 충격이지 않나요, ~왜일까
+- Fire condition: 글의 **마지막 문장**이 답을 주지 않는 수사적 질문이고, 본문이 그 질문에 충분한 답을 제공하지 않는 경우.
+
+Detection example:
+
+> 광고 한 번 안 하고 전 세계 개발자들이 미친 듯이 달려든 이유가 뭘까.
+> 이게 정말 가능한 일일까요?
+
+### Viral 3. 검증 회피 단언
+
+- Source: [ko-viral-hook.md](../patterns/ko-viral-hook.md)
+- Type: score/audit only; rewrite modes skip this pack
+- Watch words: 역사상 처음, 역사상 이런 X은 없었다, 전 세계가 주목, 역대 최고, 유일무이한, ~에 따르면 (출처 명시 없이), ~로 알려졌다 (주체 없음)
+- Fire condition: "역사상 X", "전 세계 Y", "역대 최고 Z" 같은 절대 범위/순위 단언이 출처·근거 없이 등장. 같은 글에 검증 가능한 다른 단서(링크·인용·스크린샷)도 부재.
+
+Detection example:
+
+> GitHub 역사상 이런 속도는 없었다.
+> 전 세계 개발자들이 미친 듯이 달려든
+
+### Viral 4. 호흡 최적화 단문 배열
+
+- Source: [ko-viral-hook.md](../patterns/ko-viral-hook.md)
+- Type: score/audit only; rewrite modes skip this pack
+- Watch words: (구조적 패턴 — 어휘가 아니라 형태로 판단)
+- Fire condition: 글 전체가 거의 모두 한 문장 = 한 줄 = 한 단락 형식이고, 4문장 이상 연속이며, 평균 문장 길이가 30자 미만인 경우. 단문이 한두 개만 섞인 경우는 발화하지 않는다.
+
+Detection example:
+
+> GitHub 역사상 이런 속도는 없었다.
+>
+> 단 60일 만에 별 25만 개.
+>
+> OpenClaw라는 도구가 세운 기록임.
+>
+> 광고 한 번 안 하고 전 세계 개발자들이 미친 듯이 달려든 이유가 뭘까.
+> 
+> (4문장 모두 1줄 단문, 줄바꿈으로 분리, 평균 25자 내외 → 발화)
+
+### Viral 5. AI 인플루언서 어휘
+
+- Source: [ko-viral-hook.md](../patterns/ko-viral-hook.md)
+- Type: score/audit only; rewrite modes skip this pack
+- Watch words: 미친 듯이, 미쳤다, 역대급, 다 뒤집어졌다, 판이 바뀌었다, 이거 모르면 손해, 안 보면 후회, 충격적이지 않나요, 게임 체인저, 다들 난리난, 진짜 미쳤네, 이거 진심임
+- Fire condition:
+
+> - 한 글에 1개 등장: Low
+> - 2개 등장: Medium
+> - 3개 이상: High
+
+Detection example:
+
+> 전 세계 개발자들이 미친 듯이 달려든
+> 역대급 도구가 등장했다
+
+### Viral 6. 가짜 통계 인용
+
+- Source: [ko-viral-hook.md](../patterns/ko-viral-hook.md)
+- Type: score/audit only; rewrite modes skip this pack
+- Watch words: 연구에 따르면 N%, 조사 결과 N%, 데이터가 말하길, 과학적으로 증명, N명 중 N명, 전문가들은 말한다(출처 없음), 통계상
+- Fire condition: 통계·연구·조사·데이터를 언급하며 숫자나 비율을 제시하지만, 같은 글 안에 기관명·링크·표본·시점·조사 방법이 없는 경우.
+- Severity rubric: Low = 보조 설명으로 한 번 등장; Medium = 첫 문장이나 핵심 CTA를 지탱; High = 건강·금융·커리어·안전 조언에 정밀 퍼센트를 붙이거나 여러 통계가 함께 등장.
+
+이전 / 이후 예시:
+
+> 이전: 연구에 따르면 창업자의 73%가 이 습관 하나를 몰라서 돈을 잃는다.
+>
+> 이후: 그 73% 수치의 출처는 확인되지 않는다. 다만 주간 현금흐름 점검은 손실을 더 빨리 발견하는 데 도움이 된다.
+
+### Viral 7. 권위 타이틀 쌓기
+
+- Source: [ko-viral-hook.md](../patterns/ko-viral-hook.md)
+- Type: score/audit only; rewrite modes skip this pack
+- Watch words: 스탠퍼드 출신, Y Combinator 출신, 전 Google, 하버드 박사, Forbes 선정, 수상 경력, 연쇄 창업가, 업계 1위 전문가, 톱 CEO들이 신뢰한
+- Fire condition: 학교·투자사·전 직장·수상·매체·직함 등 권위 표지가 2개 이상 연속으로 등장하고, 그 권위가 주장 자체를 입증하는 근거로 제시되는 경우.
+- Severity rubric: Low = 2개 표지가 나오지만 주장 범위가 좁음; Medium = 3개 이상 표지가 조언·제품·트렌드의 핵심 훅; High = 고위험 조언이나 구매/가입 CTA에서 권위 나열이 근거를 대체.
+
+이전 / 이후 예시:
+
+> 이전: 스탠퍼드 출신, Y Combinator 출신 연쇄 창업가가 말하는 매출 10배 워크플로.
+>
+> 이후: 한 창업자가 매주 성장 지표를 점검할 때 쓰는 워크플로를 공유했다. 자기 지표에 맞는지 먼저 시험해 보자.
+
+### Viral 8. 미래의 나 / 친밀한 2인칭 약속
+
+- Source: [ko-viral-hook.md](../patterns/ko-viral-hook.md)
+- Type: score/audit only; rewrite modes skip this pack
+- Watch words: 친구야, 솔직히 말할게, 이건 저장해, 나중에 고마워할걸, 1년 뒤의 당신이 감사할 것이다, 미래의 내가 고마워할, 믿고 따라와
+- Fire condition: 글의 시작이나 끝에서 독자를 친구·미래의 나·친밀한 상담 대상처럼 직접 부르고, 같은 글 안에 구체적 근거 없이 미래의 감사/후회를 약속하는 경우.
+- Severity rubric: Low = 캐주얼 SNS 글에 한 번 등장; Medium = 제목·첫 문장·마지막 CTA를 구성; High = 긴급성·희소성·고위험 인생/커리어 조언과 함께 사용.
+
+이전 / 이후 예시:
+
+> 이전: 친구야, 이건 저장해. 1년 뒤의 당신이 분명 고마워할 거다.
+>
+> 이후: 다음 달 계획을 세울 때 쓸 체크리스트가 필요하면 저장해 두자.
+
+### Viral 9. 잠언형 펀치라인 / 독립 단문 선언
+
+- Source: [ko-viral-hook.md](../patterns/ko-viral-hook.md)
+
+**주의 어휘:** (구조적 패턴 — 어휘가 아니라 형태로 판단)
+
+**문제:** 문법적으로 완결된 짧은 선언문(대략 10어절 이하)을 한 줄·한 단락에 독립시켜 무게감을 연출한다. "대칭은 함정이 된다." 같은 식으로, 근거 없이 격언처럼 떨어뜨려 깊이 있어 보이게 만드는 가짜 통찰 마이크드롭이다. 특히 한 글에 이런 단독 선언이 2개 이상 나오거나, 문단마다 끝을 이런 한 줄로 봉인하면 SNS·블로그용 AI 콘텐츠의 잠언 톤이 된다. 어휘가 아니라 **형태**(짧음 + 완결 + 독립 배치 + 단정)로 판단한다.
+
+**발화 조건:** 앞뒤 문장과 분리되어 독립된 줄·단락에 놓인, 문법적으로 완결된 짧은 단정 선언문(약 10어절 이하)이 등장하는 경우. 단발이면 약한 신호, 같은 글에 2개 이상이거나 문단마다 한 줄씩 봉인하면 강한 신호다.
+
+**심각도 기준:**
+- Low: 독립 잠언이 글 전체에 1개 등장.
+- Medium: 2개 등장.
+- High: 3개 이상 등장하거나, 거의 모든 문단이 이런 한 줄 선언으로 마무리되는 경우.
+
+**제외 조건:**
+- 시·운문·노래 가사
+- 본질적으로 짧은 메모·답변·공지·알림
+- 구체적 근거가 뒤따르는 의도된 잠언 (바로 다음 문장이 그 선언을 사례·데이터로 뒷받침)
+- 인용·대화체 안에서의 등장
+- 제목·소제목·헤딩
+
+**의미 위험도:** LOW — score-only
+**보존 메모:** 기본적으로 점수만 반영한다. 사용자가 톤을 낮추라고 요청하면, 단독으로 떠 있던 선언을 앞뒤 맥락에 다시 붙이고 구체적 근거를 덧대 평범한 서술로 흡수한다. 글쓴이가 말하려던 핵심 주장 자체는 보존하고, 마이크드롭 연출과 격언 톤만 낮춘다.
+**이전 / 이후 예시(수동 저신호 rewrite):**
+> 이전: 완벽주의는 결국 멈춤이다.
+>
+> 모든 선택은 비용이다.
+>
+> 이후: 완벽하게 다듬으려다 출시를 미루는 동안, 경쟁사는 거친 버전이라도 먼저 내놓고 사용자 반응을 모았다. 어느 쪽을 택하든 포기하는 것이 생기는 셈이다.

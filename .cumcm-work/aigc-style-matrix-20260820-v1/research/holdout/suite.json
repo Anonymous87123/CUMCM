@@ -1,0 +1,102 @@
+{
+  "schema": "aigc-style-benchmark-suite/v1",
+  "suite_id": "matrix-research-holdout",
+  "version": "2026-08-20",
+  "split": "holdout",
+  "benchmark_goal": "improvement",
+  "providers": [
+    "humanize-academic-chinese"
+  ],
+  "required_trials": 3,
+  "required_generation_evidence": [
+    "stack_evaluation"
+  ],
+  "purpose": "Forward draft-to-candidate benchmark sampled without quality labels.",
+  "cases": [
+    {
+      "id": "draft-holdout-01-5e70c60c",
+      "scene": {
+        "document_type": "research",
+        "document_format": "tex",
+        "scope": "local"
+      },
+      "source": "sources/draft-holdout-01-5e70c60c.tex",
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "content-density",
+        "semantic-fidelity",
+        "paragraph-rhythm"
+      ],
+      "provenance": {
+        "kind": "real-draft-section",
+        "source_document": "D:\\2026-BYI\\history\\sccd\\papers\\paper\\paper_CN.tex",
+        "source_document_sha256": "790fbc6c4c5af0350b3c391959ac6c394976cc6fdc01568b4ca7fe8980879959",
+        "start_line": 200,
+        "end_line": 200,
+        "heading": "几何诊断指标",
+        "paragraph_sha256": "5e70c60c62cb1055db7a9c21edd87a07ab13453a73afa2060f39f0943a861cd2",
+        "selection_seed": 20260909,
+        "quality_label_used_for_selection": false
+      }
+    },
+    {
+      "id": "draft-holdout-02-ac58ccf3",
+      "scene": {
+        "document_type": "research",
+        "document_format": "tex",
+        "scope": "local"
+      },
+      "source": "sources/draft-holdout-02-ac58ccf3.tex",
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "content-density",
+        "semantic-fidelity",
+        "paragraph-rhythm"
+      ],
+      "provenance": {
+        "kind": "real-draft-section",
+        "source_document": "D:\\2026-BYI\\history\\sccd\\papers\\paper\\paper_CN.tex",
+        "source_document_sha256": "790fbc6c4c5af0350b3c391959ac6c394976cc6fdc01568b4ca7fe8980879959",
+        "start_line": 69,
+        "end_line": 69,
+        "heading": "引言",
+        "paragraph_sha256": "ac58ccf319eaaf7992be90690be76a104684bdd9bfb72b4a47cc1dfbf652796d",
+        "selection_seed": 20260909,
+        "quality_label_used_for_selection": false
+      }
+    },
+    {
+      "id": "draft-holdout-03-a7d9f628",
+      "scene": {
+        "document_type": "research",
+        "document_format": "tex",
+        "scope": "local"
+      },
+      "source": "sources/draft-holdout-03-a7d9f628.tex",
+      "challenge_tags": [
+        "public-judgment",
+        "specificity",
+        "content-density",
+        "semantic-fidelity",
+        "paragraph-rhythm"
+      ],
+      "provenance": {
+        "kind": "real-draft-section",
+        "source_document": "D:\\2026-BYI\\history\\sccd\\papers\\paper\\paper_CN.tex",
+        "source_document_sha256": "790fbc6c4c5af0350b3c391959ac6c394976cc6fdc01568b4ca7fe8980879959",
+        "start_line": 539,
+        "end_line": 539,
+        "heading": "高预算验证与结论适用范围",
+        "paragraph_sha256": "a7d9f628467c842f3e38d46f3dac810d340e92d4040bb94c07381303f062417c",
+        "selection_seed": 20260909,
+        "quality_label_used_for_selection": false
+      }
+    }
+  ],
+  "holdout_policy": {
+    "curator": "队长",
+    "release_id": "matrix-research-v1"
+  }
+}

@@ -1,0 +1,75 @@
+{
+  "max_manual_page_breaks": 2,
+  "questions": [
+    {
+      "id": "Q1",
+      "title": "固定压力泵下的阀门调节",
+      "start_label": "mcm-q1-start",
+      "end_label": "mcm-q1-end",
+      "section_titles": [
+        "压力--密度关系",
+        "油管质量收支",
+        "100 MPa稳态的搜索",
+        "100 MPa到150 MPa的三种过渡",
+        "局部试算与边界"
+      ],
+      "evidence": {
+        "problem_data_basis": ["附件3没有要求"],
+        "variables_scope": ["开阀时长"],
+        "mathematical_relation": ["油管质量收支"],
+        "solver_implementation": ["先用二分搜索"],
+        "result": ["2.7900", "6.7000"],
+        "interpretation": ["没有把2.79 ms后的数位解释成连续控制精度"],
+        "validation": ["相邻的2.77 ms候选"],
+        "boundary": ["不是连续控制函数的唯一解"]
+      }
+    },
+    {
+      "id": "Q2",
+      "title": "凸轮柱塞供油的压力控制",
+      "start_label": "mcm-q2-start",
+      "end_label": "mcm-q2-end",
+      "section_titles": [
+        "凸轮相位与柱塞腔体积",
+        "柱塞腔与油管的质量交换",
+        "针阀升程与有效喷孔面积",
+        "角速度选择：先看波动，再看均值",
+        "腔压、管压与阀门事件",
+        "本问的验证与未决项"
+      ],
+      "evidence": {
+        "problem_data_basis": ["附件1给出凸轮边缘曲线", "附件2的升程曲线"],
+        "variables_scope": ["凸轮角速度记为"],
+        "mathematical_relation": ["柱塞腔与油管的质量交换"],
+        "solver_implementation": ["差分进化"],
+        "result": ["27.507"],
+        "interpretation": ["供油脉冲"],
+        "validation": ["本问做了三项同源检查"],
+        "boundary": ["不能称为外部实测验证"]
+      }
+    },
+    {
+      "id": "Q3",
+      "title": "双喷嘴与减压阀的协同控制",
+      "start_label": "mcm-q3-start",
+      "end_label": "mcm-q3-end",
+      "section_titles": [
+        "第二个喷嘴改变的不是一个常数",
+        "双喷嘴结果与相位解释",
+        "减压阀的滞回状态",
+        "减压方案的搜索与结果",
+        "双喷嘴与减压阀的操作顺序"
+      ],
+      "evidence": {
+        "problem_data_basis": ["第二个喷嘴的喷油规律与第一个相同"],
+        "variables_scope": ["相位偏移"],
+        "mathematical_relation": ["减压阀的滞回状态"],
+        "solver_implementation": ["二维搜索得到"],
+        "result": ["54.7168", "48.0517"],
+        "interpretation": ["相位是两个执行机构共同作用下的候选"],
+        "validation": ["相位差在48--50 ms的局部候选分数接近"],
+        "boundary": ["结构上的唯一相位"]
+      }
+    }
+  ]
+}

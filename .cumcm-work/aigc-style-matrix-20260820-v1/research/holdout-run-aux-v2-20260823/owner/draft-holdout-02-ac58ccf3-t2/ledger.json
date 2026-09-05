@@ -1,0 +1,25 @@
+{
+  "schema": "aigc-benchmark-owner-ledger/v1",
+  "document_type": "research",
+  "provider": "deai-research-writing",
+  "mode": "REWRITE",
+  "source_sha256": "257a389b55c1a318fc52cabb7a646366c8471b35ea02372fe05f8817cdf12f4f",
+  "candidate_sha256": "75377cc5c59f7f839981592347efc34b6516691594278e26f3c79435eb1fc5f2",
+  "decisions": [
+    {
+      "source_anchor": "draft-holdout-02-ac58ccf3.tex; frozen excerpt: 对协方差自适应后端而言，这种失配直接转化为求解困难。以 CMA-ES 为例，当同一子问题内同时包含极平坦与极陡峭的方向时，优化器陷入步长两难：足以沿平坦谷底推进的步长对陡峭方向过大，而对陡峭方向不致发散的步长又使平坦方向推进极慢。协方差自适…",
+      "action": "REWRITE local prose candidate draft-holdout-02-ac58ccf3-t2.tex; no second humanizer pass",
+      "claim": "Retain the existing research claim and expose its comparison or design implication without adding a new result.",
+      "evidence_boundary": "No experiment, citation, theorem, causal claim, or evidence grade is added; the candidate remains bounded by the frozen excerpt.",
+      "claim_strength": "The source modality, negation, comparison direction, scope qualifier, and empirical/theoretical status are unchanged.",
+      "preserved_objects": [
+        "All equations, references, algorithm names, result labels, condition qualifiers, and claim objects in the frozen source."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "claims": {
+    "hidden_reasoning_recorded": false,
+    "academic_correctness_proven": false
+  }
+}

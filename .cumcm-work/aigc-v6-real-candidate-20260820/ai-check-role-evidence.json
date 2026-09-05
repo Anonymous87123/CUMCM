@@ -1,0 +1,59 @@
+{
+  "schema": "aigc-role-evidence/v1",
+  "evidence_type": "rule-findings",
+  "provider": "ai-check",
+  "role": "reviewer",
+  "status": "pass",
+  "authority_source_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+  "candidate_id": "H-v6",
+  "candidate_sha256": "5d5fe72a74a03a92a5a669333affc9cafe1447151440f2bcf2e3ec6b91aa8a6b",
+  "execution": {
+    "mode": "manual_skill_report_only",
+    "run_id": "aigc-v6-ai-check-20260818",
+    "references_read": [
+      "humanize-main/ai-check/SKILL.md"
+    ]
+  },
+  "inputs": [
+    {
+      "path": "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main.tex",
+      "sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "role": "authority-source"
+    },
+    {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\humanize-run\\rendered_review\\main.tex",
+      "sha256": "5d5fe72a74a03a92a5a669333affc9cafe1447151440f2bcf2e3ec6b91aa8a6b",
+      "role": "review-candidate"
+    }
+  ],
+  "report": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\ai-check-report.md",
+    "sha256": "640c394f4c519adec0a4aff3b851d47e7935c6c8e464018860ed3bfe1e7ef5ec"
+  },
+  "findings": [
+    {
+      "rule_id": "AI-CHECK-B",
+      "location": "abstract: problems 1-5",
+      "severity": "weak",
+      "disposition": "keep_genre_required_parallel_map"
+    },
+    {
+      "rule_id": "AI-CHECK-D",
+      "location": "lines 40-46",
+      "severity": "moderate",
+      "disposition": "keep_problem_interface_list"
+    },
+    {
+      "rule_id": "AI-CHECK-F",
+      "location": "lines 57,69,74,187,517",
+      "severity": "weak",
+      "disposition": "keep_evidence_bound_transitions"
+    },
+    {
+      "rule_id": "AI-CHECK-H",
+      "location": "whole research body",
+      "severity": "weak",
+      "disposition": "keep_academic_register_and_team_judgment_traces"
+    }
+  ]
+}

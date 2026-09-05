@@ -1,0 +1,94 @@
+{
+  "schema": "aigc-writing-plan/v3",
+  "status": "pass",
+  "document_type": "research",
+  "intent": "rewrite",
+  "document_format": "tex",
+  "scope": "local",
+  "authority_must_be_frozen": true,
+  "accepted_rewrite_candidates_max": 1,
+  "candidate_policy": {
+    "providers": [
+      "humanize-academic-chinese"
+    ],
+    "branch_from_frozen_source": true,
+    "serial_rewrite_allowed": false,
+    "source_remains_candidate": true
+  },
+  "reviewer": null,
+  "reviewer_can_select_candidate": false,
+  "workbench": null,
+  "manual_confirmation_required": false,
+  "stages": [
+    {
+      "order": 1,
+      "role": "academic-scene-orchestration",
+      "provider": "deai-academic-writing",
+      "mode": "ROUTE_AND_LOCK",
+      "responsibility": "own authority, provenance, scene contract, shared locks, and child-skill dispatch",
+      "writes_authority_file": false,
+      "role_contract": {
+        "authority": "external-scene-owner",
+        "completion_evidence": [
+          "source-hash",
+          "release-gates"
+        ]
+      }
+    },
+    {
+      "order": 2,
+      "role": "research-owner",
+      "provider": "deai-research-writing",
+      "mode": "REWRITE_OR_RECONCILE",
+      "responsibility": "complete research, evidence, proof, and novelty responsibility",
+      "writes_authority_file": false,
+      "role_contract": {
+        "authority": "external-scene-owner",
+        "completion_evidence": [
+          "source-hash",
+          "release-gates"
+        ]
+      }
+    },
+    {
+      "order": 3,
+      "role": "academic-style-engine",
+      "provider": "humanize-academic-chinese",
+      "mode": "RESEARCH/PROTECTED_REWRITE",
+      "responsibility": "run the complete diagnose, protected candidate, mechanical validation, and emit workflow",
+      "writes_authority_file": false,
+      "branch_from": "SOURCE",
+      "scope": "local",
+      "role_contract": {
+        "package": "humanize-academic-chinese",
+        "role_class": "protected-editor",
+        "deliverables": [
+          "一次中文学术受保护候选",
+          "TeX、数字、数学、引用和术语核验记录"
+        ],
+        "completion_evidence": [
+          "audit-report",
+          "candidate-task",
+          "candidate-file",
+          "candidate-verification",
+          "native-run-report",
+          "change-report",
+          "human-decision"
+        ],
+        "fallback": "保护项或语义门失败时丢弃候选并保留冻结源。",
+        "must_not_claim": [
+          "禁用词清理等于自然文风",
+          "改写通过等于学术正确"
+        ]
+      }
+    }
+  ],
+  "final_gates": [
+    "claim-evidence",
+    "proof",
+    "citation-alignment",
+    "version-reconciliation",
+    "document-integrity"
+  ],
+  "findings": []
+}

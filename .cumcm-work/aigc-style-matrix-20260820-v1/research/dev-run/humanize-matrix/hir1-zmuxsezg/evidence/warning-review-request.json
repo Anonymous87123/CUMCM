@@ -1,0 +1,285 @@
+{
+  "artifact": {
+    "after_sha256": "c0d3a76dd04e9abfc1b398156d81bc83b143fbbe4fd015613f26bfe3157378de",
+    "before_sha256": "80dc1ed278c983275b3dac59fd1461a13ceabd6bad686b58e0c62bb78aa3b754"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "0317fa8ab06fab56b02402fd2c123052a604702eb3147bcc751bae96ee3754b5",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "tex",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "RESEARCH",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不": 2,
+          "不能": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0003",
+            "column": 37,
+            "end": 38,
+            "end_column": 39,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不能",
+            "sentence_context": "至于是否构成归因，现有结果还不能直接回答",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 36
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0009",
+            "column": 152,
+            "end": 152,
+            "end_column": 153,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "CURV\\_SORT 则完全不追踪交互，仅按曲率排序",
+            "sentence_id": "T0005",
+            "side": "after",
+            "start": 151
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0012",
+            "column": 184,
+            "end": 184,
+            "end_column": 185,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "按照独立预算协议，分组阶段只构造分组而不更新优化器状态，因此在给定函数上，两种方法均从相同的初始上下文目标值开始优化，且获得完全相同的搜索预算",
+            "sentence_id": "T0006",
+            "side": "after",
+            "start": 183
+          }
+        ],
+        "before": {
+          "不": 3
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0002",
+            "column": 25,
+            "end": 25,
+            "end_column": 26,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "§4.3 建立了几何指标与终点的统计关联，但关联不等于归因",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 24
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0008",
+            "column": 139,
+            "end": 139,
+            "end_column": 140,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "CURV\\_SORT 则完全不追踪交互，仅按曲率排序",
+            "sentence_id": "T0004",
+            "side": "before",
+            "start": 138
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0011",
+            "column": 171,
+            "end": 171,
+            "end_column": 172,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不",
+            "sentence_context": "按照独立预算协议，分组阶段只构造分组而不更新优化器状态，因此在给定函数上，两种方法均从相同的初始上下文目标值开始优化，且获得完全相同的搜索预算",
+            "sentence_id": "T0005",
+            "side": "before",
+            "start": 170
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "不能": 1
+          },
+          "removed": {
+            "不": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "不能": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0003",
+                "column": 37,
+                "end": 38,
+                "end_column": 39,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不能",
+                "sentence_context": "至于是否构成归因，现有结果还不能直接回答",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 36
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0002",
+                "column": 25,
+                "end": 25,
+                "end_column": 26,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不",
+                "sentence_context": "§4.3 建立了几何指标与终点的统计关联，但关联不等于归因",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 24
+              }
+            ],
+            "removed": {
+              "不": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "c68853b1849d9a33e097605ecb52e79be164cd4fe285225f725a3406535b10b6"
+    },
+    {
+      "code": "SPEECH_ACT_LOGICAL_RELATION_CHANGED",
+      "details": {
+        "after": {
+          "于是": 1,
+          "因此": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "logical_relation",
+            "claim_id": "C0002",
+            "column": 24,
+            "end": 25,
+            "end_column": 26,
+            "end_line": 1,
+            "line": 1,
+            "marker": "于是",
+            "sentence_context": "至于是否构成归因，现有结果还不能直接回答",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 23
+          },
+          {
+            "category": "logical_relation",
+            "claim_id": "C0013",
+            "column": 193,
+            "end": 194,
+            "end_column": 195,
+            "end_line": 1,
+            "line": 1,
+            "marker": "因此",
+            "sentence_context": "按照独立预算协议，分组阶段只构造分组而不更新优化器状态，因此在给定函数上，两种方法均从相同的初始上下文目标值开始优化，且获得完全相同的搜索预算",
+            "sentence_id": "T0006",
+            "side": "after",
+            "start": 192
+          }
+        ],
+        "before": {
+          "因此": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "logical_relation",
+            "claim_id": "C0012",
+            "column": 180,
+            "end": 181,
+            "end_column": 182,
+            "end_line": 1,
+            "line": 1,
+            "marker": "因此",
+            "sentence_context": "按照独立预算协议，分组阶段只构造分组而不更新优化器状态，因此在给定函数上，两种方法均从相同的初始上下文目标值开始优化，且获得完全相同的搜索预算",
+            "sentence_id": "T0005",
+            "side": "before",
+            "start": 179
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "于是": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "于是": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "logical_relation",
+                "claim_id": "C0002",
+                "column": 24,
+                "end": 25,
+                "end_column": 26,
+                "end_line": 1,
+                "line": 1,
+                "marker": "于是",
+                "sentence_context": "至于是否构成归因，现有结果还不能直接回答",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 23
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'logical_relation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "d0aafd3b496c8c683eb98fc5fe7814665841aac9316f61e09af4ff5601798ed7"
+    }
+  ]
+}

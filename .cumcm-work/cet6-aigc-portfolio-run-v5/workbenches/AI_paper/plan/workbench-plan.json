@@ -1,0 +1,67 @@
+{
+  "schema": "aigc-adapter-run/v1",
+  "package": "AI_paper",
+  "action": "workbench-plan",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\cet6-aigc-portfolio-run-v5\\workbenches\\AI_paper\\plan",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\cet6-aigc-portfolio-run-v5\\source.snapshot.tex",
+    "sha256": "5687dd8dda136dbc9843c635dc9a9acf4d88b8de40024062f86cf982f9c69253",
+    "bytes": 98080,
+    "suffix": ".tex"
+  },
+  "preflight": {
+    "directory": "AI_paper",
+    "interfaces": [
+      "audit",
+      "candidate",
+      "workbench"
+    ],
+    "offline_action": "workbench-plan",
+    "native_entrypoints": [
+      {
+        "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\AI_paper\\main.py",
+        "exists": true
+      },
+      {
+        "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\AI_paper\\modules\\api_client.py",
+        "exists": true
+      },
+      {
+        "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\AI_paper\\modules\\ai_reducer.py",
+        "exists": true
+      }
+    ],
+    "runtimes": [
+      {
+        "name": "python",
+        "available": true
+      }
+    ],
+    "network_for_generation": true,
+    "native_command": "python main.py",
+    "safe_boundary": "Windows manual workbench; fix invalid local config paths and verify formulas/numbers before adoption",
+    "entrypoints_present": true
+  },
+  "plan": {
+    "native_command": "python main.py",
+    "document_formats": [
+      "docx",
+      "txt",
+      "tex",
+      "pdf"
+    ],
+    "offline_use": null,
+    "network_for_generation": true,
+    "safe_boundary": "Windows manual workbench; fix invalid local config paths and verify formulas/numbers before adoption",
+    "authority_rule": "import a copy; never overwrite the frozen authority file",
+    "adoption_rule": "export as a candidate, verify it, then require human accept/reject"
+  }
+}

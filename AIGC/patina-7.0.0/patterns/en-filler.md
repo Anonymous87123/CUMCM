@@ -1,0 +1,162 @@
+---
+pack: en-filler
+language: en
+name: Filler & Hedging Patterns
+version: 1.2.0
+patterns: 6
+corpus-snapshot:
+  id: bootstrap-patterns-pre-provenance
+  status: needs-quarterly-refresh
+  source: maintainer-curated pattern packs before quarterly corpus snapshot tracking
+  last_validated: null
+---
+
+# Filler & Hedging Patterns
+
+### 22. Filler Phrases
+
+**Watch words:** it's important to note that, it's worth mentioning that, it should be noted that, in order to, due to the fact that, at the end of the day, when it comes to, in terms of, the fact of the matter is, it goes without saying, needless to say, as a matter of fact, for all intents and purposes, in light of the fact that
+
+**Fire condition:** 2+ filler phrases appear in the same paragraph, or a single phrase that can be deleted without any loss of meaning.
+
+**Exclusion:** "In order to" is occasionally necessary for clarity in legal or formal regulatory writing where "to" could be misread as part of an infinitive chain. Use judgment in those contexts.
+
+**Problem:** AI pads sentences with unnecessary filler that adds length but no meaning. These phrases can almost always be deleted or replaced with a shorter alternative.
+
+**Semantic Risk:** LOW
+
+**Substitutions:**
+- "it's important to note that" --> delete, just state the fact
+- "in order to" --> "to"
+- "due to the fact that" --> "because"
+- "at the end of the day" --> delete or rephrase
+- "when it comes to" --> delete or use the subject directly
+- "in terms of" --> delete or rephrase
+- "in light of the fact that" --> "because" or "since"
+
+**Before:**
+> It's important to note that, in order to achieve sustainable growth, companies need to invest in R&D. Due to the fact that competition is increasing, it's worth mentioning that firms must also focus on talent retention. At the end of the day, when it comes to long-term success, innovation is key.
+
+**After:**
+> Companies that want to grow need to invest in R&D. Competition for talent is rising just as fast — Gartner reports that tech attrition hit 20% last year.
+
+---
+
+### 23. Excessive Hedging
+
+**Watch words:** it could potentially be argued that perhaps, may or may not, it is possible that, to some extent, in certain cases, it could be said that, there is a chance that, one might argue, it seems likely that, arguably, it is conceivable that, tends to suggest
+
+**Fire condition:** 3+ qualifiers stacked on a single claim, or a statement so hedged it makes no falsifiable assertion.
+
+**Exclusion:** A single hedge on a genuinely uncertain claim is appropriate and not this pattern ("this approach may reduce costs" when the evidence is preliminary). Only trigger when qualifiers are stacked or when the combined hedging evacuates all meaning.
+
+**Problem:** AI over-qualifies every statement to avoid being wrong, producing text so hedged that it says almost nothing. A single hedge is fine; stacking three or four qualifiers on one claim is not.
+
+**Semantic Risk:** MEDIUM
+**Preservation Note:** Removing hedges from a genuinely uncertain claim may produce an over-confident assertion; ensure the corrected version retains at least one qualifier if the underlying evidence is preliminary or contested.
+
+**Before:**
+> It could potentially be argued that this approach may, to some extent, offer certain advantages in some cases, though it is possible that the results might vary depending on a number of factors that arguably remain to be fully understood.
+
+**After:**
+> This approach has advantages, but results vary. The biggest variable is team size: teams under five people saw a 30% improvement, while larger teams saw little change.
+
+---
+
+### 24. Generic Positive Conclusions
+
+**Watch words:** a bright future lies ahead, exciting journey, the possibilities are endless, stands as a testament, the sky is the limit, promising outlook, exciting times ahead, the best is yet to come, transformative potential, a new chapter
+
+**Fire condition:** 2+ vague optimism phrases appear in the same paragraph or conclusion, or a standalone final sentence that is entirely optimism filler with no specific claim.
+
+**Exclusion:** A specific optimistic statement backed by evidence ("given the trial data, FDA approval looks likely by Q3") is not this pattern — specificity makes it acceptable.
+
+**Problem:** AI ends with vague optimism instead of specific conclusions. This pattern often appears alongside Pattern 6 (Formulaic Challenges and Prospects) but can also stand alone as a final sentence.
+
+**Semantic Risk:** LOW
+
+**Before:**
+> As the company enters this exciting new chapter, the possibilities are truly endless. With its talented team and innovative vision, a bright future undoubtedly lies ahead. The best is yet to come.
+
+**After:**
+> The company plans to open two more locations by June and is hiring 15 engineers for its new climate-tech division.
+
+**Closing formula before:**
+> In conclusion, this topic is one that will continue to generate discussion and debate for years to come. One thing is certain: the future of this field is full of promise and potential.
+
+**Closing formula after:**
+> The bill goes to committee vote on March 12. If it passes, the new rules take effect in January.
+
+**Not this pattern:** The "challenges, but bright future" two-step structure --> Pattern 6 (Formulaic "Challenges and Prospects," en-content.md) handles that.
+
+---
+
+### 31. Conclusion Signal Words
+
+**Watch words:** In conclusion, Ultimately, In summary, To conclude, To sum up, Finally, All in all, In the end, Overall, On the whole
+
+**Fire condition:** The document's final paragraph (or second-to-last) opens with one of the watch words. Or 2+ such conclusion signals appear across paragraphs.
+
+**Exclusion:**
+- Academic papers with an explicit "Conclusion" section header (the header already signals; in-prose markers are redundant)
+- Multi-step arguments where "Therefore" or "Thus" follows from a clear preceding chain (logic markers, not stylistic markers)
+- Speech or lecture transcripts where the speaker explicitly signposts wrap-up
+
+**Problem:** AI essays announce their conclusions ("In conclusion, X is Y") instead of just stating them. Human writers rarely flag the conclusion paragraph — they just write the conclusion. AI feels obligated to scaffold document structure for the reader.
+
+**Semantic Risk:** LOW
+**Preservation:** Removing only the signal word leaves a hollow paragraph. Rewrite the actual conclusion to be more concrete. The paragraph should still read as a conclusion without the marker.
+
+**Burstiness guidance:** When removing conclusion signals, vary the replacement. Don't replace every "In conclusion, X is Y" with "X is Y, then" — that creates a new mechanical pattern. Mix short verdicts with longer explanatory wrap-ups. This pattern often co-fires with #24 (Generic Positive Conclusions); handle both together.
+
+**Before:**
+> In conclusion, work-life balance is not a luxury but a necessity. It is a critical foundation upon which sustainable success — both personal and professional — must be built.
+
+**After:**
+> Work-life balance isn't optional. Without it, the rest of the structure cracks.
+
+**Not this pattern:** When the *content* of the conclusion is vague optimism --> Pattern 24 (Generic Positive Conclusions) handles that. Pattern 31 is about the signal *word itself* regardless of what follows.
+
+---
+
+### 35. Throat-Clearing Openers
+
+**Watch words:** here's the thing, here's what I mean, let me be clear, let me explain, I'll be honest, to be honest with you, the uncomfortable truth is, real talk, let's be real, here's the deal, the honest answer is
+
+**Fire condition:** A sentence or paragraph opens with a throat-clearing phrase that delays the actual claim, and the phrase can be deleted without losing any content. Fires on 1 instance when the following clause is the actual point, or 2+ instances anywhere in the document.
+
+**Exclusion:** Genuine hedging before a socially difficult statement in first-person writing ("I'll be honest, I almost quit that week") where the phrase carries real reluctance or self-disclosure, not rhythm. Quoted speech and dialogue.
+
+**Semantic Risk:** LOW
+
+**Problem:** AI drafts warm up before the point: "Here's the thing:" followed by the thing. The opener postures directness while adding a beat of delay. Human writers who are actually being direct just state the claim; the phrase survives editing only when it marks real discomfort or a spoken register.
+
+**Before:**
+> Here's the thing: most onboarding flows fail before the first screen. Let me be clear — users decide in the sign-up form, not the tutorial.
+
+**After:**
+> Most onboarding flows fail before the first screen. Users decide in the sign-up form, not the tutorial.
+
+**Not this pattern:** Empty transitional phrases mid-sentence ("at the end of the day", "when it comes to") --> Pattern 22 (Filler Phrases). Pattern 35 is specifically the *opener* that stages the next claim as candid.
+
+---
+
+### 36. Faux-Insight Setup
+
+**Watch words:** what nobody tells you, what most people get wrong, the part everyone misses, what they don't teach you, here's what nobody talks about, most people don't realize, the secret nobody shares, what if I told you
+
+**Fire condition:** A claim is introduced by framing everyone else as ignorant or the writer as the lone insider, and the framing adds no evidence for the claim itself. Fires on any instance in expository prose; in marketing copy 2+ instances.
+
+**Exclusion:** A verifiable contrarian claim where the piece then documents what the common view is and why it is wrong (the setup is doing real argumentative work, followed by evidence).
+
+**Semantic Risk:** LOW
+
+**Problem:** AI flatters the writer as the only honest expert: "What nobody tells you about X..." followed by a claim many people do in fact tell you. The setup borrows authority instead of earning it. Cut the frame and let the claim stand or fall on its own.
+
+**Before:**
+> What nobody tells you about fundraising: warm intros matter more than the deck. Most people get this wrong.
+
+**After:**
+> Warm intros matter more than the deck. Of the 40 founders in our batch, every one who raised had an intro from a portfolio founder; none raised from a cold deck alone.
+
+**Not this pattern:** An unresolved teaser at the *end* of the piece --> en-viral-hook #2 (Clickbait Mystery Close). Unsourced authority claims ("experts agree") --> Pattern 5 (Vague Attributions). Pattern 36 is the *lone-insider frame* placed before a claim.

@@ -1,0 +1,474 @@
+{
+  "seed": 20250814,
+  "criterion": {
+    "cloud_radius_m": 10.0,
+    "cloud_life_s": 20.0,
+    "cloud_sink_m_per_s": 3.0,
+    "target_sample_points": 17,
+    "target_geometry": "cylinder center plus eight rim points at z=0 and z=10",
+    "effective_rule": "all sampled target rays intersect the cloud sphere"
+  },
+  "problem1": {
+    "uav": "FY1",
+    "missile": "M1",
+    "heading_deg": 180.0,
+    "speed": 120.0,
+    "release_time": 1.5,
+    "delay": 3.6,
+    "detonation_time": 5.1,
+    "release_point": [
+      17620.0,
+      2.2043642384652358e-14,
+      1800.0
+    ],
+    "detonation_point": [
+      17188.0,
+      7.494838410781802e-14,
+      1736.496
+    ],
+    "effective_duration": 1.362,
+    "intervals": [
+      [
+        8.057,
+        9.418000000000001
+      ]
+    ],
+    "minimum_worst_ray_distance": 4.717757146378537
+  },
+  "problem2": {
+    "uav": "FY1",
+    "missile": "M1",
+    "heading_deg": 7.399597430033518,
+    "speed": 88.34736745904088,
+    "release_time": 0.10353153820929961,
+    "delay": 0.6058333904565423,
+    "detonation_time": 0.7093649286658419,
+    "release_point": [
+      17809.070565424197,
+      1.1779959555780142,
+      1800.0
+    ],
+    "detonation_point": [
+      17862.148608109033,
+      8.071250861818923,
+      1798.2015329247388
+    ],
+    "effective_duration": 4.565,
+    "intervals": [
+      [
+        2.387,
+        6.9510000000000005
+      ]
+    ],
+    "minimum_worst_ray_distance": 0.3607975259447252
+  },
+  "problem3": {
+    "missile": "M1",
+    "union_duration": 5.51,
+    "union_intervals": [
+      [
+        1.5,
+        7.0
+      ]
+    ],
+    "actions": [
+      {
+        "uav": "FY1",
+        "missile": "M1",
+        "heading_deg": 5.399597430033519,
+        "speed": 100.0,
+        "release_time": 0.25,
+        "delay": 0.5,
+        "detonation_time": 0.75,
+        "release_point": [
+          17824.88906564499,
+          2.3525329581801,
+          1800.0
+        ],
+        "detonation_point": [
+          17874.667196934974,
+          7.0575988745403,
+          1798.775
+        ],
+        "effective_duration": 4.55,
+        "intervals": [
+          [
+            2.46,
+            7.0
+          ]
+        ],
+        "minimum_worst_ray_distance": 1.3450747459816417
+      },
+      {
+        "uav": "FY1",
+        "missile": "M1",
+        "heading_deg": 5.399597430033519,
+        "speed": 100.0,
+        "release_time": 1.25,
+        "delay": 0.25,
+        "detonation_time": 1.5,
+        "release_point": [
+          17924.445328224956,
+          11.762664790900502,
+          1800.0
+        ],
+        "detonation_point": [
+          17949.334393869947,
+          14.1151977490806,
+          1799.69375
+        ],
+        "effective_duration": 3.45,
+        "intervals": [
+          [
+            1.5,
+            4.94
+          ]
+        ],
+        "minimum_worst_ray_distance": 1.9573051696770594
+      }
+    ]
+  },
+  "problem4": {
+    "missile": "M1",
+    "union_duration": 10.700000000000001,
+    "union_intervals": [
+      [
+        2.39,
+        6.95
+      ],
+      [
+        22.25,
+        25.76
+      ],
+      [
+        35.4,
+        38.0
+      ]
+    ],
+    "actions": [
+      {
+        "uav": "FY1",
+        "missile": "M1",
+        "heading_deg": 7.399597430033518,
+        "speed": 88.34736745904088,
+        "release_time": 0.10353153820929961,
+        "delay": 0.6058333904565423,
+        "detonation_time": 0.7093649286658419,
+        "release_point": [
+          17809.070565424197,
+          1.1779959555780142,
+          1800.0
+        ],
+        "detonation_point": [
+          17862.148608109033,
+          8.071250861818923,
+          1798.2015329247388
+        ],
+        "effective_duration": 4.57,
+        "intervals": [
+          [
+            2.39,
+            6.95
+          ]
+        ],
+        "minimum_worst_ray_distance": 0.36517369980736764
+      },
+      {
+        "uav": "FY2",
+        "missile": "M1",
+        "heading_deg": 217.82249249270433,
+        "speed": 100.21988789129566,
+        "release_time": 13.451383203954483,
+        "delay": 8.672553272383212,
+        "detonation_time": 22.123936476337697,
+        "release_point": [
+          10935.11954065556,
+          573.3242793436872,
+          1400.0
+        ],
+        "detonation_point": [
+          10248.555759640865,
+          40.339000605216825,
+          1031.4554167146086
+        ],
+        "effective_duration": 3.52,
+        "intervals": [
+          [
+            22.25,
+            25.76
+          ]
+        ],
+        "minimum_worst_ray_distance": 1.7462052184293448
+      },
+      {
+        "uav": "FY3",
+        "missile": "M1",
+        "heading_deg": 115.9913712790818,
+        "speed": 100.01908605739325,
+        "release_time": 27.461782710050333,
+        "delay": 7.028509073469447,
+        "detonation_time": 34.49029178351978,
+        "release_point": [
+          4796.296717282954,
+          -531.0989233667374,
+          700.0
+        ],
+        "detonation_point": [
+          4488.223511196247,
+          100.7862605570549,
+          457.94029500037254
+        ],
+        "effective_duration": 2.61,
+        "intervals": [
+          [
+            35.4,
+            38.0
+          ]
+        ],
+        "minimum_worst_ray_distance": 4.33261588572867
+      }
+    ]
+  },
+  "problem5": {
+    "objective_sum_duration": 18.19,
+    "by_missile": {
+      "M1": {
+        "missile": "M1",
+        "union_duration": 8.33,
+        "union_intervals": [
+          [
+            1.0,
+            5.55
+          ],
+          [
+            19.34,
+            23.1
+          ]
+        ],
+        "actions": [
+          {
+            "uav": "FY1",
+            "missile": "M1",
+            "heading_deg": 7.399597430033518,
+            "speed": 88.34736745904088,
+            "release_time": 0.0,
+            "delay": 1.0,
+            "detonation_time": 1.0,
+            "release_point": [
+              17800.0,
+              0.0,
+              1800.0
+            ],
+            "detonation_point": [
+              17887.61161652849,
+              11.37813632399216,
+              1795.1
+            ],
+            "effective_duration": 4.5600000000000005,
+            "intervals": [
+              [
+                1.0,
+                5.55
+              ]
+            ],
+            "minimum_worst_ray_distance": 1.4504614069143704
+          },
+          {
+            "uav": "FY5",
+            "missile": "M1",
+            "heading_deg": 102.39369151963106,
+            "speed": 123.24476623518865,
+            "release_time": 14.25,
+            "delay": 2.5,
+            "detonation_time": 16.75,
+            "release_point": [
+              12623.062535740315,
+              -284.6895978718285,
+              1300.0
+            ],
+            "detonation_point": [
+              12556.933156045634,
+              16.24205162434191,
+              1269.375
+            ],
+            "effective_duration": 3.77,
+            "intervals": [
+              [
+                19.34,
+                23.1
+              ]
+            ],
+            "minimum_worst_ray_distance": 0.7820462427025632
+          }
+        ]
+      },
+      "M2": {
+        "missile": "M2",
+        "union_duration": 3.73,
+        "union_intervals": [
+          [
+            16.53,
+            20.25
+          ]
+        ],
+        "actions": [
+          {
+            "uav": "FY2",
+            "missile": "M2",
+            "heading_deg": 287.8711877981342,
+            "speed": 97.07313753929694,
+            "release_time": 9.0,
+            "delay": 1.75,
+            "detonation_time": 10.75,
+            "release_point": [
+              12268.106538833092,
+              568.4967826854041,
+              1400.0
+            ],
+            "detonation_point": [
+              12320.238365828416,
+              406.8156015408995,
+              1384.99375
+            ],
+            "effective_duration": 3.73,
+            "intervals": [
+              [
+                16.53,
+                20.25
+              ]
+            ],
+            "minimum_worst_ray_distance": 0.8089428506130708
+          }
+        ]
+      },
+      "M3": {
+        "missile": "M3",
+        "union_duration": 6.13,
+        "union_intervals": [
+          [
+            17.0,
+            18.75
+          ],
+          [
+            25.46,
+            28.04
+          ],
+          [
+            38.08,
+            39.85
+          ]
+        ],
+        "actions": [
+          {
+            "uav": "FY3",
+            "missile": "M3",
+            "heading_deg": 92.52683957936775,
+            "speed": 126.93221931054259,
+            "release_time": 19.0,
+            "delay": 3.75,
+            "detonation_time": 22.75,
+            "release_point": [
+              5893.673939516153,
+              -590.6327916158211,
+              700.0
+            ],
+            "detonation_point": [
+              5872.68853284171,
+              -115.09978996104928,
+              631.09375
+            ],
+            "effective_duration": 2.59,
+            "intervals": [
+              [
+                25.46,
+                28.04
+              ]
+            ],
+            "minimum_worst_ray_distance": 7.003314698276852
+          },
+          {
+            "uav": "FY3",
+            "missile": "M3",
+            "heading_deg": 92.52683957936775,
+            "speed": 126.93221931054259,
+            "release_time": 20.0,
+            "delay": 2.25,
+            "detonation_time": 22.25,
+            "release_point": [
+              5888.077831069635,
+              -463.8239911745486,
+              700.0
+            ],
+            "detonation_point": [
+              5875.486587064969,
+              -178.50419018168532,
+              675.19375
+            ],
+            "effective_duration": 1.78,
+            "intervals": [
+              [
+                38.08,
+                39.85
+              ]
+            ],
+            "minimum_worst_ray_distance": 5.247849358260181
+          },
+          {
+            "uav": "FY4",
+            "missile": "M3",
+            "heading_deg": 268.1578075143387,
+            "speed": 137.4001907228709,
+            "release_time": 5.5,
+            "delay": 11.5,
+            "detonation_time": 17.0,
+            "release_point": [
+              10975.7066409137,
+              1244.6895286523472,
+              1800.0
+            ],
+            "detonation_point": [
+              10924.911435551438,
+              -334.59600234728987,
+              1151.975
+            ],
+            "effective_duration": 1.76,
+            "intervals": [
+              [
+                17.0,
+                18.75
+              ]
+            ],
+            "minimum_worst_ray_distance": 3.713523535955262
+          }
+        ]
+      }
+    },
+    "assignment": {
+      "FY1": {
+        "missile": "M1",
+        "bomb_count": 1
+      },
+      "FY2": {
+        "missile": "M2",
+        "bomb_count": 1
+      },
+      "FY3": {
+        "missile": "M3",
+        "bomb_count": 2
+      },
+      "FY4": {
+        "missile": "M3",
+        "bomb_count": 1
+      },
+      "FY5": {
+        "missile": "M1",
+        "bomb_count": 1
+      }
+    }
+  },
+  "search_boundary": {
+    "single_action": "differential evolution with distance guidance and fixed seed",
+    "same_path_plan": "0.5 s coarse event grid followed by 0.25 s local refinement",
+    "multi_missile_assignment": "exact enumeration over 3^5 candidate-path assignments"
+  }
+}

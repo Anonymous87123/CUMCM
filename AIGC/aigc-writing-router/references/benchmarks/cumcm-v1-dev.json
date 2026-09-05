@@ -1,0 +1,50 @@
+{
+  "schema": "aigc-style-benchmark-suite/v1",
+  "suite_id": "cumcm-v1-dev",
+  "version": "2026-08-15",
+  "split": "dev",
+  "providers": ["humanize-academic-chinese"],
+  "required_trials": 3,
+  "purpose": "Use only to improve the AIGC writing stack's treatment of public modeling judgments. It is not a detector or authorship benchmark.",
+  "cases": [
+    {
+      "id": "a-convergence-repair",
+      "scene": {"document_type": "mcm", "document_format": "plain", "scope": "local"},
+      "source": "cumcm-v1-dev/sources/a-convergence-repair.txt",
+      "challenge_tags": ["public-judgment", "boundary-conditions", "result-explanation", "paragraph-rhythm"],
+      "provenance": {
+        "record_id": "2020_A070_P0090",
+        "paper": "2020/A070.pdf",
+        "page": 23,
+        "section": "validation",
+        "index": "mcm-cup-standard-write/references/fulltext-style-index.jsonl:90"
+      }
+    },
+    {
+      "id": "b-decision-boundary",
+      "scene": {"document_type": "mcm", "document_format": "plain", "scope": "local"},
+      "source": "cumcm-v1-dev/sources/b-decision-boundary.txt",
+      "challenge_tags": ["public-judgment", "specificity", "boundary-conditions", "content-density"],
+      "provenance": {
+        "record_id": "2020_B078_P0446",
+        "paper": "2020/B078.pdf",
+        "pages": [13, 14],
+        "section": "analysis",
+        "index": "mcm-cup-standard-write/references/fulltext-style-index.jsonl:446"
+      }
+    },
+    {
+      "id": "c-correlation-boundary",
+      "scene": {"document_type": "mcm", "document_format": "plain", "scope": "local"},
+      "source": "cumcm-v1-dev/sources/c-correlation-boundary.txt",
+      "challenge_tags": ["public-judgment", "specificity", "causal-calibration", "paragraph-rhythm"],
+      "provenance": {
+        "record_id": "2023_C228_P5477",
+        "paper": "2023/C228.pdf",
+        "page": 14,
+        "section": "result",
+        "index": "mcm-cup-standard-write/references/fulltext-style-index.jsonl:5477"
+      }
+    }
+  ]
+}

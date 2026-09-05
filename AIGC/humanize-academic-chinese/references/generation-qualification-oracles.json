@@ -1,0 +1,1295 @@
+{
+  "schema_version": "humanize-generation-oracle-catalog/v2",
+  "catalog_version": "1.15.1",
+  "grader_engine_version": "1",
+  "contract_binding": {
+    "version": "2026-07-24.1",
+    "sha256": "d6922089a988b5970941f2287c08ba09dce09620e87929d62b020199007775eb"
+  },
+  "requirements_binding": {
+    "version": "2.14.0",
+    "sha256": "0f9ae781637201882e37bb1128d3ea574dd0e36c16c34ec0f45db36c41e99862"
+  },
+  "trust_binding": {
+    "version": "1.0.0",
+    "sha256": "ecfcef169cd45f3d292de8e7d49f17445dff64db6e9f012ee99bb4919892c1c1"
+  },
+  "policy": {
+    "unknown_fields": "REJECT",
+    "text_encoding": "UTF-8",
+    "unicode_normalization": "NONE"
+  },
+  "fixture_provenance": {
+    "MODE-02/basic-rewrite/v1": {
+      "sources": [
+        {
+          "path": "tests/fixtures/humanize_forward_v6/blind_research_input.md",
+          "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"
+        }
+      ],
+      "derivation": "INPUT_COPIED_FROM_EXISTING_FORWARD_FIXTURE; PROMPT_ABSTRACTS_ITS_REWRITE_TASK; NO_EXPECTED_PROSE_COPIED"
+    },
+    "DEC-09/paired-quality-gate/v1": {
+      "sources": [
+        {
+          "path": "references/generation-qualification-fixtures/v1/protected-output.md",
+          "sha256": "b21a23d5d64da262cc0ab0bec46928a8374fc0170a7260d8992e5b50743e8a59"
+        },
+        {
+          "path": "references/evaluation-contract.md",
+          "sha256": "d6922089a988b5970941f2287c08ba09dce09620e87929d62b020199007775eb"
+        }
+      ],
+      "derivation": "FIXED NO-CHANGE REPLAY PROVES THAT MECHANICAL PASS CREATES A HASH-BOUND PAIRED-QUALITY REQUEST AND CANNOT SELF-CLEAR"
+    },
+    "ROLE-02/quoted-span/v1": {
+      "sources": [
+        {
+          "path": "tests/fixtures/humanize_legacy_retirement/cases.json",
+          "sha256": "64ceec5650c81b40420dbe07499fb6be3f2f9a4a6de1dc8fe06fe252d0dfdf68"
+        }
+      ],
+      "derivation": "INPUT_AND_PROMPT_COPIED_FROM_RET-REPORT-02; CHECK_BINDS_ONLY_PROTECTED_LITERAL_AND_NOT_AN_EXPECTED_REWRITE"
+    },
+    "PATH-05/positive/v1": {
+      "sources": [
+        {
+          "path": "tests/fixtures/humanize_forward_v6/blind_diagnose_input.md",
+          "sha256": "759749460ceba9f5d21e178a72636fca39047ed2f8734516320d605e781835ce"
+        },
+        {
+          "path": "references/evaluation-contract.md",
+          "sha256": "d6922089a988b5970941f2287c08ba09dce09620e87929d62b020199007775eb"
+        }
+      ],
+      "derivation": "ABSTRACTED_EQUAL_WEIGHT_PATHOLOGY_FROM_EXISTING_DIAGNOSE_FIXTURE_AND_PATH-05_CONTRACT; NO_SOURCE_SENTENCE_IS_AN_EXPECTED_OUTPUT"
+    },
+    "LONG-01/include-manifest/v1": {
+      "sources": [
+        {
+          "path": "references/evaluation-contract.md",
+          "sha256": "d6922089a988b5970941f2287c08ba09dce09620e87929d62b020199007775eb"
+        },
+        {
+          "path": "references/corpus-action-sources.json",
+          "sha256": "1a63b106a03bec4d30da50e4ca61031b8a713e0b3e9508986ec403c42c81dc47"
+        }
+      ],
+      "derivation": "MINIMAL_INCLUDE_GRAPH_ABSTRACTED_FROM_LONG-01_AND_REGISTERED_TEX_WORKFLOWS; CHECKS_STRUCTURE_ONLY"
+    },
+    "PROTECTED/hash-zero/v1": {
+      "sources": [
+        {
+          "path": "tests/fixtures/humanize_legacy_retirement/cases.json",
+          "sha256": "64ceec5650c81b40420dbe07499fb6be3f2f9a4a6de1dc8fe06fe252d0dfdf68"
+        },
+        {
+          "path": "references/evaluation-contract.md",
+          "sha256": "d6922089a988b5970941f2287c08ba09dce09620e87929d62b020199007775eb"
+        }
+      ],
+      "derivation": "PROTECTED_QUOTE_SPAN_ABSTRACTED_FROM_EXISTING_RETIREMENT_FIXTURE_AND_ROLE_CONTRACT; BYTE_EQUALITY_ONLY"
+    },
+    "ROLE-10/source-provenance/v1": {
+      "sources": [
+        {
+          "path": "references/corpus-action-sources.json",
+          "sha256": "1a63b106a03bec4d30da50e4ca61031b8a713e0b3e9508986ec403c42c81dc47"
+        },
+        {
+          "path": "references/source-provenance-trust.json",
+          "sha256": "4d0c6f9e5cd301088af56b10e5414c327cba6f6cb9a4116f5d6f04cdf2857607"
+        }
+      ],
+      "derivation": "NEUTRAL_SOURCE_RECORD_DERIVED_FROM_REGISTERED_MODEL_TEXT_ROLE; EXPECTED DECISION IS ABSENT FROM PUBLIC FIXTURE AND COMPUTED BY HIDDEN POLICY CHECK"
+    },
+    "ROLE-11/source-provenance/v1": {
+      "sources": [
+        {
+          "path": "references/evaluation-contract.md",
+          "sha256": "d6922089a988b5970941f2287c08ba09dce09620e87929d62b020199007775eb"
+        },
+        {
+          "path": "references/source-provenance-trust.json",
+          "sha256": "4d0c6f9e5cd301088af56b10e5414c327cba6f6cb9a4116f5d6f04cdf2857607"
+        }
+      ],
+      "derivation": "NEUTRAL UNATTESTED HUMAN-ORIGIN CLAIM; PUBLIC FIXTURE CONTAINS NO PRODUCTION OR REVIEW EXPECTATION"
+    },
+    "ROLE-12/source-provenance/v1": {
+      "sources": [
+        {
+          "path": "references/corpus-action-sources.json",
+          "sha256": "1a63b106a03bec4d30da50e4ca61031b8a713e0b3e9508986ec403c42c81dc47"
+        },
+        {
+          "path": "references/source-provenance-trust.json",
+          "sha256": "4d0c6f9e5cd301088af56b10e5414c327cba6f6cb9a4116f5d6f04cdf2857607"
+        }
+      ],
+      "derivation": "NEUTRAL UNKNOWN-ORIGIN RECORD ABSTRACTED FROM REGISTERED SOURCES; HIDDEN CHECK OWNS THE DECISION"
+    },
+    "ROLE-13/source-provenance/v1": {
+      "sources": [
+        {
+          "path": "references/corpus-action-sources.json",
+          "sha256": "1a63b106a03bec4d30da50e4ca61031b8a713e0b3e9508986ec403c42c81dc47"
+        },
+        {
+          "path": "references/source-provenance-trust.json",
+          "sha256": "4d0c6f9e5cd301088af56b10e5414c327cba6f6cb9a4116f5d6f04cdf2857607"
+        }
+      ],
+      "derivation": "NEUTRAL UNRESOLVED-ORIGIN RECORD ABSTRACTED FROM EXCLUDED REGISTERED SOURCES; NO EXPECTED ROLE IS PUBLIC"
+    },
+    "ROLE-14/template-field-contract/v1": {
+      "sources": [
+        {
+          "path": "references/evaluation-contract.md",
+          "sha256": "d6922089a988b5970941f2287c08ba09dce09620e87929d62b020199007775eb"
+        }
+      ],
+      "derivation": "EXACT CONTRACT-ROW CHECK BINDS THE APPLICABILITY FIELD TO ITS EDITORIAL PAYLOAD ROLE; THIS IS E2 CONTRACT EVIDENCE ONLY"
+    },
+    "ROLE-15/template-field-contract/v1": {
+      "sources": [
+        {
+          "path": "references/evaluation-contract.md",
+          "sha256": "d6922089a988b5970941f2287c08ba09dce09620e87929d62b020199007775eb"
+        }
+      ],
+      "derivation": "EXACT CONTRACT-ROW CHECK BINDS THE REASONING-CHAIN FIELD TO ITS TEACHING ROLE; THIS IS E2 CONTRACT EVIDENCE ONLY"
+    },
+    "ROLE-16/template-field-contract/v1": {
+      "sources": [
+        {
+          "path": "references/evaluation-contract.md",
+          "sha256": "d6922089a988b5970941f2287c08ba09dce09620e87929d62b020199007775eb"
+        }
+      ],
+      "derivation": "EXACT CONTRACT-ROW CHECK PRESERVES PROMPT_STEM AS READER-FACING AND REJECTS CONTRACT DOWNGRADE; THIS IS E2 CONTRACT EVIDENCE ONLY"
+    },
+    "ROLE-17/template-field-contract/v1": {
+      "sources": [
+        {
+          "path": "references/evaluation-contract.md",
+          "sha256": "d6922089a988b5970941f2287c08ba09dce09620e87929d62b020199007775eb"
+        }
+      ],
+      "derivation": "EXACT CONTRACT-ROW CHECK BINDS THE LEXICAL-GUIDANCE FIELD TO ITS EDITORIAL PAYLOAD ROLE; THIS IS E2 CONTRACT EVIDENCE ONLY"
+    },
+    "LONG-28/template-field-edit-scope-contract/v1": {
+      "sources": [
+        {
+          "path": "references/evaluation-contract.md",
+          "sha256": "d6922089a988b5970941f2287c08ba09dce09620e87929d62b020199007775eb"
+        }
+      ],
+      "derivation": "EXACT CONTRACT-ROW CHECK BINDS STANDALONE V4 NULL/SCOPE/LEGACY/REVIEW RULES; THIS IS E2 CONTRACT EVIDENCE ONLY"
+    },
+    "LONG-20/structural-review-request/v1": {
+      "sources": [
+        {
+          "path": "references/generation-qualification-fixtures/v1/mode-02-input.md",
+          "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"
+        }
+      ],
+      "derivation": "FIXED LONG-DOCUMENT REPLAY AUGMENTS THE EXISTING UTF-8 RESEARCH FIXTURE WITH TWO NEUTRAL EXPOSITION PARAGRAPHS; EXPECTED STATE REMAINS HIDDEN IN THIS CATALOG"
+    },
+    "LONG-21/review-only-delivery/v1": {
+      "sources": [
+        {
+          "path": "references/generation-qualification-fixtures/v1/mode-02-input.md",
+          "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"
+        }
+      ],
+      "derivation": "FIXED LONG-DOCUMENT REPLAY EXERCISES REVIEW-ONLY PUBLICATION AND LOCAL CLEARANCE REJECTION; NO EXPECTED STATUS IS PRESENT IN THE FIXTURE"
+    },
+    "LONG-22/adjacent-pair-authority/v1": {
+      "sources": [
+        {
+          "path": "references/generation-qualification-fixtures/v1/mode-02-input.md",
+          "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"
+        }
+      ],
+      "derivation": "FIXED REPLAY DERIVES TWO ADJACENT STRUCTURAL UNITS AND USES THE LIVE PREPARE TRANSACTION INVENTORY; AUTHORITY EXPECTATIONS ARE CATALOG-ONLY"
+    },
+    "LONG-23/adjacent-pair-atomic-review/v1": {
+      "sources": [
+        {
+          "path": "references/generation-qualification-fixtures/v1/mode-02-input.md",
+          "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"
+        }
+      ],
+      "derivation": "FIXED REPLAY BUILDS A BOUND ADJACENT-PAIR BUNDLE FROM LIVE CHUNKS; ATOMIC REVIEW EXPECTATIONS ARE NOT EXPOSED TO THE GENERATOR"
+    },
+    "LONG-24/transaction-non-downgrade/v1": {
+      "sources": [
+        {
+          "path": "references/generation-qualification-fixtures/v1/mode-02-input.md",
+          "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"
+        }
+      ],
+      "derivation": "FIXED REPLAY ATTEMPTS SECOND-PASS DOWNGRADE AND REBUILDS THE GENERATOR PROJECTION; EXPECTED GATES REMAIN IN THE HIDDEN CATALOG"
+    },
+    "LONG-25/transaction-candidate-disposition/v1": {
+      "sources": [
+        {
+          "path": "references/generation-qualification-fixtures/v1/mode-02-input.md",
+          "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"
+        }
+      ],
+      "derivation": "FIXED REPLAY COMPARES UNDISPOSED, DECLINED, CONFLICTING, AND STALE CANDIDATE ARTIFACTS AGAINST THE LIVE FROZEN INVENTORY; EXPECTED DISPOSITIONS REMAIN CATALOG-ONLY"
+    },
+    "LONG-26/paired-quality-candidate/v1": {
+      "sources": [
+        {
+          "path": "references/generation-qualification-fixtures/v1/mode-02-input.md",
+          "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"
+        }
+      ],
+      "derivation": "FIXED REPLAY BUILDS AN ORDINARY LONG-DOCUMENT NO-CHANGE CANDIDATE AND RECOMPUTES EVERY PAIRED-QUALITY REQUEST BINDING"
+    },
+    "LONG-27/paired-quality-second-pass-non-clearance/v1": {
+      "sources": [
+        {
+          "path": "references/generation-qualification-fixtures/v1/mode-02-input.md",
+          "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"
+        }
+      ],
+      "derivation": "FIXED REPLAY ATTEMPTS TO ATTACH A SECOND-PASS RECEIPT TO A PAIRED-QUALITY REVIEW CANDIDATE AND REQUIRES INVALID-EVIDENCE REJECTION"
+    }
+  },
+  "checks": [
+    {
+      "id": "validator/MODE-02/paired-quality-review/v1",
+      "atom_id": "MODE-02",
+      "type": "replay_result",
+      "source": "validator",
+      "configuration": {
+        "tool_id": "validate_humanize_output",
+        "args": [
+          "${INPUT}",
+          "${OUTPUT}",
+          "--scene",
+          "RESEARCH",
+          "--format",
+          "json"
+        ],
+        "expected": {
+          "status": "REVIEW",
+          "delivery_gate_status": "REVIEW",
+          "exit_code": 2,
+          "academic_correctness": "NOT_EVALUATED",
+          "candidate_assembly_status": "PASS",
+          "mechanical_validation_status": "PASS",
+          "paired_quality_review_status": "PENDING_EXTERNAL_REVIEW",
+          "paired_quality_review_request_schema": "humanize-paired-quality-review-request/v1",
+          "paired_quality_review_request_binding_status": "PASS",
+          "paired_quality_clearance_granted": false,
+          "paired_quality_review_local_clearance_supported": false,
+          "humanize_quality_claim_allowed": false
+        }
+      }
+    },
+    {
+      "id": "validator/DEC-09/paired-quality-gate/v1",
+      "atom_id": "DEC-09",
+      "type": "replay_result",
+      "source": "validator",
+      "configuration": {
+        "tool_id": "validate_humanize_output",
+        "args": [
+          "${INPUT}",
+          "${OUTPUT}",
+          "--scene",
+          "GENERAL",
+          "--format",
+          "json"
+        ],
+        "expected": {
+          "status": "REVIEW",
+          "delivery_gate_status": "REVIEW",
+          "exit_code": 2,
+          "academic_correctness": "NOT_EVALUATED",
+          "candidate_assembly_status": "PASS",
+          "mechanical_validation_status": "PASS",
+          "paired_quality_review_status": "PENDING_EXTERNAL_REVIEW",
+          "paired_quality_review_request_schema": "humanize-paired-quality-review-request/v1",
+          "paired_quality_review_request_binding_status": "PASS",
+          "paired_quality_clearance_granted": false,
+          "paired_quality_review_local_clearance_supported": false,
+          "humanize_quality_claim_allowed": false
+        }
+      }
+    },
+    {
+      "id": "text/MODE-02/no-audit-ledger/v1",
+      "atom_id": "MODE-02",
+      "type": "utf8_literal",
+      "source": "artifact:output",
+      "configuration": {
+        "artifact_role": "output",
+        "forbidden": [
+          {
+            "literal": "Severity | Location | Source role | Scene",
+            "maximum_occurrences": 0
+          },
+          {
+            "literal": "evidence_integrity_status",
+            "maximum_occurrences": 0
+          }
+        ]
+      }
+    },
+    {
+      "id": "json/MODE-02/public-context-bound/v1",
+      "atom_id": "MODE-02",
+      "type": "json_value",
+      "source": "artifact:context",
+      "configuration": {
+        "artifact_role": "context",
+        "path": ["public_context_sha256"],
+        "operator": "EQUALS",
+        "expected": "3e7f09b534a94382780c50312260762d1180161ade8427baf2fb12aa15234bb7"
+      }
+    },
+    {
+      "id": "json/ROLE-02/public-context-bound/v1",
+      "atom_id": "ROLE-02",
+      "type": "json_value",
+      "source": "artifact:context",
+      "configuration": {
+        "artifact_role": "context",
+        "path": ["public_context_sha256"],
+        "operator": "EQUALS",
+        "expected": "e3eb51cbd66b027b42e8e9d64bd2c7b91edd00813d2d81f5dc8cc77d866ac791"
+      }
+    },
+    {
+      "id": "relation/ROLE-02/quote-byte-preserved/v1",
+      "atom_id": "ROLE-02",
+      "type": "artifact_relation",
+      "source": "artifact:input-output",
+      "configuration": {
+        "operator": "LITERAL_OCCURRENCES_EQUAL",
+        "before_role": "input",
+        "after_role": "output",
+        "literal": "“我并不认为时间更短就一定更好”",
+        "minimum_occurrences": 1
+      }
+    },
+    {
+      "id": "structure/PATH-05/grid-changed/v1",
+      "atom_id": "PATH-05/positive",
+      "type": "structure_relation",
+      "source": "artifact:input-output",
+      "configuration": {
+        "operator": "PARAGRAPH_SENTENCE_GRID_CHANGED",
+        "input_role": "input",
+        "output_role": "output",
+        "minimum_paragraphs": 3
+      }
+    },
+    {
+      "id": "json/PATH-05/public-context-bound/v1",
+      "atom_id": "PATH-05/positive",
+      "type": "json_value",
+      "source": "artifact:context",
+      "configuration": {
+        "artifact_role": "context",
+        "path": ["public_context_sha256"],
+        "operator": "EQUALS",
+        "expected": "aa50a881f030057978948e003fbb71188e41fe2b1362e2366cd6cd48a07e4045"
+      }
+    },
+    {
+      "id": "json/LONG-01/include-manifest/v1",
+      "atom_id": "LONG-01",
+      "type": "json_value",
+      "source": "artifact:output",
+      "configuration": {
+        "artifact_role": "output",
+        "path": [
+          "included_files"
+        ],
+        "operator": "ARRAY_SET_EQUALS",
+        "expected": [
+          "chapter-a.tex",
+          "chapter-b.tex"
+        ]
+      }
+    },
+    {
+      "id": "json/LONG-01/completeness-claim/v1",
+      "atom_id": "LONG-01",
+      "type": "json_value",
+      "source": "artifact:output",
+      "configuration": {
+        "artifact_role": "output",
+        "path": [
+          "manifest_complete"
+        ],
+        "operator": "EQUALS",
+        "expected": true
+      }
+    },
+    {
+      "id": "json/LONG-01/public-context-bound/v1",
+      "atom_id": "LONG-01",
+      "type": "json_value",
+      "source": "artifact:context",
+      "configuration": {
+        "artifact_role": "context",
+        "path": ["public_context_sha256"],
+        "operator": "EQUALS",
+        "expected": "4a9a04cbfe96621a993b485bde5d93b3974fc9553a8de17f7767c3f08841b60c"
+      }
+    },
+    {
+      "id": "measurement/PROTECTED/hash-zero/v1",
+      "atom_id": "PROTECTED/hash-zero",
+      "type": "measurement_result",
+      "source": "measurement:protected_hash",
+      "configuration": {
+        "measurement": "protected_hash",
+        "annotation_artifact": "protected_annotation",
+        "expected_status": "PASS"
+      }
+    },
+    {
+      "id": "policy/ROLE-10/source-provenance/v1",
+      "atom_id": "ROLE-10",
+      "type": "source_provenance_decision",
+      "source": "artifact:input-output",
+      "configuration": {
+        "input_role": "input",
+        "output_role": "output"
+      }
+    },
+    {
+      "id": "policy/ROLE-11/source-provenance/v1",
+      "atom_id": "ROLE-11",
+      "type": "source_provenance_decision",
+      "source": "artifact:input-output",
+      "configuration": {
+        "input_role": "input",
+        "output_role": "output"
+      }
+    },
+    {
+      "id": "policy/ROLE-12/source-provenance/v1",
+      "atom_id": "ROLE-12",
+      "type": "source_provenance_decision",
+      "source": "artifact:input-output",
+      "configuration": {
+        "input_role": "input",
+        "output_role": "output"
+      }
+    },
+    {
+      "id": "policy/ROLE-13/source-provenance/v1",
+      "atom_id": "ROLE-13",
+      "type": "source_provenance_decision",
+      "source": "artifact:input-output",
+      "configuration": {
+        "input_role": "input",
+        "output_role": "output"
+      }
+    },
+    {
+      "id": "contract/ROLE-14/template-field/v1",
+      "atom_id": "ROLE-14",
+      "type": "contract_matrix_row",
+      "source": "evaluation-contract",
+      "configuration": {
+        "artifact_role": "contract",
+        "atom_id": "ROLE-14",
+        "expected_cell_sha256": [
+          "ae9cfd73d0f33eef9e8dc19d2031d23583cd4726d877901de9ab78dff8f4f947",
+          "d48bacf76b942c4a1af423bee4e39fb553f7db5e907317a8826f1f0445802ca1",
+          "38ed41270bdea2867e6d418755fe5744323fc6e0d93fbe48298bd09827502b36",
+          "3a8a85fecd8d7c28ee527db7687d932175154adc6e8e9c322fd32ef49445a29d",
+          "0aaa0cdf453509c2a41eb1ca77db497d7c475b0ddf858fdb6491f927d090fc46"
+        ]
+      }
+    },
+    {
+      "id": "contract/ROLE-15/template-field/v1",
+      "atom_id": "ROLE-15",
+      "type": "contract_matrix_row",
+      "source": "evaluation-contract",
+      "configuration": {
+        "artifact_role": "contract",
+        "atom_id": "ROLE-15",
+        "expected_cell_sha256": [
+          "ca7ba6393be6796b7d494c513f13ce3573151a7d500a2db5a90b7be304bdb2d9",
+          "97c732584c584232eb1c9196eb26644526e948e2ee352217d74656e33ea4bb38",
+          "f82dad9f276d1301e0cf7365d13f7b441b245761fa6784555e764f84a72d2e51",
+          "7d315c49224ffa7279f5dbde9c468dc327c1e731593a02af987c5e08d6f7fbee",
+          "0aaa0cdf453509c2a41eb1ca77db497d7c475b0ddf858fdb6491f927d090fc46"
+        ]
+      }
+    },
+    {
+      "id": "contract/ROLE-16/template-field/v1",
+      "atom_id": "ROLE-16",
+      "type": "contract_matrix_row",
+      "source": "evaluation-contract",
+      "configuration": {
+        "artifact_role": "contract",
+        "atom_id": "ROLE-16",
+        "expected_cell_sha256": [
+          "d1d92a019fdb82a4339f579c12223fc9e8029d7ce1692d22622eb9e1d2e80a68",
+          "a1d954430b9b7e4bd268b3ac7258f541fd9801fbdaec4166f1e84b03319d788b",
+          "a78f783eda4acd4fe5dc4098c321f174f3af976539d7675ab9c96d0107ed34fd",
+          "13e060ae6566f8f91c7ba1d1873c87fa712d996e670b720976bea48dae688e79",
+          "10cbe3188314304aebca2baefdf17dcee5ce8d7938a2320a530bfa4c8cddb9a5"
+        ]
+      }
+    },
+    {
+      "id": "contract/ROLE-17/template-field/v1",
+      "atom_id": "ROLE-17",
+      "type": "contract_matrix_row",
+      "source": "evaluation-contract",
+      "configuration": {
+        "artifact_role": "contract",
+        "atom_id": "ROLE-17",
+        "expected_cell_sha256": [
+          "eeeb21d10f61d9f6df053afaf6eee3cb4d64e4b7ed216face7641be028e2e3bb",
+          "2ab0965ad66b2d2a2eb70bce31d5cc003edf65810c958b405043505342e64cb7",
+          "8fc4b2260b2705113c856794dc27abad754e5a11f73b5e0bbe1b39423c1a2a41",
+          "91b2e96b7cb695397b44ee637ed25536fae0055a3a0dc88c518d04aa9eef7a29",
+          "0aaa0cdf453509c2a41eb1ca77db497d7c475b0ddf858fdb6491f927d090fc46"
+        ]
+      }
+    },
+    {
+      "id": "contract/LONG-28/template-field-edit-scope/v1",
+      "atom_id": "LONG-28",
+      "type": "contract_matrix_row",
+      "source": "evaluation-contract",
+      "configuration": {
+        "artifact_role": "contract",
+        "atom_id": "LONG-28",
+        "expected_cell_sha256": [
+          "17507a4bb44aefd2efe69cfe358bfd63dc01e8c0c890c8d2f451b75e7444f2f4",
+          "87ed54709273158f3f858061ca0f944b96627d41295d81bfbf7201ad6cde3caf",
+          "a772ce67b01120921e7d95c2820f3a527717b759061f58ec157891119b97d1a2",
+          "f86553db92f592a34228b02469180ce18328ea9a25e4ed2899557f4f20baae3d"
+        ]
+      }
+    },
+    {
+      "id": "replay/LONG-20/structural-review-request/v1",
+      "atom_id": "LONG-20",
+      "type": "replay_result",
+      "source": "long-document-replay",
+      "configuration": {
+        "tool_id": "replay_humanize_long_fixture",
+        "args": ["${INPUT}", "${OUTPUT}", "--scenario", "LONG-20"],
+        "expected": {
+          "status": "REVIEW",
+          "delivery_gate_status": "REVIEW",
+          "exit_code": 2,
+          "academic_correctness": "NOT_EVALUATED",
+          "candidate_assembly_status": "PASS",
+          "publish_state": "REVIEW_CANDIDATE",
+          "structural_plan_status": "PASS",
+          "structural_semantic_mapping": "NOT_EVALUATED",
+          "structural_semantic_review_status": "PENDING_EXTERNAL_REVIEW",
+          "structural_review_request_schema": "humanize-structural-semantic-review-request/v1",
+          "structural_review_request_binding_status": "PASS",
+          "local_clearance_supported": false,
+          "local_clearance_bundle_rejected": "NOT_RUN",
+          "rendered_exists": false,
+          "rendered_review_exists": true
+        }
+      }
+    },
+    {
+      "id": "replay/LONG-21/review-only-delivery/v1",
+      "atom_id": "LONG-21",
+      "type": "replay_result",
+      "source": "long-document-replay",
+      "configuration": {
+        "tool_id": "replay_humanize_long_fixture",
+        "args": ["${INPUT}", "${OUTPUT}", "--scenario", "LONG-21"],
+        "expected": {
+          "status": "REVIEW",
+          "delivery_gate_status": "REVIEW",
+          "exit_code": 2,
+          "academic_correctness": "NOT_EVALUATED",
+          "candidate_assembly_status": "PASS",
+          "publish_state": "REVIEW_CANDIDATE",
+          "structural_plan_status": "PASS",
+          "structural_semantic_mapping": "NOT_EVALUATED",
+          "structural_semantic_review_status": "PENDING_EXTERNAL_REVIEW",
+          "structural_review_request_schema": "humanize-structural-semantic-review-request/v1",
+          "structural_review_request_binding_status": "PASS",
+          "local_clearance_supported": false,
+          "local_clearance_bundle_rejected": true,
+          "rendered_exists": false,
+          "rendered_review_exists": true
+        }
+      }
+    },
+    {
+      "id": "replay/LONG-22/adjacent-pair-authority/v1",
+      "atom_id": "LONG-22",
+      "type": "replay_result",
+      "source": "long-document-replay",
+      "configuration": {
+        "tool_id": "replay_humanize_long_fixture",
+        "args": ["${INPUT}", "${OUTPUT}", "--scenario", "LONG-22"],
+        "expected": {
+          "status": "REVIEW",
+          "delivery_gate_status": "REVIEW",
+          "exit_code": 2,
+          "academic_correctness": "NOT_EVALUATED",
+          "candidate_assembly_status": "PASS",
+          "publish_state": "REVIEW_CANDIDATE",
+          "structural_semantic_mapping": "NOT_EVALUATED",
+          "structural_transaction_status": "PASS",
+          "structural_transaction_count": 1,
+          "structural_transaction_member_coverage": "PASS",
+          "structural_transaction_authority_status": "PASS",
+          "structural_transaction_conflict_rejected": true,
+          "structural_transaction_atomicity": "PASS",
+          "transaction_review_request_schema": "humanize-structural-transaction-review-request/v2",
+          "rewrite_intent_coverage_status": "PASS",
+          "rewrite_intent_units_missing": 0,
+          "structural_transaction_rollback_status": "NOT_RUN",
+          "transaction_non_downgrade_status": "PASS",
+          "transaction_replay_status": "NOT_RUN",
+          "second_pass_seed_rejected": "NOT_RUN",
+          "generator_projection_control_surface": "NOT_RUN",
+          "generator_projection_reproducibility": "NOT_RUN",
+          "generator_projection_transaction_surface": "NOT_RUN",
+          "rendered_exists": false,
+          "rendered_review_exists": true
+        }
+      }
+    },
+    {
+      "id": "replay/LONG-23/adjacent-pair-atomic-review/v1",
+      "atom_id": "LONG-23",
+      "type": "replay_result",
+      "source": "long-document-replay",
+      "configuration": {
+        "tool_id": "replay_humanize_long_fixture",
+        "args": ["${INPUT}", "${OUTPUT}", "--scenario", "LONG-23"],
+        "expected": {
+          "status": "REVIEW",
+          "delivery_gate_status": "REVIEW",
+          "exit_code": 2,
+          "academic_correctness": "NOT_EVALUATED",
+          "candidate_assembly_status": "PASS",
+          "publish_state": "REVIEW_CANDIDATE",
+          "structural_semantic_mapping": "NOT_EVALUATED",
+          "structural_transaction_status": "PASS",
+          "structural_transaction_count": 1,
+          "structural_transaction_member_coverage": "PASS",
+          "structural_transaction_authority_status": "PASS",
+          "structural_transaction_conflict_rejected": "NOT_RUN",
+          "structural_transaction_atomicity": "PASS",
+          "transaction_review_request_schema": "humanize-structural-transaction-review-request/v2",
+          "rewrite_intent_coverage_status": "PASS",
+          "rewrite_intent_units_missing": 0,
+          "structural_transaction_rollback_status": "PASS",
+          "transaction_non_downgrade_status": "PASS",
+          "transaction_replay_status": "NOT_RUN",
+          "second_pass_seed_rejected": "NOT_RUN",
+          "generator_projection_control_surface": "NOT_RUN",
+          "generator_projection_reproducibility": "NOT_RUN",
+          "generator_projection_transaction_surface": "NOT_RUN",
+          "rendered_exists": false,
+          "rendered_review_exists": true
+        }
+      }
+    },
+    {
+      "id": "replay/LONG-24/transaction-non-downgrade/v1",
+      "atom_id": "LONG-24",
+      "type": "replay_result",
+      "source": "long-document-replay",
+      "configuration": {
+        "tool_id": "replay_humanize_long_fixture",
+        "args": ["${INPUT}", "${OUTPUT}", "--scenario", "LONG-24"],
+        "expected": {
+          "status": "REVIEW",
+          "delivery_gate_status": "REVIEW",
+          "exit_code": 2,
+          "academic_correctness": "NOT_EVALUATED",
+          "candidate_assembly_status": "PASS",
+          "publish_state": "REVIEW_CANDIDATE",
+          "structural_semantic_mapping": "NOT_EVALUATED",
+          "structural_transaction_status": "PASS",
+          "structural_transaction_count": 1,
+          "structural_transaction_member_coverage": "PASS",
+          "structural_transaction_authority_status": "PASS",
+          "structural_transaction_conflict_rejected": "NOT_RUN",
+          "structural_transaction_atomicity": "PASS",
+          "transaction_review_request_schema": "humanize-structural-transaction-review-request/v2",
+          "rewrite_intent_coverage_status": "PASS",
+          "rewrite_intent_units_missing": 0,
+          "structural_transaction_rollback_status": "NOT_RUN",
+          "transaction_non_downgrade_status": "PASS",
+          "transaction_replay_status": "PASS",
+          "second_pass_seed_rejected": true,
+          "generator_projection_control_surface": "ABSENT",
+          "generator_projection_reproducibility": "PASS",
+          "generator_projection_transaction_surface": "PASS",
+          "rendered_exists": false,
+          "rendered_review_exists": true
+        }
+      }
+    },
+    {
+      "id": "replay/LONG-25/transaction-candidate-disposition/v1",
+      "atom_id": "LONG-25",
+      "type": "replay_result",
+      "source": "long-document-replay",
+      "configuration": {
+        "tool_id": "replay_humanize_long_fixture",
+        "args": ["${INPUT}", "${OUTPUT}", "--scenario", "LONG-25"],
+        "expected": {
+          "status": "REVIEW",
+          "delivery_gate_status": "REVIEW",
+          "exit_code": 2,
+          "academic_correctness": "NOT_EVALUATED",
+          "candidate_assembly_status": "REVIEW",
+          "publish_state": "PARTIAL",
+          "structural_semantic_mapping": "PASS",
+          "structural_transaction_candidates_total": 1,
+          "structural_transaction_candidates_executed": 0,
+          "structural_transaction_candidates_declined": 0,
+          "structural_transaction_candidates_pending": 1,
+          "structural_transaction_candidate_coverage_status": "REVIEW",
+          "structural_transaction_scope_complete": false,
+          "candidate_no_change_does_not_dispose": true,
+          "decline_schema": "humanize-structural-transaction-decline/v1",
+          "decline_closure_status": "PASS",
+          "decline_candidate_coverage_status": "PASS",
+          "decline_delivery_gate_status": "REVIEW",
+          "decline_publish_state": "REVIEW_CANDIDATE",
+          "decline_paired_quality_review_request_coverage_status": "PASS",
+          "decline_paired_quality_gate_status": "PENDING_EXTERNAL_REVIEW",
+          "decline_humanize_completion_claim_allowed": false,
+          "decline_disposition": "DECLINED",
+          "decline_evidence_member_coverage": "PASS",
+          "execution_decline_conflict_rejected": true,
+          "stale_decline_rejected": true,
+          "rendered_exists": false,
+          "rendered_partial_exists": true,
+          "decline_rendered_exists": false,
+          "decline_rendered_review_exists": true,
+          "rendered_review_exists": false
+        }
+      }
+    },
+    {
+      "id": "replay/LONG-26/paired-quality-candidate/v1",
+      "atom_id": "LONG-26",
+      "type": "replay_result",
+      "source": "long-document-replay",
+      "configuration": {
+        "tool_id": "replay_humanize_long_fixture",
+        "args": ["${INPUT}", "${OUTPUT}", "--scenario", "LONG-26"],
+        "expected": {
+          "status": "REVIEW",
+          "delivery_gate_status": "REVIEW",
+          "exit_code": 2,
+          "academic_correctness": "NOT_EVALUATED",
+          "candidate_assembly_status": "PASS",
+          "publish_state": "REVIEW_CANDIDATE",
+          "paired_quality_review_request_schema": "humanize-paired-quality-review-request/v1",
+          "paired_quality_review_request_binding_status": "PASS",
+          "paired_quality_review_request_coverage_status": "PASS",
+          "paired_quality_gate_status": "PENDING_EXTERNAL_REVIEW",
+          "paired_quality_units_total": 1,
+          "paired_quality_units_pending": 1,
+          "paired_quality_units_missing": 0,
+          "paired_quality_clearance_granted": false,
+          "paired_quality_local_clearance_supported": false,
+          "paired_quality_no_change_request_status": "PASS",
+          "humanize_completion_claim_allowed": false,
+          "rendered_exists": false,
+          "rendered_review_exists": true
+        }
+      }
+    },
+    {
+      "id": "replay/LONG-27/paired-quality-second-pass-non-clearance/v1",
+      "atom_id": "LONG-27",
+      "type": "replay_result",
+      "source": "long-document-replay",
+      "configuration": {
+        "tool_id": "replay_humanize_long_fixture",
+        "args": ["${INPUT}", "${OUTPUT}", "--scenario", "LONG-27"],
+        "expected": {
+          "status": "REVIEW",
+          "delivery_gate_status": "REVIEW",
+          "exit_code": 2,
+          "academic_correctness": "NOT_EVALUATED",
+          "candidate_assembly_status": "PASS",
+          "publish_state": "REVIEW_CANDIDATE",
+          "paired_quality_review_request_schema": "humanize-paired-quality-review-request/v1",
+          "paired_quality_review_request_binding_status": "PASS",
+          "paired_quality_review_request_coverage_status": "PASS",
+          "paired_quality_gate_status": "PENDING_EXTERNAL_REVIEW",
+          "paired_quality_units_total": 1,
+          "paired_quality_units_pending": 1,
+          "paired_quality_units_missing": 0,
+          "paired_quality_clearance_granted": false,
+          "paired_quality_local_clearance_supported": false,
+          "paired_quality_no_change_request_status": "PASS",
+          "humanize_completion_claim_allowed": false,
+          "rendered_exists": false,
+          "rendered_review_exists": true,
+          "second_pass_seed_rejected": true,
+          "humanize_second_pass_convergence": "FAIL",
+          "second_pass_stability_status": "INVALID_EVIDENCE",
+          "second_pass_quality_clearance_granted": false
+        }
+      }
+    }
+  ],
+  "review_rubrics": [
+    {
+      "id": "style/PATH-05/equal-weight/v1",
+      "atom_id": "PATH-05/positive",
+      "reviewer_kinds": [
+        "MODEL",
+        "HUMAN"
+      ],
+      "minimum_distinct_reviewers": 1,
+      "questions": [
+        {
+          "id": "paragraphs-not-equal-weight",
+          "answer_type": "PASS_FAIL"
+        },
+        {
+          "id": "scene-formality-preserved",
+          "answer_type": "PASS_FAIL"
+        }
+      ],
+      "aggregation": "ALL_PASS"
+    }
+  ],
+  "suites": [
+    {
+      "id": "MODE-02/basic-rewrite/v1",
+      "atom_id": "MODE-02",
+      "qualification_stage": "SHADOW",
+      "runner_compatible": false,
+      "fixture_bindings": {
+        "input": {
+          "path": "references/generation-qualification-fixtures/v1/mode-02-input.md",
+          "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"
+        },
+        "prompt": {
+          "path": "references/generation-qualification-fixtures/v1/mode-02-prompt.txt",
+          "sha256": "ae3a19ba1a8bb1e2351dd6c65f6113cd64ad0da0521c37dddf9ad124e6b66ee7"
+        },
+        "public_context": {
+          "path": "references/generation-qualification-fixtures/v1/mode-02-context.json",
+          "sha256": "3e7f09b534a94382780c50312260762d1180161ade8427baf2fb12aa15234bb7"
+        }
+      },
+      "required_checks": [
+        "validator/MODE-02/paired-quality-review/v1",
+        "text/MODE-02/no-audit-ledger/v1",
+        "json/MODE-02/public-context-bound/v1"
+      ],
+      "required_reviews": []
+    },
+    {
+      "id": "DEC-09/paired-quality-gate/v1",
+      "atom_id": "DEC-09",
+      "qualification_stage": "SHADOW",
+      "runner_compatible": false,
+      "fixture_bindings": {
+        "input": {
+          "path": "references/generation-qualification-fixtures/v1/protected-output.md",
+          "sha256": "b21a23d5d64da262cc0ab0bec46928a8374fc0170a7260d8992e5b50743e8a59"
+        },
+        "output": {
+          "path": "references/generation-qualification-fixtures/v1/protected-output.md",
+          "sha256": "b21a23d5d64da262cc0ab0bec46928a8374fc0170a7260d8992e5b50743e8a59"
+        }
+      },
+      "required_checks": ["validator/DEC-09/paired-quality-gate/v1"],
+      "required_reviews": []
+    },
+    {
+      "id": "ROLE-02/quoted-span/v1",
+      "atom_id": "ROLE-02",
+      "qualification_stage": "SHADOW",
+      "runner_compatible": false,
+      "fixture_bindings": {
+        "input": {
+          "path": "references/generation-qualification-fixtures/v1/role-02-input.md",
+          "sha256": "8f071666580fb3c1d4cdd364f7d7ddf3cc7ba7300c630cd0cb856c1910edd314"
+        },
+        "prompt": {
+          "path": "references/generation-qualification-fixtures/v1/role-02-prompt.txt",
+          "sha256": "38e37cb99f1b5e1910c0420be6d948410422414827a3160f8cb4d29aa9e1ad25"
+        },
+        "public_context": {
+          "path": "references/generation-qualification-fixtures/v1/role-02-context.json",
+          "sha256": "e3eb51cbd66b027b42e8e9d64bd2c7b91edd00813d2d81f5dc8cc77d866ac791"
+        }
+      },
+      "required_checks": [
+        "relation/ROLE-02/quote-byte-preserved/v1",
+        "json/ROLE-02/public-context-bound/v1"
+      ],
+      "required_reviews": []
+    },
+    {
+      "id": "PATH-05/positive/v1",
+      "atom_id": "PATH-05/positive",
+      "qualification_stage": "SHADOW",
+      "runner_compatible": false,
+      "fixture_bindings": {
+        "input": {
+          "path": "references/generation-qualification-fixtures/v1/path-05-input.md",
+          "sha256": "20ed649b6f8dfa440ff999e9574e8d9068de23e368d6f8333ae797bccfcbc6c0"
+        },
+        "prompt": {
+          "path": "references/generation-qualification-fixtures/v1/path-05-prompt.txt",
+          "sha256": "5080caae12bf7c458de7d30f901259de5d1cbd27355aa443931bf6ff071178a8"
+        },
+        "public_context": {
+          "path": "references/generation-qualification-fixtures/v1/path-05-context.json",
+          "sha256": "aa50a881f030057978948e003fbb71188e41fe2b1362e2366cd6cd48a07e4045"
+        },
+        "review_bundle": {
+          "path": "references/generation-qualification-fixtures/v1/path-05-review-bundle.json",
+          "sha256": "6189f85c3f8c65af0f4dfac550fb9b6aa3808b9971a125ea5d16368f91a718a1"
+        }
+      },
+      "required_checks": [
+        "structure/PATH-05/grid-changed/v1",
+        "json/PATH-05/public-context-bound/v1"
+      ],
+      "required_reviews": [
+        "style/PATH-05/equal-weight/v1"
+      ]
+    },
+    {
+      "id": "LONG-01/include-manifest/v1",
+      "atom_id": "LONG-01",
+      "qualification_stage": "SHADOW",
+      "runner_compatible": false,
+      "fixture_bindings": {
+        "input": {
+          "path": "references/generation-qualification-fixtures/v1/long-01-input.tex",
+          "sha256": "4d276e9c018198579f6754363c29ca8ccd1f04525870ff68fa53851ea8569ae5"
+        },
+        "prompt": {
+          "path": "references/generation-qualification-fixtures/v1/long-01-prompt.txt",
+          "sha256": "fb0614088a77f3244d34bbaded17f6c3a019d0fa56fd6038d4e23cb8446aa0f8"
+        },
+        "public_context": {
+          "path": "references/generation-qualification-fixtures/v1/long-01-context.json",
+          "sha256": "4a9a04cbfe96621a993b485bde5d93b3974fc9553a8de17f7767c3f08841b60c"
+        }
+      },
+      "required_checks": [
+        "json/LONG-01/include-manifest/v1",
+        "json/LONG-01/completeness-claim/v1",
+        "json/LONG-01/public-context-bound/v1"
+      ],
+      "required_reviews": []
+    },
+    {
+      "id": "PROTECTED/hash-zero/v1",
+      "atom_id": "PROTECTED/hash-zero",
+      "qualification_stage": "SHADOW",
+      "runner_compatible": false,
+      "fixture_bindings": {
+        "input": {
+          "path": "references/generation-qualification-fixtures/v1/protected-input.md",
+          "sha256": "8f20debf62e1ae3ba31fd9307c07ba8709cfa78b498bb6011b7b5676c8645414"
+        },
+        "output": {
+          "path": "references/generation-qualification-fixtures/v1/protected-output.md",
+          "sha256": "b21a23d5d64da262cc0ab0bec46928a8374fc0170a7260d8992e5b50743e8a59"
+        },
+        "protected_annotation": {
+          "path": "references/generation-qualification-fixtures/v1/protected-spans.json",
+          "sha256": "819caeb0744cd5989dedd8cc07bd3647f59334e2942575f9c63a3983894332d7"
+        }
+      },
+      "required_checks": [
+        "measurement/PROTECTED/hash-zero/v1"
+      ],
+      "required_reviews": []
+    },
+    {
+      "id": "ROLE-10/source-provenance/v1",
+      "atom_id": "ROLE-10",
+      "qualification_stage": "FRESH_FORWARD",
+      "runner_compatible": true,
+      "fixture_bindings": {
+        "input": {
+          "path": "references/generation-qualification-fixtures/v1/source-a-input.txt",
+          "sha256": "a19afc51e90bb00661fdd8fea7e7b90d62d87c5343de41b29f7b1637e4a20ee0"
+        },
+        "prompt": {
+          "path": "references/generation-qualification-fixtures/v1/source-provenance-prompt.txt",
+          "sha256": "82921e7694ea4a049490994064b3852258d6fe1092fa8c664b127f86a57f69c8"
+        },
+        "public_context": {
+          "path": "references/generation-qualification-fixtures/v1/source-provenance-context.json",
+          "sha256": "7fbc63ef7ac43bca7c09a2059e0212ac543f4ad8c83d0382adae8a1a08c79043"
+        }
+      },
+      "required_checks": [
+        "policy/ROLE-10/source-provenance/v1"
+      ],
+      "required_reviews": []
+    },
+    {
+      "id": "ROLE-11/source-provenance/v1",
+      "atom_id": "ROLE-11",
+      "qualification_stage": "FRESH_FORWARD",
+      "runner_compatible": true,
+      "fixture_bindings": {
+        "input": {
+          "path": "references/generation-qualification-fixtures/v1/source-b-input.txt",
+          "sha256": "f758846cbb002ae31277c9d661ca3d5fd04526cdbef1a16cdfa0b4dc71cec0a2"
+        },
+        "prompt": {
+          "path": "references/generation-qualification-fixtures/v1/source-provenance-prompt.txt",
+          "sha256": "82921e7694ea4a049490994064b3852258d6fe1092fa8c664b127f86a57f69c8"
+        },
+        "public_context": {
+          "path": "references/generation-qualification-fixtures/v1/source-provenance-context.json",
+          "sha256": "7fbc63ef7ac43bca7c09a2059e0212ac543f4ad8c83d0382adae8a1a08c79043"
+        }
+      },
+      "required_checks": [
+        "policy/ROLE-11/source-provenance/v1"
+      ],
+      "required_reviews": []
+    },
+    {
+      "id": "ROLE-12/source-provenance/v1",
+      "atom_id": "ROLE-12",
+      "qualification_stage": "FRESH_FORWARD",
+      "runner_compatible": true,
+      "fixture_bindings": {
+        "input": {
+          "path": "references/generation-qualification-fixtures/v1/source-c-input.txt",
+          "sha256": "ae1c1c08e73c184ba2885007e720ab5e220d3b4ff07e2d7c707dba0045b2fc27"
+        },
+        "prompt": {
+          "path": "references/generation-qualification-fixtures/v1/source-provenance-prompt.txt",
+          "sha256": "82921e7694ea4a049490994064b3852258d6fe1092fa8c664b127f86a57f69c8"
+        },
+        "public_context": {
+          "path": "references/generation-qualification-fixtures/v1/source-provenance-context.json",
+          "sha256": "7fbc63ef7ac43bca7c09a2059e0212ac543f4ad8c83d0382adae8a1a08c79043"
+        }
+      },
+      "required_checks": [
+        "policy/ROLE-12/source-provenance/v1"
+      ],
+      "required_reviews": []
+    },
+    {
+      "id": "ROLE-13/source-provenance/v1",
+      "atom_id": "ROLE-13",
+      "qualification_stage": "FRESH_FORWARD",
+      "runner_compatible": true,
+      "fixture_bindings": {
+        "input": {
+          "path": "references/generation-qualification-fixtures/v1/source-d-input.txt",
+          "sha256": "e27bd40c190b4e0cef77a774630604496b58cbfdb4fa730599110db669786b01"
+        },
+        "prompt": {
+          "path": "references/generation-qualification-fixtures/v1/source-provenance-prompt.txt",
+          "sha256": "82921e7694ea4a049490994064b3852258d6fe1092fa8c664b127f86a57f69c8"
+        },
+        "public_context": {
+          "path": "references/generation-qualification-fixtures/v1/source-provenance-context.json",
+          "sha256": "7fbc63ef7ac43bca7c09a2059e0212ac543f4ad8c83d0382adae8a1a08c79043"
+        }
+      },
+      "required_checks": [
+        "policy/ROLE-13/source-provenance/v1"
+      ],
+      "required_reviews": []
+    },
+    {
+      "id": "ROLE-14/template-field-contract/v1",
+      "atom_id": "ROLE-14",
+      "qualification_stage": "SHADOW",
+      "runner_compatible": false,
+      "fixture_bindings": {
+        "contract": {
+          "path": "references/evaluation-contract.md",
+          "sha256": "d6922089a988b5970941f2287c08ba09dce09620e87929d62b020199007775eb"
+        }
+      },
+      "required_checks": ["contract/ROLE-14/template-field/v1"],
+      "required_reviews": []
+    },
+    {
+      "id": "ROLE-15/template-field-contract/v1",
+      "atom_id": "ROLE-15",
+      "qualification_stage": "SHADOW",
+      "runner_compatible": false,
+      "fixture_bindings": {
+        "contract": {
+          "path": "references/evaluation-contract.md",
+          "sha256": "d6922089a988b5970941f2287c08ba09dce09620e87929d62b020199007775eb"
+        }
+      },
+      "required_checks": ["contract/ROLE-15/template-field/v1"],
+      "required_reviews": []
+    },
+    {
+      "id": "ROLE-16/template-field-contract/v1",
+      "atom_id": "ROLE-16",
+      "qualification_stage": "SHADOW",
+      "runner_compatible": false,
+      "fixture_bindings": {
+        "contract": {
+          "path": "references/evaluation-contract.md",
+          "sha256": "d6922089a988b5970941f2287c08ba09dce09620e87929d62b020199007775eb"
+        }
+      },
+      "required_checks": ["contract/ROLE-16/template-field/v1"],
+      "required_reviews": []
+    },
+    {
+      "id": "ROLE-17/template-field-contract/v1",
+      "atom_id": "ROLE-17",
+      "qualification_stage": "SHADOW",
+      "runner_compatible": false,
+      "fixture_bindings": {
+        "contract": {
+          "path": "references/evaluation-contract.md",
+          "sha256": "d6922089a988b5970941f2287c08ba09dce09620e87929d62b020199007775eb"
+        }
+      },
+      "required_checks": ["contract/ROLE-17/template-field/v1"],
+      "required_reviews": []
+    },
+    {
+      "id": "LONG-28/template-field-edit-scope-contract/v1",
+      "atom_id": "LONG-28",
+      "qualification_stage": "SHADOW",
+      "runner_compatible": false,
+      "fixture_bindings": {
+        "contract": {
+          "path": "references/evaluation-contract.md",
+          "sha256": "d6922089a988b5970941f2287c08ba09dce09620e87929d62b020199007775eb"
+        }
+      },
+      "required_checks": ["contract/LONG-28/template-field-edit-scope/v1"],
+      "required_reviews": []
+    },
+    {
+      "id": "LONG-20/structural-review-request/v1",
+      "atom_id": "LONG-20",
+      "qualification_stage": "SHADOW",
+      "runner_compatible": false,
+      "fixture_bindings": {
+        "input": {"path": "references/generation-qualification-fixtures/v1/mode-02-input.md", "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"},
+        "output": {"path": "references/generation-qualification-fixtures/v1/mode-02-input.md", "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"}
+      },
+      "required_checks": ["replay/LONG-20/structural-review-request/v1"],
+      "required_reviews": []
+    },
+    {
+      "id": "LONG-21/review-only-delivery/v1",
+      "atom_id": "LONG-21",
+      "qualification_stage": "SHADOW",
+      "runner_compatible": false,
+      "fixture_bindings": {
+        "input": {"path": "references/generation-qualification-fixtures/v1/mode-02-input.md", "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"},
+        "output": {"path": "references/generation-qualification-fixtures/v1/mode-02-input.md", "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"}
+      },
+      "required_checks": ["replay/LONG-21/review-only-delivery/v1"],
+      "required_reviews": []
+    },
+    {
+      "id": "LONG-22/adjacent-pair-authority/v1",
+      "atom_id": "LONG-22",
+      "qualification_stage": "SHADOW",
+      "runner_compatible": false,
+      "fixture_bindings": {
+        "input": {"path": "references/generation-qualification-fixtures/v1/mode-02-input.md", "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"},
+        "output": {"path": "references/generation-qualification-fixtures/v1/mode-02-input.md", "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"}
+      },
+      "required_checks": ["replay/LONG-22/adjacent-pair-authority/v1"],
+      "required_reviews": []
+    },
+    {
+      "id": "LONG-23/adjacent-pair-atomic-review/v1",
+      "atom_id": "LONG-23",
+      "qualification_stage": "SHADOW",
+      "runner_compatible": false,
+      "fixture_bindings": {
+        "input": {"path": "references/generation-qualification-fixtures/v1/mode-02-input.md", "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"},
+        "output": {"path": "references/generation-qualification-fixtures/v1/mode-02-input.md", "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"}
+      },
+      "required_checks": ["replay/LONG-23/adjacent-pair-atomic-review/v1"],
+      "required_reviews": []
+    },
+    {
+      "id": "LONG-24/transaction-non-downgrade/v1",
+      "atom_id": "LONG-24",
+      "qualification_stage": "SHADOW",
+      "runner_compatible": false,
+      "fixture_bindings": {
+        "input": {"path": "references/generation-qualification-fixtures/v1/mode-02-input.md", "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"},
+        "output": {"path": "references/generation-qualification-fixtures/v1/mode-02-input.md", "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"}
+      },
+      "required_checks": ["replay/LONG-24/transaction-non-downgrade/v1"],
+      "required_reviews": []
+    },
+    {
+      "id": "LONG-25/transaction-candidate-disposition/v1",
+      "atom_id": "LONG-25",
+      "qualification_stage": "SHADOW",
+      "runner_compatible": false,
+      "fixture_bindings": {
+        "input": {"path": "references/generation-qualification-fixtures/v1/mode-02-input.md", "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"},
+        "output": {"path": "references/generation-qualification-fixtures/v1/mode-02-input.md", "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"}
+      },
+      "required_checks": ["replay/LONG-25/transaction-candidate-disposition/v1"],
+      "required_reviews": []
+    },
+    {
+      "id": "LONG-26/paired-quality-candidate/v1",
+      "atom_id": "LONG-26",
+      "qualification_stage": "SHADOW",
+      "runner_compatible": false,
+      "fixture_bindings": {
+        "input": {"path": "references/generation-qualification-fixtures/v1/mode-02-input.md", "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"},
+        "output": {"path": "references/generation-qualification-fixtures/v1/mode-02-input.md", "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"}
+      },
+      "required_checks": ["replay/LONG-26/paired-quality-candidate/v1"],
+      "required_reviews": []
+    },
+    {
+      "id": "LONG-27/paired-quality-second-pass-non-clearance/v1",
+      "atom_id": "LONG-27",
+      "qualification_stage": "SHADOW",
+      "runner_compatible": false,
+      "fixture_bindings": {
+        "input": {"path": "references/generation-qualification-fixtures/v1/mode-02-input.md", "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"},
+        "output": {"path": "references/generation-qualification-fixtures/v1/mode-02-input.md", "sha256": "348026b7b26c646e67e809285ea11881865a3d35193a4131ff850813582c4d71"}
+      },
+      "required_checks": ["replay/LONG-27/paired-quality-second-pass-non-clearance/v1"],
+      "required_reviews": []
+    }
+  ]
+}

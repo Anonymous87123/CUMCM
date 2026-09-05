@@ -1,0 +1,106 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.Python
+venv/
+venv-windows/
+env/
+ENV/
+.venv
+
+# Database
+*.db
+
+# Backups
+backups/
+*.dump
+*.backup
+
+# Environment
+.env
+.env.local
+.env.docker
+.env.docker.bak.*
+.env.runtime
+secrets/
+.ci-secrets/
+docker-compose.local-image.yml
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Node
+node_modules/
+dist/
+build/
+*.log
+npm-debug.log*
+playwright-report/
+test-results/
+package/frontend/playwright-report/
+package/frontend/test-results/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Temporary files
+tmp/
+temp/
+*.tmp
+
+# Process ID files
+*.pid
+backend.pid
+frontend.pid
+
+# Log files
+backend.log
+frontend.log
+backend/backend.log
+frontend/frontend.log
+
+# PyInstaller
+*.spec.bak
+package/static/
+package/uploads/
+package/dist/
+package/build/
+*.manifest
+*.pem
+
+参考项目/
+.ace-tool/
+.worktrees/
+
+# Local agent instructions
+AGENTS.md
+
+# Portable PostgreSQL binaries for local one-click packaging
+package/postgres-portable/
+
+# Local Codex/Superpowers data
+.superpowers/
+
+
+# Internal planning files
+docs/superpowers/
+
+
+# Local Zhuque browser/session artifacts
+package/data/zhuque/
+
+# Local browser/test/cache artifacts
+package/.playwright-browsers/
+package/backend/tmp-pytest/
+.uv-cache/
+output/
+
+# Removed tool leftovers
+.ace-tool.removed.*/

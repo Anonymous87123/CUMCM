@@ -1,0 +1,320 @@
+﻿{
+  "schema": "aigc-adapter-run/v1",
+  "package": "AI_paper",
+  "action": "workbench-plan",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\folder-utilization-ai-paper-0817",
+  "preflight": {
+    "directory": "AI_paper",
+    "interfaces": [
+      "audit",
+      "candidate",
+      "workbench"
+    ],
+    "offline_action": "workbench-plan",
+    "native_entrypoints": [
+      {
+        "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\AI_paper\\main.py",
+        "exists": true
+      },
+      {
+        "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\AI_paper\\modules\\api_client.py",
+        "exists": true
+      },
+      {
+        "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\AI_paper\\modules\\ai_reducer.py",
+        "exists": true
+      }
+    ],
+    "runtimes": [
+      {
+        "name": "python",
+        "available": true
+      }
+    ],
+    "network_for_generation": true,
+    "native_command": "python main.py",
+    "safe_boundary": "Windows manual workbench; fix invalid local config paths and verify formulas/numbers before adoption",
+    "entrypoints_present": true
+  },
+  "embedded_capabilities": {
+    "status": "pass",
+    "catalog": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\folder-utilization.json",
+    "tree_sha256": "7478e8da935ed36e85fe7dfb28d273bca0a4c3706fd504f63901bcb8343939d8",
+    "package": "AI_paper",
+    "count": 16,
+    "records": [
+      {
+        "path": "AI_paper/Management/skills_src/abstract-focus-enhancer/skill.json",
+        "owner": "AI_paper",
+        "id": "abstract-focus-enhancer",
+        "disposition": "workbench-capability",
+        "activation": "paper_write.abstract: abstract structure review after result facts are locked",
+        "scenes": [
+          "mcm",
+          "modeling",
+          "research",
+          "academic-en",
+          "medical-en"
+        ],
+        "source_sha256": "82a2378e61647702d1c29ef5e3707e9194ccadd6af587aa156dcb673702960ef",
+        "source_bytes": 1083
+      },
+      {
+        "path": "AI_paper/Management/skills_src/academic-tone-polisher/skill.json",
+        "owner": "AI_paper",
+        "id": "academic-tone-polisher",
+        "disposition": "independent-alternative",
+        "activation": "polish.run_task: one manually selected AI_paper candidate from the frozen source; never after Humanize",
+        "scenes": [
+          "research",
+          "academic-en",
+          "medical-en"
+        ],
+        "source_sha256": "4435b620e4532214fac111bf9cca0894eaccbf978a96c43f74e3f26a84d5400e",
+        "source_bytes": 1438
+      },
+      {
+        "path": "AI_paper/Management/skills_src/argument-structure-checker/skill.json",
+        "owner": "AI_paper",
+        "id": "argument-structure-checker",
+        "disposition": "workbench-capability",
+        "activation": "paper_write.section: read-only argument-evidence review with claim ledger",
+        "scenes": [
+          "mcm",
+          "modeling",
+          "research",
+          "course-notes",
+          "academic-en",
+          "medical-en"
+        ],
+        "source_sha256": "1dd459b87dc805b133d5679156eed351fb58277b32f2662074149ca298a6f86f",
+        "source_bytes": 2679
+      },
+      {
+        "path": "AI_paper/Management/skills_src/citation-format-validator/skill.json",
+        "owner": "AI_paper",
+        "id": "citation-format-validator",
+        "disposition": "workbench-capability",
+        "activation": "paper_write.section: citation-format and citation-completeness audit only",
+        "scenes": [
+          "mcm",
+          "modeling",
+          "research",
+          "course-notes",
+          "academic-en",
+          "medical-en"
+        ],
+        "source_sha256": "c337c3e372d32ef4b9ad446854e66976eaa724612c086e4be7003e9d11f8b800",
+        "source_bytes": 4132
+      },
+      {
+        "path": "AI_paper/Management/skills_src/data-table-generator/skill.json",
+        "owner": "AI_paper",
+        "id": "data-table-generator",
+        "disposition": "workbench-capability",
+        "activation": "paper_write.section: format approved data and result tables without inventing values",
+        "scenes": [
+          "mcm",
+          "modeling",
+          "research",
+          "course-notes"
+        ],
+        "source_sha256": "972de406fd97b431cca47f675ee33797a824910c9868c36c6d9b33c91c945f02",
+        "source_bytes": 2040
+      },
+      {
+        "path": "AI_paper/Management/skills_src/diagram-template-library/skill.json",
+        "owner": "AI_paper",
+        "id": "diagram-template-library",
+        "disposition": "workbench-capability",
+        "activation": "paper_write.diagram_generate: select a diagram template from an approved model/workflow",
+        "scenes": [
+          "mcm",
+          "modeling",
+          "research",
+          "course-notes"
+        ],
+        "source_sha256": "8ae1a79674eabf266e9d7c967438694f84e271850c3f6862902e0cc810f13e02",
+        "source_bytes": 1555
+      },
+      {
+        "path": "AI_paper/Management/skills_src/diagram-validator/skill.json",
+        "owner": "AI_paper",
+        "id": "diagram-validator",
+        "disposition": "workbench-capability",
+        "activation": "paper_write.diagram_generate|paper_write.diagram_edit: validate diagram structure before export",
+        "scenes": [
+          "mcm",
+          "modeling",
+          "research",
+          "course-notes"
+        ],
+        "source_sha256": "8b06b07c6b278dfd71e57138904ba8d84de25e704b1bb0a311da1001eb089966",
+        "source_bytes": 622
+      },
+      {
+        "path": "AI_paper/Management/skills_src/flowchart-expert/skill.json",
+        "owner": "AI_paper",
+        "id": "flowchart-expert",
+        "disposition": "workbench-capability",
+        "activation": "paper_write.diagram_generate|paper_write.diagram_edit: advise notation and layout, not model selection",
+        "scenes": [
+          "mcm",
+          "modeling",
+          "research",
+          "course-notes"
+        ],
+        "source_sha256": "8e6292978c494f9f8831b50db0e4c4bd645bab9fd5d7355fa282cd0595b15292",
+        "source_bytes": 723
+      },
+      {
+        "path": "AI_paper/Management/skills_src/literature-searcher/skill.json",
+        "owner": "AI_paper",
+        "id": "literature-searcher",
+        "disposition": "research-only",
+        "activation": "paper_write.section: explicit research literature preflight with source verification; not a CUMCM model authority",
+        "scenes": [
+          "research",
+          "academic-en",
+          "medical-en"
+        ],
+        "source_sha256": "84e60eb4322609ef330a8241c1d7cce6e02546e49ac50fbbe28b89aa28999429",
+        "source_bytes": 3500
+      },
+      {
+        "path": "AI_paper/Management/skills_src/methodology-designer/skill.json",
+        "owner": "AI_paper",
+        "id": "methodology-designer",
+        "disposition": "workbench-capability",
+        "activation": "paper_write.outline|paper_write.section: compare supplied research methods; cannot override题面和代码",
+        "scenes": [
+          "modeling",
+          "research",
+          "academic-en",
+          "medical-en"
+        ],
+        "source_sha256": "f31f575bd2f89d4ca47a0dc0f548218e89123e5d1442a8462f9292cdc78ed3b7",
+        "source_bytes": 4443
+      },
+      {
+        "path": "AI_paper/Management/skills_src/outline-optimizer/skill.json",
+        "owner": "AI_paper",
+        "id": "outline-optimizer",
+        "disposition": "workbench-capability",
+        "activation": "paper_write.outline: outline review before long-form drafting",
+        "scenes": [
+          "mcm",
+          "modeling",
+          "research",
+          "course-notes",
+          "academic-en",
+          "medical-en"
+        ],
+        "source_sha256": "9550a87c6852500706dfe1a2d3935ff2fedecd622c01e53d6b16a10969eb22cc",
+        "source_bytes": 1078
+      },
+      {
+        "path": "AI_paper/Management/skills_src/peer-review-simulator/skill.json",
+        "owner": "AI_paper",
+        "id": "peer-review-simulator",
+        "disposition": "workbench-capability",
+        "activation": "paper_write.section|polish.run_task: read-only review and revision list after the draft is frozen",
+        "scenes": [
+          "mcm",
+          "modeling",
+          "research",
+          "academic-en",
+          "medical-en"
+        ],
+        "source_sha256": "90e0b98733221b32ee761dadac5708605b97c4f24a602e38306cec21916e8e8b",
+        "source_bytes": 3015
+      },
+      {
+        "path": "AI_paper/Management/skills_src/reference-formatter/skill.json",
+        "owner": "AI_paper",
+        "id": "reference-formatter",
+        "disposition": "workbench-capability",
+        "activation": "paper_write.section|polish.run_task: format references after citation keys are locked",
+        "scenes": [
+          "mcm",
+          "modeling",
+          "research",
+          "course-notes",
+          "academic-en",
+          "medical-en"
+        ],
+        "source_sha256": "02270d3fa60c17abf48fdc807e8999e3018fbd6e15ebf50a73f231c7a9b29512",
+        "source_bytes": 2174
+      },
+      {
+        "path": "AI_paper/Management/skills_src/research-method-advisor/skill.json",
+        "owner": "AI_paper",
+        "id": "research-method-advisor",
+        "disposition": "research-only",
+        "activation": "paper_write.outline|paper_write.section: advisory method comparison from supplied problem facts",
+        "scenes": [
+          "research",
+          "academic-en",
+          "medical-en"
+        ],
+        "source_sha256": "eb519786bbe9d507042d3dbe691d6e778efaf4b37f2858d6f0486adfb5fc06dd",
+        "source_bytes": 2471
+      },
+      {
+        "path": "AI_paper/Management/skills_src/research-question-refiner/skill.json",
+        "owner": "AI_paper",
+        "id": "research-question-refiner",
+        "disposition": "research-only",
+        "activation": "paper_write.outline: refine supplied research questions; never invent a contest task",
+        "scenes": [
+          "research",
+          "academic-en",
+          "medical-en"
+        ],
+        "source_sha256": "e07aa7d54cca12346aa3b82c28d923ef4fe37bdb8061ad491ff154598851d0a3",
+        "source_bytes": 2586
+      },
+      {
+        "path": "AI_paper/Management/skills_src/topic-refiner/skill.json",
+        "owner": "AI_paper",
+        "id": "topic-refiner",
+        "disposition": "research-only",
+        "activation": "paper_write.outline: scope an early research topic before evidence collection",
+        "scenes": [
+          "research",
+          "academic-en",
+          "medical-en"
+        ],
+        "source_sha256": "287a07c6bbcefb696a02fb2b5f4b1da007c95330542a08d67ead3873b860c5e6",
+        "source_bytes": 2349
+      }
+    ],
+    "findings": [],
+    "activation_rule": "select only the declared scene/disposition; maintenance-only and research-only units cannot author CUMCM prose"
+  },
+  "plan": {
+    "native_command": "python main.py",
+    "document_formats": [
+      "docx",
+      "txt",
+      "tex",
+      "pdf"
+    ],
+    "offline_use": null,
+    "network_for_generation": true,
+    "safe_boundary": "Windows manual workbench; fix invalid local config paths and verify formulas/numbers before adoption",
+    "authority_rule": "import a copy; never overwrite the frozen authority file",
+    "adoption_rule": "export as a candidate, verify it, then require human accept/reject",
+    "embedded_capability_plan_required": true,
+    "embedded_capability_catalog": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\references\\folder-utilization.json",
+    "serial_rewrite_forbidden": true
+  }
+}

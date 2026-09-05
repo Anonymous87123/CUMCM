@@ -1,0 +1,114 @@
+{
+  "artifact": {
+    "after_sha256": "a05810a0bab6615218c3f9a46a67c4b6f66992694bf0aa5811d39f634dd78b48",
+    "before_sha256": "94dacee410178586b7dc4552a06d4abe056d0e82fc1763213478ab526c4cae8d"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "7da7f9b37209754c090bf148d1a303bf15f06eec73c3e9805e9371e21fe7578b",
+  "chunk_binding_sha256": "9338c6407c3e031138c0d1d4b239bfe9bc9a90788c13ddc5454c6db81bacf0ba",
+  "decision": "REWRITE",
+  "diff": {
+    "path": "diffs/U-0801ec99dfa8.diff",
+    "sha256": "176fd5c11ed320ed2b4525d96a393e54b4f0254c04ae7b37ca18ea4e0708d5f6"
+  },
+  "evidence_sha256": "c3d0175210bdf787005b031addd75aab223c5d5ebceaeb4c36eef490949e7e36",
+  "intent": {
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_MODELING_PROSE",
+        "source_span_ids": [
+          "S1"
+        ],
+        "summary": "按冻结事实调整段落组织或词壳，并保留原有限定与判断关系",
+        "target_signals": [
+          "SCENE-MODELING-JUDGMENT-PRESERVE",
+          "RHYTHM-VARY-SECTION-ACTION"
+        ]
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_MODELING_PROSE",
+        "source_span_ids": [
+          "S2"
+        ],
+        "summary": "按冻结事实调整段落组织或词壳，并保留原有限定与判断关系",
+        "target_signals": [
+          "SCENE-MODELING-JUDGMENT-PRESERVE",
+          "RHYTHM-VARY-SECTION-ACTION"
+        ]
+      },
+      {
+        "id": "O3",
+        "kind": "REWRITE_MODELING_PROSE",
+        "source_span_ids": [
+          "S3"
+        ],
+        "summary": "按冻结事实调整段落组织或词壳，并保留原有限定与判断关系",
+        "target_signals": [
+          "SCENE-MODELING-JUDGMENT-PRESERVE",
+          "RHYTHM-VARY-SECTION-ACTION"
+        ]
+      }
+    ],
+    "source_spans": [
+      {
+        "end_line": 2,
+        "id": "S1",
+        "sha256": "83c730047c9d31a06169977feb0c243e2e23000a242a830168d7eb1c7846529b",
+        "start_line": 2
+      },
+      {
+        "end_line": 36,
+        "id": "S2",
+        "sha256": "1213dd5073644ec6f4db16cc0e9b77fdc5f6c2e6a96849b57cd748d09e673d9b",
+        "start_line": 36
+      },
+      {
+        "end_line": 38,
+        "id": "S3",
+        "sha256": "aa880b1a9c4b2e62086daab1bc7ea66beec79e2d706fe152cbc6748a3c8e91c0",
+        "start_line": 38
+      }
+    ],
+    "summary": "按冻结事实调整段落组织或词壳，并保留原有限定与判断关系",
+    "target_signals": [
+      "SCENE-MODELING-JUDGMENT-PRESERVE",
+      "RHYTHM-VARY-SECTION-ACTION"
+    ]
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [
+      {
+        "end_line": 2,
+        "operation": "REPLACE",
+        "start_line": 2
+      },
+      {
+        "end_line": 36,
+        "operation": "REPLACE",
+        "start_line": 36
+      },
+      {
+        "end_line": 38,
+        "operation": "REPLACE",
+        "start_line": 38
+      }
+    ],
+    "masked_after_sha256": "41517310c14171612073c99ecd6e3be39761e33e51038a5e83146a5556d35a74",
+    "masked_before_sha256": "f581ba2fd44f331fbb6d042cda3d3de1b00045523ba23b504455665c9f42cc55",
+    "source_spans_covered": 3,
+    "source_spans_total": 3,
+    "status": "PASS"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "a81eac6595bc9e7ac5a7d32a9e95764d1a73860da381043a727b64c3cbccb462",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-0801ec99dfa8"
+}

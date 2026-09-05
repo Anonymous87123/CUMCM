@@ -1,0 +1,170 @@
+<!doctype html>
+<html lang="zh-CN" data-packet-sha256="8335d5f6c38c086fc40f6b43b9087a6592c87822215a284ba32a281fac15cba4">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>匿名文风盲评</title>
+  <style>
+    :root { color-scheme: light; --ink:#18211d; --muted:#5c6862; --line:#ccd3cf;
+      --paper:#f5f7f5; --surface:#fff; --accent:#176b4d; --warn:#a33b2b; }
+    * { box-sizing:border-box; }
+    body { margin:0; background:var(--paper); color:var(--ink); font:15px/1.65 system-ui,
+      "Microsoft YaHei", sans-serif; letter-spacing:0; }
+    header, main, footer { width:min(1180px, calc(100% - 32px)); margin-inline:auto; }
+    header { padding:28px 0 18px; border-bottom:1px solid var(--line); }
+    h1 { margin:0 0 8px; font-size:24px; }
+    h2 { margin:0; font-size:18px; }
+    p { margin:6px 0; }
+    .muted { color:var(--muted); }
+    .toolbar { display:flex; gap:16px; align-items:end; flex-wrap:wrap; padding:18px 0; }
+    label.control { display:grid; gap:5px; min-width:min(360px,100%); font-weight:600; }
+    input[type=text] { min-height:40px; padding:8px 10px; border:1px solid #9ba8a1;
+      border-radius:4px; background:#fff; font:inherit; }
+    button { min-height:40px; padding:8px 14px; border:1px solid var(--accent); border-radius:4px;
+      background:var(--accent); color:#fff; font:inherit; font-weight:700; cursor:pointer; }
+    button.secondary { background:#fff; color:var(--accent); }
+    button:disabled { opacity:.5; cursor:not-allowed; }
+    #status { margin-left:auto; font-variant-numeric:tabular-nums; }
+    .pair { margin:0 0 22px; padding:20px; border:1px solid var(--line); border-radius:6px;
+      background:var(--surface); }
+    .passages { display:grid; grid-template-columns:1fr 1fr; gap:14px; margin:14px 0 18px; }
+    .passage { min-width:0; padding:14px; border-left:4px solid #7b8b83; background:#f8faf8; }
+    .passage h3 { margin:0 0 8px; font-size:16px; }
+    .passage-text { margin:0; white-space:pre-wrap; overflow-wrap:anywhere; }
+    fieldset { display:grid; grid-template-columns:minmax(190px,1fr) repeat(4,minmax(68px,auto));
+      gap:8px 12px; align-items:center; margin:8px 0; padding:10px 12px; border:1px solid #d9dedb;
+      border-radius:4px; }
+    fieldset.missing { border-color:var(--warn); background:#fff8f6; }
+    legend { position:absolute; width:1px; height:1px; overflow:hidden; clip:rect(0 0 0 0); }
+    .dimension strong, .dimension small { display:block; }
+    .dimension small { color:var(--muted); }
+    .choice { display:flex; align-items:center; gap:5px; white-space:nowrap; }
+    .notes { display:grid; gap:5px; margin-top:12px; font-weight:600; }
+    textarea { width:100%; min-height:72px; resize:vertical; border:1px solid #aab4af;
+      border-radius:4px; padding:8px 10px; font:inherit; }
+    .error { color:var(--warn); font-weight:700; }
+    footer { padding:10px 0 28px; color:var(--muted); font-size:13px; overflow-wrap:anywhere; }
+    @media (max-width:760px) {
+      .passages { grid-template-columns:1fr; }
+      fieldset { grid-template-columns:1fr 1fr 1fr 1fr; }
+      .dimension { grid-column:1/-1; }
+      #status { width:100%; margin-left:0; }
+    }
+  </style>
+</head>
+<body>
+<header>
+  <h1>匿名文风盲评</h1>
+  <p>只比较页面中可见的两段文字，不推测作者身份，也不使用 AI 检测器。</p>
+  <p class="muted">每个维度可选 A、B、持平或跳过。跳过不计正式票；两人结论相反时保留原表，再追加一名独立评审。</p>
+</header>
+<main>
+  <div class="toolbar">
+    <label class="control">评审者编号
+      <input id="rater" type="text" maxlength="80" autocomplete="off" placeholder="例如 R01">
+    </label>
+    <button id="export" type="button">导出评分 CSV</button>
+    <button id="clear" type="button" class="secondary">清空本页记录</button>
+    <div id="status" aria-live="polite"></div>
+  </div>
+  <div id="message" aria-live="assertive"></div>
+  <div id="pairs"></div>
+</main>
+<footer>匿名包 SHA-256：<span id="packet-hash">8335d5f6c38c086fc40f6b43b9087a6592c87822215a284ba32a281fac15cba4</span></footer>
+<script>
+"use strict";
+const packetHash = "8335d5f6c38c086fc40f6b43b9087a6592c87822215a284ba32a281fac15cba4";
+const packetBytes = Uint8Array.from(atob("eyJzY2hlbWEiOiJhaWdjLWJsaW5kLXBhY2tldC92MSIsImluc3RydWN0aW9ucyI6Ikp1ZGdlIG9ubHkgdGhlIHZpc2libGUgcGFzc2FnZXMuIERvIG5vdCBpbmZlciBhdXRob3JzaGlwIG9yIHVzZSBhbiBBSSBkZXRlY3Rvci4iLCJkaW1lbnNpb25zIjpbIm5hdHVyYWxuZXNzIiwianVkZ21lbnRfdHJhamVjdG9yeSIsInNwZWNpZmljaXR5IiwiY29udGVudF9kZW5zaXR5Iiwic2VtYW50aWNfZmlkZWxpdHkiXSwiY2hvaWNlcyI6WyJBIiwiQiIsIlRJRSIsIlNLSVAiXSwicGFpcnMiOlt7InBhaXJfaWQiOiJob2xkb3V0LTAxLWxpbmUtMzAiLCJBIjoi5a+55LqO6Zeu6aKY5LqU77yM5oiR5Lus5Zyo57uf5LiA56ev5YiG5ZCO5pyf5pe26Ze056qX5YaF5o+Q5Y+W6aW15paZ6LWE5rqQ44CB6ZW/5rGf5rGf6LGa44CB6ZW/5rGf6bKf5ZKM5YWl5L615Y6L5Yqb5Zub57G75qC45b+D5oyH5qCH77yM6YeH55So54a15p2DLUNSSVRJQ+e7hOWQiOi1i+adg+aehOW7uue7vOWQiOeUn+aAgeWBpeW6t+ivhOS7t+aooeWei+OAguS4ieenjeWFuOWei+aDheaZr+eahOe7vOWQiOW+l+WIhuS+neasoeS4ujAuNjYy44CBMC40MjPlkowwLjE1Ne+8jDIwMDDmrKHlsYDpg6jlj4LmlbDmibDliqjkuIvmg4Xmma/mjpLluo/nqLPlrprnjofovr4xMDBcXCXjgILlvpfliIbpgJLlh4/mrKHluo/lj43mmKDkuoZcIuawtOS9k+axoeafk+mmluWFiOWJiuW8seemgea4lOaUtuebiu+8jOWkluadpeeJqeenjeWFpeS+tei/m+S4gOatpeWvvOiHtOezu+e7n+eKtuaAgeaBtuWMllwi55qE5L2c55So5py65Yi244CCIiwiQiI6IumXrumimOS6lOWcqOWQjOS4gOenr+WIhuWQjuacn+aXtumXtOeql+WGheavlOi+g+mlteaWmei1hOa6kOOAgemVv+axn+axn+ixmuOAgemVv+axn+myn+WSjOWFpeS+teWOi+WKm++8jOmHh+eUqOeGteadgy1DUklUSUPnu4TlkIjotYvmnYPmqKHlnovvvIzlj5bkuozogIXlubPlnYflkI7lvpfliLDkuInnp43mg4Xmma/lvpfliIYwLjY2MuOAgTAuNDIz5ZKMMC4xNTXjgILnu4TlkIjmnYPph43nu48yMDAw5qyh5bGA6YOo5omw5Yqo77yM5oOF5pmv5o6S5bqP56iz5a6a546H5LuN5Li6MTAwXFwl44CC6L+Z5LiA6YCS5YeP5qyh5bqP5a+55bqUXCLmsLTkvZPmsaHmn5PpppblhYjliYrlvLHnpoHmuJTmlLbnm4rvvIzlpJbmnaXniannp43lhaXkvrXov5vkuIDmraXlr7zoh7Tns7vnu5/nirbmgIHmgbbljJZcIuOAgiJ9LHsicGFpcl9pZCI6ImhvbGRvdXQtMDItbGluZS0zNiIsIkEiOiLplb/msZ/mtYHln5/mt6HmsLTmuJTkuJrlj5Hovr7vvIznlJ/nianlpJrmoLfmgKfkuLDlr4zvvIzplb/mnJ/ov4fluqbmjZXmjZ7jgIHlt6XkuJrlup/msLTjgIHmsLTln5/loZHmlpnmsaHmn5Pku6Xlj4rokZvmtLLlnZ3jgIHkuInls6HlpKflnZ3nrYnmsLTliKnlt6XnqIvkuZ/lnKjov5nph4zlj6DliqDjgILmtITmuLjpgJrpgZPlj5fpmLvlkI7vvIzmuJTkuJrotYTmupDmjIHnu63oobDpgIDvvIzlhbjlnovpo5/nianpk77pmo/kuYvpgIDljJbjgILplb/msZ/mtYHln5/oh6oyMDIx5bm0MeaciDHml6Xlrp7mlr3ljYHlubTnpoHmuJTvvIzlsYDpg6jmsLTln5/msLTotKjlkozmsLTnlJ/mpI3ooqvlt7LmnInmgaLlpI3vvJsyMDI15bm055uR5rWL5pWw5o2u5pi+56S677yM6Z2S44CB6I2J44CB6bKi44CB6bOZ5Zub5aSn5a626bG86LWE5rqQ6YeP57qm5Li656aB5riU5YmN55qEMS445YCN77yM6KGo5piO56aB5riU5bey5bim5p2l6LWE5rqQ5oGi5aSN44CCIiwiQiI6IumVv+axn+a1geWfn+aYr+aIkeWbvea3oeawtOa4lOS4muacgOWPkei+vuOAgeeUn+eJqeWkmuagt+aAp+acgOS4sOWvjOeahOWMuuWfn+S5i+S4gO+8jOS9humVv+acn+WPl+i/h+W6puaNleaNnuOAgeW3peS4muW6n+awtOaOkuaUvuOAgeawtOWfn+WhkeaWmeaxoeafk+S7peWPiuiRm+a0suWdneOAgeS4ieWzoeWkp+WdneetieawtOWIqeW3peeoi+eahOe7vOWQiOW9seWTje+8jOmxvOexu+a0hOa4uOmAmumBk+iiq+mYu+aWre+8jOa4lOS4mui1hOa6kOaMgee7reihsOmAgO+8jOWFuOWei+mjn+eJqemTvue7k+aehOWPkeeUn+mAgOWMluOAguiHqjIwMjHlubQx5pyIMeaXpeWunuaWvemVv+axn+WNgeW5tOemgea4lOaUv+etluS7peadpe+8jOmVv+axn+a1geWfn+eUn+aAgeeOr+Wig+W3suWHuueOsOaYvuiRl+WPmOWMlu+8muWxgOmDqOawtOWfn+awtOi0qOaUueWWhO+8jOawtOiNieetieawtOeUn+akjeiiq+mAkOatpeaBouWkje+8mzIwMjXlubTnm5HmtYvmlbDmja7mmL7npLrvvIzpnZLjgIHojYnjgIHpsqLjgIHps5nlm5vlpKflrrbpsbzotYTmupDph4/lt7LmgaLlpI3oh7PnpoHmuJTliY3nmoTnuqYxLjjlgI3vvIzooajmmI7npoHmuJTlr7nln7rnoYDotYTmupDlkoznu4/mtY7psbznsbvlhbfmnInmmL7okZfnmoTkv67lpI3kvZznlKjjgIIifSx7InBhaXJfaWQiOiJob2xkb3V0LTAzLWxpbmUtMTE3IiwiQSI6IuaIkeS7rOWcqOmXrumimOS4gOS4remHh+eUqOa1geWfn+W5s+Wdh+WNleWMuuahhuaetuOAgjIwMjUg5bm05Zub5aSn5a626bG85oGi5aSN57qmIDEuOCDlgI3nlKjkuo7nuqbmnZ/mgLvph4/lsLrluqbvvIzmuZbljJfmrrXljZXnvZHmrKHmjZXojrfph4/mj5DljYcgMTIwXFwlIOS/neeVmeS4uuWxgOWcsOWvueeFp+OAguW9k+WJjeiDveeos+Wumue6puadn+aooeWei+eahOaYr+WFqOa1geWfn+W5s+Wdh+aBouWkjeS6i+Wunu+8jOWboOatpOaIkeS7rOWFiOWcqOe7n+S4gOWwuuW6puS4i+ingua1i+emgea4lOeahOebtOaOpeaViOW6lOOAguingua1i+S6i+WunuS4juaooeWei+WPmOmHj+eahOWvueW6lOWFs+ezu+WmguihqCBcXHJlZnt0YWI6cTFfYW5jaG9yfSDmiYDnpLrjgIIiLCJCIjoi5oiR5Lus5Zyo6Zeu6aKY5LiA5Lit6YeH55So5rWB5Z+f5bmz5Z2H5Y2V5Yy65qGG5p6244CCMjAyNSDlubTlm5vlpKflrrbpsbzmgaLlpI3nuqYgMS44IOWAjeeUqOS6jue6puadn+aAu+mHj+WwuuW6pu+8jOa5luWMl+auteWNlee9keasoeaNleiOt+mHj+aPkOWNhyAxMjBcXCUg5L+d55WZ5Li65bGA5Zyw5a+554Wn44CC5b2T5YmN6IO95aSf57qm5p2f5qih5Z6L55qE5piv5YWo5rWB5Z+f5bmz5Z2H5oGi5aSN5LqL5a6e77yM5Zug5q2k5oiR5Lus5YWI5Zyo57uf5LiA5bC65bqm5LiL6KeC5rWL56aB5riU55qE55u05o6l5pWI5bqU44CC6KeC5rWL5LqL5a6e5LiO5qih5Z6L5Y+Y6YeP55qE5a+55bqU5YWz57O75aaC6KGoIFxccmVme3RhYjpxMV9hbmNob3J9IOaJgOekuuOAgiJ9LHsicGFpcl9pZCI6ImhvbGRvdXQtMDQtbGluZS0yMTgiLCJBIjoi5oiR5Lus5Zyo6Zeu6aKY5LqM5Lit5Lul6Zeu6aKY5LiA5b6X5Yiw55qE5LiK5ri46LWE5rqQLemxvOe+pOWKqOaAgei9qOi/ueS9nOS4uui+k+WFpe+8jOWcqOe7n+S4gOWIneWni+adoeS7tuS4i+aehOW7uuePjeeogOeJqeenjeenjee+pOWTjeW6lOWtkOaooeWei++8jOW5tumAmui/h+WvueeFp+aDheaZr+WIhuemu+mjn+a6kOS+m+e7meOAgeaxn+a5lui/numAmuaAp+S4juS6uuW3peaUvua1geeahOeLrOeri+aViOW6lOOAguWFtuS4reWPmOmHjyRNJOS4jeWGjeebtOaOpeWvueW6lOWbm+Wkp+WutumxvO+8jOiAjOaYr+S7o+ihqOmVv+axn+axn+ixmuS4jumVv+axn+myn+WFseS6q+eahOS4reWxgueMjueJqeW6k++8jOa2teebluWbm+Wkp+WutumxvOS7peWklueahOS4reWwj+Wei+mxvOexu+OAgeW5vOmxvOWPiumxvOiZvua3t+WQiOmlteaWme+8myREJOWSjCRBJOWIhuWIq+ihqOekuumVv+axn+axn+ixmuS4jumVv+axn+myn+enjee+pO+8jCRWJOihqOekuuWkluadpeWFpeS+teernuS6ieeJqeenjeOAgiIsIkIiOiLmiJHku6zlnKjpl67popjkuozkuK3ku6Xpl67popjkuIDlvpfliLDnmoTkuIrmuLjotYTmupAt6bG8576k5Yqo5oCB6L2o6L+55L2c5Li66L6T5YWl77yM5Zyo57uf5LiA5Yid5aeL5p2h5Lu25LiL5p6E5bu654+N56iA54mp56eN56eN576k5ZON5bqU5a2Q5qih5Z6L77yM5bm26YCa6L+H5a+554Wn5oOF5pmv5YiG56a76aOf5rqQ5L6b57uZ44CB5rGf5rmW6L+e6YCa5oCn5LiO5Lq65bel5pS+5rWB55qE54us56uL5pWI5bqU44CC5YW25Lit5Y+Y6YePJE0k5LiN5YaN5Lul5Zub5aSn5a626bG85L2c5Li65a+55bqU5a+56LGh77yM6ICM5piv5Luj6KGo6ZW/5rGf5rGf6LGa5LiO6ZW/5rGf6bKf5YWx5Lqr55qE5Lit5bGC54yO54mp5bqT77yM5ra155uW5Zub5aSn5a626bG85Lul5aSW55qE5Lit5bCP5Z6L6bG857G744CB5bm86bG85Y+K6bG86Jm+5re35ZCI6aW15paZ77ybJEQk5ZKMJEEk5YiG5Yir6KGo56S66ZW/5rGf5rGf6LGa5LiO6ZW/5rGf6bKf56eN576k77yMJFYk6KGo56S65aSW5p2l5YWl5L6156ue5LqJ54mp56eN44CCIn0seyJwYWlyX2lkIjoiaG9sZG91dC0wNS1saW5lLTI0OSIsIkEiOiLlhbbkuK0gJEVfe1xcdGV4dHtiYXNhbH19JCDkv53nlZnotYTmupDnq6/ljovlipvkv6Hlj7fvvIwkRV97XFx0ZXh0e2NhcnB9fSQg5L+d55WZ6bG8576k5oGi5aSN5L+h5Y+344CC5p2D6YeNIDAuNjIg5ZKMIDAuMzgg55So5LqO5ZCM5pe25L+d55WZ6L+Z5Lik6YOo5YiG5L+h5oGv77ya5Zyo6Zeu6aKY5LiA55qE5qCH5a6a6L2o6L+55LiK77yMMjAyNSDlubQgJEVfe1xcdGV4dHtiYXNhbH19PTAuOTA0JOOAgSRFX3tcXHRleHR7Y2FycH19PTEuNzg4JO+8jOiLpeWujOWFqOS+nei1lumxvOe+pOWxgu+8jCRFKHQpJCDkvJrmm7TmjqXov5HljZXnuq/nmoTpsbznvqTmgaLlpI3mjIfmoIfvvIzku47ogIzliYrlvLHotYTmupDnq6/kv6Hmga/jgILlsIYgJEVfe1xcdGV4dHtiYXNhbH19JCDmnYPph43lnKggJFswLjUwLDAuNzVdJCDojIPlm7TlhoXmiavmj4/lkI7vvIzln7rnur/mg4Xmma/kuIvmsZ/osZrlkozplb/msZ/psp/mnKvlgLznmoTmnIDlpKflj5jliqjliIbliKvku4XkuLogMS4yMVxcJSDlkowgMC4xOFxcJe+8jOWbm+e7hOaDheaZr+S4reeahOeJqeenjeaOkuW6j+WSjOS9nOeUqOaWueWQkeS/neaMgeS4jeWPmOOAguS4uuS9v+S4reWxgueMjueJqeaJv+i9veWKm+WQjOaXtuWTjeW6lOmjn+a6kOaBouWkjeWSjOaxoeafk+WOi+WKm++8jOaMieiEmuacrOWunueOsOWPliIsIkIiOiLlhbbkuK0gJEVfe1xcdGV4dHtiYXNhbH19JCDkv53nlZnotYTmupDnq6/ljovlipvkv6Hlj7fvvIwkRV97XFx0ZXh0e2NhcnB9fSQg5L+d55WZ6bG8576k5oGi5aSN5L+h5Y+344CC5p2D6YeNIDAuNjIg5ZKMIDAuMzgg55So5LqO5ZCM5pe25L+d55WZ6L+Z5Lik6YOo5YiG5L+h5oGv77ya5Zyo6Zeu6aKY5LiA55qE5qCH5a6a6L2o6L+55LiK77yMMjAyNSDlubQgJEVfe1xcdGV4dHtiYXNhbH19PTAuOTA0JOOAgSRFX3tcXHRleHR7Y2FycH19PTEuNzg4JO+8jOiLpeWujOWFqOS+nei1lumxvOe+pOWxgu+8jCRFKHQpJCDkvJrotovov5Hkuo7ljZXnuq/nmoTpsbznvqTmgaLlpI3mjIfmoIfvvIzku47ogIzliYrlvLHotYTmupDnq6/kv6Hmga/jgILlsIYgJEVfe1xcdGV4dHtiYXNhbH19JCDmnYPph43lnKggJFswLjUwLDAuNzVdJCDojIPlm7TlhoXmiavmj4/lkI7vvIzln7rnur/mg4Xmma/kuIvmsZ/osZrlkozplb/msZ/psp/mnKvlgLznmoTmnIDlpKflj5jliqjliIbliKvku4XkuLogMS4yMVxcJSDlkowgMC4xOFxcJe+8jOWbm+e7hOaDheaZr+S4reeahOeJqeenjeaOkuW6j+WSjOS9nOeUqOaWueWQkeS/neaMgeS4jeWPmOOAguS4uuS9v+S4reWxgueMjueJqeaJv+i9veWKm+WQjOaXtuWTjeW6lOmjn+a6kOaBouWkjeWSjOaxoeafk+WOi+WKm++8jOaMieiEmuacrOWunueOsOWPliJ9LHsicGFpcl9pZCI6ImhvbGRvdXQtMDYtbGluZS00MDAiLCJBIjoi5Z+65YeG5pe26Ze056qX5LiL77yM5oiR5Lus5YWI5ZyoIDEuNC0tNC44IOeahOeyl+e9keagvOWSjCAzLjAtLTMuNCDnmoTliqDlr4bnvZHmoLzkuIrmiavmj48gJFxcbGFtYmRhX3tcXG1heH0k77yM5b6X5Yiw6aaW5Liq6L+e57ut5q2j5Yy66Ze05Ye6546w5ZyoICRLPTMuMjE4NiQg6ZmE6L+R77yM5bm25ZyoIDMuMjItLTMuNDAg5Yy66Ze05L+d5oyB5Li65q2j44CC6KGoIFxccmVme3RhYjpxNHJvYnVzdH0g57uZ5Ye655qE5bGA6YOo5aSN5qC46KGo5piO77yM5Zyo5oC756ev5YiG5pe26ZW/5Zu65a6a5Li6IDkwIOeahOWJjeaPkOS4i++8jCRLPTMuMjAkIOS4jiAkSz0zLjIyJCDkuYvpl7TnmoTnrKblj7fot6jotorlr7nnm7jpgrvmraXplb/lkozlvq7mibDliJ3lgLzku43lj6/kv53nlZnjgIIiLCJCIjoi5Z+65YeG5pe26Ze056qX5LiL77yMJFxcbGFtYmRhX3tcXG1heH0k5YWI5ZyoMS40LS00LjjnspfnvZHmoLzkuIrmiavmj4/vvIzlho3lnKgzLjAtLTMuNOWKoOWvhuOAgummluS4qui/nue7reato+WMuumXtOS9jeS6jiRLPTMuMjE4NiTpmYTov5HvvIwzLjIyLS0zLjQw5L+d5oyB5Li65q2j44CC6KGoXFxyZWZ7dGFiOnE0cm9idXN0feihqOaYju+8jOWcqOaAu+enr+WIhuaXtumVv+WbuuWumuS4ujkw55qE5YmN5o+Q5LiL77yMJEs9My4yMCTkuI4kSz0zLjIyJOS5i+mXtOeahOespuWPt+i3qOi2iuWcqOebuOmCu+atpemVv+WSjOW+ruaJsOWIneWAvOS4i+S7jeWPr+S/neeVmeOAgiJ9LHsicGFpcl9pZCI6ImhvbGRvdXQtMDctbGluZS00MzMiLCJBIjoi5oiR5Lus5Zyo6Zeu6aKY5LqU5Lit5rK/55So6Zeu6aKY5LqM55qE54q25oCB5pa556iL77yM5bm25Zyo5rGh5p+T5by65bqm44CB5YWl5L615Yid5YC85ZKM56ue5LqJ5by65bqm5LiK5YGa5oOF5pmv5omp5bGV44CC55Sx5LqO6Zeu6aKY5LiA55qE5Z+657q/6L2o6L+55a+55bqUICR1PTAk77yM5rGh5p+T5oOF5pmv5LiL55qE5LiK5ri46L6T5YWl6ZyA6KaB5YaN5qyh55Sx6Zeu6aKY5LiA56ev5YiG5b6X5Yiw77yM5Lul5L6/5L2/6LWE5rqQ6YCA5YyW44CB6bG8576k5Y+Y5YyW5LiO5rGh5p+T6K6+5a6a5L+d5oyB5LiA6Ie044CC5YW35L2T6ICM6KiA77yM5YWI5LulICR1PjAkIOmHjeaWsOiuoeeulyAkRV97XFx0ZXh0e2Jhc2FsfX0kIOWSjCAkRV97XFx0ZXh0e2NhcnB9fSTvvIzlho3lsIblhbbovpPlhaXpl67popjkuozmqKHlnZfjgIIiLCJCIjoi5oiR5Lus5Zyo6Zeu6aKY5LqU5Lit5rK/55So6Zeu6aKY5LqM55qE54q25oCB5pa556iL77yM5bm25Zyo5rGh5p+T5by65bqm44CB5YWl5L615Yid5YC85ZKM56ue5LqJ5by65bqm5LiK5YGa5oOF5pmv5omp5bGV44CC55Sx5LqO6Zeu6aKY5LiA55qE5Z+657q/6L2o6L+55a+55bqUICR1PTAk77yM5rGh5p+T5oOF5pmv5LiL55qE5LiK5ri46L6T5YWl6ZyA6KaB6YeN5paw55Sx6Zeu6aKY5LiA56ev5YiG5b6X5Yiw77yM5Lul5L6/5L2/6LWE5rqQ6YCA5YyW44CB6bG8576k5Y+Y5YyW5LiO5rGh5p+T6K6+5a6a5L+d5oyB5LiA6Ie044CC5YW35L2T6ICM6KiA77yM5YWI5LulICR1PjAkIOmHjeaWsOiuoeeulyAkRV97XFx0ZXh0e2Jhc2FsfX0kIOWSjCAkRV97XFx0ZXh0e2NhcnB9fSTvvIzlho3lsIblhbbovpPlhaXpl67popjkuozmqKHlnZfjgIIifSx7InBhaXJfaWQiOiJob2xkb3V0LTA4LWxpbmUtNDQyIiwiQSI6IuS4ieenjeaDheaZr+KAnOS7heemgea4lOKAneKAnOemgea4lCvmsaHmn5PigJ3igJznpoHmuJQr5rGh5p+TK+WFpeS+teKAneeahOenr+WIhuWQjuacn+W5s+Wdh+aMh+agh+WSjOe7vOWQiOW+l+WIhuWmguihqCBcXHJlZnt0YWI6cTVyZXN1bHR9IOaJgOekuuOAguaIkeS7rOabtOWFs+W/g+eahOaYr+S4ieexu+aMh+agh+W5tuS4jeWQjOatpeWPmOWMlu+8mue7hOWQiOi1i+adg+S4i++8jOS4ieenjeaDheaZr+eahOe7vOWQiOW+l+WIhuWIhuWIq+S4uiAwLjY2MuOAgTAuNDIzIOWSjCAwLjE1NeOAguS4juS7heemgea4lOebuOavlO+8jOaxoeafk+aDheaZr+eahOmjn+a6kOaMh+agh+eUsSAwLjQwNyDljYfoh7MgMC42OTLvvIzkvYbmsZ/osZrlkozplb/msZ/psp/liIbliKvpmY3oh7MgMC42MzYg5ZKMIDAuNzE277yb5Zyo5rGh5p+T5Z+656GA5LiK5YaN5Y+g5Yqg5YWl5L615ZCO77yM5YWl5L615Y6L5Yqb5Y2H6IezIDAuNjQx77yM57u85ZCI5b6X5YiG57un57ut5LiL6ZmN44CCIiwiQiI6IuihqFxccmVme3RhYjpxNXJlc3VsdH3liJflh7rigJzku4XnpoHmuJTigJ3jgIHigJznpoHmuJQr5rGh5p+T4oCd5ZKM4oCc56aB5riUK+axoeafkyvlhaXkvrXigJ3nmoTlsL7nqpflnYflgLzjgILkuInnsbvmjIfmoIflubbkuI3lkIzmraXvvJrnu7zlkIjlvpfliIbkvp3mrKHkuLowLjY2MuOAgTAuNDIz5ZKMMC4xNTXvvJvkuI7ku4XnpoHmuJTnm7jmr5TvvIzmsaHmn5Pmg4Xmma/nmoTpo5/mupDnlLEwLjQwN+WNh+iHszAuNjky77yM5rGf6LGa5ZKM6ZW/5rGf6bKf5Y206ZmN6IezMC42MzblkowwLjcxNu+8m+axoeafk+S4iuWGjeWKoOWFpeS+teWQju+8jOWFpeS+teWOi+WKm+i+vuWIsDAuNjQx77yM57u85ZCI5b6X5YiG57un57ut5LiL6ZmN44CCIn0seyJwYWlyX2lkIjoiaG9sZG91dC0wOS1saW5lLTQ3OCIsIkEiOiLnhrXmnYPjgIFDUklUSUPjgIHnrYnmnYPlkoznu4TlkIjotYvmnYPlvpfliLDlkIzkuIDmjpLluo/vvIznu4TlkIjmnYPph43nu48yMDAwIOasoSRbMC44NSwxLjE1XSTph43lvZLkuIDmibDliqjlkI7vvIzlrozmlbTmjpLluo/nqLPlrprnjofkuI7igJzlhaXkvrXmg4Xmma/mnIDlt67igJ3nqLPlrprnjoflnYfkuLoxMDBcXCXjgILkuI3lkIzotYvmnYPkuIvmr5TovoPlhbPns7vpg73msqHmnInmlLnlj5jvvIzlm6DmraTmsaHmn5PliYrlvLHnpoHmuJTmlLbnm4rjgIHlhaXkvrXnu6fnu63lop7liqDljovlipvnmoTmrKHluo/liKTmlq3lubbkuI3kvp3otZbmn5DkuIDlpZfnibnlrprotYvmnYPjgIIiLCJCIjoi54a15p2D44CBQ1JJVElD44CB562J5p2D5ZKM57uE5ZCI6LWL5p2D5b6X5Yiw55qE5o6S5bqP5a6M5YWo5LiA6Ie077yM5Zu057uV57uE5ZCI5p2D6YeN5YGaIDIwMDAg5qyhICRbMC44NSwxLjE1XSQg6YeN5b2S5LiA5omw5Yqo5ZCO77yM5a6M5pW05o6S5bqP56iz5a6a546H5ZKM4oCc5YWl5L615oOF5pmv5pyA5beu4oCd56iz5a6a546H5Z2H5Li6IDEwMFxcJeOAguS4jeWQjOi1i+adg+S4i+avlOi+g+WFs+ezu+mDveayoeacieaUueWPmO+8jOWboOatpOaxoeafk+WJiuW8seemgea4lOaUtuebiuOAgeWFpeS+tei/m+S4gOatpeaBtuWMluezu+e7n+eKtuaAgeeahOasoeW6j+WIpOaWreW5tuS4jeS+nei1luafkOS4gOWll+eJueWumui1i+adg+OAgiJ9LHsicGFpcl9pZCI6ImhvbGRvdXQtMTAtbGluZS01MTUiLCJBIjoi5pyJ6ZmQ5pe26Ze05pyA5aSn5p2O6ZuF5pmu6K+65aSr5oyH5pWw5oqK6L2o6YGT5aSN5p2C5YyW6L2s5YyW5Li65Y+v5q+U6L6D55qE5pWw5YC85Yik5o2u44CC5Z+65YeG6K6+572u5LiL77yM5oiR5Lus6aaW5YWI55yL5YiwICRLPTMuMjE4NiQg6ZmE6L+R5Ye6546w5bGA6YOo55Sx6LSf6L2s5q2j55qE6Leo6LaK77yM55+t5pe26Ze056qX5YaF5a+555u46YK75q2l6ZW/5ZKM5bGA6YOo5Yid5YC85LuN5Y+v5aSN546w44CCIiwiQiI6IuaciemZkOaXtumXtOacgOWkp+adjumbheaZruivuuWkq+aMh+aVsOaKiui9qOmBk+WkjeadguWMlui9rOWMluS4uuWPr+avlOi+g+eahOaVsOWAvOWIpOaNruOAguWfuuWHhuiuvue9ruS4i++8jOaIkeS7rOeci+WIsCAkSz0zLjIxODYkIOmZhOi/keWHuueOsOWxgOmDqOeUsei0n+i9rOato+eahOi3qOi2iu+8jOefreaXtumXtOeql+WGheWvueebuOmCu+atpemVv+WSjOWxgOmDqOWIneWAvOS7jeWPr+WkjeeOsOOAgiJ9XX0="), c => c.charCodeAt(0));
+const packet = JSON.parse(new TextDecoder("utf-8").decode(packetBytes));
+const dimensions = ["naturalness","judgment_trajectory","specificity","content_density","semantic_fidelity"];
+const labels = {
+  naturalness:["自然度","是否像有目的的学术叙述，而非可互换套句"],
+  judgment_trajectory:["判断过程","是否看得出由现象、困难或比较走向处理方式"],
+  specificity:["具体性","对象、变量、阈值、条件和变化是否写清"],
+  content_density:["内容密度","是否少重复、不跳步，每段承担明确作用"],
+  semantic_fidelity:["语义忠实度","事实、范围、限定和数学方向是否保持"]
+};
+const choiceLabels = {A:"A",B:"B",TIE:"持平",SKIP:"跳过"};
+const stateKey = "aigc-blind-review:" + packetHash;
+let state = {rater:"", answers:{}, notes:{}};
+try { state = Object.assign(state, JSON.parse(localStorage.getItem(stateKey) || "{}")); } catch (_) {}
+const rater = document.getElementById("rater");
+const pairsNode = document.getElementById("pairs");
+const statusNode = document.getElementById("status");
+const messageNode = document.getElementById("message");
+rater.value = state.rater || "";
+function save() { state.rater = rater.value; localStorage.setItem(stateKey, JSON.stringify(state)); updateStatus(); }
+function complete(pair) { return dimensions.every(d => state.answers[pair.pair_id]?.[d]); }
+function updateStatus() {
+  const done = packet.pairs.filter(complete).length;
+  statusNode.textContent = `已完成 ${done} / ${packet.pairs.length} 对`;
+}
+function element(tag, className, text) {
+  const node = document.createElement(tag); if (className) node.className = className;
+  if (text !== undefined) node.textContent = text; return node;
+}
+packet.pairs.forEach((pair, pairIndex) => {
+  state.answers[pair.pair_id] ||= {};
+  const section = element("section", "pair"); section.dataset.pairId = pair.pair_id;
+  section.append(element("h2", "", `第 ${pairIndex + 1} 对 · ${pair.pair_id}`));
+  const passages = element("div", "passages");
+  ["A","B"].forEach(side => {
+    const article = element("article", "passage"); article.append(element("h3", "", `文本 ${side}`));
+    article.append(element("p", "passage-text", pair[side])); passages.append(article);
+  });
+  section.append(passages);
+  dimensions.forEach((dimension, dimIndex) => {
+    const fieldset = document.createElement("fieldset"); fieldset.dataset.dimension = dimension;
+    fieldset.append(element("legend", "", labels[dimension][0]));
+    const title = element("div", "dimension"); title.append(element("strong", "", labels[dimension][0]));
+    title.append(element("small", "", labels[dimension][1])); fieldset.append(title);
+    ["A","B","TIE","SKIP"].forEach(choice => {
+      const label = element("label", "choice"); const input = document.createElement("input");
+      input.type = "radio"; input.name = `p${pairIndex}-d${dimIndex}`; input.value = choice;
+      input.checked = state.answers[pair.pair_id][dimension] === choice;
+      input.addEventListener("change", () => { state.answers[pair.pair_id][dimension] = choice;
+        fieldset.classList.remove("missing"); save(); });
+      label.append(input, document.createTextNode(choiceLabels[choice])); fieldset.append(label);
+    });
+    section.append(fieldset);
+  });
+  const notesLabel = element("label", "notes", "备注（可选）"); const notes = document.createElement("textarea");
+  notes.maxLength = 2000; notes.value = state.notes[pair.pair_id] || "";
+  notes.addEventListener("input", () => { state.notes[pair.pair_id] = notes.value; save(); });
+  notesLabel.append(notes); section.append(notesLabel); pairsNode.append(section);
+});
+rater.addEventListener("input", save);
+function csvCell(value) { const text = String(value ?? ""); return /[",\r\n]/.test(text)
+  ? `"${text.replaceAll('"','""')}"` : text; }
+document.getElementById("export").addEventListener("click", () => {
+  messageNode.textContent = ""; messageNode.className = "";
+  const reviewer = rater.value.trim(); const missing = [];
+  document.querySelectorAll("fieldset").forEach(node => node.classList.remove("missing"));
+  packet.pairs.forEach(pair => dimensions.forEach(d => { if (!state.answers[pair.pair_id]?.[d]) {
+    missing.push([pair.pair_id,d]); document.querySelector(`.pair[data-pair-id="${CSS.escape(pair.pair_id)}"] fieldset[data-dimension="${d}"]`).classList.add("missing"); } }));
+  if (!reviewer || missing.length) {
+    messageNode.className = "error";
+    messageNode.textContent = !reviewer ? "请填写评审者编号。" : `还有 ${missing.length} 个维度未选择。`;
+    if (missing.length) document.querySelector("fieldset.missing")?.scrollIntoView({behavior:"smooth",block:"center"});
+    return;
+  }
+  const header = ["pair_id","rater_id","rater_kind",...dimensions,"notes"];
+  const lines = [header.join(",")];
+  packet.pairs.forEach(pair => { const row = [pair.pair_id,reviewer,"human",
+    ...dimensions.map(d => state.answers[pair.pair_id][d]),state.notes[pair.pair_id] || ""];
+    lines.push(row.map(csvCell).join(",")); });
+  const blob = new Blob(["\uFEFF" + lines.join("\r\n") + "\r\n"], {type:"text/csv;charset=utf-8"});
+  const link = document.createElement("a"); link.href = URL.createObjectURL(blob);
+  link.download = `ratings-${reviewer.replace(/[^A-Za-z0-9._-]+/g,"-") || "reviewer"}-${packetHash.slice(0,8)}.csv`;
+  link.click(); setTimeout(() => URL.revokeObjectURL(link.href), 1000);
+  messageNode.textContent = "评分表已导出。请不要把本页记录交给另一名评审参考。";
+});
+document.getElementById("clear").addEventListener("click", () => {
+  if (!confirm("确认清空本页保存的评审编号、选择和备注？")) return;
+  localStorage.removeItem(stateKey); location.reload();
+});
+updateStatus();
+</script>
+</body>
+</html>

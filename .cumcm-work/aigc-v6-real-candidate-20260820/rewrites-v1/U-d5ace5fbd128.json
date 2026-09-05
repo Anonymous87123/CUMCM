@@ -1,0 +1,165 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-d5ace5fbd128",
+  "chunk_binding_sha256": "2574cd4c52d898b2d411efbd80b8fd9161f941ebbbe0d76562576c28273209c9",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "842ae235d7ee9818",
+    "prepare_integrity_sha256": "95a9f9bd3349d3e3b19c9894822cd0006b7dceaf13e3f15289f22f530fa6e3e1",
+    "run_metadata_sha256": "3d0c006231a948ab025cd9016f5af0a745b8e7a0f77be54a018cfd81fc0f2137",
+    "policy_snapshot_sha256": "d8043a6b25776c8e16b2c0324b17655684d5585cccd37fc5f4e585db78fd6da9",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "unit_id": "U-d5ace5fbd128",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 10864,
+      "end": 13790,
+      "start_line": 217,
+      "end_line": 275,
+      "source_span_sha256": "aad7f22ffc5214edb3aca81f91c0628e3ea4fa262c0c7378a4e1ab8f137e9b10",
+      "masked_text_sha256": "b822241759ead62192f8ddc926380ac3a803127ef0537081077b2c993af829d5",
+      "chunk_binding_sha256": "2574cd4c52d898b2d411efbd80b8fd9161f941ebbbe0d76562576c28273209c9"
+    },
+    "scene_route": {
+      "requested_scene": "MODELING",
+      "resolved_scene": "MODELING",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "5a31327ec4931a2ecc321b30aa1c8c42c60743fc1a40a8cc4a277f7c71f00321",
+      "routing_input_sha256": "5147bbf3a40ad3898c5d6503131473d8290001d4568e9a49fae15a5e2b0d7d60"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-modeling",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "MODELING",
+      "profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "5c3c2ff39a4c714076f6b9ec3469ed5b6bb869fee770edf04132b8fc10925f55"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00258:7d00b3dbb993]]\n问题二使用问题一的资源--鱼群轨迹，却不把四大家鱼直接当作珍稀物种的全部食源。变量[[PROTECTED:F00001-P00259:297422400257]]表示长江江豚和长江鲟共享的中层猎物库，包含中小型鱼类、幼鱼及鱼虾饵料；[[PROTECTED:F00001-P00260:3a16fddd1da7]]、[[PROTECTED:F00001-P00261:df91b9d8bde2]]和[[PROTECTED:F00001-P00262:da8c27c394be]]分别表示江豚、长江鲟与外来入侵竞争物种。\n\n问题一描述基础资源和经济鱼类，问题二关心珍稀物种可利用的公共食源，两组状态的生态位并不重合。上游轨迹先合成为生态状态指数[[PROTECTED:F00001-P00263:7a702f97ebc7]]，再调节中层猎物承载力[[PROTECTED:F00001-P00264:7ea51720f73f]]；直接令[[PROTECTED:F00001-P00265:297422400257]]等于四大家鱼总量会丢失其余中小型猎物。事实和模型量的对应见表[[PROTECTED:F00001-P00266:44d3d6345cfa]]。\n[[PROTECTED:F00001-P00267:bcdfe912634f]]\n[[PROTECTED:F00001-P00268:444090bde130]]\n[[PROTECTED:F00001-P00269:59572881fdd6]]\n[[PROTECTED:F00001-P00270:77e1e0701c7b]]\n[[PROTECTED:F00001-P00271:1937c87bfd71]]\n[[PROTECTED:F00001-P00272:3000c3bd47e8]]\n事实来源 & 观测口径 & 对应模型量 & 角色 [[PROTECTED:F00001-P00273:b11b4ca186c0]]\n[[PROTECTED:F00001-P00274:3f9db2ae5742]]\n附件 1 & 洄游路径、大坝阻隔、鱼道连通性 & [[PROTECTED:F00001-P00275:0a95e0c00346]] & 事实约束 [[PROTECTED:F00001-P00276:b11b4ca186c0]]\n附件 2 & 食性分工 & [[PROTECTED:F00001-P00277:8dd8a34c3b96]] & 经验参数设定 [[PROTECTED:F00001-P00278:b11b4ca186c0]]\n附件 2 & 放流补偿 & [[PROTECTED:F00001-P00279:79b24b26c4d6]] & 情景量 [[PROTECTED:F00001-P00280:b11b4ca186c0]]\n附件 3（2022 公报） & 江豚 1249 头、长江鲟 438 尾 & [[PROTECTED:F00001-P00281:e4ab91f566e2]] & 初值约束 [[PROTECTED:F00001-P00282:b11b4ca186c0]]\n问题一输出 & 归一化生态指数 [[PROTECTED:F00001-P00283:7a702f97ebc7]] & [[PROTECTED:F00001-P00284:7a702f97ebc7]] & 上游输入量 [[PROTECTED:F00001-P00285:b11b4ca186c0]]\n[[PROTECTED:F00001-P00286:76ac79294e9f]]\n[[PROTECTED:F00001-P00287:fce4e77a7146]]\n[[PROTECTED:F00001-P00288:4cc1d10bd836]]\n其中 [[PROTECTED:F00001-P00289:fa920c9e1402]] 直接对应题目事实；[[PROTECTED:F00001-P00290:8dd8a34c3b96]] 为经验参数，[[PROTECTED:F00001-P00291:79b24b26c4d6]] 为情景控制量（取值 0.012，对应附件 2 中长江鲟年均放流规模与 2022 公报存量的比值），[[PROTECTED:F00001-P00292:7a702f97ebc7]] 作为问题一输出的上游输入量使用。高阻隔情景提高 [[PROTECTED:F00001-P00293:0a95e0c00346]]，无放流情景取 [[PROTECTED:F00001-P00294:9525c29eb6c7]]，污染情景提高 [[PROTECTED:F00001-P00295:a924f6a91c69]]，其余参数保持不变。\n\n对任一状态量 [[PROTECTED:F00001-P00296:fa6f31e9e86c]] 记 [[PROTECTED:F00001-P00297:c49adb2b95d0]]。由问题一得到底层资源和四大家鱼轨迹后，我们构造综合生态状态指数\n[[PROTECTED:F00001-P00298:d3f771a5eb92]]\n[[PROTECTED:F00001-P00299:4294be6889f4]]\n[[PROTECTED:F00001-P00300:5604f79f4430]]\n[[PROTECTED:F00001-P00301:0e84b2da1731]]记录资源端压力，[[PROTECTED:F00001-P00302:697c89c96217]]记录鱼群恢复。问题一的2025年轨迹给出[[PROTECTED:F00001-P00303:4d12674678c4]]和[[PROTECTED:F00001-P00304:0cafbfe737e8]]；若只使用鱼群层，[[PROTECTED:F00001-P00305:7a702f97ebc7]]将接近鱼群恢复指标，资源下降对食源承载力的影响会被压低。本文取权重0.62和0.38，并把[[PROTECTED:F00001-P00306:0e84b2da1731]]权重在[[PROTECTED:F00001-P00307:e78d93c08c7b]]内扫描。江豚、长江鲟末值的最大变动为1.21[[PROTECTED:F00001-P00308:fed3f9917a84]]和0.18[[PROTECTED:F00001-P00309:fed3f9917a84]]，四组情景的物种排序与作用方向未变。中层猎物承载力按脚本写为\n[[PROTECTED:F00001-P00310:cb227bf08ca9]]\n基准取[[PROTECTED:F00001-P00311:3ead9be679ce]]。[[PROTECTED:F00001-P00312:8a1a32760f4f]]把上游恢复、退化和污染压缩成中层猎物的一维承载强迫；在这一输入下，珍稀物种与入侵物种方程写为[[PROTECTED:F00001-P00313:0635582292ea]]：\n[[PROTECTED:F00001-P00314:069571dec153]]\n[[PROTECTED:F00001-P00315:250297093387]]\n[[PROTECTED:F00001-P00316:c20a79e97de9]]\n[[PROTECTED:F00001-P00317:aeb5bf726b21]]\n[[PROTECTED:F00001-P00318:0a95e0c00346]]表示通道阻隔和栖息地碎片化损失，[[PROTECTED:F00001-P00319:79b24b26c4d6]]表示人工放流强度。长江鲟依赖洄游通道，模型用[[PROTECTED:F00001-P00320:a754ab29d2d3]]放大其阻隔损失，基准取[[PROTECTED:F00001-P00321:501cf3455871]]；附件1中长江鲟洄游距离约为江豚日常活动范围的1.3倍，为该取值提供参照。把[[PROTECTED:F00001-P00322:a754ab29d2d3]]在[[PROTECTED:F00001-P00323:902ed40e4265]]内扫描，长江鲟基线末值最大变动约2.1[[PROTECTED:F00001-P00324:fed3f9917a84]]，四组情景排序未变。表[[PROTECTED:F00001-P00325:44d3d6345cfa]]集中列出了题目事实与这些模型量的关系。\n\n",
+  "rewrite_intent": {
+    "summary": "依据本节事实与数值重组论述，保留已有判断节点并减少模板化衔接",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_MODELING_PROSE",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "SCENE-MODELING-JUDGMENT-PRESERVE",
+          "RHYTHM-VARY-SECTION-ACTION"
+        ],
+        "summary": "依据本节事实与数值重组论述，保留已有判断节点并减少模板化衔接"
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_MODELING_PROSE",
+        "source_span_ids": [
+          "S2"
+        ],
+        "target_signals": [
+          "SCENE-MODELING-JUDGMENT-PRESERVE",
+          "RHYTHM-VARY-SECTION-ACTION"
+        ],
+        "summary": "依据本节事实与数值重组论述，保留已有判断节点并减少模板化衔接"
+      },
+      {
+        "id": "O3",
+        "kind": "REWRITE_MODELING_PROSE",
+        "source_span_ids": [
+          "S3"
+        ],
+        "target_signals": [
+          "SCENE-MODELING-JUDGMENT-PRESERVE",
+          "RHYTHM-VARY-SECTION-ACTION"
+        ],
+        "summary": "依据本节事实与数值重组论述，保留已有判断节点并减少模板化衔接"
+      },
+      {
+        "id": "O4",
+        "kind": "REWRITE_MODELING_PROSE",
+        "source_span_ids": [
+          "S4"
+        ],
+        "target_signals": [
+          "SCENE-MODELING-JUDGMENT-PRESERVE",
+          "RHYTHM-VARY-SECTION-ACTION"
+        ],
+        "summary": "依据本节事实与数值重组论述，保留已有判断节点并减少模板化衔接"
+      },
+      {
+        "id": "O5",
+        "kind": "REWRITE_MODELING_PROSE",
+        "source_span_ids": [
+          "S5"
+        ],
+        "target_signals": [
+          "SCENE-MODELING-JUDGMENT-PRESERVE",
+          "RHYTHM-VARY-SECTION-ACTION"
+        ],
+        "summary": "依据本节事实与数值重组论述，保留已有判断节点并减少模板化衔接"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 2,
+        "end_line": 2,
+        "sha256": "e0e7ff7d33eb68bc787c47386650260b37cde1aaa8e15099c994d059288a5c02"
+      },
+      {
+        "id": "S2",
+        "start_line": 4,
+        "end_line": 4,
+        "sha256": "b83c6d9a159ae818514f831ed77edc0f4696e9cca0b14e03ce53712b19286284"
+      },
+      {
+        "id": "S3",
+        "start_line": 27,
+        "end_line": 27,
+        "sha256": "94be10716a7bd7ba90527341cc6f2e32082e8efcdb5e1c3daa8551c153700c57"
+      },
+      {
+        "id": "S4",
+        "start_line": 29,
+        "end_line": 29,
+        "sha256": "58260467cf303576d9293f5097f41773a8dfa97555e9e7395ec0366ce89092bc"
+      },
+      {
+        "id": "S5",
+        "start_line": 34,
+        "end_line": 34,
+        "sha256": "9a7e5a792f4fe20a15eb9e20f3ea22dd83b228a6e27e46f26be5d9661b442e1e"
+      }
+    ],
+    "target_signals": [
+      "SCENE-MODELING-JUDGMENT-PRESERVE",
+      "RHYTHM-VARY-SECTION-ACTION"
+    ]
+  }
+}

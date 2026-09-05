@@ -1,0 +1,78 @@
+﻿{
+  "schema_version": 1,
+  "file": "F:\\CUMCM\\.cumcm-work\\template-contract-verify-20260813\\audit-style-heavy.tex",
+  "problem_type": "B",
+  "status": "PASS",
+  "errors": 0,
+  "warnings": 9,
+  "findings": [
+    {
+      "code": "ABSTRACT_TRIAD_OVERUSE",
+      "severity": "warning",
+      "message": "发现 3 处三项抽象“性”评价，可能以排比替代可核对指标。",
+      "line": 5,
+      "suggestion": "保留有证据的一项并给出指标、对象和范围；其余项分别证明或删除，不为句式完整凑成三项。"
+    },
+    {
+      "code": "AI_CLICHE_WITHOUT_EVIDENCE",
+      "severity": "warning",
+      "message": "发现可能空泛的 AI 套语“综合性框架”（综合性/系统性框架），附近未见对象、依据、数值或结论边界。",
+      "line": 5,
+      "suggestion": "改写为具体对象、依据（式/图/表/字段/基线）、实际动作、数值比较和适用范围；若删去后信息不损失则直接删除。"
+    },
+    {
+      "code": "CONNECTOR_SATURATION",
+      "severity": "warning",
+      "message": "正文共发现 42 处显式推进词，其中 11 个段落含三处以上；逻辑关系可能主要靠连接词而非对象、公式和时间顺序承接。",
+      "line": 5,
+      "suggestion": "先删除能够由相同对象、符号、图表或程序顺序自然承接的连接词；不要用同义词轮换。"
+    },
+    {
+      "code": "REPEATED_REASONING_CHAIN",
+      "severity": "warning",
+      "message": "多个段落重复使用“核心困难—先—再”或“首先—其次—最后”的完整推理句架。",
+      "line": 5,
+      "suggestion": "保留实际改变路线的局部判断，把内部完整性清单留在草稿区；正文不要求每问复现同一顺序。"
+    },
+    {
+      "code": "PARAGRAPH_SUMMARY_OVERUSE",
+      "severity": "warning",
+      "message": "9 个正文段落在末尾使用总结性收束，段落可能被统一修成“做法—结果—这说明”的标准答案。",
+      "line": 9,
+      "suggestion": "逐段删除不增加新判断的末句；只有紧邻公式、图表或试算确实需要裁决时才保留“说明/表明”。"
+    },
+    {
+      "code": "REPEATED_PARAGRAPH_OPENER",
+      "severity": "warning",
+      "message": "发现 9 个正文段落以“首先”起笔，段首节奏可能机械重复。",
+      "line": 9,
+      "suggestion": "让段落从各自的具体对象、读数、公式、边界或上一段结论起笔；不要只轮换连接词。"
+    },
+    {
+      "code": "MODEL_SELECTION_WITHOUT_LOCAL_BASIS",
+      "severity": "warning",
+      "message": "问题分析中模型或方法“采用优化模型”出现前，当前判断单元未见本题特有的观察、约束、边界、试算或计算负担。",
+      "line": 11,
+      "suggestion": "从真正触发选择的材料自然引出模型；不必罗列多个候选，也不要用“问题复杂，故采用”补理由。"
+    },
+    {
+      "code": "THIN_PROBLEM_ANALYSIS",
+      "severity": "warning",
+      "message": "问题分析正文较短，可能只给模型结论而没有呈现影响选型的题面、数据、边界或接口。",
+      "line": null,
+      "suggestion": "补充真正改变变量、近似、模型或算法的局部依据；不要按“困难—基线—不足—候选—选择”补齐固定链条，也不要虚构未运行的比较。"
+    },
+    {
+      "code": "THIN_RESULT_EXPLANATION",
+      "severity": "warning",
+      "message": "结果分析正文过短，可能只列数值而未解释方向、数量级、约束活跃性或业务含义。",
+      "line": null,
+      "suggestion": null
+    }
+  ],
+  "limitations": [
+    "规则审计只检查结构和可定位写作信号，不证明模型、数据、公式或结论正确。",
+    "动态生成的章节、标签和外部 .bib 内容需结合编译日志核验。",
+    "训练集回代、求解后变量修改、按行号标签、模型名--拟合接口、重复特征列、预处理拟合域、首次预测调用、参数名、硬标签 AUC、嵌套极值方向、循环索引、蒙特卡洛协议、部分硬约束通过、未求解模型、经验系数和稳定性表述采用保守静态匹配，命中后仍须结合目标方向、索引角色、数据角色、库版本、单位与约束日志人工裁决。"
+  ]
+}

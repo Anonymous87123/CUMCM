@@ -1,0 +1,345 @@
+{
+  "schema": "aigc-mcm-release-gates/v1",
+  "status": "pass",
+  "created_at": "2026-08-15T09:55:00.639182+00:00",
+  "target": {
+    "id": "SOURCE",
+    "path": "F:\\CUMCM\\.cumcm-work\\blind-test-2019-cumcm-a\\paper\\formal.tex",
+    "release_path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source\\formal.tex",
+    "sha256": "0f9e8b694574f353c06ac1a2aa944e2eaf3a11338e4ae4a46316a3202b2b3a1e",
+    "tree_sha256": "34065902afdd0e759314aa471fdba0440cffd17ce8747a3567111b22fb8956ca",
+    "release_tree_sha256": "78a51841aab6e32e9a3d9de20de3121019bf59b2ce16a86e941f6f992b7e9c5c",
+    "files": [
+      {
+        "relative_path": "figures\\q1_control.pdf",
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source\\figures\\q1_control.pdf",
+        "sha256": "e7ebc9511782894166abcea7a08e8c1aa7284439049e4c1e10b0794c34681cd4",
+        "bytes": 24076
+      },
+      {
+        "relative_path": "figures\\q1_local_profile.pdf",
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source\\figures\\q1_local_profile.pdf",
+        "sha256": "45a7d35282f38b7d70cc8b2da946ba15dd679cf5936ff9ee07addbd60904bd5c",
+        "bytes": 12434
+      },
+      {
+        "relative_path": "figures\\q23_pressure.pdf",
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source\\figures\\q23_pressure.pdf",
+        "sha256": "963b7f26cc254c014589f102c0f17c05c7d504d60fd7bbd175e7442575d62ede",
+        "bytes": 39265
+      },
+      {
+        "relative_path": "figures\\q2_event_window.pdf",
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source\\figures\\q2_event_window.pdf",
+        "sha256": "7cd5248de36ea9e5bd6f1a6fb0386109c2797114ffd7c3a87efb987cbeecb1e2",
+        "bytes": 13252
+      },
+      {
+        "relative_path": "figures\\q2_local_profile.pdf",
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source\\figures\\q2_local_profile.pdf",
+        "sha256": "49415cc61e164e0165e44588bd6d82a7ffbbdfcbdd532ad2b144c03ce5b79748",
+        "bytes": 14744
+      },
+      {
+        "relative_path": "figures\\q3_offset_profile.pdf",
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source\\figures\\q3_offset_profile.pdf",
+        "sha256": "efb8e88cf12c4a699ab2cd0b941dfd93943a271ce668e2e3312bc9dc5c4f6194",
+        "bytes": 12477
+      },
+      {
+        "relative_path": "figures\\state_relation.pdf",
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source\\figures\\state_relation.pdf",
+        "sha256": "75d9d3a073d0b5d5e016071690b36061ab93ce2d91f1714c039b49b581ddee82",
+        "bytes": 15188
+      },
+      {
+        "relative_path": "figures\\step_convergence.pdf",
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source\\figures\\step_convergence.pdf",
+        "sha256": "2f6d6cbe67560377159dd4ab71a1a215c15aaf9c56c628258a1d65429edfccb9",
+        "bytes": 16749
+      },
+      {
+        "relative_path": "formal.tex",
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source\\formal.tex",
+        "sha256": "0f9e8b694574f353c06ac1a2aa944e2eaf3a11338e4ae4a46316a3202b2b3a1e",
+        "bytes": 66537
+      }
+    ]
+  },
+  "runtime": {
+    "python": "3.13.7 (tags/v3.13.7:bcee1c3, Aug 14 2025, 14:15:11) [MSC v.1944 64 bit (AMD64)]",
+    "executable": "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe"
+  },
+  "inputs": {
+    "coverage": {
+      "path": "F:\\CUMCM\\.cumcm-work\\blind-test-2019-cumcm-a\\paper\\formal-coverage.json",
+      "sha256": "089062b07a00750e62cf7bee15b64b6a359ec54de75c011914552fd639ad30d5",
+      "bytes": 2776
+    },
+    "math_contract": {
+      "path": "F:\\CUMCM\\.cumcm-work\\blind-test-2019-cumcm-a\\audit\\math-contract.json",
+      "sha256": "8c18d6c8354d0eb66ccac2e8d224bece14e78c26656bc80497a0613743e4df92",
+      "bytes": 2010
+    },
+    "repro_manifest": {
+      "path": "F:\\CUMCM\\.cumcm-work\\blind-test-2019-cumcm-a\\audit\\repro-manifest.json",
+      "sha256": "4c84ff26228866b38e3c9a329c416a90e2d270dd3c9b2e4dea9962a23f9cd449",
+      "bytes": 2191
+    },
+    "result_manifest": {
+      "path": "F:\\CUMCM\\.cumcm-work\\blind-test-2019-cumcm-a\\audit\\result-manifest.json",
+      "sha256": "7241cdac2e1b4b53635e9863902a5c83348c11a0e06dad4f334ca4a2cc0f92fe",
+      "bytes": 1463
+    }
+  },
+  "gates": [
+    {
+      "id": "manuscript",
+      "required": true,
+      "status": "pass",
+      "command": [
+        "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_manuscript.py",
+        "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source\\formal.tex",
+        "--problem-type",
+        "A",
+        "--format",
+        "json"
+      ],
+      "cwd": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source",
+      "returncode": 0,
+      "stdout": {
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\logs\\manuscript.stdout.txt",
+        "sha256": "39a7d5e0a9ea405868c5a463c74d31a208e3f0160015e24fb484b977f8d189e7"
+      },
+      "stderr": {
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\logs\\manuscript.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "tool": {
+        "source_path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_manuscript.py",
+        "source_sha256": "40c2b85609cd693c6952cee0f90a0d2a71fef12e15c1dba349a04203d9cff940",
+        "snapshot": {
+          "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\tool-snapshots\\manuscript-audit_manuscript.py",
+          "sha256": "40c2b85609cd693c6952cee0f90a0d2a71fef12e15c1dba349a04203d9cff940"
+        }
+      },
+      "reported_status": "pass"
+    },
+    {
+      "id": "math-semantics",
+      "required": true,
+      "status": "pass",
+      "command": [
+        "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_math_semantics.py",
+        "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source\\formal.tex",
+        "--contract",
+        "F:\\CUMCM\\.cumcm-work\\blind-test-2019-cumcm-a\\audit\\math-contract.json",
+        "--format",
+        "json"
+      ],
+      "cwd": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source",
+      "returncode": 0,
+      "stdout": {
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\logs\\math-semantics.stdout.txt",
+        "sha256": "808b4f6e663353a60a540ac5f1e63aca907f0005f4114ccac9e9352558fdbb96"
+      },
+      "stderr": {
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\logs\\math-semantics.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "tool": {
+        "source_path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_math_semantics.py",
+        "source_sha256": "31a91537a98d65fb40566b39888bf0fe3b38339dbba3ae7753b50459bf8f69bc",
+        "snapshot": {
+          "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\tool-snapshots\\math-semantics-audit_math_semantics.py",
+          "sha256": "31a91537a98d65fb40566b39888bf0fe3b38339dbba3ae7753b50459bf8f69bc"
+        }
+      },
+      "reported_status": "pass"
+    },
+    {
+      "id": "reproducibility",
+      "required": true,
+      "status": "pass",
+      "command": [
+        "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_repro_manifest.py",
+        "F:\\CUMCM\\.cumcm-work\\blind-test-2019-cumcm-a\\audit\\repro-manifest.json",
+        "--format",
+        "json"
+      ],
+      "cwd": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source",
+      "returncode": 0,
+      "stdout": {
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\logs\\reproducibility.stdout.txt",
+        "sha256": "b9d99a629e5763a9d7b6ee507a38c6af974d63d6f10b8369c201852d0d32086f"
+      },
+      "stderr": {
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\logs\\reproducibility.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "tool": {
+        "source_path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_repro_manifest.py",
+        "source_sha256": "1511c1a3f06987a4db18b8241c5fdaa02a7b584940d2de8c6b26e8dd4abd1e6a",
+        "snapshot": {
+          "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\tool-snapshots\\reproducibility-audit_repro_manifest.py",
+          "sha256": "1511c1a3f06987a4db18b8241c5fdaa02a7b584940d2de8c6b26e8dd4abd1e6a"
+        }
+      },
+      "reported_status": "pass"
+    },
+    {
+      "id": "result-sync",
+      "required": true,
+      "status": "pass",
+      "command": [
+        "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_result_sync.py",
+        "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source\\formal.tex",
+        "--manifest",
+        "F:\\CUMCM\\.cumcm-work\\blind-test-2019-cumcm-a\\audit\\result-manifest.json",
+        "--format",
+        "json"
+      ],
+      "cwd": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source",
+      "returncode": 0,
+      "stdout": {
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\logs\\result-sync.stdout.txt",
+        "sha256": "1ea37887670ded7bc08027b1abd0e4b4ff0ade623e69f562bba1e7610f6bc3f3"
+      },
+      "stderr": {
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\logs\\result-sync.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "tool": {
+        "source_path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_result_sync.py",
+        "source_sha256": "d4f956b9d9c92463592245dc268aa8dc9aa9845f026dd9c36540079f99eace98",
+        "snapshot": {
+          "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\tool-snapshots\\result-sync-audit_result_sync.py",
+          "sha256": "d4f956b9d9c92463592245dc268aa8dc9aa9845f026dd9c36540079f99eace98"
+        }
+      },
+      "reported_status": "pass"
+    },
+    {
+      "id": "compile",
+      "required": true,
+      "status": "pass",
+      "command": [
+        "E:\\Program Files\\LateX\\texlive\\2025\\bin\\windows\\latexmk.EXE",
+        "-xelatex",
+        "-interaction=nonstopmode",
+        "-halt-on-error",
+        "-outdir=F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\build",
+        "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source\\formal.tex"
+      ],
+      "cwd": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source",
+      "returncode": 0,
+      "stdout": {
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\logs\\compile.stdout.txt",
+        "sha256": "eeadc8871a085cb0f229b20f46b1ac2c220b71c4d22594637a8744a83a2aff6d"
+      },
+      "stderr": {
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\logs\\compile.stderr.txt",
+        "sha256": "1464cd75d4e7e58e7c35feb592b95eab168e8954c96a2b204c6eeee2be541349"
+      },
+      "tool": {
+        "source_path": "E:\\Program Files\\LateX\\texlive\\2025\\bin\\windows\\latexmk.exe",
+        "source_sha256": "f903bdf53d6886e8c48d0cb0593116afa2a887f3cdf46800e9d7d90f7431d49c"
+      }
+    },
+    {
+      "id": "competition-length",
+      "required": true,
+      "status": "pass",
+      "command": [
+        "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_competition_length.py",
+        "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source\\formal.tex",
+        "--aux",
+        "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\build\\formal.aux",
+        "--coverage",
+        "F:\\CUMCM\\.cumcm-work\\blind-test-2019-cumcm-a\\paper\\formal-coverage.json",
+        "--min-pages",
+        "25",
+        "--max-pages",
+        "30",
+        "--format",
+        "json"
+      ],
+      "cwd": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source",
+      "returncode": 0,
+      "stdout": {
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\logs\\competition-length.stdout.txt",
+        "sha256": "6c235dabb5bd11f8acd4d1c5804b322db4b28d50f98b3d6e487a6c263f16807f"
+      },
+      "stderr": {
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\logs\\competition-length.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "tool": {
+        "source_path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_competition_length.py",
+        "source_sha256": "96d1717f3875668bf325fbdf6610941088ceeaae0ecb3078b364193a8dd90882",
+        "snapshot": {
+          "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\tool-snapshots\\competition-length-audit_competition_length.py",
+          "sha256": "96d1717f3875668bf325fbdf6610941088ceeaae0ecb3078b364193a8dd90882"
+        }
+      },
+      "reported_status": "pass"
+    },
+    {
+      "id": "content-density",
+      "required": true,
+      "status": "pass",
+      "command": [
+        "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+        "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_content_density.py",
+        "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source\\formal.tex",
+        "--aux",
+        "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\build\\formal.aux",
+        "--coverage",
+        "F:\\CUMCM\\.cumcm-work\\blind-test-2019-cumcm-a\\paper\\formal-coverage.json",
+        "--problem-type",
+        "A",
+        "--format",
+        "json"
+      ],
+      "cwd": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\selected-source",
+      "returncode": 0,
+      "stdout": {
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\logs\\content-density.stdout.txt",
+        "sha256": "0c01cd73a86f180e2c344ce6034d2a3088ba4b575dc91c959a16f852b1f6b9e8"
+      },
+      "stderr": {
+        "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\logs\\content-density.stderr.txt",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "tool": {
+        "source_path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_content_density.py",
+        "source_sha256": "c6c201af53cf55f95a322841dc84c04eb7dea08ceff27ff36d3e4af1143adca1",
+        "snapshot": {
+          "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\tool-snapshots\\content-density-audit_content_density.py",
+          "sha256": "c6c201af53cf55f95a322841dc84c04eb7dea08ceff27ff36d3e4af1143adca1"
+        }
+      },
+      "reported_status": "pass"
+    }
+  ],
+  "artifacts": [
+    {
+      "kind": "pdf",
+      "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\build\\formal.pdf",
+      "sha256": "306f2d9d469a01ff25053de36c2a28c1937aace7325ddcb348260b8c8310117a",
+      "bytes": 418582
+    },
+    {
+      "kind": "aux",
+      "path": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\A\\release\\build\\formal.aux",
+      "sha256": "52b372d30a1d0e8ea0c8a2ddd839c7e5e6138f68fb991fa30b411a4148ea66ea",
+      "bytes": 18639
+    }
+  ],
+  "automatic_release": false
+}

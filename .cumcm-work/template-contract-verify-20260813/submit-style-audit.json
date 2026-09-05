@@ -1,0 +1,36 @@
+﻿{
+  "schema_version": 1,
+  "file": "F:\\CUMCM\\submit.tex",
+  "problem_type": "A",
+  "status": "FAIL",
+  "errors": 3,
+  "warnings": 0,
+  "findings": [
+    {
+      "code": "MISSING_APPENDIX",
+      "severity": "error",
+      "message": "缺少“附录”结构。",
+      "line": null,
+      "suggestion": "补充独立的“附录”章节或环境，并写入与结果相互对应的内容。"
+    },
+    {
+      "code": "MISSING_KEYWORDS",
+      "severity": "error",
+      "message": "缺少“关键词”结构。",
+      "line": null,
+      "suggestion": "补充独立的“关键词”章节或环境，并写入与结果相互对应的内容。"
+    },
+    {
+      "code": "MISSING_REFERENCES",
+      "severity": "error",
+      "message": "缺少“参考文献”结构。",
+      "line": null,
+      "suggestion": "补充独立的“参考文献”章节或环境，并写入与结果相互对应的内容。"
+    }
+  ],
+  "limitations": [
+    "规则审计只检查结构和可定位写作信号，不证明模型、数据、公式或结论正确。",
+    "动态生成的章节、标签和外部 .bib 内容需结合编译日志核验。",
+    "训练集回代、求解后变量修改、按行号标签、模型名--拟合接口、重复特征列、预处理拟合域、首次预测调用、参数名、硬标签 AUC、嵌套极值方向、循环索引、蒙特卡洛协议、部分硬约束通过、未求解模型、经验系数和稳定性表述采用保守静态匹配，命中后仍须结合目标方向、索引角色、数据角色、库版本、单位与约束日志人工裁决。"
+  ]
+}

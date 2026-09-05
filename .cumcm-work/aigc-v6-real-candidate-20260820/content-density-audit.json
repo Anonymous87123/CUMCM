@@ -1,0 +1,158 @@
+{
+  "status": "pass",
+  "file": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\humanize-run\\rendered_review\\main.tex",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\humanize-run\\rendered_review\\main.tex",
+    "sha256": "5d5fe72a74a03a92a5a669333affc9cafe1447151440f2bcf2e3ec6b91aa8a6b"
+  },
+  "problem_type": "A",
+  "body": {
+    "paragraphs": 78,
+    "han_chars": 8790,
+    "formulas": 16,
+    "figures": 5,
+    "tables": 12,
+    "tabular_blocks": 23,
+    "result_explanations": 45,
+    "categories": {
+      "background": {
+        "paragraphs": 16,
+        "han_chars": 1744,
+        "share": 0.1984,
+        "result_explanations": 8
+      },
+      "model": {
+        "paragraphs": 20,
+        "han_chars": 2096,
+        "share": 0.2385,
+        "result_explanations": 6
+      },
+      "solve": {
+        "paragraphs": 2,
+        "han_chars": 135,
+        "share": 0.0154,
+        "result_explanations": 0
+      },
+      "result": {
+        "paragraphs": 22,
+        "han_chars": 2832,
+        "share": 0.3222,
+        "result_explanations": 21
+      },
+      "validation": {
+        "paragraphs": 1,
+        "han_chars": 107,
+        "share": 0.0122,
+        "result_explanations": 0
+      },
+      "evaluation": {
+        "paragraphs": 10,
+        "han_chars": 1030,
+        "share": 0.1172,
+        "result_explanations": 6
+      },
+      "other": {
+        "paragraphs": 7,
+        "han_chars": 846,
+        "share": 0.0962,
+        "result_explanations": 4
+      }
+    }
+  },
+  "questions": [
+    {
+      "id": "Q1",
+      "title": "问题一的模型建立与求解",
+      "pages": 3,
+      "paragraphs": 12,
+      "han_chars": 1246,
+      "formulas": 4,
+      "figures": 1,
+      "tables": 3,
+      "tabular_blocks": 6,
+      "result_explanations": 7,
+      "status": "inferred"
+    },
+    {
+      "id": "Q2",
+      "title": "问题二的模型建立与求解",
+      "pages": 4,
+      "paragraphs": 11,
+      "han_chars": 1315,
+      "formulas": 8,
+      "figures": 1,
+      "tables": 3,
+      "tabular_blocks": 5,
+      "result_explanations": 5,
+      "status": "inferred"
+    },
+    {
+      "id": "Q3",
+      "title": "问题三的模型建立与求解",
+      "pages": 1,
+      "paragraphs": 6,
+      "han_chars": 521,
+      "formulas": 3,
+      "figures": 1,
+      "tables": 2,
+      "tabular_blocks": 4,
+      "result_explanations": 3,
+      "status": "inferred"
+    },
+    {
+      "id": "Q4",
+      "title": "问题四的模型建立与求解",
+      "pages": 2,
+      "paragraphs": 4,
+      "han_chars": 474,
+      "formulas": 0,
+      "figures": 1,
+      "tables": 1,
+      "tabular_blocks": 2,
+      "result_explanations": 3,
+      "status": "inferred"
+    },
+    {
+      "id": "Q5",
+      "title": "问题五的模型建立与求解",
+      "pages": 2,
+      "paragraphs": 6,
+      "han_chars": 641,
+      "formulas": 1,
+      "figures": 1,
+      "tables": 2,
+      "tabular_blocks": 4,
+      "result_explanations": 4,
+      "status": "inferred"
+    }
+  ],
+  "duplicates": {
+    "exact_groups": 0,
+    "exact_repeats": 0,
+    "near_pairs": 0
+  },
+  "low_information": {
+    "count": 0,
+    "ratio": 0.0
+  },
+  "padding": {
+    "manual_breaks": 0,
+    "vertical_space_commands": 0,
+    "fill_commands": 0
+  },
+  "soft_hints": [
+    "background 篇幅占比 19.8% 高于语料四分位上沿 12.8%，检查是否题面复述或通用背景过长",
+    "solve 篇幅占比 1.5% 低于语料四分位下沿 10.3%，检查是否缺少实际算法步骤、参数设置或求解接口",
+    "result 篇幅占比 32.2% 高于语料四分位上沿 13.6%，检查是否结果堆叠、重复报数或把求解过程误归到结果",
+    "validation 篇幅占比 1.2% 低于语料四分位下沿 2.0%，检查是否缺少误差、边界、灵敏度或独立复算",
+    "evaluation 篇幅占比 11.7% 高于语料四分位上沿 3.6%，检查是否通用优缺点、边界和改进建议反复出现"
+  ],
+  "findings": [
+    {
+      "severity": "warning",
+      "code": "BODY_MARKER_MISSING"
+    }
+  ],
+  "errors": 0,
+  "warnings": 1
+}

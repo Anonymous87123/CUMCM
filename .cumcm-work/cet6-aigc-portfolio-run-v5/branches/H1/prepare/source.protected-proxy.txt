@@ -1,0 +1,3302 @@
+% Auto-generated from section_b_final_conclusions_report.md.
+% Re-run tools/convert_section_b_md_to_tex.py after editing the Markdown source.
+[[AIGC_LOCK_00001]][UTF8,12pt]{ctexart}
+
+[[AIGC_LOCK_00002]][a4paper,margin=[[AIGC_LOCK_00003]].2cm]{geometry}
+[[AIGC_LOCK_00004]]{amsmath,amssymb}
+[[AIGC_LOCK_00005]]{array}
+[[AIGC_LOCK_00006]]{booktabs}
+[[AIGC_LOCK_00007]]{caption}
+[[AIGC_LOCK_00008]]{enumitem}
+[[AIGC_LOCK_00009]]{float}
+[[AIGC_LOCK_00010]]{fvextra}
+[[AIGC_LOCK_00011]]{graphicx}
+[[AIGC_LOCK_00012]]{longtable}
+[[AIGC_LOCK_00013]]{newunicodechar}
+[[AIGC_LOCK_00014]]{seqsplit}
+[[AIGC_LOCK_00015]]{titlesec}
+[[AIGC_LOCK_00016]]{xcolor}
+[[AIGC_LOCK_00017]]{hyperref}
+
+[[AIGC_LOCK_00018]]{{./}}
+[[AIGC_LOCK_00019]]{
+  colorlinks=true,
+  linkcolor=blue![[AIGC_LOCK_00020]]!black,
+  urlcolor=blue![[AIGC_LOCK_00021]]!black,
+  citecolor=blue![[AIGC_LOCK_00022]]!black
+}
+[[AIGC_LOCK_00023]]{[[AIGC_LOCK_00024]]}{2em}
+[[AIGC_LOCK_00025]]{[[AIGC_LOCK_00026]]}{[[AIGC_LOCK_00027]].35em}
+[[AIGC_LOCK_00028]]{[[AIGC_LOCK_00029]]}{3em}
+[[AIGC_LOCK_00030]]
+[[AIGC_LOCK_00031]]{tocdepth}{[[AIGC_LOCK_00032]]}
+[[AIGC_LOCK_00033]]{leftmargin=2em,itemsep=[[AIGC_LOCK_00034]].15em,topsep=[[AIGC_LOCK_00035]].25em}
+[[AIGC_LOCK_00036]]{[[AIGC_LOCK_00037]]}{[[AIGC_LOCK_00038]]}
+[[AIGC_LOCK_00039]]{[[AIGC_LOCK_00040]]}[block]{[[AIGC_LOCK_00041]][[AIGC_LOCK_00042]][[AIGC_LOCK_00043]]}{}{0pt}{}
+[[AIGC_LOCK_00044]]{[[AIGC_LOCK_00045]]}{0pt}{[[AIGC_LOCK_00046]].1ex plus .2ex}{[[AIGC_LOCK_00047]].6ex}
+[[AIGC_LOCK_00048]]{CodeBlock}{Verbatim}{breaklines=true,breakanywhere=true,fontsize=[[AIGC_LOCK_00049]]}
+[[AIGC_LOCK_00050]]{[[AIGC_LOCK_00051]]}[[[AIGC_LOCK_00052]]]{[[AIGC_LOCK_00053]]{[[AIGC_LOCK_00054]]{#[[AIGC_LOCK_00055]]}}}
+[[AIGC_LOCK_00056]]{≥}{[[AIGC_LOCK_00057]]{[[AIGC_LOCK_00058]]}}
+[[AIGC_LOCK_00059]]{≤}{[[AIGC_LOCK_00060]]{[[AIGC_LOCK_00061]]}}
+[[AIGC_LOCK_00062]]{≈}{[[AIGC_LOCK_00063]]{[[AIGC_LOCK_00064]]}}
+[[AIGC_LOCK_00065]]{∈}{[[AIGC_LOCK_00066]]{[[AIGC_LOCK_00067]]}}
+[[AIGC_LOCK_00068]]{∧}{[[AIGC_LOCK_00069]]{[[AIGC_LOCK_00070]]}}
+[[AIGC_LOCK_00071]]{ρ}{[[AIGC_LOCK_00072]]{[[AIGC_LOCK_00073]]}}
+[[AIGC_LOCK_00074]]{τ}{[[AIGC_LOCK_00075]]{[[AIGC_LOCK_00076]]}}
+[[AIGC_LOCK_00077]]{σ}{[[AIGC_LOCK_00078]]{[[AIGC_LOCK_00079]]}}
+[[AIGC_LOCK_00080]]{✓}{[[AIGC_LOCK_00081]]{[[AIGC_LOCK_00082]]}}
+[[AIGC_LOCK_00083]]{→}{[[AIGC_LOCK_00084]]{[[AIGC_LOCK_00085]]}}
+
+[[AIGC_LOCK_00086]]{CET-[[AIGC_LOCK_00087]] Section B 全量分析总报告}
+[[AIGC_LOCK_00088]]{Markdown auto-conversion}
+[[AIGC_LOCK_00089]]{[[AIGC_LOCK_00090]]}
+
+[[AIGC_LOCK_00091]]{document}
+[[AIGC_LOCK_00092]]
+[[AIGC_LOCK_00093]]
+[[AIGC_LOCK_00094]]
+
+[[AIGC_LOCK_00095]]
+[[AIGC_LOCK_00096]]{摘要}
+[[AIGC_LOCK_00097]]{toc}{section}{摘要}
+
+
+本报告基于当前工作区内已经完成人工核对的 CET-[[AIGC_LOCK_00098]] Section B 数据，对 [[AIGC_LOCK_00099]]{Q36-Q45} 的段落位置分布、答案字母分布、题号间无条件相关性、条件联动关系、整套容量约束与考试实战策略做一体化总结。与此前只强调相关性的版本相比，本版补回了基础层，包括样本口径、变量定义、图表说明、单题统计、统计局限与正确用法，并在此基础上进一步加入条件窗口压缩、边缘带信号、镜像跷跷板关系、题目角色重估与机械化做题策略。
+
+
+为降低阅读混乱，本文将第 [[AIGC_LOCK_00100]]-[[AIGC_LOCK_00101]] 章作为最终主报告，第 [[AIGC_LOCK_00102]]-[[AIGC_LOCK_00103]] 章作为附录证据与操作手册。后文出现的“信息增益最大”“残余熵最低”等统计模型结论，只解释辅助价值，不替代第 [[AIGC_LOCK_00104]] 节的最终实战口径。
+
+
+核心结论可以概括为五点：
+
+
+[[AIGC_LOCK_00105]]{enumerate}
+[[AIGC_LOCK_00106]] Section B 不能只用“单题均值”理解，必须同时考虑单题分布、整套容量约束、边缘带信号、条件联动和反向排除。
+[[AIGC_LOCK_00107]] 相邻题通常不是就近题，真正更值得联动的是隔一题的奇偶链，以及少数高杠杆枢纽题。
+[[AIGC_LOCK_00108]] [[AIGC_LOCK_00109]]{Q36} 更像位置锚，不是默认起手锚；[[AIGC_LOCK_00110]]{Q44} 不是尾题，却是中后段总枢纽；[[AIGC_LOCK_00111]]{Q38} 是典型“难做但好反推”题。
+[[AIGC_LOCK_00112]] 真正最有信息量的往往不是中间带，而是 [[AIGC_LOCK_00113]]{[[AIGC_LOCK_00114]]-[[AIGC_LOCK_00115]]\%} 与 [[AIGC_LOCK_00116]]{[[AIGC_LOCK_00117]]-[[AIGC_LOCK_00118]]\%} 这类边缘带。一旦某题进入边缘带，它就从普通位置线索升级成高强度条件信号。
+[[AIGC_LOCK_00119]] 对考生最实用的不是“猜某题均值落点”，而是：先用单题粗分布锁大区，再用容量约束防止过度堆题，最后用条件联动规则缩窗，并用 if-else 式流程机械执行。
+[[AIGC_LOCK_00120]]{enumerate}
+
+
+[[AIGC_LOCK_00121]]
+[[AIGC_LOCK_00122]]{[[AIGC_LOCK_00123]]. 引言}
+[[AIGC_LOCK_00124]]{toc}{section}{[[AIGC_LOCK_00125]]. 引言}
+
+
+[[AIGC_LOCK_00126]]
+[[AIGC_LOCK_00127]]{[[AIGC_LOCK_00128]] 研究问题}
+[[AIGC_LOCK_00129]]{toc}{subsection}{[[AIGC_LOCK_00130]] 研究问题}
+
+
+Section B 这类信息匹配题，传统直觉通常有两种：
+
+
+[[AIGC_LOCK_00131]]{enumerate}
+[[AIGC_LOCK_00132]] 某些题天然偏前，某些题天然偏后；
+[[AIGC_LOCK_00133]] 相邻题通常应该在原文里也相邻。
+[[AIGC_LOCK_00134]]{enumerate}
+
+
+第一种直觉部分成立，但过于粗糙；第二种直觉则经常是错的。真正对做题有帮助的问题不是：
+
+
+[[AIGC_LOCK_00135]]{itemize}
+[[AIGC_LOCK_00136]] [[AIGC_LOCK_00137]]{Q41} 平均更偏后吗？
+[[AIGC_LOCK_00138]]{itemize}
+
+
+而是：
+
+
+[[AIGC_LOCK_00139]]{itemize}
+[[AIGC_LOCK_00140]] 哪些题适合先做？
+[[AIGC_LOCK_00141]] 哪些题一旦做出，最能带动别题？
+[[AIGC_LOCK_00142]] 某题落在极前/[[AIGC_LOCK_00143]]{}极后时，别题会被推到哪里？
+[[AIGC_LOCK_00144]] 一篇文章前 [[AIGC_LOCK_00145]]\% 里通常会装下几题？
+[[AIGC_LOCK_00146]] 某个 [[AIGC_LOCK_00147]]\% 区间已经塞进 [[AIGC_LOCK_00148]] 题之后，后面还应不应该继续往里堆？
+[[AIGC_LOCK_00149]]{itemize}
+
+
+本报告的目标，就是把这些问题系统化回答。
+
+
+[[AIGC_LOCK_00150]]
+[[AIGC_LOCK_00151]]{[[AIGC_LOCK_00152]] 报告结构}
+[[AIGC_LOCK_00153]]{toc}{subsection}{[[AIGC_LOCK_00154]] 报告结构}
+
+
+本报告建议按两层阅读：
+
+
+[[AIGC_LOCK_00155]]{enumerate}
+[[AIGC_LOCK_00156]] 数据与样本口径
+[[AIGC_LOCK_00157]] 变量、文件与图表说明
+[[AIGC_LOCK_00158]] 单题位置分布与答案字母分布
+[[AIGC_LOCK_00159]] 题号角色重估
+[[AIGC_LOCK_00160]] 题间无条件相关性
+[[AIGC_LOCK_00161]] 条件联动与高层结构
+[[AIGC_LOCK_00162]] 实战策略总结
+[[AIGC_LOCK_00163]] 统计局限与后续工作
+[[AIGC_LOCK_00164]]{enumerate}
+
+
+其中，第 [[AIGC_LOCK_00165]]-[[AIGC_LOCK_00166]] 章是给读者直接阅读的主报告，承担最终结论与最终策略；第 [[AIGC_LOCK_00167]]-[[AIGC_LOCK_00168]] 章是附录，保留复核过程、速记版、考试手册和深度分析证据。尤其第 [[AIGC_LOCK_00169]]-[[AIGC_LOCK_00170]] 章是“证据附录”，不是新的策略版本，不覆盖第 [[AIGC_LOCK_00171]]-[[AIGC_LOCK_00172]] 章与第 [[AIGC_LOCK_00173]] 章的最终口径。
+
+
+[[AIGC_LOCK_00174]]
+[[AIGC_LOCK_00175]]{[[AIGC_LOCK_00176]] 文档合并说明}
+[[AIGC_LOCK_00177]]{toc}{subsection}{[[AIGC_LOCK_00178]] 文档合并说明}
+
+
+为避免结论分散、版本彼此覆盖，本文件现在作为 [[AIGC_LOCK_00179]]{\_analysis\_output} 下 Section B 分析工作的[[AIGC_LOCK_00180]]{单一主入口}。本次已将以下结论型 Markdown 内容并入本文：
+
+
+[[AIGC_LOCK_00181]]{itemize}
+[[AIGC_LOCK_00182]] [[AIGC_LOCK_00183]]{section\_b\_correlation\_notes.md}
+[[AIGC_LOCK_00184]] [[AIGC_LOCK_00185]]{sample\_answer\_second\_pass\_report.md}
+[[AIGC_LOCK_00186]] [[AIGC_LOCK_00187]]{section\_b\_exam\_playbook.md}
+[[AIGC_LOCK_00188]]{itemize}
+
+
+因此，后续如果只保留一份阅读顺序，建议直接阅读本文件。
+
+
+另外，[[AIGC_LOCK_00189]]{verification\_packets/}、[[AIGC_LOCK_00190]]{recheck\_packets/}、[[AIGC_LOCK_00191]]{recheck\_reviews/} 下的 Markdown 更偏逐篇核对包、逐批复核记录与工作底稿。它们不再承担“主结论报告”的角色，本文会在附录中统一给出用途说明与入口索引。
+
+
+[[AIGC_LOCK_00192]]
+[[AIGC_LOCK_00193]]{[[AIGC_LOCK_00194]]. 数据与样本口径}
+[[AIGC_LOCK_00195]]{toc}{section}{[[AIGC_LOCK_00196]]. 数据与样本口径}
+
+
+[[AIGC_LOCK_00197]]
+[[AIGC_LOCK_00198]]{[[AIGC_LOCK_00199]] 当前样本口径已经统一}
+[[AIGC_LOCK_00200]]{toc}{subsection}{[[AIGC_LOCK_00201]] 当前样本口径已经统一}
+
+
+在当前这一版数据中，答案层和位置层已经统一，不再需要把“答案字母统计”和“段落位置统计”拆成两个样本口径。
+
+
+来自 [[AIGC_LOCK_00202]]{manual\_truth\_summary.json}：
+
+
+[[AIGC_LOCK_00203]]{itemize}
+[[AIGC_LOCK_00204]] [[AIGC_LOCK_00205]]{files\_count = [[AIGC_LOCK_00206]]}
+[[AIGC_LOCK_00207]] [[AIGC_LOCK_00208]]{titles\_count = [[AIGC_LOCK_00209]]}
+[[AIGC_LOCK_00210]] [[AIGC_LOCK_00211]]{records\_count = [[AIGC_LOCK_00212]]}
+[[AIGC_LOCK_00213]] [[AIGC_LOCK_00214]]{source\_type\_counts.manual = [[AIGC_LOCK_00215]]}
+[[AIGC_LOCK_00216]]{itemize}
+
+
+来自位置统计表，例如：
+
+
+[[AIGC_LOCK_00217]]{itemize}
+[[AIGC_LOCK_00218]] [[AIGC_LOCK_00219]]{question\_position\_stats.csv}
+[[AIGC_LOCK_00220]] [[AIGC_LOCK_00221]]{question\_pair\_relation\_stats.csv}
+[[AIGC_LOCK_00222]] [[AIGC_LOCK_00223]]{question\_order\_profile.csv}
+[[AIGC_LOCK_00224]] [[AIGC_LOCK_00225]]{conditional\_window\_gain\_stats.csv}
+[[AIGC_LOCK_00226]]{itemize}
+
+
+现在这些依赖 [[AIGC_LOCK_00227]]{paragraph\_position\_pct} 的位置统计表，也已经建立在同一批完整样本上。也就是说：
+
+
+[[AIGC_LOCK_00228]]{itemize}
+[[AIGC_LOCK_00229]] 当前总整理口径是 [[AIGC_LOCK_00230]]{[[AIGC_LOCK_00231]]} 套 /[[AIGC_LOCK_00232]]{} [[AIGC_LOCK_00233]]{[[AIGC_LOCK_00234]]} 题
+[[AIGC_LOCK_00235]] 当前位置分析口径也是 [[AIGC_LOCK_00236]]{[[AIGC_LOCK_00237]]} 套 /[[AIGC_LOCK_00238]]{} [[AIGC_LOCK_00239]]{[[AIGC_LOCK_00240]]} 题
+[[AIGC_LOCK_00241]]{itemize}
+
+
+因此，本报告在涉及段落位置、相关性、容量约束、条件联动时，默认也以 [[AIGC_LOCK_00242]]{[[AIGC_LOCK_00243]] 套完整样本} 为主口径。
+
+
+[[AIGC_LOCK_00244]]
+[[AIGC_LOCK_00245]]{[[AIGC_LOCK_00246]] 历史上为何曾经出现两层口径}
+[[AIGC_LOCK_00247]]{toc}{subsection}{[[AIGC_LOCK_00248]] 历史上为何曾经出现两层口径}
+
+
+旧版本分析里之所以必须区分两层口径，是因为当时有 [[AIGC_LOCK_00249]]{[[AIGC_LOCK_00250]]} 篇 [[AIGC_LOCK_00251]] 年 [[AIGC_LOCK_00252]] 月文章只有人工复核后的答案字母，没有可靠的标准化段落位置百分比。
+
+
+当时的情况是：
+
+
+[[AIGC_LOCK_00253]]{itemize}
+[[AIGC_LOCK_00254]] 答案层能做到 [[AIGC_LOCK_00255]]{[[AIGC_LOCK_00256]]} 套 /[[AIGC_LOCK_00257]]{} [[AIGC_LOCK_00258]]{[[AIGC_LOCK_00259]]} 题；
+[[AIGC_LOCK_00260]] 位置层只能做到 [[AIGC_LOCK_00261]]{[[AIGC_LOCK_00262]]} 套 /[[AIGC_LOCK_00263]]{} [[AIGC_LOCK_00264]]{[[AIGC_LOCK_00265]]} 题；
+[[AIGC_LOCK_00266]] 因而“答案字母分布”和“段落位置/[[AIGC_LOCK_00267]]{}题间距离/[[AIGC_LOCK_00268]]{}条件联动”会共存两套分母。
+[[AIGC_LOCK_00269]]{itemize}
+
+
+本轮已经把这 [[AIGC_LOCK_00270]]{[[AIGC_LOCK_00271]]} 篇文章补入 [[AIGC_LOCK_00272]]{section\_b\_texts} 标准链路，分别是：
+
+
+[[AIGC_LOCK_00273]]{itemize}
+[[AIGC_LOCK_00274]] [[AIGC_LOCK_00275]]{The Curious Case of the Tree That Owns Itself}
+[[AIGC_LOCK_00276]] [[AIGC_LOCK_00277]]{These are the habits to avoid if you want to make a behavior change}
+[[AIGC_LOCK_00278]] [[AIGC_LOCK_00279]]{Blame your worthless workdays on meeting recovery syndrome}
+[[AIGC_LOCK_00280]]{itemize}
+
+
+补齐后，这种“双口径”问题在当前版本中已经消失。后文如果引用旧分析草稿中出现的 [[AIGC_LOCK_00281]]{[[AIGC_LOCK_00282]]}、[[AIGC_LOCK_00283]]{[[AIGC_LOCK_00284]]}、[[AIGC_LOCK_00285]]{ocr\_manual} 等字样，应理解为 [[AIGC_LOCK_00286]]{旧阶段工作痕迹}，不再代表当前主口径。
+
+
+[[AIGC_LOCK_00287]]
+[[AIGC_LOCK_00288]]{[[AIGC_LOCK_00289]] 当前数据适合回答什么}
+[[AIGC_LOCK_00290]]{toc}{subsection}{[[AIGC_LOCK_00291]] 当前数据适合回答什么}
+
+
+当前样本规模不算巨大，但对结构性问题已经足够：
+
+
+[[AIGC_LOCK_00292]]{itemize}
+[[AIGC_LOCK_00293]] 足以判断前中后段的大致分布
+[[AIGC_LOCK_00294]] 足以判断相邻题是否常常错位
+[[AIGC_LOCK_00295]] 足以判断隔一题链是否明显更强
+[[AIGC_LOCK_00296]] 足以挖出一批可实战使用的条件联动规则
+[[AIGC_LOCK_00297]]{itemize}
+
+
+但它还不足以：
+
+
+[[AIGC_LOCK_00298]]{itemize}
+[[AIGC_LOCK_00299]] 给出极细粒度、逐题逐段的高置信硬预测
+[[AIGC_LOCK_00300]] 对所有小样本条件规则作强结论
+[[AIGC_LOCK_00301]]{itemize}
+
+
+[[AIGC_LOCK_00302]]
+[[AIGC_LOCK_00303]]{[[AIGC_LOCK_00304]]. 变量、文件与图表说明}
+[[AIGC_LOCK_00305]]{toc}{section}{[[AIGC_LOCK_00306]]. 变量、文件与图表说明}
+
+
+[[AIGC_LOCK_00307]]
+[[AIGC_LOCK_00308]]{[[AIGC_LOCK_00309]] 核心字段说明}
+[[AIGC_LOCK_00310]]{toc}{subsection}{[[AIGC_LOCK_00311]] 核心字段说明}
+
+
+本报告中最常出现的字段如下：
+
+
+[[AIGC_LOCK_00312]]{center}
+[[AIGC_LOCK_00313]]
+[[AIGC_LOCK_00314]]{[[AIGC_LOCK_00315]]}{4pt}
+[[AIGC_LOCK_00316]]{longtable}{@{}>{[[AIGC_LOCK_00317]][[AIGC_LOCK_00318]]}p{[[AIGC_LOCK_00319]][[AIGC_LOCK_00320]]}>{[[AIGC_LOCK_00321]][[AIGC_LOCK_00322]]}p{[[AIGC_LOCK_00323]][[AIGC_LOCK_00324]]}@{}}
+[[AIGC_LOCK_00325]]
+[[AIGC_LOCK_00326]]{字段} & [[AIGC_LOCK_00327]]{含义} \\
+[[AIGC_LOCK_00328]]
+[[AIGC_LOCK_00329]]
+[[AIGC_LOCK_00330]]
+[[AIGC_LOCK_00331]]{字段} & [[AIGC_LOCK_00332]]{含义} \\
+[[AIGC_LOCK_00333]]
+[[AIGC_LOCK_00334]]
+[[AIGC_LOCK_00335]]{question\_number} & 题号，范围 [[AIGC_LOCK_00336]]{[[AIGC_LOCK_00337]]-[[AIGC_LOCK_00338]]} \\
+[[AIGC_LOCK_00339]]{answer\_letter} & 该题对应原文段落字母，不是选择题选项 \\
+[[AIGC_LOCK_00340]]{paragraph\_position\_pct} & 该题对应段落在全文中的相对位置百分比 \\
+[[AIGC_LOCK_00341]]{paragraph\_count} & 原文总段落数 \\
+[[AIGC_LOCK_00342]]{dominant\_band} & 最常落入的 [[AIGC_LOCK_00343]]\% 位置带 \\
+[[AIGC_LOCK_00344]]{dominant\_10\_band} & 最常落入的 [[AIGC_LOCK_00345]]\% 位置带 \\
+[[AIGC_LOCK_00346]]{band\_entropy\_20} & [[AIGC_LOCK_00347]]\% 分带下的分散度，越高越分散 \\
+[[AIGC_LOCK_00348]]{band\_entropy\_10} & [[AIGC_LOCK_00349]]\% 分带下的分散度，越高越分散 \\
+[[AIGC_LOCK_00350]]{spearman\_pct} & 两题相对位置的秩相关 \\
+[[AIGC_LOCK_00351]]{within\_2\_paragraph\_pct} & 两题段落差绝对值不超过 [[AIGC_LOCK_00352]] 的比例 \\
+[[AIGC_LOCK_00353]]{same\_half\_pct} & 两题同在前半区或后半区的比例 \\
+[[AIGC_LOCK_00354]]{median\_gap\_paragraphs} & 两题段落差的中位数 \\
+[[AIGC_LOCK_00355]]{best\_contiguous\_40\_coverage\_pct} & 某题最佳 [[AIGC_LOCK_00356]]\% 连续窗口覆盖率 \\
+[[AIGC_LOCK_00357]]{gain\_40\_pct} & 条件成立后，对目标题 [[AIGC_LOCK_00358]]\% 搜索窗覆盖率的提升 \\
+[[AIGC_LOCK_00359]]{rule\_count\_gain15} & 某题作为条件源时，能带来至少 [[AIGC_LOCK_00360]]\% 窗口增益的规则数 \\
+[[AIGC_LOCK_00361]]
+[[AIGC_LOCK_00362]]{longtable}
+[[AIGC_LOCK_00363]]
+[[AIGC_LOCK_00364]]{center}
+
+
+[[AIGC_LOCK_00365]]
+[[AIGC_LOCK_00366]]{[[AIGC_LOCK_00367]] 关键输出文件说明}
+[[AIGC_LOCK_00368]]{toc}{subsection}{[[AIGC_LOCK_00369]] 关键输出文件说明}
+
+
+[[AIGC_LOCK_00370]]{center}
+[[AIGC_LOCK_00371]]
+[[AIGC_LOCK_00372]]{[[AIGC_LOCK_00373]]}{4pt}
+[[AIGC_LOCK_00374]]{longtable}{@{}>{[[AIGC_LOCK_00375]][[AIGC_LOCK_00376]]}p{[[AIGC_LOCK_00377]][[AIGC_LOCK_00378]]}>{[[AIGC_LOCK_00379]][[AIGC_LOCK_00380]]}p{[[AIGC_LOCK_00381]][[AIGC_LOCK_00382]]}@{}}
+[[AIGC_LOCK_00383]]
+[[AIGC_LOCK_00384]]{文件} & [[AIGC_LOCK_00385]]{作用} \\
+[[AIGC_LOCK_00386]]
+[[AIGC_LOCK_00387]]
+[[AIGC_LOCK_00388]]
+[[AIGC_LOCK_00389]]{文件} & [[AIGC_LOCK_00390]]{作用} \\
+[[AIGC_LOCK_00391]]
+[[AIGC_LOCK_00392]]
+[[AIGC_LOCK_00393]]{manual\_truth\_records.csv} & 基础真值表 \\
+[[AIGC_LOCK_00394]]{question\_position\_stats.csv} & 单题位置总体统计 \\
+[[AIGC_LOCK_00395]]{question\_position\_fine\_stats.csv} & 单题 [[AIGC_LOCK_00396]]\% 热区统计 \\
+[[AIGC_LOCK_00397]]{question\_answer\_summary.csv} & 单题答案字母分布摘要 \\
+[[AIGC_LOCK_00398]]{letter\_to\_question\_summary.csv} & 反向字母到题号分布摘要 \\
+[[AIGC_LOCK_00399]]{question\_pair\_relation\_stats.csv} & 任意两题之间的无条件关系 \\
+[[AIGC_LOCK_00400]]{adjacent\_question\_relation\_stats.csv} & 只看相邻题的关系摘要 \\
+[[AIGC_LOCK_00401]]{question\_strategy\_features.csv} & 单题策略特征汇总 \\
+[[AIGC_LOCK_00402]]{question\_order\_profile.csv} & 每题在整套题中的先后 rank 分布 \\
+[[AIGC_LOCK_00403]]{conditional\_window\_gain\_stats.csv} & 条件联动规则总表 \\
+[[AIGC_LOCK_00404]]{anchor\_leverage\_summary.csv} & 高杠杆题汇总 \\
+[[AIGC_LOCK_00405]]{question\_capacity\_summary.csv} & 容量约束摘要 \\
+[[AIGC_LOCK_00406]]
+[[AIGC_LOCK_00407]]{longtable}
+[[AIGC_LOCK_00408]]
+[[AIGC_LOCK_00409]]{center}
+
+
+[[AIGC_LOCK_00410]]
+[[AIGC_LOCK_00411]]{[[AIGC_LOCK_00412]] 图表怎么读，怎么用}
+[[AIGC_LOCK_00413]]{toc}{subsection}{[[AIGC_LOCK_00414]] 图表怎么读，怎么用}
+
+
+[[AIGC_LOCK_00415]]
+[[AIGC_LOCK_00416]]{[[AIGC_LOCK_00417]]{question\_position\_boxplot.png}}
+[[AIGC_LOCK_00418]]{toc}{subsubsection}{question\_position\_boxplot.png}
+[[AIGC_LOCK_00419]]{figure}[H]
+[[AIGC_LOCK_00420]]
+[[AIGC_LOCK_00421]][width=[[AIGC_LOCK_00422]][[AIGC_LOCK_00423]]]{question_position_boxplot.png}
+[[AIGC_LOCK_00424]]{question\_position\_boxplot.png}
+[[AIGC_LOCK_00425]]{figure}
+
+
+看什么：
+
+
+[[AIGC_LOCK_00426]]{itemize}
+[[AIGC_LOCK_00427]] 中位数
+[[AIGC_LOCK_00428]] 四分位距
+[[AIGC_LOCK_00429]] 是否有长尾
+[[AIGC_LOCK_00430]]{itemize}
+
+
+适合干什么：
+
+
+[[AIGC_LOCK_00431]]{itemize}
+[[AIGC_LOCK_00432]] 判断某题整体偏前偏后
+[[AIGC_LOCK_00433]] 判断某题稳不稳
+[[AIGC_LOCK_00434]]{itemize}
+
+
+不适合干什么：
+
+
+[[AIGC_LOCK_00435]]{itemize}
+[[AIGC_LOCK_00436]] 直接拿中位数押具体段落
+[[AIGC_LOCK_00437]]{itemize}
+
+
+[[AIGC_LOCK_00438]]
+[[AIGC_LOCK_00439]]{[[AIGC_LOCK_00440]]{question\_position\_band\_distribution.png}}
+[[AIGC_LOCK_00441]]{toc}{subsubsection}{question\_position\_band\_distribution.png}
+[[AIGC_LOCK_00442]]{figure}[H]
+[[AIGC_LOCK_00443]]
+[[AIGC_LOCK_00444]][width=[[AIGC_LOCK_00445]][[AIGC_LOCK_00446]]]{question_position_band_distribution.png}
+[[AIGC_LOCK_00447]]{question\_position\_band\_distribution.png}
+[[AIGC_LOCK_00448]]{figure}
+
+
+看什么：
+
+
+[[AIGC_LOCK_00449]]{itemize}
+[[AIGC_LOCK_00450]] 五个 [[AIGC_LOCK_00451]]\% 大带的占比
+[[AIGC_LOCK_00452]]{itemize}
+
+
+适合干什么：
+
+
+[[AIGC_LOCK_00453]]{itemize}
+[[AIGC_LOCK_00454]] 粗定位
+[[AIGC_LOCK_00455]] 判断大区间主战区
+[[AIGC_LOCK_00456]]{itemize}
+
+
+不适合干什么：
+
+
+[[AIGC_LOCK_00457]]{itemize}
+[[AIGC_LOCK_00458]] 精确定位到小段落
+[[AIGC_LOCK_00459]]{itemize}
+
+
+[[AIGC_LOCK_00460]]
+[[AIGC_LOCK_00461]]{[[AIGC_LOCK_00462]]{question\_position\_band\_heatmap.png}}
+[[AIGC_LOCK_00463]]{toc}{subsubsection}{question\_position\_band\_heatmap.png}
+[[AIGC_LOCK_00464]]{figure}[H]
+[[AIGC_LOCK_00465]]
+[[AIGC_LOCK_00466]][width=[[AIGC_LOCK_00467]][[AIGC_LOCK_00468]]]{question_position_band_heatmap.png}
+[[AIGC_LOCK_00469]]{question\_position\_band\_heatmap.png}
+[[AIGC_LOCK_00470]]{figure}
+
+
+看什么：
+
+
+[[AIGC_LOCK_00471]]{itemize}
+[[AIGC_LOCK_00472]] 每个题在 [[AIGC_LOCK_00473]]\% 热区上的高发位置
+[[AIGC_LOCK_00474]]{itemize}
+
+
+适合干什么：
+
+
+[[AIGC_LOCK_00475]]{itemize}
+[[AIGC_LOCK_00476]] 看双峰结构
+[[AIGC_LOCK_00477]] 看热区是否集中
+[[AIGC_LOCK_00478]]{itemize}
+
+
+[[AIGC_LOCK_00479]]
+[[AIGC_LOCK_00480]]{[[AIGC_LOCK_00481]]{question\_answer\_distribution.png}}
+[[AIGC_LOCK_00482]]{toc}{subsubsection}{question\_answer\_distribution.png}
+[[AIGC_LOCK_00483]]{figure}[H]
+[[AIGC_LOCK_00484]]
+[[AIGC_LOCK_00485]][width=[[AIGC_LOCK_00486]][[AIGC_LOCK_00487]]]{question_answer_distribution.png}
+[[AIGC_LOCK_00488]]{question\_answer\_distribution.png}
+[[AIGC_LOCK_00489]]{figure}
+
+
+看什么：
+
+
+[[AIGC_LOCK_00490]]{itemize}
+[[AIGC_LOCK_00491]] 每题最常对应哪些原文段落字母
+[[AIGC_LOCK_00492]]{itemize}
+
+
+适合干什么：
+
+
+[[AIGC_LOCK_00493]]{itemize}
+[[AIGC_LOCK_00494]] 判断前段题、后段题倾向
+[[AIGC_LOCK_00495]]{itemize}
+
+
+不适合干什么：
+
+
+[[AIGC_LOCK_00496]]{itemize}
+[[AIGC_LOCK_00497]] 直接押具体字母
+[[AIGC_LOCK_00498]]{itemize}
+
+
+[[AIGC_LOCK_00499]]
+[[AIGC_LOCK_00500]]{[[AIGC_LOCK_00501]]{letter\_to\_question\_heatmap.png}}
+[[AIGC_LOCK_00502]]{toc}{subsubsection}{letter\_to\_question\_heatmap.png}
+[[AIGC_LOCK_00503]]{figure}[H]
+[[AIGC_LOCK_00504]]
+[[AIGC_LOCK_00505]][width=[[AIGC_LOCK_00506]][[AIGC_LOCK_00507]]]{letter_to_question_heatmap.png}
+[[AIGC_LOCK_00508]]{letter\_to\_question\_heatmap.png}
+[[AIGC_LOCK_00509]]{figure}
+
+
+看什么：
+
+
+[[AIGC_LOCK_00510]]{itemize}
+[[AIGC_LOCK_00511]] 每个字母更偏向哪些题号
+[[AIGC_LOCK_00512]]{itemize}
+
+
+适合干什么：
+
+
+[[AIGC_LOCK_00513]]{itemize}
+[[AIGC_LOCK_00514]] 后期排除
+[[AIGC_LOCK_00515]]{itemize}
+
+
+不适合干什么：
+
+
+[[AIGC_LOCK_00516]]{itemize}
+[[AIGC_LOCK_00517]] 前期单独判断答案
+[[AIGC_LOCK_00518]]{itemize}
+
+
+一句话总结：
+
+
+[[AIGC_LOCK_00519]]{图表最大的价值是粗筛、排除和辅助联动，不是单独定点。}
+
+
+[[AIGC_LOCK_00520]]
+[[AIGC_LOCK_00521]]{[[AIGC_LOCK_00522]] 图表文件索引}
+[[AIGC_LOCK_00523]]{toc}{subsection}{[[AIGC_LOCK_00524]] 图表文件索引}
+
+
+当前正文直接对应的图表文件均位于 [[AIGC_LOCK_00525]]{cet [[AIGC_LOCK_00526]]/\_analysis\_output/}：
+
+
+[[AIGC_LOCK_00527]]{itemize}
+[[AIGC_LOCK_00528]] [[AIGC_LOCK_00529]]{question\_position\_boxplot.png}：单题位置箱线图，用来看中位数、四分位距与离散度。
+[[AIGC_LOCK_00530]] [[AIGC_LOCK_00531]]{question\_position\_band\_distribution.png}：单题在五个 [[AIGC_LOCK_00532]]{[[AIGC_LOCK_00533]]\%} 大带上的分布图，用来做粗定位。
+[[AIGC_LOCK_00534]] [[AIGC_LOCK_00535]]{question\_position\_band\_heatmap.png}：单题在 [[AIGC_LOCK_00536]]{[[AIGC_LOCK_00537]]\%} 细带上的热区图，用来观察双峰、散峰和局部集中。
+[[AIGC_LOCK_00538]] [[AIGC_LOCK_00539]]{question\_position\_curve.png}：单题位置曲线图，用来辅助观察整体形态、长尾与多峰倾向。
+[[AIGC_LOCK_00540]] [[AIGC_LOCK_00541]]{question\_answer\_distribution.png}：题号到原文段落字母的分布图，用来做后期排除与偏向判断。
+[[AIGC_LOCK_00542]] [[AIGC_LOCK_00543]]{letter\_to\_question\_heatmap.png}：字母反向映射到题号的热力图，用来辅助判断某字母更常落在哪些题号上。
+[[AIGC_LOCK_00544]]{itemize}
+
+
+[[AIGC_LOCK_00545]]
+[[AIGC_LOCK_00546]]{[[AIGC_LOCK_00547]]. 单题位置分布：先把基础层讲清楚}
+[[AIGC_LOCK_00548]]{toc}{section}{[[AIGC_LOCK_00549]]. 单题位置分布：先把基础层讲清楚}
+
+
+[[AIGC_LOCK_00550]]
+[[AIGC_LOCK_00551]]{[[AIGC_LOCK_00552]] 粗粒度 [[AIGC_LOCK_00553]]\% 分带分布}
+[[AIGC_LOCK_00554]]{toc}{subsection}{[[AIGC_LOCK_00555]] 粗粒度 [[AIGC_LOCK_00556]]\% 分带分布}
+
+
+根据 [[AIGC_LOCK_00557]]{question\_position\_stats.csv}：
+
+
+[[AIGC_LOCK_00558]]{center}
+[[AIGC_LOCK_00559]]
+[[AIGC_LOCK_00560]]{[[AIGC_LOCK_00561]]}{4pt}
+[[AIGC_LOCK_00562]]{longtable}{@{}>{[[AIGC_LOCK_00563]][[AIGC_LOCK_00564]]}p{[[AIGC_LOCK_00565]][[AIGC_LOCK_00566]]}>{[[AIGC_LOCK_00567]][[AIGC_LOCK_00568]]}p{[[AIGC_LOCK_00569]][[AIGC_LOCK_00570]]}>{[[AIGC_LOCK_00571]][[AIGC_LOCK_00572]]}p{[[AIGC_LOCK_00573]][[AIGC_LOCK_00574]]}>{[[AIGC_LOCK_00575]][[AIGC_LOCK_00576]]}p{[[AIGC_LOCK_00577]][[AIGC_LOCK_00578]]}>{[[AIGC_LOCK_00579]][[AIGC_LOCK_00580]]}p{[[AIGC_LOCK_00581]][[AIGC_LOCK_00582]]}@{}}
+[[AIGC_LOCK_00583]]
+[[AIGC_LOCK_00584]]{题号} & [[AIGC_LOCK_00585]]{主导 [[AIGC_LOCK_00586]]\% 带} & [[AIGC_LOCK_00587]]{占比} & [[AIGC_LOCK_00588]]{次主导 [[AIGC_LOCK_00589]]\% 带} & [[AIGC_LOCK_00590]]{占比} \\
+[[AIGC_LOCK_00591]]
+[[AIGC_LOCK_00592]]
+[[AIGC_LOCK_00593]]
+[[AIGC_LOCK_00594]]{题号} & [[AIGC_LOCK_00595]]{主导 [[AIGC_LOCK_00596]]\% 带} & [[AIGC_LOCK_00597]]{占比} & [[AIGC_LOCK_00598]]{次主导 [[AIGC_LOCK_00599]]\% 带} & [[AIGC_LOCK_00600]]{占比} \\
+[[AIGC_LOCK_00601]]
+[[AIGC_LOCK_00602]]
+Q36 & [[AIGC_LOCK_00603]]{[[AIGC_LOCK_00604]]-[[AIGC_LOCK_00605]]\%} & [[AIGC_LOCK_00606]]\% & [[AIGC_LOCK_00607]]{[[AIGC_LOCK_00608]]-[[AIGC_LOCK_00609]]\%} & [[AIGC_LOCK_00610]]\% \\
+Q37 & [[AIGC_LOCK_00611]]{[[AIGC_LOCK_00612]]-[[AIGC_LOCK_00613]]\%} & [[AIGC_LOCK_00614]]\% & [[AIGC_LOCK_00615]]{[[AIGC_LOCK_00616]]-[[AIGC_LOCK_00617]]\%} & [[AIGC_LOCK_00618]]\% \\
+Q38 & [[AIGC_LOCK_00619]]{[[AIGC_LOCK_00620]]-[[AIGC_LOCK_00621]]\%} & [[AIGC_LOCK_00622]]\% & [[AIGC_LOCK_00623]]{[[AIGC_LOCK_00624]]-[[AIGC_LOCK_00625]]\%} & [[AIGC_LOCK_00626]]\% \\
+Q39 & [[AIGC_LOCK_00627]]{[[AIGC_LOCK_00628]]-[[AIGC_LOCK_00629]]\%} & [[AIGC_LOCK_00630]]\% & [[AIGC_LOCK_00631]]{[[AIGC_LOCK_00632]]-[[AIGC_LOCK_00633]]\%} & [[AIGC_LOCK_00634]]\% \\
+Q40 & [[AIGC_LOCK_00635]]{[[AIGC_LOCK_00636]]-[[AIGC_LOCK_00637]]\%} & [[AIGC_LOCK_00638]]\% & [[AIGC_LOCK_00639]]{[[AIGC_LOCK_00640]]-[[AIGC_LOCK_00641]]\%} & [[AIGC_LOCK_00642]]\% \\
+Q41 & [[AIGC_LOCK_00643]]{[[AIGC_LOCK_00644]]-[[AIGC_LOCK_00645]]\%} & [[AIGC_LOCK_00646]]\% & [[AIGC_LOCK_00647]]{[[AIGC_LOCK_00648]]-[[AIGC_LOCK_00649]]\%} & [[AIGC_LOCK_00650]]\% \\
+Q42 & [[AIGC_LOCK_00651]]{[[AIGC_LOCK_00652]]-[[AIGC_LOCK_00653]]\%} & [[AIGC_LOCK_00654]]\% & [[AIGC_LOCK_00655]]{[[AIGC_LOCK_00656]]-[[AIGC_LOCK_00657]]\%} & [[AIGC_LOCK_00658]]\% \\
+Q43 & [[AIGC_LOCK_00659]]{[[AIGC_LOCK_00660]]-[[AIGC_LOCK_00661]]\%} & [[AIGC_LOCK_00662]]\% & [[AIGC_LOCK_00663]]{[[AIGC_LOCK_00664]]-[[AIGC_LOCK_00665]]\%} & [[AIGC_LOCK_00666]]\% \\
+Q44 & [[AIGC_LOCK_00667]]{[[AIGC_LOCK_00668]]-[[AIGC_LOCK_00669]]\%} & [[AIGC_LOCK_00670]]\% & [[AIGC_LOCK_00671]]{[[AIGC_LOCK_00672]]-[[AIGC_LOCK_00673]]\%} & [[AIGC_LOCK_00674]]\% \\
+Q45 & [[AIGC_LOCK_00675]]{[[AIGC_LOCK_00676]]-[[AIGC_LOCK_00677]]\%} & [[AIGC_LOCK_00678]]\% & [[AIGC_LOCK_00679]]{[[AIGC_LOCK_00680]]-[[AIGC_LOCK_00681]]\%} & [[AIGC_LOCK_00682]]\% \\
+[[AIGC_LOCK_00683]]
+[[AIGC_LOCK_00684]]{longtable}
+[[AIGC_LOCK_00685]]
+[[AIGC_LOCK_00686]]{center}
+
+
+可以先得到最基础的单题印象：
+
+
+[[AIGC_LOCK_00687]]{itemize}
+[[AIGC_LOCK_00688]] [[AIGC_LOCK_00689]]{Q36 / Q39 / Q44} 偏前中段
+[[AIGC_LOCK_00690]] [[AIGC_LOCK_00691]]{Q41 / Q45} 偏后段
+[[AIGC_LOCK_00692]] [[AIGC_LOCK_00693]]{Q38 / Q42 / Q43} 分散度更高
+[[AIGC_LOCK_00694]]{itemize}
+
+
+[[AIGC_LOCK_00695]]
+[[AIGC_LOCK_00696]]{[[AIGC_LOCK_00697]] 细粒度 [[AIGC_LOCK_00698]]\% 热区分布}
+[[AIGC_LOCK_00699]]{toc}{subsection}{[[AIGC_LOCK_00700]] 细粒度 [[AIGC_LOCK_00701]]\% 热区分布}
+
+
+根据 [[AIGC_LOCK_00702]]{question\_position\_fine\_stats.csv}：
+
+
+[[AIGC_LOCK_00703]]{center}
+[[AIGC_LOCK_00704]]
+[[AIGC_LOCK_00705]]{[[AIGC_LOCK_00706]]}{4pt}
+[[AIGC_LOCK_00707]]{longtable}{@{}>{[[AIGC_LOCK_00708]][[AIGC_LOCK_00709]]}p{[[AIGC_LOCK_00710]][[AIGC_LOCK_00711]]}>{[[AIGC_LOCK_00712]][[AIGC_LOCK_00713]]}p{[[AIGC_LOCK_00714]][[AIGC_LOCK_00715]]}>{[[AIGC_LOCK_00716]][[AIGC_LOCK_00717]]}p{[[AIGC_LOCK_00718]][[AIGC_LOCK_00719]]}>{[[AIGC_LOCK_00720]][[AIGC_LOCK_00721]]}p{[[AIGC_LOCK_00722]][[AIGC_LOCK_00723]]}>{[[AIGC_LOCK_00724]][[AIGC_LOCK_00725]]}p{[[AIGC_LOCK_00726]][[AIGC_LOCK_00727]]}@{}}
+[[AIGC_LOCK_00728]]
+[[AIGC_LOCK_00729]]{题号} & [[AIGC_LOCK_00730]]{主导 [[AIGC_LOCK_00731]]\% 带} & [[AIGC_LOCK_00732]]{占比} & [[AIGC_LOCK_00733]]{次主导 [[AIGC_LOCK_00734]]\% 带} & [[AIGC_LOCK_00735]]{占比} \\
+[[AIGC_LOCK_00736]]
+[[AIGC_LOCK_00737]]
+[[AIGC_LOCK_00738]]
+[[AIGC_LOCK_00739]]{题号} & [[AIGC_LOCK_00740]]{主导 [[AIGC_LOCK_00741]]\% 带} & [[AIGC_LOCK_00742]]{占比} & [[AIGC_LOCK_00743]]{次主导 [[AIGC_LOCK_00744]]\% 带} & [[AIGC_LOCK_00745]]{占比} \\
+[[AIGC_LOCK_00746]]
+[[AIGC_LOCK_00747]]
+Q36 & [[AIGC_LOCK_00748]]{[[AIGC_LOCK_00749]]-[[AIGC_LOCK_00750]]\%} & [[AIGC_LOCK_00751]]\% & [[AIGC_LOCK_00752]]{[[AIGC_LOCK_00753]]-[[AIGC_LOCK_00754]]\%} & [[AIGC_LOCK_00755]]\% \\
+Q37 & [[AIGC_LOCK_00756]]{[[AIGC_LOCK_00757]]-[[AIGC_LOCK_00758]]\%} & [[AIGC_LOCK_00759]]\% & [[AIGC_LOCK_00760]]{[[AIGC_LOCK_00761]]-[[AIGC_LOCK_00762]]\%} & [[AIGC_LOCK_00763]]\% \\
+Q38 & [[AIGC_LOCK_00764]]{[[AIGC_LOCK_00765]]-[[AIGC_LOCK_00766]]\%} & [[AIGC_LOCK_00767]]\% & [[AIGC_LOCK_00768]]{[[AIGC_LOCK_00769]]-[[AIGC_LOCK_00770]]\%} & [[AIGC_LOCK_00771]]\% \\
+Q39 & [[AIGC_LOCK_00772]]{[[AIGC_LOCK_00773]]-[[AIGC_LOCK_00774]]\%} & [[AIGC_LOCK_00775]]\% & [[AIGC_LOCK_00776]]{[[AIGC_LOCK_00777]]-[[AIGC_LOCK_00778]]\%} & [[AIGC_LOCK_00779]]\% \\
+Q40 & [[AIGC_LOCK_00780]]{[[AIGC_LOCK_00781]]-[[AIGC_LOCK_00782]]\%} & [[AIGC_LOCK_00783]]\% & [[AIGC_LOCK_00784]]{[[AIGC_LOCK_00785]]-[[AIGC_LOCK_00786]]\%} & [[AIGC_LOCK_00787]]\% \\
+Q41 & [[AIGC_LOCK_00788]]{[[AIGC_LOCK_00789]]-[[AIGC_LOCK_00790]]\%} & [[AIGC_LOCK_00791]]\% & [[AIGC_LOCK_00792]]{[[AIGC_LOCK_00793]]-[[AIGC_LOCK_00794]]\%} & [[AIGC_LOCK_00795]]\% \\
+Q42 & [[AIGC_LOCK_00796]]{[[AIGC_LOCK_00797]]-[[AIGC_LOCK_00798]]\%} & [[AIGC_LOCK_00799]]\% & [[AIGC_LOCK_00800]]{[[AIGC_LOCK_00801]]-[[AIGC_LOCK_00802]]\%} & [[AIGC_LOCK_00803]]\% \\
+Q43 & [[AIGC_LOCK_00804]]{[[AIGC_LOCK_00805]]-[[AIGC_LOCK_00806]]\%} & [[AIGC_LOCK_00807]]\% & [[AIGC_LOCK_00808]]{[[AIGC_LOCK_00809]]-[[AIGC_LOCK_00810]]\%} & [[AIGC_LOCK_00811]]\% \\
+Q44 & [[AIGC_LOCK_00812]]{[[AIGC_LOCK_00813]]-[[AIGC_LOCK_00814]]\%} & [[AIGC_LOCK_00815]]\% & [[AIGC_LOCK_00816]]{[[AIGC_LOCK_00817]]-[[AIGC_LOCK_00818]]\%} & [[AIGC_LOCK_00819]]\% \\
+Q45 & [[AIGC_LOCK_00820]]{[[AIGC_LOCK_00821]]-[[AIGC_LOCK_00822]]\%} & [[AIGC_LOCK_00823]]\% & [[AIGC_LOCK_00824]]{[[AIGC_LOCK_00825]]-[[AIGC_LOCK_00826]]\%} & [[AIGC_LOCK_00827]]\% \\
+[[AIGC_LOCK_00828]]
+[[AIGC_LOCK_00829]]{longtable}
+[[AIGC_LOCK_00830]]
+[[AIGC_LOCK_00831]]{center}
+
+
+观察重点：
+
+
+[[AIGC_LOCK_00832]]{itemize}
+[[AIGC_LOCK_00833]] [[AIGC_LOCK_00834]]{Q37} 的双峰很明显：既可能靠前，也可能很靠后
+[[AIGC_LOCK_00835]] [[AIGC_LOCK_00836]]{Q41} 也存在中后双峰
+[[AIGC_LOCK_00837]] [[AIGC_LOCK_00838]]{Q45} 的高频热区主要集中在后段
+[[AIGC_LOCK_00839]] [[AIGC_LOCK_00840]]{Q38 / Q42 / Q43 / Q44} 的主峰都不够尖
+[[AIGC_LOCK_00841]]{itemize}
+
+
+[[AIGC_LOCK_00842]]
+[[AIGC_LOCK_00843]]{[[AIGC_LOCK_00844]] 分散度指标说明}
+[[AIGC_LOCK_00845]]{toc}{subsection}{[[AIGC_LOCK_00846]] 分散度指标说明}
+
+
+[[AIGC_LOCK_00847]]{band\_entropy\_20} 和 [[AIGC_LOCK_00848]]{band\_entropy\_10} 越高，说明该题越分散。
+
+
+典型值：
+
+
+[[AIGC_LOCK_00849]]{itemize}
+[[AIGC_LOCK_00850]] [[AIGC_LOCK_00851]]{Q38}: [[AIGC_LOCK_00852]]{band\_entropy\_20 = [[AIGC_LOCK_00853]]},[[AIGC_LOCK_00854]]{} [[AIGC_LOCK_00855]]{band\_entropy\_10 = [[AIGC_LOCK_00856]]}
+[[AIGC_LOCK_00857]] [[AIGC_LOCK_00858]]{Q42}: [[AIGC_LOCK_00859]]{band\_entropy\_20 = [[AIGC_LOCK_00860]]},[[AIGC_LOCK_00861]]{} [[AIGC_LOCK_00862]]{band\_entropy\_10 = [[AIGC_LOCK_00863]]}
+[[AIGC_LOCK_00864]] [[AIGC_LOCK_00865]]{Q44}: [[AIGC_LOCK_00866]]{band\_entropy\_20 = [[AIGC_LOCK_00867]]},[[AIGC_LOCK_00868]]{} [[AIGC_LOCK_00869]]{band\_entropy\_10 = [[AIGC_LOCK_00870]]}
+[[AIGC_LOCK_00871]]{itemize}
+
+
+这些题都说明：
+
+
+[[AIGC_LOCK_00872]]{itemize}
+[[AIGC_LOCK_00873]] 无条件时不够稳定
+[[AIGC_LOCK_00874]] 更适合条件化处理
+[[AIGC_LOCK_00875]]{itemize}
+
+
+相对更稳的题：
+
+
+[[AIGC_LOCK_00876]]{itemize}
+[[AIGC_LOCK_00877]] [[AIGC_LOCK_00878]]{Q36}: [[AIGC_LOCK_00879]]{band\_entropy\_20 = [[AIGC_LOCK_00880]]}
+[[AIGC_LOCK_00881]]{itemize}
+
+
+这也解释了为什么：
+
+
+[[AIGC_LOCK_00882]]{itemize}
+[[AIGC_LOCK_00883]] [[AIGC_LOCK_00884]]{Q36} 适合定区
+[[AIGC_LOCK_00885]] [[AIGC_LOCK_00886]]{Q38 / Q42 / Q43} 更适合条件做题
+[[AIGC_LOCK_00887]]{itemize}
+
+
+[[AIGC_LOCK_00888]]
+[[AIGC_LOCK_00889]]{[[AIGC_LOCK_00890]] 单题连续窗口覆盖率}
+[[AIGC_LOCK_00891]]{toc}{subsection}{[[AIGC_LOCK_00892]] 单题连续窗口覆盖率}
+
+
+根据 [[AIGC_LOCK_00893]]{question\_strategy\_features.csv}：
+
+
+[[AIGC_LOCK_00894]]{itemize}
+[[AIGC_LOCK_00895]] [[AIGC_LOCK_00896]]{Q36} 的最佳连续 [[AIGC_LOCK_00897]]\% 窗口是 [[AIGC_LOCK_00898]]{[[AIGC_LOCK_00899]]-[[AIGC_LOCK_00900]]\%}，覆盖 [[AIGC_LOCK_00901]]{[[AIGC_LOCK_00902]]\%}
+[[AIGC_LOCK_00903]] [[AIGC_LOCK_00904]]{Q39} 的最佳连续 [[AIGC_LOCK_00905]]\% 窗口是 [[AIGC_LOCK_00906]]{[[AIGC_LOCK_00907]]-[[AIGC_LOCK_00908]]\%}，覆盖 [[AIGC_LOCK_00909]]{[[AIGC_LOCK_00910]]\%}
+[[AIGC_LOCK_00911]] [[AIGC_LOCK_00912]]{Q41} 的最佳连续 [[AIGC_LOCK_00913]]\% 窗口是 [[AIGC_LOCK_00914]]{[[AIGC_LOCK_00915]]-[[AIGC_LOCK_00916]]\%}，覆盖 [[AIGC_LOCK_00917]]{[[AIGC_LOCK_00918]]\%}
+[[AIGC_LOCK_00919]] [[AIGC_LOCK_00920]]{Q45} 的最佳连续 [[AIGC_LOCK_00921]]\% 窗口是 [[AIGC_LOCK_00922]]{[[AIGC_LOCK_00923]]-[[AIGC_LOCK_00924]]\%}，覆盖 [[AIGC_LOCK_00925]]{[[AIGC_LOCK_00926]]\%}
+[[AIGC_LOCK_00927]]{itemize}
+
+
+这个指标很重要，因为它直接对应“单题裸做时的最佳大区间”。
+
+
+[[AIGC_LOCK_00928]]
+[[AIGC_LOCK_00929]]{[[AIGC_LOCK_00930]]. 答案字母分布层面还能看到什么}
+[[AIGC_LOCK_00931]]{toc}{section}{[[AIGC_LOCK_00932]]. 答案字母分布层面还能看到什么}
+
+
+[[AIGC_LOCK_00933]]
+[[AIGC_LOCK_00934]]{[[AIGC_LOCK_00935]] 单题对应字母分布}
+[[AIGC_LOCK_00936]]{toc}{subsection}{[[AIGC_LOCK_00937]] 单题对应字母分布}
+
+
+根据 [[AIGC_LOCK_00938]]{question\_answer\_summary.csv}：
+
+
+[[AIGC_LOCK_00939]]{itemize}
+[[AIGC_LOCK_00940]] [[AIGC_LOCK_00941]]{Q36} 的高频字母是 [[AIGC_LOCK_00942]]{E}，占比 [[AIGC_LOCK_00943]]{[[AIGC_LOCK_00944]]\%}
+[[AIGC_LOCK_00945]] [[AIGC_LOCK_00946]]{Q37} 的高频字母是 [[AIGC_LOCK_00947]]{C}，占比 [[AIGC_LOCK_00948]]{[[AIGC_LOCK_00949]]\%}
+[[AIGC_LOCK_00950]] [[AIGC_LOCK_00951]]{Q41} 的前两高字母并列，[[AIGC_LOCK_00952]]{top\_gap\_pct = [[AIGC_LOCK_00953]]}
+[[AIGC_LOCK_00954]] [[AIGC_LOCK_00955]]{Q44} 的前两高字母也并列，[[AIGC_LOCK_00956]]{top\_gap\_pct = [[AIGC_LOCK_00957]]}
+[[AIGC_LOCK_00958]]{itemize}
+
+
+这说明：
+
+
+[[AIGC_LOCK_00959]]{itemize}
+[[AIGC_LOCK_00960]] 大多数题号的字母分布主峰并不尖
+[[AIGC_LOCK_00961]] 靠字母本身押题的价值有限
+[[AIGC_LOCK_00962]]{itemize}
+
+
+[[AIGC_LOCK_00963]]
+[[AIGC_LOCK_00964]]{[[AIGC_LOCK_00965]] 反向看：某字母更偏向哪些题号}
+[[AIGC_LOCK_00966]]{toc}{subsection}{[[AIGC_LOCK_00967]] 反向看：某字母更偏向哪些题号}
+
+
+根据 [[AIGC_LOCK_00968]]{letter\_to\_question\_summary.csv}：
+
+
+[[AIGC_LOCK_00969]]{itemize}
+[[AIGC_LOCK_00970]] [[AIGC_LOCK_00971]]{N} 最常见于 [[AIGC_LOCK_00972]]{Q45}，占比 [[AIGC_LOCK_00973]]{[[AIGC_LOCK_00974]]\%}
+[[AIGC_LOCK_00975]] [[AIGC_LOCK_00976]]{C} 最常见于 [[AIGC_LOCK_00977]]{Q37}，占比 [[AIGC_LOCK_00978]]{[[AIGC_LOCK_00979]]\%}
+[[AIGC_LOCK_00980]] [[AIGC_LOCK_00981]]{E} 最常见于 [[AIGC_LOCK_00982]]{Q36}，占比 [[AIGC_LOCK_00983]]{[[AIGC_LOCK_00984]]\%}
+[[AIGC_LOCK_00985]] [[AIGC_LOCK_00986]]{F} 最常见于 [[AIGC_LOCK_00987]]{Q36}，占比 [[AIGC_LOCK_00988]]{[[AIGC_LOCK_00989]]\%}
+[[AIGC_LOCK_00990]]{itemize}
+
+
+但整体看，大多数字母的 [[AIGC_LOCK_00991]]{reverse\_entropy} 仍不低， 说明：
+
+
+[[AIGC_LOCK_00992]]{itemize}
+[[AIGC_LOCK_00993]] 字母更适合作为排除工具
+[[AIGC_LOCK_00994]] 不适合作为主判断工具
+[[AIGC_LOCK_00995]]{itemize}
+
+
+[[AIGC_LOCK_00996]]
+[[AIGC_LOCK_00997]]{[[AIGC_LOCK_00998]] 字母层面的结构性信息}
+[[AIGC_LOCK_00999]]{toc}{subsection}{[[AIGC_LOCK_01000]] 字母层面的结构性信息}
+
+
+继续看相邻题的字母距离：
+
+
+根据 [[AIGC_LOCK_01001]]{adjacent\_question\_relation\_stats.csv}：
+
+
+[[AIGC_LOCK_01002]]{itemize}
+[[AIGC_LOCK_01003]] [[AIGC_LOCK_01004]]{Q40/Q41} 的 [[AIGC_LOCK_01005]]{within\_2\_letters\_pct = [[AIGC_LOCK_01006]]\%}
+[[AIGC_LOCK_01007]] [[AIGC_LOCK_01008]]{Q43/Q44} 的 [[AIGC_LOCK_01009]]{within\_2\_letters\_pct = [[AIGC_LOCK_01010]]\%}
+[[AIGC_LOCK_01011]] [[AIGC_LOCK_01012]]{Q44/Q45} 的 [[AIGC_LOCK_01013]]{within\_2\_letters\_pct = [[AIGC_LOCK_01014]]\%}
+[[AIGC_LOCK_01015]]{itemize}
+
+
+这说明：
+
+
+[[AIGC_LOCK_01016]]{itemize}
+[[AIGC_LOCK_01017]] 相邻题不仅段落位置常常不近
+[[AIGC_LOCK_01018]] 连字母顺序上也经常分离
+[[AIGC_LOCK_01019]]{itemize}
+
+
+[[AIGC_LOCK_01020]]
+[[AIGC_LOCK_01021]]{[[AIGC_LOCK_01022]]. 单题角色重估}
+[[AIGC_LOCK_01023]]{toc}{section}{[[AIGC_LOCK_01024]]. 单题角色重估}
+
+
+[[AIGC_LOCK_01025]]
+[[AIGC_LOCK_01026]]{[[AIGC_LOCK_01027]] [[AIGC_LOCK_01028]]{Q36}：位置锚，不是起手锚}
+[[AIGC_LOCK_01029]]{toc}{subsection}{[[AIGC_LOCK_01030]] Q36：位置锚，不是起手锚}
+
+
+根据 [[AIGC_LOCK_01031]]{question\_order\_profile.csv}：
+
+
+[[AIGC_LOCK_01032]]{itemize}
+[[AIGC_LOCK_01033]] [[AIGC_LOCK_01034]]{median\_rank = [[AIGC_LOCK_01035]]}
+[[AIGC_LOCK_01036]] [[AIGC_LOCK_01037]]{mean\_rank = [[AIGC_LOCK_01038]]}
+[[AIGC_LOCK_01039]] [[AIGC_LOCK_01040]]{earliest\_pct = [[AIGC_LOCK_01041]]\%}
+[[AIGC_LOCK_01042]] [[AIGC_LOCK_01043]]{top2\_earliest\_pct = [[AIGC_LOCK_01044]]\%}
+[[AIGC_LOCK_01045]]{itemize}
+
+
+结论：
+
+
+[[AIGC_LOCK_01046]]{itemize}
+[[AIGC_LOCK_01047]] 它不是典型最早出题
+[[AIGC_LOCK_01048]] 但它的单题分布更稳
+[[AIGC_LOCK_01049]] 所以它是位置锚，不是默认起手锚
+[[AIGC_LOCK_01050]]{itemize}
+
+
+[[AIGC_LOCK_01051]]
+[[AIGC_LOCK_01052]]{[[AIGC_LOCK_01053]] [[AIGC_LOCK_01054]]{Q37}：前段奇数锚}
+[[AIGC_LOCK_01055]]{toc}{subsection}{[[AIGC_LOCK_01056]] Q37：前段奇数锚}
+
+
+[[AIGC_LOCK_01057]]{itemize}
+[[AIGC_LOCK_01058]] [[AIGC_LOCK_01059]]{earliest\_pct = [[AIGC_LOCK_01060]]\%}
+[[AIGC_LOCK_01061]] [[AIGC_LOCK_01062]]{top2\_earliest\_pct = [[AIGC_LOCK_01063]]\%}
+[[AIGC_LOCK_01064]] [[AIGC_LOCK_01065]]{top3\_earliest\_pct = [[AIGC_LOCK_01066]]\%}
+[[AIGC_LOCK_01067]]{itemize}
+
+
+结论：
+
+
+[[AIGC_LOCK_01068]]{itemize}
+[[AIGC_LOCK_01069]] 前段扫描时，它比 [[AIGC_LOCK_01070]]{Q36} 更像会先露头的题
+[[AIGC_LOCK_01071]]{itemize}
+
+
+[[AIGC_LOCK_01072]]
+[[AIGC_LOCK_01073]]{[[AIGC_LOCK_01074]] [[AIGC_LOCK_01075]]{Q38}：摆动题、反推题}
+[[AIGC_LOCK_01076]]{toc}{subsection}{[[AIGC_LOCK_01077]] Q38：摆动题、反推题}
+
+
+[[AIGC_LOCK_01078]]{itemize}
+[[AIGC_LOCK_01079]] [[AIGC_LOCK_01080]]{earliest\_pct = [[AIGC_LOCK_01081]]\%}
+[[AIGC_LOCK_01082]] [[AIGC_LOCK_01083]]{top2\_latest\_pct = [[AIGC_LOCK_01084]]\%}
+[[AIGC_LOCK_01085]] [[AIGC_LOCK_01086]]{median\_rank = [[AIGC_LOCK_01087]]}
+[[AIGC_LOCK_01088]]{itemize}
+
+
+结论：
+
+
+[[AIGC_LOCK_01089]]{itemize}
+[[AIGC_LOCK_01090]] 位置摆动大
+[[AIGC_LOCK_01091]] 不适合裸做
+[[AIGC_LOCK_01092]] 但适合做出后立刻反推别题
+[[AIGC_LOCK_01093]]{itemize}
+
+
+[[AIGC_LOCK_01094]]
+[[AIGC_LOCK_01095]]{[[AIGC_LOCK_01096]] [[AIGC_LOCK_01097]]{Q41} 与 [[AIGC_LOCK_01098]]{Q45}：后段双锚}
+[[AIGC_LOCK_01099]]{toc}{subsection}{[[AIGC_LOCK_01100]] Q41 与 Q45：后段双锚}
+
+
+[[AIGC_LOCK_01101]]{Q41}：
+
+
+[[AIGC_LOCK_01102]]{itemize}
+[[AIGC_LOCK_01103]] [[AIGC_LOCK_01104]]{top2\_latest\_pct = [[AIGC_LOCK_01105]]\%}
+[[AIGC_LOCK_01106]]{itemize}
+
+
+[[AIGC_LOCK_01107]]{Q45}：
+
+
+[[AIGC_LOCK_01108]]{itemize}
+[[AIGC_LOCK_01109]] [[AIGC_LOCK_01110]]{top3\_latest\_pct = [[AIGC_LOCK_01111]]\%}
+[[AIGC_LOCK_01112]]{itemize}
+
+
+结论：
+
+
+[[AIGC_LOCK_01113]]{itemize}
+[[AIGC_LOCK_01114]] [[AIGC_LOCK_01115]]{Q41} 更像真正的后段终点锚
+[[AIGC_LOCK_01116]] [[AIGC_LOCK_01117]]{Q45} 是强后段锚，但不是唯一尾题
+[[AIGC_LOCK_01118]]{itemize}
+
+
+[[AIGC_LOCK_01119]]
+[[AIGC_LOCK_01120]]{[[AIGC_LOCK_01121]] [[AIGC_LOCK_01122]]{Q44}：中后段总枢纽}
+[[AIGC_LOCK_01123]]{toc}{subsection}{[[AIGC_LOCK_01124]] Q44：中后段总枢纽}
+
+
+[[AIGC_LOCK_01125]]{itemize}
+[[AIGC_LOCK_01126]] [[AIGC_LOCK_01127]]{median\_rank = [[AIGC_LOCK_01128]]}
+[[AIGC_LOCK_01129]] [[AIGC_LOCK_01130]]{rule\_count\_gain10 = [[AIGC_LOCK_01131]]}
+[[AIGC_LOCK_01132]] [[AIGC_LOCK_01133]]{rule\_count\_gain15 = [[AIGC_LOCK_01134]]}
+[[AIGC_LOCK_01135]]{itemize}
+
+
+结论：
+
+
+[[AIGC_LOCK_01136]]{itemize}
+[[AIGC_LOCK_01137]] 它自己不一定最晚出现
+[[AIGC_LOCK_01138]] 但它是最强的条件源题
+[[AIGC_LOCK_01139]]{itemize}
+
+
+[[AIGC_LOCK_01140]]
+[[AIGC_LOCK_01141]]{[[AIGC_LOCK_01142]]. 题间无条件相关性：先看整体结构}
+[[AIGC_LOCK_01143]]{toc}{section}{[[AIGC_LOCK_01144]]. 题间无条件相关性：先看整体结构}
+
+
+[[AIGC_LOCK_01145]]
+[[AIGC_LOCK_01146]]{[[AIGC_LOCK_01147]] 相邻题通常不是就近题}
+[[AIGC_LOCK_01148]]{toc}{subsection}{[[AIGC_LOCK_01149]] 相邻题通常不是就近题}
+
+
+根据 [[AIGC_LOCK_01150]]{question\_pair\_relation\_stats.csv} 与 [[AIGC_LOCK_01151]]{adjacent\_question\_relation\_stats.csv}：
+
+
+[[AIGC_LOCK_01152]]
+[[AIGC_LOCK_01153]]{[[AIGC_LOCK_01154]]{Q40/Q41}}
+[[AIGC_LOCK_01155]]{toc}{subsubsection}{Q40/Q41}
+
+
+[[AIGC_LOCK_01156]]{itemize}
+[[AIGC_LOCK_01157]] [[AIGC_LOCK_01158]]{spearman\_pct = [[AIGC_LOCK_01159]]}
+[[AIGC_LOCK_01160]] [[AIGC_LOCK_01161]]{within\_2\_paragraph\_pct = [[AIGC_LOCK_01162]]\%}
+[[AIGC_LOCK_01163]] [[AIGC_LOCK_01164]]{median\_gap\_paragraphs = [[AIGC_LOCK_01165]]}
+[[AIGC_LOCK_01166]]{itemize}
+
+
+[[AIGC_LOCK_01167]]
+[[AIGC_LOCK_01168]]{[[AIGC_LOCK_01169]]{Q41/Q42}}
+[[AIGC_LOCK_01170]]{toc}{subsubsection}{Q41/Q42}
+
+
+[[AIGC_LOCK_01171]]{itemize}
+[[AIGC_LOCK_01172]] [[AIGC_LOCK_01173]]{spearman\_pct = [[AIGC_LOCK_01174]]}
+[[AIGC_LOCK_01175]] [[AIGC_LOCK_01176]]{within\_2\_paragraph\_pct = [[AIGC_LOCK_01177]]\%}
+[[AIGC_LOCK_01178]] [[AIGC_LOCK_01179]]{median\_gap\_paragraphs = [[AIGC_LOCK_01180]]}
+[[AIGC_LOCK_01181]]{itemize}
+
+
+[[AIGC_LOCK_01182]]
+[[AIGC_LOCK_01183]]{[[AIGC_LOCK_01184]]{Q43/Q44}}
+[[AIGC_LOCK_01185]]{toc}{subsubsection}{Q43/Q44}
+
+
+[[AIGC_LOCK_01186]]{itemize}
+[[AIGC_LOCK_01187]] [[AIGC_LOCK_01188]]{spearman\_pct = [[AIGC_LOCK_01189]]}
+[[AIGC_LOCK_01190]] [[AIGC_LOCK_01191]]{within\_2\_paragraph\_pct = [[AIGC_LOCK_01192]]\%}
+[[AIGC_LOCK_01193]] [[AIGC_LOCK_01194]]{median\_gap\_paragraphs = [[AIGC_LOCK_01195]]}
+[[AIGC_LOCK_01196]]{itemize}
+
+
+[[AIGC_LOCK_01197]]
+[[AIGC_LOCK_01198]]{[[AIGC_LOCK_01199]]{Q44/Q45}}
+[[AIGC_LOCK_01200]]{toc}{subsubsection}{Q44/Q45}
+
+
+[[AIGC_LOCK_01201]]{itemize}
+[[AIGC_LOCK_01202]] [[AIGC_LOCK_01203]]{spearman\_pct = [[AIGC_LOCK_01204]]}
+[[AIGC_LOCK_01205]] [[AIGC_LOCK_01206]]{within\_2\_paragraph\_pct = [[AIGC_LOCK_01207]]\%}
+[[AIGC_LOCK_01208]] [[AIGC_LOCK_01209]]{median\_gap\_paragraphs = [[AIGC_LOCK_01210]]}
+[[AIGC_LOCK_01211]]{itemize}
+
+
+结论：
+
+
+[[AIGC_LOCK_01212]]{itemize}
+[[AIGC_LOCK_01213]] 相邻题不但不常相邻
+[[AIGC_LOCK_01214]] 往往还存在明显错位
+[[AIGC_LOCK_01215]]{itemize}
+
+
+[[AIGC_LOCK_01216]]
+[[AIGC_LOCK_01217]]{[[AIGC_LOCK_01218]] 隔一题的同奇偶链更强}
+[[AIGC_LOCK_01219]]{toc}{subsection}{[[AIGC_LOCK_01220]] 隔一题的同奇偶链更强}
+
+
+[[AIGC_LOCK_01221]]
+[[AIGC_LOCK_01222]]{[[AIGC_LOCK_01223]]{Q37/Q39}}
+[[AIGC_LOCK_01224]]{toc}{subsubsection}{Q37/Q39}
+
+
+[[AIGC_LOCK_01225]]{itemize}
+[[AIGC_LOCK_01226]] [[AIGC_LOCK_01227]]{spearman\_pct = [[AIGC_LOCK_01228]]}
+[[AIGC_LOCK_01229]] [[AIGC_LOCK_01230]]{within\_2\_paragraph\_pct = [[AIGC_LOCK_01231]]\%}
+[[AIGC_LOCK_01232]] [[AIGC_LOCK_01233]]{same\_half\_pct = [[AIGC_LOCK_01234]]\%}
+[[AIGC_LOCK_01235]] [[AIGC_LOCK_01236]]{median\_gap\_paragraphs = [[AIGC_LOCK_01237]]}
+[[AIGC_LOCK_01238]]{itemize}
+
+
+[[AIGC_LOCK_01239]]
+[[AIGC_LOCK_01240]]{[[AIGC_LOCK_01241]]{Q36/Q38}}
+[[AIGC_LOCK_01242]]{toc}{subsubsection}{Q36/Q38}
+
+
+[[AIGC_LOCK_01243]]{itemize}
+[[AIGC_LOCK_01244]] [[AIGC_LOCK_01245]]{spearman\_pct = [[AIGC_LOCK_01246]]}
+[[AIGC_LOCK_01247]] [[AIGC_LOCK_01248]]{within\_2\_paragraph\_pct = [[AIGC_LOCK_01249]]\%}
+[[AIGC_LOCK_01250]] [[AIGC_LOCK_01251]]{same\_half\_pct = [[AIGC_LOCK_01252]]\%}
+[[AIGC_LOCK_01253]] [[AIGC_LOCK_01254]]{median\_gap\_paragraphs = [[AIGC_LOCK_01255]]}
+[[AIGC_LOCK_01256]]{itemize}
+
+
+[[AIGC_LOCK_01257]]
+[[AIGC_LOCK_01258]]{[[AIGC_LOCK_01259]]{Q43/Q45}}
+[[AIGC_LOCK_01260]]{toc}{subsubsection}{Q43/Q45}
+
+
+[[AIGC_LOCK_01261]]{itemize}
+[[AIGC_LOCK_01262]] [[AIGC_LOCK_01263]]{spearman\_pct = [[AIGC_LOCK_01264]]}
+[[AIGC_LOCK_01265]] [[AIGC_LOCK_01266]]{within\_2\_paragraph\_pct = [[AIGC_LOCK_01267]]\%}
+[[AIGC_LOCK_01268]] [[AIGC_LOCK_01269]]{same\_half\_pct = [[AIGC_LOCK_01270]]\%}
+[[AIGC_LOCK_01271]] [[AIGC_LOCK_01272]]{median\_gap\_paragraphs = [[AIGC_LOCK_01273]]}
+[[AIGC_LOCK_01274]]{itemize}
+
+
+结论：
+
+
+[[AIGC_LOCK_01275]]{itemize}
+[[AIGC_LOCK_01276]] 真正值得联动的是隔一题的同奇偶链
+[[AIGC_LOCK_01277]] 不是相邻题
+[[AIGC_LOCK_01278]]{itemize}
+
+
+[[AIGC_LOCK_01279]]
+[[AIGC_LOCK_01280]]{[[AIGC_LOCK_01281]] 字母层面也支持“相邻题分离，隔一题更近”}
+[[AIGC_LOCK_01282]]{toc}{subsection}{[[AIGC_LOCK_01283]] 字母层面也支持“相邻题分离，隔一题更近”}
+
+
+根据 [[AIGC_LOCK_01284]]{adjacent\_question\_relation\_stats.csv} 和补充复核：
+
+
+[[AIGC_LOCK_01285]]{itemize}
+[[AIGC_LOCK_01286]] 相邻题字母差绝对值 [[AIGC_LOCK_01287]]{<= [[AIGC_LOCK_01288]]} 的比例整体只有 [[AIGC_LOCK_01289]]{[[AIGC_LOCK_01290]]\%}
+[[AIGC_LOCK_01291]] 隔一题字母差绝对值 [[AIGC_LOCK_01292]]{<= [[AIGC_LOCK_01293]]} 的比例达到 [[AIGC_LOCK_01294]]{[[AIGC_LOCK_01295]]\%}
+[[AIGC_LOCK_01296]]{itemize}
+
+
+所以：
+
+
+[[AIGC_LOCK_01297]]{itemize}
+[[AIGC_LOCK_01298]] 相邻题不仅段落不近
+[[AIGC_LOCK_01299]] 字母顺序上也经常分离
+[[AIGC_LOCK_01300]]{itemize}
+
+
+[[AIGC_LOCK_01301]]
+[[AIGC_LOCK_01302]]{[[AIGC_LOCK_01303]]. 条件联动：这轮最有价值的新信息}
+[[AIGC_LOCK_01304]]{toc}{section}{[[AIGC_LOCK_01305]]. 条件联动：这轮最有价值的新信息}
+
+
+[[AIGC_LOCK_01306]]
+[[AIGC_LOCK_01307]]{[[AIGC_LOCK_01308]] 最强跳带规则}
+[[AIGC_LOCK_01309]]{toc}{subsection}{[[AIGC_LOCK_01310]] 最强跳带规则}
+
+
+[[AIGC_LOCK_01311]]
+[[AIGC_LOCK_01312]]{规则 A：[[AIGC_LOCK_01313]]{Q39 = [[AIGC_LOCK_01314]]-[[AIGC_LOCK_01315]]\% -> Q41 = [[AIGC_LOCK_01316]]-[[AIGC_LOCK_01317]]\%}}
+[[AIGC_LOCK_01318]]{toc}{subsubsection}{规则 A：Q39 = [[AIGC_LOCK_01319]]-[[AIGC_LOCK_01320]]\% -> Q41 = [[AIGC_LOCK_01321]]-[[AIGC_LOCK_01322]]\%}
+
+
+[[AIGC_LOCK_01323]]{itemize}
+[[AIGC_LOCK_01324]] [[AIGC_LOCK_01325]]{support\_count = [[AIGC_LOCK_01326]]}
+[[AIGC_LOCK_01327]] [[AIGC_LOCK_01328]]{target\_best\_40\_window = [[AIGC_LOCK_01329]]-[[AIGC_LOCK_01330]]\%}
+[[AIGC_LOCK_01331]] [[AIGC_LOCK_01332]]{target\_best\_40\_coverage\_pct = [[AIGC_LOCK_01333]]\%}
+[[AIGC_LOCK_01334]] [[AIGC_LOCK_01335]]{gain\_40\_pct = [[AIGC_LOCK_01336]]}
+[[AIGC_LOCK_01337]]{itemize}
+
+
+[[AIGC_LOCK_01338]]
+[[AIGC_LOCK_01339]]{规则 B：[[AIGC_LOCK_01340]]{Q44 = [[AIGC_LOCK_01341]]-[[AIGC_LOCK_01342]]\% -> Q45 = [[AIGC_LOCK_01343]]-[[AIGC_LOCK_01344]]\%}}
+[[AIGC_LOCK_01345]]{toc}{subsubsection}{规则 B：Q44 = [[AIGC_LOCK_01346]]-[[AIGC_LOCK_01347]]\% -> Q45 = [[AIGC_LOCK_01348]]-[[AIGC_LOCK_01349]]\%}
+
+
+[[AIGC_LOCK_01350]]{itemize}
+[[AIGC_LOCK_01351]] [[AIGC_LOCK_01352]]{support\_count = [[AIGC_LOCK_01353]]}
+[[AIGC_LOCK_01354]] [[AIGC_LOCK_01355]]{target\_best\_40\_window = [[AIGC_LOCK_01356]]-[[AIGC_LOCK_01357]]\%}
+[[AIGC_LOCK_01358]] [[AIGC_LOCK_01359]]{target\_best\_40\_coverage\_pct = [[AIGC_LOCK_01360]]\%}
+[[AIGC_LOCK_01361]] [[AIGC_LOCK_01362]]{gain\_40\_pct = [[AIGC_LOCK_01363]]}
+[[AIGC_LOCK_01364]]{itemize}
+
+
+[[AIGC_LOCK_01365]]
+[[AIGC_LOCK_01366]]{[[AIGC_LOCK_01367]] 最强压缩窗口规则}
+[[AIGC_LOCK_01368]]{toc}{subsection}{[[AIGC_LOCK_01369]] 最强压缩窗口规则}
+
+
+[[AIGC_LOCK_01370]]
+[[AIGC_LOCK_01371]]{规则 C：[[AIGC_LOCK_01372]]{Q37 = [[AIGC_LOCK_01373]]-[[AIGC_LOCK_01374]]\% -> Q39 = [[AIGC_LOCK_01375]]-[[AIGC_LOCK_01376]]\%}}
+[[AIGC_LOCK_01377]]{toc}{subsubsection}{规则 C：Q37 = [[AIGC_LOCK_01378]]-[[AIGC_LOCK_01379]]\% -> Q39 = [[AIGC_LOCK_01380]]-[[AIGC_LOCK_01381]]\%}
+
+
+[[AIGC_LOCK_01382]]{itemize}
+[[AIGC_LOCK_01383]] [[AIGC_LOCK_01384]]{support\_count = [[AIGC_LOCK_01385]]}
+[[AIGC_LOCK_01386]] [[AIGC_LOCK_01387]]{target\_best\_40\_coverage\_pct = [[AIGC_LOCK_01388]]\%}
+[[AIGC_LOCK_01389]] [[AIGC_LOCK_01390]]{gain\_40\_pct = [[AIGC_LOCK_01391]]}
+[[AIGC_LOCK_01392]]{itemize}
+
+
+[[AIGC_LOCK_01393]]
+[[AIGC_LOCK_01394]]{规则 D：[[AIGC_LOCK_01395]]{Q42 = [[AIGC_LOCK_01396]]-[[AIGC_LOCK_01397]]\% -> Q44 = [[AIGC_LOCK_01398]]-[[AIGC_LOCK_01399]]\%}}
+[[AIGC_LOCK_01400]]{toc}{subsubsection}{规则 D：Q42 = [[AIGC_LOCK_01401]]-[[AIGC_LOCK_01402]]\% -> Q44 = [[AIGC_LOCK_01403]]-[[AIGC_LOCK_01404]]\%}
+
+
+[[AIGC_LOCK_01405]]{itemize}
+[[AIGC_LOCK_01406]] [[AIGC_LOCK_01407]]{support\_count = [[AIGC_LOCK_01408]]}
+[[AIGC_LOCK_01409]] [[AIGC_LOCK_01410]]{target\_best\_40\_coverage\_pct = [[AIGC_LOCK_01411]]\%}
+[[AIGC_LOCK_01412]] [[AIGC_LOCK_01413]]{gain\_40\_pct = [[AIGC_LOCK_01414]]}
+[[AIGC_LOCK_01415]]{itemize}
+
+
+[[AIGC_LOCK_01416]]
+[[AIGC_LOCK_01417]]{规则 E：[[AIGC_LOCK_01418]]{Q42 = [[AIGC_LOCK_01419]]-[[AIGC_LOCK_01420]]\% -> Q45 = [[AIGC_LOCK_01421]]-[[AIGC_LOCK_01422]]\%}}
+[[AIGC_LOCK_01423]]{toc}{subsubsection}{规则 E：Q42 = [[AIGC_LOCK_01424]]-[[AIGC_LOCK_01425]]\% -> Q45 = [[AIGC_LOCK_01426]]-[[AIGC_LOCK_01427]]\%}
+
+
+[[AIGC_LOCK_01428]]{itemize}
+[[AIGC_LOCK_01429]] [[AIGC_LOCK_01430]]{support\_count = [[AIGC_LOCK_01431]]}
+[[AIGC_LOCK_01432]] [[AIGC_LOCK_01433]]{target\_best\_40\_coverage\_pct = [[AIGC_LOCK_01434]]\%}
+[[AIGC_LOCK_01435]] [[AIGC_LOCK_01436]]{gain\_40\_pct = [[AIGC_LOCK_01437]]}
+[[AIGC_LOCK_01438]]{itemize}
+
+
+[[AIGC_LOCK_01439]]
+[[AIGC_LOCK_01440]]{[[AIGC_LOCK_01441]] 最强反向排除规则}
+[[AIGC_LOCK_01442]]{toc}{subsection}{[[AIGC_LOCK_01443]] 最强反向排除规则}
+
+
+[[AIGC_LOCK_01444]]
+[[AIGC_LOCK_01445]]{规则 F：[[AIGC_LOCK_01446]]{Q41 = [[AIGC_LOCK_01447]]-[[AIGC_LOCK_01448]]\% -> Q40 = [[AIGC_LOCK_01449]]-[[AIGC_LOCK_01450]]\%}}
+[[AIGC_LOCK_01451]]{toc}{subsubsection}{规则 F：Q41 = [[AIGC_LOCK_01452]]-[[AIGC_LOCK_01453]]\% -> Q40 = [[AIGC_LOCK_01454]]-[[AIGC_LOCK_01455]]\%}
+
+
+[[AIGC_LOCK_01456]]{itemize}
+[[AIGC_LOCK_01457]] [[AIGC_LOCK_01458]]{support\_count = [[AIGC_LOCK_01459]]}
+[[AIGC_LOCK_01460]] [[AIGC_LOCK_01461]]{target\_best\_40\_coverage\_pct = [[AIGC_LOCK_01462]]\%}
+[[AIGC_LOCK_01463]] [[AIGC_LOCK_01464]]{gain\_40\_pct = [[AIGC_LOCK_01465]]}
+[[AIGC_LOCK_01466]]{itemize}
+
+
+[[AIGC_LOCK_01467]]
+[[AIGC_LOCK_01468]]{规则 G：[[AIGC_LOCK_01469]]{Q43 = [[AIGC_LOCK_01470]]-[[AIGC_LOCK_01471]]\% -> Q44 = [[AIGC_LOCK_01472]]-[[AIGC_LOCK_01473]]\%}}
+[[AIGC_LOCK_01474]]{toc}{subsubsection}{规则 G：Q43 = [[AIGC_LOCK_01475]]-[[AIGC_LOCK_01476]]\% -> Q44 = [[AIGC_LOCK_01477]]-[[AIGC_LOCK_01478]]\%}
+
+
+[[AIGC_LOCK_01479]]{itemize}
+[[AIGC_LOCK_01480]] [[AIGC_LOCK_01481]]{support\_count = [[AIGC_LOCK_01482]]}
+[[AIGC_LOCK_01483]] [[AIGC_LOCK_01484]]{target\_best\_40\_coverage\_pct = [[AIGC_LOCK_01485]]\%}
+[[AIGC_LOCK_01486]] [[AIGC_LOCK_01487]]{gain\_40\_pct = [[AIGC_LOCK_01488]]}
+[[AIGC_LOCK_01489]]{itemize}
+
+
+[[AIGC_LOCK_01490]]
+[[AIGC_LOCK_01491]]{规则 H：[[AIGC_LOCK_01492]]{Q37 = [[AIGC_LOCK_01493]]-[[AIGC_LOCK_01494]]\% -> Q36 = [[AIGC_LOCK_01495]]-[[AIGC_LOCK_01496]]\%}}
+[[AIGC_LOCK_01497]]{toc}{subsubsection}{规则 H：Q37 = [[AIGC_LOCK_01498]]-[[AIGC_LOCK_01499]]\% -> Q36 = [[AIGC_LOCK_01500]]-[[AIGC_LOCK_01501]]\%}
+
+
+[[AIGC_LOCK_01502]]{itemize}
+[[AIGC_LOCK_01503]] [[AIGC_LOCK_01504]]{support\_count = [[AIGC_LOCK_01505]]}
+[[AIGC_LOCK_01506]] [[AIGC_LOCK_01507]]{target\_best\_40\_coverage\_pct = [[AIGC_LOCK_01508]]\%}
+[[AIGC_LOCK_01509]] [[AIGC_LOCK_01510]]{gain\_40\_pct = [[AIGC_LOCK_01511]]}
+[[AIGC_LOCK_01512]]{itemize}
+
+
+[[AIGC_LOCK_01513]]
+[[AIGC_LOCK_01514]]{[[AIGC_LOCK_01515]]. 继续深挖后，新增的高层结构}
+[[AIGC_LOCK_01516]]{toc}{section}{[[AIGC_LOCK_01517]]. 继续深挖后，新增的高层结构}
+
+
+[[AIGC_LOCK_01518]]
+[[AIGC_LOCK_01519]]{[[AIGC_LOCK_01520]] 边缘带最有信息量}
+[[AIGC_LOCK_01521]]{toc}{subsection}{[[AIGC_LOCK_01522]] 边缘带最有信息量}
+
+
+继续比较所有高增益规则后，最稳定的现象是：
+
+
+[[AIGC_LOCK_01523]]{itemize}
+[[AIGC_LOCK_01524]] 最强规则几乎都出现在 [[AIGC_LOCK_01525]]{[[AIGC_LOCK_01526]]-[[AIGC_LOCK_01527]]\%} 或 [[AIGC_LOCK_01528]]{[[AIGC_LOCK_01529]]-[[AIGC_LOCK_01530]]\%}
+[[AIGC_LOCK_01531]] 中间带更多只是趋势，不是硬约束
+[[AIGC_LOCK_01532]]{itemize}
+
+
+一句话：
+
+
+[[AIGC_LOCK_01533]]{中间带给趋势，边缘带给硬信号。}
+
+
+[[AIGC_LOCK_01534]]
+[[AIGC_LOCK_01535]]{[[AIGC_LOCK_01536]] 很多题对不是线性链条，而是镜像跷跷板}
+[[AIGC_LOCK_01537]]{toc}{subsection}{[[AIGC_LOCK_01538]] 很多题对不是线性链条，而是镜像跷跷板}
+
+
+典型是：
+
+
+[[AIGC_LOCK_01539]]{itemize}
+[[AIGC_LOCK_01540]] [[AIGC_LOCK_01541]]{Q41/Q40}
+[[AIGC_LOCK_01542]] [[AIGC_LOCK_01543]]{Q43/Q44}
+[[AIGC_LOCK_01544]]{itemize}
+
+
+它们不是简单的“前题越前，后题越后”， 而是两端互相牵制、互相镜像。
+
+
+[[AIGC_LOCK_01545]]
+[[AIGC_LOCK_01546]]{[[AIGC_LOCK_01547]] [[AIGC_LOCK_01548]]{Q38} 是“难做却好反推”的代表题}
+[[AIGC_LOCK_01549]]{toc}{subsection}{[[AIGC_LOCK_01550]] Q38 是“难做却好反推”的代表题}
+
+
+[[AIGC_LOCK_01551]]{Q38} 无条件不稳，但条件触发后能强力约束：
+
+
+[[AIGC_LOCK_01552]]{itemize}
+[[AIGC_LOCK_01553]] [[AIGC_LOCK_01554]]{Q37}
+[[AIGC_LOCK_01555]] [[AIGC_LOCK_01556]]{Q39}
+[[AIGC_LOCK_01557]] [[AIGC_LOCK_01558]]{Q40}
+[[AIGC_LOCK_01559]] [[AIGC_LOCK_01560]]{Q45}
+[[AIGC_LOCK_01561]]{itemize}
+
+
+所以它不是好起手题，却是高价值反推题。
+
+
+[[AIGC_LOCK_01562]]
+[[AIGC_LOCK_01563]]{[[AIGC_LOCK_01564]] [[AIGC_LOCK_01565]]{Q44} 是中后段总枢纽}
+[[AIGC_LOCK_01566]]{toc}{subsection}{[[AIGC_LOCK_01567]] Q44 是中后段总枢纽}
+
+
+它不只是某几条规则强， 而是能同时切开多个关键题：
+
+
+[[AIGC_LOCK_01568]]{itemize}
+[[AIGC_LOCK_01569]] [[AIGC_LOCK_01570]]{Q45}
+[[AIGC_LOCK_01571]] [[AIGC_LOCK_01572]]{Q41}
+[[AIGC_LOCK_01573]] [[AIGC_LOCK_01574]]{Q43}
+[[AIGC_LOCK_01575]] [[AIGC_LOCK_01576]]{Q42}
+[[AIGC_LOCK_01577]] [[AIGC_LOCK_01578]]{Q39}
+[[AIGC_LOCK_01579]]{itemize}
+
+
+[[AIGC_LOCK_01580]]
+[[AIGC_LOCK_01581]]{[[AIGC_LOCK_01582]]. 图表和统计结果的正确用法}
+[[AIGC_LOCK_01583]]{toc}{section}{[[AIGC_LOCK_01584]]. 图表和统计结果的正确用法}
+
+
+[[AIGC_LOCK_01585]]
+[[AIGC_LOCK_01586]]{[[AIGC_LOCK_01587]] 正确流程}
+[[AIGC_LOCK_01588]]{toc}{subsection}{[[AIGC_LOCK_01589]] 正确流程}
+
+
+[[AIGC_LOCK_01590]]{enumerate}
+[[AIGC_LOCK_01591]] 先看单题粗分布，判断前中后主战区。
+[[AIGC_LOCK_01592]] 再看整套容量约束，防止过度堆题。
+[[AIGC_LOCK_01593]] 再看题间无条件结构，知道哪些题不能按邻近直觉处理。
+[[AIGC_LOCK_01594]] 最后在具体做题时启用条件联动规则。
+[[AIGC_LOCK_01595]]{enumerate}
+
+
+[[AIGC_LOCK_01596]]
+[[AIGC_LOCK_01597]]{[[AIGC_LOCK_01598]] 常见误用}
+[[AIGC_LOCK_01599]]{toc}{subsection}{[[AIGC_LOCK_01600]] 常见误用}
+
+
+[[AIGC_LOCK_01601]]{enumerate}
+[[AIGC_LOCK_01602]] 直接拿箱线图中位数去押某题答案。
+[[AIGC_LOCK_01603]] 把字母分布图当作“押选项字母”的图。
+[[AIGC_LOCK_01604]] 看到相邻题就默认它们在原文里相邻。
+[[AIGC_LOCK_01605]] 完全忽略整套容量约束，只盯单题热区。
+[[AIGC_LOCK_01606]]{enumerate}
+
+
+[[AIGC_LOCK_01607]]
+[[AIGC_LOCK_01608]]{[[AIGC_LOCK_01609]]. 统计局限}
+[[AIGC_LOCK_01610]]{toc}{section}{[[AIGC_LOCK_01611]]. 统计局限}
+
+
+[[AIGC_LOCK_01612]]
+[[AIGC_LOCK_01613]]{[[AIGC_LOCK_01614]] 小样本条件规则不能无限外推}
+[[AIGC_LOCK_01615]]{toc}{subsection}{[[AIGC_LOCK_01616]] 小样本条件规则不能无限外推}
+
+
+有些条件规则样本数只有：
+
+
+[[AIGC_LOCK_01617]]{itemize}
+[[AIGC_LOCK_01618]] [[AIGC_LOCK_01619]]{[[AIGC_LOCK_01620]]}
+[[AIGC_LOCK_01621]] [[AIGC_LOCK_01622]]{[[AIGC_LOCK_01623]]}
+[[AIGC_LOCK_01624]] [[AIGC_LOCK_01625]]{[[AIGC_LOCK_01626]]}
+[[AIGC_LOCK_01627]]{itemize}
+
+
+这些规则可以作为强提示，但不应被当成无条件硬定律。
+
+
+[[AIGC_LOCK_01628]]
+[[AIGC_LOCK_01629]]{[[AIGC_LOCK_01630]] 双峰题会让均值失真}
+[[AIGC_LOCK_01631]]{toc}{subsection}{[[AIGC_LOCK_01632]] 双峰题会让均值失真}
+
+
+像 [[AIGC_LOCK_01633]]{Q37 / Q41 / Q45} 这种存在双峰或多峰倾向的题， 如果只看均值或中位数，很容易被误导。
+
+
+[[AIGC_LOCK_01634]]
+[[AIGC_LOCK_01635]]{[[AIGC_LOCK_01636]] 图表更适合排除，不适合单独定点}
+[[AIGC_LOCK_01637]]{toc}{subsection}{[[AIGC_LOCK_01638]] 图表更适合排除，不适合单独定点}
+
+
+本报告里绝大部分图表，最佳用途都是：
+
+
+[[AIGC_LOCK_01639]]{itemize}
+[[AIGC_LOCK_01640]] 粗筛
+[[AIGC_LOCK_01641]] 压窗
+[[AIGC_LOCK_01642]] 排除
+[[AIGC_LOCK_01643]]{itemize}
+
+
+而不是：
+
+
+[[AIGC_LOCK_01644]]{itemize}
+[[AIGC_LOCK_01645]] 直接押精确段落
+[[AIGC_LOCK_01646]]{itemize}
+
+
+[[AIGC_LOCK_01647]]
+[[AIGC_LOCK_01648]]{[[AIGC_LOCK_01649]]. 综合实战策略总结}
+[[AIGC_LOCK_01650]]{toc}{section}{[[AIGC_LOCK_01651]]. 综合实战策略总结}
+
+
+[[AIGC_LOCK_01652]]
+[[AIGC_LOCK_01653]]{[[AIGC_LOCK_01654]] 总体原则}
+[[AIGC_LOCK_01655]]{toc}{subsection}{[[AIGC_LOCK_01656]] 总体原则}
+
+
+考生做 Section B 时，不要把 [[AIGC_LOCK_01657]] 题看成同时独立求解，而应该看成动态推进过程：
+
+
+[[AIGC_LOCK_01658]]{enumerate}
+[[AIGC_LOCK_01659]] 先做锚点题
+[[AIGC_LOCK_01660]] 再利用题间结构联动别题
+[[AIGC_LOCK_01661]] 同时维护前区容量、后区容量和单带容量
+[[AIGC_LOCK_01662]] 对边缘带信号高度敏感
+[[AIGC_LOCK_01663]]{enumerate}
+
+
+[[AIGC_LOCK_01664]]
+[[AIGC_LOCK_01665]]{[[AIGC_LOCK_01666]] 最适合优先关注的题}
+[[AIGC_LOCK_01667]]{toc}{subsection}{[[AIGC_LOCK_01668]] 最适合优先关注的题}
+
+
+从单题角色和杠杆价值综合看：
+
+
+[[AIGC_LOCK_01669]]{itemize}
+[[AIGC_LOCK_01670]] 前段优先关注：[[AIGC_LOCK_01671]]{Q37}、[[AIGC_LOCK_01672]]{Q39}
+[[AIGC_LOCK_01673]] 位置定区题：[[AIGC_LOCK_01674]]{Q36}
+[[AIGC_LOCK_01675]] 后段切区题：[[AIGC_LOCK_01676]]{Q41}、[[AIGC_LOCK_01677]]{Q45}
+[[AIGC_LOCK_01678]] 中后段总枢纽：[[AIGC_LOCK_01679]]{Q44}
+[[AIGC_LOCK_01680]]{itemize}
+
+
+[[AIGC_LOCK_01681]]
+[[AIGC_LOCK_01682]]{[[AIGC_LOCK_01683]] 最不适合一上来裸做的题}
+[[AIGC_LOCK_01684]]{toc}{subsection}{[[AIGC_LOCK_01685]] 最不适合一上来裸做的题}
+
+
+[[AIGC_LOCK_01686]]{itemize}
+[[AIGC_LOCK_01687]] [[AIGC_LOCK_01688]]{Q38}
+[[AIGC_LOCK_01689]] [[AIGC_LOCK_01690]]{Q42}
+[[AIGC_LOCK_01691]] [[AIGC_LOCK_01692]]{Q43}
+[[AIGC_LOCK_01693]]{itemize}
+
+
+它们更适合在锚点落位后、条件已经形成时再处理。
+
+
+[[AIGC_LOCK_01694]]
+[[AIGC_LOCK_01695]]{[[AIGC_LOCK_01696]]. 这轮最该背的 [[AIGC_LOCK_01697]] 条动作卡片}
+[[AIGC_LOCK_01698]]{toc}{section}{[[AIGC_LOCK_01699]]. 这轮最该背的 [[AIGC_LOCK_01700]] 条动作卡片}
+
+
+[[AIGC_LOCK_01701]]{enumerate}
+[[AIGC_LOCK_01702]] 前 [[AIGC_LOCK_01703]]{[[AIGC_LOCK_01704]]\%} 通常只有 [[AIGC_LOCK_01705]]{[[AIGC_LOCK_01706]]-[[AIGC_LOCK_01707]]} 题，已经塞满就该切区。
+[[AIGC_LOCK_01708]] 单个 [[AIGC_LOCK_01709]]{[[AIGC_LOCK_01710]]\%} 带通常最多 [[AIGC_LOCK_01711]]{[[AIGC_LOCK_01712]]} 题，某带已有 [[AIGC_LOCK_01713]]{[[AIGC_LOCK_01714]]} 题时应主动减仓。
+[[AIGC_LOCK_01715]] [[AIGC_LOCK_01716]]{Q36} 是位置锚，不是默认起手锚。
+[[AIGC_LOCK_01717]] 前段起手更该优先盯 [[AIGC_LOCK_01718]]{Q37}，不是 [[AIGC_LOCK_01719]]{Q36}。
+[[AIGC_LOCK_01720]] [[AIGC_LOCK_01721]]{Q41} 比 [[AIGC_LOCK_01722]]{Q45} 更像真正的后段终点锚。
+[[AIGC_LOCK_01723]] [[AIGC_LOCK_01724]]{Q44} 不是尾题，它是高杠杆联动题。
+[[AIGC_LOCK_01725]] [[AIGC_LOCK_01726]]{Q39} 一旦落在 [[AIGC_LOCK_01727]]{[[AIGC_LOCK_01728]]-[[AIGC_LOCK_01729]]\%}，[[AIGC_LOCK_01730]]{Q41} 直接优先去最后 [[AIGC_LOCK_01731]]{[[AIGC_LOCK_01732]]\%} 找。
+[[AIGC_LOCK_01733]] [[AIGC_LOCK_01734]]{Q42} 一旦落在 [[AIGC_LOCK_01735]]{[[AIGC_LOCK_01736]]-[[AIGC_LOCK_01737]]\%}，[[AIGC_LOCK_01738]]{Q44} 优先回前 [[AIGC_LOCK_01739]]{[[AIGC_LOCK_01740]]\%}。
+[[AIGC_LOCK_01741]] [[AIGC_LOCK_01742]]{Q41} 一旦落在 [[AIGC_LOCK_01743]]{[[AIGC_LOCK_01744]]-[[AIGC_LOCK_01745]]\%}，不要在它附近磨 [[AIGC_LOCK_01746]]{Q40}。
+[[AIGC_LOCK_01747]] [[AIGC_LOCK_01748]]{Q44} 一旦落在 [[AIGC_LOCK_01749]]{[[AIGC_LOCK_01750]]-[[AIGC_LOCK_01751]]\%}，[[AIGC_LOCK_01752]]{Q45} 直接优先跳到 [[AIGC_LOCK_01753]]{[[AIGC_LOCK_01754]]-[[AIGC_LOCK_01755]]\%}。
+[[AIGC_LOCK_01756]] 真正最有信息量的是边缘带，不是中间带。
+[[AIGC_LOCK_01757]] 有些题对不是链条，而是跷跷板，尤其 [[AIGC_LOCK_01758]]{Q41/Q40}、[[AIGC_LOCK_01759]]{Q43/Q44}。
+[[AIGC_LOCK_01760]] [[AIGC_LOCK_01761]]{Q38} 不是好起手题，但它是“难做却好反推”的代表题。
+[[AIGC_LOCK_01762]] [[AIGC_LOCK_01763]]{Q44} 一旦做出，不要停，要立刻扩散联动到 [[AIGC_LOCK_01764]]{Q45 / Q41 / Q43 / Q42}。
+[[AIGC_LOCK_01765]]{enumerate}
+
+
+[[AIGC_LOCK_01766]]
+[[AIGC_LOCK_01767]]{[[AIGC_LOCK_01768]]. 最终结论}
+[[AIGC_LOCK_01769]]{toc}{section}{[[AIGC_LOCK_01770]]. 最终结论}
+
+
+Section B 真正能打出来的，不是单题均值，而是多层结构一起用：
+
+
+[[AIGC_LOCK_01771]]{enumerate}
+[[AIGC_LOCK_01772]] 单题基础分布
+[[AIGC_LOCK_01773]] 单题角色定位
+[[AIGC_LOCK_01774]] 整套容量约束
+[[AIGC_LOCK_01775]] 无条件题间结构
+[[AIGC_LOCK_01776]] 条件联动压窗
+[[AIGC_LOCK_01777]] 反向排除
+[[AIGC_LOCK_01778]]{enumerate}
+
+
+如果只保留一句最核心的话，那就是：
+
+
+**先看单题粗分布，再记容量，再找锚点；边缘带一出现就高度重视；[[AIGC_LOCK_01779]]{Q36} 用来定区，[[AIGC_LOCK_01780]]{Q44} 用来放大，[[AIGC_LOCK_01781]]{Q38} 用来反推；前段看 [[AIGC_LOCK_01782]]{Q37/Q39}，后段看 [[AIGC_LOCK_01783]]{Q41/Q45}，中间靠条件规则缩窗，不要再按 [[AIGC_LOCK_01784]]{[[AIGC_LOCK_01785]] -> [[AIGC_LOCK_01786]] -> ... -> [[AIGC_LOCK_01787]]} 线性平推。**
+
+
+[[AIGC_LOCK_01788]]
+[[AIGC_LOCK_01789]]{[[AIGC_LOCK_01790]] 最终统一实战口径}
+[[AIGC_LOCK_01791]]{toc}{subsection}{[[AIGC_LOCK_01792]] 最终统一实战口径}
+
+
+为了避免读者被后文不同统计模型的“最优”说法绕晕，最终考试策略只采用这一套口径：
+
+
+[[AIGC_LOCK_01793]]{enumerate}
+[[AIGC_LOCK_01794]] [[AIGC_LOCK_01795]]{第一层：先找低成本锚点。} 起手优先 [[AIGC_LOCK_01796]]{Q37 / Q39 / Q41 / Q45} 中题干最容易定位的题；[[AIGC_LOCK_01797]]{Q36} 用来定区；[[AIGC_LOCK_01798]]{Q38 / Q42 / Q43} 不建议裸做死磕。
+[[AIGC_LOCK_01799]] [[AIGC_LOCK_01800]]{第二层：锚点落位后再启用联动。} [[AIGC_LOCK_01801]]{Q39} 很前则重点推 [[AIGC_LOCK_01802]]{Q41} 到后段；[[AIGC_LOCK_01803]]{Q42} 在 [[AIGC_LOCK_01804]]{[[AIGC_LOCK_01805]]-[[AIGC_LOCK_01806]]\%} 则拉 [[AIGC_LOCK_01807]]{Q44} 回前 [[AIGC_LOCK_01808]]{[[AIGC_LOCK_01809]]\%}；[[AIGC_LOCK_01810]]{Q44} 一旦做出，立刻联动 [[AIGC_LOCK_01811]]{Q45 / Q41 / Q43 / Q42}。
+[[AIGC_LOCK_01812]] [[AIGC_LOCK_01813]]{第三层：用弱排除收尾。} 已用段落可以降低优先级，但不能绝对排除，因为 Section B 明确允许同一段被多次选择。
+[[AIGC_LOCK_01814]] [[AIGC_LOCK_01815]]{第四层：统计模型只做辅助。} [[AIGC_LOCK_01816]]{Q38+Q40+Q42} 是信息互补性强的三锚组合，[[AIGC_LOCK_01817]]{Q41} 是信息增益大的题；这些结论说明“做出来后很有用”，不等于考场第一题必须先做它们。
+[[AIGC_LOCK_01818]]{enumerate}
+
+
+[[AIGC_LOCK_01819]]
+[[AIGC_LOCK_01820]]{[[AIGC_LOCK_01821]]. 附录 A：sample.txt 二次核对汇总}
+[[AIGC_LOCK_01822]]{toc}{section}{[[AIGC_LOCK_01823]]. 附录 A：sample.txt 二次核对汇总}
+
+
+[[AIGC_LOCK_01824]]
+[[AIGC_LOCK_01825]]{[[AIGC_LOCK_01826]] 结论}
+[[AIGC_LOCK_01827]]{toc}{subsection}{[[AIGC_LOCK_01828]] 结论}
+
+
+本轮已对 [[AIGC_LOCK_01829]]{sample.txt} 中纳入当前答案库的全部 [[AIGC_LOCK_01830]]{[[AIGC_LOCK_01831]]} 篇 Section B 文章、共 [[AIGC_LOCK_01832]]{[[AIGC_LOCK_01833]]} 题（[[AIGC_LOCK_01834]]{Q36-Q45}）完成二次核对。
+
+
+核对结果：
+
+
+[[AIGC_LOCK_01835]]{itemize}
+[[AIGC_LOCK_01836]] 复核标题数：[[AIGC_LOCK_01837]]{[[AIGC_LOCK_01838]]}
+[[AIGC_LOCK_01839]] 复核题目数：[[AIGC_LOCK_01840]]{[[AIGC_LOCK_01841]]}
+[[AIGC_LOCK_01842]] 发现需要修正的标题数：[[AIGC_LOCK_01843]]{[[AIGC_LOCK_01844]]}
+[[AIGC_LOCK_01845]] 发现需要修正的题目数：[[AIGC_LOCK_01846]]{[[AIGC_LOCK_01847]]}
+[[AIGC_LOCK_01848]]{itemize}
+
+
+也就是说，当前 [[AIGC_LOCK_01849]]{MANUAL\_ANSWERS} 中对应 [[AIGC_LOCK_01850]]{sample.txt} 的答案，在这一轮逐题复核后，[[AIGC_LOCK_01851]]{没有发现需要改动的题号}。
+
+
+[[AIGC_LOCK_01852]]
+[[AIGC_LOCK_01853]]{[[AIGC_LOCK_01854]] 核对范围}
+[[AIGC_LOCK_01855]]{toc}{subsection}{[[AIGC_LOCK_01856]] 核对范围}
+
+
+本次核对覆盖两类材料：
+
+
+[[AIGC_LOCK_01857]]{enumerate}
+[[AIGC_LOCK_01858]] 标准 [[AIGC_LOCK_01859]]{section\_b\_texts} 题文包：[[AIGC_LOCK_01860]]{[[AIGC_LOCK_01861]]} 篇
+[[AIGC_LOCK_01862]] 仅存在于 [[AIGC_LOCK_01863]]{sample.txt} /[[AIGC_LOCK_01864]]{} OCR 链路的补充标题：[[AIGC_LOCK_01865]]{[[AIGC_LOCK_01866]]} 篇
+[[AIGC_LOCK_01867]]{enumerate}
+
+
+补充的 [[AIGC_LOCK_01868]] 篇为：
+
+
+[[AIGC_LOCK_01869]]{itemize}
+[[AIGC_LOCK_01870]] [[AIGC_LOCK_01871]]{The Curious Case of the Tree That Owns Itself}
+[[AIGC_LOCK_01872]] [[AIGC_LOCK_01873]]{Blame your worthless workdays on meeting recovery syndrome}
+[[AIGC_LOCK_01874]] [[AIGC_LOCK_01875]]{These are the habits to avoid if you want to make a behavior change}
+[[AIGC_LOCK_01876]]{itemize}
+
+
+[[AIGC_LOCK_01877]]
+[[AIGC_LOCK_01878]]{[[AIGC_LOCK_01879]] 方法}
+[[AIGC_LOCK_01880]]{toc}{subsection}{[[AIGC_LOCK_01881]] 方法}
+
+
+本轮不是直接信任 [[AIGC_LOCK_01882]]{sample.txt} 里的现成答案，而是：
+
+
+[[AIGC_LOCK_01883]]{enumerate}
+[[AIGC_LOCK_01884]] 为每篇文章生成独立的逐题复核包。
+[[AIGC_LOCK_01885]] 逐题核对 [[AIGC_LOCK_01886]]{[[AIGC_LOCK_01887]]-[[AIGC_LOCK_01888]]} 的题干与全文段落对应关系。
+[[AIGC_LOCK_01889]] 对每篇文章输出最终答案串，并标记是否需要修正。
+[[AIGC_LOCK_01890]] 汇总全部批次结果，检查是否存在与当前答案库不一致的条目。
+[[AIGC_LOCK_01891]]{enumerate}
+
+
+[[AIGC_LOCK_01892]]
+[[AIGC_LOCK_01893]]{[[AIGC_LOCK_01894]] 结果文件}
+[[AIGC_LOCK_01895]]{toc}{subsection}{[[AIGC_LOCK_01896]] 结果文件}
+
+
+逐批复核结果位于：
+
+
+[[AIGC_LOCK_01897]]{itemize}
+[[AIGC_LOCK_01898]] [[AIGC_LOCK_01899]]{cet [[AIGC_LOCK_01900]]/\_analysis\_output/recheck\_reviews/batch1\_review.md}
+[[AIGC_LOCK_01901]] [[AIGC_LOCK_01902]]{cet [[AIGC_LOCK_01903]]/\_analysis\_output/recheck\_reviews/batch2\_review.md}
+[[AIGC_LOCK_01904]] [[AIGC_LOCK_01905]]{cet [[AIGC_LOCK_01906]]/\_analysis\_output/recheck\_reviews/batch3\_review.md}
+[[AIGC_LOCK_01907]] [[AIGC_LOCK_01908]]{cet [[AIGC_LOCK_01909]]/\_analysis\_output/recheck\_reviews/batch4\_review.md}
+[[AIGC_LOCK_01910]] [[AIGC_LOCK_01911]]{cet [[AIGC_LOCK_01912]]/\_analysis\_output/recheck\_reviews/batch5\_review.md}
+[[AIGC_LOCK_01913]] [[AIGC_LOCK_01914]]{cet [[AIGC_LOCK_01915]]/\_analysis\_output/recheck\_reviews/batch6\_review.md}
+[[AIGC_LOCK_01916]]{itemize}
+
+
+总汇总表位于：
+
+
+[[AIGC_LOCK_01917]]{itemize}
+[[AIGC_LOCK_01918]] [[AIGC_LOCK_01919]]{cet [[AIGC_LOCK_01920]]/\_analysis\_output/recheck\_review\_summary.csv}
+[[AIGC_LOCK_01921]]{itemize}
+
+
+复核包位于：
+
+
+[[AIGC_LOCK_01922]]{itemize}
+[[AIGC_LOCK_01923]] [[AIGC_LOCK_01924]]{cet [[AIGC_LOCK_01925]]/\_analysis\_output/recheck\_packets/}
+[[AIGC_LOCK_01926]]{itemize}
+
+
+[[AIGC_LOCK_01927]]
+[[AIGC_LOCK_01928]]{[[AIGC_LOCK_01929]] 当前状态}
+[[AIGC_LOCK_01930]]{toc}{subsection}{[[AIGC_LOCK_01931]] 当前状态}
+
+
+由于这轮二次核对没有发现任何需要修正的答案，因此：
+
+
+[[AIGC_LOCK_01932]]{itemize}
+[[AIGC_LOCK_01933]] 暂不需要改动 [[AIGC_LOCK_01934]]{MANUAL\_ANSWERS}
+[[AIGC_LOCK_01935]] 暂不需要重跑统计图表
+[[AIGC_LOCK_01936]] 当前统计结论和 [[AIGC_LOCK_01937]]{md} 报告仍然有效
+[[AIGC_LOCK_01938]]{itemize}
+
+
+[[AIGC_LOCK_01939]]
+[[AIGC_LOCK_01940]]{[[AIGC_LOCK_01941]]. 附录 B：相关性速记版}
+[[AIGC_LOCK_01942]]{toc}{section}{[[AIGC_LOCK_01943]]. 附录 B：相关性速记版}
+
+
+[[AIGC_LOCK_01944]]
+[[AIGC_LOCK_01945]]{[[AIGC_LOCK_01946]] 这轮最该记的核心结构}
+[[AIGC_LOCK_01947]]{toc}{subsection}{[[AIGC_LOCK_01948]] 这轮最该记的核心结构}
+
+
+[[AIGC_LOCK_01949]]{enumerate}
+[[AIGC_LOCK_01950]] 相邻题弱、隔一题链强，这个结论仍然成立。
+[[AIGC_LOCK_01951]] 但更重要的新结论是：[[AIGC_LOCK_01952]]{容量约束 + 边缘带信号 + 条件联动 + 反向排除} 比单题均值更有实战价值。
+[[AIGC_LOCK_01953]] [[AIGC_LOCK_01954]]{Q36} 更像位置锚，不像起手锚；[[AIGC_LOCK_01955]]{Q44} 不是尾题，却是中后段总枢纽。
+[[AIGC_LOCK_01956]] 有些题对不是线性链，而是镜像跷跷板，尤其 [[AIGC_LOCK_01957]]{Q41/Q40}、[[AIGC_LOCK_01958]]{Q43/Q44}。
+[[AIGC_LOCK_01959]] [[AIGC_LOCK_01960]]{Q38} 是“难做却好反推”的典型题。
+[[AIGC_LOCK_01961]]{enumerate}
+
+
+[[AIGC_LOCK_01962]]
+[[AIGC_LOCK_01963]]{[[AIGC_LOCK_01964]] 整套容量约束}
+[[AIGC_LOCK_01965]]{toc}{subsection}{[[AIGC_LOCK_01966]] 整套容量约束}
+
+
+来自 [[AIGC_LOCK_01967]]{question\_capacity\_summary.csv}：
+
+
+[[AIGC_LOCK_01968]]{itemize}
+[[AIGC_LOCK_01969]] 前 [[AIGC_LOCK_01970]]{[[AIGC_LOCK_01971]]\%} 最常见是 [[AIGC_LOCK_01972]]{[[AIGC_LOCK_01973]]} 题：[[AIGC_LOCK_01974]]{[[AIGC_LOCK_01975]]/[[AIGC_LOCK_01976]] = [[AIGC_LOCK_01977]]\%}
+[[AIGC_LOCK_01978]] 前 [[AIGC_LOCK_01979]]{[[AIGC_LOCK_01980]]\%} 为 [[AIGC_LOCK_01981]]{[[AIGC_LOCK_01982]]-[[AIGC_LOCK_01983]]} 题：[[AIGC_LOCK_01984]]{[[AIGC_LOCK_01985]]/[[AIGC_LOCK_01986]] = [[AIGC_LOCK_01987]]\%}
+[[AIGC_LOCK_01988]] 前 [[AIGC_LOCK_01989]]{[[AIGC_LOCK_01990]]\%} 为 [[AIGC_LOCK_01991]]{[[AIGC_LOCK_01992]]-[[AIGC_LOCK_01993]]} 题：[[AIGC_LOCK_01994]]{[[AIGC_LOCK_01995]]/[[AIGC_LOCK_01996]] = [[AIGC_LOCK_01997]]\%}
+[[AIGC_LOCK_01998]] 单个 [[AIGC_LOCK_01999]]{[[AIGC_LOCK_02000]]\%} 带最多装 [[AIGC_LOCK_02001]]{[[AIGC_LOCK_02002]]} 题：[[AIGC_LOCK_02003]]{[[AIGC_LOCK_02004]]/[[AIGC_LOCK_02005]] = [[AIGC_LOCK_02006]]\%}
+[[AIGC_LOCK_02007]] 单个 [[AIGC_LOCK_02008]]{[[AIGC_LOCK_02009]]\%} 带装到 [[AIGC_LOCK_02010]]{[[AIGC_LOCK_02011]]} 题只有 [[AIGC_LOCK_02012]]{[[AIGC_LOCK_02013]]/[[AIGC_LOCK_02014]] = [[AIGC_LOCK_02015]]\%}
+[[AIGC_LOCK_02016]]{itemize}
+
+
+动作含义：
+
+
+[[AIGC_LOCK_02017]]{itemize}
+[[AIGC_LOCK_02018]] 前区已经满仓，就要主动切向中后段。
+[[AIGC_LOCK_02019]] 某个 [[AIGC_LOCK_02020]]{[[AIGC_LOCK_02021]]\%} 带已经命中 [[AIGC_LOCK_02022]]{[[AIGC_LOCK_02023]]} 题，就要开始怀疑别的区间。
+[[AIGC_LOCK_02024]]{itemize}
+
+
+[[AIGC_LOCK_02025]]
+[[AIGC_LOCK_02026]]{[[AIGC_LOCK_02027]] 题号角色重估}
+[[AIGC_LOCK_02028]]{toc}{subsection}{[[AIGC_LOCK_02029]] 题号角色重估}
+
+
+来自 [[AIGC_LOCK_02030]]{question\_order\_profile.csv}：
+
+
+[[AIGC_LOCK_02031]]{itemize}
+[[AIGC_LOCK_02032]] [[AIGC_LOCK_02033]]{Q36}：[[AIGC_LOCK_02034]]{median\_rank = [[AIGC_LOCK_02035]]}，[[AIGC_LOCK_02036]]{earliest\_pct = [[AIGC_LOCK_02037]]\%}
+[[AIGC_LOCK_02038]] 结论：适合定区，不适合默认起手。
+[[AIGC_LOCK_02039]] [[AIGC_LOCK_02040]]{Q37}：[[AIGC_LOCK_02041]]{top2\_earliest\_pct = [[AIGC_LOCK_02042]]\%}
+[[AIGC_LOCK_02043]] 结论：前段最值得优先盯的奇数锚。
+[[AIGC_LOCK_02044]] [[AIGC_LOCK_02045]]{Q38}：[[AIGC_LOCK_02046]]{earliest\_pct = [[AIGC_LOCK_02047]]\%}，[[AIGC_LOCK_02048]]{top2\_latest\_pct = [[AIGC_LOCK_02049]]\%}
+[[AIGC_LOCK_02050]] 结论：摆动题，不适合裸做，但做出来后很适合反推。
+[[AIGC_LOCK_02051]] [[AIGC_LOCK_02052]]{Q41}：[[AIGC_LOCK_02053]]{top2\_latest\_pct = [[AIGC_LOCK_02054]]\%}
+[[AIGC_LOCK_02055]] 结论：比 [[AIGC_LOCK_02056]]{Q45} 更像真正的后段终点锚。
+[[AIGC_LOCK_02057]] [[AIGC_LOCK_02058]]{Q45}：[[AIGC_LOCK_02059]]{top3\_latest\_pct = [[AIGC_LOCK_02060]]\%}
+[[AIGC_LOCK_02061]] 结论：仍是后段锚，但不是唯一尾题。
+[[AIGC_LOCK_02062]] [[AIGC_LOCK_02063]]{Q44}：[[AIGC_LOCK_02064]]{median\_rank = [[AIGC_LOCK_02065]]}
+[[AIGC_LOCK_02066]] 结论：它不天然偏尾，但一旦做出，带动价值全表最高。
+[[AIGC_LOCK_02067]]{itemize}
+
+
+[[AIGC_LOCK_02068]]
+[[AIGC_LOCK_02069]]{[[AIGC_LOCK_02070]] 杠杆最大的题：Q44}
+[[AIGC_LOCK_02071]]{toc}{subsection}{[[AIGC_LOCK_02072]] 杠杆最大的题：Q44}
+
+
+来自 [[AIGC_LOCK_02073]]{anchor\_leverage\_summary.csv}：
+
+
+[[AIGC_LOCK_02074]]{itemize}
+[[AIGC_LOCK_02075]] [[AIGC_LOCK_02076]]{Q44} 的 [[AIGC_LOCK_02077]]{rule\_count\_gain10 = [[AIGC_LOCK_02078]]}
+[[AIGC_LOCK_02079]] [[AIGC_LOCK_02080]]{Q44} 的 [[AIGC_LOCK_02081]]{rule\_count\_gain15 = [[AIGC_LOCK_02082]]}
+[[AIGC_LOCK_02083]] [[AIGC_LOCK_02084]]{Q44} 的 [[AIGC_LOCK_02085]]{top3\_avg\_gain\_40\_pct = [[AIGC_LOCK_02086]]}
+[[AIGC_LOCK_02087]]{itemize}
+
+
+解释：
+
+
+[[AIGC_LOCK_02088]]{itemize}
+[[AIGC_LOCK_02089]] [[AIGC_LOCK_02090]]{Q44} 不是拿来收尾的。
+[[AIGC_LOCK_02091]] [[AIGC_LOCK_02092]]{Q44} 是一旦做出，就要立刻去联动 [[AIGC_LOCK_02093]]{Q45 / Q41 / Q43 / Q42} 的中后段枢纽。
+[[AIGC_LOCK_02094]]{itemize}
+
+
+[[AIGC_LOCK_02095]]
+[[AIGC_LOCK_02096]]{[[AIGC_LOCK_02097]] 最值钱的条件联动}
+[[AIGC_LOCK_02098]]{toc}{subsection}{[[AIGC_LOCK_02099]] 最值钱的条件联动}
+
+
+来自 [[AIGC_LOCK_02100]]{conditional\_window\_gain\_stats.csv}：
+
+
+[[AIGC_LOCK_02101]]
+[[AIGC_LOCK_02102]]{强跳带}
+[[AIGC_LOCK_02103]]{toc}{subsubsection}{强跳带}
+
+
+[[AIGC_LOCK_02104]]{itemize}
+[[AIGC_LOCK_02105]] [[AIGC_LOCK_02106]]{Q39} 在 [[AIGC_LOCK_02107]]{[[AIGC_LOCK_02108]]-[[AIGC_LOCK_02109]]\%} 时，[[AIGC_LOCK_02110]]{Q41} 落入 [[AIGC_LOCK_02111]]{[[AIGC_LOCK_02112]]-[[AIGC_LOCK_02113]]\%} 的覆盖率为 [[AIGC_LOCK_02114]]{[[AIGC_LOCK_02115]]\%}
+[[AIGC_LOCK_02116]] [[AIGC_LOCK_02117]]{Q44} 在 [[AIGC_LOCK_02118]]{[[AIGC_LOCK_02119]]-[[AIGC_LOCK_02120]]\%} 时，[[AIGC_LOCK_02121]]{Q45} 落入 [[AIGC_LOCK_02122]]{[[AIGC_LOCK_02123]]-[[AIGC_LOCK_02124]]\%} 的覆盖率为 [[AIGC_LOCK_02125]]{[[AIGC_LOCK_02126]]\%}
+[[AIGC_LOCK_02127]]{itemize}
+
+
+[[AIGC_LOCK_02128]]
+[[AIGC_LOCK_02129]]{压缩窗口}
+[[AIGC_LOCK_02130]]{toc}{subsubsection}{压缩窗口}
+
+
+[[AIGC_LOCK_02131]]{itemize}
+[[AIGC_LOCK_02132]] [[AIGC_LOCK_02133]]{Q37} 在 [[AIGC_LOCK_02134]]{[[AIGC_LOCK_02135]]-[[AIGC_LOCK_02136]]\%} 时，[[AIGC_LOCK_02137]]{Q39} 被压进 [[AIGC_LOCK_02138]]{[[AIGC_LOCK_02139]]-[[AIGC_LOCK_02140]]\%}，覆盖率 [[AIGC_LOCK_02141]]{[[AIGC_LOCK_02142]]\%}
+[[AIGC_LOCK_02143]] [[AIGC_LOCK_02144]]{Q42} 在 [[AIGC_LOCK_02145]]{[[AIGC_LOCK_02146]]-[[AIGC_LOCK_02147]]\%} 时，[[AIGC_LOCK_02148]]{Q44} 被压进 [[AIGC_LOCK_02149]]{[[AIGC_LOCK_02150]]-[[AIGC_LOCK_02151]]\%}，覆盖率 [[AIGC_LOCK_02152]]{[[AIGC_LOCK_02153]]\%}
+[[AIGC_LOCK_02154]] [[AIGC_LOCK_02155]]{Q42} 在 [[AIGC_LOCK_02156]]{[[AIGC_LOCK_02157]]-[[AIGC_LOCK_02158]]\%} 时，[[AIGC_LOCK_02159]]{Q45} 被压进 [[AIGC_LOCK_02160]]{[[AIGC_LOCK_02161]]-[[AIGC_LOCK_02162]]\%}，覆盖率 [[AIGC_LOCK_02163]]{[[AIGC_LOCK_02164]]\%}
+[[AIGC_LOCK_02165]]{itemize}
+
+
+[[AIGC_LOCK_02166]]
+[[AIGC_LOCK_02167]]{反向排除}
+[[AIGC_LOCK_02168]]{toc}{subsubsection}{反向排除}
+
+
+[[AIGC_LOCK_02169]]{itemize}
+[[AIGC_LOCK_02170]] [[AIGC_LOCK_02171]]{Q41} 在 [[AIGC_LOCK_02172]]{[[AIGC_LOCK_02173]]-[[AIGC_LOCK_02174]]\%} 时，[[AIGC_LOCK_02175]]{Q40} 被压到 [[AIGC_LOCK_02176]]{[[AIGC_LOCK_02177]]-[[AIGC_LOCK_02178]]\%}，覆盖率 [[AIGC_LOCK_02179]]{[[AIGC_LOCK_02180]]\%}
+[[AIGC_LOCK_02181]] [[AIGC_LOCK_02182]]{Q43} 在 [[AIGC_LOCK_02183]]{[[AIGC_LOCK_02184]]-[[AIGC_LOCK_02185]]\%} 时，[[AIGC_LOCK_02186]]{Q44} 被压回 [[AIGC_LOCK_02187]]{[[AIGC_LOCK_02188]]-[[AIGC_LOCK_02189]]\%}，覆盖率 [[AIGC_LOCK_02190]]{[[AIGC_LOCK_02191]]\%}
+[[AIGC_LOCK_02192]] [[AIGC_LOCK_02193]]{Q37} 在 [[AIGC_LOCK_02194]]{[[AIGC_LOCK_02195]]-[[AIGC_LOCK_02196]]\%} 时，[[AIGC_LOCK_02197]]{Q36} 被压进 [[AIGC_LOCK_02198]]{[[AIGC_LOCK_02199]]-[[AIGC_LOCK_02200]]\%}，覆盖率 [[AIGC_LOCK_02201]]{[[AIGC_LOCK_02202]]\%}
+[[AIGC_LOCK_02203]]{itemize}
+
+
+[[AIGC_LOCK_02204]]
+[[AIGC_LOCK_02205]]{[[AIGC_LOCK_02206]] 高层规律}
+[[AIGC_LOCK_02207]]{toc}{subsection}{[[AIGC_LOCK_02208]] 高层规律}
+
+
+[[AIGC_LOCK_02209]]
+[[AIGC_LOCK_02210]]{边缘带最有信息量}
+[[AIGC_LOCK_02211]]{toc}{subsubsection}{边缘带最有信息量}
+
+
+[[AIGC_LOCK_02212]]{itemize}
+[[AIGC_LOCK_02213]] 最强规则几乎都出现在 [[AIGC_LOCK_02214]]{[[AIGC_LOCK_02215]]-[[AIGC_LOCK_02216]]\%} 和 [[AIGC_LOCK_02217]]{[[AIGC_LOCK_02218]]-[[AIGC_LOCK_02219]]\%}
+[[AIGC_LOCK_02220]] 中间带更多只是趋势，不是硬约束
+[[AIGC_LOCK_02221]]{itemize}
+
+
+一句话：
+
+
+[[AIGC_LOCK_02222]]{中间带给趋势，边缘带给硬信号。}
+
+
+[[AIGC_LOCK_02223]]
+[[AIGC_LOCK_02224]]{镜像跷跷板比线性链更重要}
+[[AIGC_LOCK_02225]]{toc}{subsubsection}{镜像跷跷板比线性链更重要}
+
+
+[[AIGC_LOCK_02226]]{itemize}
+[[AIGC_LOCK_02227]] [[AIGC_LOCK_02228]]{Q41/Q40}：[[AIGC_LOCK_02229]]{Q41} 很前时 [[AIGC_LOCK_02230]]{Q40} 被推后，[[AIGC_LOCK_02231]]{Q41} 很后时 [[AIGC_LOCK_02232]]{Q40} 被拉前
+[[AIGC_LOCK_02233]] [[AIGC_LOCK_02234]]{Q43/Q44}：[[AIGC_LOCK_02235]]{Q43} 很后时 [[AIGC_LOCK_02236]]{Q44} 被拉前，[[AIGC_LOCK_02237]]{Q43} 靠前时 [[AIGC_LOCK_02238]]{Q44} 更可能偏后
+[[AIGC_LOCK_02239]]{itemize}
+
+
+一句话：
+
+
+[[AIGC_LOCK_02240]]{有些题对不是顺着走，而是跷跷板。}
+
+
+[[AIGC_LOCK_02241]]
+[[AIGC_LOCK_02242]]{[[AIGC_LOCK_02243]]{Q38} 是好反推题}
+[[AIGC_LOCK_02244]]{toc}{subsubsection}{Q38 是好反推题}
+
+
+[[AIGC_LOCK_02245]]{itemize}
+[[AIGC_LOCK_02246]] 它本身分散，不适合裸做
+[[AIGC_LOCK_02247]] 但一旦落到异常带，会强力约束 [[AIGC_LOCK_02248]]{Q37 / Q39 / Q40 / Q45}
+[[AIGC_LOCK_02249]]{itemize}
+
+
+[[AIGC_LOCK_02250]]
+[[AIGC_LOCK_02251]]{[[AIGC_LOCK_02252]]{Q44} 是全局枢纽}
+[[AIGC_LOCK_02253]]{toc}{subsubsection}{Q44 是全局枢纽}
+
+
+[[AIGC_LOCK_02254]]{itemize}
+[[AIGC_LOCK_02255]] 它不一定最晚出现
+[[AIGC_LOCK_02256]] 但它最能切开后段结构
+[[AIGC_LOCK_02257]] 一旦做出，就该立刻扩散联动
+[[AIGC_LOCK_02258]]{itemize}
+
+
+[[AIGC_LOCK_02259]]
+[[AIGC_LOCK_02260]]{[[AIGC_LOCK_02261]] 最简策略版}
+[[AIGC_LOCK_02262]]{toc}{subsection}{[[AIGC_LOCK_02263]] 最简策略版}
+
+
+[[AIGC_LOCK_02264]]{enumerate}
+[[AIGC_LOCK_02265]] 先记容量账本，不要在同一区间过度堆题。
+[[AIGC_LOCK_02266]] 前段先看 [[AIGC_LOCK_02267]]{Q37 / Q39}，不要默认从 [[AIGC_LOCK_02268]]{Q36} 起手。
+[[AIGC_LOCK_02269]] 后段用 [[AIGC_LOCK_02270]]{Q41 / Q45} 切区，不要只盯 [[AIGC_LOCK_02271]]{Q45}。
+[[AIGC_LOCK_02272]] [[AIGC_LOCK_02273]]{Q44} 一旦做出，立刻联动 [[AIGC_LOCK_02274]]{Q45 / Q41 / Q43 / Q42}。
+[[AIGC_LOCK_02275]] [[AIGC_LOCK_02276]]{Q38 / Q42 / Q43} 放到锚点落位后再缩窗处理。
+[[AIGC_LOCK_02277]] 看到边缘带时，要把它当高强度条件，不要只当“稍微偏前/[[AIGC_LOCK_02278]]{}偏后”。
+[[AIGC_LOCK_02279]]{enumerate}
+
+
+[[AIGC_LOCK_02280]]
+[[AIGC_LOCK_02281]]{[[AIGC_LOCK_02282]]. 附录 C：考试实战机械版操作手册}
+[[AIGC_LOCK_02283]]{toc}{section}{[[AIGC_LOCK_02284]]. 附录 C：考试实战机械版操作手册}
+
+
+[[AIGC_LOCK_02285]]
+[[AIGC_LOCK_02286]]{[[AIGC_LOCK_02287]] 这份手册的目标}
+[[AIGC_LOCK_02288]]{toc}{subsection}{[[AIGC_LOCK_02289]] 这份手册的目标}
+
+
+这不是分析报告。
+
+
+这是一份给考生直接照着执行的机械操作说明。
+
+
+原则只有两个：
+
+
+[[AIGC_LOCK_02290]]{enumerate}
+[[AIGC_LOCK_02291]] 不追求优雅。
+[[AIGC_LOCK_02292]] 尽量把判断写成 if-else，让考生在考场上少思考、多执行。
+[[AIGC_LOCK_02293]]{enumerate}
+
+
+适用前提：
+
+
+[[AIGC_LOCK_02294]]{itemize}
+[[AIGC_LOCK_02295]] 你已经看过题干和选项。
+[[AIGC_LOCK_02296]] 你大致读完了文章主旨，知道文章大概在讲什么。
+[[AIGC_LOCK_02297]] 你不是逐字精读，而是准备进入“定位+匹配”的做题模式。
+[[AIGC_LOCK_02298]]{itemize}
+
+
+[[AIGC_LOCK_02299]]
+[[AIGC_LOCK_02300]]{[[AIGC_LOCK_02301]] 先记住的固定底层规则}
+[[AIGC_LOCK_02302]]{toc}{subsection}{[[AIGC_LOCK_02303]] 先记住的固定底层规则}
+
+
+进入做题前，脑子里先装这 [[AIGC_LOCK_02304]] 条：
+
+
+[[AIGC_LOCK_02305]]{enumerate}
+[[AIGC_LOCK_02306]] 前 [[AIGC_LOCK_02307]]{[[AIGC_LOCK_02308]]\%} 通常只会装 [[AIGC_LOCK_02309]]{[[AIGC_LOCK_02310]]-[[AIGC_LOCK_02311]]} 题。
+[[AIGC_LOCK_02312]] 前 [[AIGC_LOCK_02313]]{[[AIGC_LOCK_02314]]\%} 通常只会装 [[AIGC_LOCK_02315]]{[[AIGC_LOCK_02316]]-[[AIGC_LOCK_02317]]} 题。
+[[AIGC_LOCK_02318]] 单个 [[AIGC_LOCK_02319]]{[[AIGC_LOCK_02320]]\%} 区间通常最多只装 [[AIGC_LOCK_02321]]{[[AIGC_LOCK_02322]]} 题。
+[[AIGC_LOCK_02323]] 相邻题通常不是邻近题，不要默认 [[AIGC_LOCK_02324]]{[[AIGC_LOCK_02325]]} 做出来后 [[AIGC_LOCK_02326]]{[[AIGC_LOCK_02327]]} 就在附近。
+[[AIGC_LOCK_02328]] 真正更适合联动的是隔一题链。
+[[AIGC_LOCK_02329]] [[AIGC_LOCK_02330]]{Q36} 更像定区题，不像默认起手题。
+[[AIGC_LOCK_02331]] [[AIGC_LOCK_02332]]{Q44} 是中后段总枢纽，一旦做出要立刻利用。
+[[AIGC_LOCK_02333]] [[AIGC_LOCK_02334]]{Q38 / Q42 / Q43} 一般不要一上来裸做。
+[[AIGC_LOCK_02335]]{enumerate}
+
+
+[[AIGC_LOCK_02336]]
+[[AIGC_LOCK_02337]]{[[AIGC_LOCK_02338]] 开始做题前：先做 [[AIGC_LOCK_02339]] 秒准备}
+[[AIGC_LOCK_02340]]{toc}{subsection}{[[AIGC_LOCK_02341]] 开始做题前：先做 [[AIGC_LOCK_02342]] 秒准备}
+
+
+[[AIGC_LOCK_02343]]
+[[AIGC_LOCK_02344]]{步骤 [[AIGC_LOCK_02345]]：先看 [[AIGC_LOCK_02346]] 个题干，不急着做}
+[[AIGC_LOCK_02347]]{toc}{subsubsection}{步骤 [[AIGC_LOCK_02348]]：先看 [[AIGC_LOCK_02349]] 个题干，不急着做}
+
+
+你要做的不是立刻选答案，而是给题干分组。
+
+
+把 [[AIGC_LOCK_02350]] 题分成三类：
+
+
+[[AIGC_LOCK_02351]]{enumerate}
+[[AIGC_LOCK_02352]] 明显是定义/[[AIGC_LOCK_02353]]{}总述/[[AIGC_LOCK_02354]]{}主旨型
+[[AIGC_LOCK_02355]] 明显有强关键词、专有名词、数字、对比结构的
+[[AIGC_LOCK_02356]] 很抽象、很难一下定位的
+[[AIGC_LOCK_02357]]{enumerate}
+
+
+[[AIGC_LOCK_02358]]
+[[AIGC_LOCK_02359]]{步骤 [[AIGC_LOCK_02360]]：先在脑子里标记 [[AIGC_LOCK_02361]] 个优先题}
+[[AIGC_LOCK_02362]]{toc}{subsubsection}{步骤 [[AIGC_LOCK_02363]]：先在脑子里标记 [[AIGC_LOCK_02364]] 个优先题}
+
+
+默认优先顺序：
+
+
+[[AIGC_LOCK_02365]]{enumerate}
+[[AIGC_LOCK_02366]] [[AIGC_LOCK_02367]]{Q37}
+[[AIGC_LOCK_02368]] [[AIGC_LOCK_02369]]{Q39}
+[[AIGC_LOCK_02370]] [[AIGC_LOCK_02371]]{Q41}
+[[AIGC_LOCK_02372]] [[AIGC_LOCK_02373]]{Q45}
+[[AIGC_LOCK_02374]] [[AIGC_LOCK_02375]]{Q36}
+[[AIGC_LOCK_02376]]{enumerate}
+
+
+解释：
+
+
+[[AIGC_LOCK_02377]]{itemize}
+[[AIGC_LOCK_02378]] [[AIGC_LOCK_02379]]{Q37 / Q39} 适合切前段和奇数链
+[[AIGC_LOCK_02380]] [[AIGC_LOCK_02381]]{Q41 / Q45} 适合切后段
+[[AIGC_LOCK_02382]] [[AIGC_LOCK_02383]]{Q36} 适合确认整体是前中段启动还是中段启动
+[[AIGC_LOCK_02384]]{itemize}
+
+
+[[AIGC_LOCK_02385]]
+[[AIGC_LOCK_02386]]{步骤 [[AIGC_LOCK_02387]]：建立容量账本}
+[[AIGC_LOCK_02388]]{toc}{subsubsection}{步骤 [[AIGC_LOCK_02389]]：建立容量账本}
+
+
+拿到题后，你要在草稿纸上只记三样东西：
+
+
+[[AIGC_LOCK_02390]]{itemize}
+[[AIGC_LOCK_02391]] 前 [[AIGC_LOCK_02392]]{[[AIGC_LOCK_02393]]\%} 已经落了几题
+[[AIGC_LOCK_02394]] 前 [[AIGC_LOCK_02395]]{[[AIGC_LOCK_02396]]\%} 已经落了几题
+[[AIGC_LOCK_02397]] 每个 [[AIGC_LOCK_02398]]{[[AIGC_LOCK_02399]]\%} 带各落了几题
+[[AIGC_LOCK_02400]]{itemize}
+
+
+不需要精确到段号，只要大致知道：
+
+
+[[AIGC_LOCK_02401]]{itemize}
+[[AIGC_LOCK_02402]] [[AIGC_LOCK_02403]]{[[AIGC_LOCK_02404]]-[[AIGC_LOCK_02405]]\%}
+[[AIGC_LOCK_02406]] [[AIGC_LOCK_02407]]{[[AIGC_LOCK_02408]]-[[AIGC_LOCK_02409]]\%}
+[[AIGC_LOCK_02410]] [[AIGC_LOCK_02411]]{[[AIGC_LOCK_02412]]-[[AIGC_LOCK_02413]]\%}
+[[AIGC_LOCK_02414]] [[AIGC_LOCK_02415]]{[[AIGC_LOCK_02416]]-[[AIGC_LOCK_02417]]\%}
+[[AIGC_LOCK_02418]] [[AIGC_LOCK_02419]]{[[AIGC_LOCK_02420]]-[[AIGC_LOCK_02421]]\%}
+[[AIGC_LOCK_02422]]{itemize}
+
+
+每带装了几题
+
+
+[[AIGC_LOCK_02423]]
+[[AIGC_LOCK_02424]]{[[AIGC_LOCK_02425]] 第一轮：先找锚点题}
+[[AIGC_LOCK_02426]]{toc}{subsection}{[[AIGC_LOCK_02427]] 第一轮：先找锚点题}
+
+
+[[AIGC_LOCK_02428]]
+[[AIGC_LOCK_02429]]{总原则}
+[[AIGC_LOCK_02430]]{toc}{subsubsection}{总原则}
+
+
+第一轮不要贪多。
+
+
+目标不是一口气做完 [[AIGC_LOCK_02431]] 题，而是先做出 [[AIGC_LOCK_02432]] 到 [[AIGC_LOCK_02433]] 个锚点题，用来切开全文结构。
+
+
+[[AIGC_LOCK_02434]]
+[[AIGC_LOCK_02435]]{if-else 规则 [[AIGC_LOCK_02436]]：先从哪里开始读文章}
+[[AIGC_LOCK_02437]]{toc}{subsubsection}{if-else 规则 [[AIGC_LOCK_02438]]：先从哪里开始读文章}
+
+
+如果你粗读后感觉：
+
+
+[[AIGC_LOCK_02439]]{itemize}
+[[AIGC_LOCK_02440]] 文章前几段就开始给观点或案例
+[[AIGC_LOCK_02441]]{itemize}
+
+
+那么：
+
+
+[[AIGC_LOCK_02442]]{itemize}
+[[AIGC_LOCK_02443]] 先从前 [[AIGC_LOCK_02444]]{[[AIGC_LOCK_02445]]\%} 精读扫描
+[[AIGC_LOCK_02446]] 优先盯 [[AIGC_LOCK_02447]]{Q37}、[[AIGC_LOCK_02448]]{Q39}
+[[AIGC_LOCK_02449]]{itemize}
+
+
+否则如果你感觉：
+
+
+[[AIGC_LOCK_02450]]{itemize}
+[[AIGC_LOCK_02451]] 前几段在铺背景，真正信息集中在中后段
+[[AIGC_LOCK_02452]]{itemize}
+
+
+那么：
+
+
+[[AIGC_LOCK_02453]]{itemize}
+[[AIGC_LOCK_02454]] 先从 [[AIGC_LOCK_02455]]{[[AIGC_LOCK_02456]]\%} 以后精读扫描
+[[AIGC_LOCK_02457]] 优先盯 [[AIGC_LOCK_02458]]{Q41}、[[AIGC_LOCK_02459]]{Q45}
+[[AIGC_LOCK_02460]]{itemize}
+
+
+否则：
+
+
+[[AIGC_LOCK_02461]]{itemize}
+[[AIGC_LOCK_02462]] 先扫 [[AIGC_LOCK_02463]]{[[AIGC_LOCK_02464]]-[[AIGC_LOCK_02465]]\%}
+[[AIGC_LOCK_02466]] 优先盯 [[AIGC_LOCK_02467]]{Q36}、[[AIGC_LOCK_02468]]{Q39}
+[[AIGC_LOCK_02469]]{itemize}
+
+
+[[AIGC_LOCK_02470]]
+[[AIGC_LOCK_02471]]{if-else 规则 [[AIGC_LOCK_02472]]：第一题先做谁}
+[[AIGC_LOCK_02473]]{toc}{subsubsection}{if-else 规则 [[AIGC_LOCK_02474]]：第一题先做谁}
+
+
+如果前段有明显关键词题：
+
+
+[[AIGC_LOCK_02475]]{itemize}
+[[AIGC_LOCK_02476]] 先做 [[AIGC_LOCK_02477]]{Q37}
+[[AIGC_LOCK_02478]]{itemize}
+
+
+否则如果后段有明显关键词题：
+
+
+[[AIGC_LOCK_02479]]{itemize}
+[[AIGC_LOCK_02480]] 先做 [[AIGC_LOCK_02481]]{Q41} 或 [[AIGC_LOCK_02482]]{Q45}
+[[AIGC_LOCK_02483]]{itemize}
+
+
+否则：
+
+
+[[AIGC_LOCK_02484]]{itemize}
+[[AIGC_LOCK_02485]] 先做 [[AIGC_LOCK_02486]]{Q39}
+[[AIGC_LOCK_02487]]{itemize}
+
+
+[[AIGC_LOCK_02488]]
+[[AIGC_LOCK_02489]]{if-else 规则 [[AIGC_LOCK_02490]]：[[AIGC_LOCK_02491]]{Q36} 什么时候做}
+[[AIGC_LOCK_02492]]{toc}{subsubsection}{if-else 规则 [[AIGC_LOCK_02493]]：Q36 什么时候做}
+
+
+如果你已经大致知道：
+
+
+[[AIGC_LOCK_02494]]{itemize}
+[[AIGC_LOCK_02495]] 文章前中段开始出题
+[[AIGC_LOCK_02496]]{itemize}
+
+
+那么：
+
+
+[[AIGC_LOCK_02497]]{itemize}
+[[AIGC_LOCK_02498]] 立刻做 [[AIGC_LOCK_02499]]{Q36}
+[[AIGC_LOCK_02500]]{itemize}
+
+
+否则如果你发现：
+
+
+[[AIGC_LOCK_02501]]{itemize}
+[[AIGC_LOCK_02502]] 前段一直找不到明显对应句
+[[AIGC_LOCK_02503]]{itemize}
+
+
+那么：
+
+
+[[AIGC_LOCK_02504]]{itemize}
+[[AIGC_LOCK_02505]] 不要硬磨 [[AIGC_LOCK_02506]]{Q36}
+[[AIGC_LOCK_02507]] 先去做 [[AIGC_LOCK_02508]]{Q39 / Q41 / Q45}
+[[AIGC_LOCK_02509]]{itemize}
+
+
+[[AIGC_LOCK_02510]]
+[[AIGC_LOCK_02511]]{[[AIGC_LOCK_02512]] 第二轮：锚点题做出来后怎么机械推进}
+[[AIGC_LOCK_02513]]{toc}{subsection}{[[AIGC_LOCK_02514]] 第二轮：锚点题做出来后怎么机械推进}
+
+
+这部分最重要。
+
+
+[[AIGC_LOCK_02515]]
+[[AIGC_LOCK_02516]]{[[AIGC_LOCK_02517]].[[AIGC_LOCK_02518]] 如果先做出 [[AIGC_LOCK_02519]]{Q37}}
+[[AIGC_LOCK_02520]]{toc}{subsubsection}{[[AIGC_LOCK_02521]].[[AIGC_LOCK_02522]] 如果先做出 Q37}
+
+
+[[AIGC_LOCK_02523]]
+[[AIGC_LOCK_02524]]{if [[AIGC_LOCK_02525]]{Q37} 在 [[AIGC_LOCK_02526]]{[[AIGC_LOCK_02527]]-[[AIGC_LOCK_02528]]\%}}
+
+
+那么：
+
+
+[[AIGC_LOCK_02529]]{enumerate}
+[[AIGC_LOCK_02530]] 先做 [[AIGC_LOCK_02531]]{Q39}
+[[AIGC_LOCK_02532]] [[AIGC_LOCK_02533]]{Q39} 优先在 [[AIGC_LOCK_02534]]{[[AIGC_LOCK_02535]]-[[AIGC_LOCK_02536]]\%} 内找
+[[AIGC_LOCK_02537]] 不要一上来去找 [[AIGC_LOCK_02538]]{Q45}
+[[AIGC_LOCK_02539]] 如果 [[AIGC_LOCK_02540]]{Q39} 也很前，再把 [[AIGC_LOCK_02541]]{Q41} 直接往后 [[AIGC_LOCK_02542]]{[[AIGC_LOCK_02543]]\%} 怀疑
+[[AIGC_LOCK_02544]]{enumerate}
+
+
+[[AIGC_LOCK_02545]]
+[[AIGC_LOCK_02546]]{if [[AIGC_LOCK_02547]]{Q37} 在 [[AIGC_LOCK_02548]]{[[AIGC_LOCK_02549]]-[[AIGC_LOCK_02550]]\%}}
+
+
+那么：
+
+
+[[AIGC_LOCK_02551]]{enumerate}
+[[AIGC_LOCK_02552]] 先做 [[AIGC_LOCK_02553]]{Q39}
+[[AIGC_LOCK_02554]] 先扫 [[AIGC_LOCK_02555]]{[[AIGC_LOCK_02556]]-[[AIGC_LOCK_02557]]\%}
+[[AIGC_LOCK_02558]] 然后顺手看 [[AIGC_LOCK_02559]]{Q43 / Q44}
+[[AIGC_LOCK_02560]] 不要急着处理 [[AIGC_LOCK_02561]]{Q38}
+[[AIGC_LOCK_02562]]{enumerate}
+
+
+[[AIGC_LOCK_02563]]
+[[AIGC_LOCK_02564]]{if [[AIGC_LOCK_02565]]{Q37} 在 [[AIGC_LOCK_02566]]{[[AIGC_LOCK_02567]]-[[AIGC_LOCK_02568]]\%}}
+
+
+那么：
+
+
+[[AIGC_LOCK_02569]]{enumerate}
+[[AIGC_LOCK_02570]] 不要以为 [[AIGC_LOCK_02571]]{Q36} 也在附近
+[[AIGC_LOCK_02572]] 直接把 [[AIGC_LOCK_02573]]{Q36} 往 [[AIGC_LOCK_02574]]{[[AIGC_LOCK_02575]]-[[AIGC_LOCK_02576]]\%} 怀疑
+[[AIGC_LOCK_02577]] 然后做 [[AIGC_LOCK_02578]]{Q39}
+[[AIGC_LOCK_02579]] 再看 [[AIGC_LOCK_02580]]{Q40}
+[[AIGC_LOCK_02581]]{enumerate}
+
+
+[[AIGC_LOCK_02582]]
+[[AIGC_LOCK_02583]]{[[AIGC_LOCK_02584]].[[AIGC_LOCK_02585]] 如果先做出 [[AIGC_LOCK_02586]]{Q39}}
+[[AIGC_LOCK_02587]]{toc}{subsubsection}{[[AIGC_LOCK_02588]].[[AIGC_LOCK_02589]] 如果先做出 Q39}
+
+
+[[AIGC_LOCK_02590]]
+[[AIGC_LOCK_02591]]{if [[AIGC_LOCK_02592]]{Q39} 在 [[AIGC_LOCK_02593]]{[[AIGC_LOCK_02594]]-[[AIGC_LOCK_02595]]\%}}
+
+
+那么：
+
+
+[[AIGC_LOCK_02596]]{enumerate}
+[[AIGC_LOCK_02597]] [[AIGC_LOCK_02598]]{Q41} 直接优先怀疑 [[AIGC_LOCK_02599]]{[[AIGC_LOCK_02600]]-[[AIGC_LOCK_02601]]\%}
+[[AIGC_LOCK_02602]] 不要在前中段磨 [[AIGC_LOCK_02603]]{Q41}
+[[AIGC_LOCK_02604]] 顺手把 [[AIGC_LOCK_02605]]{Q40} 也往 [[AIGC_LOCK_02606]]{[[AIGC_LOCK_02607]]-[[AIGC_LOCK_02608]]\%} 怀疑
+[[AIGC_LOCK_02609]] [[AIGC_LOCK_02610]]{Q44} 也可以优先怀疑 [[AIGC_LOCK_02611]]{[[AIGC_LOCK_02612]]-[[AIGC_LOCK_02613]]\%}
+[[AIGC_LOCK_02614]]{enumerate}
+
+
+[[AIGC_LOCK_02615]]
+[[AIGC_LOCK_02616]]{if [[AIGC_LOCK_02617]]{Q39} 在 [[AIGC_LOCK_02618]]{[[AIGC_LOCK_02619]]-[[AIGC_LOCK_02620]]\%}}
+
+
+那么：
+
+
+[[AIGC_LOCK_02621]]{enumerate}
+[[AIGC_LOCK_02622]] 先做 [[AIGC_LOCK_02623]]{Q41}
+[[AIGC_LOCK_02624]] 先扫 [[AIGC_LOCK_02625]]{[[AIGC_LOCK_02626]]-[[AIGC_LOCK_02627]]\%} 或 [[AIGC_LOCK_02628]]{[[AIGC_LOCK_02629]]-[[AIGC_LOCK_02630]]\%}
+[[AIGC_LOCK_02631]] 然后再决定是否跳后段
+[[AIGC_LOCK_02632]]{enumerate}
+
+
+[[AIGC_LOCK_02633]]
+[[AIGC_LOCK_02634]]{if [[AIGC_LOCK_02635]]{Q39} 在 [[AIGC_LOCK_02636]]{[[AIGC_LOCK_02637]]-[[AIGC_LOCK_02638]]\%}}
+
+
+那么：
+
+
+[[AIGC_LOCK_02639]]{enumerate}
+[[AIGC_LOCK_02640]] [[AIGC_LOCK_02641]]{Q41} 不一定更后，先看 [[AIGC_LOCK_02642]]{[[AIGC_LOCK_02643]]-[[AIGC_LOCK_02644]]\%}
+[[AIGC_LOCK_02645]] 不要过早把 [[AIGC_LOCK_02646]]{Q41} 直接钉死在最后段
+[[AIGC_LOCK_02647]]{enumerate}
+
+
+[[AIGC_LOCK_02648]]
+[[AIGC_LOCK_02649]]{[[AIGC_LOCK_02650]].[[AIGC_LOCK_02651]] 如果先做出 [[AIGC_LOCK_02652]]{Q41}}
+[[AIGC_LOCK_02653]]{toc}{subsubsection}{[[AIGC_LOCK_02654]].[[AIGC_LOCK_02655]] 如果先做出 Q41}
+
+
+[[AIGC_LOCK_02656]]
+[[AIGC_LOCK_02657]]{if [[AIGC_LOCK_02658]]{Q41} 在 [[AIGC_LOCK_02659]]{[[AIGC_LOCK_02660]]-[[AIGC_LOCK_02661]]\%}}
+
+
+那么：
+
+
+[[AIGC_LOCK_02662]]{enumerate}
+[[AIGC_LOCK_02663]] [[AIGC_LOCK_02664]]{Q40} 不要在它附近找
+[[AIGC_LOCK_02665]] [[AIGC_LOCK_02666]]{Q40} 优先去 [[AIGC_LOCK_02667]]{[[AIGC_LOCK_02668]]-[[AIGC_LOCK_02669]]\%}
+[[AIGC_LOCK_02670]] [[AIGC_LOCK_02671]]{Q42} 优先去 [[AIGC_LOCK_02672]]{[[AIGC_LOCK_02673]]-[[AIGC_LOCK_02674]]\%}
+[[AIGC_LOCK_02675]] [[AIGC_LOCK_02676]]{Q44} 也优先去 [[AIGC_LOCK_02677]]{[[AIGC_LOCK_02678]]-[[AIGC_LOCK_02679]]\%}
+[[AIGC_LOCK_02680]]{enumerate}
+
+
+[[AIGC_LOCK_02681]]
+[[AIGC_LOCK_02682]]{if [[AIGC_LOCK_02683]]{Q41} 在 [[AIGC_LOCK_02684]]{[[AIGC_LOCK_02685]]-[[AIGC_LOCK_02686]]\%}}
+
+
+那么：
+
+
+[[AIGC_LOCK_02687]]{enumerate}
+[[AIGC_LOCK_02688]] [[AIGC_LOCK_02689]]{Q40} 反而优先去 [[AIGC_LOCK_02690]]{[[AIGC_LOCK_02691]]-[[AIGC_LOCK_02692]]\%}
+[[AIGC_LOCK_02693]] [[AIGC_LOCK_02694]]{Q42} 优先去 [[AIGC_LOCK_02695]]{[[AIGC_LOCK_02696]]-[[AIGC_LOCK_02697]]\%}
+[[AIGC_LOCK_02698]] 不要把 [[AIGC_LOCK_02699]]{Q40} 和 [[AIGC_LOCK_02700]]{Q41} 当成相邻联动题
+[[AIGC_LOCK_02701]]{enumerate}
+
+
+[[AIGC_LOCK_02702]]
+[[AIGC_LOCK_02703]]{if [[AIGC_LOCK_02704]]{Q41} 在 [[AIGC_LOCK_02705]]{[[AIGC_LOCK_02706]]-[[AIGC_LOCK_02707]]\%}}
+
+
+那么：
+
+
+[[AIGC_LOCK_02708]]{enumerate}
+[[AIGC_LOCK_02709]] [[AIGC_LOCK_02710]]{Q42} 优先去 [[AIGC_LOCK_02711]]{[[AIGC_LOCK_02712]]-[[AIGC_LOCK_02713]]\%}
+[[AIGC_LOCK_02714]] [[AIGC_LOCK_02715]]{Q40} 优先去 [[AIGC_LOCK_02716]]{[[AIGC_LOCK_02717]]-[[AIGC_LOCK_02718]]\%}
+[[AIGC_LOCK_02719]] 后段结构还没完全切开，不要急着处理 [[AIGC_LOCK_02720]]{Q45}
+[[AIGC_LOCK_02721]]{enumerate}
+
+
+[[AIGC_LOCK_02722]]
+[[AIGC_LOCK_02723]]{[[AIGC_LOCK_02724]].[[AIGC_LOCK_02725]] 如果先做出 [[AIGC_LOCK_02726]]{Q44}}
+[[AIGC_LOCK_02727]]{toc}{subsubsection}{[[AIGC_LOCK_02728]].[[AIGC_LOCK_02729]] 如果先做出 Q44}
+
+
+这是最关键的分支。
+
+
+[[AIGC_LOCK_02730]]
+[[AIGC_LOCK_02731]]{if [[AIGC_LOCK_02732]]{Q44} 在 [[AIGC_LOCK_02733]]{[[AIGC_LOCK_02734]]-[[AIGC_LOCK_02735]]\%}}
+
+
+那么：
+
+
+[[AIGC_LOCK_02736]]{enumerate}
+[[AIGC_LOCK_02737]] 下一题立刻做 [[AIGC_LOCK_02738]]{Q45}
+[[AIGC_LOCK_02739]] [[AIGC_LOCK_02740]]{Q45} 直接优先去 [[AIGC_LOCK_02741]]{[[AIGC_LOCK_02742]]-[[AIGC_LOCK_02743]]\%}
+[[AIGC_LOCK_02744]] 然后再做 [[AIGC_LOCK_02745]]{Q41}
+[[AIGC_LOCK_02746]] [[AIGC_LOCK_02747]]{Q43} 优先怀疑 [[AIGC_LOCK_02748]]{[[AIGC_LOCK_02749]]-[[AIGC_LOCK_02750]]\%}
+[[AIGC_LOCK_02751]] [[AIGC_LOCK_02752]]{Q42} 优先怀疑 [[AIGC_LOCK_02753]]{[[AIGC_LOCK_02754]]-[[AIGC_LOCK_02755]]\%}
+[[AIGC_LOCK_02756]]{enumerate}
+
+
+[[AIGC_LOCK_02757]]
+[[AIGC_LOCK_02758]]{if [[AIGC_LOCK_02759]]{Q44} 在 [[AIGC_LOCK_02760]]{[[AIGC_LOCK_02761]]-[[AIGC_LOCK_02762]]\%}}
+
+
+那么：
+
+
+[[AIGC_LOCK_02763]]{enumerate}
+[[AIGC_LOCK_02764]] 下一题先做 [[AIGC_LOCK_02765]]{Q45}
+[[AIGC_LOCK_02766]] [[AIGC_LOCK_02767]]{Q45} 优先去 [[AIGC_LOCK_02768]]{[[AIGC_LOCK_02769]]-[[AIGC_LOCK_02770]]\%}
+[[AIGC_LOCK_02771]] 然后看 [[AIGC_LOCK_02772]]{Q41}
+[[AIGC_LOCK_02773]] 再看 [[AIGC_LOCK_02774]]{Q43}
+[[AIGC_LOCK_02775]]{enumerate}
+
+
+[[AIGC_LOCK_02776]]
+[[AIGC_LOCK_02777]]{if [[AIGC_LOCK_02778]]{Q44} 在 [[AIGC_LOCK_02779]]{[[AIGC_LOCK_02780]]-[[AIGC_LOCK_02781]]\%}}
+
+
+那么：
+
+
+[[AIGC_LOCK_02782]]{enumerate}
+[[AIGC_LOCK_02783]] 不要默认 [[AIGC_LOCK_02784]]{Q45} 也继续在最后段
+[[AIGC_LOCK_02785]] 先把 [[AIGC_LOCK_02786]]{Q45} 怀疑到 [[AIGC_LOCK_02787]]{[[AIGC_LOCK_02788]]-[[AIGC_LOCK_02789]]\%}
+[[AIGC_LOCK_02790]] [[AIGC_LOCK_02791]]{Q41} 优先怀疑 [[AIGC_LOCK_02792]]{[[AIGC_LOCK_02793]]-[[AIGC_LOCK_02794]]\%}
+[[AIGC_LOCK_02795]] [[AIGC_LOCK_02796]]{Q39} 优先怀疑 [[AIGC_LOCK_02797]]{[[AIGC_LOCK_02798]]-[[AIGC_LOCK_02799]]\%}
+[[AIGC_LOCK_02800]]{enumerate}
+
+
+[[AIGC_LOCK_02801]]
+[[AIGC_LOCK_02802]]{[[AIGC_LOCK_02803]].[[AIGC_LOCK_02804]] 如果先做出 [[AIGC_LOCK_02805]]{Q42}}
+[[AIGC_LOCK_02806]]{toc}{subsubsection}{[[AIGC_LOCK_02807]].[[AIGC_LOCK_02808]] 如果先做出 Q42}
+
+
+[[AIGC_LOCK_02809]]
+[[AIGC_LOCK_02810]]{if [[AIGC_LOCK_02811]]{Q42} 在 [[AIGC_LOCK_02812]]{[[AIGC_LOCK_02813]]-[[AIGC_LOCK_02814]]\%}}
+
+
+那么：
+
+
+[[AIGC_LOCK_02815]]{enumerate}
+[[AIGC_LOCK_02816]] 立刻做 [[AIGC_LOCK_02817]]{Q44}
+[[AIGC_LOCK_02818]] [[AIGC_LOCK_02819]]{Q44} 优先去 [[AIGC_LOCK_02820]]{[[AIGC_LOCK_02821]]-[[AIGC_LOCK_02822]]\%}
+[[AIGC_LOCK_02823]] 然后做 [[AIGC_LOCK_02824]]{Q45}
+[[AIGC_LOCK_02825]] [[AIGC_LOCK_02826]]{Q45} 优先去 [[AIGC_LOCK_02827]]{[[AIGC_LOCK_02828]]-[[AIGC_LOCK_02829]]\%}
+[[AIGC_LOCK_02830]]{enumerate}
+
+
+[[AIGC_LOCK_02831]]
+[[AIGC_LOCK_02832]]{if [[AIGC_LOCK_02833]]{Q42} 在 [[AIGC_LOCK_02834]]{[[AIGC_LOCK_02835]]-[[AIGC_LOCK_02836]]\%}}
+
+
+那么：
+
+
+[[AIGC_LOCK_02837]]{enumerate}
+[[AIGC_LOCK_02838]] [[AIGC_LOCK_02839]]{Q44} 优先怀疑 [[AIGC_LOCK_02840]]{[[AIGC_LOCK_02841]]-[[AIGC_LOCK_02842]]\%}
+[[AIGC_LOCK_02843]] [[AIGC_LOCK_02844]]{Q41} 不要立刻钉死在最后段
+[[AIGC_LOCK_02845]]{enumerate}
+
+
+[[AIGC_LOCK_02846]]
+[[AIGC_LOCK_02847]]{if [[AIGC_LOCK_02848]]{Q42} 在 [[AIGC_LOCK_02849]]{[[AIGC_LOCK_02850]]-[[AIGC_LOCK_02851]]\%}}
+
+
+那么：
+
+
+[[AIGC_LOCK_02852]]{enumerate}
+[[AIGC_LOCK_02853]] 不要以为 [[AIGC_LOCK_02854]]{Q44} 还在前 [[AIGC_LOCK_02855]]{[[AIGC_LOCK_02856]]\%}
+[[AIGC_LOCK_02857]] 先把 [[AIGC_LOCK_02858]]{Q44} 放宽到 [[AIGC_LOCK_02859]]{[[AIGC_LOCK_02860]]-[[AIGC_LOCK_02861]]\%}
+[[AIGC_LOCK_02862]] 再看 [[AIGC_LOCK_02863]]{Q45}
+[[AIGC_LOCK_02864]]{enumerate}
+
+
+[[AIGC_LOCK_02865]]
+[[AIGC_LOCK_02866]]{[[AIGC_LOCK_02867]].[[AIGC_LOCK_02868]] 如果先做出 [[AIGC_LOCK_02869]]{Q38}}
+[[AIGC_LOCK_02870]]{toc}{subsubsection}{[[AIGC_LOCK_02871]].[[AIGC_LOCK_02872]] 如果先做出 Q38}
+
+
+默认不要先做它。
+
+
+但如果你已经做出来了，就马上利用它。
+
+
+[[AIGC_LOCK_02873]]
+[[AIGC_LOCK_02874]]{if [[AIGC_LOCK_02875]]{Q38} 在 [[AIGC_LOCK_02876]]{[[AIGC_LOCK_02877]]-[[AIGC_LOCK_02878]]\%}}
+
+
+那么：
+
+
+[[AIGC_LOCK_02879]]{enumerate}
+[[AIGC_LOCK_02880]] [[AIGC_LOCK_02881]]{Q37} 优先去 [[AIGC_LOCK_02882]]{[[AIGC_LOCK_02883]]-[[AIGC_LOCK_02884]]\%}
+[[AIGC_LOCK_02885]] [[AIGC_LOCK_02886]]{Q39} 优先去 [[AIGC_LOCK_02887]]{[[AIGC_LOCK_02888]]-[[AIGC_LOCK_02889]]\%}
+[[AIGC_LOCK_02890]] [[AIGC_LOCK_02891]]{Q40} 不要直接去最后段
+[[AIGC_LOCK_02892]]{enumerate}
+
+
+[[AIGC_LOCK_02893]]
+[[AIGC_LOCK_02894]]{if [[AIGC_LOCK_02895]]{Q38} 在 [[AIGC_LOCK_02896]]{[[AIGC_LOCK_02897]]-[[AIGC_LOCK_02898]]\%}}
+
+
+那么：
+
+
+[[AIGC_LOCK_02899]]{enumerate}
+[[AIGC_LOCK_02900]] [[AIGC_LOCK_02901]]{Q40} 优先去 [[AIGC_LOCK_02902]]{[[AIGC_LOCK_02903]]-[[AIGC_LOCK_02904]]\%}
+[[AIGC_LOCK_02905]] [[AIGC_LOCK_02906]]{Q45} 也优先去 [[AIGC_LOCK_02907]]{[[AIGC_LOCK_02908]]-[[AIGC_LOCK_02909]]\%}
+[[AIGC_LOCK_02910]]{enumerate}
+
+
+[[AIGC_LOCK_02911]]
+[[AIGC_LOCK_02912]]{if [[AIGC_LOCK_02913]]{Q38} 在 [[AIGC_LOCK_02914]]{[[AIGC_LOCK_02915]]-[[AIGC_LOCK_02916]]\%}}
+
+
+那么：
+
+
+[[AIGC_LOCK_02917]]{enumerate}
+[[AIGC_LOCK_02918]] 不要对别题做太强推断
+[[AIGC_LOCK_02919]] 继续回到 [[AIGC_LOCK_02920]]{Q37 / Q39 / Q41} 主线
+[[AIGC_LOCK_02921]]{enumerate}
+
+
+[[AIGC_LOCK_02922]]
+[[AIGC_LOCK_02923]]{[[AIGC_LOCK_02924]] 第三轮：什么时候该放弃某题，转做下一题}
+[[AIGC_LOCK_02925]]{toc}{subsection}{[[AIGC_LOCK_02926]] 第三轮：什么时候该放弃某题，转做下一题}
+
+
+[[AIGC_LOCK_02927]]
+[[AIGC_LOCK_02928]]{if-else 规则 [[AIGC_LOCK_02929]]：某题扫了很久还没找到}
+[[AIGC_LOCK_02930]]{toc}{subsubsection}{if-else 规则 [[AIGC_LOCK_02931]]：某题扫了很久还没找到}
+
+
+如果某题你已经在怀疑区间内看了两遍，还是没有明显对应句：
+
+
+[[AIGC_LOCK_02932]]{itemize}
+[[AIGC_LOCK_02933]] 不要继续死磨
+[[AIGC_LOCK_02934]] 先回到锚点题
+[[AIGC_LOCK_02935]] 或者做它的联动题
+[[AIGC_LOCK_02936]]{itemize}
+
+
+例如：
+
+
+[[AIGC_LOCK_02937]]{itemize}
+[[AIGC_LOCK_02938]] [[AIGC_LOCK_02939]]{Q44} 做不出，就先做 [[AIGC_LOCK_02940]]{Q42} 或 [[AIGC_LOCK_02941]]{Q45}
+[[AIGC_LOCK_02942]] [[AIGC_LOCK_02943]]{Q41} 做不出，就先做 [[AIGC_LOCK_02944]]{Q39} 或 [[AIGC_LOCK_02945]]{Q45}
+[[AIGC_LOCK_02946]] [[AIGC_LOCK_02947]]{Q38} 做不出，就先别管它
+[[AIGC_LOCK_02948]]{itemize}
+
+
+[[AIGC_LOCK_02949]]
+[[AIGC_LOCK_02950]]{if-else 规则 [[AIGC_LOCK_02951]]：什么时候应该跳段}
+[[AIGC_LOCK_02952]]{toc}{subsubsection}{if-else 规则 [[AIGC_LOCK_02953]]：什么时候应该跳段}
+
+
+如果当前段已经明显塞进：
+
+
+[[AIGC_LOCK_02954]]{itemize}
+[[AIGC_LOCK_02955]] 同一个 [[AIGC_LOCK_02956]]{[[AIGC_LOCK_02957]]\%} 带 [[AIGC_LOCK_02958]] 题
+[[AIGC_LOCK_02959]]{itemize}
+
+
+那么：
+
+
+[[AIGC_LOCK_02960]]{itemize}
+[[AIGC_LOCK_02961]] 立刻降低继续在这里找的优先级
+[[AIGC_LOCK_02962]]{itemize}
+
+
+如果当前前 [[AIGC_LOCK_02963]]{[[AIGC_LOCK_02964]]\%} 已经塞进：
+
+
+[[AIGC_LOCK_02965]]{itemize}
+[[AIGC_LOCK_02966]] [[AIGC_LOCK_02967]] 题
+[[AIGC_LOCK_02968]]{itemize}
+
+
+那么：
+
+
+[[AIGC_LOCK_02969]]{itemize}
+[[AIGC_LOCK_02970]] 后续题优先怀疑中后段
+[[AIGC_LOCK_02971]]{itemize}
+
+
+如果前 [[AIGC_LOCK_02972]]{[[AIGC_LOCK_02973]]\%} 已经塞进：
+
+
+[[AIGC_LOCK_02974]]{itemize}
+[[AIGC_LOCK_02975]] [[AIGC_LOCK_02976]] 题
+[[AIGC_LOCK_02977]]{itemize}
+
+
+那么：
+
+
+[[AIGC_LOCK_02978]]{itemize}
+[[AIGC_LOCK_02979]] 不要再轻易把剩余题往前塞
+[[AIGC_LOCK_02980]]{itemize}
+
+
+[[AIGC_LOCK_02981]]
+[[AIGC_LOCK_02982]]{[[AIGC_LOCK_02983]] 给考生的最短执行版}
+[[AIGC_LOCK_02984]]{toc}{subsection}{[[AIGC_LOCK_02985]] 给考生的最短执行版}
+
+
+如果你懒得记上面那么多，只记这套：
+
+
+[[AIGC_LOCK_02986]]
+[[AIGC_LOCK_02987]]{起手}
+[[AIGC_LOCK_02988]]{toc}{subsubsection}{起手}
+
+
+[[AIGC_LOCK_02989]]{enumerate}
+[[AIGC_LOCK_02990]] 粗读全文大意。
+[[AIGC_LOCK_02991]] 先看 [[AIGC_LOCK_02992]]{Q37 / Q39 / Q41 / Q45}，从题干最容易定位的一题开始做。
+[[AIGC_LOCK_02993]] [[AIGC_LOCK_02994]]{Q36} 用来定区，不要默认第一题就做。
+[[AIGC_LOCK_02995]]{enumerate}
+
+
+[[AIGC_LOCK_02996]]
+[[AIGC_LOCK_02997]]{中途}
+[[AIGC_LOCK_02998]]{toc}{subsubsection}{中途}
+
+
+[[AIGC_LOCK_02999]]{enumerate}
+[[AIGC_LOCK_03000]] 做出 [[AIGC_LOCK_03001]]{Q44} 后，立刻联动 [[AIGC_LOCK_03002]]{Q45 / Q41 / Q43 / Q42}。
+[[AIGC_LOCK_03003]] 做出 [[AIGC_LOCK_03004]]{Q39} 很前，就把 [[AIGC_LOCK_03005]]{Q41} 往最后 [[AIGC_LOCK_03006]]{[[AIGC_LOCK_03007]]\%} 推。
+[[AIGC_LOCK_03008]] 做出 [[AIGC_LOCK_03009]]{Q42} 在 [[AIGC_LOCK_03010]]{[[AIGC_LOCK_03011]]-[[AIGC_LOCK_03012]]\%}，就把 [[AIGC_LOCK_03013]]{Q44} 拉回前 [[AIGC_LOCK_03014]]{[[AIGC_LOCK_03015]]\%}。
+[[AIGC_LOCK_03016]] 做出 [[AIGC_LOCK_03017]]{Q41} 在 [[AIGC_LOCK_03018]]{[[AIGC_LOCK_03019]]-[[AIGC_LOCK_03020]]\%}，就别在附近找 [[AIGC_LOCK_03021]]{Q40}。
+[[AIGC_LOCK_03022]]{enumerate}
+
+
+[[AIGC_LOCK_03023]]
+[[AIGC_LOCK_03024]]{收尾}
+[[AIGC_LOCK_03025]]{toc}{subsubsection}{收尾}
+
+
+[[AIGC_LOCK_03026]]{enumerate}
+[[AIGC_LOCK_03027]] [[AIGC_LOCK_03028]]{Q38 / Q42 / Q43} 放到后面做。
+[[AIGC_LOCK_03029]] 某个区间已经塞满，就赶紧跳区。
+[[AIGC_LOCK_03030]] 相邻题不要默认邻近。
+[[AIGC_LOCK_03031]]{enumerate}
+
+
+[[AIGC_LOCK_03032]]
+[[AIGC_LOCK_03033]]{[[AIGC_LOCK_03034]] 最后的机械铁律}
+[[AIGC_LOCK_03035]]{toc}{subsection}{[[AIGC_LOCK_03036]] 最后的机械铁律}
+
+
+[[AIGC_LOCK_03037]]{enumerate}
+[[AIGC_LOCK_03038]] 不要迷信相邻题。
+[[AIGC_LOCK_03039]] 不要一上来死磕 [[AIGC_LOCK_03040]]{Q38 / Q42 / Q43}。
+[[AIGC_LOCK_03041]] [[AIGC_LOCK_03042]]{Q36} 定区，[[AIGC_LOCK_03043]]{Q37} 起手，[[AIGC_LOCK_03044]]{Q41/Q45} 切后段，[[AIGC_LOCK_03045]]{Q44} 放大联动。
+[[AIGC_LOCK_03046]] 边缘带一出现，立刻提高警惕。
+[[AIGC_LOCK_03047]] 做题顺序不是 [[AIGC_LOCK_03048]]{[[AIGC_LOCK_03049]] -> [[AIGC_LOCK_03050]] -> ... -> [[AIGC_LOCK_03051]]}，而是“先锚点，后联动，最后收尾”。
+[[AIGC_LOCK_03052]]{enumerate}
+
+
+[[AIGC_LOCK_03053]]
+[[AIGC_LOCK_03054]]{[[AIGC_LOCK_03055]]. 附录 D：深度分析证据汇总（读者整理版）}
+[[AIGC_LOCK_03056]]{toc}{section}{[[AIGC_LOCK_03057]]. 附录 D：深度分析证据汇总（读者整理版）}
+
+
+以下 [[AIGC_LOCK_03058]] 项分析基于 [[AIGC_LOCK_03059]] 篇完整位置数据全量计算，作用是为正文结论提供证据，不单独生成新的做题流程。计算脚本：[[AIGC_LOCK_03060]]{deep\_analysis.py}，完整结果：[[AIGC_LOCK_03061]]{deep\_analysis\_results.md}。
+
+
+阅读本章时需要先区分三种口径：
+
+
+[[AIGC_LOCK_03062]]{enumerate}
+[[AIGC_LOCK_03063]] [[AIGC_LOCK_03064]]{硬事实}：例如题号顺序与段落顺序不单调、相邻题普遍远离、同段重复合法。
+[[AIGC_LOCK_03065]] [[AIGC_LOCK_03066]]{弱倾向}：例如多数试卷 [[AIGC_LOCK_03067]] 题对应 [[AIGC_LOCK_03068]] 个不同段落、首尾段选中率偏低、某些题对在统计上更常同向。
+[[AIGC_LOCK_03069]] [[AIGC_LOCK_03070]]{实战动作}：必须同时考虑题干可定位性、扫描成本和条件窗口，不能把“信息增益最大”直接等同为“考场第一题先做”。
+[[AIGC_LOCK_03071]]{enumerate}
+
+
+[[AIGC_LOCK_03072]]
+[[AIGC_LOCK_03073]]{[[AIGC_LOCK_03074]] 前后半区分裂比}
+[[AIGC_LOCK_03075]]{toc}{subsection}{[[AIGC_LOCK_03076]] 前后半区分裂比}
+
+
+[[AIGC_LOCK_03077]]{center}
+[[AIGC_LOCK_03078]]
+[[AIGC_LOCK_03079]]{[[AIGC_LOCK_03080]]}{4pt}
+[[AIGC_LOCK_03081]]{longtable}{@{}>{[[AIGC_LOCK_03082]][[AIGC_LOCK_03083]]}p{[[AIGC_LOCK_03084]][[AIGC_LOCK_03085]]}>{[[AIGC_LOCK_03086]][[AIGC_LOCK_03087]]}p{[[AIGC_LOCK_03088]][[AIGC_LOCK_03089]]}>{[[AIGC_LOCK_03090]][[AIGC_LOCK_03091]]}p{[[AIGC_LOCK_03092]][[AIGC_LOCK_03093]]}@{}}
+[[AIGC_LOCK_03094]]
+[[AIGC_LOCK_03095]]{前/[[AIGC_LOCK_03096]]{}后} & [[AIGC_LOCK_03097]]{篇数} & [[AIGC_LOCK_03098]]{占比} \\
+[[AIGC_LOCK_03099]]
+[[AIGC_LOCK_03100]]
+[[AIGC_LOCK_03101]]
+[[AIGC_LOCK_03102]]{前/[[AIGC_LOCK_03103]]{}后} & [[AIGC_LOCK_03104]]{篇数} & [[AIGC_LOCK_03105]]{占比} \\
+[[AIGC_LOCK_03106]]
+[[AIGC_LOCK_03107]]
+[[AIGC_LOCK_03108]]/[[AIGC_LOCK_03109]]{}[[AIGC_LOCK_03110]] & [[AIGC_LOCK_03111]] & [[AIGC_LOCK_03112]]\% \\
+[[AIGC_LOCK_03113]]/[[AIGC_LOCK_03114]]{}[[AIGC_LOCK_03115]] & [[AIGC_LOCK_03116]] & [[AIGC_LOCK_03117]]\% \\
+[[AIGC_LOCK_03118]]/[[AIGC_LOCK_03119]]{}[[AIGC_LOCK_03120]] & [[AIGC_LOCK_03121]] & [[AIGC_LOCK_03122]]\% \\
+[[AIGC_LOCK_03123]]/[[AIGC_LOCK_03124]]{}[[AIGC_LOCK_03125]] & [[AIGC_LOCK_03126]] & [[AIGC_LOCK_03127]]\% \\
+[[AIGC_LOCK_03128]]
+[[AIGC_LOCK_03129]]{longtable}
+[[AIGC_LOCK_03130]]
+[[AIGC_LOCK_03131]]{center}
+
+
+[[AIGC_LOCK_03132]]{itemize}
+[[AIGC_LOCK_03133]] [[AIGC_LOCK_03134]]/[[AIGC_LOCK_03135]]{}[[AIGC_LOCK_03136]] 是最常见分裂比（[[AIGC_LOCK_03137]]\%），非 [[AIGC_LOCK_03138]]/[[AIGC_LOCK_03139]]{}[[AIGC_LOCK_03140]]
+[[AIGC_LOCK_03141]] 前半区 ≥[[AIGC_LOCK_03142]] 题概率：[[AIGC_LOCK_03143]]\%
+[[AIGC_LOCK_03144]] [[AIGC_LOCK_03145]]{实战}：找到 [[AIGC_LOCK_03146]] 题就急着转向后半区 →[[AIGC_LOCK_03147]]{} 约 [[AIGC_LOCK_03148]]\% 试卷会漏掉第 [[AIGC_LOCK_03149]] 题
+[[AIGC_LOCK_03150]]{itemize}
+
+
+各题前半区概率：Q36([[AIGC_LOCK_03151]]\%) > Q37=Q39([[AIGC_LOCK_03152]]\%) > Q42([[AIGC_LOCK_03153]]\%) > Q44([[AIGC_LOCK_03154]]\%) > Q40([[AIGC_LOCK_03155]]\%) > Q38([[AIGC_LOCK_03156]]\%) > Q41=Q43([[AIGC_LOCK_03157]]\%) > Q45([[AIGC_LOCK_03158]]\%)
+
+
+[[AIGC_LOCK_03159]]
+[[AIGC_LOCK_03160]]{[[AIGC_LOCK_03161]] 奇偶交替结构}
+[[AIGC_LOCK_03162]]{toc}{subsection}{[[AIGC_LOCK_03163]] 奇偶交替结构}
+
+
+[[AIGC_LOCK_03164]]{间距=[[AIGC_LOCK_03165]]（相邻）}：全部 [[AIGC_LOCK_03166]]/[[AIGC_LOCK_03167]]{}[[AIGC_LOCK_03168]] 对负相关（ρ = [[AIGC_LOCK_03169]] [[AIGC_LOCK_03170]]{} [[AIGC_LOCK_03171]]） ✓
+
+
+[[AIGC_LOCK_03172]]{间距=[[AIGC_LOCK_03173]]（隔一）}：[[AIGC_LOCK_03174]]/[[AIGC_LOCK_03175]]{}[[AIGC_LOCK_03176]] 对正相关，[[AIGC_LOCK_03177]] 对为负/[[AIGC_LOCK_03178]]{}近零 — [[AIGC_LOCK_03179]]{非完美交替}
+
+[[AIGC_LOCK_03180]]{itemize}
+[[AIGC_LOCK_03181]] 正相关（[[AIGC_LOCK_03182]]）：Q36/[[AIGC_LOCK_03183]]{}Q38([[AIGC_LOCK_03184]]),[[AIGC_LOCK_03185]]{} Q37/[[AIGC_LOCK_03186]]{}Q39([[AIGC_LOCK_03187]]),[[AIGC_LOCK_03188]]{} Q41/[[AIGC_LOCK_03189]]{}Q43([[AIGC_LOCK_03190]])
+[[AIGC_LOCK_03191]] 正相关（[[AIGC_LOCK_03192]]）：Q42/[[AIGC_LOCK_03193]]{}Q44([[AIGC_LOCK_03194]]),[[AIGC_LOCK_03195]]{} Q43/[[AIGC_LOCK_03196]]{}Q45([[AIGC_LOCK_03197]])
+[[AIGC_LOCK_03198]] 负/[[AIGC_LOCK_03199]]{}近零：Q38/[[AIGC_LOCK_03200]]{}Q40([[AIGC_LOCK_03201]]),[[AIGC_LOCK_03202]]{} Q39/[[AIGC_LOCK_03203]]{}Q41([[AIGC_LOCK_03204]]),[[AIGC_LOCK_03205]]{} Q40/[[AIGC_LOCK_03206]]{}Q42([[AIGC_LOCK_03207]])
+[[AIGC_LOCK_03208]]{itemize}
+
+
+[[AIGC_LOCK_03209]]{修正结论}：相邻题跷跷板是铁律（[[AIGC_LOCK_03210]]/[[AIGC_LOCK_03211]]{}[[AIGC_LOCK_03212]]），但隔一题同向只是多数倾向（[[AIGC_LOCK_03213]]/[[AIGC_LOCK_03214]]{}[[AIGC_LOCK_03215]]），不是结构性保证。中段（Q38-Q42）交替结构最弱。
+
+
+[[AIGC_LOCK_03216]]
+[[AIGC_LOCK_03217]]{[[AIGC_LOCK_03218]] 文章段落数分组}
+[[AIGC_LOCK_03219]]{toc}{subsection}{[[AIGC_LOCK_03220]] 文章段落数分组}
+
+
+[[AIGC_LOCK_03221]]{center}
+[[AIGC_LOCK_03222]]
+[[AIGC_LOCK_03223]]{[[AIGC_LOCK_03224]]}{4pt}
+[[AIGC_LOCK_03225]]{longtable}{@{}>{[[AIGC_LOCK_03226]][[AIGC_LOCK_03227]]}p{[[AIGC_LOCK_03228]][[AIGC_LOCK_03229]]}>{[[AIGC_LOCK_03230]][[AIGC_LOCK_03231]]}p{[[AIGC_LOCK_03232]][[AIGC_LOCK_03233]]}>{[[AIGC_LOCK_03234]][[AIGC_LOCK_03235]]}p{[[AIGC_LOCK_03236]][[AIGC_LOCK_03237]]}>{[[AIGC_LOCK_03238]][[AIGC_LOCK_03239]]}p{[[AIGC_LOCK_03240]][[AIGC_LOCK_03241]]}@{}}
+[[AIGC_LOCK_03242]]
+[[AIGC_LOCK_03243]]{段落数} & [[AIGC_LOCK_03244]]{篇数} & [[AIGC_LOCK_03245]]{占比} & [[AIGC_LOCK_03246]]{干扰段} \\
+[[AIGC_LOCK_03247]]
+[[AIGC_LOCK_03248]]
+[[AIGC_LOCK_03249]]
+[[AIGC_LOCK_03250]]{段落数} & [[AIGC_LOCK_03251]]{篇数} & [[AIGC_LOCK_03252]]{占比} & [[AIGC_LOCK_03253]]{干扰段} \\
+[[AIGC_LOCK_03254]]
+[[AIGC_LOCK_03255]]
+[[AIGC_LOCK_03256]] & [[AIGC_LOCK_03257]] & [[AIGC_LOCK_03258]]\% & [[AIGC_LOCK_03259]] \\
+[[AIGC_LOCK_03260]] & [[AIGC_LOCK_03261]] & [[AIGC_LOCK_03262]]\% & [[AIGC_LOCK_03263]] \\
+[[AIGC_LOCK_03264]] & [[AIGC_LOCK_03265]] & [[AIGC_LOCK_03266]]\% & [[AIGC_LOCK_03267]] \\
+[[AIGC_LOCK_03268]] & [[AIGC_LOCK_03269]] & [[AIGC_LOCK_03270]]\% & [[AIGC_LOCK_03271]] \\
+[[AIGC_LOCK_03272]] & [[AIGC_LOCK_03273]] & [[AIGC_LOCK_03274]]\% & [[AIGC_LOCK_03275]] \\
+[[AIGC_LOCK_03276]] & [[AIGC_LOCK_03277]] & [[AIGC_LOCK_03278]]\% & [[AIGC_LOCK_03279]] \\
+[[AIGC_LOCK_03280]] & [[AIGC_LOCK_03281]] & [[AIGC_LOCK_03282]]\% & [[AIGC_LOCK_03283]] \\
+[[AIGC_LOCK_03284]] & [[AIGC_LOCK_03285]] & [[AIGC_LOCK_03286]]\% & [[AIGC_LOCK_03287]] \\
+[[AIGC_LOCK_03288]] & [[AIGC_LOCK_03289]] & [[AIGC_LOCK_03290]]\% & [[AIGC_LOCK_03291]] \\
+[[AIGC_LOCK_03292]]
+[[AIGC_LOCK_03293]]{longtable}
+[[AIGC_LOCK_03294]]
+[[AIGC_LOCK_03295]]{center}
+
+
+[[AIGC_LOCK_03296]]{itemize}
+[[AIGC_LOCK_03297]] 中位/[[AIGC_LOCK_03298]]{}均值均为 [[AIGC_LOCK_03299]] 段，干扰段 [[AIGC_LOCK_03300]][[AIGC_LOCK_03301]]{}[[AIGC_LOCK_03302]] 个
+[[AIGC_LOCK_03303]] 短文(≤[[AIGC_LOCK_03304]])与长文(≥[[AIGC_LOCK_03305]])位置分布差异显著：Q38 短文中位 [[AIGC_LOCK_03306]]\% vs 长文 [[AIGC_LOCK_03307]]\%（差 [[AIGC_LOCK_03308]]\%），Q37 短文 [[AIGC_LOCK_03309]]\% vs 长文 [[AIGC_LOCK_03310]]\%（差 [[AIGC_LOCK_03311]]\%）
+[[AIGC_LOCK_03312]] [[AIGC_LOCK_03313]]{实战}：段落数多的文章，干扰段更多，需更强排除法
+[[AIGC_LOCK_03314]]{itemize}
+
+
+[[AIGC_LOCK_03315]]
+[[AIGC_LOCK_03316]]{[[AIGC_LOCK_03317]] 时间窗口稳定性}
+[[AIGC_LOCK_03318]]{toc}{subsection}{[[AIGC_LOCK_03319]] 时间窗口稳定性}
+
+
+[[AIGC_LOCK_03320]]{center}
+[[AIGC_LOCK_03321]]
+[[AIGC_LOCK_03322]]{[[AIGC_LOCK_03323]]}{4pt}
+[[AIGC_LOCK_03324]]{longtable}{@{}>{[[AIGC_LOCK_03325]][[AIGC_LOCK_03326]]}p{[[AIGC_LOCK_03327]][[AIGC_LOCK_03328]]}>{[[AIGC_LOCK_03329]][[AIGC_LOCK_03330]]}p{[[AIGC_LOCK_03331]][[AIGC_LOCK_03332]]}@{}}
+[[AIGC_LOCK_03333]]
+[[AIGC_LOCK_03334]]{时代} & [[AIGC_LOCK_03335]]{篇数} \\
+[[AIGC_LOCK_03336]]
+[[AIGC_LOCK_03337]]
+[[AIGC_LOCK_03338]]
+[[AIGC_LOCK_03339]]{时代} & [[AIGC_LOCK_03340]]{篇数} \\
+[[AIGC_LOCK_03341]]
+[[AIGC_LOCK_03342]]
+[[AIGC_LOCK_03343]]-[[AIGC_LOCK_03344]] & [[AIGC_LOCK_03345]] \\
+[[AIGC_LOCK_03346]]-[[AIGC_LOCK_03347]] & [[AIGC_LOCK_03348]] \\
+[[AIGC_LOCK_03349]]-[[AIGC_LOCK_03350]] & [[AIGC_LOCK_03351]] \\
+[[AIGC_LOCK_03352]]
+[[AIGC_LOCK_03353]]{longtable}
+[[AIGC_LOCK_03354]]
+[[AIGC_LOCK_03355]]{center}
+
+
+[[AIGC_LOCK_03356]]{itemize}
+[[AIGC_LOCK_03357]] 平均跨时代位置漂移：[[AIGC_LOCK_03358]]\%
+[[AIGC_LOCK_03359]] 最大漂移：Q45（[[AIGC_LOCK_03360]]\%，从 [[AIGC_LOCK_03361]]\% 漂到 [[AIGC_LOCK_03362]]\%）
+[[AIGC_LOCK_03363]] 漂移 ≤[[AIGC_LOCK_03364]]\% 的题仅 [[AIGC_LOCK_03365]]/[[AIGC_LOCK_03366]]{}[[AIGC_LOCK_03367]]（Q36,[[AIGC_LOCK_03368]]{} Q39,[[AIGC_LOCK_03369]]{} Q42）
+[[AIGC_LOCK_03370]] [[AIGC_LOCK_03371]]{结论}：整体结构基本稳定，但个别题（Q45,[[AIGC_LOCK_03372]]{} Q44,[[AIGC_LOCK_03373]]{} Q37）有明显时代漂移
+[[AIGC_LOCK_03374]]{itemize}
+
+
+[[AIGC_LOCK_03375]]
+[[AIGC_LOCK_03376]]{[[AIGC_LOCK_03377]] 同段重复率：不是错误，也不是硬约束}
+[[AIGC_LOCK_03378]]{toc}{subsection}{[[AIGC_LOCK_03379]] 同段重复率：不是错误，也不是硬约束}
+
+
+[[AIGC_LOCK_03380]]{itemize}
+[[AIGC_LOCK_03381]] 总题对 [[AIGC_LOCK_03382]]，同答案字母碰撞仅 [[AIGC_LOCK_03383]] 次（[[AIGC_LOCK_03384]]\%）
+[[AIGC_LOCK_03385]] [[AIGC_LOCK_03386]] 题全部不同字母：[[AIGC_LOCK_03387]]/[[AIGC_LOCK_03388]]{}[[AIGC_LOCK_03389]] = [[AIGC_LOCK_03390]]\%
+[[AIGC_LOCK_03391]] [[AIGC_LOCK_03392]] 篇存在重复字母，说明“同一段对应多题”在样本中少见但真实存在
+[[AIGC_LOCK_03393]] 题目说明明确允许 [[AIGC_LOCK_03394]]{You may choose a paragraph more than once}，因此重复字母[[AIGC_LOCK_03395]]{不是数据错误}，也不是必须回溯修正的证据
+[[AIGC_LOCK_03396]] [[AIGC_LOCK_03397]]{实战}：已用过的段落可以降低优先级，但不能直接排除；只有题干语义明显不符时才能排除
+[[AIGC_LOCK_03398]]{itemize}
+
+
+[[AIGC_LOCK_03399]]
+[[AIGC_LOCK_03400]]{[[AIGC_LOCK_03401]] 答案序列单调性}
+[[AIGC_LOCK_03402]]{toc}{subsection}{[[AIGC_LOCK_03403]] 答案序列单调性}
+
+
+[[AIGC_LOCK_03404]]{itemize}
+[[AIGC_LOCK_03405]] 完全单调递增：[[AIGC_LOCK_03406]]/[[AIGC_LOCK_03407]]{}[[AIGC_LOCK_03408]]（[[AIGC_LOCK_03409]]\%）— 没有任何一篇是 Q36→[[AIGC_LOCK_03410]]{}Q45 从前到后排列
+[[AIGC_LOCK_03411]] 平均逆序对 [[AIGC_LOCK_03412]]/[[AIGC_LOCK_03413]]{}[[AIGC_LOCK_03414]]（随机期望 [[AIGC_LOCK_03415]]），实际/[[AIGC_LOCK_03416]]{}随机比 [[AIGC_LOCK_03417]]
+[[AIGC_LOCK_03418]] Kendall τ 均值仍接近 [[AIGC_LOCK_03419]]，τ > [[AIGC_LOCK_03420]] 篇数 [[AIGC_LOCK_03421]]/[[AIGC_LOCK_03422]]{}[[AIGC_LOCK_03423]]
+[[AIGC_LOCK_03424]] [[AIGC_LOCK_03425]]{结论}：题号与段落位置基本无单调关系。不能按题号顺序扫文章
+[[AIGC_LOCK_03426]]{itemize}
+
+
+[[AIGC_LOCK_03427]]
+[[AIGC_LOCK_03428]]{[[AIGC_LOCK_03429]] 答案字母分布与弱排除}
+[[AIGC_LOCK_03430]]{toc}{subsection}{[[AIGC_LOCK_03431]] 答案字母分布与弱排除}
+
+
+[[AIGC_LOCK_03432]]{itemize}
+[[AIGC_LOCK_03433]] 共 [[AIGC_LOCK_03434]] 个不同字母被使用（A[[AIGC_LOCK_03435]]{}R）
+[[AIGC_LOCK_03436]] 高频：G([[AIGC_LOCK_03437]]\%) > D=E([[AIGC_LOCK_03438]]\%) > C([[AIGC_LOCK_03439]]\%) > H([[AIGC_LOCK_03440]]\%)
+[[AIGC_LOCK_03441]] 低频：R([[AIGC_LOCK_03442]]\%),[[AIGC_LOCK_03443]]{} Q([[AIGC_LOCK_03444]]\%),[[AIGC_LOCK_03445]]{} P([[AIGC_LOCK_03446]]\%)
+[[AIGC_LOCK_03447]] [[AIGC_LOCK_03448]]{策略}：字母分布可用于后期弱排除和警惕干扰段，但不能把已用字母当作绝对不可再选
+[[AIGC_LOCK_03449]]{itemize}
+
+
+[[AIGC_LOCK_03450]]
+[[AIGC_LOCK_03451]]{[[AIGC_LOCK_03452]] 干扰段落分析}
+[[AIGC_LOCK_03453]]{toc}{subsection}{[[AIGC_LOCK_03454]] 干扰段落分析}
+
+
+[[AIGC_LOCK_03455]]{itemize}
+[[AIGC_LOCK_03456]] [[AIGC_LOCK_03457]] 篇共 [[AIGC_LOCK_03458]] 个干扰段落，每篇平均 [[AIGC_LOCK_03459]] 个
+[[AIGC_LOCK_03460]] 位置分布：[[AIGC_LOCK_03461]]-[[AIGC_LOCK_03462]]\%([[AIGC_LOCK_03463]]\%) > [[AIGC_LOCK_03464]]-[[AIGC_LOCK_03465]]\%([[AIGC_LOCK_03466]]\%) > [[AIGC_LOCK_03467]]-[[AIGC_LOCK_03468]]\%([[AIGC_LOCK_03469]]\%) > [[AIGC_LOCK_03470]]-[[AIGC_LOCK_03471]]\%([[AIGC_LOCK_03472]]\%) > [[AIGC_LOCK_03473]]-[[AIGC_LOCK_03474]]\%([[AIGC_LOCK_03475]]\%)
+[[AIGC_LOCK_03476]] 干扰段中位位置 [[AIGC_LOCK_03477]]\%
+[[AIGC_LOCK_03478]] [[AIGC_LOCK_03479]]{实战}：文章后半段（尤其 [[AIGC_LOCK_03480]]-[[AIGC_LOCK_03481]]\%）更可能出现干扰段落 →[[AIGC_LOCK_03482]]{} 后段匹配需更谨慎
+[[AIGC_LOCK_03483]]{itemize}
+
+
+[[AIGC_LOCK_03484]]
+[[AIGC_LOCK_03485]]{[[AIGC_LOCK_03486]] 多锚点复合条件}
+[[AIGC_LOCK_03487]]{toc}{subsection}{[[AIGC_LOCK_03488]] 多锚点复合条件}
+
+
+双锚点高确信规则（样本≥[[AIGC_LOCK_03489]]，目标缩至≤[[AIGC_LOCK_03490]]个位置带）：
+
+
+[[AIGC_LOCK_03491]]{center}
+[[AIGC_LOCK_03492]]
+[[AIGC_LOCK_03493]]{[[AIGC_LOCK_03494]]}{4pt}
+[[AIGC_LOCK_03495]]{longtable}{@{}>{[[AIGC_LOCK_03496]][[AIGC_LOCK_03497]]}p{[[AIGC_LOCK_03498]][[AIGC_LOCK_03499]]}>{[[AIGC_LOCK_03500]][[AIGC_LOCK_03501]]}p{[[AIGC_LOCK_03502]][[AIGC_LOCK_03503]]}>{[[AIGC_LOCK_03504]][[AIGC_LOCK_03505]]}p{[[AIGC_LOCK_03506]][[AIGC_LOCK_03507]]}>{[[AIGC_LOCK_03508]][[AIGC_LOCK_03509]]}p{[[AIGC_LOCK_03510]][[AIGC_LOCK_03511]]}>{[[AIGC_LOCK_03512]][[AIGC_LOCK_03513]]}p{[[AIGC_LOCK_03514]][[AIGC_LOCK_03515]]}@{}}
+[[AIGC_LOCK_03516]]
+[[AIGC_LOCK_03517]]{锚点条件} & [[AIGC_LOCK_03518]]{目标题} & [[AIGC_LOCK_03519]]{样本} & [[AIGC_LOCK_03520]]{最可能带} & [[AIGC_LOCK_03521]]{命中率} \\
+[[AIGC_LOCK_03522]]
+[[AIGC_LOCK_03523]]
+[[AIGC_LOCK_03524]]
+[[AIGC_LOCK_03525]]{锚点条件} & [[AIGC_LOCK_03526]]{目标题} & [[AIGC_LOCK_03527]]{样本} & [[AIGC_LOCK_03528]]{最可能带} & [[AIGC_LOCK_03529]]{命中率} \\
+[[AIGC_LOCK_03530]]
+[[AIGC_LOCK_03531]]
+Q36∈[[AIGC_LOCK_03532]]-[[AIGC_LOCK_03533]]\% ∧ Q44∈[[AIGC_LOCK_03534]]-[[AIGC_LOCK_03535]]\% & Q37 & [[AIGC_LOCK_03536]] & [[AIGC_LOCK_03537]]-[[AIGC_LOCK_03538]]\% & [[AIGC_LOCK_03539]]\% \\
+Q36∈[[AIGC_LOCK_03540]]-[[AIGC_LOCK_03541]]\% ∧ Q44∈[[AIGC_LOCK_03542]]-[[AIGC_LOCK_03543]]\% & Q39 & [[AIGC_LOCK_03544]] & [[AIGC_LOCK_03545]]-[[AIGC_LOCK_03546]]\% & [[AIGC_LOCK_03547]]\% \\
+Q37∈[[AIGC_LOCK_03548]]-[[AIGC_LOCK_03549]]\% ∧ Q44∈[[AIGC_LOCK_03550]]-[[AIGC_LOCK_03551]]\% & Q36 & [[AIGC_LOCK_03552]] & [[AIGC_LOCK_03553]]-[[AIGC_LOCK_03554]]\% & [[AIGC_LOCK_03555]]\% \\
+Q37∈[[AIGC_LOCK_03556]]-[[AIGC_LOCK_03557]]\% ∧ Q44∈[[AIGC_LOCK_03558]]-[[AIGC_LOCK_03559]]\% & Q39 & [[AIGC_LOCK_03560]] & [[AIGC_LOCK_03561]]-[[AIGC_LOCK_03562]]\% & [[AIGC_LOCK_03563]]\% \\
+Q36∈[[AIGC_LOCK_03564]]-[[AIGC_LOCK_03565]]\% ∧ Q41∈[[AIGC_LOCK_03566]]-[[AIGC_LOCK_03567]]\% & Q37 & [[AIGC_LOCK_03568]] & [[AIGC_LOCK_03569]]-[[AIGC_LOCK_03570]]\% & [[AIGC_LOCK_03571]]\% \\
+Q36∈[[AIGC_LOCK_03572]]-[[AIGC_LOCK_03573]]\% ∧ Q37∈[[AIGC_LOCK_03574]]-[[AIGC_LOCK_03575]]\% & Q39 & [[AIGC_LOCK_03576]] & [[AIGC_LOCK_03577]]-[[AIGC_LOCK_03578]]\% & [[AIGC_LOCK_03579]]\% \\
+Q37∈[[AIGC_LOCK_03580]]-[[AIGC_LOCK_03581]]\% ∧ Q43∈[[AIGC_LOCK_03582]]-[[AIGC_LOCK_03583]]\% & Q39 & [[AIGC_LOCK_03584]] & [[AIGC_LOCK_03585]]-[[AIGC_LOCK_03586]]\% & [[AIGC_LOCK_03587]]\% \\
+Q36∈[[AIGC_LOCK_03588]]-[[AIGC_LOCK_03589]]\% ∧ Q44∈[[AIGC_LOCK_03590]]-[[AIGC_LOCK_03591]]\% & Q39 & [[AIGC_LOCK_03592]] & [[AIGC_LOCK_03593]]-[[AIGC_LOCK_03594]]\% & [[AIGC_LOCK_03595]]\% \\
+Q37∈[[AIGC_LOCK_03596]]-[[AIGC_LOCK_03597]]\% ∧ Q44∈[[AIGC_LOCK_03598]]-[[AIGC_LOCK_03599]]\% & Q41 & [[AIGC_LOCK_03600]] & [[AIGC_LOCK_03601]]-[[AIGC_LOCK_03602]]\% & [[AIGC_LOCK_03603]]\% \\
+[[AIGC_LOCK_03604]]
+[[AIGC_LOCK_03605]]{longtable}
+[[AIGC_LOCK_03606]]
+[[AIGC_LOCK_03607]]{center}
+
+
+Q36+Q44 双锚定位效果：[[AIGC_LOCK_03608]] 种组合中，Q39 有 [[AIGC_LOCK_03609]] 种可缩至≤[[AIGC_LOCK_03610]]带（[[AIGC_LOCK_03611]]\%），Q37 和 Q45 各 [[AIGC_LOCK_03612]] 种（[[AIGC_LOCK_03613]]\%）。
+
+
+[[AIGC_LOCK_03614]]{策略}：先确认 Q36 和 Q44 两个锚点，再用双锚条件定位其余题。
+
+
+[[AIGC_LOCK_03615]]
+[[AIGC_LOCK_03616]]{[[AIGC_LOCK_03617]]. 附录 E：标准化分析证据（不是新策略版本）}
+[[AIGC_LOCK_03618]]{toc}{section}{[[AIGC_LOCK_03619]]. 附录 E：标准化分析证据（不是新策略版本）}
+
+
+以下分析消除了段落数差异的影响，对附录 D 中的粗糙结论进行修正和深化。这里的“最优”均指某个统计指标下的最优，不等于考场执行顺序。完整计算：[[AIGC_LOCK_03620]]{deep\_analysis\_round2.py} →[[AIGC_LOCK_03621]]{} [[AIGC_LOCK_03622]]{deep\_analysis\_round2.md}。
+
+
+[[AIGC_LOCK_03623]]
+[[AIGC_LOCK_03624]]{[[AIGC_LOCK_03625]] 标准化段落位置偏好}
+[[AIGC_LOCK_03626]]{toc}{subsection}{[[AIGC_LOCK_03627]] 标准化段落位置偏好}
+
+
+将每段转为相对位置（第 k/[[AIGC_LOCK_03628]]{}N），消除"P/[[AIGC_LOCK_03629]]{}Q/[[AIGC_LOCK_03630]]{}R 少只是因为文章短"的假象：
+
+
+[[AIGC_LOCK_03631]]{center}
+[[AIGC_LOCK_03632]]
+[[AIGC_LOCK_03633]]{[[AIGC_LOCK_03634]]}{4pt}
+[[AIGC_LOCK_03635]]{longtable}{@{}>{[[AIGC_LOCK_03636]][[AIGC_LOCK_03637]]}p{[[AIGC_LOCK_03638]][[AIGC_LOCK_03639]]}>{[[AIGC_LOCK_03640]][[AIGC_LOCK_03641]]}p{[[AIGC_LOCK_03642]][[AIGC_LOCK_03643]]}>{[[AIGC_LOCK_03644]][[AIGC_LOCK_03645]]}p{[[AIGC_LOCK_03646]][[AIGC_LOCK_03647]]}@{}}
+[[AIGC_LOCK_03648]]
+[[AIGC_LOCK_03649]]{位置桶} & [[AIGC_LOCK_03650]]{选中率} & [[AIGC_LOCK_03651]]{偏差(vs期望[[AIGC_LOCK_03652]]\%)} \\
+[[AIGC_LOCK_03653]]
+[[AIGC_LOCK_03654]]
+[[AIGC_LOCK_03655]]
+[[AIGC_LOCK_03656]]{位置桶} & [[AIGC_LOCK_03657]]{选中率} & [[AIGC_LOCK_03658]]{偏差(vs期望[[AIGC_LOCK_03659]]\%)} \\
+[[AIGC_LOCK_03660]]
+[[AIGC_LOCK_03661]]
+[[AIGC_LOCK_03662]]-[[AIGC_LOCK_03663]]\% & [[AIGC_LOCK_03664]]\% & [[AIGC_LOCK_03665]]{[[AIGC_LOCK_03666]]\%} \\
+[[AIGC_LOCK_03667]]-[[AIGC_LOCK_03668]]\% & [[AIGC_LOCK_03669]]\% & [[AIGC_LOCK_03670]]\% \\
+[[AIGC_LOCK_03671]]-[[AIGC_LOCK_03672]]\% & [[AIGC_LOCK_03673]]\% & [[AIGC_LOCK_03674]]\% \\
+[[AIGC_LOCK_03675]]-[[AIGC_LOCK_03676]]\% & [[AIGC_LOCK_03677]]{[[AIGC_LOCK_03678]]\%} & [[AIGC_LOCK_03679]]{[[AIGC_LOCK_03680]]\%} \\
+[[AIGC_LOCK_03681]]-[[AIGC_LOCK_03682]]\% & [[AIGC_LOCK_03683]]\% & [[AIGC_LOCK_03684]]{[[AIGC_LOCK_03685]]\%} \\
+[[AIGC_LOCK_03686]]-[[AIGC_LOCK_03687]]\% & [[AIGC_LOCK_03688]]\% & [[AIGC_LOCK_03689]]{[[AIGC_LOCK_03690]]\%} \\
+[[AIGC_LOCK_03691]]
+[[AIGC_LOCK_03692]]{longtable}
+[[AIGC_LOCK_03693]]
+[[AIGC_LOCK_03694]]{center}
+
+
+[[AIGC_LOCK_03695]]{结论}：出题人显著偏好文章中段（[[AIGC_LOCK_03696]]-[[AIGC_LOCK_03697]]\%）的段落作为答案。首尾段（[[AIGC_LOCK_03698]]-[[AIGC_LOCK_03699]]\%、[[AIGC_LOCK_03700]]-[[AIGC_LOCK_03701]]\%）被选为答案的概率比期望低 [[AIGC_LOCK_03702]]\%，更可能是干扰项。
+
+
+[[AIGC_LOCK_03703]]
+[[AIGC_LOCK_03704]]{[[AIGC_LOCK_03705]] 题号排名分析}
+[[AIGC_LOCK_03706]]{toc}{subsection}{[[AIGC_LOCK_03707]] 题号排名分析}
+
+
+将 [[AIGC_LOCK_03708]] 个答案按段落位置排序，每题排第几？
+
+
+[[AIGC_LOCK_03709]]{center}
+[[AIGC_LOCK_03710]]
+[[AIGC_LOCK_03711]]{[[AIGC_LOCK_03712]]}{4pt}
+[[AIGC_LOCK_03713]]{longtable}{@{}>{[[AIGC_LOCK_03714]][[AIGC_LOCK_03715]]}p{[[AIGC_LOCK_03716]][[AIGC_LOCK_03717]]}>{[[AIGC_LOCK_03718]][[AIGC_LOCK_03719]]}p{[[AIGC_LOCK_03720]][[AIGC_LOCK_03721]]}>{[[AIGC_LOCK_03722]][[AIGC_LOCK_03723]]}p{[[AIGC_LOCK_03724]][[AIGC_LOCK_03725]]}>{[[AIGC_LOCK_03726]][[AIGC_LOCK_03727]]}p{[[AIGC_LOCK_03728]][[AIGC_LOCK_03729]]}>{[[AIGC_LOCK_03730]][[AIGC_LOCK_03731]]}p{[[AIGC_LOCK_03732]][[AIGC_LOCK_03733]]}@{}}
+[[AIGC_LOCK_03734]]
+[[AIGC_LOCK_03735]]{题号} & [[AIGC_LOCK_03736]]{中位排名} & [[AIGC_LOCK_03737]]{σ} & [[AIGC_LOCK_03738]]{排第[[AIGC_LOCK_03739]]} & [[AIGC_LOCK_03740]]{排第[[AIGC_LOCK_03741]]} \\
+[[AIGC_LOCK_03742]]
+[[AIGC_LOCK_03743]]
+[[AIGC_LOCK_03744]]
+[[AIGC_LOCK_03745]]{题号} & [[AIGC_LOCK_03746]]{中位排名} & [[AIGC_LOCK_03747]]{σ} & [[AIGC_LOCK_03748]]{排第[[AIGC_LOCK_03749]]} & [[AIGC_LOCK_03750]]{排第[[AIGC_LOCK_03751]]} \\
+[[AIGC_LOCK_03752]]
+[[AIGC_LOCK_03753]]
+Q36 & [[AIGC_LOCK_03754]] & [[AIGC_LOCK_03755]]{[[AIGC_LOCK_03756]]} & [[AIGC_LOCK_03757]] & [[AIGC_LOCK_03758]] \\
+Q38 & [[AIGC_LOCK_03759]] & [[AIGC_LOCK_03760]]{[[AIGC_LOCK_03761]]} & [[AIGC_LOCK_03762]] & [[AIGC_LOCK_03763]] \\
+Q41 & [[AIGC_LOCK_03764]] & [[AIGC_LOCK_03765]] & [[AIGC_LOCK_03766]] & [[AIGC_LOCK_03767]] \\
+Q45 & [[AIGC_LOCK_03768]] & [[AIGC_LOCK_03769]] & [[AIGC_LOCK_03770]] & [[AIGC_LOCK_03771]] \\
+[[AIGC_LOCK_03772]]
+[[AIGC_LOCK_03773]]{longtable}
+[[AIGC_LOCK_03774]]
+[[AIGC_LOCK_03775]]{center}
+
+
+[[AIGC_LOCK_03776]]{itemize}
+[[AIGC_LOCK_03777]] Q36 排名最稳定（σ=[[AIGC_LOCK_03778]]，永远在中间附近）— 名副其实的"位置锚"
+[[AIGC_LOCK_03779]] Q38 最不稳定（σ=[[AIGC_LOCK_03780]]，可排第[[AIGC_LOCK_03781]]也可排第[[AIGC_LOCK_03782]]）— 高风险高回报
+[[AIGC_LOCK_03783]] Q41/[[AIGC_LOCK_03784]]{}Q45 中位排第[[AIGC_LOCK_03785]] — 后段偏好确认
+[[AIGC_LOCK_03786]]{itemize}
+
+
+[[AIGC_LOCK_03787]]{相邻题排名差}：平均仍在 [[AIGC_LOCK_03788]]-[[AIGC_LOCK_03789]] 个位置附近。Q43/[[AIGC_LOCK_03790]]{}Q44 排名差≤[[AIGC_LOCK_03791]] 次数 = [[AIGC_LOCK_03792]]{[[AIGC_LOCK_03793]]/[[AIGC_LOCK_03794]]{}[[AIGC_LOCK_03795]]}，依然几乎可以视为绝对互斥。相邻题在文章中几乎从不相邻。
+
+
+[[AIGC_LOCK_03796]]
+[[AIGC_LOCK_03797]]{[[AIGC_LOCK_03798]] 段落覆盖结构}
+[[AIGC_LOCK_03799]]{toc}{subsection}{[[AIGC_LOCK_03800]] 段落覆盖结构}
+
+
+[[AIGC_LOCK_03801]]{itemize}
+[[AIGC_LOCK_03802]] [[AIGC_LOCK_03803]]\% 答案段落与前一个答案段连续（间隔=[[AIGC_LOCK_03804]]）
+[[AIGC_LOCK_03805]] 平均最长连续答案段：[[AIGC_LOCK_03806]] 个
+[[AIGC_LOCK_03807]] 覆盖跨度：平均 [[AIGC_LOCK_03808]]\%，最小 [[AIGC_LOCK_03809]]\%
+[[AIGC_LOCK_03810]]{itemize}
+
+
+[[AIGC_LOCK_03811]]{含义}：答案段落倾向于连片分布，但覆盖几乎全文。不会出现文章某大段完全没有答案的情况。
+
+
+[[AIGC_LOCK_03812]]
+[[AIGC_LOCK_03813]]{[[AIGC_LOCK_03814]] 位置重标定}
+[[AIGC_LOCK_03815]]{toc}{subsection}{[[AIGC_LOCK_03816]] 位置重标定}
+
+
+用 letter\_index/[[AIGC_LOCK_03817]]{}(pcount-[[AIGC_LOCK_03818]]) 替代原始 pct 后，各题中位数变化 < [[AIGC_LOCK_03819]]\% →[[AIGC_LOCK_03820]]{} [[AIGC_LOCK_03821]]{原始 pct 指标足够可靠}，段落数差异不影响核心结论。
+
+
+[[AIGC_LOCK_03822]]
+[[AIGC_LOCK_03823]]{[[AIGC_LOCK_03824]] 信息互补性最强的三题锚组合}
+[[AIGC_LOCK_03825]]{toc}{subsection}{[[AIGC_LOCK_03826]] 信息互补性最强的三题锚组合}
+
+
+[[AIGC_LOCK_03827]]{center}
+[[AIGC_LOCK_03828]]
+[[AIGC_LOCK_03829]]{[[AIGC_LOCK_03830]]}{4pt}
+[[AIGC_LOCK_03831]]{longtable}{@{}>{[[AIGC_LOCK_03832]][[AIGC_LOCK_03833]]}p{[[AIGC_LOCK_03834]][[AIGC_LOCK_03835]]}>{[[AIGC_LOCK_03836]][[AIGC_LOCK_03837]]}p{[[AIGC_LOCK_03838]][[AIGC_LOCK_03839]]}>{[[AIGC_LOCK_03840]][[AIGC_LOCK_03841]]}p{[[AIGC_LOCK_03842]][[AIGC_LOCK_03843]]}>{[[AIGC_LOCK_03844]][[AIGC_LOCK_03845]]}p{[[AIGC_LOCK_03846]][[AIGC_LOCK_03847]]}@{}}
+[[AIGC_LOCK_03848]]
+[[AIGC_LOCK_03849]]{排名} & [[AIGC_LOCK_03850]]{锚组合} & [[AIGC_LOCK_03851]]{残余熵} & [[AIGC_LOCK_03852]]{含义} \\
+[[AIGC_LOCK_03853]]
+[[AIGC_LOCK_03854]]
+[[AIGC_LOCK_03855]]
+[[AIGC_LOCK_03856]]{排名} & [[AIGC_LOCK_03857]]{锚组合} & [[AIGC_LOCK_03858]]{残余熵} & [[AIGC_LOCK_03859]]{含义} \\
+[[AIGC_LOCK_03860]]
+[[AIGC_LOCK_03861]]
+[[AIGC_LOCK_03862]]{[[AIGC_LOCK_03863]]} & [[AIGC_LOCK_03864]]{Q38+Q40+Q42} & [[AIGC_LOCK_03865]]{[[AIGC_LOCK_03866]]} & 做完后剩余[[AIGC_LOCK_03867]]题每题仅需搜 [[AIGC_LOCK_03868]] 个带 \\
+[[AIGC_LOCK_03869]] & Q38+Q43+Q45 & [[AIGC_LOCK_03870]] & \  \\
+[[AIGC_LOCK_03871]] & Q38+Q40+Q44 & [[AIGC_LOCK_03872]] & \  \\
+[[AIGC_LOCK_03873]]{[[AIGC_LOCK_03874]]} & [[AIGC_LOCK_03875]]{Q36+Q37+Q38} & [[AIGC_LOCK_03876]]{[[AIGC_LOCK_03877]]} & 最差 — 前三题全做信息量最低 \\
+[[AIGC_LOCK_03878]]
+[[AIGC_LOCK_03879]]{longtable}
+[[AIGC_LOCK_03880]]
+[[AIGC_LOCK_03881]]{center}
+
+
+[[AIGC_LOCK_03882]]{解释}：在“做完三题后剩余题残余熵最低”这个指标下，[[AIGC_LOCK_03883]]{Q38+Q40+Q42} 最优，因为它们分布在不同链条和中段区域，位置互补。这个结论不能直接翻译成“考场第一题先做 Q38”，因为起手还必须考虑题干是否好定位。
+
+
+[[AIGC_LOCK_03884]]
+[[AIGC_LOCK_03885]]{[[AIGC_LOCK_03886]] 难度代理排名}
+[[AIGC_LOCK_03887]]{toc}{subsection}{[[AIGC_LOCK_03888]] 难度代理排名}
+
+
+综合位置离散度、信息熵、干扰段密度：
+
+
+[[AIGC_LOCK_03889]]{center}
+[[AIGC_LOCK_03890]]
+[[AIGC_LOCK_03891]]{[[AIGC_LOCK_03892]]}{4pt}
+[[AIGC_LOCK_03893]]{longtable}{@{}>{[[AIGC_LOCK_03894]][[AIGC_LOCK_03895]]}p{[[AIGC_LOCK_03896]][[AIGC_LOCK_03897]]}@{}}
+[[AIGC_LOCK_03898]]
+[[AIGC_LOCK_03899]]{最难 →[[AIGC_LOCK_03900]]{} 最易} \\
+[[AIGC_LOCK_03901]]
+[[AIGC_LOCK_03902]]
+[[AIGC_LOCK_03903]]
+[[AIGC_LOCK_03904]]{最难 →[[AIGC_LOCK_03905]]{} 最易} \\
+[[AIGC_LOCK_03906]]
+[[AIGC_LOCK_03907]]
+Q41 > Q38 > Q42 > Q45 > Q37 > Q44 > Q40 > Q43 > Q39 > Q36 \\
+[[AIGC_LOCK_03908]]
+[[AIGC_LOCK_03909]]{longtable}
+[[AIGC_LOCK_03910]]
+[[AIGC_LOCK_03911]]{center}
+
+
+Q36 最易（σ 最小、熵最低） →[[AIGC_LOCK_03912]]{} 适合第一个做。Q41 最难 →[[AIGC_LOCK_03913]]{} 放最后。
+
+
+[[AIGC_LOCK_03914]]
+[[AIGC_LOCK_03915]]{[[AIGC_LOCK_03916]] 每题最佳扫描窗口}
+[[AIGC_LOCK_03917]]{toc}{subsection}{[[AIGC_LOCK_03918]] 每题最佳扫描窗口}
+
+
+[[AIGC_LOCK_03919]]{center}
+[[AIGC_LOCK_03920]]
+[[AIGC_LOCK_03921]]{[[AIGC_LOCK_03922]]}{4pt}
+[[AIGC_LOCK_03923]]{longtable}{@{}>{[[AIGC_LOCK_03924]][[AIGC_LOCK_03925]]}p{[[AIGC_LOCK_03926]][[AIGC_LOCK_03927]]}>{[[AIGC_LOCK_03928]][[AIGC_LOCK_03929]]}p{[[AIGC_LOCK_03930]][[AIGC_LOCK_03931]]}>{[[AIGC_LOCK_03932]][[AIGC_LOCK_03933]]}p{[[AIGC_LOCK_03934]][[AIGC_LOCK_03935]]}@{}}
+[[AIGC_LOCK_03936]]
+[[AIGC_LOCK_03937]]{题号} & [[AIGC_LOCK_03938]]{最佳[[AIGC_LOCK_03939]]\%窗口} & [[AIGC_LOCK_03940]]{覆盖率} \\
+[[AIGC_LOCK_03941]]
+[[AIGC_LOCK_03942]]
+[[AIGC_LOCK_03943]]
+[[AIGC_LOCK_03944]]{题号} & [[AIGC_LOCK_03945]]{最佳[[AIGC_LOCK_03946]]\%窗口} & [[AIGC_LOCK_03947]]{覆盖率} \\
+[[AIGC_LOCK_03948]]
+[[AIGC_LOCK_03949]]
+Q36 & [[AIGC_LOCK_03950]]-[[AIGC_LOCK_03951]]\% & [[AIGC_LOCK_03952]]\% \\
+Q39 & [[AIGC_LOCK_03953]]-[[AIGC_LOCK_03954]]\% & [[AIGC_LOCK_03955]]\% \\
+Q45 & [[AIGC_LOCK_03956]]-[[AIGC_LOCK_03957]]\% & [[AIGC_LOCK_03958]]\% \\
+Q37 & [[AIGC_LOCK_03959]]-[[AIGC_LOCK_03960]]\% & [[AIGC_LOCK_03961]]\% \\
+Q41 & [[AIGC_LOCK_03962]]-[[AIGC_LOCK_03963]]\% & [[AIGC_LOCK_03964]]\% \\
+Q38 & [[AIGC_LOCK_03965]]-[[AIGC_LOCK_03966]]\% & [[AIGC_LOCK_03967]]\% \\
+[[AIGC_LOCK_03968]]
+[[AIGC_LOCK_03969]]{longtable}
+[[AIGC_LOCK_03970]]
+[[AIGC_LOCK_03971]]{center}
+
+
+Q36 在 [[AIGC_LOCK_03972]]-[[AIGC_LOCK_03973]]\% 覆盖 [[AIGC_LOCK_03974]]\% →[[AIGC_LOCK_03975]]{} 最值得优先扫描的题。Q38 即使最佳窗口也只覆盖 [[AIGC_LOCK_03976]]\% →[[AIGC_LOCK_03977]]{} 最难定位。
+
+
+[[AIGC_LOCK_03978]]
+[[AIGC_LOCK_03979]]{[[AIGC_LOCK_03980]] 同段重复清单}
+[[AIGC_LOCK_03981]]{toc}{subsection}{[[AIGC_LOCK_03982]] 同段重复清单}
+
+
+[[AIGC_LOCK_03983]] 篇存在同字母重复。由于 Section B 题目说明允许同一段被多次选择，这些条目不能仅凭重复就判定为错误；它们更适合作为“重复段落现象”的样本清单：
+
+
+[[AIGC_LOCK_03984]]{center}
+[[AIGC_LOCK_03985]]
+[[AIGC_LOCK_03986]]{[[AIGC_LOCK_03987]]}{4pt}
+[[AIGC_LOCK_03988]]{longtable}{@{}>{[[AIGC_LOCK_03989]][[AIGC_LOCK_03990]]}p{[[AIGC_LOCK_03991]][[AIGC_LOCK_03992]]}>{[[AIGC_LOCK_03993]][[AIGC_LOCK_03994]]}p{[[AIGC_LOCK_03995]][[AIGC_LOCK_03996]]}@{}}
+[[AIGC_LOCK_03997]]
+[[AIGC_LOCK_03998]]{文章} & [[AIGC_LOCK_03999]]{同段重复} \\
+[[AIGC_LOCK_04000]]
+[[AIGC_LOCK_04001]]
+[[AIGC_LOCK_04002]]
+[[AIGC_LOCK_04003]]{文章} & [[AIGC_LOCK_04004]]{同段重复} \\
+[[AIGC_LOCK_04005]]
+[[AIGC_LOCK_04006]]
+The American Workplace Is Broken & B→[[AIGC_LOCK_04007]]{}Q37,[[AIGC_LOCK_04008]]{}Q45 \\
+Who's Really Addicting You to Technology & L→[[AIGC_LOCK_04009]]{}Q37,[[AIGC_LOCK_04010]]{}Q44 \\
+Rich Children and Poor Ones Are Raised V... & G→[[AIGC_LOCK_04011]]{}Q36,[[AIGC_LOCK_04012]]{}Q40 \\
+Slow Hope & I→[[AIGC_LOCK_04013]]{}Q37,[[AIGC_LOCK_04014]]{}Q44 \\
+This man is running [[AIGC_LOCK_04015]] marathons & I→[[AIGC_LOCK_04016]]{}Q37,[[AIGC_LOCK_04017]]{}Q43 \\
+The problem with being perfect & E→[[AIGC_LOCK_04018]]{}Q36,[[AIGC_LOCK_04019]]{}Q43 \\
+[[AIGC_LOCK_04020]]
+[[AIGC_LOCK_04021]]{longtable}
+[[AIGC_LOCK_04022]]
+[[AIGC_LOCK_04023]]{center}
+
+
+[[AIGC_LOCK_04024]]
+[[AIGC_LOCK_04025]]{[[AIGC_LOCK_04026]] 对正文实战策略的补充}
+[[AIGC_LOCK_04027]]{toc}{subsection}{[[AIGC_LOCK_04028]] 对正文实战策略的补充}
+
+
+基于附录 D/[[AIGC_LOCK_04029]]{}E 的全量分析，可以给正文策略补充一条“信息互补”原则：
+
+
+[[AIGC_LOCK_04030]]{enumerate}
+[[AIGC_LOCK_04031]] [[AIGC_LOCK_04032]]{Q36} 适合做稳定定位锚，尤其在 [[AIGC_LOCK_04033]]{[[AIGC_LOCK_04034]]-[[AIGC_LOCK_04035]]\%} 内覆盖率高。
+[[AIGC_LOCK_04036]] [[AIGC_LOCK_04037]]{Q38 / Q40 / Q42} 做出来后信息互补性强，适合作为中段锚链，但不应在题干难定位时硬做。
+[[AIGC_LOCK_04038]] [[AIGC_LOCK_04039]]{Q41} 难度代理最高，适合在候选减少后处理，而不是只凭信息增益直接起手。
+[[AIGC_LOCK_04040]] 后续用锚链、条件窗口和弱排除处理剩余题。
+[[AIGC_LOCK_04041]]{enumerate}
+
+
+[[AIGC_LOCK_04042]]{补充原则}：
+
+[[AIGC_LOCK_04043]]{itemize}
+[[AIGC_LOCK_04044]] 不只依赖 [[AIGC_LOCK_04045]]{Q36+Q44} 双锚，也要把 [[AIGC_LOCK_04046]]{Q38/Q40/Q42} 这类中段互补题纳入条件判断。
+[[AIGC_LOCK_04047]] 不按 [[AIGC_LOCK_04048]]{Q36→Q37→Q38} 机械连做，因为前三题信息重叠较高。
+[[AIGC_LOCK_04049]] 文章首尾段更可能是干扰项，选中率比期望低约 [[AIGC_LOCK_04050]]\%。
+[[AIGC_LOCK_04051]]{itemize}
+
+
+[[AIGC_LOCK_04052]]
+[[AIGC_LOCK_04053]]{[[AIGC_LOCK_04054]]. 附录 F：决策模型证据与同段重复校正}
+[[AIGC_LOCK_04055]]{toc}{section}{[[AIGC_LOCK_04056]]. 附录 F：决策模型证据与同段重复校正}
+
+
+本章保留决策树、信息增益和条件窗口证据，用来解释正文策略为什么这样安排。完整计算：[[AIGC_LOCK_04057]]{deep\_analysis\_round3.py} →[[AIGC_LOCK_04058]]{} [[AIGC_LOCK_04059]]{deep\_analysis\_round3.md}。
+
+
+[[AIGC_LOCK_04060]]
+[[AIGC_LOCK_04061]]{[[AIGC_LOCK_04062]] 同段重复清单（不是数据错误清单）}
+[[AIGC_LOCK_04063]]{toc}{subsection}{[[AIGC_LOCK_04064]] 同段重复清单（不是数据错误清单）}
+
+
+[[AIGC_LOCK_04065]]{center}
+[[AIGC_LOCK_04066]]
+[[AIGC_LOCK_04067]]{[[AIGC_LOCK_04068]]}{4pt}
+[[AIGC_LOCK_04069]]{longtable}{@{}>{[[AIGC_LOCK_04070]][[AIGC_LOCK_04071]]}p{[[AIGC_LOCK_04072]][[AIGC_LOCK_04073]]}>{[[AIGC_LOCK_04074]][[AIGC_LOCK_04075]]}p{[[AIGC_LOCK_04076]][[AIGC_LOCK_04077]]}>{[[AIGC_LOCK_04078]][[AIGC_LOCK_04079]]}p{[[AIGC_LOCK_04080]][[AIGC_LOCK_04081]]}>{[[AIGC_LOCK_04082]][[AIGC_LOCK_04083]]}p{[[AIGC_LOCK_04084]][[AIGC_LOCK_04085]]}@{}}
+[[AIGC_LOCK_04086]]
+[[AIGC_LOCK_04087]]{文章} & [[AIGC_LOCK_04088]]{来源} & [[AIGC_LOCK_04089]]{重复} & [[AIGC_LOCK_04090]]{缺失} \\
+[[AIGC_LOCK_04091]]
+[[AIGC_LOCK_04092]]
+[[AIGC_LOCK_04093]]
+[[AIGC_LOCK_04094]]{文章} & [[AIGC_LOCK_04095]]{来源} & [[AIGC_LOCK_04096]]{重复} & [[AIGC_LOCK_04097]]{缺失} \\
+[[AIGC_LOCK_04098]]
+[[AIGC_LOCK_04099]]
+The American Workplace Is Broken & [[AIGC_LOCK_04100]]第[[AIGC_LOCK_04101]]套 & B→[[AIGC_LOCK_04102]]{}Q37,[[AIGC_LOCK_04103]]{}Q45 & A,[[AIGC_LOCK_04104]]{}G,[[AIGC_LOCK_04105]]{}I,[[AIGC_LOCK_04106]]{}L \\
+Who's Really Addicting You to Technology & [[AIGC_LOCK_04107]]第[[AIGC_LOCK_04108]]套 & L→[[AIGC_LOCK_04109]]{}Q37,[[AIGC_LOCK_04110]]{}Q44 & A,[[AIGC_LOCK_04111]]{}C,[[AIGC_LOCK_04112]]{}H,[[AIGC_LOCK_04113]]{}K,[[AIGC_LOCK_04114]]{}M,[[AIGC_LOCK_04115]]{}N \\
+Rich Children and Poor Ones & [[AIGC_LOCK_04116]]第[[AIGC_LOCK_04117]]套 & G→[[AIGC_LOCK_04118]]{}Q36,[[AIGC_LOCK_04119]]{}Q40 & A,[[AIGC_LOCK_04120]]{}C,[[AIGC_LOCK_04121]]{}E,[[AIGC_LOCK_04122]]{}I,[[AIGC_LOCK_04123]]{}J,[[AIGC_LOCK_04124]]{}L,[[AIGC_LOCK_04125]]{}N,[[AIGC_LOCK_04126]]{}Q \\
+Slow Hope & [[AIGC_LOCK_04127]]第[[AIGC_LOCK_04128]]套 & I→[[AIGC_LOCK_04129]]{}Q37,[[AIGC_LOCK_04130]]{}Q44 & H,[[AIGC_LOCK_04131]]{}J \\
+[[AIGC_LOCK_04132]] marathons on [[AIGC_LOCK_04133]] continents & [[AIGC_LOCK_04134]]第[[AIGC_LOCK_04135]]套 & I→[[AIGC_LOCK_04136]]{}Q37,[[AIGC_LOCK_04137]]{}Q43 & B,[[AIGC_LOCK_04138]]{}J,[[AIGC_LOCK_04139]]{}L \\
+The problem with being perfect & [[AIGC_LOCK_04140]]第[[AIGC_LOCK_04141]]套 & E→[[AIGC_LOCK_04142]]{}Q36,[[AIGC_LOCK_04143]]{}Q43 & D,[[AIGC_LOCK_04144]]{}J \\
+[[AIGC_LOCK_04145]]
+[[AIGC_LOCK_04146]]{longtable}
+[[AIGC_LOCK_04147]]
+[[AIGC_LOCK_04148]]{center}
+
+
+[[AIGC_LOCK_04149]]{重要修正}：这些重复不能直接判定为录入错误，因为题目说明允许同一段被多次选择。它们真正提醒我们的是：所有基于“一一映射”的策略都必须降级为弱排除，不能作为硬规则。
+
+
+[[AIGC_LOCK_04150]]
+[[AIGC_LOCK_04151]]{[[AIGC_LOCK_04152]] 贪心信息增益序列}
+[[AIGC_LOCK_04153]]{toc}{subsection}{[[AIGC_LOCK_04154]] 贪心信息增益序列}
+
+
+[[AIGC_LOCK_04155]]{center}
+[[AIGC_LOCK_04156]]
+[[AIGC_LOCK_04157]]{[[AIGC_LOCK_04158]]}{4pt}
+[[AIGC_LOCK_04159]]{longtable}{@{}>{[[AIGC_LOCK_04160]][[AIGC_LOCK_04161]]}p{[[AIGC_LOCK_04162]][[AIGC_LOCK_04163]]}>{[[AIGC_LOCK_04164]][[AIGC_LOCK_04165]]}p{[[AIGC_LOCK_04166]][[AIGC_LOCK_04167]]}>{[[AIGC_LOCK_04168]][[AIGC_LOCK_04169]]}p{[[AIGC_LOCK_04170]][[AIGC_LOCK_04171]]}>{[[AIGC_LOCK_04172]][[AIGC_LOCK_04173]]}p{[[AIGC_LOCK_04174]][[AIGC_LOCK_04175]]}@{}}
+[[AIGC_LOCK_04176]]
+[[AIGC_LOCK_04177]]{步骤} & [[AIGC_LOCK_04178]]{做题} & [[AIGC_LOCK_04179]]{信息增益} & [[AIGC_LOCK_04180]]{角色} \\
+[[AIGC_LOCK_04181]]
+[[AIGC_LOCK_04182]]
+[[AIGC_LOCK_04183]]
+[[AIGC_LOCK_04184]]{步骤} & [[AIGC_LOCK_04185]]{做题} & [[AIGC_LOCK_04186]]{信息增益} & [[AIGC_LOCK_04187]]{角色} \\
+[[AIGC_LOCK_04188]]
+[[AIGC_LOCK_04189]]
+[[AIGC_LOCK_04190]] & [[AIGC_LOCK_04191]]{Q41} & [[AIGC_LOCK_04192]] & 信息增益最大，但不等于考场起手最优 \\
+[[AIGC_LOCK_04193]] & Q37 & — & 高信息量 \\
+[[AIGC_LOCK_04194]] & Q44 & — & 高信息量 \\
+[[AIGC_LOCK_04195]] & Q43 & — & \  \\
+[[AIGC_LOCK_04196]] & Q39 & — & \  \\
+[[AIGC_LOCK_04197]]-[[AIGC_LOCK_04198]] & Q36 →[[AIGC_LOCK_04199]]{} Q45 →[[AIGC_LOCK_04200]]{} Q42 →[[AIGC_LOCK_04201]]{} Q40 →[[AIGC_LOCK_04202]]{} Q38 & — & 排除法收割 \\
+[[AIGC_LOCK_04203]]
+[[AIGC_LOCK_04204]]{longtable}
+[[AIGC_LOCK_04205]]
+[[AIGC_LOCK_04206]]{center}
+
+
+[[AIGC_LOCK_04207]]{统计贪心序列：Q41 →[[AIGC_LOCK_04208]]{} Q37 →[[AIGC_LOCK_04209]]{} Q44 →[[AIGC_LOCK_04210]]{} Q43 →[[AIGC_LOCK_04211]]{} Q39 →[[AIGC_LOCK_04212]]{} Q36 →[[AIGC_LOCK_04213]]{} Q45 →[[AIGC_LOCK_04214]]{} Q42 →[[AIGC_LOCK_04215]]{} Q40 →[[AIGC_LOCK_04216]]{} Q38}
+
+
+与 Round [[AIGC_LOCK_04217]] 的锚链分析(Q38+Q40+Q42)角度不同：
+
+[[AIGC_LOCK_04218]]{itemize}
+[[AIGC_LOCK_04219]] 锚链分析优化的是"三题组合后的残余熵"
+[[AIGC_LOCK_04220]] 贝叶斯贪心优化的是"每步选择的边际信息增益"
+[[AIGC_LOCK_04221]] 两者并不矛盾，但都不能机械等同于考场起手顺序。Q41 信息增益大，是因为它一旦被确认会强力约束后续题；可它本身也是高难题，裸做成本高
+[[AIGC_LOCK_04222]]{itemize}
+
+
+[[AIGC_LOCK_04223]]
+[[AIGC_LOCK_04224]]{[[AIGC_LOCK_04225]] 策略搜索效率量化对比}
+[[AIGC_LOCK_04226]]{toc}{subsection}{[[AIGC_LOCK_04227]] 策略搜索效率量化对比}
+
+
+做完 k 题后剩余题平均候选带数：
+
+
+[[AIGC_LOCK_04228]]{center}
+[[AIGC_LOCK_04229]]
+[[AIGC_LOCK_04230]]{[[AIGC_LOCK_04231]]}{4pt}
+[[AIGC_LOCK_04232]]{longtable}{@{}>{[[AIGC_LOCK_04233]][[AIGC_LOCK_04234]]}p{[[AIGC_LOCK_04235]][[AIGC_LOCK_04236]]}>{[[AIGC_LOCK_04237]][[AIGC_LOCK_04238]]}p{[[AIGC_LOCK_04239]][[AIGC_LOCK_04240]]}>{[[AIGC_LOCK_04241]][[AIGC_LOCK_04242]]}p{[[AIGC_LOCK_04243]][[AIGC_LOCK_04244]]}@{}}
+[[AIGC_LOCK_04245]]
+[[AIGC_LOCK_04246]]{步骤} & [[AIGC_LOCK_04247]]{顺序([[AIGC_LOCK_04248]]→[[AIGC_LOCK_04249]]{}[[AIGC_LOCK_04250]])} & [[AIGC_LOCK_04251]]{锚链([[AIGC_LOCK_04252]]→[[AIGC_LOCK_04253]]{}[[AIGC_LOCK_04254]]→[[AIGC_LOCK_04255]]{}[[AIGC_LOCK_04256]]→[[AIGC_LOCK_04257]]{}[[AIGC_LOCK_04258]]→[[AIGC_LOCK_04259]]{}[[AIGC_LOCK_04260]])} \\
+[[AIGC_LOCK_04261]]
+[[AIGC_LOCK_04262]]
+[[AIGC_LOCK_04263]]
+[[AIGC_LOCK_04264]]{步骤} & [[AIGC_LOCK_04265]]{顺序([[AIGC_LOCK_04266]]→[[AIGC_LOCK_04267]]{}[[AIGC_LOCK_04268]])} & [[AIGC_LOCK_04269]]{锚链([[AIGC_LOCK_04270]]→[[AIGC_LOCK_04271]]{}[[AIGC_LOCK_04272]]→[[AIGC_LOCK_04273]]{}[[AIGC_LOCK_04274]]→[[AIGC_LOCK_04275]]{}[[AIGC_LOCK_04276]]→[[AIGC_LOCK_04277]]{}[[AIGC_LOCK_04278]])} \\
+[[AIGC_LOCK_04279]]
+[[AIGC_LOCK_04280]]
+[[AIGC_LOCK_04281]] & [[AIGC_LOCK_04282]] & [[AIGC_LOCK_04283]] \\
+[[AIGC_LOCK_04284]] & [[AIGC_LOCK_04285]] & [[AIGC_LOCK_04286]]{[[AIGC_LOCK_04287]]} \\
+[[AIGC_LOCK_04288]] & [[AIGC_LOCK_04289]] & [[AIGC_LOCK_04290]]{[[AIGC_LOCK_04291]]} \\
+[[AIGC_LOCK_04292]] & [[AIGC_LOCK_04293]] & [[AIGC_LOCK_04294]]{[[AIGC_LOCK_04295]]} \\
+[[AIGC_LOCK_04296]] & [[AIGC_LOCK_04297]] & [[AIGC_LOCK_04298]]{[[AIGC_LOCK_04299]]} \\
+[[AIGC_LOCK_04300]]
+[[AIGC_LOCK_04301]]{longtable}
+[[AIGC_LOCK_04302]]
+[[AIGC_LOCK_04303]]{center}
+
+
+锚链策略到第 [[AIGC_LOCK_04304]] 步就缩至 [[AIGC_LOCK_04305]] 带，顺序策略需到第 [[AIGC_LOCK_04306]] 步才达到 [[AIGC_LOCK_04307]]。锚链快一步。
+
+
+[[AIGC_LOCK_04308]]
+[[AIGC_LOCK_04309]]{[[AIGC_LOCK_04310]] 相邻题位置差的真实分布}
+[[AIGC_LOCK_04311]]{toc}{subsection}{[[AIGC_LOCK_04312]] 相邻题位置差的真实分布}
+
+
+[[AIGC_LOCK_04313]]{center}
+[[AIGC_LOCK_04314]]
+[[AIGC_LOCK_04315]]{[[AIGC_LOCK_04316]]}{4pt}
+[[AIGC_LOCK_04317]]{longtable}{@{}>{[[AIGC_LOCK_04318]][[AIGC_LOCK_04319]]}p{[[AIGC_LOCK_04320]][[AIGC_LOCK_04321]]}>{[[AIGC_LOCK_04322]][[AIGC_LOCK_04323]]}p{[[AIGC_LOCK_04324]][[AIGC_LOCK_04325]]}>{[[AIGC_LOCK_04326]][[AIGC_LOCK_04327]]}p{[[AIGC_LOCK_04328]][[AIGC_LOCK_04329]]}>{[[AIGC_LOCK_04330]][[AIGC_LOCK_04331]]}p{[[AIGC_LOCK_04332]][[AIGC_LOCK_04333]]}@{}}
+[[AIGC_LOCK_04334]]
+[[AIGC_LOCK_04335]]{题对} & [[AIGC_LOCK_04336]]{中位差} & [[AIGC_LOCK_04337]]{差>[[AIGC_LOCK_04338]]\% 占比} & [[AIGC_LOCK_04339]]{差<[[AIGC_LOCK_04340]]\% 占比} \\
+[[AIGC_LOCK_04341]]
+[[AIGC_LOCK_04342]]
+[[AIGC_LOCK_04343]]
+[[AIGC_LOCK_04344]]{题对} & [[AIGC_LOCK_04345]]{中位差} & [[AIGC_LOCK_04346]]{差>[[AIGC_LOCK_04347]]\% 占比} & [[AIGC_LOCK_04348]]{差<[[AIGC_LOCK_04349]]\% 占比} \\
+[[AIGC_LOCK_04350]]
+[[AIGC_LOCK_04351]]
+Q43/[[AIGC_LOCK_04352]]{}Q44 & [[AIGC_LOCK_04353]]{[[AIGC_LOCK_04354]]\%} & [[AIGC_LOCK_04355]]{[[AIGC_LOCK_04356]]\%} & [[AIGC_LOCK_04357]]{[[AIGC_LOCK_04358]]\%} \\
+Q37/[[AIGC_LOCK_04359]]{}Q38 & [[AIGC_LOCK_04360]]\% & [[AIGC_LOCK_04361]]\% & [[AIGC_LOCK_04362]]\% \\
+Q40/[[AIGC_LOCK_04363]]{}Q41 & [[AIGC_LOCK_04364]]\% & [[AIGC_LOCK_04365]]\% & [[AIGC_LOCK_04366]]\% \\
+Q36/[[AIGC_LOCK_04367]]{}Q37 & [[AIGC_LOCK_04368]]\% & [[AIGC_LOCK_04369]]\% & [[AIGC_LOCK_04370]]\% \\
+[[AIGC_LOCK_04371]]
+[[AIGC_LOCK_04372]]{longtable}
+[[AIGC_LOCK_04373]]
+[[AIGC_LOCK_04374]]{center}
+
+
+[[AIGC_LOCK_04375]]{Q43/[[AIGC_LOCK_04376]]{}Q44 是最极端的互斥对}：中位差 [[AIGC_LOCK_04377]]\%，[[AIGC_LOCK_04378]]\% 概率在 [[AIGC_LOCK_04379]]\% 以内。这两题在文章中永远隔得很远。
+
+
+[[AIGC_LOCK_04380]]
+[[AIGC_LOCK_04381]]{[[AIGC_LOCK_04382]] 段落类型偏好}
+[[AIGC_LOCK_04383]]{toc}{subsection}{[[AIGC_LOCK_04384]] 段落类型偏好}
+
+
+[[AIGC_LOCK_04385]]{center}
+[[AIGC_LOCK_04386]]
+[[AIGC_LOCK_04387]]{[[AIGC_LOCK_04388]]}{4pt}
+[[AIGC_LOCK_04389]]{longtable}{@{}>{[[AIGC_LOCK_04390]][[AIGC_LOCK_04391]]}p{[[AIGC_LOCK_04392]][[AIGC_LOCK_04393]]}>{[[AIGC_LOCK_04394]][[AIGC_LOCK_04395]]}p{[[AIGC_LOCK_04396]][[AIGC_LOCK_04397]]}>{[[AIGC_LOCK_04398]][[AIGC_LOCK_04399]]}p{[[AIGC_LOCK_04400]][[AIGC_LOCK_04401]]}@{}}
+[[AIGC_LOCK_04402]]
+[[AIGC_LOCK_04403]]{类型} & [[AIGC_LOCK_04404]]{选率} & [[AIGC_LOCK_04405]]{vs 期望} \\
+[[AIGC_LOCK_04406]]
+[[AIGC_LOCK_04407]]
+[[AIGC_LOCK_04408]]
+[[AIGC_LOCK_04409]]{类型} & [[AIGC_LOCK_04410]]{选率} & [[AIGC_LOCK_04411]]{vs 期望} \\
+[[AIGC_LOCK_04412]]
+[[AIGC_LOCK_04413]]
+首段(A) & [[AIGC_LOCK_04414]]\% & [[AIGC_LOCK_04415]]{[[AIGC_LOCK_04416]]\%} \\
+第二段(B) & [[AIGC_LOCK_04417]]\% & [[AIGC_LOCK_04418]]\% \\
+倒数第二段 & [[AIGC_LOCK_04419]]\% & [[AIGC_LOCK_04420]]{[[AIGC_LOCK_04421]]\%} \\
+末段 & [[AIGC_LOCK_04422]]\% & [[AIGC_LOCK_04423]]{[[AIGC_LOCK_04424]]\%} \\
+[[AIGC_LOCK_04425]]
+[[AIGC_LOCK_04426]]{longtable}
+[[AIGC_LOCK_04427]]
+[[AIGC_LOCK_04428]]{center}
+
+
+[[AIGC_LOCK_04429]]{首段和末段被选为答案的概率显著低于期望} →[[AIGC_LOCK_04430]]{} 文章首段（通常是引言）和末段（通常是总结）更可能是干扰项。
+
+
+[[AIGC_LOCK_04431]]
+[[AIGC_LOCK_04432]]{[[AIGC_LOCK_04433]] 条件搜索窗口精选（最窄规则）}
+[[AIGC_LOCK_04434]]{toc}{subsection}{[[AIGC_LOCK_04435]] 条件搜索窗口精选（最窄规则）}
+
+
+已知锚点位置带 →[[AIGC_LOCK_04436]]{} 目标题 [[AIGC_LOCK_04437]]\% 概率落在的范围：
+
+
+[[AIGC_LOCK_04438]]{center}
+[[AIGC_LOCK_04439]]
+[[AIGC_LOCK_04440]]{[[AIGC_LOCK_04441]]}{4pt}
+[[AIGC_LOCK_04442]]{longtable}{@{}>{[[AIGC_LOCK_04443]][[AIGC_LOCK_04444]]}p{[[AIGC_LOCK_04445]][[AIGC_LOCK_04446]]}>{[[AIGC_LOCK_04447]][[AIGC_LOCK_04448]]}p{[[AIGC_LOCK_04449]][[AIGC_LOCK_04450]]}>{[[AIGC_LOCK_04451]][[AIGC_LOCK_04452]]}p{[[AIGC_LOCK_04453]][[AIGC_LOCK_04454]]}>{[[AIGC_LOCK_04455]][[AIGC_LOCK_04456]]}p{[[AIGC_LOCK_04457]][[AIGC_LOCK_04458]]}@{}}
+[[AIGC_LOCK_04459]]
+[[AIGC_LOCK_04460]]{条件} & [[AIGC_LOCK_04461]]{目标} & [[AIGC_LOCK_04462]]{窗口} & [[AIGC_LOCK_04463]]{宽度} \\
+[[AIGC_LOCK_04464]]
+[[AIGC_LOCK_04465]]
+[[AIGC_LOCK_04466]]
+[[AIGC_LOCK_04467]]{条件} & [[AIGC_LOCK_04468]]{目标} & [[AIGC_LOCK_04469]]{窗口} & [[AIGC_LOCK_04470]]{宽度} \\
+[[AIGC_LOCK_04471]]
+[[AIGC_LOCK_04472]]
+Q44∈[[AIGC_LOCK_04473]]-[[AIGC_LOCK_04474]]\% & Q36 & [[AIGC_LOCK_04475]]-[[AIGC_LOCK_04476]]\% & [[AIGC_LOCK_04477]]{[[AIGC_LOCK_04478]]\%} \\
+Q36∈[[AIGC_LOCK_04479]]-[[AIGC_LOCK_04480]]\% & Q38 & [[AIGC_LOCK_04481]]-[[AIGC_LOCK_04482]]\% & [[AIGC_LOCK_04483]]{[[AIGC_LOCK_04484]]\%} \\
+Q40∈[[AIGC_LOCK_04485]]-[[AIGC_LOCK_04486]]\% & Q39 & [[AIGC_LOCK_04487]]-[[AIGC_LOCK_04488]]\% & [[AIGC_LOCK_04489]]{[[AIGC_LOCK_04490]]\%} \\
+Q38∈[[AIGC_LOCK_04491]]-[[AIGC_LOCK_04492]]\% & Q37 & [[AIGC_LOCK_04493]]-[[AIGC_LOCK_04494]]\% & [[AIGC_LOCK_04495]]{[[AIGC_LOCK_04496]]\%} \\
+Q38∈[[AIGC_LOCK_04497]]-[[AIGC_LOCK_04498]]\% & Q39 & [[AIGC_LOCK_04499]]-[[AIGC_LOCK_04500]]\% & [[AIGC_LOCK_04501]]{[[AIGC_LOCK_04502]]\%} \\
+Q42∈[[AIGC_LOCK_04503]]-[[AIGC_LOCK_04504]]\% & Q41 & [[AIGC_LOCK_04505]]-[[AIGC_LOCK_04506]]\% & [[AIGC_LOCK_04507]]{[[AIGC_LOCK_04508]]\%} \\
+Q42∈[[AIGC_LOCK_04509]]-[[AIGC_LOCK_04510]]\% & Q45 & [[AIGC_LOCK_04511]]-[[AIGC_LOCK_04512]]\% & [[AIGC_LOCK_04513]]{[[AIGC_LOCK_04514]]\%} \\
+Q44∈[[AIGC_LOCK_04515]]-[[AIGC_LOCK_04516]]\% & Q45 & [[AIGC_LOCK_04517]]-[[AIGC_LOCK_04518]]\% & [[AIGC_LOCK_04519]]{[[AIGC_LOCK_04520]]\%} \\
+[[AIGC_LOCK_04521]]
+[[AIGC_LOCK_04522]]{longtable}
+[[AIGC_LOCK_04523]]
+[[AIGC_LOCK_04524]]{center}
+
+
+窗口宽度 [[AIGC_LOCK_04525]]-[[AIGC_LOCK_04526]]\% 意味着只需扫描文章的 [[AIGC_LOCK_04527]]/[[AIGC_LOCK_04528]]{}[[AIGC_LOCK_04529]] [[AIGC_LOCK_04530]]{} [[AIGC_LOCK_04531]]/[[AIGC_LOCK_04532]]{}[[AIGC_LOCK_04533]] 即可定位目标题。
+
+
+[[AIGC_LOCK_04534]]
+[[AIGC_LOCK_04535]]{[[AIGC_LOCK_04536]] 机械化决策树精要}
+[[AIGC_LOCK_04537]]{toc}{subsection}{[[AIGC_LOCK_04538]] 机械化决策树精要}
+
+
+[[AIGC_LOCK_04539]]{CodeBlock}
+Q36 ∈ [[AIGC_LOCK_04540]]-[[AIGC_LOCK_04541]] (n=[[AIGC_LOCK_04542]], 最常见):
+  Q37 → [[AIGC_LOCK_04543]]-[[AIGC_LOCK_04544]] ([[AIGC_LOCK_04545]])
+  Q39 → [[AIGC_LOCK_04546]]-[[AIGC_LOCK_04547]] ([[AIGC_LOCK_04548]])
+  Q45 → [[AIGC_LOCK_04549]]-[[AIGC_LOCK_04550]] ([[AIGC_LOCK_04551]])
+
+Q36 ∈ [[AIGC_LOCK_04552]]-[[AIGC_LOCK_04553]] (n=[[AIGC_LOCK_04554]], 次常见):
+  Q37 → [[AIGC_LOCK_04555]]-[[AIGC_LOCK_04556]] ([[AIGC_LOCK_04557]])
+  Q41 → [[AIGC_LOCK_04558]]-[[AIGC_LOCK_04559]] ([[AIGC_LOCK_04560]])
+
+双锚 Q36∈[[AIGC_LOCK_04561]]-[[AIGC_LOCK_04562]] + Q38∈[[AIGC_LOCK_04563]]-[[AIGC_LOCK_04564]] (n=[[AIGC_LOCK_04565]]):
+  Q37 → [[AIGC_LOCK_04566]]-[[AIGC_LOCK_04567]] ([[AIGC_LOCK_04568]])
+  Q39 → [[AIGC_LOCK_04569]]-[[AIGC_LOCK_04570]] ([[AIGC_LOCK_04571]])
+
+双锚 Q36∈[[AIGC_LOCK_04572]]-[[AIGC_LOCK_04573]] + Q38∈[[AIGC_LOCK_04574]]-[[AIGC_LOCK_04575]] (n=[[AIGC_LOCK_04576]]):
+  Q42 → [[AIGC_LOCK_04577]]-[[AIGC_LOCK_04578]] ([[AIGC_LOCK_04579]])
+  Q37 → [[AIGC_LOCK_04580]]-[[AIGC_LOCK_04581]] ([[AIGC_LOCK_04582]])
+  Q41 → [[AIGC_LOCK_04583]]-[[AIGC_LOCK_04584]] ([[AIGC_LOCK_04585]])
+[[AIGC_LOCK_04586]]{CodeBlock}
+
+
+[[AIGC_LOCK_04587]]
+[[AIGC_LOCK_04588]]{[[AIGC_LOCK_04589]] 与正文最终流程的对齐口径}
+[[AIGC_LOCK_04590]]{toc}{subsection}{[[AIGC_LOCK_04591]] 与正文最终流程的对齐口径}
+
+
+与第 [[AIGC_LOCK_04592]] 节和第 [[AIGC_LOCK_04593]] 章对齐后，统一流程应理解为：
+
+
+[[AIGC_LOCK_04594]]{enumerate}
+[[AIGC_LOCK_04595]] Q36 起手（最稳定锚，σ=[[AIGC_LOCK_04596]]）→[[AIGC_LOCK_04597]]{} 确定自己在哪条分支
+[[AIGC_LOCK_04598]] 查决策树：Q36 带 →[[AIGC_LOCK_04599]]{} 推断 Q37/[[AIGC_LOCK_04600]]{}Q39 最可能区域
+[[AIGC_LOCK_04601]] Q38 第二步（与 Q36 形成双锚，信息互补）
+[[AIGC_LOCK_04602]] 用双锚决策树缩窗 →[[AIGC_LOCK_04603]]{} Q39 通常可缩至 [[AIGC_LOCK_04604]]-[[AIGC_LOCK_04605]]\%（[[AIGC_LOCK_04606]]\% 命中）
+[[AIGC_LOCK_04607]] Q40 或 Q42 第三步 →[[AIGC_LOCK_04608]]{} 三锚定位
+[[AIGC_LOCK_04609]] 后续用弱排除 + 条件窗口收割
+[[AIGC_LOCK_04610]] Q41 放最后（最难，但此时候选已很少）
+[[AIGC_LOCK_04611]]{enumerate}
+
+
+[[AIGC_LOCK_04612]]{不变铁律：}
+
+[[AIGC_LOCK_04613]]{itemize}
+[[AIGC_LOCK_04614]] 相邻题永远不相邻（Q43/[[AIGC_LOCK_04615]]{}Q44 差>[[AIGC_LOCK_04616]]\% 达 [[AIGC_LOCK_04617]]\%）
+[[AIGC_LOCK_04618]] 首段和末段是干扰高概率区（选率比期望低 [[AIGC_LOCK_04619]]\%）
+[[AIGC_LOCK_04620]] 做到第 [[AIGC_LOCK_04621]]-[[AIGC_LOCK_04622]] 题后，排除法价值上升；但已用字母不能绝对排除，因为同段重复合法
+[[AIGC_LOCK_04623]]{itemize}
+
+
+[[AIGC_LOCK_04624]]
+[[AIGC_LOCK_04625]]{[[AIGC_LOCK_04626]]. 附录 G：工作包与图表入口索引}
+[[AIGC_LOCK_04627]]{toc}{section}{[[AIGC_LOCK_04628]]. 附录 G：工作包与图表入口索引}
+
+
+[[AIGC_LOCK_04629]]
+[[AIGC_LOCK_04630]]{[[AIGC_LOCK_04631]] 图表文件入口}
+[[AIGC_LOCK_04632]]{toc}{subsection}{[[AIGC_LOCK_04633]] 图表文件入口}
+
+
+图表统一位于 [[AIGC_LOCK_04634]]{cet [[AIGC_LOCK_04635]]/\_analysis\_output/}：
+
+
+[[AIGC_LOCK_04636]]{itemize}
+[[AIGC_LOCK_04637]] [[AIGC_LOCK_04638]]{question\_position\_boxplot.png}
+[[AIGC_LOCK_04639]] [[AIGC_LOCK_04640]]{question\_position\_band\_distribution.png}
+[[AIGC_LOCK_04641]] [[AIGC_LOCK_04642]]{question\_position\_band\_heatmap.png}
+[[AIGC_LOCK_04643]] [[AIGC_LOCK_04644]]{question\_position\_curve.png}
+[[AIGC_LOCK_04645]] [[AIGC_LOCK_04646]]{question\_answer\_distribution.png}
+[[AIGC_LOCK_04647]] [[AIGC_LOCK_04648]]{letter\_to\_question\_heatmap.png}
+[[AIGC_LOCK_04649]]{itemize}
+
+
+[[AIGC_LOCK_04650]]
+[[AIGC_LOCK_04651]]{[[AIGC_LOCK_04652]] 逐篇/[[AIGC_LOCK_04653]]{}逐批 Markdown 工作包入口}
+[[AIGC_LOCK_04654]]{toc}{subsection}{[[AIGC_LOCK_04655]] 逐篇/逐批 Markdown 工作包入口}
+
+
+以下目录仍然保留，承担“原始核对过程留痕”和“逐篇工作底稿”作用：
+
+
+[[AIGC_LOCK_04656]]{itemize}
+[[AIGC_LOCK_04657]] [[AIGC_LOCK_04658]]{cet [[AIGC_LOCK_04659]]/\_analysis\_output/verification\_packets/}：逐篇人工核对包
+[[AIGC_LOCK_04660]] [[AIGC_LOCK_04661]]{cet [[AIGC_LOCK_04662]]/\_analysis\_output/recheck\_packets/}：[[AIGC_LOCK_04663]]{sample.txt} 二次复核逐篇包
+[[AIGC_LOCK_04664]] [[AIGC_LOCK_04665]]{cet [[AIGC_LOCK_04666]]/\_analysis\_output/recheck\_reviews/}：分批复核结论稿
+[[AIGC_LOCK_04667]]{itemize}
+
+
+如果阅读目标是“理解 Section B 规律、看最终结论、看考试打法”，优先看本主报告即可；如果阅读目标是“追溯某篇文章的逐题核对过程”，再进入上述目录查看对应 Markdown。
+
+[[AIGC_LOCK_04668]]{document}

@@ -1,0 +1,55 @@
+{
+  "schema": "aigc-academic-style-decisions/v1",
+  "source_tree_sha256": "57f22f6b61143cfff2b058baeab4a1288933f1995ca585f3e39fafc33cadf27c",
+  "candidate_tree_sha256": "b74d4f0862cbf65fbdf680429dfdeff69277fce965a96fffdc46f68b9ec944f8",
+  "decisions": [
+    {
+      "signal_id": "LEX-VAGUE-ATTRIBUTION-01",
+      "relative_path": "main.tex",
+      "line": 77,
+      "column": 4,
+      "matched": "研究表明",
+      "decision": "keep",
+      "reason": "此处的主语是前四问，归因对象明确指向本文前述计算结果，并非无名外部研究。",
+      "reviewer": "Codex主线程语义复核-非外部质量放行",
+      "reviewer_kind": "model"
+    },
+    {
+      "signal_id": "LEX-STRICT-CORPUS-OUTLOOK-01",
+      "relative_path": "main.tex",
+      "line": 487,
+      "column": 10,
+      "matched": "治理建议",
+      "decision": "keep",
+      "reason": "该处是题目要求对应的正式章节标题，属于受保护的目录定位结构，不是无依据展望句。",
+      "reviewer": "Codex主线程语义复核-非外部质量放行",
+      "reviewer_kind": "model"
+    }
+  ],
+  "semantic_decisions": [
+    {
+      "code": "NEGATION_CHANGED",
+      "finding_sha256": "9c920c4b8834cd1184f1ebd3a21953cc0ef335a9cb77438bc9400ebffc441ca4",
+      "decision": "accept",
+      "reason": "五问之间的关系由否定式纠偏改为肯定式关联；模型限制、反事实条件和结果否定均仍保留。",
+      "reviewer": "Codex主线程语义复核-非外部质量放行",
+      "reviewer_kind": "model"
+    },
+    {
+      "code": "CLAIM_STRENGTH_CHANGED",
+      "finding_sha256": "32fb933cfc364ac6de2b58daa27a793073e4c477e3a6c8e3cb034e51af2d5164",
+      "decision": "accept",
+      "reason": "候选删减了未量化的显著和说明句壳，没有增加更强结论；数值、方向判断和适用边界保持不变。",
+      "reviewer": "Codex主线程语义复核-非外部质量放行",
+      "reviewer_kind": "model"
+    },
+    {
+      "code": "ARGUMENT_COMPRESSION_REVIEW",
+      "finding_sha256": "6f1bd04596eead502cacb62fdb7640913747c4ad41230c0a8402cb4ea139a177",
+      "decision": "accept",
+      "reason": "删去的是先把这一过程播报；候选补写通道损失参数、放流控制量及其进入方程的位置，数值与结果边界未删。",
+      "reviewer": "Codex主线程语义复核-非外部质量放行",
+      "reviewer_kind": "model"
+    }
+  ]
+}

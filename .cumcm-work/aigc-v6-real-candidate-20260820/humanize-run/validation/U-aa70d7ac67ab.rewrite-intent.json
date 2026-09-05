@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "15775acd40c18d2ce3c4debf7b9f8d5dac6ffa34c1b00bcb007c3320930ef192",
+    "before_sha256": "15775acd40c18d2ce3c4debf7b9f8d5dac6ffa34c1b00bcb007c3320930ef192"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "b0759441ab08adfa9376fb85549a50e022cb74fe0830b7d343299c350da0e1fd",
+  "chunk_binding_sha256": "730055177f2bbdf87d4709579ce41054fe32feb9bef5e66e998b43099c4b6d91",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-aa70d7ac67ab.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "1eccc17e837570ae04185a553fdb315bc12c5e8954968990e8ac485478c58672",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 20,
+        "id": "S1",
+        "sha256": "ed77f7649e0399a6ec8763b3153828cd5501ceeea6c84a313788672b1de7bc44",
+        "start_line": 7
+      }
+    ],
+    "reason": "符号表按变量逐行给出定义和口径，等权表格结构便于后文查找。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "50936c671b2f9dfdfa8860ec7e12efa67b53e69c328e9a4d4d8019a6d9a1910a",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-aa70d7ac67ab"
+}

@@ -1,0 +1,658 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "candidate_assembly_exit_code": 0,
+  "candidate_assembly_status": "PASS",
+  "delivery_gate_exit_code": 2,
+  "delivery_gate_status": "REVIEW",
+  "draft_surface_source_check": {
+    "details": {},
+    "scope": [],
+    "semantic_entailment_certified": false,
+    "status": "N/A"
+  },
+  "evidence": {
+    "after_path": "validation/U-1c40fab058d2.after.tex",
+    "after_sha256": "7b8412716d1c45ec35bd747e8888019a8db23f05e8873d63cfb426138f4cd093",
+    "before_path": "validation/U-1c40fab058d2.before.tex",
+    "before_sha256": "b281aa32a0ee8603aa9b823454756398d19111fe3f840e8fadd49b6b3f8d5f77",
+    "checker_executed": true,
+    "document_format": "tex",
+    "document_scope": "FRAGMENT",
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "03ba9601430e17a4c71cb21f9134e69273284d4dc15295cbfb3235737ed778bd",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "source_path_archived": false
+  },
+  "exit_code": 2,
+  "hard_invariant_layer_status": "PASS",
+  "humanize_quality_claim_allowed": false,
+  "introduced_findings": [],
+  "invariants": {
+    "advisories": [],
+    "errors": [],
+    "evidence": {
+      "document_scope": "FRAGMENT",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "speech_act_audit": {
+        "categories": {
+          "assumption": {
+            "after": {
+              "设": 2
+            },
+            "after_occurrences": [
+              {
+                "category": "assumption",
+                "claim_id": "C0006",
+                "column": 99,
+                "end": 117,
+                "end_column": 100,
+                "end_line": 2,
+                "line": 2,
+                "marker": "设",
+                "sentence_context": "由于问题一的基线轨迹对应 ，污染情景下的上游输入需要再次由问题一积分得到，以便使资源退化、鱼群变化与污染设定保持一致",
+                "sentence_id": "T0003",
+                "side": "after",
+                "start": 116
+              },
+              {
+                "category": "assumption",
+                "claim_id": "C0013",
+                "column": 61,
+                "end": 255,
+                "end_column": 62,
+                "end_line": 4,
+                "line": 4,
+                "marker": "设",
+                "sentence_context": "设第 个情景在该尾窗上的四个平均指标分别为 ，其中食源、江豚和长江鲟为效益型指标，入侵压力为成本型指标",
+                "sentence_id": "T0006",
+                "side": "after",
+                "start": 254
+              }
+            ],
+            "before": {
+              "设": 2
+            },
+            "before_occurrences": [
+              {
+                "category": "assumption",
+                "claim_id": "C0006",
+                "column": 99,
+                "end": 117,
+                "end_column": 100,
+                "end_line": 2,
+                "line": 2,
+                "marker": "设",
+                "sentence_context": "由于问题一的基线轨迹对应 ，污染情景下的上游输入需要重新由问题一积分得到，以便使资源退化、鱼群变化与污染设定保持一致",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 116
+              },
+              {
+                "category": "assumption",
+                "claim_id": "C0013",
+                "column": 60,
+                "end": 254,
+                "end_column": 61,
+                "end_line": 4,
+                "line": 4,
+                "marker": "设",
+                "sentence_context": "设第 个情景在该尾窗上的四个平均指标分别为 ，其中食源、江豚和长江鲟为效益型指标，入侵压力为成本型指标",
+                "sentence_id": "T0006",
+                "side": "before",
+                "start": 253
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "attribution_source": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "condition": {
+            "after": {
+              "当": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0021",
+                "column": 2,
+                "end": 549,
+                "end_column": 3,
+                "end_line": 6,
+                "line": 6,
+                "marker": "当",
+                "sentence_context": "在当前数据下，组合权重为 ，分别对应食源、江豚、长江鲟和入侵压力",
+                "sentence_id": "T0009",
+                "side": "after",
+                "start": 548
+              }
+            ],
+            "before": {
+              "当": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "condition",
+                "claim_id": "C0021",
+                "column": 2,
+                "end": 548,
+                "end_column": 3,
+                "end_line": 6,
+                "line": 6,
+                "marker": "当",
+                "sentence_context": "在当前数据下，组合权重为 ，分别对应食源、江豚、长江鲟和入侵压力",
+                "sentence_id": "T0009",
+                "side": "before",
+                "start": 547
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "definition_naming": {
+            "after": {
+              "定义为": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "definition_naming",
+                "claim_id": "C0020",
+                "column": 236,
+                "end": 432,
+                "end_column": 239,
+                "end_line": 4,
+                "line": 4,
+                "marker": "定义为",
+                "sentence_context": "记组合权重为 ，则综合得分定义为",
+                "sentence_id": "T0008",
+                "side": "after",
+                "start": 429
+              }
+            ],
+            "before": {
+              "定义为": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "definition_naming",
+                "claim_id": "C0020",
+                "column": 235,
+                "end": 431,
+                "end_column": 238,
+                "end_line": 4,
+                "line": 4,
+                "marker": "定义为",
+                "sentence_context": "记组合权重为 ，则综合得分定义为",
+                "sentence_id": "T0008",
+                "side": "before",
+                "start": 428
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "focus_scope": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "logical_relation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "modality_scope": {
+            "after": {
+              "需要": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0005",
+                "column": 71,
+                "end": 90,
+                "end_column": 73,
+                "end_line": 2,
+                "line": 2,
+                "marker": "需要",
+                "sentence_context": "由于问题一的基线轨迹对应 ，污染情景下的上游输入需要再次由问题一积分得到，以便使资源退化、鱼群变化与污染设定保持一致",
+                "sentence_id": "T0003",
+                "side": "after",
+                "start": 88
+              }
+            ],
+            "before": {
+              "需要": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0005",
+                "column": 71,
+                "end": 90,
+                "end_column": 73,
+                "end_line": 2,
+                "line": 2,
+                "marker": "需要",
+                "sentence_context": "由于问题一的基线轨迹对应 ，污染情景下的上游输入需要重新由问题一积分得到，以便使资源退化、鱼群变化与污染设定保持一致",
+                "sentence_id": "T0003",
+                "side": "before",
+                "start": 88
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "negation": {
+            "after": {
+              "不": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0025",
+                "column": 78,
+                "end": 625,
+                "end_column": 79,
+                "end_line": 6,
+                "line": 6,
+                "marker": "不",
+                "sentence_context": "该指标用于比较三种情景的相对状态，不对应外部生态健康的绝对量值",
+                "sentence_id": "T0010",
+                "side": "after",
+                "start": 624
+              }
+            ],
+            "before": {
+              "不": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0025",
+                "column": 78,
+                "end": 624,
+                "end_column": 79,
+                "end_line": 6,
+                "line": 6,
+                "marker": "不",
+                "sentence_context": "该指标用于比较三种情景的相对状态，不对应外部生态健康的绝对量值",
+                "sentence_id": "T0010",
+                "side": "before",
+                "start": 623
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "reporting_observation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          }
+        },
+        "claim_pairing": {
+          "after_claims": 25,
+          "before_claims": 25,
+          "unique_exact_pairs": 23,
+          "unpaired_after_claims": 2,
+          "unpaired_before_claims": 2
+        },
+        "protection": {
+          "after_ranges": 9,
+          "before_ranges": 9,
+          "line_column_basis": "NORMALIZED_LF_1_BASED_UNICODE_CODEPOINT",
+          "masking": "LENGTH_PRESERVING"
+        }
+      }
+    },
+    "hard_failure": false,
+    "status": "pass",
+    "summary": {
+      "advisories": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    "warnings": []
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 2,
+    "introduced_candidates": 0,
+    "unexplained_high_candidates": 0
+  },
+  "mechanical_validation_exit_code": 0,
+  "mechanical_validation_status": "PASS",
+  "mode": "REWRITE",
+  "paired_quality_clearance_granted": false,
+  "paired_quality_review_local_clearance_supported": false,
+  "paired_quality_review_request": {
+    "artifact": {
+      "after_sha256": "7b8412716d1c45ec35bd747e8888019a8db23f05e8873d63cfb426138f4cd093",
+      "before_sha256": "b281aa32a0ee8603aa9b823454756398d19111fe3f840e8fadd49b6b3f8d5f77"
+    },
+    "changes": [
+      {
+        "after": {
+          "end_line": 2,
+          "han_chars": 113,
+          "line_count": 1,
+          "sha256": "0d3fd9828e46a3e7029fa56465d49f6c1be7b58e600a2e685a3354def7710c67",
+          "start_line": 2
+        },
+        "before": {
+          "end_line": 2,
+          "han_chars": 113,
+          "line_count": 1,
+          "sha256": "92be11a2de6c3445a4c1ed525c6dc04f337a88bf5b0a9fddf58e9010c6a2dc52",
+          "start_line": 2
+        },
+        "change_id": "QCH-636ecd64c2ea4e49fdcc",
+        "operation": "REPLACE",
+        "ordinal": 1
+      },
+      {
+        "after": {
+          "end_line": 4,
+          "han_chars": 149,
+          "line_count": 1,
+          "sha256": "cef66ac03b1e79dc52f6e966e2febee8b4667021fa0266c75b5c9e2775256bd9",
+          "start_line": 4
+        },
+        "before": {
+          "end_line": 4,
+          "han_chars": 148,
+          "line_count": 1,
+          "sha256": "3dd765f808173259d6ac218cd07ba4c788076dd140c9bb686657aeacf68f0f70",
+          "start_line": 4
+        },
+        "change_id": "QCH-6f0b950f7a7a97d7f88b",
+        "operation": "REPLACE",
+        "ordinal": 2
+      }
+    ],
+    "limitations": {
+      "academic_correctness": "NOT_EVALUATED",
+      "authorship": "NOT_EVALUATED",
+      "quality_clearance_granted": false
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "03ba9601430e17a4c71cb21f9134e69273284d4dc15295cbfb3235737ed778bd",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "request_sha256": "048890277092c201d7775bf165607c8d85ca0ee134dba0fb1dd0afb79fda5a93",
+    "review_contract": {
+      "empty_or_generic_benefit_is_clearance": false,
+      "local_model_or_caller_assertion_is_clearance": false,
+      "required_dimensions": [
+        "actionable_pathology_remaining",
+        "no_change_is_best_available_decision",
+        "problem_span_binding",
+        "independent_reading_benefit",
+        "subject_and_modifier_alignment",
+        "verb_object_collocation",
+        "logical_relation_preservation",
+        "template_field_role_and_authorization",
+        "information_density_and_rhythm",
+        "author_voice_non_regression"
+      ],
+      "required_per_change_verdicts": [
+        "ACCEPT",
+        "REVISE",
+        "REVERT"
+      ],
+      "validator_pass_is_quality_clearance": false
+    },
+    "schema": "humanize-paired-quality-review-request/v1",
+    "status": "PENDING_EXTERNAL_REVIEW",
+    "template_field_changes": [],
+    "validation_context": {
+      "artifact_relation": "CHANGED",
+      "decision": "REWRITE",
+      "decision_eligible": true,
+      "document_format": "tex",
+      "document_scope": "FRAGMENT",
+      "mechanical_validation_status": "PASS",
+      "mode": "REWRITE",
+      "scene": "MODELING"
+    }
+  },
+  "paired_quality_review_status": "PENDING_EXTERNAL_REVIEW",
+  "paired_style_delta_findings": [],
+  "paired_style_delta_layer_status": "NOT_APPLICABLE",
+  "paired_style_delta_summary": {
+    "authorship_inference": false,
+    "finding_count": 0,
+    "scope": "PAIRED_COURSE_VOICE_NON_REGRESSION_CANDIDATE",
+    "status": "NOT_APPLICABLE"
+  },
+  "pending_warnings": [],
+  "proposed_warning_resolutions": [],
+  "report_scope_check": {
+    "editable_range_count": 0,
+    "editable_ranges": [],
+    "extractor_replay_match": null,
+    "fragment_count": 0,
+    "outside_selection_unchanged": null,
+    "report_sha256": null,
+    "scope_path": null,
+    "scope_semantic_sha256": null,
+    "scope_sha256": null,
+    "source_sha256": null,
+    "status": "N/A"
+  },
+  "review_reasons": [
+    "paired_quality_not_evaluated"
+  ],
+  "scene": "MODELING",
+  "semantic_source_check": "N/A",
+  "speech_act_diagnostics": [],
+  "speech_act_layer_status": "PASS",
+  "status": "REVIEW",
+  "strict_corpus_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 2,
+    "clean_allowed_by_strict_layer": true,
+    "enabled": true,
+    "no_change_allowed": true,
+    "unexplained_candidates": 0
+  },
+  "structural_plan_check": {
+    "actual_content_changed": true,
+    "change_applied": false,
+    "invariant_baseline_sha256": "011200c6a5c0000fa506d0312d06980972bf08d260ec2e3b75ace5c91b9ecaa0",
+    "limitations": "non-STRUCTURAL run",
+    "non_structural_paragraph_order_check": {
+      "author_paragraphs_after": 2,
+      "author_paragraphs_before": 2,
+      "authorized_topology_operations": 0,
+      "detected_paragraph_merges": [],
+      "detected_paragraph_splits": [],
+      "light_sentence_reorder": false,
+      "match_evidence": [
+        {
+          "after_index": 0,
+          "before_index": 0,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00579"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 1,
+          "before_index": 1,
+          "before_sha256": "a1c5c033d40218c9eabef765d1b026ee7ac17609480396eaaa1ae2bdaf749e32",
+          "kind": "AUTHOR",
+          "method": "NEAR_EXACT",
+          "protected_ids": [],
+          "similarity": 0.99308
+        },
+        {
+          "after_index": 2,
+          "before_index": 2,
+          "before_sha256": "0187ac2fbb2f4974ed7dfd538cdd77ccd938e8b59aeccc17c1f26536722b78b1",
+          "kind": "AUTHOR",
+          "method": "NEAR_EXACT",
+          "protected_ids": [],
+          "similarity": 0.988196
+        },
+        {
+          "after_index": 3,
+          "before_index": 3,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00587"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 4,
+          "before_index": 4,
+          "before_sha256": "28bfaa39824b238d009a5eee799a03516b89cdf0e4002d6b60c9009b11b96d02",
+          "kind": "AUTHOR",
+          "method": "EXACT",
+          "protected_ids": [],
+          "similarity": 1.0
+        }
+      ],
+      "matched_author_paragraphs": 3,
+      "matched_elements": 5,
+      "matched_protected_anchors": 2,
+      "moved_paragraph_sha256": [],
+      "near_exact_reordered": false,
+      "paragraph_topology_changed": false,
+      "protected_anchor_reordered": false,
+      "reordered": false,
+      "scope": "NON_STRUCTURAL_PARAGRAPH_TOPOLOGY_AND_ORDER",
+      "status": "PASS",
+      "topology_authorization_error": "",
+      "topology_authorization_status": "NOT_REQUIRED",
+      "topology_operation_evidence": []
+    },
+    "semantic_review_status": "NOT_ISSUED",
+    "status": "NOT_APPLICABLE"
+  },
+  "style_signal_layer_status": "PASS",
+  "template_field_edit_scope_check": {
+    "authorized_edit_count": 0,
+    "authorized_edits": [],
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "provided": false,
+    "schema_version": null,
+    "scope_sha256": null,
+    "source_sha256": "b281aa32a0ee8603aa9b823454756398d19111fe3f840e8fadd49b6b3f8d5f77",
+    "status": "N/A"
+  },
+  "template_field_findings": [],
+  "template_field_layer_status": "PASS",
+  "template_field_summary": {
+    "authorized_edit_count": 0,
+    "finding_count": 0,
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "review_finding_count": 0,
+    "status": "PASS"
+  },
+  "unaccepted_warnings": [],
+  "unexplained_high_findings": [],
+  "unexplained_strict_findings": [],
+  "warning_proposal_state": {
+    "attestation_status": "NOT_PROVIDED",
+    "cross_record_reviewer_linkability": "NOT_RECORDED",
+    "identity_verified": false,
+    "proposal_source": "NOT_PROVIDED",
+    "proposed_warning_fingerprints": [],
+    "review_clearance_granted": false,
+    "reviewer_identifier_collected": false,
+    "stable_reviewer_pseudonym_recorded": false,
+    "warning_review_request_sha256": null
+  },
+  "warning_resolutions": {},
+  "warning_review_request": null,
+  "warnings_without_resolution_proposal": []
+}

@@ -1,0 +1,523 @@
+{
+  "schema": "aigc-academic-candidate-audit/v1",
+  "status": "review",
+  "scope": "mechanical academic-style release gate; not authorship detection or final naturalness clearance",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\humanize-run\\source\\F00001.tex",
+    "sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+    "tree_files": 1,
+    "tree_sha256": "57f22f6b61143cfff2b058baeab4a1288933f1995ca585f3e39fafc33cadf27c"
+  },
+  "candidate": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\humanize-run\\rendered_review\\main.tex",
+    "sha256": "5d5fe72a74a03a92a5a669333affc9cafe1447151440f2bcf2e3ec6b91aa8a6b",
+    "tree_files": 1,
+    "tree_sha256": "b74d4f0862cbf65fbdf680429dfdeff69277fce965a96fffdc46f68b9ec944f8"
+  },
+  "decisions": {
+    "path": null,
+    "sha256": null
+  },
+  "dependencies": [
+    {
+      "role": "humanize-lexical-scanner",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\scripts\\scan_humanize_chinese.py",
+      "sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "bytes": 87413
+    },
+    {
+      "role": "humanize-lexical-signals",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\lexical-signals.json",
+      "sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "bytes": 5001788
+    },
+    {
+      "role": "protected-rewrite-contract",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_rewrite_contract.py",
+      "sha256": "319a31b07a42997aa38003a4e7457281ea37f204c367751e987e3c76964d3f12",
+      "bytes": 19655
+    },
+    {
+      "role": "section-voice-audit",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_voice_mode.py",
+      "sha256": "d925c441a3754e1d884e8020ddb6e0b1c23fe7339159773a06df166e8cb45daa",
+      "bytes": 11395
+    },
+    {
+      "role": "paragraph-rhythm-audit",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_style_rhythm.py",
+      "sha256": "da87dc3a15c7dcfcbe49b25fdf8e3bcb1557b5c71238ed78265b4033e60e9a0e",
+      "bytes": 8502
+    },
+    {
+      "role": "relative-style-comparison",
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\compare_style_revision.py",
+      "sha256": "f8a40d11bcf5cb134f2293ca2709b94b90ef8474e976ac655f0feecac98b2db3",
+      "bytes": 5114
+    }
+  ],
+  "gates": [
+    {
+      "id": "humanize-lexical",
+      "required": true,
+      "status": "review",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\scripts\\scan_humanize_chinese.py",
+          "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\humanize-run\\rendered_review\\main.tex",
+          "--scene",
+          "MODELING",
+          "--format",
+          "json"
+        ],
+        "returncode": 0,
+        "stderr": ""
+      },
+      "coverage": {
+        "status": "PASS",
+        "requested_count": 1,
+        "scanned_count": 1,
+        "skipped_count": 0,
+        "requested_files": [
+          "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\humanize-run\\rendered_review\\main.tex"
+        ],
+        "scanned_files": [
+          "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\humanize-run\\rendered_review\\main.tex"
+        ],
+        "skipped_files": []
+      },
+      "actionable_findings": 2,
+      "kept_by_position_bound_decision": 0,
+      "unresolved_findings": 2,
+      "signal_counts": {
+        "LEX-STRICT-CORPUS-OUTLOOK-01": 1,
+        "LEX-VAGUE-ATTRIBUTION-01": 1
+      },
+      "unresolved": [
+        {
+          "signal_id": "LEX-VAGUE-ATTRIBUTION-01",
+          "relative_path": "main.tex",
+          "line": 77,
+          "column": 4,
+          "matched": "研究表明",
+          "severity": "medium",
+          "action": "REVIEW",
+          "rationale": "该候选只提示归因来源在当前句中不可见，不判断来源真假。不得删除归因后改成无来源断言，不得虚构作者、年份或引用。"
+        },
+        {
+          "signal_id": "LEX-STRICT-CORPUS-OUTLOOK-01",
+          "relative_path": "main.tex",
+          "line": 487,
+          "column": 10,
+          "matched": "治理建议",
+          "severity": "high",
+          "action": "REWRITE",
+          "rationale": "没有材料授权的建议和展望直接删除；真实后续工作必须绑定 supplied content。"
+        }
+      ],
+      "decision_errors": [],
+      "unused_decisions": []
+    },
+    {
+      "id": "protected-rewrite-contract",
+      "required": true,
+      "status": "review",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_rewrite_contract.py",
+          "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\humanize-run\\source\\F00001.tex",
+          "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\humanize-run\\rendered_review\\main.tex",
+          "--scene",
+          "MODELING",
+          "--format",
+          "json"
+        ],
+        "returncode": 0,
+        "stderr": ""
+      },
+      "errors": 0,
+      "warnings": 3,
+      "findings": [
+        {
+          "severity": "warning",
+          "code": "NEGATION_CHANGED",
+          "before_count": 130,
+          "after_count": 129,
+          "location_method": "changed-block-delta",
+          "before_examples": [
+            {
+              "value": "不",
+              "matched": "不",
+              "line": 54,
+              "column": 7,
+              "context": "五个子问题并不是并排摆放的五块内容，而是沿着同一条因果链依次展开。我们先在问题一看恢复首先落在哪一层，再到问题二追踪这部分收益能否继续上传；问题三和问题四把视角拉到长期，专门盯住系统会不会越恢复越复杂；到了问题五，前面得到的恢复收益再和污染、入侵放在一起比较，才看得出它究竟能留下多少。全文也因此从“恢复是否发生”推进到“恢复是否稳得住、是否算健康”。"
+            },
+            {
+              "value": "不",
+              "matched": "不",
+              "line": 57,
+              "column": 7,
+              "context": "问题一的核心不仅在于验证\"鱼类资源量增加\"，更在于同时揭示\"鱼类增长的驱动机制\"与\"基础资源的承载压力变化\"。若将四大家鱼合并为单一消费者功能群，将水草、浮游植物、浮游动物和底栖饵料简化为单一资源总量，虽仍能匹配2025年资源量恢复至1.8倍的观测事实，但无法揭示哪一层级资源率先承压，也难以解释题目中\"水下荒漠\"等底层生态退化现象。因此，模型必须保留四类基础资源与四大家鱼的基本食性对应关系。"
+            }
+          ],
+          "after_examples": [
+            {
+              "value": "不",
+              "matched": "不",
+              "line": 52,
+              "column": 83,
+              "context": "四大家鱼回升、江豚回暖和长江鲟产卵场重现都指向禁渔后的恢复；“秃海”、通道受阻和入侵扩散又说明，单项资源量不足以解释收益在不同营养级和不同外部压力下的去向。我们因此不把注意力停在单项资源量上，分析转向收益所处的层级和压力来源。"
+            }
+          ],
+          "before_sequence_sha256": "8330423b7d574bf0e6150125bf70133bdbd7246b2b321f0b87116cf78b43b070",
+          "after_sequence_sha256": "a05f0df2c5fab8f524de27e6da50a8b796753f879a11a6433f97d3e5d46c9fac",
+          "finding_sha256": "9c920c4b8834cd1184f1ebd3a21953cc0ef335a9cb77438bc9400ebffc441ca4"
+        },
+        {
+          "severity": "warning",
+          "code": "CLAIM_STRENGTH_CHANGED",
+          "before_count": 41,
+          "after_count": 36,
+          "location_method": "changed-block-delta",
+          "before_examples": [
+            {
+              "value": "显著",
+              "matched": "显著",
+              "line": 26,
+              "column": 237,
+              "context": "对于问题二，我们基于上游资源-鱼群动态轨迹构建综合生态状态指数，驱动中层猎物承载力，建立长江江豚、长江鲟及入侵物种种群响应模型，并设置高阻隔、无人工放流和污染三种对照情景。基线情景下，长江江豚与长江鲟种群末值分别为禁渔前的1.133倍和1.140倍；高阻隔情景下分别降至0.901倍和0.856倍；无人工放流时长江鲟降至0.519倍；污染情景下二者进一步降至0.610倍和0.704倍。结果显示，江湖通道阻隔会同时抑制两类珍稀物种恢复，而人工增殖放流对长江鲟的补偿效应更为显著。"
+            },
+            {
+              "value": "显著",
+              "matched": "显著",
+              "line": 28,
+              "column": 159,
+              "context": "...普诺夫指数判别系统长期动力学行为。随承载力参数$K$增大，系统由规则有界振荡逐渐转变为复杂非线性波动；在代表点$K=1.795$、$2.665$、$4.800$处，时间序列的峰谷差与峰间间隔离散程度均显著增大。短时间窗分析显示，首个连续正李雅普诺夫指数区间出现在$K=3.2186$附近，但75组扩展测试中仅5组在$K=3.20\\sim3.22$区间出现指数由负转正。故本文仅保留\"系统动力学复杂性随承载..."
+            },
+            {
+              "value": "显著",
+              "matched": "显著",
+              "line": 36,
+              "column": 138,
+              "context": "长江流域是我国淡水渔业最发达、生物多样性最丰富的区域之一，但长期受过度捕捞、工业废水排放、水域塑料污染以及葛洲坝、三峡大坝等水利工程的综合影响，鱼类洄游通道被阻断，渔业资源持续衰退，典型食物链结构发生退化。自2021年1月1日实施长江十年禁渔政策以来，长江流域生态环境已出现显著变化：局部水域水质改善，水草等水生植被逐步恢复；2025年监测数据显示，青、草、鲢、鳙四大家鱼资源量已恢复至禁渔前的约1.8倍，表明禁渔对基础资源和经济鱼类具有显著的修复作用。"
+            },
+            {
+              "value": "显著",
+              "matched": "显著",
+              "line": 36,
+              "column": 220,
+              "context": "长江流域是我国淡水渔业最发达、生物多样性最丰富的区域之一，但长期受过度捕捞、工业废水排放、水域塑料污染以及葛洲坝、三峡大坝等水利工程的综合影响，鱼类洄游通道被阻断，渔业资源持续衰退，典型食物链结构发生退化。自2021年1月1日实施长江十年禁渔政策以来，长江流域生态环境已出现显著变化：局部水域水质改善，水草等水生植被逐步恢复；2025年监测数据显示，青、草、鲢、鳙四大家鱼资源量已恢复至禁渔前的约1.8倍，表明禁渔对基础资源和经济鱼类具有显著的修复作用。"
+            },
+            {
+              "value": "显著",
+              "matched": "显著",
+              "line": 38,
+              "column": 185,
+              "context": "...形成大面积\"水下荒漠\"。与此同时，长江江豚种群数量已回升至约1249头，2024年长江鲟自然繁殖产卵场重新被发现；而鳄雀鳝、巴西龟等外来入侵物种已在鄱阳湖等流域支流形成稳定种群。十年禁渔政策确实取得了显著的资源恢复成效，但恢复后的生态系统未必更加健康，营养级失衡、江湖连通性恢复不足以及外来物种入侵扩散等问题依然突出。因此有必要构建统一的动力学模型，将\"资源恢复\"与\"系统健康\"两个概念进行区分并分别评估..."
+            },
+            {
+              "value": "说明",
+              "matched": "说明",
+              "line": 207,
+              "column": 149,
+              "context": "...值仅为初始值的0.204倍，且水草生物量最小值出现在禁渔第10年，说明鱼类资源恢复并未同步改善基础资源状况。摄食压力指数从初始水平持续攀升至4.213，表明鱼群恢复程度与基础资源承压强度呈正相关。需要说明的是，0.204与$\\Phi$均为归一化单区系统中的相对指标，不直接对应全流域实际生物量或能量金字塔的绝对比例。$\\Phi$的持续上升与基础资源的大幅下降共同表明，资源供给已无法满足消费者种群的快速增..."
+            }
+          ],
+          "after_examples": [
+            {
+              "value": "说明",
+              "matched": "说明",
+              "line": 422,
+              "column": 52,
+              "context": "基准短时间窗下，$K=3.2186$附近出现局部跨越；积分时长和数值设置放宽后，这个跨越难以保持，不能说明起点固定，因此$K=3.2186$不能作为唯一临界点。本文据此只保留“承载力提高会增强系统复杂性”的方向性判断；若要定位分岔值，仍须采用更长积分时长（$\\ge 500$）并配合分岔图。图\\ref{fig:q4}给出不同积分时长下的有限时间指数。"
+            }
+          ],
+          "before_sequence_sha256": "336aad4bbc008f88c7896c912284f24f85eb145408604e22db7b5c9a112ee3c0",
+          "after_sequence_sha256": "338019338814d2890a54a24e1f6db43057621c2264ae92ece20833027f79c624",
+          "finding_sha256": "32fb933cfc364ac6de2b58daa27a793073e4c477e3a6c8e3cb034e51af2d5164"
+        },
+        {
+          "severity": "warning",
+          "code": "ARGUMENT_COMPRESSION_REVIEW",
+          "before_count": 234,
+          "after_count": 207,
+          "compression_ratio": 0.8846,
+          "removed_cues": [
+            "先把"
+          ],
+          "before_line_range": [
+            277,
+            277
+          ],
+          "after_line_range": [
+            277,
+            277
+          ],
+          "before_examples": [
+            {
+              "line": 277,
+              "column": 1,
+              "context": "在 2022 公报归一化口径下，我们先把基线情景看作恢复收益上传导的起点：江豚和长江鲟末值分别为 1.133 和 1.140。若只增强通道阻隔、暂不叠加额外污染，二者分别降至 0.901 和 0.856。再把长江鲟人工放流项置为 $R_A=0$，长江鲟末值降至 0.519，而江豚仅变为 1.145。污染情景下，江豚和长江鲟进一步降至 0.610 和 0.704。把这几组结果顺着看下来，通道约束会同时压低两类物种，而放流变化主要落在长江鲟上；污染则会在高阻隔基础上继续侵蚀..."
+            }
+          ],
+          "after_examples": [
+            {
+              "line": 277,
+              "column": 1,
+              "context": "在2022公报归一化口径下，基线情景的江豚和长江鲟末值为1.133和1.140。若只增强通道阻隔、暂不叠加额外污染，二者降至0.901和0.856。把长江鲟放流项置为$R_A=0$后，长江鲟降至0.519，而江豚仅变为1.145；污染情景下，两者又降至0.610和0.704。这里改变的是通道损失参数和放流控制量；放流项位于长江鲟方程，通道损失同时进入两类物种方程。通道约束同时压低两类物种，放流变化主要落在长江鲟上。表中报告江豚和长江鲟终态，$M$与$V$留作后文解释过程差异。"
+            }
+          ],
+          "before_sequence_sha256": "f4ecb07443c8f4d88b091852d5c9afc7ecc6cfb1807be320385ed9dcd2ec72f1",
+          "after_sequence_sha256": "3edb0aac67778b577395e8016f6b302e5afe065e60888c68f260e18d93a7747b",
+          "location_method": "changed-block-compression",
+          "finding_sha256": "6f1bd04596eead502cacb62fdb7640913747c4ad41230c0a8402cb4ea139a177"
+        }
+      ],
+      "adjudicated_warnings": [],
+      "unresolved_warnings": [
+        {
+          "severity": "warning",
+          "code": "NEGATION_CHANGED",
+          "before_count": 130,
+          "after_count": 129,
+          "location_method": "changed-block-delta",
+          "before_examples": [
+            {
+              "value": "不",
+              "matched": "不",
+              "line": 54,
+              "column": 7,
+              "context": "五个子问题并不是并排摆放的五块内容，而是沿着同一条因果链依次展开。我们先在问题一看恢复首先落在哪一层，再到问题二追踪这部分收益能否继续上传；问题三和问题四把视角拉到长期，专门盯住系统会不会越恢复越复杂；到了问题五，前面得到的恢复收益再和污染、入侵放在一起比较，才看得出它究竟能留下多少。全文也因此从“恢复是否发生”推进到“恢复是否稳得住、是否算健康”。"
+            },
+            {
+              "value": "不",
+              "matched": "不",
+              "line": 57,
+              "column": 7,
+              "context": "问题一的核心不仅在于验证\"鱼类资源量增加\"，更在于同时揭示\"鱼类增长的驱动机制\"与\"基础资源的承载压力变化\"。若将四大家鱼合并为单一消费者功能群，将水草、浮游植物、浮游动物和底栖饵料简化为单一资源总量，虽仍能匹配2025年资源量恢复至1.8倍的观测事实，但无法揭示哪一层级资源率先承压，也难以解释题目中\"水下荒漠\"等底层生态退化现象。因此，模型必须保留四类基础资源与四大家鱼的基本食性对应关系。"
+            }
+          ],
+          "after_examples": [
+            {
+              "value": "不",
+              "matched": "不",
+              "line": 52,
+              "column": 83,
+              "context": "四大家鱼回升、江豚回暖和长江鲟产卵场重现都指向禁渔后的恢复；“秃海”、通道受阻和入侵扩散又说明，单项资源量不足以解释收益在不同营养级和不同外部压力下的去向。我们因此不把注意力停在单项资源量上，分析转向收益所处的层级和压力来源。"
+            }
+          ],
+          "before_sequence_sha256": "8330423b7d574bf0e6150125bf70133bdbd7246b2b321f0b87116cf78b43b070",
+          "after_sequence_sha256": "a05f0df2c5fab8f524de27e6da50a8b796753f879a11a6433f97d3e5d46c9fac",
+          "finding_sha256": "9c920c4b8834cd1184f1ebd3a21953cc0ef335a9cb77438bc9400ebffc441ca4"
+        },
+        {
+          "severity": "warning",
+          "code": "CLAIM_STRENGTH_CHANGED",
+          "before_count": 41,
+          "after_count": 36,
+          "location_method": "changed-block-delta",
+          "before_examples": [
+            {
+              "value": "显著",
+              "matched": "显著",
+              "line": 26,
+              "column": 237,
+              "context": "对于问题二，我们基于上游资源-鱼群动态轨迹构建综合生态状态指数，驱动中层猎物承载力，建立长江江豚、长江鲟及入侵物种种群响应模型，并设置高阻隔、无人工放流和污染三种对照情景。基线情景下，长江江豚与长江鲟种群末值分别为禁渔前的1.133倍和1.140倍；高阻隔情景下分别降至0.901倍和0.856倍；无人工放流时长江鲟降至0.519倍；污染情景下二者进一步降至0.610倍和0.704倍。结果显示，江湖通道阻隔会同时抑制两类珍稀物种恢复，而人工增殖放流对长江鲟的补偿效应更为显著。"
+            },
+            {
+              "value": "显著",
+              "matched": "显著",
+              "line": 28,
+              "column": 159,
+              "context": "...普诺夫指数判别系统长期动力学行为。随承载力参数$K$增大，系统由规则有界振荡逐渐转变为复杂非线性波动；在代表点$K=1.795$、$2.665$、$4.800$处，时间序列的峰谷差与峰间间隔离散程度均显著增大。短时间窗分析显示，首个连续正李雅普诺夫指数区间出现在$K=3.2186$附近，但75组扩展测试中仅5组在$K=3.20\\sim3.22$区间出现指数由负转正。故本文仅保留\"系统动力学复杂性随承载..."
+            },
+            {
+              "value": "显著",
+              "matched": "显著",
+              "line": 36,
+              "column": 138,
+              "context": "长江流域是我国淡水渔业最发达、生物多样性最丰富的区域之一，但长期受过度捕捞、工业废水排放、水域塑料污染以及葛洲坝、三峡大坝等水利工程的综合影响，鱼类洄游通道被阻断，渔业资源持续衰退，典型食物链结构发生退化。自2021年1月1日实施长江十年禁渔政策以来，长江流域生态环境已出现显著变化：局部水域水质改善，水草等水生植被逐步恢复；2025年监测数据显示，青、草、鲢、鳙四大家鱼资源量已恢复至禁渔前的约1.8倍，表明禁渔对基础资源和经济鱼类具有显著的修复作用。"
+            },
+            {
+              "value": "显著",
+              "matched": "显著",
+              "line": 36,
+              "column": 220,
+              "context": "长江流域是我国淡水渔业最发达、生物多样性最丰富的区域之一，但长期受过度捕捞、工业废水排放、水域塑料污染以及葛洲坝、三峡大坝等水利工程的综合影响，鱼类洄游通道被阻断，渔业资源持续衰退，典型食物链结构发生退化。自2021年1月1日实施长江十年禁渔政策以来，长江流域生态环境已出现显著变化：局部水域水质改善，水草等水生植被逐步恢复；2025年监测数据显示，青、草、鲢、鳙四大家鱼资源量已恢复至禁渔前的约1.8倍，表明禁渔对基础资源和经济鱼类具有显著的修复作用。"
+            },
+            {
+              "value": "显著",
+              "matched": "显著",
+              "line": 38,
+              "column": 185,
+              "context": "...形成大面积\"水下荒漠\"。与此同时，长江江豚种群数量已回升至约1249头，2024年长江鲟自然繁殖产卵场重新被发现；而鳄雀鳝、巴西龟等外来入侵物种已在鄱阳湖等流域支流形成稳定种群。十年禁渔政策确实取得了显著的资源恢复成效，但恢复后的生态系统未必更加健康，营养级失衡、江湖连通性恢复不足以及外来物种入侵扩散等问题依然突出。因此有必要构建统一的动力学模型，将\"资源恢复\"与\"系统健康\"两个概念进行区分并分别评估..."
+            },
+            {
+              "value": "说明",
+              "matched": "说明",
+              "line": 207,
+              "column": 149,
+              "context": "...值仅为初始值的0.204倍，且水草生物量最小值出现在禁渔第10年，说明鱼类资源恢复并未同步改善基础资源状况。摄食压力指数从初始水平持续攀升至4.213，表明鱼群恢复程度与基础资源承压强度呈正相关。需要说明的是，0.204与$\\Phi$均为归一化单区系统中的相对指标，不直接对应全流域实际生物量或能量金字塔的绝对比例。$\\Phi$的持续上升与基础资源的大幅下降共同表明，资源供给已无法满足消费者种群的快速增..."
+            }
+          ],
+          "after_examples": [
+            {
+              "value": "说明",
+              "matched": "说明",
+              "line": 422,
+              "column": 52,
+              "context": "基准短时间窗下，$K=3.2186$附近出现局部跨越；积分时长和数值设置放宽后，这个跨越难以保持，不能说明起点固定，因此$K=3.2186$不能作为唯一临界点。本文据此只保留“承载力提高会增强系统复杂性”的方向性判断；若要定位分岔值，仍须采用更长积分时长（$\\ge 500$）并配合分岔图。图\\ref{fig:q4}给出不同积分时长下的有限时间指数。"
+            }
+          ],
+          "before_sequence_sha256": "336aad4bbc008f88c7896c912284f24f85eb145408604e22db7b5c9a112ee3c0",
+          "after_sequence_sha256": "338019338814d2890a54a24e1f6db43057621c2264ae92ece20833027f79c624",
+          "finding_sha256": "32fb933cfc364ac6de2b58daa27a793073e4c477e3a6c8e3cb034e51af2d5164"
+        },
+        {
+          "severity": "warning",
+          "code": "ARGUMENT_COMPRESSION_REVIEW",
+          "before_count": 234,
+          "after_count": 207,
+          "compression_ratio": 0.8846,
+          "removed_cues": [
+            "先把"
+          ],
+          "before_line_range": [
+            277,
+            277
+          ],
+          "after_line_range": [
+            277,
+            277
+          ],
+          "before_examples": [
+            {
+              "line": 277,
+              "column": 1,
+              "context": "在 2022 公报归一化口径下，我们先把基线情景看作恢复收益上传导的起点：江豚和长江鲟末值分别为 1.133 和 1.140。若只增强通道阻隔、暂不叠加额外污染，二者分别降至 0.901 和 0.856。再把长江鲟人工放流项置为 $R_A=0$，长江鲟末值降至 0.519，而江豚仅变为 1.145。污染情景下，江豚和长江鲟进一步降至 0.610 和 0.704。把这几组结果顺着看下来，通道约束会同时压低两类物种，而放流变化主要落在长江鲟上；污染则会在高阻隔基础上继续侵蚀..."
+            }
+          ],
+          "after_examples": [
+            {
+              "line": 277,
+              "column": 1,
+              "context": "在2022公报归一化口径下，基线情景的江豚和长江鲟末值为1.133和1.140。若只增强通道阻隔、暂不叠加额外污染，二者降至0.901和0.856。把长江鲟放流项置为$R_A=0$后，长江鲟降至0.519，而江豚仅变为1.145；污染情景下，两者又降至0.610和0.704。这里改变的是通道损失参数和放流控制量；放流项位于长江鲟方程，通道损失同时进入两类物种方程。通道约束同时压低两类物种，放流变化主要落在长江鲟上。表中报告江豚和长江鲟终态，$M$与$V$留作后文解释过程差异。"
+            }
+          ],
+          "before_sequence_sha256": "f4ecb07443c8f4d88b091852d5c9afc7ecc6cfb1807be320385ed9dcd2ec72f1",
+          "after_sequence_sha256": "3edb0aac67778b577395e8016f6b302e5afe065e60888c68f260e18d93a7747b",
+          "location_method": "changed-block-compression",
+          "finding_sha256": "6f1bd04596eead502cacb62fdb7640913747c4ad41230c0a8402cb4ea139a177"
+        }
+      ],
+      "semantic_decision_errors": [],
+      "unused_semantic_decisions": [],
+      "number_diff": {
+        "removed": [],
+        "introduced": []
+      }
+    },
+    {
+      "id": "section-voice",
+      "required": true,
+      "status": "pass",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_voice_mode.py",
+          "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\aigc-academic-candidate-p9knf53b\\candidate-combined.tex",
+          "--format",
+          "json"
+        ],
+        "returncode": 0,
+        "stderr": ""
+      },
+      "summary": {
+        "segments": 37,
+        "modes": {
+          "prose": 37,
+          "evidence": 0,
+          "operator": 0
+        },
+        "findings": 0
+      },
+      "findings": []
+    },
+    {
+      "id": "paragraph-rhythm",
+      "required": true,
+      "status": "pass",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\audit_style_rhythm.py",
+          "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\aigc-academic-candidate-p9knf53b\\candidate-combined.tex",
+          "--mode",
+          "auto",
+          "--format",
+          "json"
+        ],
+        "returncode": 0,
+        "stderr": ""
+      },
+      "summary": {
+        "segments_total": 37,
+        "segments_analyzed": 37,
+        "paragraphs_analyzed": 72,
+        "findings": 0
+      },
+      "findings": []
+    },
+    {
+      "id": "relative-style-comparison",
+      "required": false,
+      "status": "improved",
+      "execution": {
+        "command": [
+          "C:\\Users\\Lenovo\\AppData\\Local\\Programs\\Python\\Python313\\python.exe",
+          "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\compare_style_revision.py",
+          "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\aigc-academic-candidate-p9knf53b\\source-combined.tex",
+          "C:\\Users\\Lenovo\\AppData\\Local\\Temp\\aigc-academic-candidate-p9knf53b\\candidate-combined.tex",
+          "--format",
+          "json"
+        ],
+        "returncode": 0,
+        "stderr": ""
+      },
+      "same_bytes": false,
+      "improvements": [
+        {
+          "metric": "rhythm_findings",
+          "source": 1,
+          "candidate": 0,
+          "delta": -1
+        }
+      ],
+      "regressions": []
+    }
+  ],
+  "recovery": {
+    "route": "SEMANTIC_REVIEW_ON_CURRENT_CANDIDATE",
+    "current_candidate_repair_allowed": true,
+    "source_rebase_required": false,
+    "lexical_findings_actionable_now": true,
+    "blocking_gate_ids": [
+      "humanize-lexical",
+      "protected-rewrite-contract"
+    ],
+    "reason_codes": [
+      "NEGATION_CHANGED",
+      "CLAIM_STRENGTH_CHANGED",
+      "ARGUMENT_COMPRESSION_REVIEW"
+    ],
+    "next_action": "Resolve every semantic warning against the frozen source, then perform position-bound local repairs on the current candidate."
+  },
+  "summary": {
+    "required": 4,
+    "passed": 2,
+    "review": 2,
+    "failed": 0
+  }
+}

@@ -1,0 +1,265 @@
+<p align="center">
+  <img src="assets/brand/patina-mark.svg" alt="patina mark" width="172">
+</p>
+
+<h1 align="center">patina</h1>
+
+<p align="center">
+  <strong>Strip the AI packaging. Keep the meaning.</strong>
+</p>
+
+<p align="center">
+  <a href="README_KR.md"><b>한국어</b></a> ·
+  <a href="README_ZH.md"><b>中文</b></a> ·
+  <a href="README_JA.md"><b>日本語</b></a> ·
+  <b>English</b>
+</p>
+
+<p align="center">
+  <a href="https://github.com/devswha/patina/actions/workflows/test.yml"><img alt="Tests" src="https://github.com/devswha/patina/actions/workflows/test.yml/badge.svg"></a>
+  <a href="https://opensource.org/licenses/MIT"><img alt="License: MIT" src="https://img.shields.io/badge/License-MIT-yellow.svg"></a>
+  <a href="#quick-start"><img alt="Skill: Claude Code | Codex | Cursor | OpenCode" src="https://img.shields.io/badge/Skill-Claude%20Code%20%7C%20Codex%20%7C%20Cursor%20%7C%20OpenCode-blueviolet"></a>
+  <a href="https://github.com/devswha/patina"><img alt="Languages: KO | EN | ZH | JA" src="https://img.shields.io/badge/Languages-KO%20%7C%20EN%20%7C%20ZH%20%7C%20JA-green"></a>
+  <a href="CHANGELOG.md"><img alt="Version 7.0.0" src="https://img.shields.io/badge/version-7.0.0-blue"></a>
+</p>
+
+<p align="center">
+  <a href="https://patina.vibetip.help/"><b>Try it in the browser — no install</b></a>
+</p>
+
+<p align="center">
+  <img src="https://raw.githubusercontent.com/devswha/patina/main/assets/demo/patina-demo-live-en.gif" alt="Live screen capture of the hosted patina playground at patina.vibetip.help: an AI-sounding English announcement is typed in, rewritten naturally by the real server-side pipeline while the facts survive, and verified with MPS 100 and Fidelity 75 plus a deterministic AI-signal drop from 100 to 0" width="960">
+</p>
+
+<p align="center"><em>Paste AI-sounding text → patina rewrites it in place, keeps the facts (the "30 templates" number survives), and drops the deterministic AI signal 100 → 0 (MPS 100 / Fidelity 75).</em></p>
+
+**The words are not the tell. The architecture is.** We ran a pre-registered study with independent cross-family LLM judges: a rewrite can strip the AI vocabulary, yet judges still recognize AI documents by their *shape* — uniform paragraphs, checklist-complete coverage, the tidy problem→lesson arc. Word-level cleanup moved judged AI-likeness a lot on English documents (−23 points) and barely at all on long Korean ones. That result decides patina's design: detect both layers, and publish the losses next to the wins ([the study](docs/research/2026-rewrite-efficacy-study1.md)).
+
+patina is a deterministic, pattern-based humanizer for Korean, English, Chinese, and Japanese. It finds AI-sounding phrasing and rewrites it without changing the claim, numbers, polarity, or causation. It is not a black-box paraphraser, authorship detector, or detector-bypass tool — it is built for allowed AI-assisted drafting where the author wants cleaner voice, an audit trail, and meaning-preservation checks.
+
+More examples: [Before/After Gallery](docs/EXAMPLES.md) ([한국어](docs/EXAMPLES_KR.md)) · [CLI transcript](docs/DEMO.md).
+
+## Quick Start
+
+### Browser playground
+
+Open **[patina.vibetip.help](https://patina.vibetip.help/)** — paste KO / EN / ZH / JA text for a real rewrite gated by the MPS/fidelity floors, with the deterministic AI signal measured before → after. Rewrites and scoring run server-side; the free tier uses the service's own model key (rate-limited). **API mode** forwards your own key per request through the patina server to the provider you pick — never stored or logged (metrics are sanitized: no text, prompt, output, key, or IP). A hosted **Pro** tier unlocks higher limits — [see pricing](https://patina.vibetip.help/#pricing).
+
+### Agent skill
+
+**Let your coding agent install it** — paste this into Claude Code, Codex CLI, Cursor, Gemini CLI, or any agent:
+
+```text
+Install patina by following https://raw.githubusercontent.com/devswha/patina/main/INSTALLATION.md
+```
+
+The agent fetches [`INSTALLATION.md`](INSTALLATION.md) (written for AI agents) and runs the right install path for your host, then verifies it. Or do it yourself:
+
+**Claude Code — plugin marketplace (no clone, recommended):**
+
+```text
+/plugin marketplace add devswha/patina
+/plugin install patina@patina
+```
+
+**Claude Code · Codex CLI · Cursor · OpenCode — install script:**
+
+```bash
+curl -fsSL https://raw.githubusercontent.com/devswha/patina/main/install.sh | bash
+```
+
+Then run the skill from Claude Code, Codex CLI, Cursor, or OpenCode:
+
+```text
+/patina --lang en
+
+[paste your text here]
+```
+
+Useful skill calls:
+
+```text
+/patina --document-type email --register professional
+/patina --document-type blog --persona pragmatic-founder
+```
+
+### Standalone CLI
+
+Requires Node.js >= 18.
+
+```bash
+npx patina-cli doctor
+npx patina-cli --lang en input.txt
+```
+
+Use a logged-in local model CLI without an API key:
+
+```bash
+printf '%s\n' 'Coffee has emerged as a pivotal cultural phenomenon.' \
+  | npx patina-cli --lang en --backend codex-cli
+```
+
+Supported local backends: `codex-cli`, `claude-cli`, `gemini-cli`, `kimi-cli` — patina passes the strongest documented default model per backend. See [Authentication](docs/AUTHENTICATION.md) ([한국어](docs/AUTHENTICATION_KR.md)).
+
+For large `--batch` runs, prefer an OpenAI-compatible HTTP backend; local CLI backends are agent runtimes, capped conservatively with `--timeout-ms`, `--max-concurrency`, `--max-retries`, and `--max-failures` for batch safety.
+
+## What You Get
+
+|  |  |
+|---|---|
+| **184 patterns** | 37 rewrite-capable + 9 score-only viral-hook per language (46 each across KO/EN/ZH/JA) — see the full 184-pattern catalog in [PATTERNS.md](docs/PATTERNS.md) |
+| **Modes** | rewrite · verify · audit · score · diff |
+| **Surfaces** | agent skill · Node CLI · in-place preview · browser playground (rewrite + score) |
+| **Rewrite axes** | `--document-type` controls genre/policy · `--persona` controls reusable voice · `--register` controls casual/professional delivery |
+| **Free usage** | logged-in `codex`, `claude`, or `gemini` CLI can run rewrites without `PATINA_API_KEY` |
+| **Calibration** | 67.3% editing-hotspot catch [63.5–71.0%] across GPT-5.5 / Claude Sonnet 4.6 / Gemini 2.5 Pro (n=600, KO+EN); 16.0% false positives [11.6–21.7%] on KO+EN human controls (n=200) |
+| **License** | MIT |
+
+Scores are editing signals with false positives and false negatives, not proof of authorship. See [Ethics](docs/ETHICS.md).
+
+## Three Independent Axes
+
+Patina does not infer one axis from another. Omit Persona and Register to keep
+the source voice and register.
+
+| Axis | Controls | Does not control | CLI | Config | Playground |
+|---|---|---|---|---|---|
+| **Document Type** | Genre, purpose, structural conventions, pattern policy | Voice, casual/professional delivery, meaning floors | `--document-type` | `document-type` | Document |
+| **Persona** | Reusable voice fingerprint: vocabulary, rhythm, explanation habits | Genre, pattern policy, register, meaning floors | `--persona` | `persona` | Voice |
+| **Register** | `casual` or `professional` delivery | Genre, persona identity, pattern policy | `--register` | `register` | Register |
+Meaning preservation is the outer guard. If instructions appear to overlap,
+field ownership resolves them: Document Type wins for document structure and
+domain constraints, Persona for idiolect and rhythm, and Register for
+casual/professional markers. An explicit value never fills an omitted axis.
+
+
+Examples:
+
+```bash
+patina --document-type email --register professional note.md
+patina --document-type blog --persona pragmatic-founder post.md
+patina --document-type technical --persona technical-explainer --register casual guide.md
+```
+
+## Common Commands
+
+```bash
+patina --lang <ko|en|zh|ja> [mode] [--document-type <name>] [--persona <name>] [--register <name>] input.txt
+```
+
+| Command | Purpose |
+|---|---|
+| `patina input.txt` | rewrite with defaults |
+| `patina --audit input.txt` | detect patterns only |
+| `patina --score input.txt` | output a 0-100 score using the LLM judge plus deterministic signals |
+| `patina --score --offline input.txt` | score with deterministic signals only; no backend or API key |
+| `patina --score --offline --exit-on 30 input.txt` | offline CI gate with exit code `3` when `overall > 30` |
+| `patina --diff input.txt` | show pattern-by-pattern changes |
+| `patina --preview page.html` | render rewrites back onto a saved HTML page with toggles and inline diff |
+| `patina --verify input.txt` | rewrite, then check MPS/fidelity floors with one retry |
+| `patina --document-type email --register professional input.txt` | use email conventions with professional delivery |
+| `patina --persona pragmatic-founder input.txt` | rewrite in a built-in voice persona |
+| `patina persona new my-voice --from-sample past.txt` | author your own persona from a writing sample |
+| `patina persona list` | list built-in + custom personas |
+| `patina persona show my-voice --json` | print a persona's normalized config (never the docs body) |
+| `patina persona edit my-voice --name "New Name"` | copy-on-edit a persona into `custom/personas/` |
+| `patina persona rm my-voice` | remove a custom persona (built-ins are protected) |
+| `patina --format json --quiet input.txt` | script-friendly output |
+| `patina --batch docs/*.md --outdir cleaned/` | batch file processing |
+
+`patina --help` prints the full flag list. `patina doctor --json` checks Node, backend, tmux, and API-key readiness without making an LLM call.
+
+### Personas (voice)
+
+A **persona** is a reusable voice — a built-in (`patina persona list`) or your own, authored without editing source:
+
+```bash
+patina persona new my-voice --from-sample past-posts.txt   # learn from your writing
+patina persona new my-voice --describe "plain-spoken founder, casual"
+patina --persona my-voice draft.md                          # then reuse it
+
+patina persona show my-voice                                # inspect the normalized config (--json for machine output)
+patina persona edit my-voice --name "Founder voice"         # copy-on-edit into custom/personas/ (built-ins stay intact)
+patina persona rm my-voice                                  # remove a custom persona (--force to skip the confirm)
+```
+
+Works on ko/en/zh/ja and composes independently with `--document-type` and `--register`. Persona v2 changes reusable voice only; it cannot select a document type, set register, change pattern policy, or define verification/meaning floors. Authored Personas are validated on save, while global rewrite guards and `--verify` enforce meaning preservation independently.
+
+## CI
+
+For GitHub Actions, the maintained wrapper is shorter than hand-rolled setup:
+
+```yaml
+name: Patina prose score
+on:
+  pull_request:
+    paths: ['**/*.md', '**/*.mdx']
+permissions:
+  contents: read
+  pull-requests: read
+  issues: write
+jobs:
+  patina:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v6
+      - uses: devswha/patina-action@v1
+        with:
+          score-threshold: 30
+          lang: auto
+          comment: true
+```
+
+Other integrations: [pre-commit](docs/integrations/pre-commit.md), [static sites](docs/integrations/static-sites.md), [Docker](docs/integrations/docker.md), [release workflow](docs/integrations/release.md).
+
+## How It Works
+
+```text
+Input
+  -> semantic anchor extraction (claims, polarity, causation, numbers)
+  -> stylometry + AI-lexicon scan
+  -> pattern-guided rewrite
+  -> self-audit and MPS/fidelity checks
+  -> cleaned text
+```
+
+If meaning drifts, the change is retried or rolled back. Deterministic analysis lives in `src/features/*`; LLM-backed rewrite and score calls use the selected backend.
+
+## Configuration
+
+```yaml
+# .patina.yaml
+version: "7.0.0"
+language: ko              # ko | en | zh | ja
+document-type: default    # genre/purpose + pattern policy
+persona:                  # optional reusable voice; omit to preserve source
+register:                 # casual | professional; omit to preserve source
+```
+
+Project `.patina.yaml` overrides defaults. Pattern packs are auto-discovered by language prefix. Additive list keys (`blocklist`, `allowlist`, `skip-patterns`) merge; other arrays replace.
+
+## Documentation
+
+Start here:
+
+- [Cookbook](docs/COOKBOOK.md) — common recipes and workflows
+- [CLI Contract](docs/CLI.md) — flags, formats, score gates, exit behavior
+- [Authentication](docs/AUTHENTICATION.md) — local CLI backends and API providers
+- [Patterns](docs/PATTERNS.md) — full pattern catalog
+- [Subagents & strict flow](docs/agents.md) — optional read-only detector/fidelity/naturalness subagents and the `--strict` multi-pass mode
+- [Benchmarks](docs/benchmarks/README.md) · [latest report](docs/benchmarks/latest.md) · [2026 rebaseline](docs/research/2026-rebaseline.md)
+- [Measurement harness](docs/HARNESS.md) — index of every benchmark, calibration, and gate tool (incl. the signal-impact ablation harness)
+- [FAQ](docs/FAQ.md) ([한국어](docs/FAQ_KR.md))
+- [Ethics](docs/ETHICS.md)
+- [Contributing](CONTRIBUTING.md) ([한국어](CONTRIBUTING_KR.md))
+- [Changelog](CHANGELOG.md)
+
+Brand assets and usage rules live in [Branding](docs/BRANDING.md). Design notes live in [DESIGN.md](DESIGN.md).
+
+## Acknowledgements
+
+Inspired by [oh-my-zsh](https://github.com/ohmyzsh/ohmyzsh)'s plugin architecture, [Wikipedia's "Signs of AI writing"](https://en.wikipedia.org/wiki/Wikipedia:Signs_of_AI_writing), and [blader/humanizer](https://github.com/blader/humanizer).
+
+## License
+
+MIT. See [LICENSE](LICENSE) and [NOTICE](NOTICE).

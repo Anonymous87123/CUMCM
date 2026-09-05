@@ -1,0 +1,59 @@
+{
+  "test_id": "BTV-20260814-CUMCMA",
+  "sources": [
+    {
+      "path": "../analysis/results/summary.json",
+      "sha256": "406ed86f25417d0b871743134bd5d42c3f6326d9bb411f0b9e900d3fbdf84537"
+    },
+    {
+      "path": "../analysis/results/diagnostics.json",
+      "sha256": "3131d6d179f587f7610eca4e1caf2e6a496a1a94c7645ad171869f244e921e5c"
+    },
+    {
+      "path": "../analysis/results/q1_local_profile.csv",
+      "sha256": "b61dc3503468dbad649f2be34c049acdab6ea84ac2bc6f0661e368528c24614c"
+    },
+    {
+      "path": "../analysis/results/step_convergence.csv",
+      "sha256": "10c5b65e750094fdd9f19e42e1880491056d7edf82d1fb7ccf853baa3f9d2337"
+    }
+  ],
+  "claims": [
+    {
+      "id": "q1_open_100",
+      "literal": "2.7900",
+      "min_occurrences": 3,
+      "forbidden": ["2.7800", "2.780037"]
+    },
+    {
+      "id": "q2_omega",
+      "literal": "27.507",
+      "min_occurrences": 4,
+      "forbidden": ["27.797"]
+    },
+    {
+      "id": "q3_omega",
+      "literal": "54.717",
+      "min_occurrences": 3,
+      "forbidden": ["55.188"]
+    },
+    {
+      "id": "q3_offset",
+      "literal": "48.052",
+      "min_occurrences": 3,
+      "forbidden": ["42.334", "42.3338"]
+    },
+    {
+      "id": "relief_thresholds",
+      "literal": "101.8/101.5",
+      "min_occurrences": 2,
+      "forbidden": ["101.0/100.7"]
+    },
+    {
+      "id": "relief_mean",
+      "literal": "99.9837",
+      "min_occurrences": 2,
+      "forbidden": ["98.8215"]
+    }
+  ]
+}

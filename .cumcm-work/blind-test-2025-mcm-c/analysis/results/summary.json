@@ -1,0 +1,97 @@
+{
+  "best_models": {
+    "total": "blend50",
+    "gold": "blend50"
+  },
+  "validation_mean": [
+    {
+      "target": "gold",
+      "model": "blend25",
+      "mae": 0.6340691053754225
+    },
+    {
+      "target": "gold",
+      "model": "blend50",
+      "mae": 0.6266206230109967
+    },
+    {
+      "target": "gold",
+      "model": "host_adjusted",
+      "mae": 0.6548858990705059
+    },
+    {
+      "target": "gold",
+      "model": "persistence",
+      "mae": 0.6713170275471533
+    },
+    {
+      "target": "gold",
+      "model": "poisson_hgb",
+      "mae": 0.6992096614519872
+    },
+    {
+      "target": "gold",
+      "model": "random_forest",
+      "mae": 0.6793172342385093
+    },
+    {
+      "target": "gold",
+      "model": "ridge_log",
+      "mae": 1.0202944662046534
+    },
+    {
+      "target": "total",
+      "model": "blend25",
+      "mae": 1.4435105403540063
+    },
+    {
+      "target": "total",
+      "model": "blend50",
+      "mae": 1.4407904216126997
+    },
+    {
+      "target": "total",
+      "model": "host_adjusted",
+      "mae": 1.4744685579045789
+    },
+    {
+      "target": "total",
+      "model": "persistence",
+      "mae": 1.4682057343454769
+    },
+    {
+      "target": "total",
+      "model": "poisson_hgb",
+      "mae": 1.5550795537450015
+    },
+    {
+      "target": "total",
+      "model": "random_forest",
+      "mae": 1.5371594400988589
+    },
+    {
+      "target": "total",
+      "model": "ridge_log",
+      "mae": 3.226031394436562
+    }
+  ],
+  "first_medal": {
+    "rolling_brier_raw": 0.11585072752714033,
+    "rolling_prevalence": 0.07052896725440806,
+    "raw_probability_mean": 0.28136414888542516,
+    "expected_first_medal_countries": 5.078099686451263,
+    "count_lo90": 2.0,
+    "count_hi90": 9.0,
+    "prob_at_least_one": 0.99532
+  },
+  "program_data_boundary": {
+    "latest_available_year": 2024,
+    "base_2028_schedule": "carry forward the 2024 sport-event structure",
+    "scenario_interface": "one additional event changes a country's expectation by its 2016-2024 medal share in that sport"
+  },
+  "target_reconstruction": {
+    "definition": "official medal-count table mapped year by year from country labels to athlete-table NOC codes",
+    "sport_level_definition": "deduplicate athlete medal rows by Year-NOC-canonical sport-Event-Medal",
+    "reason": "the official table is the country-level target; athlete rows are used only for sport attribution because team events repeat one medal across several athletes"
+  }
+}

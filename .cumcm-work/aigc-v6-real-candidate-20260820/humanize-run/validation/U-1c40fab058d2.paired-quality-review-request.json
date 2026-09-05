@@ -1,0 +1,97 @@
+{
+  "artifact": {
+    "after_sha256": "7b8412716d1c45ec35bd747e8888019a8db23f05e8873d63cfb426138f4cd093",
+    "before_sha256": "b281aa32a0ee8603aa9b823454756398d19111fe3f840e8fadd49b6b3f8d5f77"
+  },
+  "changes": [
+    {
+      "after": {
+        "end_line": 2,
+        "han_chars": 113,
+        "line_count": 1,
+        "sha256": "0d3fd9828e46a3e7029fa56465d49f6c1be7b58e600a2e685a3354def7710c67",
+        "start_line": 2
+      },
+      "before": {
+        "end_line": 2,
+        "han_chars": 113,
+        "line_count": 1,
+        "sha256": "92be11a2de6c3445a4c1ed525c6dc04f337a88bf5b0a9fddf58e9010c6a2dc52",
+        "start_line": 2
+      },
+      "change_id": "QCH-636ecd64c2ea4e49fdcc",
+      "operation": "REPLACE",
+      "ordinal": 1
+    },
+    {
+      "after": {
+        "end_line": 4,
+        "han_chars": 149,
+        "line_count": 1,
+        "sha256": "cef66ac03b1e79dc52f6e966e2febee8b4667021fa0266c75b5c9e2775256bd9",
+        "start_line": 4
+      },
+      "before": {
+        "end_line": 4,
+        "han_chars": 148,
+        "line_count": 1,
+        "sha256": "3dd765f808173259d6ac218cd07ba4c788076dd140c9bb686657aeacf68f0f70",
+        "start_line": 4
+      },
+      "change_id": "QCH-6f0b950f7a7a97d7f88b",
+      "operation": "REPLACE",
+      "ordinal": 2
+    }
+  ],
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "authorship": "NOT_EVALUATED",
+    "quality_clearance_granted": false
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "03ba9601430e17a4c71cb21f9134e69273284d4dc15295cbfb3235737ed778bd",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "048890277092c201d7775bf165607c8d85ca0ee134dba0fb1dd0afb79fda5a93",
+  "review_contract": {
+    "empty_or_generic_benefit_is_clearance": false,
+    "local_model_or_caller_assertion_is_clearance": false,
+    "required_dimensions": [
+      "actionable_pathology_remaining",
+      "no_change_is_best_available_decision",
+      "problem_span_binding",
+      "independent_reading_benefit",
+      "subject_and_modifier_alignment",
+      "verb_object_collocation",
+      "logical_relation_preservation",
+      "template_field_role_and_authorization",
+      "information_density_and_rhythm",
+      "author_voice_non_regression"
+    ],
+    "required_per_change_verdicts": [
+      "ACCEPT",
+      "REVISE",
+      "REVERT"
+    ],
+    "validator_pass_is_quality_clearance": false
+  },
+  "schema": "humanize-paired-quality-review-request/v1",
+  "status": "PENDING_EXTERNAL_REVIEW",
+  "template_field_changes": [],
+  "validation_context": {
+    "artifact_relation": "CHANGED",
+    "decision": "REWRITE",
+    "decision_eligible": true,
+    "document_format": "tex",
+    "document_scope": "FRAGMENT",
+    "mechanical_validation_status": "PASS",
+    "mode": "REWRITE",
+    "scene": "MODELING"
+  }
+}

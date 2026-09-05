@@ -1,0 +1,6 @@
+interface:
+  display_name: "General Chinese Humanizer"
+  short_description: "Edit general Chinese prose while preserving source facts"
+  default_prompt: "Use $humanizer-zh to complete one fact-preserving edit of this general Chinese text; route academic, technical-result, TeX, and CUMCM work through $aigc-writing-router."
+policy:
+  allow_implicit_invocation: false

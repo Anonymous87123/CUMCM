@@ -1,0 +1,169 @@
+﻿[
+  {
+    "id": "2020_A212_P0293",
+    "year": 2020,
+    "problem_type": "A",
+    "paper": "A212",
+    "page_start": 3,
+    "page_end": 4,
+    "section": "analysis",
+    "quality": "high",
+    "median_confidence": 0.9242,
+    "han_chars": 370,
+    "sentence_count": 5,
+    "actions": [
+      "algorithm",
+      "choice",
+      "continuation",
+      "problem_translation",
+      "result",
+      "statement"
+    ],
+    "action_sequence": [
+      "continuation",
+      "problem_translation",
+      "statement",
+      "choice",
+      "statement"
+    ],
+    "opening_family": "直接陈述",
+    "closing_family": "其他",
+    "formula_nearby": false,
+    "visual_nearby": false,
+    "models": [
+      "多目标优化",
+      "模拟退火"
+    ],
+    "source_methods": [
+      "rapidocr-220dpi-style"
+    ],
+    "source": "2020/A212.pdf#page=3",
+    "text": "问题四需要我们在第三问的基础上,进一步考虑炉温曲线在217°C以上的部分升温和降温的过程尽量对称,同时要保证符合制程界限与各温区设定温度及传送带过炉速度调节范围的限制,并使得超过217°C到峰值温度所覆盖的面积仍能达到一个较小值。这是一个多目标优化问题,一个目标是覆盖的面积,一个目标是曲线的对称度。一般可以为要优化的目标分配权值后再进行优化。我们首先要给出一个衡量对称度的量,我们取炉温曲线在217°C以上的部分,取最高温对应的时间和两个边界时间点,将两个边界时间点相减除以时间步长得到数据点总数,以最高温对应的时间点向时间正方向和负方向各取数据点总数的一半的数据,取正负方向各个对应点的温度值求均方差值,作为对称度衡量的指标。将面积和对称度数量级进行处理,使得两者的数量级一致,为两个因素分配合理的权值之后,得到一个多目标的优化模型,以各温区的设定温度和传送带过炉速度为变量,同样使用模拟退火算法来进行求解。",
+    "retrieval_eligible": true,
+    "index_line": 293,
+    "score": 5,
+    "source_type": "fulltext",
+    "index_source": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:293",
+    "previous_context": [
+      {
+        "source": "2020/A212.pdf#page=3",
+        "section": "analysis",
+        "text": "问题三需要我们给出最优炉温曲线,以及各温区的设定温度和传送带的过炉速度,使得超过217°C到峰值温度所覆盖的面积最小。这是一个优化问题,优化目标是求覆盖面积的最小值,约束条件一是题目中所列出的制程界限,二是各温区设定温度及传送带的过炉速度调节范围限制。通过以上分析建立优化模型,以各温区的设定温度和传送带过炉速度为变量,利用模拟退火算法进行求解。"
+      }
+    ],
+    "next_context": [
+      {
+        "source": "2020/A212.pdf#page=4",
+        "section": "assumption",
+        "text": "2、在回焊炉中传热方式仅考虑热传导、热对流,假设热辐射对本题结果的计算没"
+      }
+    ]
+  },
+  {
+    "id": "2021_A028_P1872",
+    "year": 2021,
+    "problem_type": "A",
+    "paper": "A028",
+    "page_start": 2,
+    "page_end": 3,
+    "section": "analysis",
+    "quality": "high",
+    "median_confidence": 0.8951,
+    "han_chars": 235,
+    "sentence_count": 7,
+    "actions": [
+      "choice",
+      "result",
+      "statement",
+      "validation"
+    ],
+    "action_sequence": [
+      "result",
+      "statement",
+      "choice",
+      "result",
+      "statement"
+    ],
+    "opening_family": "依据",
+    "closing_family": "其他",
+    "formula_nearby": false,
+    "visual_nearby": false,
+    "models": [],
+    "source_methods": [
+      "rapidocr-220dpi-style"
+    ],
+    "source": "2021/A028.pdf#page=2",
+    "text": "由于反射面板的形状不为撼物面的一部分,故不能经过调节使得300m内反射面的形状完美符合抛物面。在观测某一方位角的星体S时,可以先按照方位角要求将问题1中所求的理想抛物面旋转至抛物面项点、球心C、星体S共线,得到新抛物面的方程。先将主索节点移动至新抛物面上。再通过在每个节点附近取统计点,计算统计点和新撼物面有向距离的平均值,依此反向移动,对节点位置进行调整,使得反射面板贴近抛物面。选取统计点,以统计点位置和新抛物面位置的均方根误差作为评估标准,评估该方法的有效性。可知方法有效,即可求得题中所需的坐标、伸缩量等。问题3的分析:",
+    "retrieval_eligible": true,
+    "index_line": 1872,
+    "score": 5,
+    "source_type": "fulltext",
+    "index_source": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:1872",
+    "previous_context": [
+      {
+        "source": "2021/A028.pdf#page=2",
+        "section": "analysis",
+        "text": "(iii)的求解过程:由(ii)中计算的促动器伸缩长度给出促动器伸缩量的平均值、促动器伸缩量的最大值等评估量。根据评估量择优选择抛物面作为理想抛物面。问题2的分析:"
+      }
+    ],
+    "next_context": [
+      {
+        "source": "2021/A028.pdf#page=3",
+        "section": "analysis",
+        "text": "按问题2的方案调节后,得到各反射面板的位置信息,结合形状信息,可以求得:各反射面板在入射法平面上的投影面积、反射信号在接收信号平面上形成图形的面积,用蒙特卡罗法求该形成图形与接收信号有效区域交集的面积。分别评估反射面板接收信号量11、反射面板反射信号量12、反射面板反射信号被接收的量13,计算所有面板丝的和作为此时的接收"
+      }
+    ]
+  },
+  {
+    "id": "2021_A028_P1906",
+    "year": 2021,
+    "problem_type": "A",
+    "paper": "A028",
+    "page_start": 9,
+    "page_end": 9,
+    "section": "analysis",
+    "quality": "high",
+    "median_confidence": 0.8883,
+    "han_chars": 249,
+    "sentence_count": 4,
+    "actions": [
+      "assumption",
+      "continuation",
+      "result"
+    ],
+    "action_sequence": [
+      "result",
+      "assumption",
+      "result"
+    ],
+    "opening_family": "其他",
+    "closing_family": "其他",
+    "formula_nearby": true,
+    "visual_nearby": true,
+    "models": [],
+    "source_methods": [
+      "rapidocr-120dpi"
+    ],
+    "source": "2021/A028.pdf#page=9",
+    "text": ")称为二维空间逆时针旋转8角的旋转矩阵。在三维空间中的旋转可以视为几个绕坐标轴的基本旋转的复合,而基本旋转矩阵和二维平面的旋转矩阵十分类似。绕X轴在YZ平面逆时针旋转6的旋转矩阵为:它可以看作是向量的第一个分量(X坐标)不发生改变,而后两个分量在对应的平面上进行二维旋转所得到的矩阵。同理,绕Y轴在ZX平面逆时针旋转6,的旋转矩阵为绕Y轴在ZX平面逆时针旋转e,的旋转矩阵为再根据具体问题判断基本旋转的复合顺序,将基本旋转的旋转矩阵相乘即得到总的旋转例如:依次绕X、Y、Z轴旋转时,旋转矩阵R=RxR,Rz,记原点为O,空间内一点A,OA旋转所得的OA满足:在三维空间中,记一图形方程为:记一可逆坐标变换为:",
+    "retrieval_eligible": false,
+    "index_line": 1906,
+    "score": 5,
+    "source_type": "fulltext",
+    "index_source": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:1906",
+    "previous_context": [
+      {
+        "source": "2021/A028.pdf#page=8",
+        "section": "result",
+        "text": "然而次伸缩量水平只是一个估计值而非实际值,该猜想是否正确,即第二类由面的促动器总伸缩量是否确实大于第一类,需要通过主索节点的具体坐标量化计算,这部分将在问题"
+      }
+    ],
+    "next_context": [
+      {
+        "source": "2021/A028.pdf#page=10",
+        "section": "model",
+        "text": "根据模型准备中旋转矩阵与图形变换的结论,将问题1中求解的理想抛物面S为:"
+      }
+    ]
+  }
+]

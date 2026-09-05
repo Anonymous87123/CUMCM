@@ -1,0 +1,6 @@
+interface:
+  display_name: "Baibai AIGC Candidate Editor"
+  short_description: "Produce one conservative same-source rewrite candidate"
+  default_prompt: "Use $baibai-aigc to produce a conservative alternative from this frozen source and reject any semantic drift."
+policy:
+  allow_implicit_invocation: false

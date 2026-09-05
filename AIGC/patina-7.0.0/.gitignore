@@ -1,0 +1,86 @@
+# oh-my-codex / oh-my-x
+.omc/
+.omx/
+.omo/
+
+# User customizations
+custom/
+.patina.yaml
+
+# OS / editor
+.DS_Store
+*.swp
+*~
+
+# Ops / runtime logs
+node_modules
+.env
+.gjc/
+plans/
+__pycache__/
+.pytest_cache/
+
+# secrets / credentials
+.env.*
+*.key
+*.pem
+secrets/
+credentials/
+.aws/
+.ssh/
+
+# OpenClaw / Claude Code workspace files (runtime-specific, not part of the skill)
+.openclaw/
+.workclaw/
+.claude/
+AGENTS.md
+BOOTSTRAP.md
+CLAUDE.md
+IDENTITY.md
+USER.md
+MEMORY.md
+HEARTBEAT.md
+SOUL.md
+TOOLS.md
+memory/
+
+# Maintainer/agent-internal docs (runbooks, backlogs, launch playbooks) live in
+# the private maintainer workspace (.omc/research/), never in the public tree.
+docs/internal/
+
+# Marketing bot workspace template (internal ops)
+
+# Generated benchmark artifacts (regenerated per `npm run benchmark`)
+tests/quality/results.json
+tests/quality/scorer-results.json
+tests/e2e/temp-prompt.txt
+
+# Private rebaseline corpora; check in only sanitized manifests/summaries.
+artifacts/rebaseline-*/generations.private.jsonl
+artifacts/rebaseline-*/*.private.jsonl
+artifacts/rebaseline-*/private/
+.vercel
+
+# local test samples / shareable bundles (user-owned, not repo fixtures)
+sample/
+
+# Demo render scratch outputs (only the curated patina-preview-<lang>.gif/png are tracked)
+assets/demo/*real-tistory*
+# Dev/QA scratch under artifacts/ — screenshots, browser runs, QA reports.
+# Regenerated per QA pass, never committed. Curated corpora live in tracked
+# subdirs (persona-calibration-*/, rebaseline-*/) and are unaffected by these.
+artifacts/*-qa/
+artifacts/demo-en/
+artifacts/*.png
+artifacts/*.jpg
+artifacts/*.jpeg
+artifacts/ai-test-sources.md
+
+# Rewrite-efficacy study raw outputs (regenerated; text bodies stay private)
+artifacts/rewrite-efficacy-pilot/
+artifacts/rewrite-efficacy-study1/
+artifacts/rewrite-efficacy-study2/
+artifacts/rewrite-efficacy-study3/
+
+# Judge-calibration side study raw outputs (same policy: raw text never committed)
+artifacts/judge-calibration-2026/

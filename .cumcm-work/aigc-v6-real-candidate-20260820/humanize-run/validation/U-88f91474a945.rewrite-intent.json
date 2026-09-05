@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "25b739f8310fb1363c5478a19d66e7afa6b077be20b48abe0e1c9524de8130de",
+    "before_sha256": "25b739f8310fb1363c5478a19d66e7afa6b077be20b48abe0e1c9524de8130de"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "118dae2acb93f5c97e42986718ed78a9d174f04d3856e0eabb49ac937cd872f3",
+  "chunk_binding_sha256": "3634b0011547cbb8afd6ef5ec589f6618766d6afb2e7cee701aa0fc72884db49",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-88f91474a945.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "507cf174b0285ab678e62830a2b52a51452d85365e3568ec2e982b9ed11bee5d",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 4,
+        "id": "S1",
+        "sha256": "be56ae57d4e5e7e393e8786db4cc3ebf7ef56f8e81ad47e6d1de72ed215c5a41",
+        "start_line": 2
+      }
+    ],
+    "reason": "该段落中的条件句限定积分时长、步长和初值，保留其范围说明与数值判别职责。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "35f9c08603320d9ed37e4f35a88f385e4333951ef3bd1fefab75f6670c733c2c",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-88f91474a945"
+}

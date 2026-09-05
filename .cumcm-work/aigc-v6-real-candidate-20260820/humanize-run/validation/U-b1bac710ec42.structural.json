@@ -1,0 +1,82 @@
+{
+  "actual_content_changed": true,
+  "change_applied": false,
+  "invariant_baseline_sha256": "73125f905376eb25f67f10f641b25ccb04d2c3f4843968acdb10678716db0ac5",
+  "limitations": "non-STRUCTURAL run",
+  "non_structural_paragraph_order_check": {
+    "author_paragraphs_after": 3,
+    "author_paragraphs_before": 3,
+    "authorized_topology_operations": 0,
+    "detected_paragraph_merges": [],
+    "detected_paragraph_splits": [],
+    "light_sentence_reorder": false,
+    "match_evidence": [
+      {
+        "after_index": 0,
+        "before_index": 0,
+        "before_sha256": "",
+        "kind": "PROTECTED",
+        "method": "EXACT",
+        "protected_ids": [
+          "F00001-P00033"
+        ],
+        "similarity": 1.0
+      },
+      {
+        "after_index": 4,
+        "before_index": 4,
+        "before_sha256": "",
+        "kind": "PROTECTED",
+        "method": "EXACT",
+        "protected_ids": [
+          "F00001-P00038"
+        ],
+        "similarity": 1.0
+      },
+      {
+        "after_index": 5,
+        "before_index": 5,
+        "before_sha256": "4687235e648ae71bac305600a399024b868109220e5214520db0a7075ff98843",
+        "kind": "AUTHOR",
+        "method": "EXACT",
+        "protected_ids": [],
+        "similarity": 1.0
+      },
+      {
+        "after_index": 6,
+        "before_index": 6,
+        "before_sha256": "",
+        "kind": "PROTECTED",
+        "method": "EXACT",
+        "protected_ids": [
+          "F00001-P00044"
+        ],
+        "similarity": 1.0
+      },
+      {
+        "after_index": 7,
+        "before_index": 7,
+        "before_sha256": "22ffe42f645b3f5898dbf22e13d587c80ea563214158c55fe8684240cdfcf761",
+        "kind": "AUTHOR",
+        "method": "NEAR_EXACT",
+        "protected_ids": [],
+        "similarity": 0.864865
+      }
+    ],
+    "matched_author_paragraphs": 2,
+    "matched_elements": 5,
+    "matched_protected_anchors": 3,
+    "moved_paragraph_sha256": [],
+    "near_exact_reordered": false,
+    "paragraph_topology_changed": false,
+    "protected_anchor_reordered": false,
+    "reordered": false,
+    "scope": "NON_STRUCTURAL_PARAGRAPH_TOPOLOGY_AND_ORDER",
+    "status": "PASS",
+    "topology_authorization_error": "",
+    "topology_authorization_status": "NOT_REQUIRED",
+    "topology_operation_evidence": []
+  },
+  "semantic_review_status": "NOT_ISSUED",
+  "status": "NOT_APPLICABLE"
+}

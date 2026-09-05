@@ -1,0 +1,44 @@
+{
+  "schema": "aigc-adapter-run/v1",
+  "package": "humanize-main",
+  "action": "audit",
+  "status": "pass",
+  "native_executed": false,
+  "claims": {
+    "remote_generation_ran": false,
+    "gui_workbench_ran": false,
+    "authorship_or_detector_verdict": false
+  },
+  "findings": [],
+  "artifact_dir": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\research\\holdout-run-aux-20260823\\auxiliary\\draft-holdout-02-ac58ccf3-t1\\ai-check-adapter",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-style-matrix-20260820-v1\\research\\holdout-run-aux-20260823\\authoring\\draft-holdout-02-ac58ccf3-t1.tex",
+    "sha256": "7c24c2a28528728f56fa2b388cb68939dc7568550c720263e6f55d8c60d54901",
+    "bytes": 629,
+    "suffix": ".tex"
+  },
+  "protected_inventory": {
+    "numbers": {},
+    "tex_commands": {},
+    "tex_keys": {},
+    "inline_math": {},
+    "dollar_display_math": {},
+    "display_math": {},
+    "math_environments": {},
+    "code_fences": {},
+    "urls": {}
+  },
+  "diagnostics": {
+    "characters": 215,
+    "non_whitespace_characters": 213,
+    "paragraphs": 1,
+    "sentences": 5,
+    "sentence_length_min": 30,
+    "sentence_length_max": 88,
+    "sentence_length_mean": 42.6,
+    "duplicate_paragraphs": [],
+    "boilerplate_hits": {},
+    "unresolved_placeholders": []
+  },
+  "interpretation": "Deterministic signals locate review targets only; they do not identify the author, prove academic quality, or predict an external detector."
+}

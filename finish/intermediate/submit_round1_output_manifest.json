@@ -1,0 +1,2068 @@
+{
+  "chunk_limit": 850,
+  "chunk_metric": "char",
+  "paragraph_count": 136,
+  "chunk_count": 138,
+  "paragraphs": [
+    {
+      "paragraph_index": 0,
+      "original_text": "\\documentclass[UTF8,zihao=-4]{ctexart}",
+      "chunk_ids": [
+        "p0_c0"
+      ]
+    },
+    {
+      "paragraph_index": 1,
+      "original_text": "\\usepackage[a4paper,top=2.4cm,bottom=2.4cm,left=2.25cm,right=2.25cm]{geometry}\n\\usepackage{amsmath,amssymb}\n\\usepackage{booktabs,longtable,array,tabularx}\n\\usepackage{listings}\n\\usepackage{enumitem}\n\\usepackage{xcolor}\n\\usepackage{hyperref}\n\\usepackage{fancyhdr}",
+      "chunk_ids": [
+        "p1_c0"
+      ]
+    },
+    {
+      "paragraph_index": 2,
+      "original_text": "\\definecolor{inkblue}{RGB}{34,76,112}\n\\definecolor{softgray}{RGB}{246,248,250}\n\\lstset{basicstyle=\\small\\ttfamily,breaklines=true,showstringspaces=false,frame=single,rulecolor=\\color{softgray}}\n\\newcommand{\\slot}[1]{\\textcolor{inkblue}{\\textit{【#1】}}}\n\\newcommand{\\guidehead}[1]{\\par\\medskip\\noindent\\textbf{\\color{inkblue}#1}\\par}\n\\hypersetup{\n  colorlinks=true,\n  linkcolor=inkblue,\n  urlcolor=inkblue,\n  citecolor=inkblue,\n  pdfauthor={数学建模学习小组},\n  pdftitle={数学建模阶段学习笔记与论文写作模板}\n}",
+      "chunk_ids": [
+        "p2_c0"
+      ]
+    },
+    {
+      "paragraph_index": 3,
+      "original_text": "\\pagestyle{fancy}\n\\fancyhf{}\n\\fancyhead[L]{数学建模阶段学习笔记与论文写作模板}\n\\fancyhead[R]{\\thepage}\n\\setlength{\\headheight}{15pt}\n\\setlength{\\parindent}{2em}\n\\setlength{\\parskip}{0.25em}\n\\setlist{nosep,leftmargin=2.2em}",
+      "chunk_ids": [
+        "p3_c0"
+      ]
+    },
+    {
+      "paragraph_index": 4,
+      "original_text": "\\title{\\bfseries 数学建模阶段学习笔记与论文写作模板}\n\\author{队长：夏同、组员1：温启韬、组员2：梁文曦}\n\\date{2026年8月11日}",
+      "chunk_ids": [
+        "p4_c0"
+      ]
+    },
+    {
+      "paragraph_index": 5,
+      "original_text": "\\begin{document}",
+      "chunk_ids": [
+        "p5_c0"
+      ]
+    },
+    {
+      "paragraph_index": 6,
+      "original_text": "\\maketitle",
+      "chunk_ids": [
+        "p6_c0"
+      ]
+    },
+    {
+      "paragraph_index": 7,
+      "original_text": "\\begin{abstract}\n这份报告记下了本队现阶段的训练情况，也是刘小兰教授在队长群中布置、由丁老师转发的学习作业。",
+      "chunk_ids": [
+        "p7_c0"
+      ]
+    },
+    {
+      "paragraph_index": 8,
+      "original_text": "报告前半部分依照思维导图和三人分工，整理十三个算法与模型学习单元。原理只写到足以说明方法的程度，求解步骤则同代码入口、适用条件放在一起，便于随后拿真题练习。",
+      "chunk_ids": [
+        "p8_c0"
+      ]
+    },
+    {
+      "paragraph_index": 9,
+      "original_text": "后半部分选取2024年A题一等奖论文A053《基于目标优化的板凳龙形态调节》，顺着摘要、假设、建模、求解、结果解释和附录读下去，看作者怎样把五个分问接成一篇文章。我们又用2020--2025年A、B、C题59篇编号论文核对常见章节和篇幅。单篇精读提供具体写法，59篇统计则给出模板的通常次序和大致范围。",
+      "chunk_ids": [
+        "p9_c0"
+      ]
+    },
+    {
+      "paragraph_index": 10,
+      "original_text": "\\end{abstract}",
+      "chunk_ids": [
+        "p10_c0"
+      ]
+    },
+    {
+      "paragraph_index": 11,
+      "original_text": "\\tableofcontents\n\\newpage",
+      "chunk_ids": [
+        "p11_c0"
+      ]
+    },
+    {
+      "paragraph_index": 12,
+      "original_text": "\\section{阶段学习笔记}",
+      "chunk_ids": [
+        "p12_c0"
+      ]
+    },
+    {
+      "paragraph_index": 13,
+      "original_text": "\\subsection{选题侧重与成员分工}",
+      "chunk_ids": [
+        "p13_c0"
+      ]
+    },
+    {
+      "paragraph_index": 14,
+      "original_text": "近六年的A、B、C题虽然没有固定解法，训练重点仍有明显差别。A题常从物理过程推到方程，还要留意离散误差；B题通常围绕变量、约束和可行方案展开；C题先辨认字段和样本，再进入预测、评价或决策。按这一差别，队长夏同学习机理与连续模型，温启韬学习规划和优化，梁文曦学习数据处理与统计方法。我们的学习标准也很朴素：能用自己的话说出选择理由，能把公式还原成程序步骤，也知道方法在哪些条件下会失效。",
+      "chunk_ids": [
+        "p14_c0"
+      ]
+    },
+    {
+      "paragraph_index": 15,
+      "original_text": "思维导图中的方法远不止十三种。这一阶段，我们选择分工内最常用的内容，学到能够动手的程度；其余分支留在后续真题训练中逐项补习，“看过名称”还算不上掌握。",
+      "chunk_ids": [
+        "p15_c0"
+      ]
+    },
+    {
+      "paragraph_index": 16,
+      "original_text": "\\subsection{十三个算法与模型学习单元}",
+      "chunk_ids": [
+        "p16_c0"
+      ]
+    },
+    {
+      "paragraph_index": 17,
+      "original_text": "\\setlength{\\tabcolsep}{2.5pt}\n\\small\n\\begin{longtable}{p{1.25cm}p{2.55cm}p{6.25cm}p{5.45cm}}\n\\caption{成员学习内容、代码逻辑与使用边界}\\label{tab:learning-units}\\\\\n\\toprule\n成员 & 算法或模型 & 基本原理、步骤与代码逻辑 & 适用问题、优缺点和限制\\\\\n\\midrule\n\\endfirsthead\n\\toprule\n成员 & 算法或模型 & 基本原理、步骤与代码逻辑 & 适用问题、优缺点和限制\\\\\n\\midrule\n\\endhead\n\\bottomrule\n\\endfoot",
+      "chunk_ids": [
+        "p17_c0"
+      ]
+    },
+    {
+      "paragraph_index": 18,
+      "original_text": "夏同 & ODE与RK4\n& 先从受力、守恒或状态转移关系写出 $\\dot{y}=f(t,y)$，再由初值出发，用四个斜率的加权值向前推进。\n& 适合状态随时间连续变化的力学、传热、种群和传播过程。RK4在精度与实现难度之间较为均衡，但刚性方程会受稳定域限制；此时应改用刚性求解器，不靠缩小一步掩盖问题。\\\\",
+      "chunk_ids": [
+        "p18_c0"
+      ]
+    },
+    {
+      "paragraph_index": 19,
+      "original_text": "夏同 & PDE与有限差分\n& 空间区域、初始条件和边界条件要先落到网格上，再将时间、空间导数换成差分格式。\n& 适合规则区域上的热、波和扩散问题。公式与网格位置对应直观，代价是复杂边界难处理，显式格式还须核对稳定条件。\\\\",
+      "chunk_ids": [
+        "p19_c0"
+      ]
+    },
+    {
+      "paragraph_index": 20,
+      "original_text": "夏同 & 有限元模型\n& 从PDE的形式入手：划分单元，计算局部矩阵，装配全局稀疏矩阵，“施加”边界后求节点量。\n& 适合不规则几何、变系数介质和混合边界。几何适应性强，但网格质量、形函数和边界\n装配都容易引入错误；规则区域的入门题先用有限差分作基线。\\\\",
+      "chunk_ids": [
+        "p20_c0"
+      ]
+    },
+    {
+      "paragraph_index": 21,
+      "original_text": "温启韬 & LP与MILP\n& 先逐项列出决策变量、线性目标、等式和不等式；遇到启停、选择或分配，才引入0-1变量。\n& 适合资源分配、排程、选址和生产决策。线性模型便于解释并能给最优性信息；整数规模大时计算量上升，Big--M须来自实际上界，不能任意指定过大的常数。\\\\",
+      "chunk_ids": [
+        "p21_c0"
+      ]
+    },
+    {
+      "paragraph_index": 22,
+      "original_text": "温启韬 & 粒子群优化\n& 每个粒子都保留位置、速度、个体最好解和群体最好解；迭代时包含速度更新、越界处理和重新评价。\n& 适合连续、非光滑或难求导的参数搜索，编码简短；它没有连续全局最优证书，结果会受边界、罚项和随机种子影响。若变量只有一维且单调，可改用遍历或二分。\\\\",
+      "chunk_ids": [
+        "p22_c0"
+      ]
+    },
+    {
+      "paragraph_index": 23,
+      "original_text": "温启韬 & 图论与网络优化\n& 建模时把对象落成节点、关系落成带权边。非负单源最短路用Dijkstra；容量与费用同时出现时用最小费用流。实战时，先建图，再运行算法，最后把路径或流量映射回现实对象并核对容量。\n& 适合运输、路径、匹配和网络资源配置。结构清楚、结果易复算；动态图、负权边和多目标路线要另行处理，最小生成树也不能代替两点间最短路。\\\\",
+      "chunk_ids": [
+        "p23_c0"
+      ]
+    },
+    {
+      "paragraph_index": 24,
+      "original_text": "梁文曦 & 缺失、异常与重复处理\n& 拿到附件后，先建数据字典和主键，并把未检出、未知、未采样分开记录；随后才按成因决定删除、插值或KNN。\n& 它决定后续样本是否可信，但不能在划分训练集前用全体数据估计均值或尺度。\\\\",
+      "chunk_ids": [
+        "p24_c0"
+      ]
+    },
+    {
+      "paragraph_index": 25,
+      "original_text": "梁文曦 & PCA与K--Means\n& 数据标准化后，对协方差矩阵作特征分解并按解释率选取主成分；降维结果再送入K--Means，比较不同簇数的轮廓系数。\n& PCA适合线性降维，K--Means适合近似球形簇。两者速度快、图形直观。\\\\",
+      "chunk_ids": [
+        "p25_c0"
+      ]
+    },
+    {
+      "paragraph_index": 26,
+      "original_text": "梁文曦 & 熵权与TOPSIS\n& 指标须先正向化和无量纲化。熵权刻画样本差异，TOPSIS据此计算对象到正、负理想解的距离。\n代码逐步导出标准矩阵、权重、距离和排序，并对权重作扰动。\n& 适合多指标评价与方案排序。计算过程清楚，但“差异大”不等于“业务上更重要”；指标\n方向、相关重复和权重敏感性都要说明，不能只给最终名次。\\\\\n\\end{longtable}\n\\normalsize",
+      "chunk_ids": [
+        "p26_c0"
+      ]
+    },
+    {
+      "paragraph_index": 27,
+      "original_text": "\\subsection{本阶段做得较好的地方}",
+      "chunk_ids": [
+        "p27_c0"
+      ]
+    },
+    {
+      "paragraph_index": 28,
+      "original_text": "三人的学习方向虽然不同，但都把变量含义、输入输出和代码位置写进了笔记，交换内容时不必重新猜测符号。几种算法还保留了简单方法作为参照，例如规则区域上的有限差分、一维搜索中的遍历或二分，这让后续比较有了起点。读群内论文时，我们也不再停在目录上，而是顺着一项结果回查所用公式和程序，把容易在复现时卡住的地方记了下来。",
+      "chunk_ids": [
+        "p28_c0"
+      ]
+    },
+    {
+      "paragraph_index": 29,
+      "original_text": "\\subsection{目前不足}",
+      "chunk_ids": [
+        "p29_c0"
+      ]
+    },
+    {
+      "paragraph_index": 30,
+      "original_text": "目前最大的不足是动手次数偏少。能够说明算法原理，并不等于能在竞赛时间内独立处理数据、调通程序并解释异常输出；后续训练要以实际运行记录和真题结果为准。",
+      "chunk_ids": [
+        "p30_c0"
+      ]
+    },
+    {
+      "paragraph_index": 31,
+      "original_text": "\\section{一等奖论文学习分析}",
+      "chunk_ids": [
+        "p31_c0"
+      ]
+    },
+    {
+      "paragraph_index": 32,
+      "original_text": "\\subsection{选文与阅读范围}",
+      "chunk_ids": [
+        "p32_c0"
+      ]
+    },
+    {
+      "paragraph_index": 33,
+      "original_text": "本次选择2024年A题《基于目标优化的板凳龙形态调节》\\cite{A053}。",
+      "chunk_ids": [
+        "p33_c0"
+      ]
+    },
+    {
+      "paragraph_index": 34,
+      "original_text": "\\subsection{论文结构及各部分写法}",
+      "chunk_ids": [
+        "p34_c0"
+      ]
+    },
+    {
+      "paragraph_index": 35,
+      "original_text": "\\small\n\\begin{longtable}{p{2.25cm}p{4.0cm}p{5.1cm}p{4.2cm}}\n\\caption{A053章节功能与我们理解}\\label{tab:a053-structure}\\\\\n\\toprule\n部分 & 论文在写什么 & 具体写法 & 我们吸收的做法\\\\\n\\midrule\n\\endfirsthead\n\\toprule\n部分 & 论文在写什么 & 具体写法 & 我们吸收的做法\\\\\n\\midrule\n\\endhead\n\\bottomrule\n\\endfoot\n摘要（p.1）\n& 依次回答运动状态、碰撞、最小螺距、调头曲线和速度上限。\n& 每个分问都给对象、模型动作和交付值，如第一次碰撞时刻、螺距和龙头速度；算法名放在它所求的量之后。\n& 我们写摘要时也按分问落笔，但每问至少留下一个能作判断的结果；顺序词能省则省，不把摘要写成目录。\\\\",
+      "chunk_ids": [
+        "p35_c0"
+      ]
+    },
+    {
+      "paragraph_index": 36,
+      "original_text": "问题分析（p.3--4）\n& 把板凳龙的整体运动拆成相邻把手位置递推，再说明各问增加的约束。\n& 问题四被拆成“求较短调头曲线”和“求调头过程中的运动状态”两个子任务，前者输出路径，后者沿用位置递推。\n& 我们把输入输出关系画清后，再决定方法；沿用前问时，直接列明哪些量继承、哪些量新加。\\\\",
+      "chunk_ids": [
+        "p36_c0"
+      ]
+    },
+    {
+      "paragraph_index": 37,
+      "original_text": "模型假设（p.2）\n& 限定人为扰动、板凳刚体和开始调头的时机。\n& 假设会进入方程或事件判定，没有写与计算无关的常识句。\n& 每条假设都要回答“它使哪一项可以怎样计算”，并在评价中说明放宽后要改哪个模块。\\\\",
+      "chunk_ids": [
+        "p37_c0"
+      ]
+    },
+    {
+      "paragraph_index": 38,
+      "original_text": "符号说明（p.3）\n& 给出螺距、极角、位置、速度、圆弧半径等贯穿五问的量。\n& 统一公共符号，分问新增量在首次使用处定义，减少同一字母承担两个含义。\n& 符号表只放多次使用的量；仅在一处使用的中间量随公式解释。\\\\",
+      "chunk_ids": [
+        "p38_c0"
+      ]
+    },
+    {
+      "paragraph_index": 39,
+      "original_text": "模型建立（p.6--21、p.23--36）\n& 写螺线弧长、定长递推、矩形碰撞、相切圆弧和多段路径状态。\n& 公式按“已知把手--定长方程--候选根--运动方向筛选--下一把手”推进；碰撞从几何对象落到矩形投影区间。\n& 公式尽量按程序实际执行的次序出现。多根问题交代筛选条件，分段路径则先列全状态及切换条件。\\\\",
+      "chunk_ids": [
+        "p39_c0"
+      ]
+    },
+    {
+      "paragraph_index": 40,
+      "original_text": "模型求解（p.8--16、p.22--31、p.34--41）\n& 用二分、时间离散、变步长遍历、状态递推和粒子群得到五问结果。\n& 螺距先在 $[45,46]\\,\\mathrm{cm}$ 内定位，再以 $0.01\\,\\mathrm{cm}$ 步长细查；碰撞检测在第一次触发时停止。\n& 粗查负责圈定“边界在哪一段”，细查再回答“边界精确到多少”；随机算法另报种子和重复次数。\\\\",
+      "chunk_ids": [
+        "p40_c0"
+      ]
+    },
+    {
+      "paragraph_index": 41,
+      "original_text": "结果及分析（p.22、p.27--28、p.32--33、p.38、p.41）\n& 报告碰撞时刻、螺距、圆弧半径、曲线长度和速度上限，并解释局部异常。\n& 参数微变后若第一次碰撞对象改变，论文从局部几何解释输出跳变；12--13秒的速度突增则用相同时间内的路程差解释。\n& 表后的正文不复述数字，而要回答“为何变、哪条约束起作用、结论只到什么范围”。\\\\",
+      "chunk_ids": [
+        "p41_c0"
+      ]
+    },
+    {
+      "paragraph_index": 42,
+      "original_text": "检验与边界\n& 检查首次碰撞对象、全过程可行性和现实动作限制。\n& p.17用反设和逐节前推说明最早碰撞对象；p.28用“终点可行但中途碰撞”的方案否定只查终点；p.32从龙身不能倒退推出半径下界。\n& 检验要对准一个具体疑问。回代、反例和物理边界各有侧重。\\\\",
+      "chunk_ids": [
+        "p42_c0"
+      ]
+    },
+    {
+      "paragraph_index": 43,
+      "original_text": "附录（p.43--62）\n& 给出逐把手循环、二分、分段路径、碰撞和粒子群代码。\n& 正文四种运动状态与代码状态码1--4相互对应，表格输出也由固定变量名生成。\n& 附录须留下复现正文结果所需的入口、参数和输出说明；正文只讲关键流程，不整段粘贴程序。\\\\\n\\end{longtable}\n\\normalsize",
+      "chunk_ids": [
+        "p43_c0"
+      ]
+    },
+    {
+      "paragraph_index": 44,
+      "original_text": "\\subsection{五个分问的思路怎样连起来}",
+      "chunk_ids": [
+        "p44_c0"
+      ]
+    },
+    {
+      "paragraph_index": 45,
+      "original_text": "\\begin{enumerate}\n  \\item 问题一先确定龙头在阿基米德螺线上的位置，相邻把手随后按距离不变的关系逐节递推；\n  速度由短时间内的弧长变化得到。除了题目要求的数值，这一问还写出了后四问都会调用的位置和速度计算方法。\n  \\item 问题二把每块板凳写成矩形，用分离轴判断重叠。检查对象并非凭经验删减，\n  而是先用反证法确定哪一类构件最早碰撞，再让程序在首次触发处停止。\n  \\item 问题三中的“能进入调头区域”指整个盘入过程均不碰撞。搜索先圈出螺距所在区间，再改用较小步长。\n  有些候选在终点看似可行，中途却已发生碰撞，因此判断不能只看最后一帧。\n  \\item 问题四先由相切关系写出两段圆弧。若半径过小，后续构件就得倒退让位，由这一实际限制可得大圆弧半径的下界。\n  路径确定后，位置递推按盘入、两段圆弧和盘出四种状态继续运行。\n  \\item 问题五沿用问题四的运动模型，把各把手速度改写为对龙头速度的限制；粒子群在这里只搜索允许的龙头速度，\n  板凳龙的运动仍按问题四计算。\n\\end{enumerate}",
+      "chunk_ids": [
+        "p45_c0"
+      ]
+    },
+    {
+      "paragraph_index": 46,
+      "original_text": "\\subsection{最值得模仿的段落组织}",
+      "chunk_ids": [
+        "p46_c0"
+      ]
+    },
+    {
+      "paragraph_index": 47,
+      "original_text": "\\paragraph{从局部关系写到全局运动。}\n板凳龙的构件很多，反复用到的却是相邻把手间的固定距离。求出一个把手后，下一把手的位置由定长方程给出；若方程有多个根，还要按构件次序和运动方向逐个排除。这种写法紧跟实际计算顺序，读到公式时也能看出程序下一步如何推进。",
+      "chunk_ids": [
+        "p47_c0"
+      ]
+    },
+    {
+      "paragraph_index": 48,
+      "original_text": "\\paragraph{先证明检查范围不会漏，再缩小程序。}\n讨论第一次碰撞时，论文先假设第 $i$ 个构件更早碰撞，再利用各构件经过同一轨迹的先后关系逐节前推，最后同龙头的运动状态相矛盾。于是，程序只检查与龙头有关的候选对象便有了依据。我们以后缩小搜索或检查范围时，也要先回答会不会漏解，计算量的减少放在后面说明。",
+      "chunk_ids": [
+        "p48_c0"
+      ]
+    },
+    {
+      "paragraph_index": 49,
+      "original_text": "\\paragraph{用反例判断并简化方案。}\n螺距约为 $42\\,\\mathrm{cm}$ 的方案到达终点时看似可行，盘入途中却已经碰撞。这个反例说明终点状态不能代替全过程检查。论文处理12--13秒的速度突增时，则先找到节点所在的小圆弧，再比较相同时间内相邻节点走过的路程。异常时段、局部位置和路程差依次对应起来以后，速度变化才有了几何解释。",
+      "chunk_ids": [
+        "p49_c0"
+      ]
+    },
+    {
+      "paragraph_index": 50,
+      "original_text": "\\section{本队论文模板（可填写版）}",
+      "chunk_ids": [
+        "p50_c0"
+      ]
+    },
+    {
+      "paragraph_index": 51,
+      "original_text": "下面给出一套可以逐项填写的论文底稿。目录和填写项来自工作区内 2020--2025 年 A、B、C 题 59 篇编号论文，共 2892 页\\cite{corpus59}；A053 仅用于上一节的单篇精读。正式论文通常沿用这套章节次序，段落却不必用同一种方式开头。作者可以先写图上的异常、物理边界、失败试算，也可以从前一问传来的变量写起，关键是说明当时看到了什么，以及这一观察怎样改变了后续计算。蓝色的\\slot{填空位}只供训练时定位内容，交稿前应替换为实际文字或删去。",
+      "chunk_ids": [
+        "p51_c0"
+      ]
+    },
+    {
+      "paragraph_index": 52,
+      "original_text": "\\subsection{先按竞赛规章搭好提交版式}",
+      "chunk_ids": [
+        "p52_c0"
+      ]
+    },
+    {
+      "paragraph_index": 53,
+      "original_text": "以下内容逐条核对自工作区新增的三份全国组委会文件：《全国大学生数学建模竞赛论文格式规范（2026年修订稿）》《全国大学生数学建模竞赛参赛规则（2026年修订稿）》和《全国大学生数学建模竞赛人工智能工具使用规定（2026年试行）》\\cite{format2026,rules2026,ai2026}。本学习报告为了呈现作业内容保留目录和队员姓名；参赛论文须另建匿名提交版，本报告不适合作为参赛论文提交。",
+      "chunk_ids": [
+        "p53_c0"
+      ]
+    },
+    {
+      "paragraph_index": 54,
+      "original_text": "\\begin{longtable}{p{2.7cm}p{5.7cm}p{6.2cm}}\n\\caption{2026 年论文与支撑材料硬性要求}\\label{tab:official-format-rules}\\\\\n\\toprule\n对象 & 纸质版/正文要求 & 电子版/支撑材料要求\\\\\n\\midrule\n\\endfirsthead\n\\toprule\n对象 & 纸质版/正文要求 & 电子版/支撑材料要求\\\\\n\\midrule\n\\endhead\n纸张和装订 & 白色 A4 纸，单面或双面均可；四边页边距至少 $2.5\\,\\mathrm{cm}$，左侧装订。 & 电子论文必须与纸质版内容及格式（含附录）一致。\\\\\n首页顺序 & 第 1 页承诺书，第 2 页编号专用页，第 3 页摘要专用页。 & 电子论文不放承诺书和编号专用页，第一页直接是摘要专用页。\\\\\n摘要与页码 & 摘要含标题、关键词，无需英文，原则上不超过 1 页；从摘要页起以阿拉伯数字从 1 连续编号，页码居页脚中部。 & 参赛论文为一个单独 PDF 或 Word 文件，建议 PDF，文件不超过 20 MB，不能再压缩后上传。\\\\\n正文与附录 & 正文从纸质版第 4 页开始，不设目录，不超过 30 页；正文后为附录，页数不限，须打印并与正文装订。 & 支撑材料另交一个 RAR 或 ZIP 文件，不超过 20 MB。\\\\\n附录和程序 & 附录列出支撑材料文件，并纳入全部完整、可运行的源程序（含 Excel、SPSS 等软件的交互命令）；确实未用程序时写明“本论文没有用到程序”。 & 支撑材料至少包括全部可运行源程序、自主查阅数据（赛题原始数据除外）和较大篇幅中间图表；确实没有时在附录注明“本论文没有支撑材料”。\\\\\n匿名与引用 & 摘要、正文和附录不得出现参赛者身份、学校或赛区信息；他人及公开资料须在正文标注并列入参考文献。 & 支撑材料同样不得出现身份、学校或赛区信息，也不得放入承诺书和编号专用页。\\\\\n\\bottomrule\n\\end{longtable}",
+      "chunk_ids": [
+        "p54_c0",
+        "p54_c1"
+      ]
+    },
+    {
+      "paragraph_index": 55,
+      "original_text": "竞赛期间必须由本队队员独立完成赛题。指导教师不能解释赛题、提供选题或解题建议、提供资料、修改论文或给出修改意见；队员也不能同队外任何人讨论赛题，不能在社交平台、论坛、代码平台或直播间浏览、发布、讨论当届赛题内容。AI 工具可以作为辅助，但作品的原创性、真实性和准确性仍由参赛队负责，并须遵守专门披露规定。",
+      "chunk_ids": [
+        "p55_c0"
+      ]
+    },
+    {
+      "paragraph_index": 56,
+      "original_text": "\\subsubsection{AI 工具披露位置与材料}",
+      "chunk_ids": [
+        "p56_c0"
+      ]
+    },
+    {
+      "paragraph_index": 57,
+      "original_text": "2026 年试行规定要求参赛队公开、如实说明 AI 工具的使用情况，并逐项人工审查和核实相关内容。声明不是附录，也不放在参考文献之后，而是作为独立部分排在参考文献之前；两种情况只能选择其一。",
+      "chunk_ids": [
+        "p57_c0"
+      ]
+    },
+    {
+      "paragraph_index": 58,
+      "original_text": "\\begin{longtable}{p{2.7cm}p{5.7cm}p{6.2cm}}\n\\caption{AI 工具使用披露清单}\\label{tab:official-ai-rules}\\\\\n\\toprule\n实际情况 & 论文内处理 & 支撑材料与人工责任\\\\\n\\midrule\n\\endfirsthead\n\\toprule\n实际情况 & 论文内处理 & 支撑材料与人工责任\\\\\n\\midrule\n\\endhead\n未使用任何 AI 工具 & 在参考文献之前设置“AI 工具使用声明”，使用规定给出的未使用声明。 & 不提交虚构记录；声明必须与竞赛期间的实际过程一致。\\\\\n使用 AI 工具 & 在参考文献之前设置“AI 工具使用声明”，简要写明用途，并指向支撑材料。 & 支撑材料必须包含独立 PDF，文件名为\\texttt{AI 工具使用详情.pdf}；写明工具名称及版本或型号、使用目的和环节、主要提示方式与使用过程、采纳情况以及人工修改与核验。语言润色可不写最后一项。\\\\\n核心建模与分析 & 核心建模与分析必须由参赛队主导；AI 参与完成的内容须逐项人工审查与核实。 & 故意隐瞒、虚假声明，或把未经必要人工审查和核实的 AI 生成内容直接作为核心成果提交，将被取消评奖资格。\\\\\n\\bottomrule\n\\end{longtable}",
+      "chunk_ids": [
+        "p58_c0"
+      ]
+    },
+    {
+      "paragraph_index": 59,
+      "original_text": "正式论文在参考文献前保留下面这一段，按实际情况删去另一项：\n\\begin{quote}\\small\n\\textbf{AI 工具使用声明}",
+      "chunk_ids": [
+        "p59_c0"
+      ]
+    },
+    {
+      "paragraph_index": 60,
+      "original_text": "未使用时：本参赛队在竞赛过程中未使用任何 AI 工具。",
+      "chunk_ids": [
+        "p60_c0"
+      ]
+    },
+    {
+      "paragraph_index": 61,
+      "original_text": "使用时：本参赛队在竞赛过程中使用了 AI 工具，主要用于\\slot{简要用途，如语言润色、代码调试等}，详细使用情况见支撑材料。\n\\end{quote}\n规定没有要求把 AI 工具另列为参考文献，也没有要求在正文中逐句标出 AI 辅助痕迹；但是支撑材料中的用途、过程和人工核验必须能够与论文及代码相互对应。该规定自 2026 年 9 月 1 日起试行，此前规定与之不一致时以本规定为准。",
+      "chunk_ids": [
+        "p61_c0"
+      ]
+    },
+    {
+      "paragraph_index": 62,
+      "original_text": "\\subsection{59篇论文中的目录与篇幅}",
+      "chunk_ids": [
+        "p62_c0"
+      ]
+    },
+    {
+      "paragraph_index": 63,
+      "original_text": "表中的页数是各级标题所跨页数的中位数及四分位范围，并非篇幅配额。结果分析和附录会随题目、图表和代码长度改变；模型检验、灵敏度和改进方案在59篇论文中出现得较少，只有计算或数据确实提供了证据时才适合单列，这也不意味着每篇都要设置同名小节。",
+      "chunk_ids": [
+        "p63_c0"
+      ]
+    },
+    {
+      "paragraph_index": 64,
+      "original_text": "\\begin{longtable}{p{2.3cm}p{1.5cm}p{3.0cm}p{8.0cm}}\n\\caption{59 篇 A/B/C 论文的章节跨度与交付物}\\label{tab:template-corpus-length}\\\\\n\\toprule\n章节 & 检出数 & 页级跨度中位数 [Q1,Q3] & 正式稿中可核对的内容\\\\\n\\midrule\n\\endfirsthead\n\\toprule\n章节 & 检出数 & 页级跨度中位数 [Q1,Q3] & 正式稿中可核对的内容\\\\\n\\midrule\n\\endhead\n摘要与关键词 & 58/59 & 1 [1,1] & 分问任务、实际做法、关键数值、检查方法、结论和 3--5 个关键词。\\\\\n问题重述 & 57/59 & 1 [1,1] & 研究对象、输入、输出、硬约束，以及分问之间传递的量。\\\\\n问题分析 & 57/59 & 1 [1,1] & 从题面、数据或物理边界出发的取舍依据，以及为何保留或放弃某条路线。\\\\\n模型假设 & 48/59 & 1 [1,1] & 每条假设的对象、条件、计算后果和适用边界。\\\\\n符号说明 & 58/59 & 1 [1,3.75] & 变量、参数、集合、下标、单位；只放跨公式复用的量。\\\\\n模型建立 & 58/59 & 2 [1,6] & 定义、方程/目标函数、约束、边界条件和与题意的映射。\\\\\n模型求解 & 55/59 & 2 [1,6] & 初始化、更新、可行性处理、搜索范围、停止条件、输出，以及代码中的对应函数。\\\\\n结果分析 & 47/59 & 7 [1,12] & 读数、方向、数量级、变化原因、约束状态、现实含义和结果边界。\\\\\n模型检验 & 22/59 & 1.5 [1,7] & 检验对象、独立证据、指标/阈值、结果和判断；缺少这些内容时，不宜声称“验证有效”。\\\\\n灵敏度分析 & 25/59 & 1 [1,2] & 基准、扰动来源、范围、固定量、输出变化和决策是否切换。\\\\\n模型评价 & 51/59 & 1 [1,1] & 有公式或数据支撑的优点，以及受对象、数据和计算预算限制的缺点。\\\\\n改进方案 & 19/59 & 1 [1,1] & 新增数据/关系、修改层、预计改善量和仍需检验的边界。\\\\\n参考文献 & 57/59 & 1 [1,11] & 正文真正使用过的题面、方法、数据和软件来源。\\\\\n附录 & 48/59 & 16 [6,28] & 代码入口、参数、数据字典、运行顺序、补充推导、完整结果和输出文件。\\\\\n\\bottomrule\n\\end{longtable}",
+      "chunk_ids": [
+        "p64_c0",
+        "p64_c1"
+      ]
+    },
+    {
+      "paragraph_index": 65,
+      "original_text": "\\subsection{正式稿标题次序与分问承接关系}",
+      "chunk_ids": [
+        "p65_c0"
+      ]
+    },
+    {
+      "paragraph_index": 66,
+      "original_text": "正式稿可按下列顺序组织；“问题一”等应换成题目中的实际编号和任务名，标题通常写实际任务，无需另列算法名称。写到下一问时，应点明沿用了上一问的哪些变量、参数或筛选结果：",
+      "chunk_ids": [
+        "p66_c0"
+      ]
+    },
+    {
+      "paragraph_index": 67,
+      "original_text": "\\begin{enumerate}\n  \\item 摘要与关键词；\n  \\item 问题重述；\n  \\item 问题分析；\n  \\item 模型假设；\n  \\item 符号说明；\n  \\item 问题一：\\slot{任务名}；问题二：\\slot{任务名}；……每问均包含“模型建立”与“模型求解”；\n  \\item 结果分析与模型检验；\n  \\item 灵敏度/稳健性分析（若题目或结果支持）；\n  \\item 模型评价与改进；\n  \\item AI 工具使用声明：按实际情况选择官方规定中的一种表述；\n  \\item 参考文献；\n  \\item 附录：代码、数据、补充结果和运行说明。\n\\end{enumerate}",
+      "chunk_ids": [
+        "p67_c0"
+      ]
+    },
+    {
+      "paragraph_index": 68,
+      "original_text": "\\begin{longtable}{p{1.2cm}p{3.0cm}p{3.0cm}p{3.0cm}p{4.2cm}}\n\\caption{分问任务表：先列承接量，再写正文}\\label{tab:template-task-matrix}\\\\\n\\toprule\n分问 & 输入/证据 & 要求输出 & 硬约束或计算标准 & 传给下一问的量\\\\\n\\midrule\n\\endfirsthead\n\\toprule\n分问 & 输入/证据 & 要求输出 & 硬约束或计算标准 & 传给下一问的量\\\\\n\\midrule\n\\endhead\n问题一 & \\slot{附件字段、初始状态、题面量} & \\slot{数值/分类/曲线/方案} & \\slot{单位、范围、边界} & \\slot{变量、参数、筛选结果}\\\\\n问题二 & \\slot{沿用问题一的哪些输出} & \\slot{……} & \\slot{新增约束} & \\slot{……}\\\\\n问题三 & \\slot{……} & \\slot{……} & \\slot{……} & \\slot{最终决策或评价准则}\\\\\n问题四（如有） & \\slot{……} & \\slot{……} & \\slot{……} & \\slot{……}\\\\\n\\bottomrule\n\\end{longtable}",
+      "chunk_ids": [
+        "p68_c0"
+      ]
+    },
+    {
+      "paragraph_index": 69,
+      "original_text": "\\subsection{摘要与关键词：一页内说完做法和结论}",
+      "chunk_ids": [
+        "p69_c0"
+      ]
+    },
+    {
+      "paragraph_index": 70,
+      "original_text": "\\guidehead{摘要要留下的信息}先点明研究对象和条件，再按分问写实际做法、最能区分方案的数值或关系、所用检查以及结论适用范围。算法名称随求解动作出现即可；摘要中的数字均应来自正文计算或程序输出。",
+      "chunk_ids": [
+        "p70_c0"
+      ]
+    },
+    {
+      "paragraph_index": 71,
+      "original_text": "\\guidehead{填入实际内容后的参考段式}\n\\begin{quote}\\small\n围绕\\slot{对象}在\\slot{条件/约束}下的\\slot{现实任务}，本文先由\\slot{题面结构、附件读数或物理边界}确定\\slot{变量域/初始状态/数据处理标准}。对于问题一，\\slot{由什么证据触发了哪一个模型动作}，得到\\slot{关键结果、单位和范围}；对于问题二，\\slot{沿用或修正的问题一结果}，在\\slot{新增约束/不确定性}下求得\\slot{关键结果}；对于问题三，\\slot{评价、预测或决策动作}给出\\slot{最终方案/排序/预测}。通过\\slot{回代、残差、交叉验证、基准方法、反例、物理边界或共同环境复评}检查后，\\slot{最有判别力的结论}在\\slot{适用范围}内成立。\\\\\n关键词：\\slot{任务词}；\\slot{模型词}；\\slot{求解词}；\\slot{结果词}\n\\end{quote}",
+      "chunk_ids": [
+        "p71_c0"
+      ]
+    },
+    {
+      "paragraph_index": 72,
+      "original_text": "\\guidehead{写完后核对}每个分问至少留下一项可复算的输出；数字能在正文表格或程序输出中找到；单位前后一致；检查方法的表述与实际工作相称。“最优、稳定、准确”等判断还要带上比较对象、指标和范围。",
+      "chunk_ids": [
+        "p72_c0"
+      ]
+    },
+    {
+      "paragraph_index": 73,
+      "original_text": "\\subsection{问题重述：把题面整理成可计算的任务}",
+      "chunk_ids": [
+        "p73_c0"
+      ]
+    },
+    {
+      "paragraph_index": 74,
+      "original_text": "\\guidehead{重述的参考起笔}\n题目研究的是\\slot{对象及其现实背景}。已知\\slot{输入数据、初始状态、时间范围和单位}，同时受到\\slot{硬约束、边界条件和可行域}限制。问题一要求\\slot{给定什么、求什么}；问题二在\\slot{问题一输出/新增数据}基础上要求\\slot{……}；问题三进一步比较或决定\\slot{……}。\\slot{容易混淆的量，如预测值与观测值、局部指标与全局指标}在下文中分别定义和计算。",
+      "chunk_ids": [
+        "p74_c0"
+      ]
+    },
+    {
+      "paragraph_index": 75,
+      "original_text": "\\guidehead{重述时注意}这一节照题意说明任务，算法选择放到后面的问题分析中。对象范围、时间窗、单位以及题面中“必须”“可以”等限定词应保持原意；附件里没有的字段仍按未知量处理。",
+      "chunk_ids": [
+        "p75_c0"
+      ]
+    },
+    {
+      "paragraph_index": 76,
+      "original_text": "\\subsection{问题分析：写出方法从哪里来}",
+      "chunk_ids": [
+        "p76_c0"
+      ]
+    },
+    {
+      "paragraph_index": 77,
+      "original_text": "问题分析要回答“为何这样处理”，但无需抄录杂乱的试算过程。正文可以从一个异常读数写起，也可以先指出某个边界不满足，或说明上一问留下的变量怎样进入本问。只要后面的选择能在题面、数据、公式、图表或运行记录中找到依据，段落次序便可随问题本身变化。",
+      "chunk_ids": [
+        "p77_c0"
+      ]
+    },
+    {
+      "paragraph_index": 78,
+      "original_text": "\\begin{longtable}{p{2.0cm}p{3.5cm}p{3.4cm}p{3.3cm}p{3.4cm}}\n\\caption{问题分析记录表：保留实际取舍}\\label{tab:template-analysis-ledger}\\\\\n\\toprule\n分问 & 观察到的事实/限制 & 尚未解决的量或矛盾 & 采取的处理及其影响 & 带入模型的范围或变量\\\\\n\\midrule\n\\endfirsthead\n\\toprule\n分问 & 观察到的事实/限制 & 尚未解决的量或矛盾 & 采取的处理及其影响 & 带入模型的范围或变量\\\\\n\\midrule\n\\endhead\n问题一 & \\slot{图、表、物理条件或失败试算} & \\slot{要解释/求解的量} & \\slot{保留、舍弃、改写或分段} & \\slot{变量、范围、初值}\\\\\n问题二 & \\slot{问题一的残差/新约束} & \\slot{……} & \\slot{……} & \\slot{……}\\\\\n问题三 & \\slot{决策冲突或不确定性} & \\slot{……} & \\slot{……} & \\slot{……}\\\\\n\\bottomrule\n\\end{longtable}",
+      "chunk_ids": [
+        "p78_c0"
+      ]
+    },
+    {
+      "paragraph_index": 79,
+      "original_text": "\\guidehead{一种可用的承接写法}“附件中的\\slot{某字段/某段轨迹}呈现出\\slot{具体形态}，原先的\\slot{某种简化/某个候选}因而无法直接用于\\slot{任务}。计算中保留\\slot{需要保留的关系}，将\\slot{新增自由度/误差来源}放到\\slot{后续步骤}处理。所得\\slot{输出量}随后作为下一问的\\slot{输入或约束}，未观测量和事后汇总量不提前参与决策。”",
+      "chunk_ids": [
+        "p79_c0"
+      ]
+    },
+    {
+      "paragraph_index": 80,
+      "original_text": "\\subsection{模型假设：每条假设都要产生计算后果}",
+      "chunk_ids": [
+        "p80_c0"
+      ]
+    },
+    {
+      "paragraph_index": 81,
+      "original_text": "\\begin{longtable}{p{3.2cm}p{3.1cm}p{4.0cm}p{3.6cm}}\n\\caption{模型假设记录表}\\label{tab:template-assumption-ledger}\\\\\n\\toprule\n假设（对象+条件） & 题面/数据依据 & 在公式或程序中的后果 & 检查与失效边界\\\\\n\\midrule\n\\endfirsthead\n\\toprule\n假设（对象+条件） & 题面/数据依据 & 在公式或程序中的后果 & 检查与失效边界\\\\\n\\midrule\n\\endhead\n\\slot{忽略某项影响} & \\slot{题面允许/量级比较} & \\slot{删除哪一项或固定哪个量} & \\slot{在何种范围失效}\\\\\n\\slot{连续/刚体/独立等条件} & \\slot{观测或定义} & \\slot{改变哪种状态转移或误差} & \\slot{用何种回代/扰动检查}\\\\\n\\bottomrule\n\\end{longtable}",
+      "chunk_ids": [
+        "p81_c0"
+      ]
+    },
+    {
+      "paragraph_index": 82,
+      "original_text": "可写为：“在\\slot{条件}下，\\slot{对象}的\\slot{因素}相对于\\slot{基准}可忽略，故在模型中\\slot{具体处理}。这一处理适用于\\slot{范围}；当\\slot{边界条件}不再满足时，需在\\slot{改进/敏感性}中重新计算。”",
+      "chunk_ids": [
+        "p82_c0"
+      ]
+    },
+    {
+      "paragraph_index": 83,
+      "original_text": "\\subsection{符号说明：只收录会反复使用的量}",
+      "chunk_ids": [
+        "p83_c0"
+      ]
+    },
+    {
+      "paragraph_index": 84,
+      "original_text": "\\begin{longtable}{p{2.2cm}p{7.0cm}p{2.2cm}p{3.3cm}}\n\\caption{符号说明可填写表}\\label{tab:template-symbol-ledger}\\\\\n\\toprule\n符号 & 含义（对象和方向） & 单位/取值域 & 首次出现位置\\\\\n\\midrule\n\\endfirsthead\n\\toprule\n符号 & 含义（对象和方向） & 单位/取值域 & 首次出现位置\\\\\n\\midrule\n\\endhead\n$x_i$ & \\slot{第 $i$ 个对象的决策/观测量} & \\slot{单位或域} & 式(\\slot{})\\\\\n$\\theta$ & \\slot{待估参数/情景参数} & \\slot{单位或范围} & 式(\\slot{})\\\\\n$\\mathcal{I}$ & \\slot{对象集合/时间集合} & \\slot{集合定义} & 式(\\slot{})\\\\\n\\bottomrule\n\\end{longtable}",
+      "chunk_ids": [
+        "p84_c0"
+      ]
+    },
+    {
+      "paragraph_index": 85,
+      "original_text": "\\subsection{分问题模型建立与求解：逐问填写}",
+      "chunk_ids": [
+        "p85_c0"
+      ]
+    },
+    {
+      "paragraph_index": 86,
+      "original_text": "下面这张表先帮助我们把各问的模型写全。模型名称只作索引，正文还须给出变量、方程和约束；使用现成求解器时，也要说明输入、迭代中保留的状态、停止条件和输出。",
+      "chunk_ids": [
+        "p86_c0"
+      ]
+    },
+    {
+      "paragraph_index": 87,
+      "original_text": "\\begin{longtable}{p{1.8cm}p{2.4cm}p{2.7cm}p{2.7cm}p{2.8cm}p{2.1cm}}\n\\caption{分问模型填写表}\\label{tab:template-model-card}\\\\\n\\toprule\n分问 & 变量/状态 & 目标或方程 & 约束/边界 & 求解动作 & 输出及核查\\\\\n\\midrule\n\\endfirsthead\n\\toprule\n分问 & 变量/状态 & 目标或方程 & 约束/边界 & 求解动作 & 输出及核查\\\\\n\\midrule\n\\endhead\n问题一 & \\slot{} & \\slot{} & \\slot{} & \\slot{初始化--更新--停止} & \\slot{}\\\\\n问题二 & \\slot{} & \\slot{} & \\slot{} & \\slot{} & \\slot{}\\\\\n问题三 & \\slot{} & \\slot{} & \\slot{} & \\slot{} & \\slot{}\\\\\n\\bottomrule\n\\end{longtable}",
+      "chunk_ids": [
+        "p87_c0"
+      ]
+    },
+    {
+      "paragraph_index": 88,
+      "original_text": "\\subsubsection*{问题\\slot{编号}：\\slot{任务名}}\n\\paragraph{输入与变量。}输入为\\slot{附件/前问输出/外部给定}。令\\slot{变量}表示\\slot{含义}，其取值域为\\slot{范围、符号和单位}。\\slot{不参与决策但需固定的量}保持\\slot{固定规则}。",
+      "chunk_ids": [
+        "p88_c0"
+      ]
+    },
+    {
+      "paragraph_index": 89,
+      "original_text": "\\paragraph{模型建立。}由\\slot{守恒、几何关系、统计定义、业务规则或题面约束}得到\n\\begin{equation}\n  \\slot{目标函数、状态方程或评价式}.\n\\end{equation}\n其中\\slot{左侧/右侧各项}分别表示\\slot{可解释含义}。可行域由\\slot{约束1}、\\slot{约束2}和\\slot{边界条件}给出；\\slot{某约束}直接对应题面中的\\slot{原词}。",
+      "chunk_ids": [
+        "p89_c0"
+      ]
+    },
+    {
+      "paragraph_index": 90,
+      "original_text": "\\paragraph{求解与实现。}先\\slot{清洗/初始化/粗略定位}，随后\\slot{二分、递推、枚举、线性规划、随机搜索、拟合或仿真}。每次更新保留\\slot{状态/可行标志/候选解}，越界时\\slot{处理规则}；在\\slot{停止条件}满足时输出\\slot{文件、表格、曲线或参数}。代码入口为\\texttt{\\slot{file.py/main.m}}，关键函数为\\texttt{\\slot{function}}，随机过程使用\\slot{种子、重复次数和预算}。",
+      "chunk_ids": [
+        "p90_c0"
+      ]
+    },
+    {
+      "paragraph_index": 91,
+      "original_text": "\\paragraph{模型边界。}该模型回答的是\\slot{对象、时间窗和数据条件}，适用范围不包括\\slot{未观测对象/不同约束/更长时间}。若出现\\slot{观察到的残差或失败状态}，先保留\\slot{基准方法/旧模型}，只修改\\slot{具体关系或参数}，随后在相同条件下重新计算。",
+      "chunk_ids": [
+        "p91_c0"
+      ]
+    },
+    {
+      "paragraph_index": 92,
+      "original_text": "\\subsubsection{常用公式组件（按题意选用，避免整段照搬）}",
+      "chunk_ids": [
+        "p92_c0"
+      ]
+    },
+    {
+      "paragraph_index": 93,
+      "original_text": "\\paragraph{连续过程。}状态量、输入和观测量可先写成\n\\begin{equation}\n\\dot{\\boldsymbol{x}}(t)=\\boldsymbol{f}(\\boldsymbol{x}(t),\\boldsymbol{u}(t),t),\\qquad\n\\boldsymbol{y}(t)=\\boldsymbol{g}(\\boldsymbol{x}(t),\\boldsymbol{u}(t),t),\\qquad\n\\boldsymbol{x}(0)=\\boldsymbol{x}_0.\n\\end{equation}\n随后补上\\slot{初值、边界、守恒/受力关系}，并说明采用\\slot{RK4/FDM/FEM/其他}时步长或网格怎样进入误差控制。公式后需解释\\slot{每一项的物理含义}，尤其是它同题目对象的对应关系。",
+      "chunk_ids": [
+        "p93_c0"
+      ]
+    },
+    {
+      "paragraph_index": 94,
+      "original_text": "\\paragraph{规划与优化。}若决策变量为\\slot{$x$}，目标和可行域可整理为\n\\begin{equation}\n\\begin{aligned}\n\\min_{x}\\quad & F(x)\\\\\n\\text{s.t.}\\quad & g_i(x)\\leq 0,\\quad i=1,\\ldots,m,\\\\\n& h_j(x)=0,\\quad j=1,\\ldots,p,\\\\\n& x\\in\\mathcal{X}.\n\\end{aligned}\n\\end{equation}\n若有启停、分配或选择，单独说明\\slot{0--1变量与其联动约束}；若目标有优先级，写出\\slot{字典序、分层优化或权重来源}。未经解释的综合分数无法说明各目标之间怎样取舍。",
+      "chunk_ids": [
+        "p94_c0"
+      ]
+    },
+    {
+      "paragraph_index": 95,
+      "original_text": "\\paragraph{线性/整数模型。}线性情形可以使用\n\\begin{equation}\n\\min\\;\\boldsymbol{c}^{\\mathsf T}\\boldsymbol{x}\\quad\n\\text{s.t.}\\quad A\\boldsymbol{x}\\leq\\boldsymbol{b},\\quad\n\\boldsymbol{x}\\geq0,\\quad x_k\\in\\mathbb{Z}\\ \\text{(若题意要求)}.\n\\end{equation}\n正文说明\\slot{$A,b,c$各列如何由题面生成}、求解器返回的状态以及最终解的约束残差。",
+      "chunk_ids": [
+        "p95_c0"
+      ]
+    },
+    {
+      "paragraph_index": 96,
+      "original_text": "\\paragraph{统计/评价模型。}预测、分类或评价时，将\\slot{原字段--清洗--特征--标签--划分}写成一条数据谱系，再给出损失或指标。例如\n\\begin{equation}\n\\mathrm{MAE}=\\frac{1}{n}\\sum_{i=1}^{n}|y_i-\\hat y_i|,\\qquad\n\\mathrm{RMSE}=\\sqrt{\\frac{1}{n}\\sum_{i=1}^{n}(y_i-\\hat y_i)^2}.\n\\end{equation}\n指标方向、样本作用和现实解释应与代码实际计算的对象一致。",
+      "chunk_ids": [
+        "p96_c0"
+      ]
+    },
+    {
+      "paragraph_index": 97,
+      "original_text": "\\subsection{A/B/C 题型专用插槽}",
+      "chunk_ids": [
+        "p97_c0"
+      ]
+    },
+    {
+      "paragraph_index": 98,
+      "original_text": "\\begin{longtable}{p{1.6cm}p{4.4cm}p{4.5cm}p{4.3cm}}\n\\caption{三类题型常需补充的内容}\\label{tab:template-abc-slots}\\\\\n\\toprule\n题型 & 建模时需说明 & 求解时需说明 & 结果与检验需说明\\\\\n\\midrule\n\\endfirsthead\n\\toprule\n题型 & 建模时需说明 & 求解时需说明 & 结果与检验需说明\\\\\n\\midrule\n\\endhead\nA：机理/连续 & 状态、坐标、初值、边界、守恒或受力关系；离散格式与连续模型分开。 & 步长/网格、稳定条件、初值推进、事件触发、收敛或误差界；多根按物理顺序筛选。 & 回代、守恒、边界和量纲；异常时段回到局部轨迹或同时间路程，一条结果曲线不足以解释原因。\\\\\nB：综合优化 & 决策变量、目标层级、硬约束、可行域和前后问承接量；多目标的优先级或权重来源。 & 编码、初始解、越界/不可行处理、搜索范围、停止条件、重复协议和一致的比较条件。 & 目标值、约束残差、候选位置、成本与现实含义；改善幅度较小时同时报告最大值和平均值。\\\\\nC：数据决策 & 原字段--清洗/聚合--特征--标签--划分--输出关系；指标方向、业务语义和缺失类型。 & 外层测试保持独立，预处理只读训练折；说明模型损失、阈值、类别不平衡、随机重复，以及预测结果怎样进入决策。 & 区分训练、验证和测试数据；报告基准方法、混淆矩阵或误差、风险/收益和场景复评。同源指标只能反映内部一致性，不能替代外部验证。\\\\\n\\bottomrule\n\\end{longtable}",
+      "chunk_ids": [
+        "p98_c0"
+      ]
+    },
+    {
+      "paragraph_index": 99,
+      "original_text": "\\paragraph{A 类段落示例。}“在\\slot{前期时段/稳定窗口}内，\\slot{观测量}变化趋于\\slot{形态}，因而先用\\slot{方程/离散格式}描述\\slot{状态}。当\\slot{边界/事件}被触发时，计算转入\\slot{局部求解}；将结果回代到\\slot{守恒/几何条件}后，\\slot{误差或边界结论}仍在\\slot{范围}内。”",
+      "chunk_ids": [
+        "p99_c0"
+      ]
+    },
+    {
+      "paragraph_index": 100,
+      "original_text": "\\paragraph{B 类段落示例。}“把\\slot{资源/对象}直接平均分配会使\\slot{具体约束/时段}出现\\slot{违约或浪费}。因此保留\\slot{硬约束}，先生成\\slot{可行候选}，再用\\slot{目标层级/求解器}比较。候选在同一\\slot{历史或场景基准}下复评，最终选择\\slot{方案}，代价是\\slot{明确的牺牲}。”",
+      "chunk_ids": [
+        "p100_c0"
+      ]
+    },
+    {
+      "paragraph_index": 101,
+      "original_text": "\\paragraph{C 类段落示例。}“原始字段\\slot{名称}中，\\slot{缺失/异常/重复}并不表示同一件事，故先按\\slot{规则}分流，再在\\slot{训练划分}内计算\\slot{特征/尺度}。预测模型输出\\slot{标签/概率}后，只有在\\slot{阈值和业务规则}下才进入决策；在\\slot{共同环境/独立测试}复评后，结论限定为\\slot{范围}。”",
+      "chunk_ids": [
+        "p101_c0"
+      ]
+    },
+    {
+      "paragraph_index": 102,
+      "original_text": "\\subsection{图、表与代码的可替换组件}",
+      "chunk_ids": [
+        "p102_c0"
+      ]
+    },
+    {
+      "paragraph_index": 103,
+      "original_text": "以下组件借鉴根目录培训版 \\texttt{main.tex} 的排版做法\\cite{friendtemplate}，但把示例数字和外部图片改成空位，避免把示例误当成本队结果。图表在正文中应先被提及，再给出读数和解释；完整代码放在附录或支撑材料，正文保留能说明算法输入输出的短片段。",
+      "chunk_ids": [
+        "p103_c0"
+      ]
+    },
+    {
+      "paragraph_index": 104,
+      "original_text": "\\begin{figure}[htbp]\n  \\centering\n  \\fbox{\\rule{0pt}{3.0cm}\\rule{0.82\\linewidth}{0pt}}\n  \\caption{\\slot{图的对象、条件或结果名称}}\n  \\label{fig:template-placeholder}\n\\end{figure}",
+      "chunk_ids": [
+        "p104_c0"
+      ]
+    },
+    {
+      "paragraph_index": 105,
+      "original_text": "\\begin{table}[htbp]\n  \\centering\n  \\caption{\\slot{结果表名称}}\n  \\label{tab:template-result}\n  \\begin{tabular}{p{3.2cm}p{3.0cm}p{3.0cm}p{3.2cm}}\n    \\toprule\n    对象/方案 & 指标一（单位） & 指标二（单位） & 结论所需状态\\\\\n    \\midrule\n    \\slot{A} & \\slot{数值} & \\slot{数值} & \\slot{可行/超限/排名}\\\\\n    \\slot{B} & \\slot{数值} & \\slot{数值} & \\slot{……}\\\\\n    \\bottomrule\n  \\end{tabular}\n\\end{table}",
+      "chunk_ids": [
+        "p105_c0"
+      ]
+    },
+    {
+      "paragraph_index": 106,
+      "original_text": "\\begin{lstlisting}[language=Python,caption={分问代码入口与输出关系示例},label={lst:template-code}]\n# 1. read_data: read the same files listed in the appendix\n# 2. preprocess: keep the rule, unit and split used in the manuscript\n# 3. solve_problem: return solution, objective and constraint residuals\n# 4. validate: run the predeclared test and save the table/figure\ndata = read_data(\"[input file]\")\nstate = preprocess(data, config)\nresult = solve_problem(state, config)\nvalidate(result, state, config)\n\\end{lstlisting}",
+      "chunk_ids": [
+        "p106_c0"
+      ]
+    },
+    {
+      "paragraph_index": 107,
+      "original_text": "除函数名外，代码说明还要写明\\slot{输入对象}、\\slot{返回对象}、\\slot{随机种子/参数}和\\slot{输出文件}，并把它们填入附录复现清单。若某一步失败，应记录状态和原因；中间值如有改动，也随结果一并说明。",
+      "chunk_ids": [
+        "p107_c0"
+      ]
+    },
+    {
+      "paragraph_index": 108,
+      "original_text": "\\subsection{结果分析与模型检验：表格之后还要解释}",
+      "chunk_ids": [
+        "p108_c0"
+      ]
+    },
+    {
+      "paragraph_index": 109,
+      "original_text": "\\begin{longtable}{p{2.2cm}p{3.0cm}p{3.0cm}p{3.0cm}p{3.5cm}}\n\\caption{结果解释记录表}\\label{tab:template-result-ledger}\\\\\n\\toprule\n结果对象 & 条件/对象 & 读数与单位 & 与谁比较 & 原因、影响和边界\\\\\n\\midrule\n\\endfirsthead\n\\toprule\n结果对象 & 条件/对象 & 读数与单位 & 与谁比较 & 原因、影响和边界\\\\\n\\midrule\n\\endhead\n\\slot{表/图/输出编号} & \\slot{情景、样本、时段} & \\slot{数值、方向、数量级} & \\slot{基准方法/候选/实测} & \\slot{原因、约束、现实动作和适用范围}\\\\\n\\slot{} & \\slot{} & \\slot{} & \\slot{} & \\slot{}\\\\\n\\bottomrule\n\\end{longtable}",
+      "chunk_ids": [
+        "p109_c0"
+      ]
+    },
+    {
+      "paragraph_index": 110,
+      "original_text": "每张表或图后至少补一段：“在\\slot{条件}下，\\slot{对象}的\\slot{指标}为\\slot{数值}，相对于\\slot{基准}变化\\slot{幅度}。变化主要出现在\\slot{局部对象/时段}，与\\slot{方程项、数据特征、约束状态或决策规则}相符，因此对\\slot{现实任务}的含义是\\slot{动作}；在\\slot{边界}之外不作同样外推。”",
+      "chunk_ids": [
+        "p110_c0"
+      ]
+    },
+    {
+      "paragraph_index": 111,
+      "original_text": "\\begin{longtable}{p{2.6cm}p{3.4cm}p{3.0cm}p{3.0cm}p{2.8cm}}\n\\caption{模型检验记录表}\\label{tab:template-validation-ledger}\\\\\n\\toprule\n检验问题 & 独立证据/数据 & 指标与接受标准 & 结果 & 裁决及影响范围\\\\\n\\midrule\n\\endfirsthead\n\\toprule\n检验问题 & 独立证据/数据 & 指标与接受标准 & 结果 & 裁决及影响范围\\\\\n\\midrule\n\\endhead\n\\slot{守恒/回代是否成立} & \\slot{未参与拟合的量/公式} & \\slot{误差定义、阈值} & \\slot{数值} & \\slot{保留/修正哪一层}\\\\\n\\slot{预测/分类是否可用} & \\slot{独立测试或交叉验证} & \\slot{MAE/RMSE/召回等} & \\slot{} & \\slot{}\\\\\n\\slot{方案是否可执行} & \\slot{约束复算/场景} & \\slot{违约率、成本、风险} & \\slot{} & \\slot{}\\\\\n\\bottomrule\n\\end{longtable}",
+      "chunk_ids": [
+        "p111_c0"
+      ]
+    },
+    {
+      "paragraph_index": 112,
+      "original_text": "检验实施前先写判据：“若\\slot{观测结果/指标}满足\\slot{阈值}，则保留\\slot{模型或参数}；否则只修改\\slot{对应关系}并重新计算。”训练回代、内层调参和最终独立测试要分开；一次重复运行只能说明这次运行得到的结果，一条相关曲线也不足以支持因果结论。",
+      "chunk_ids": [
+        "p112_c0"
+      ]
+    },
+    {
+      "paragraph_index": 113,
+      "original_text": "\\subsection{灵敏度与稳健性：改变什么、为什么改变、何时换方案}",
+      "chunk_ids": [
+        "p113_c0"
+      ]
+    },
+    {
+      "paragraph_index": 114,
+      "original_text": "\\begin{longtable}{p{2.4cm}p{3.0cm}p{3.0cm}p{3.0cm}p{3.5cm}}\n\\caption{灵敏度/稳健性记录表}\\label{tab:template-sensitivity-ledger}\\\\\n\\toprule\n扰动量 & 基准与来源 & 扰动范围/固定量 & 输出变化 & 决策切换与结论边界\\\\\n\\midrule\n\\endfirsthead\n\\toprule\n扰动量 & 基准与来源 & 扰动范围/固定量 & 输出变化 & 决策切换与结论边界\\\\\n\\midrule\n\\endhead\n\\slot{参数/误差/场景} & \\slot{测量、估计或题面来源} & \\slot{范围、步长、其余固定} & \\slot{最大/平均/排序/曲线} & \\slot{是否换方案，阈值在哪里}\\\\\n\\slot{} & \\slot{} & \\slot{} & \\slot{} & \\slot{}\\\\\n\\bottomrule\n\\end{longtable}",
+      "chunk_ids": [
+        "p114_c0"
+      ]
+    },
+    {
+      "paragraph_index": 115,
+      "original_text": "正文句式：“以\\slot{基准}为中心，只改变\\slot{参数}，其余量保持\\slot{固定规则}。当\\slot{参数}位于\\slot{范围}时，\\slot{输出}变化\\slot{幅度/方向}；超过\\slot{阈值}后，\\slot{约束/排序/风险}发生切换。因此本文把\\slot{方案或参数}限定在\\slot{范围}，而不把一次基准运行推广到全部情景。”",
+      "chunk_ids": [
+        "p115_c0"
+      ]
+    },
+    {
+      "paragraph_index": 116,
+      "original_text": "\\subsection{模型评价与改进：说明优缺点出现在哪里}",
+      "chunk_ids": [
+        "p116_c0"
+      ]
+    },
+    {
+      "paragraph_index": 117,
+      "original_text": "\\begin{longtable}{p{2.3cm}p{4.0cm}p{3.6cm}p{3.8cm}}\n\\caption{模型评价与改进记录表}\\label{tab:template-evaluation-ledger}\\\\\n\\toprule\n评价方面 & 已有证据 & 具体优点或不足 & 可执行的改进及新检验\\\\\n\\midrule\n\\endfirsthead\n\\toprule\n评价方面 & 已有证据 & 具体优点或不足 & 可执行的改进及新检验\\\\\n\\midrule\n\\endhead\n精度/解释 & \\slot{误差、回代或图表} & \\slot{对哪些对象有效/在哪里失效} & \\slot{新增数据、关系或校准方法}\\\\\n计算/复现 & \\slot{复杂度、运行记录、代码} & \\slot{瓶颈和依赖} & \\slot{缓存、分层求解或更换离散格式}\\\\\n现实性/外推 & \\slot{约束和场景复评} & \\slot{未观测对象、时窗或风险} & \\slot{追加样本、边界场景和接受阈值}\\\\\n\\bottomrule\n\\end{longtable}",
+      "chunk_ids": [
+        "p117_c0"
+      ]
+    },
+    {
+      "paragraph_index": 118,
+      "original_text": "“速度快、精度高、适用范围广”单独列出来并不能说明优点在哪里。改进项可写成“新增\\slot{数据/关系}，修改\\slot{模型层}，预期检查\\slot{指标/边界}”；现有数据没有支撑的内容仍属于后续工作，应与本文已经得到的结果分开。",
+      "chunk_ids": [
+        "p118_c0"
+      ]
+    },
+    {
+      "paragraph_index": 119,
+      "original_text": "\\subsection{参考文献与附录：保留复算所需信息}",
+      "chunk_ids": [
+        "p119_c0"
+      ]
+    },
+    {
+      "paragraph_index": 120,
+      "original_text": "正文首次使用外部定义、算法、数据或软件时标出来源，文后不列未使用的条目。附录按实际运行的“输入--处理--求解--输出”顺序排列，并填写下面各项：",
+      "chunk_ids": [
+        "p120_c0"
+      ]
+    },
+    {
+      "paragraph_index": 121,
+      "original_text": "\\begin{longtable}{p{3.0cm}p{4.2cm}p{4.2cm}p{3.2cm}}\n\\caption{附录复现清单}\\label{tab:template-appendix-ledger}\\\\\n\\toprule\n项目 & 需给出的内容 & 与正文的对应关系 & 核对状态\\\\\n\\midrule\n\\endfirsthead\n\\toprule\n项目 & 需给出的内容 & 与正文的对应关系 & 核对状态\\\\\n\\midrule\n\\endhead\n数据字典 & 文件名、字段、单位、缺失/异常编码、主键 & 问题重述、预处理和符号表 & \\slot{待核/已核}\\\\\n代码入口 & 主脚本、函数调用顺序、依赖和版本 & 模型求解段、输出表/图 & \\slot{}\\\\\n参数与随机性 & 初值、范围、步长、种子、重复次数、停止条件 & 模型卡和灵敏度表 & \\slot{}\\\\\n中间结果 & 关键状态、候选、约束残差、日志或完整结果表位置 & 结果分析和检验 & \\slot{}\\\\\n最终文件 & 运行命令、输出路径、文件哈希或版本日期 & 摘要数字和交稿文件 & \\slot{}\\\\\n\\bottomrule\n\\end{longtable}",
+      "chunk_ids": [
+        "p121_c0"
+      ]
+    },
+    {
+      "paragraph_index": 122,
+      "original_text": "\\subsection{正式提交前的十四项核对}",
+      "chunk_ids": [
+        "p122_c0"
+      ]
+    },
+    {
+      "paragraph_index": 123,
+      "original_text": "\\begin{enumerate}\n  \\item 题面对象、单位、时间窗和硬约束与附件逐项对上；\n  \\item 每个分问都有输入、输出，并注明传给下一问的变量或结果；\n  \\item 问题分析中至少保留一个由数据、边界、失败试算或物理关系触发的实际取舍；\n  \\item 每条模型假设都说明计算后果和失效范围；\n  \\item 符号、变量域、下标、单位与公式和代码一致；\n  \\item 目标/方程、约束、边界、初值和求解器可以互相追溯；\n  \\item 算法段写明初始化、更新、不可行处理、停止条件和输出；\n  \\item 结果表图不是装饰，正文逐项解释读数、原因、影响和边界；\n  \\item 检验独立于拟合或寻优证据，并写明指标、阈值和裁决；\n  \\item 灵敏度固定共同基准，写清扰动来源和决策切换；\n  \\item 预测值、评级或综合分进入决策时，误差传播和转换关系没有被省略；\n  \\item A/B/C 题型专用插槽已按实际题目填入，不把算法名堆成清单；\n  \\item 参考文献逐条有正文出处；AI 工具使用声明位于参考文献之前，使用过 AI 时支撑材料含\\texttt{AI 工具使用详情.pdf}；\n  \\item 附录运行入口、参数、依赖和输出齐全；\n  \\item 删除所有\\slot{填空位}、训练提示和未核对数字，随后检查全文、代码和 PDF 是否来自同一轮计算。\n\\end{enumerate}",
+      "chunk_ids": [
+        "p123_c0"
+      ]
+    },
+    {
+      "paragraph_index": 124,
+      "original_text": "\\appendix\n\\section{模板提交前速查}",
+      "chunk_ids": [
+        "p124_c0"
+      ]
+    },
+    {
+      "paragraph_index": 125,
+      "original_text": "\\begin{enumerate}\n  \\item 摘要中的结论、正文表格和附件输出使用同一数值与单位；\n  \\item 每个模型都有变量、方程或目标、约束、求解入口和结果解释；\n  \\item 每幅图和每张表在正文中被提出，并至少承担一次读数或比较；\n  \\item 关键结论配有回代、误差、交叉验证、基线、反例或物理边界中的一种检查；\n  \\item 附录列出运行顺序、依赖、随机种子、输入文件和输出文件。\n\\end{enumerate}",
+      "chunk_ids": [
+        "p125_c0"
+      ]
+    },
+    {
+      "paragraph_index": 126,
+      "original_text": "\\section*{材料来源说明}\n\\addcontentsline{toc}{section}{材料来源说明}",
+      "chunk_ids": [
+        "p126_c0"
+      ]
+    },
+    {
+      "paragraph_index": 127,
+      "original_text": "\\begin{thebibliography}{9}\n\\bibitem{format2026}\n全国大学生数学建模竞赛组委会：《全国大学生数学建模竞赛论文格式规范（2026年修订稿）》，\n工作区文件\\texttt{全国大学生数学建模竞赛论文格式规范（2026年修订稿）.pdf}，2026 年 8 月 11 日核读；\n\\url{https://www.mcm.edu.cn/html_cn/node/4cd596519c9eb9fbd866398f6df0caa3.html}。",
+      "chunk_ids": [
+        "p127_c0"
+      ]
+    },
+    {
+      "paragraph_index": 128,
+      "original_text": "\\bibitem{rules2026}\n全国大学生数学建模竞赛组委会：《全国大学生数学建模竞赛参赛规则（2026年修订稿）》，\n工作区文件\\texttt{全国大学生数学建模竞赛参赛规则（2026年修订稿）.pdf}，2026 年 8 月 11 日核读；\n\\url{https://www.mcm.edu.cn/html_cn/node/9d8e511fe7a1447b35f53a82c908e2e0.html}。",
+      "chunk_ids": [
+        "p128_c0"
+      ]
+    },
+    {
+      "paragraph_index": 129,
+      "original_text": "\\bibitem{ai2026}\n全国大学生数学建模竞赛组委会：《全国大学生数学建模竞赛人工智能工具使用规定（2026年试行）》，\n工作区文件\\texttt{全国大学生数学建模竞赛人工智能工具使用规定 （2026年试行）.pdf}，\n2026 年 8 月 11 日核读。",
+      "chunk_ids": [
+        "p129_c0"
+      ]
+    },
+    {
+      "paragraph_index": 130,
+      "original_text": "\\bibitem{corpus59}\n2020--2025 年全国大学生数学建模竞赛 A/B/C 题编号论文语料，59 篇、2892 页；\n写作 Skill 的证据索引 \\texttt{references/corpus-index.md}，\n结构统计版本 2026 年 8 月 1 日。",
+      "chunk_ids": [
+        "p130_c0"
+      ]
+    },
+    {
+      "paragraph_index": 131,
+      "original_text": "\\bibitem{friendtemplate}\n数学建模竞赛论文写作培训模板，工作区根目录文件 \\texttt{main.tex}，2026 年 8 月 10 日核读。",
+      "chunk_ids": [
+        "p131_c0"
+      ]
+    },
+    {
+      "paragraph_index": 132,
+      "original_text": "\\bibitem{mindmap}\n数学建模学习思维导图，工作区文件 \\texttt{1.png}，2026年7月核读。",
+      "chunk_ids": [
+        "p132_c0"
+      ]
+    },
+    {
+      "paragraph_index": 133,
+      "original_text": "\\bibitem{A053}\n\\emph{基于目标优化的板凳龙形态调节}，2024年全国大学生数学建模竞赛A题一等奖论文语料，\n工作区文件 \\texttt{2024/A053.pdf}。",
+      "chunk_ids": [
+        "p133_c0"
+      ]
+    },
+    {
+      "paragraph_index": 134,
+      "original_text": "\\bibitem{problem2024A}\n2024年全国大学生数学建模竞赛A题：板凳龙，工作区赛题原文。\n\\end{thebibliography}",
+      "chunk_ids": [
+        "p134_c0"
+      ]
+    },
+    {
+      "paragraph_index": 135,
+      "original_text": "\\end{document}",
+      "chunk_ids": [
+        "p135_c0"
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "chunk_id": "p0_c0",
+      "paragraph_index": 0,
+      "chunk_index": 0,
+      "text": "\\documentclass[UTF8,zihao=-4]{ctexart}",
+      "char_count": 38,
+      "word_count": 5
+    },
+    {
+      "chunk_id": "p1_c0",
+      "paragraph_index": 1,
+      "chunk_index": 0,
+      "text": "\\usepackage[a4paper,top=2.4cm,bottom=2.4cm,left=2.25cm,right=2.25cm]{geometry} \\usepackage{amsmath,amssymb} \\usepackage{booktabs,longtable,array,tabularx} \\usepackage{listings} \\usepackage{enumitem} \\usepackage{xcolor} \\usepackage{hyperref} \\usepackage{fancyhdr}",
+      "char_count": 262,
+      "word_count": 33
+    },
+    {
+      "chunk_id": "p2_c0",
+      "paragraph_index": 2,
+      "chunk_index": 0,
+      "text": "\\definecolor{inkblue}{RGB}{34,76,112} \\definecolor{softgray}{RGB}{246,248,250} \\lstset{basicstyle=\\small\\ttfamily,breaklines=true,showstringspaces=false,frame=single,rulecolor=\\color{softgray}} \\newcommand{\\slot}[1]{\\textcolor{inkblue}{\\textit{【#1】}}} \\newcommand{\\guidehead}[1]{\\par\\medskip\\noindent\\textbf{\\color{inkblue}#1}\\par} \\hypersetup{ colorlinks=true, linkcolor=inkblue, urlcolor=inkblue, citecolor=inkblue, pdfauthor={数学建模学习小组}, pdftitle={数学建模阶段学习笔记与论文写作模板} }",
+      "char_count": 470,
+      "word_count": 56
+    },
+    {
+      "chunk_id": "p3_c0",
+      "paragraph_index": 3,
+      "chunk_index": 0,
+      "text": "\\pagestyle{fancy} \\fancyhf{} \\fancyhead[L]{数学建模阶段学习笔记与论文写作模板} \\fancyhead[R]{\\thepage} \\setlength{\\headheight}{15pt} \\setlength{\\parindent}{2em} \\setlength{\\parskip}{0.25em} \\setlist{nosep,leftmargin=2.2em}",
+      "char_count": 205,
+      "word_count": 24
+    },
+    {
+      "chunk_id": "p4_c0",
+      "paragraph_index": 4,
+      "chunk_index": 0,
+      "text": "\\title{\\bfseries 数学建模阶段学习笔记与论文写作模板} \\author{队长：夏同、组员1：温启韬、组员2：梁文曦} \\date{2026年8月11日}",
+      "char_count": 84,
+      "word_count": 12
+    },
+    {
+      "chunk_id": "p5_c0",
+      "paragraph_index": 5,
+      "chunk_index": 0,
+      "text": "\\begin{document}",
+      "char_count": 16,
+      "word_count": 2
+    },
+    {
+      "chunk_id": "p6_c0",
+      "paragraph_index": 6,
+      "chunk_index": 0,
+      "text": "\\maketitle",
+      "char_count": 10,
+      "word_count": 1
+    },
+    {
+      "chunk_id": "p7_c0",
+      "paragraph_index": 7,
+      "chunk_index": 0,
+      "text": "\\begin{abstract} 这份报告记下了本队现阶段的训练情况，也是刘小兰教授在队长群中布置、由丁老师转发的学习作业。",
+      "char_count": 62,
+      "word_count": 5
+    },
+    {
+      "chunk_id": "p8_c0",
+      "paragraph_index": 8,
+      "chunk_index": 0,
+      "text": "报告前半部分依照思维导图和三人分工，整理十三个算法与模型学习单元。原理只写到足以说明方法的程度，求解步骤则同代码入口、适用条件放在一起，便于随后拿真题练习。",
+      "char_count": 78,
+      "word_count": 6
+    },
+    {
+      "chunk_id": "p9_c0",
+      "paragraph_index": 9,
+      "chunk_index": 0,
+      "text": "后半部分选取2024年A题一等奖论文A053《基于目标优化的板凳龙形态调节》，顺着摘要、假设、建模、求解、结果解释和附录读下去，看作者怎样把五个分问接成一篇文章。我们又用2020--2025年A、B、C题59篇编号论文核对常见章节和篇幅。单篇精读提供具体写法，59篇统计则给出模板的通常次序和大致范围。",
+      "char_count": 151,
+      "word_count": 14
+    },
+    {
+      "chunk_id": "p10_c0",
+      "paragraph_index": 10,
+      "chunk_index": 0,
+      "text": "\\end{abstract}",
+      "char_count": 14,
+      "word_count": 2
+    },
+    {
+      "chunk_id": "p11_c0",
+      "paragraph_index": 11,
+      "chunk_index": 0,
+      "text": "\\tableofcontents \\newpage",
+      "char_count": 25,
+      "word_count": 2
+    },
+    {
+      "chunk_id": "p12_c0",
+      "paragraph_index": 12,
+      "chunk_index": 0,
+      "text": "\\section{阶段学习笔记}",
+      "char_count": 16,
+      "word_count": 2
+    },
+    {
+      "chunk_id": "p13_c0",
+      "paragraph_index": 13,
+      "chunk_index": 0,
+      "text": "\\subsection{选题侧重与成员分工}",
+      "char_count": 22,
+      "word_count": 2
+    },
+    {
+      "chunk_id": "p14_c0",
+      "paragraph_index": 14,
+      "chunk_index": 0,
+      "text": "近六年的A、B、C题虽然没有固定解法，训练重点仍有明显差别。A题常从物理过程推到方程，还要留意离散误差；B题通常围绕变量、约束和可行方案展开；C题先辨认字段和样本，再进入预测、评价或决策。按这一差别，队长夏同学习机理与连续模型，温启韬学习规划和优化，梁文曦学习数据处理与统计方法。我们的学习标准也很朴素：能用自己的话说出选择理由，能把公式还原成程序步骤，也知道方法在哪些条件下会失效。",
+      "char_count": 192,
+      "word_count": 19
+    },
+    {
+      "chunk_id": "p15_c0",
+      "paragraph_index": 15,
+      "chunk_index": 0,
+      "text": "思维导图中的方法远不止十三种。这一阶段，我们选择分工内最常用的内容，学到能够动手的程度；其余分支留在后续真题训练中逐项补习，“看过名称”还算不上掌握。",
+      "char_count": 75,
+      "word_count": 7
+    },
+    {
+      "chunk_id": "p16_c0",
+      "paragraph_index": 16,
+      "chunk_index": 0,
+      "text": "\\subsection{十三个算法与模型学习单元}",
+      "char_count": 25,
+      "word_count": 2
+    },
+    {
+      "chunk_id": "p17_c0",
+      "paragraph_index": 17,
+      "chunk_index": 0,
+      "text": "\\setlength{\\tabcolsep}{2.5pt} \\small \\begin{longtable}{p{1.25cm}p{2.55cm}p{6.25cm}p{5.45cm}} \\caption{成员学习内容、代码逻辑与使用边界}\\label{tab:learning-units}\\\\ \\toprule 成员 & 算法或模型 & 基本原理、步骤与代码逻辑 & 适用问题、优缺点和限制\\\\ \\midrule \\endfirsthead \\toprule 成员 & 算法或模型 & 基本原理、步骤与代码逻辑 & 适用问题、优缺点和限制\\\\ \\midrule \\endhead \\bottomrule \\endfoot",
+      "char_count": 311,
+      "word_count": 45
+    },
+    {
+      "chunk_id": "p18_c0",
+      "paragraph_index": 18,
+      "chunk_index": 0,
+      "text": "夏同 & ODE与RK4 & 先从受力、守恒或状态转移关系写出 $\\dot{y}=f(t,y)$，再由初值出发，用四个斜率的加权值向前推进。 & 适合状态随时间连续变化的力学、传热、种群和传播过程。RK4在精度与实现难度之间较为均衡，但刚性方程会受稳定域限制；此时应改用刚性求解器，不靠缩小一步掩盖问题。\\\\",
+      "char_count": 154,
+      "word_count": 18
+    },
+    {
+      "chunk_id": "p19_c0",
+      "paragraph_index": 19,
+      "chunk_index": 0,
+      "text": "夏同 & PDE与有限差分 & 空间区域、初始条件和边界条件要先落到网格上，再将时间、空间导数换成差分格式。 & 适合规则区域上的热、波和扩散问题。公式与网格位置对应直观，代价是复杂边界难处理，显式格式还须核对稳定条件。\\\\",
+      "char_count": 112,
+      "word_count": 11
+    },
+    {
+      "chunk_id": "p20_c0",
+      "paragraph_index": 20,
+      "chunk_index": 0,
+      "text": "夏同 & 有限元模型 & 从PDE的形式入手：划分单元，计算局部矩阵，装配全局稀疏矩阵，“施加”边界后求节点量。 & 适合不规则几何、变系数介质和混合边界。几何适应性强，但网格质量、形函数和边界 装配都容易引入错误；规则区域的入门题先用有限差分作基线。\\\\",
+      "char_count": 128,
+      "word_count": 15
+    },
+    {
+      "chunk_id": "p21_c0",
+      "paragraph_index": 21,
+      "chunk_index": 0,
+      "text": "温启韬 & LP与MILP & 先逐项列出决策变量、线性目标、等式和不等式；遇到启停、选择或分配，才引入0-1变量。 & 适合资源分配、排程、选址和生产决策。线性模型便于解释并能给最优性信息；整数规模大时计算量上升，Big--M须来自实际上界，不能任意指定过大的常数。\\\\",
+      "char_count": 136,
+      "word_count": 16
+    },
+    {
+      "chunk_id": "p22_c0",
+      "paragraph_index": 22,
+      "chunk_index": 0,
+      "text": "温启韬 & 粒子群优化 & 每个粒子都保留位置、速度、个体最好解和群体最好解；迭代时包含速度更新、越界处理和重新评价。 & 适合连续、非光滑或难求导的参数搜索，编码简短；它没有连续全局最优证书，结果会受边界、罚项和随机种子影响。若变量只有一维且单调，可改用遍历或二分。\\\\",
+      "char_count": 136,
+      "word_count": 15
+    },
+    {
+      "chunk_id": "p23_c0",
+      "paragraph_index": 23,
+      "chunk_index": 0,
+      "text": "温启韬 & 图论与网络优化 & 建模时把对象落成节点、关系落成带权边。非负单源最短路用Dijkstra；容量与费用同时出现时用最小费用流。实战时，先建图，再运行算法，最后把路径或流量映射回现实对象并核对容量。 & 适合运输、路径、匹配和网络资源配置。结构清楚、结果易复算；动态图、负权边和多目标路线要另行处理，最小生成树也不能代替两点间最短路。\\\\",
+      "char_count": 174,
+      "word_count": 18
+    },
+    {
+      "chunk_id": "p24_c0",
+      "paragraph_index": 24,
+      "chunk_index": 0,
+      "text": "梁文曦 & 缺失、异常与重复处理 & 拿到附件后，先建数据字典和主键，并把未检出、未知、未采样分开记录；随后才按成因决定删除、插值或KNN。 & 它决定后续样本是否可信，但不能在划分训练集前用全体数据估计均值或尺度。\\\\",
+      "char_count": 110,
+      "word_count": 12
+    },
+    {
+      "chunk_id": "p25_c0",
+      "paragraph_index": 25,
+      "chunk_index": 0,
+      "text": "梁文曦 & PCA与K--Means & 数据标准化后，对协方差矩阵作特征分解并按解释率选取主成分；降维结果再送入K--Means，比较不同簇数的轮廓系数。 & PCA适合线性降维，K--Means适合近似球形簇。两者速度快、图形直观。\\\\",
+      "char_count": 120,
+      "word_count": 13
+    },
+    {
+      "chunk_id": "p26_c0",
+      "paragraph_index": 26,
+      "chunk_index": 0,
+      "text": "梁文曦 & 熵权与TOPSIS & 指标须先正向化和无量纲化。熵权刻画样本差异，TOPSIS据此计算对象到正、负理想解的距离。 代码逐步导出标准矩阵、权重、距离和排序，并对权重作扰动。 & 适合多指标评价与方案排序。计算过程清楚，但“差异大”不等于“业务上更重要”；指标 方向、相关重复和权重敏感性都要说明，不能只给最终名次。\\\\ \\end{longtable} \\normalsize",
+      "char_count": 193,
+      "word_count": 23
+    },
+    {
+      "chunk_id": "p27_c0",
+      "paragraph_index": 27,
+      "chunk_index": 0,
+      "text": "\\subsection{本阶段做得较好的地方}",
+      "char_count": 23,
+      "word_count": 2
+    },
+    {
+      "chunk_id": "p28_c0",
+      "paragraph_index": 28,
+      "chunk_index": 0,
+      "text": "三人的学习方向虽然不同，但都把变量含义、输入输出和代码位置写进了笔记，交换内容时不必重新猜测符号。几种算法还保留了简单方法作为参照，例如规则区域上的有限差分、一维搜索中的遍历或二分，这让后续比较有了起点。读群内论文时，我们也不再停在目录上，而是顺着一项结果回查所用公式和程序，把容易在复现时卡住的地方记了下来。",
+      "char_count": 155,
+      "word_count": 12
+    },
+    {
+      "chunk_id": "p29_c0",
+      "paragraph_index": 29,
+      "chunk_index": 0,
+      "text": "\\subsection{目前不足}",
+      "char_count": 17,
+      "word_count": 2
+    },
+    {
+      "chunk_id": "p30_c0",
+      "paragraph_index": 30,
+      "chunk_index": 0,
+      "text": "目前最大的不足是动手次数偏少。能够说明算法原理，并不等于能在竞赛时间内独立处理数据、调通程序并解释异常输出；后续训练要以实际运行记录和真题结果为准。",
+      "char_count": 74,
+      "word_count": 5
+    },
+    {
+      "chunk_id": "p31_c0",
+      "paragraph_index": 31,
+      "chunk_index": 0,
+      "text": "\\section{一等奖论文学习分析}",
+      "char_count": 19,
+      "word_count": 2
+    },
+    {
+      "chunk_id": "p32_c0",
+      "paragraph_index": 32,
+      "chunk_index": 0,
+      "text": "\\subsection{选文与阅读范围}",
+      "char_count": 20,
+      "word_count": 2
+    },
+    {
+      "chunk_id": "p33_c0",
+      "paragraph_index": 33,
+      "chunk_index": 0,
+      "text": "本次选择2024年A题《基于目标优化的板凳龙形态调节》\\cite{A053}。",
+      "char_count": 39,
+      "word_count": 4
+    },
+    {
+      "chunk_id": "p34_c0",
+      "paragraph_index": 34,
+      "chunk_index": 0,
+      "text": "\\subsection{论文结构及各部分写法}",
+      "char_count": 23,
+      "word_count": 2
+    },
+    {
+      "chunk_id": "p35_c0",
+      "paragraph_index": 35,
+      "chunk_index": 0,
+      "text": "\\small \\begin{longtable}{p{2.25cm}p{4.0cm}p{5.1cm}p{4.2cm}} \\caption{A053章节功能与我们理解}\\label{tab:a053-structure}\\\\ \\toprule 部分 & 论文在写什么 & 具体写法 & 我们吸收的做法\\\\ \\midrule \\endfirsthead \\toprule 部分 & 论文在写什么 & 具体写法 & 我们吸收的做法\\\\ \\midrule \\endhead \\bottomrule \\endfoot 摘要（p.1） & 依次回答运动状态、碰撞、最小螺距、调头曲线和速度上限。 & 每个分问都给对象、模型动作和交付值，如第一次碰撞时刻、螺距和龙头速度；算法名放在它所求的量之后。 & 我们写摘要时也按分问落笔，但每问至少留下一个能作判断的结果；顺序词能省则省，不把摘要写成目录。\\\\",
+      "char_count": 394,
+      "word_count": 52
+    },
+    {
+      "chunk_id": "p36_c0",
+      "paragraph_index": 36,
+      "chunk_index": 0,
+      "text": "问题分析（p.3--4） & 把板凳龙的整体运动拆成相邻把手位置递推，再说明各问增加的约束。 & 问题四被拆成“求较短调头曲线”和“求调头过程中的运动状态”两个子任务，前者输出路径，后者沿用位置递推。 & 我们把输入输出关系画清后，再决定方法；沿用前问时，直接列明哪些量继承、哪些量新加。\\\\",
+      "char_count": 146,
+      "word_count": 18
+    },
+    {
+      "chunk_id": "p37_c0",
+      "paragraph_index": 37,
+      "chunk_index": 0,
+      "text": "模型假设（p.2） & 限定人为扰动、板凳刚体和开始调头的时机。 & 假设会进入方程或事件判定，没有写与计算无关的常识句。 & 每条假设都要回答“它使哪一项可以怎样计算”，并在评价中说明放宽后要改哪个模块。\\\\",
+      "char_count": 105,
+      "word_count": 10
+    },
+    {
+      "chunk_id": "p38_c0",
+      "paragraph_index": 38,
+      "chunk_index": 0,
+      "text": "符号说明（p.3） & 给出螺距、极角、位置、速度、圆弧半径等贯穿五问的量。 & 统一公共符号，分问新增量在首次使用处定义，减少同一字母承担两个含义。 & 符号表只放多次使用的量；仅在一处使用的中间量随公式解释。\\\\",
+      "char_count": 108,
+      "word_count": 13
+    },
+    {
+      "chunk_id": "p39_c0",
+      "paragraph_index": 39,
+      "chunk_index": 0,
+      "text": "模型建立（p.6--21、p.23--36） & 写螺线弧长、定长递推、矩形碰撞、相切圆弧和多段路径状态。 & 公式按“已知把手--定长方程--候选根--运动方向筛选--下一把手”推进；碰撞从几何对象落到矩形投影区间。 & 公式尽量按程序实际执行的次序出现。多根问题交代筛选条件，分段路径则先列全状态及切换条件。\\\\",
+      "char_count": 158,
+      "word_count": 22
+    },
+    {
+      "chunk_id": "p40_c0",
+      "paragraph_index": 40,
+      "chunk_index": 0,
+      "text": "模型求解（p.8--16、p.22--31、p.34--41） & 用二分、时间离散、变步长遍历、状态递推和粒子群得到五问结果。 & 螺距先在 $[45,46]\\,\\mathrm{cm}$ 内定位，再以 $0.01\\,\\mathrm{cm}$ 步长细查；碰撞检测在第一次触发时停止。 & 粗查负责圈定“边界在哪一段”，细查再回答“边界精确到多少”；随机算法另报种子和重复次数。\\\\",
+      "char_count": 190,
+      "word_count": 32
+    },
+    {
+      "chunk_id": "p41_c0",
+      "paragraph_index": 41,
+      "chunk_index": 0,
+      "text": "结果及分析（p.22、p.27--28、p.32--33、p.38、p.41） & 报告碰撞时刻、螺距、圆弧半径、曲线长度和速度上限，并解释局部异常。 & 参数微变后若第一次碰撞对象改变，论文从局部几何解释输出跳变；12--13秒的速度突增则用相同时间内的路程差解释。 & 表后的正文不复述数字，而要回答“为何变、哪条约束起作用、结论只到什么范围”。\\\\",
+      "char_count": 177,
+      "word_count": 27
+    },
+    {
+      "chunk_id": "p42_c0",
+      "paragraph_index": 42,
+      "chunk_index": 0,
+      "text": "检验与边界 & 检查首次碰撞对象、全过程可行性和现实动作限制。 & p.17用反设和逐节前推说明最早碰撞对象；p.28用“终点可行但中途碰撞”的方案否定只查终点；p.32从龙身不能倒退推出半径下界。 & 检验要对准一个具体疑问。回代、反例和物理边界各有侧重。\\\\",
+      "char_count": 131,
+      "word_count": 14
+    },
+    {
+      "chunk_id": "p43_c0",
+      "paragraph_index": 43,
+      "chunk_index": 0,
+      "text": "附录（p.43--62） & 给出逐把手循环、二分、分段路径、碰撞和粒子群代码。 & 正文四种运动状态与代码状态码1--4相互对应，表格输出也由固定变量名生成。 & 附录须留下复现正文结果所需的入口、参数和输出说明；正文只讲关键流程，不整段粘贴程序。\\\\ \\end{longtable} \\normalsize",
+      "char_count": 155,
+      "word_count": 18
+    },
+    {
+      "chunk_id": "p44_c0",
+      "paragraph_index": 44,
+      "chunk_index": 0,
+      "text": "\\subsection{五个分问的思路怎样连起来}",
+      "char_count": 25,
+      "word_count": 2
+    },
+    {
+      "chunk_id": "p45_c0",
+      "paragraph_index": 45,
+      "chunk_index": 0,
+      "text": "\\begin{enumerate} \\item 问题一先确定龙头在阿基米德螺线上的位置，相邻把手随后按距离不变的关系逐节递推； 速度由短时间内的弧长变化得到。除了题目要求的数值，这一问还写出了后四问都会调用的位置和速度计算方法。 \\item 问题二把每块板凳写成矩形，用分离轴判断重叠。检查对象并非凭经验删减， 而是先用反证法确定哪一类构件最早碰撞，再让程序在首次触发处停止。 \\item 问题三中的“能进入调头区域”指整个盘入过程均不碰撞。搜索先圈出螺距所在区间，再改用较小步长。 有些候选在终点看似可行，中途却已发生碰撞，因此判断不能只看最后一帧。 \\item 问题四先由相切关系写出两段圆弧。若半径过小，后续构件就得倒退让位，由这一实际限制可得大圆弧半径的下界。 路径确定后，位置递推按盘入、两段圆弧和盘出四种状态继续运行。 \\item 问题五沿用问题四的运动模型，把各把手速度改写为对龙头速度的限制；粒子群在这里只搜索允许的龙头速度， 板凳龙的运动仍按问题四计算。 \\end{enumerate}",
+      "char_count": 452,
+      "word_count": 38
+    },
+    {
+      "chunk_id": "p46_c0",
+      "paragraph_index": 46,
+      "chunk_index": 0,
+      "text": "\\subsection{最值得模仿的段落组织}",
+      "char_count": 23,
+      "word_count": 2
+    },
+    {
+      "chunk_id": "p47_c0",
+      "paragraph_index": 47,
+      "chunk_index": 0,
+      "text": "\\paragraph{从局部关系写到全局运动。} 板凳龙的构件很多，反复用到的却是相邻把手间的固定距离。求出一个把手后，下一把手的位置由定长方程给出；若方程有多个根，还要按构件次序和运动方向逐个排除。这种写法紧跟实际计算顺序，读到公式时也能看出程序下一步如何推进。",
+      "char_count": 132,
+      "word_count": 10
+    },
+    {
+      "chunk_id": "p48_c0",
+      "paragraph_index": 48,
+      "chunk_index": 0,
+      "text": "\\paragraph{先证明检查范围不会漏，再缩小程序。} 讨论第一次碰撞时，论文先假设第 $i$ 个构件更早碰撞，再利用各构件经过同一轨迹的先后关系逐节前推，最后同龙头的运动状态相矛盾。于是，程序只检查与龙头有关的候选对象便有了依据。我们以后缩小搜索或检查范围时，也要先回答会不会漏解，计算量的减少放在后面说明。",
+      "char_count": 157,
+      "word_count": 14
+    },
+    {
+      "chunk_id": "p49_c0",
+      "paragraph_index": 49,
+      "chunk_index": 0,
+      "text": "\\paragraph{用反例判断并简化方案。} 螺距约为 $42\\,\\mathrm{cm}$ 的方案到达终点时看似可行，盘入途中却已经碰撞。这个反例说明终点状态不能代替全过程检查。论文处理12--13秒的速度突增时，则先找到节点所在的小圆弧，再比较相同时间内相邻节点走过的路程。异常时段、局部位置和路程差依次对应起来以后，速度变化才有了几何解释。",
+      "char_count": 173,
+      "word_count": 16
+    },
+    {
+      "chunk_id": "p50_c0",
+      "paragraph_index": 50,
+      "chunk_index": 0,
+      "text": "\\section{本队论文模板（可填写版）}",
+      "char_count": 22,
+      "word_count": 3
+    },
+    {
+      "chunk_id": "p51_c0",
+      "paragraph_index": 51,
+      "chunk_index": 0,
+      "text": "下面给出一套可以逐项填写的论文底稿。目录和填写项来自工作区内 2020--2025 年 A、B、C 题 59 篇编号论文，共 2892 页\\cite{corpus59}；A053 仅用于上一节的单篇精读。正式论文通常沿用这套章节次序，段落却不必用同一种方式开头。作者可以先写图上的异常、物理边界、失败试算，也可以从前一问传来的变量写起，关键是说明当时看到了什么，以及这一观察怎样改变了后续计算。蓝色的\\slot{填空位}只供训练时定位内容，交稿前应替换为实际文字或删去。",
+      "char_count": 235,
+      "word_count": 31
+    },
+    {
+      "chunk_id": "p52_c0",
+      "paragraph_index": 52,
+      "chunk_index": 0,
+      "text": "\\subsection{先按竞赛规章搭好提交版式}",
+      "char_count": 25,
+      "word_count": 2
+    },
+    {
+      "chunk_id": "p53_c0",
+      "paragraph_index": 53,
+      "chunk_index": 0,
+      "text": "以下内容逐条核对自工作区新增的三份全国组委会文件：《全国大学生数学建模竞赛论文格式规范（2026年修订稿）》《全国大学生数学建模竞赛参赛规则（2026年修订稿）》和《全国大学生数学建模竞赛人工智能工具使用规定（2026年试行）》\\cite{format2026,rules2026,ai2026}。本学习报告为了呈现作业内容保留目录和队员姓名；参赛论文须另建匿名提交版，本报告不适合作为参赛论文提交。",
+      "char_count": 200,
+      "word_count": 15
+    },
+    {
+      "chunk_id": "p54_c0",
+      "paragraph_index": 54,
+      "chunk_index": 0,
+      "text": "\\begin{longtable}{p{2.7cm}p{5.7cm}p{6.2cm}} \\caption{2026 年论文与支撑材料硬性要求}\\label{tab:official-format-rules}\\\\ \\toprule 对象 & 纸质版/正文要求 & 电子版/支撑材料要求\\\\ \\midrule \\endfirsthead \\toprule 对象 & 纸质版/正文要求 & 电子版/支撑材料要求\\\\ \\midrule \\endhead 纸张和装订 & 白色 A4 纸，单面或双面均可；四边页边距至少 $2.5\\,\\mathrm{cm}$，左侧装订。& 电子论文必须与纸质版内容及格式（含附录）一致。\\\\ 首页顺序 & 第 1 页承诺书，第 2 页编号专用页，第 3 页摘要专用页。& 电子论文不放承诺书和编号专用页，第一页直接是摘要专用页。\\\\ 摘要与页码 & 摘要含标题、关键词，无需英文，原则上不超过 1 页；从摘要页起以阿拉伯数字从 1 连续编号，页码居页脚中部。& 参赛论文为一个单独 PDF 或 Word 文件，建议 PDF，文件不超过 20 MB，不能再压缩后上传。\\\\ 正文与附录 & 正文从纸质版第 4 页开始，不设目录，不超过 30 页；正文后为附录，页数不限，须打印并与正文装订。& 支撑材料另交一个 RAR 或 ZIP 文件，不超过 20 MB。\\\\ 附录和程序 & 附录列出支撑材料文件，并纳入全部完整、可运行的源程序（含 Excel、SPSS 等软件的交互命令）；确实未用程序时写明“本论文没有用到程序”。& 支撑材料至少包括全部可运行源程序、自主查阅数据（赛题原始数据除外）和较大篇幅中间图表；确实没有时在附录注明“本论文没有支撑材料”。\\\\ 匿名与引用 & 摘要、正文和附录不得出现参赛者身份、学校或赛区信息；他人及公开资料须在正文标注并列入参考文献。& 支撑材料同样不得出现身份、学校或赛区信息，也不得放入承诺书和编号专用页。",
+      "char_count": 835,
+      "word_count": 124
+    },
+    {
+      "chunk_id": "p54_c1",
+      "paragraph_index": 54,
+      "chunk_index": 1,
+      "text": "\\\\ \\bottomrule \\end{longtable}",
+      "char_count": 30,
+      "word_count": 3
+    },
+    {
+      "chunk_id": "p55_c0",
+      "paragraph_index": 55,
+      "chunk_index": 0,
+      "text": "竞赛期间必须由本队队员独立完成赛题。指导教师不能解释赛题、提供选题或解题建议、提供资料、修改论文或给出修改意见；队员也不能同队外任何人讨论赛题，不能在社交平台、论坛、代码平台或直播间浏览、发布、讨论当届赛题内容。AI 工具可以作为辅助，但作品的原创性、真实性和准确性仍由参赛队负责，并须遵守专门披露规定。",
+      "char_count": 152,
+      "word_count": 16
+    },
+    {
+      "chunk_id": "p56_c0",
+      "paragraph_index": 56,
+      "chunk_index": 0,
+      "text": "\\subsubsection{AI 工具披露位置与材料}",
+      "char_count": 28,
+      "word_count": 3
+    },
+    {
+      "chunk_id": "p57_c0",
+      "paragraph_index": 57,
+      "chunk_index": 0,
+      "text": "2026 年试行规定要求参赛队公开、如实说明 AI 工具的使用情况，并逐项人工审查和核实相关内容。声明不是附录，也不放在参考文献之后，而是作为独立部分排在参考文献之前；两种情况只能选择其一。",
+      "char_count": 95,
+      "word_count": 10
+    },
+    {
+      "chunk_id": "p58_c0",
+      "paragraph_index": 58,
+      "chunk_index": 0,
+      "text": "\\begin{longtable}{p{2.7cm}p{5.7cm}p{6.2cm}} \\caption{AI 工具使用披露清单}\\label{tab:official-ai-rules}\\\\ \\toprule 实际情况 & 论文内处理 & 支撑材料与人工责任\\\\ \\midrule \\endfirsthead \\toprule 实际情况 & 论文内处理 & 支撑材料与人工责任\\\\ \\midrule \\endhead 未使用任何 AI 工具 & 在参考文献之前设置“AI 工具使用声明”，使用规定给出的未使用声明。 & 不提交虚构记录；声明必须与竞赛期间的实际过程一致。\\\\ 使用 AI 工具 & 在参考文献之前设置“AI 工具使用声明”，简要写明用途，并指向支撑材料。 & 支撑材料必须包含独立 PDF，文件名为\\texttt{AI 工具使用详情.pdf}；写明工具名称及版本或型号、使用目的和环节、主要提示方式与使用过程、采纳情况以及人工修改与核验。语言润色可不写最后一项。\\\\ 核心建模与分析 & 核心建模与分析必须由参赛队主导；AI 参与完成的内容须逐项人工审查与核实。 & 故意隐瞒、虚假声明，或把未经必要人工审查和核实的 AI 生成内容直接作为核心成果提交，将被取消评奖资格。\\\\ \\bottomrule \\end{longtable}",
+      "char_count": 575,
+      "word_count": 71
+    },
+    {
+      "chunk_id": "p59_c0",
+      "paragraph_index": 59,
+      "chunk_index": 0,
+      "text": "正式论文在参考文献前保留下面这一段，按实际情况删去另一项： \\begin{quote}\\small \\textbf{AI 工具使用声明}",
+      "char_count": 68,
+      "word_count": 8
+    },
+    {
+      "chunk_id": "p60_c0",
+      "paragraph_index": 60,
+      "chunk_index": 0,
+      "text": "未使用时：本参赛队在竞赛过程中未使用任何 AI 工具。",
+      "char_count": 27,
+      "word_count": 4
+    },
+    {
+      "chunk_id": "p61_c0",
+      "paragraph_index": 61,
+      "chunk_index": 0,
+      "text": "使用时：本参赛队在竞赛过程中使用了 AI 工具，主要用于\\slot{简要用途，如语言润色、代码调试等}，详细使用情况见支撑材料。 \\end{quote} 规定没有要求把 AI 工具另列为参考文献，也没有要求在正文中逐句标出 AI 辅助痕迹；但是支撑材料中的用途、过程和人工核验必须能够与论文及代码相互对应。该规定自 2026 年 9 月 1 日起试行，此前规定与之不一致时以本规定为准。",
+      "char_count": 193,
+      "word_count": 28
+    },
+    {
+      "chunk_id": "p62_c0",
+      "paragraph_index": 62,
+      "chunk_index": 0,
+      "text": "\\subsection{59篇论文中的目录与篇幅}",
+      "char_count": 25,
+      "word_count": 2
+    },
+    {
+      "chunk_id": "p63_c0",
+      "paragraph_index": 63,
+      "chunk_index": 0,
+      "text": "表中的页数是各级标题所跨页数的中位数及四分位范围，并非篇幅配额。结果分析和附录会随题目、图表和代码长度改变；模型检验、灵敏度和改进方案在59篇论文中出现得较少，只有计算或数据确实提供了证据时才适合单列，这也不意味着每篇都要设置同名小节。",
+      "char_count": 118,
+      "word_count": 8
+    },
+    {
+      "chunk_id": "p64_c0",
+      "paragraph_index": 64,
+      "chunk_index": 0,
+      "text": "\\begin{longtable}{p{2.3cm}p{1.5cm}p{3.0cm}p{8.0cm}} \\caption{59 篇 A/B/C 论文的章节跨度与交付物}\\label{tab:template-corpus-length}\\\\ \\toprule 章节 & 检出数 & 页级跨度中位数 [Q1,Q3] & 正式稿中可核对的内容\\\\ \\midrule \\endfirsthead \\toprule 章节 & 检出数 & 页级跨度中位数 [Q1,Q3] & 正式稿中可核对的内容\\\\ \\midrule \\endhead 摘要与关键词 & 58/59 & 1 [1,1] & 分问任务、实际做法、关键数值、检查方法、结论和 3--5 个关键词。\\\\ 问题重述 & 57/59 & 1 [1,1] & 研究对象、输入、输出、硬约束，以及分问之间传递的量。\\\\ 问题分析 & 57/59 & 1 [1,1] & 从题面、数据或物理边界出发的取舍依据，以及为何保留或放弃某条路线。\\\\ 模型假设 & 48/59 & 1 [1,1] & 每条假设的对象、条件、计算后果和适用边界。\\\\ 符号说明 & 58/59 & 1 [1,3.75] & 变量、参数、集合、下标、单位；只放跨公式复用的量。\\\\ 模型建立 & 58/59 & 2 [1,6] & 定义、方程/目标函数、约束、边界条件和与题意的映射。\\\\ 模型求解 & 55/59 & 2 [1,6] & 初始化、更新、可行性处理、搜索范围、停止条件、输出，以及代码中的对应函数。\\\\ 结果分析 & 47/59 & 7 [1,12] & 读数、方向、数量级、变化原因、约束状态、现实含义和结果边界。\\\\ 模型检验 & 22/59 & 1.5 [1,7] & 检验对象、独立证据、指标/阈值、结果和判断；缺少这些内容时，不宜声称“验证有效”。\\\\ 灵敏度分析 & 25/59 & 1 [1,2] & 基准、扰动来源、范围、固定量、输出变化和决策是否切换。",
+      "char_count": 850,
+      "word_count": 160
+    },
+    {
+      "chunk_id": "p64_c1",
+      "paragraph_index": 64,
+      "chunk_index": 1,
+      "text": "\\\\ 模型评价 & 51/59 & 1 [1,1] & 有公式或数据支撑的优点，以及受对象、数据和计算预算限制的缺点。\\\\ 改进方案 & 19/59 & 1 [1,1] & 新增数据/关系、修改层、预计改善量和仍需检验的边界。\\\\ 参考文献 & 57/59 & 1 [1,11] & 正文真正使用过的题面、方法、数据和软件来源。\\\\ 附录 & 48/59 & 16 [6,28] & 代码入口、参数、数据字典、运行顺序、补充推导、完整结果和输出文件。\\\\ \\bottomrule \\end{longtable}",
+      "char_count": 255,
+      "word_count": 43
+    },
+    {
+      "chunk_id": "p65_c0",
+      "paragraph_index": 65,
+      "chunk_index": 0,
+      "text": "\\subsection{正式稿标题次序与分问承接关系}",
+      "char_count": 27,
+      "word_count": 2
+    },
+    {
+      "chunk_id": "p66_c0",
+      "paragraph_index": 66,
+      "chunk_index": 0,
+      "text": "正式稿可按下列顺序组织；“问题一”等应换成题目中的实际编号和任务名，标题通常写实际任务，无需另列算法名称。写到下一问时，应点明沿用了上一问的哪些变量、参数或筛选结果：",
+      "char_count": 83,
+      "word_count": 8
+    },
+    {
+      "chunk_id": "p67_c0",
+      "paragraph_index": 67,
+      "chunk_index": 0,
+      "text": "\\begin{enumerate} \\item 摘要与关键词； \\item 问题重述； \\item 问题分析； \\item 模型假设； \\item 符号说明； \\item 问题一：\\slot{任务名}；问题二：\\slot{任务名}；……每问均包含“模型建立”与“模型求解”； \\item 结果分析与模型检验； \\item 灵敏度/稳健性分析（若题目或结果支持）； \\item 模型评价与改进； \\item AI 工具使用声明：按实际情况选择官方规定中的一种表述； \\item 参考文献； \\item 附录：代码、数据、补充结果和运行说明。 \\end{enumerate}",
+      "char_count": 285,
+      "word_count": 44
+    },
+    {
+      "chunk_id": "p68_c0",
+      "paragraph_index": 68,
+      "chunk_index": 0,
+      "text": "\\begin{longtable}{p{1.2cm}p{3.0cm}p{3.0cm}p{3.0cm}p{4.2cm}} \\caption{分问任务表：先列承接量，再写正文}\\label{tab:template-task-matrix}\\\\ \\toprule 分问 & 输入/证据 & 要求输出 & 硬约束或计算标准 & 传给下一问的量\\\\ \\midrule \\endfirsthead \\toprule 分问 & 输入/证据 & 要求输出 & 硬约束或计算标准 & 传给下一问的量\\\\ \\midrule \\endhead 问题一 & \\slot{附件字段、初始状态、题面量} & \\slot{数值/分类/曲线/方案} & \\slot{单位、范围、边界} & \\slot{变量、参数、筛选结果}\\\\ 问题二 & \\slot{沿用问题一的哪些输出} & \\slot{……} & \\slot{新增约束} & \\slot{……}\\\\ 问题三 & \\slot{……} & \\slot{……} & \\slot{……} & \\slot{最终决策或评价准则}\\\\ 问题四（如有） & \\slot{……} & \\slot{……} & \\slot{……} & \\slot{……}\\\\ \\bottomrule \\end{longtable}",
+      "char_count": 560,
+      "word_count": 82
+    },
+    {
+      "chunk_id": "p69_c0",
+      "paragraph_index": 69,
+      "chunk_index": 0,
+      "text": "\\subsection{摘要与关键词：一页内说完做法和结论}",
+      "char_count": 30,
+      "word_count": 3
+    },
+    {
+      "chunk_id": "p70_c0",
+      "paragraph_index": 70,
+      "chunk_index": 0,
+      "text": "\\guidehead{摘要要留下的信息}先点明研究对象和条件，再按分问写实际做法、最能区分方案的数值或关系、所用检查以及结论适用范围。算法名称随求解动作出现即可；摘要中的数字均应来自正文计算或程序输出。",
+      "char_count": 101,
+      "word_count": 8
+    },
+    {
+      "chunk_id": "p71_c0",
+      "paragraph_index": 71,
+      "chunk_index": 0,
+      "text": "\\guidehead{填入实际内容后的参考段式} \\begin{quote}\\small 围绕\\slot{对象}在\\slot{条件/约束}下的\\slot{现实任务}，本文先由\\slot{题面结构、附件读数或物理边界}确定\\slot{变量域/初始状态/数据处理标准}。对于问题一，\\slot{由什么证据触发了哪一个模型动作}，得到\\slot{关键结果、单位和范围}；对于问题二，\\slot{沿用或修正的问题一结果}，在\\slot{新增约束/不确定性}下求得\\slot{关键结果}；对于问题三，\\slot{评价、预测或决策动作}给出\\slot{最终方案/排序/预测}。通过\\slot{回代、残差、交叉验证、基准方法、反例、物理边界或共同环境复评}检查后，\\slot{最有判别力的结论}在\\slot{适用范围}内成立。\\\\ 关键词：\\slot{任务词}；\\slot{模型词}；\\slot{求解词}；\\slot{结果词} \\end{quote}",
+      "char_count": 418,
+      "word_count": 76
+    },
+    {
+      "chunk_id": "p72_c0",
+      "paragraph_index": 72,
+      "chunk_index": 0,
+      "text": "\\guidehead{写完后核对}每个分问至少留下一项可复算的输出；数字能在正文表格或程序输出中找到；单位前后一致；检查方法的表述与实际工作相称。“最优、稳定、准确”等判断还要带上比较对象、指标和范围。",
+      "char_count": 101,
+      "word_count": 11
+    },
+    {
+      "chunk_id": "p73_c0",
+      "paragraph_index": 73,
+      "chunk_index": 0,
+      "text": "\\subsection{问题重述：把题面整理成可计算的任务}",
+      "char_count": 30,
+      "word_count": 3
+    },
+    {
+      "chunk_id": "p74_c0",
+      "paragraph_index": 74,
+      "chunk_index": 0,
+      "text": "\\guidehead{重述的参考起笔} 题目研究的是\\slot{对象及其现实背景}。已知\\slot{输入数据、初始状态、时间范围和单位}，同时受到\\slot{硬约束、边界条件和可行域}限制。问题一要求\\slot{给定什么、求什么}；问题二在\\slot{问题一输出/新增数据}基础上要求\\slot{……}；问题三进一步比较或决定\\slot{……}。\\slot{容易混淆的量，如预测值与观测值、局部指标与全局指标}在下文中分别定义和计算。",
+      "char_count": 217,
+      "word_count": 32
+    },
+    {
+      "chunk_id": "p75_c0",
+      "paragraph_index": 75,
+      "chunk_index": 0,
+      "text": "\\guidehead{重述时注意}这一节照题意说明任务，算法选择放到后面的问题分析中。对象范围、时间窗、单位以及题面中“必须”“可以”等限定词应保持原意；附件里没有的字段仍按未知量处理。",
+      "char_count": 93,
+      "word_count": 11
+    },
+    {
+      "chunk_id": "p76_c0",
+      "paragraph_index": 76,
+      "chunk_index": 0,
+      "text": "\\subsection{问题分析：写出方法从哪里来}",
+      "char_count": 26,
+      "word_count": 3
+    },
+    {
+      "chunk_id": "p77_c0",
+      "paragraph_index": 77,
+      "chunk_index": 0,
+      "text": "问题分析要回答“为何这样处理”，但无需抄录杂乱的试算过程。正文可以从一个异常读数写起，也可以先指出某个边界不满足，或说明上一问留下的变量怎样进入本问。只要后面的选择能在题面、数据、公式、图表或运行记录中找到依据，段落次序便可随问题本身变化。",
+      "char_count": 120,
+      "word_count": 11
+    },
+    {
+      "chunk_id": "p78_c0",
+      "paragraph_index": 78,
+      "chunk_index": 0,
+      "text": "\\begin{longtable}{p{2.0cm}p{3.5cm}p{3.4cm}p{3.3cm}p{3.4cm}} \\caption{问题分析记录表：保留实际取舍}\\label{tab:template-analysis-ledger}\\\\ \\toprule 分问 & 观察到的事实/限制 & 尚未解决的量或矛盾 & 采取的处理及其影响 & 带入模型的范围或变量\\\\ \\midrule \\endfirsthead \\toprule 分问 & 观察到的事实/限制 & 尚未解决的量或矛盾 & 采取的处理及其影响 & 带入模型的范围或变量\\\\ \\midrule \\endhead 问题一 & \\slot{图、表、物理条件或失败试算} & \\slot{要解释/求解的量} & \\slot{保留、舍弃、改写或分段} & \\slot{变量、范围、初值}\\\\ 问题二 & \\slot{问题一的残差/新约束} & \\slot{……} & \\slot{……} & \\slot{……}\\\\ 问题三 & \\slot{决策冲突或不确定性} & \\slot{……} & \\slot{……} & \\slot{……}\\\\ \\bottomrule \\end{longtable}",
+      "char_count": 526,
+      "word_count": 73
+    },
+    {
+      "chunk_id": "p79_c0",
+      "paragraph_index": 79,
+      "chunk_index": 0,
+      "text": "\\guidehead{一种可用的承接写法}“附件中的\\slot{某字段/某段轨迹}呈现出\\slot{具体形态}，原先的\\slot{某种简化/某个候选}因而无法直接用于\\slot{任务}。计算中保留\\slot{需要保留的关系}，将\\slot{新增自由度/误差来源}放到\\slot{后续步骤}处理。所得\\slot{输出量}随后作为下一问的\\slot{输入或约束}，未观测量和事后汇总量不提前参与决策。”",
+      "char_count": 199,
+      "word_count": 34
+    },
+    {
+      "chunk_id": "p80_c0",
+      "paragraph_index": 80,
+      "chunk_index": 0,
+      "text": "\\subsection{模型假设：每条假设都要产生计算后果}",
+      "char_count": 30,
+      "word_count": 3
+    },
+    {
+      "chunk_id": "p81_c0",
+      "paragraph_index": 81,
+      "chunk_index": 0,
+      "text": "\\begin{longtable}{p{3.2cm}p{3.1cm}p{4.0cm}p{3.6cm}} \\caption{模型假设记录表}\\label{tab:template-assumption-ledger}\\\\ \\toprule 假设（对象+条件） & 题面/数据依据 & 在公式或程序中的后果 & 检查与失效边界\\\\ \\midrule \\endfirsthead \\toprule 假设（对象+条件） & 题面/数据依据 & 在公式或程序中的后果 & 检查与失效边界\\\\ \\midrule \\endhead \\slot{忽略某项影响} & \\slot{题面允许/量级比较} & \\slot{删除哪一项或固定哪个量} & \\slot{在何种范围失效}\\\\ \\slot{连续/刚体/独立等条件} & \\slot{观测或定义} & \\slot{改变哪种状态转移或误差} & \\slot{用何种回代/扰动检查}\\\\ \\bottomrule \\end{longtable}",
+      "char_count": 436,
+      "word_count": 62
+    },
+    {
+      "chunk_id": "p82_c0",
+      "paragraph_index": 82,
+      "chunk_index": 0,
+      "text": "可写为：“在\\slot{条件}下，\\slot{对象}的\\slot{因素}相对于\\slot{基准}可忽略，故在模型中\\slot{具体处理}。这一处理适用于\\slot{范围}；当\\slot{边界条件}不再满足时，需在\\slot{改进/敏感性}中重新计算。”",
+      "char_count": 126,
+      "word_count": 29
+    },
+    {
+      "chunk_id": "p83_c0",
+      "paragraph_index": 83,
+      "chunk_index": 0,
+      "text": "\\subsection{符号说明：只收录会反复使用的量}",
+      "char_count": 28,
+      "word_count": 3
+    },
+    {
+      "chunk_id": "p84_c0",
+      "paragraph_index": 84,
+      "chunk_index": 0,
+      "text": "\\begin{longtable}{p{2.2cm}p{7.0cm}p{2.2cm}p{3.3cm}} \\caption{符号说明可填写表}\\label{tab:template-symbol-ledger}\\\\ \\toprule 符号 & 含义（对象和方向） & 单位/取值域 & 首次出现位置\\\\ \\midrule \\endfirsthead \\toprule 符号 & 含义（对象和方向） & 单位/取值域 & 首次出现位置\\\\ \\midrule \\endhead $x_i$ & \\slot{第 $i$ 个对象的决策/观测量} & \\slot{单位或域} & 式(\\slot{})\\\\ $\\theta$ & \\slot{待估参数/情景参数} & \\slot{单位或范围} & 式(\\slot{})\\\\ $\\mathcal{I}$ & \\slot{对象集合/时间集合} & \\slot{集合定义} & 式(\\slot{})\\\\ \\bottomrule \\end{longtable}",
+      "char_count": 444,
+      "word_count": 67
+    },
+    {
+      "chunk_id": "p85_c0",
+      "paragraph_index": 85,
+      "chunk_index": 0,
+      "text": "\\subsection{分问题模型建立与求解：逐问填写}",
+      "char_count": 28,
+      "word_count": 3
+    },
+    {
+      "chunk_id": "p86_c0",
+      "paragraph_index": 86,
+      "chunk_index": 0,
+      "text": "下面这张表先帮助我们把各问的模型写全。模型名称只作索引，正文还须给出变量、方程和约束；使用现成求解器时，也要说明输入、迭代中保留的状态、停止条件和输出。",
+      "char_count": 76,
+      "word_count": 8
+    },
+    {
+      "chunk_id": "p87_c0",
+      "paragraph_index": 87,
+      "chunk_index": 0,
+      "text": "\\begin{longtable}{p{1.8cm}p{2.4cm}p{2.7cm}p{2.7cm}p{2.8cm}p{2.1cm}} \\caption{分问模型填写表}\\label{tab:template-model-card}\\\\ \\toprule 分问 & 变量/状态 & 目标或方程 & 约束/边界 & 求解动作 & 输出及核查\\\\ \\midrule \\endfirsthead \\toprule 分问 & 变量/状态 & 目标或方程 & 约束/边界 & 求解动作 & 输出及核查\\\\ \\midrule \\endhead 问题一 & \\slot{} & \\slot{} & \\slot{} & \\slot{初始化--更新--停止} & \\slot{}\\\\ 问题二 & \\slot{} & \\slot{} & \\slot{} & \\slot{} & \\slot{}\\\\ 问题三 & \\slot{} & \\slot{} & \\slot{} & \\slot{} & \\slot{}\\\\ \\bottomrule \\end{longtable}",
+      "char_count": 472,
+      "word_count": 71
+    },
+    {
+      "chunk_id": "p88_c0",
+      "paragraph_index": 88,
+      "chunk_index": 0,
+      "text": "\\subsubsection*{问题\\slot{编号}：\\slot{任务名}} \\paragraph{输入与变量。}输入为\\slot{附件/前问输出/外部给定}。令\\slot{变量}表示\\slot{含义}，其取值域为\\slot{范围、符号和单位}。\\slot{不参与决策但需固定的量}保持\\slot{固定规则}。",
+      "char_count": 156,
+      "word_count": 28
+    },
+    {
+      "chunk_id": "p89_c0",
+      "paragraph_index": 89,
+      "chunk_index": 0,
+      "text": "\\paragraph{模型建立。}由\\slot{守恒、几何关系、统计定义、业务规则或题面约束}得到 \\begin{equation} \\slot{目标函数、状态方程或评价式}. \\end{equation} 其中\\slot{左侧/右侧各项}分别表示\\slot{可解释含义}。可行域由\\slot{约束1}、\\slot{约束2}和\\slot{边界条件}给出；\\slot{某约束}直接对应题面中的\\slot{原词}。",
+      "char_count": 205,
+      "word_count": 37
+    },
+    {
+      "chunk_id": "p90_c0",
+      "paragraph_index": 90,
+      "chunk_index": 0,
+      "text": "\\paragraph{求解与实现。}先\\slot{清洗/初始化/粗略定位}，随后\\slot{二分、递推、枚举、线性规划、随机搜索、拟合或仿真}。每次更新保留\\slot{状态/可行标志/候选解}，越界时\\slot{处理规则}；在\\slot{停止条件}满足时输出\\slot{文件、表格、曲线或参数}。代码入口为\\texttt{\\slot{file.py/main.m}}，关键函数为\\texttt{\\slot{function}}，随机过程使用\\slot{种子、重复次数和预算}。",
+      "char_count": 238,
+      "word_count": 46
+    },
+    {
+      "chunk_id": "p91_c0",
+      "paragraph_index": 91,
+      "chunk_index": 0,
+      "text": "\\paragraph{模型边界。}该模型回答的是\\slot{对象、时间窗和数据条件}，适用范围不包括\\slot{未观测对象/不同约束/更长时间}。若出现\\slot{观察到的残差或失败状态}，先保留\\slot{基准方法/旧模型}，只修改\\slot{具体关系或参数}，随后在相同条件下重新计算。",
+      "char_count": 145,
+      "word_count": 22
+    },
+    {
+      "chunk_id": "p92_c0",
+      "paragraph_index": 92,
+      "chunk_index": 0,
+      "text": "\\subsubsection{常用公式组件（按题意选用，避免整段照搬）}",
+      "char_count": 36,
+      "word_count": 4
+    },
+    {
+      "chunk_id": "p93_c0",
+      "paragraph_index": 93,
+      "chunk_index": 0,
+      "text": "\\paragraph{连续过程。}状态量、输入和观测量可先写成 \\begin{equation} \\dot{\\boldsymbol{x}}(t)=\\boldsymbol{f}(\\boldsymbol{x}(t),\\boldsymbol{u}(t),t),\\qquad \\boldsymbol{y}(t)=\\boldsymbol{g}(\\boldsymbol{x}(t),\\boldsymbol{u}(t),t),\\qquad \\boldsymbol{x}(0)=\\boldsymbol{x}_0. \\end{equation} 随后补上\\slot{初值、边界、守恒/受力关系}，并说明采用\\slot{RK4/FDM/FEM/其他}时步长或网格怎样进入误差控制。公式后需解释\\slot{每一项的物理含义}，尤其是它同题目对象的对应关系。",
+      "char_count": 367,
+      "word_count": 58
+    },
+    {
+      "chunk_id": "p94_c0",
+      "paragraph_index": 94,
+      "chunk_index": 0,
+      "text": "\\paragraph{规划与优化。}若决策变量为\\slot{$x$}，目标和可行域可整理为 \\begin{equation} \\begin{aligned} \\min_{x}\\quad & F(x)\\\\ \\text{s.t.}\\quad & g_i(x)\\leq 0,\\quad i=1,\\ldots,m,\\\\ & h_j(x)=0,\\quad j=1,\\ldots,p,\\\\ & x\\in\\mathcal{X}. \\end{aligned} \\end{equation} 若有启停、分配或选择，单独说明\\slot{0--1变量与其联动约束}；若目标有优先级，写出\\slot{字典序、分层优化或权重来源}。未经解释的综合分数无法说明各目标之间怎样取舍。",
+      "char_count": 326,
+      "word_count": 56
+    },
+    {
+      "chunk_id": "p95_c0",
+      "paragraph_index": 95,
+      "chunk_index": 0,
+      "text": "\\paragraph{线性/整数模型。}线性情形可以使用 \\begin{equation} \\min\\;\\boldsymbol{c}^{\\mathsf T}\\boldsymbol{x}\\quad \\text{s.t.}\\quad A\\boldsymbol{x}\\leq\\boldsymbol{b},\\quad \\boldsymbol{x}\\geq0,\\quad x_k\\in\\mathbb{Z}\\ \\text{(若题意要求)}. \\end{equation} 正文说明\\slot{$A,b,c$各列如何由题面生成}、求解器返回的状态以及最终解的约束残差。",
+      "char_count": 277,
+      "word_count": 44
+    },
+    {
+      "chunk_id": "p96_c0",
+      "paragraph_index": 96,
+      "chunk_index": 0,
+      "text": "\\paragraph{统计/评价模型。}预测、分类或评价时，将\\slot{原字段--清洗--特征--标签--划分}写成一条数据谱系，再给出损失或指标。例如 \\begin{equation} \\mathrm{MAE}=\\frac{1}{n}\\sum_{i=1}^{n}|y_i-\\hat y_i|,\\qquad \\mathrm{RMSE}=\\sqrt{\\frac{1}{n}\\sum_{i=1}^{n}(y_i-\\hat y_i)^2}. \\end{equation} 指标方向、样本作用和现实解释应与代码实际计算的对象一致。",
+      "char_count": 262,
+      "word_count": 48
+    },
+    {
+      "chunk_id": "p97_c0",
+      "paragraph_index": 97,
+      "chunk_index": 0,
+      "text": "\\subsection{A/B/C 题型专用插槽}",
+      "char_count": 25,
+      "word_count": 5
+    },
+    {
+      "chunk_id": "p98_c0",
+      "paragraph_index": 98,
+      "chunk_index": 0,
+      "text": "\\begin{longtable}{p{1.6cm}p{4.4cm}p{4.5cm}p{4.3cm}} \\caption{三类题型常需补充的内容}\\label{tab:template-abc-slots}\\\\ \\toprule 题型 & 建模时需说明 & 求解时需说明 & 结果与检验需说明\\\\ \\midrule \\endfirsthead \\toprule 题型 & 建模时需说明 & 求解时需说明 & 结果与检验需说明\\\\ \\midrule \\endhead A：机理/连续 & 状态、坐标、初值、边界、守恒或受力关系；离散格式与连续模型分开。 & 步长/网格、稳定条件、初值推进、事件触发、收敛或误差界；多根按物理顺序筛选。 & 回代、守恒、边界和量纲；异常时段回到局部轨迹或同时间路程，一条结果曲线不足以解释原因。\\\\ B：综合优化 & 决策变量、目标层级、硬约束、可行域和前后问承接量；多目标的优先级或权重来源。 & 编码、初始解、越界/不可行处理、搜索范围、停止条件、重复协议和一致的比较条件。 & 目标值、约束残差、候选位置、成本与现实含义；改善幅度较小时同时报告最大值和平均值。\\\\ C：数据决策 & 原字段--清洗/聚合--特征--标签--划分--输出关系；指标方向、业务语义和缺失类型。 & 外层测试保持独立，预处理只读训练折；说明模型损失、阈值、类别不平衡、随机重复，以及预测结果怎样进入决策。 & 区分训练、验证和测试数据；报告基准方法、混淆矩阵或误差、风险/收益和场景复评。同源指标只能反映内部一致性，不能替代外部验证。\\\\ \\bottomrule \\end{longtable}",
+      "char_count": 704,
+      "word_count": 102
+    },
+    {
+      "chunk_id": "p99_c0",
+      "paragraph_index": 99,
+      "chunk_index": 0,
+      "text": "\\paragraph{A 类段落示例。}“在\\slot{前期时段/稳定窗口}内，\\slot{观测量}变化趋于\\slot{形态}，因而先用\\slot{方程/离散格式}描述\\slot{状态}。当\\slot{边界/事件}被触发时，计算转入\\slot{局部求解}；将结果回代到\\slot{守恒/几何条件}后，\\slot{误差或边界结论}仍在\\slot{范围}内。”",
+      "char_count": 178,
+      "word_count": 39
+    },
+    {
+      "chunk_id": "p100_c0",
+      "paragraph_index": 100,
+      "chunk_index": 0,
+      "text": "\\paragraph{B 类段落示例。}“把\\slot{资源/对象}直接平均分配会使\\slot{具体约束/时段}出现\\slot{违约或浪费}。因此保留\\slot{硬约束}，先生成\\slot{可行候选}，再用\\slot{目标层级/求解器}比较。候选在同一\\slot{历史或场景基准}下复评，最终选择\\slot{方案}，代价是\\slot{明确的牺牲}。”",
+      "char_count": 175,
+      "word_count": 35
+    },
+    {
+      "chunk_id": "p101_c0",
+      "paragraph_index": 101,
+      "chunk_index": 0,
+      "text": "\\paragraph{C 类段落示例。}“原始字段\\slot{名称}中，\\slot{缺失/异常/重复}并不表示同一件事，故先按\\slot{规则}分流，再在\\slot{训练划分}内计算\\slot{特征/尺度}。预测模型输出\\slot{标签/概率}后，只有在\\slot{阈值和业务规则}下才进入决策；在\\slot{共同环境/独立测试}复评后，结论限定为\\slot{范围}。”",
+      "char_count": 185,
+      "word_count": 40
+    },
+    {
+      "chunk_id": "p102_c0",
+      "paragraph_index": 102,
+      "chunk_index": 0,
+      "text": "\\subsection{图、表与代码的可替换组件}",
+      "char_count": 25,
+      "word_count": 3
+    },
+    {
+      "chunk_id": "p103_c0",
+      "paragraph_index": 103,
+      "chunk_index": 0,
+      "text": "以下组件借鉴根目录培训版 \\texttt{main.tex} 的排版做法\\cite{friendtemplate}，但把示例数字和外部图片改成空位，避免把示例误当成本队结果。图表在正文中应先被提及，再给出读数和解释；完整代码放在附录或支撑材料，正文保留能说明算法输入输出的短片段。",
+      "char_count": 140,
+      "word_count": 13
+    },
+    {
+      "chunk_id": "p104_c0",
+      "paragraph_index": 104,
+      "chunk_index": 0,
+      "text": "\\begin{figure}[htbp] \\centering \\fbox{\\rule{0pt}{3.0cm}\\rule{0.82\\linewidth}{0pt}} \\caption{\\slot{图的对象、条件或结果名称}} \\label{fig:template-placeholder} \\end{figure}",
+      "char_count": 158,
+      "word_count": 23
+    },
+    {
+      "chunk_id": "p105_c0",
+      "paragraph_index": 105,
+      "chunk_index": 0,
+      "text": "\\begin{table}[htbp] \\centering \\caption{\\slot{结果表名称}} \\label{tab:template-result} \\begin{tabular}{p{3.2cm}p{3.0cm}p{3.0cm}p{3.2cm}} \\toprule 对象/方案 & 指标一（单位） & 指标二（单位） & 结论所需状态\\\\ \\midrule \\slot{A} & \\slot{数值} & \\slot{数值} & \\slot{可行/超限/排名}\\\\ \\slot{B} & \\slot{数值} & \\slot{数值} & \\slot{……}\\\\ \\bottomrule \\end{tabular} \\end{table}",
+      "char_count": 324,
+      "word_count": 55
+    },
+    {
+      "chunk_id": "p106_c0",
+      "paragraph_index": 106,
+      "chunk_index": 0,
+      "text": "\\begin{lstlisting}[language=Python,caption={分问代码入口与输出关系示例},label={lst:template-code}] # 1. read_data: read the same files listed in the appendix # 2. preprocess: keep the rule, unit and split used in the manuscript # 3. solve_problem: return solution, objective and constraint residuals # 4. validate: run the predeclared test and save the table/figure data = read_data(\"[input file]\") state = preprocess(data, config) result = solve_problem(state, config) validate(result, state, config) \\end{lstlisting}",
+      "char_count": 505,
+      "word_count": 68
+    },
+    {
+      "chunk_id": "p107_c0",
+      "paragraph_index": 107,
+      "chunk_index": 0,
+      "text": "除函数名外，代码说明还要写明\\slot{输入对象}、\\slot{返回对象}、\\slot{随机种子/参数}和\\slot{输出文件}，并把它们填入附录复现清单。若某一步失败，应记录状态和原因；中间值如有改动，也随结果一并说明。",
+      "char_count": 111,
+      "word_count": 17
+    },
+    {
+      "chunk_id": "p108_c0",
+      "paragraph_index": 108,
+      "chunk_index": 0,
+      "text": "\\subsection{结果分析与模型检验：表格之后还要解释}",
+      "char_count": 31,
+      "word_count": 3
+    },
+    {
+      "chunk_id": "p109_c0",
+      "paragraph_index": 109,
+      "chunk_index": 0,
+      "text": "\\begin{longtable}{p{2.2cm}p{3.0cm}p{3.0cm}p{3.0cm}p{3.5cm}} \\caption{结果解释记录表}\\label{tab:template-result-ledger}\\\\ \\toprule 结果对象 & 条件/对象 & 读数与单位 & 与谁比较 & 原因、影响和边界\\\\ \\midrule \\endfirsthead \\toprule 结果对象 & 条件/对象 & 读数与单位 & 与谁比较 & 原因、影响和边界\\\\ \\midrule \\endhead \\slot{表/图/输出编号} & \\slot{情景、样本、时段} & \\slot{数值、方向、数量级} & \\slot{基准方法/候选/实测} & \\slot{原因、约束、现实动作和适用范围}\\\\ \\slot{} & \\slot{} & \\slot{} & \\slot{} & \\slot{}\\\\ \\bottomrule \\end{longtable}",
+      "char_count": 432,
+      "word_count": 70
+    },
+    {
+      "chunk_id": "p110_c0",
+      "paragraph_index": 110,
+      "chunk_index": 0,
+      "text": "每张表或图后至少补一段：“在\\slot{条件}下，\\slot{对象}的\\slot{指标}为\\slot{数值}，相对于\\slot{基准}变化\\slot{幅度}。变化主要出现在\\slot{局部对象/时段}，与\\slot{方程项、数据特征、约束状态或决策规则}相符，因此对\\slot{现实任务}的含义是\\slot{动作}；在\\slot{边界}之外不作同样外推。”",
+      "char_count": 178,
+      "word_count": 39
+    },
+    {
+      "chunk_id": "p111_c0",
+      "paragraph_index": 111,
+      "chunk_index": 0,
+      "text": "\\begin{longtable}{p{2.6cm}p{3.4cm}p{3.0cm}p{3.0cm}p{2.8cm}} \\caption{模型检验记录表}\\label{tab:template-validation-ledger}\\\\ \\toprule 检验问题 & 独立证据/数据 & 指标与接受标准 & 结果 & 裁决及影响范围\\\\ \\midrule \\endfirsthead \\toprule 检验问题 & 独立证据/数据 & 指标与接受标准 & 结果 & 裁决及影响范围\\\\ \\midrule \\endhead \\slot{守恒/回代是否成立} & \\slot{未参与拟合的量/公式} & \\slot{误差定义、阈值} & \\slot{数值} & \\slot{保留/修正哪一层}\\\\ \\slot{预测/分类是否可用} & \\slot{独立测试或交叉验证} & \\slot{MAE/RMSE/召回等} & \\slot{} & \\slot{}\\\\ \\slot{方案是否可执行} & \\slot{约束复算/场景} & \\slot{违约率、成本、风险} & \\slot{} & \\slot{}\\\\ \\bottomrule \\end{longtable}",
+      "char_count": 527,
+      "word_count": 79
+    },
+    {
+      "chunk_id": "p112_c0",
+      "paragraph_index": 112,
+      "chunk_index": 0,
+      "text": "检验实施前先写判据：“若\\slot{观测结果/指标}满足\\slot{阈值}，则保留\\slot{模型或参数}；否则只修改\\slot{对应关系}并重新计算。”训练回代、内层调参和最终独立测试要分开；一次重复运行只能说明这次运行得到的结果，一条相关曲线也不足以支持因果结论。",
+      "char_count": 134,
+      "word_count": 19
+    },
+    {
+      "chunk_id": "p113_c0",
+      "paragraph_index": 113,
+      "chunk_index": 0,
+      "text": "\\subsection{灵敏度与稳健性：改变什么、为什么改变、何时换方案}",
+      "char_count": 37,
+      "word_count": 5
+    },
+    {
+      "chunk_id": "p114_c0",
+      "paragraph_index": 114,
+      "chunk_index": 0,
+      "text": "\\begin{longtable}{p{2.4cm}p{3.0cm}p{3.0cm}p{3.0cm}p{3.5cm}} \\caption{灵敏度/稳健性记录表}\\label{tab:template-sensitivity-ledger}\\\\ \\toprule 扰动量 & 基准与来源 & 扰动范围/固定量 & 输出变化 & 决策切换与结论边界\\\\ \\midrule \\endfirsthead \\toprule 扰动量 & 基准与来源 & 扰动范围/固定量 & 输出变化 & 决策切换与结论边界\\\\ \\midrule \\endhead \\slot{参数/误差/场景} & \\slot{测量、估计或题面来源} & \\slot{范围、步长、其余固定} & \\slot{最大/平均/排序/曲线} & \\slot{是否换方案，阈值在哪里}\\\\ \\slot{} & \\slot{} & \\slot{} & \\slot{} & \\slot{}\\\\ \\bottomrule \\end{longtable}",
+      "char_count": 446,
+      "word_count": 68
+    },
+    {
+      "chunk_id": "p115_c0",
+      "paragraph_index": 115,
+      "chunk_index": 0,
+      "text": "正文句式：“以\\slot{基准}为中心，只改变\\slot{参数}，其余量保持\\slot{固定规则}。当\\slot{参数}位于\\slot{范围}时，\\slot{输出}变化\\slot{幅度/方向}；超过\\slot{阈值}后，\\slot{约束/排序/风险}发生切换。因此本文把\\slot{方案或参数}限定在\\slot{范围}，而不把一次基准运行推广到全部情景。”",
+      "char_count": 178,
+      "word_count": 40
+    },
+    {
+      "chunk_id": "p116_c0",
+      "paragraph_index": 116,
+      "chunk_index": 0,
+      "text": "\\subsection{模型评价与改进：说明优缺点出现在哪里}",
+      "char_count": 31,
+      "word_count": 3
+    },
+    {
+      "chunk_id": "p117_c0",
+      "paragraph_index": 117,
+      "chunk_index": 0,
+      "text": "\\begin{longtable}{p{2.3cm}p{4.0cm}p{3.6cm}p{3.8cm}} \\caption{模型评价与改进记录表}\\label{tab:template-evaluation-ledger}\\\\ \\toprule 评价方面 & 已有证据 & 具体优点或不足 & 可执行的改进及新检验\\\\ \\midrule \\endfirsthead \\toprule 评价方面 & 已有证据 & 具体优点或不足 & 可执行的改进及新检验\\\\ \\midrule \\endhead 精度/解释 & \\slot{误差、回代或图表} & \\slot{对哪些对象有效/在哪里失效} & \\slot{新增数据、关系或校准方法}\\\\ 计算/复现 & \\slot{复杂度、运行记录、代码} & \\slot{瓶颈和依赖} & \\slot{缓存、分层求解或更换离散格式}\\\\ 现实性/外推 & \\slot{约束和场景复评} & \\slot{未观测对象、时窗或风险} & \\slot{追加样本、边界场景和接受阈值}\\\\ \\bottomrule \\end{longtable}",
+      "char_count": 483,
+      "word_count": 68
+    },
+    {
+      "chunk_id": "p118_c0",
+      "paragraph_index": 118,
+      "chunk_index": 0,
+      "text": "“速度快、精度高、适用范围广”单独列出来并不能说明优点在哪里。改进项可写成“新增\\slot{数据/关系}，修改\\slot{模型层}，预期检查\\slot{指标/边界}”；现有数据没有支撑的内容仍属于后续工作，应与本文已经得到的结果分开。",
+      "char_count": 117,
+      "word_count": 18
+    },
+    {
+      "chunk_id": "p119_c0",
+      "paragraph_index": 119,
+      "chunk_index": 0,
+      "text": "\\subsection{参考文献与附录：保留复算所需信息}",
+      "char_count": 29,
+      "word_count": 3
+    },
+    {
+      "chunk_id": "p120_c0",
+      "paragraph_index": 120,
+      "chunk_index": 0,
+      "text": "正文首次使用外部定义、算法、数据或软件时标出来源，文后不列未使用的条目。附录按实际运行的“输入--处理--求解--输出”顺序排列，并填写下面各项：",
+      "char_count": 73,
+      "word_count": 11
+    },
+    {
+      "chunk_id": "p121_c0",
+      "paragraph_index": 121,
+      "chunk_index": 0,
+      "text": "\\begin{longtable}{p{3.0cm}p{4.2cm}p{4.2cm}p{3.2cm}} \\caption{附录复现清单}\\label{tab:template-appendix-ledger}\\\\ \\toprule 项目 & 需给出的内容 & 与正文的对应关系 & 核对状态\\\\ \\midrule \\endfirsthead \\toprule 项目 & 需给出的内容 & 与正文的对应关系 & 核对状态\\\\ \\midrule \\endhead 数据字典 & 文件名、字段、单位、缺失/异常编码、主键 & 问题重述、预处理和符号表 & \\slot{待核/已核}\\\\ 代码入口 & 主脚本、函数调用顺序、依赖和版本 & 模型求解段、输出表/图 & \\slot{}\\\\ 参数与随机性 & 初值、范围、步长、种子、重复次数、停止条件 & 模型卡和灵敏度表 & \\slot{}\\\\ 中间结果 & 关键状态、候选、约束残差、日志或完整结果表位置 & 结果分析和检验 & \\slot{}\\\\ 最终文件 & 运行命令、输出路径、文件哈希或版本日期 & 摘要数字和交稿文件 & \\slot{}\\\\ \\bottomrule \\end{longtable}",
+      "char_count": 525,
+      "word_count": 78
+    },
+    {
+      "chunk_id": "p122_c0",
+      "paragraph_index": 122,
+      "chunk_index": 0,
+      "text": "\\subsection{正式提交前的十四项核对}",
+      "char_count": 24,
+      "word_count": 2
+    },
+    {
+      "chunk_id": "p123_c0",
+      "paragraph_index": 123,
+      "chunk_index": 0,
+      "text": "\\begin{enumerate} \\item 题面对象、单位、时间窗和硬约束与附件逐项对上； \\item 每个分问都有输入、输出，并注明传给下一问的变量或结果； \\item 问题分析中至少保留一个由数据、边界、失败试算或物理关系触发的实际取舍； \\item 每条模型假设都说明计算后果和失效范围； \\item 符号、变量域、下标、单位与公式和代码一致； \\item 目标/方程、约束、边界、初值和求解器可以互相追溯； \\item 算法段写明初始化、更新、不可行处理、停止条件和输出； \\item 结果表图不是装饰，正文逐项解释读数、原因、影响和边界； \\item 检验独立于拟合或寻优证据，并写明指标、阈值和裁决； \\item 灵敏度固定共同基准，写清扰动来源和决策切换； \\item 预测值、评级或综合分进入决策时，误差传播和转换关系没有被省略； \\item A/B/C 题型专用插槽已按实际题目填入，不把算法名堆成清单； \\item 参考文献逐条有正文出处；AI 工具使用声明位于参考文献之前，使用过 AI 时支撑材料含\\texttt{AI 工具使用详情.pdf}； \\item 附录运行入口、参数、依赖和输出齐全； \\item 删除所有\\slot{填空位}、训练提示和未核对数字，随后检查全文、代码和 PDF 是否来自同一轮计算。 \\end{enumerate}",
+      "char_count": 585,
+      "word_count": 80
+    },
+    {
+      "chunk_id": "p124_c0",
+      "paragraph_index": 124,
+      "chunk_index": 0,
+      "text": "\\appendix \\section{模板提交前速查}",
+      "char_count": 27,
+      "word_count": 3
+    },
+    {
+      "chunk_id": "p125_c0",
+      "paragraph_index": 125,
+      "chunk_index": 0,
+      "text": "\\begin{enumerate} \\item 摘要中的结论、正文表格和附件输出使用同一数值与单位； \\item 每个模型都有变量、方程或目标、约束、求解入口和结果解释； \\item 每幅图和每张表在正文中被提出，并至少承担一次读数或比较； \\item 关键结论配有回代、误差、交叉验证、基线、反例或物理边界中的一种检查； \\item 附录列出运行顺序、依赖、随机种子、输入文件和输出文件。 \\end{enumerate}",
+      "char_count": 211,
+      "word_count": 26
+    },
+    {
+      "chunk_id": "p126_c0",
+      "paragraph_index": 126,
+      "chunk_index": 0,
+      "text": "\\section*{材料来源说明} \\addcontentsline{toc}{section}{材料来源说明}",
+      "char_count": 56,
+      "word_count": 6
+    },
+    {
+      "chunk_id": "p127_c0",
+      "paragraph_index": 127,
+      "chunk_index": 0,
+      "text": "\\begin{thebibliography}{9} \\bibitem{format2026} 全国大学生数学建模竞赛组委会：《全国大学生数学建模竞赛论文格式规范（2026年修订稿）》， 工作区文件\\texttt{全国大学生数学建模竞赛论文格式规范（2026年修订稿）.pdf}，2026 年 8 月 11 日核读； \\url{https://www.mcm.edu.cn/html_cn/node/4cd596519c9eb9fbd866398f6df0caa3.html}。",
+      "char_count": 239,
+      "word_count": 29
+    },
+    {
+      "chunk_id": "p128_c0",
+      "paragraph_index": 128,
+      "chunk_index": 0,
+      "text": "\\bibitem{rules2026} 全国大学生数学建模竞赛组委会：《全国大学生数学建模竞赛参赛规则（2026年修订稿）》， 工作区文件\\texttt{全国大学生数学建模竞赛参赛规则（2026年修订稿）.pdf}，2026 年 8 月 11 日核读； \\url{https://www.mcm.edu.cn/html_cn/node/9d8e511fe7a1447b35f53a82c908e2e0.html}。",
+      "char_count": 207,
+      "word_count": 26
+    },
+    {
+      "chunk_id": "p129_c0",
+      "paragraph_index": 129,
+      "chunk_index": 0,
+      "text": "\\bibitem{ai2026} 全国大学生数学建模竞赛组委会：《全国大学生数学建模竞赛人工智能工具使用规定（2026年试行）》， 工作区文件\\texttt{全国大学生数学建模竞赛人工智能工具使用规定 （2026年试行）.pdf}， 2026 年 8 月 11 日核读。",
+      "char_count": 135,
+      "word_count": 16
+    },
+    {
+      "chunk_id": "p130_c0",
+      "paragraph_index": 130,
+      "chunk_index": 0,
+      "text": "\\bibitem{corpus59} 2020--2025 年全国大学生数学建模竞赛 A/B/C 题编号论文语料，59 篇、2892 页； 写作 Skill 的证据索引 \\texttt{references/corpus-index.md}， 结构统计版本 2026 年 8 月 1 日。",
+      "char_count": 144,
+      "word_count": 27
+    },
+    {
+      "chunk_id": "p131_c0",
+      "paragraph_index": 131,
+      "chunk_index": 0,
+      "text": "\\bibitem{friendtemplate} 数学建模竞赛论文写作培训模板，工作区根目录文件 \\texttt{main.tex}，2026 年 8 月 10 日核读。",
+      "char_count": 85,
+      "word_count": 13
+    },
+    {
+      "chunk_id": "p132_c0",
+      "paragraph_index": 132,
+      "chunk_index": 0,
+      "text": "\\bibitem{mindmap} 数学建模学习思维导图，工作区文件 \\texttt{1.png}，2026年7月核读。",
+      "char_count": 60,
+      "word_count": 8
+    },
+    {
+      "chunk_id": "p133_c0",
+      "paragraph_index": 133,
+      "chunk_index": 0,
+      "text": "\\bibitem{A053} \\emph{基于目标优化的板凳龙形态调节}，2024年全国大学生数学建模竞赛A题一等奖论文语料， 工作区文件 \\texttt{2024/A053.pdf}。",
+      "char_count": 93,
+      "word_count": 10
+    },
+    {
+      "chunk_id": "p134_c0",
+      "paragraph_index": 134,
+      "chunk_index": 0,
+      "text": "\\bibitem{problem2024A} 2024年全国大学生数学建模竞赛A题：板凳龙，工作区赛题原文。 \\end{thebibliography}",
+      "char_count": 76,
+      "word_count": 7
+    },
+    {
+      "chunk_id": "p135_c0",
+      "paragraph_index": 135,
+      "chunk_index": 0,
+      "text": "\\end{document}",
+      "char_count": 14,
+      "word_count": 2
+    }
+  ]
+}

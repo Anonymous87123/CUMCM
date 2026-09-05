@@ -1,0 +1,239 @@
+﻿{
+  "data_summary": {
+    "appendix1": {
+      "rows": 628,
+      "angle_range_rad": [
+        0.0,
+        6.27
+      ],
+      "radius_range_mm": [
+        2.413,
+        7.239
+      ]
+    },
+    "appendix2": {
+      "rows": 246,
+      "time_range_ms": [
+        0.0,
+        2.45
+      ],
+      "lift_range_mm": [
+        0.0,
+        2.0
+      ]
+    },
+    "appendix3": {
+      "rows": 401,
+      "pressure_range_mpa": [
+        0.0,
+        200.0
+      ],
+      "modulus_range_mpa": [
+        1538.4,
+        3393.4
+      ]
+    }
+  },
+  "local_profiles": {
+    "q1_minimum_row": {
+      "open_time_ms": 2.790037327425438,
+      "mean_mpa": 100.33097887496007,
+      "std_mpa": 0.03764835228661474,
+      "rmse_mpa": 0.3331132151382273,
+      "min_mpa": 99.97244890639752,
+      "max_mpa": 100.3566188703106,
+      "peak_to_peak_mpa": 0.3841699639130809,
+      "objective": 0.33474371018872856
+    },
+    "q2_minimum_row": {
+      "omega_rad_per_s": 27.50695605050019,
+      "mean_mpa": 100.00463406631323,
+      "std_mpa": 1.124491961573831,
+      "rmse_mpa": 1.1245015100989226,
+      "min_mpa": 97.42354317420858,
+      "max_mpa": 102.56229172239952,
+      "peak_to_peak_mpa": 5.1387485481909465,
+      "objective": 1.1337696427253823
+    },
+    "q3_minimum_row": {
+      "offset_ms": 48.051695387302786,
+      "mean_mpa": 100.0025188177793,
+      "std_mpa": 1.1039597286383396,
+      "rmse_mpa": 1.1039626021284605,
+      "min_mpa": 97.46570669000073,
+      "max_mpa": 102.48339616032276,
+      "peak_to_peak_mpa": 5.017689470322026,
+      "objective": 1.1090002376870687
+    },
+    "scope": "one-variable profiles with all other selected controls held fixed"
+  },
+  "event_summary": {
+    "Q2": {
+      "tail_start_ms": 7000.0,
+      "tail_end_ms": 10000.0,
+      "within_1_mpa_fraction": 0.5784738420526491,
+      "within_2_mpa_fraction": 0.9363545484838387,
+      "minimum_mpa": 97.42354317420858,
+      "minimum_time_ms": 7903.0,
+      "maximum_mpa": 102.56229172239952,
+      "maximum_time_ms": 9800.0,
+      "target_crossings": 35
+    },
+    "Q3": {
+      "tail_start_ms": 7000.0,
+      "tail_end_ms": 10000.0,
+      "within_1_mpa_fraction": 0.6047984005331556,
+      "within_2_mpa_fraction": 0.9410196601132955,
+      "minimum_mpa": 97.46570669000073,
+      "minimum_time_ms": 7303.0,
+      "maximum_mpa": 102.48339616032276,
+      "maximum_time_ms": 9300.0,
+      "target_crossings": 74
+    },
+    "Q3-relief": {
+      "tail_start_ms": 7000.0,
+      "tail_end_ms": 10000.0,
+      "within_1_mpa_fraction": 0.6067977340886371,
+      "within_2_mpa_fraction": 0.9476841052982339,
+      "minimum_mpa": 97.3252246496175,
+      "minimum_time_ms": 7851.0,
+      "maximum_mpa": 101.80212648948294,
+      "maximum_time_ms": 8699.0,
+      "target_crossings": 87
+    },
+    "Q1": {
+      "tail_start_ms": 15000.0,
+      "tail_end_ms": 20000.0,
+      "within_1_mpa_fraction": 1.0,
+      "within_2_mpa_fraction": 1.0,
+      "minimum_mpa": 99.97244890639752,
+      "minimum_time_ms": 15002.0,
+      "maximum_mpa": 100.3566188703106,
+      "maximum_time_ms": 20000.0,
+      "target_crossings": 100
+    }
+  },
+  "convergence": [
+    {
+      "case": "Q1",
+      "dt_ms": 0.08,
+      "mean_mpa": 100.70778290811339,
+      "std_mpa": 0.03443275352039542,
+      "rmse_mpa": 0.7086199683415996,
+      "min_mpa": 100.32183299430646,
+      "max_mpa": 100.82019616920584,
+      "peak_to_peak_mpa": 0.49836317489938153
+    },
+    {
+      "case": "Q2",
+      "dt_ms": 0.08,
+      "mean_mpa": 100.23023627642735,
+      "std_mpa": 1.125860061684148,
+      "rmse_mpa": 1.1491603984990806,
+      "min_mpa": 97.63894252740408,
+      "max_mpa": 102.7788581958563,
+      "peak_to_peak_mpa": 5.139915668452218
+    },
+    {
+      "case": "Q3",
+      "dt_ms": 0.08,
+      "mean_mpa": 99.90589131010299,
+      "std_mpa": 1.104259786006164,
+      "rmse_mpa": 1.1082626586258846,
+      "min_mpa": 97.35774060175831,
+      "max_mpa": 102.3822858211162,
+      "peak_to_peak_mpa": 5.02454521935789
+    },
+    {
+      "case": "Q3-relief",
+      "dt_ms": 0.08,
+      "mean_mpa": 99.98967690091386,
+      "std_mpa": 1.1236479410978113,
+      "rmse_mpa": 1.1236953599210475,
+      "min_mpa": 97.24411026340145,
+      "max_mpa": 101.81933470350444,
+      "peak_to_peak_mpa": 4.575224440102986
+    },
+    {
+      "case": "Q1",
+      "dt_ms": 0.04,
+      "mean_mpa": 100.32271364362803,
+      "std_mpa": 0.03700370595306654,
+      "rmse_mpa": 0.324828216197346,
+      "min_mpa": 99.97032306942052,
+      "max_mpa": 100.3653354655983,
+      "peak_to_peak_mpa": 0.3950123961777905
+    },
+    {
+      "case": "Q2",
+      "dt_ms": 0.04,
+      "mean_mpa": 100.06960441395923,
+      "std_mpa": 1.12490457426049,
+      "rmse_mpa": 1.1270559327889553,
+      "min_mpa": 97.48904419181649,
+      "max_mpa": 102.6269607275118,
+      "peak_to_peak_mpa": 5.137916535695311
+    },
+    {
+      "case": "Q3",
+      "dt_ms": 0.04,
+      "mean_mpa": 100.00118945546699,
+      "std_mpa": 1.104140561682007,
+      "rmse_mpa": 1.10414120236307,
+      "min_mpa": 97.46660007387389,
+      "max_mpa": 102.48205245226492,
+      "peak_to_peak_mpa": 5.015452378391032
+    },
+    {
+      "case": "Q3-relief",
+      "dt_ms": 0.04,
+      "mean_mpa": 99.99702142638436,
+      "std_mpa": 1.1274296948863092,
+      "rmse_mpa": 1.1274336294488558,
+      "min_mpa": 97.25399312265975,
+      "max_mpa": 101.80168039246335,
+      "peak_to_peak_mpa": 4.547687269803603
+    },
+    {
+      "case": "Q1",
+      "dt_ms": 0.02,
+      "mean_mpa": 100.33097887496007,
+      "std_mpa": 0.03764835228661474,
+      "rmse_mpa": 0.3331132151382273,
+      "min_mpa": 99.97244890639752,
+      "max_mpa": 100.3566188703106,
+      "peak_to_peak_mpa": 0.3841699639130809
+    },
+    {
+      "case": "Q2",
+      "dt_ms": 0.02,
+      "mean_mpa": 100.00463406631323,
+      "std_mpa": 1.124491961573831,
+      "rmse_mpa": 1.1245015100989226,
+      "min_mpa": 97.42354317420858,
+      "max_mpa": 102.56229172239952,
+      "peak_to_peak_mpa": 5.1387485481909465
+    },
+    {
+      "case": "Q3",
+      "dt_ms": 0.02,
+      "mean_mpa": 100.0025188177793,
+      "std_mpa": 1.1039597286383396,
+      "rmse_mpa": 1.1039626021284605,
+      "min_mpa": 97.46570669000073,
+      "max_mpa": 102.48339616032276,
+      "peak_to_peak_mpa": 5.017689470322026
+    },
+    {
+      "case": "Q3-relief",
+      "dt_ms": 0.02,
+      "mean_mpa": 99.98366321678492,
+      "std_mpa": 1.1279983934754518,
+      "rmse_mpa": 1.1281166899612012,
+      "min_mpa": 97.3252246496175,
+      "max_mpa": 101.80212648948294,
+      "peak_to_peak_mpa": 4.476901839865448
+    }
+  ],
+  "claim_boundary": "diagnostics test local neighborhoods and three time steps; they do not prove continuous global optimality or experimental validity"
+}

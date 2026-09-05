@@ -1,0 +1,93 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-0a061a5b1e24",
+  "chunk_binding_sha256": "337bafc22c47fa69c68ae7edd255eb8350cc49e5ecaa4fbfd737d9d79f51d0b9",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "842ae235d7ee9818",
+    "prepare_integrity_sha256": "95a9f9bd3349d3e3b19c9894822cd0006b7dceaf13e3f15289f22f530fa6e3e1",
+    "run_metadata_sha256": "3d0c006231a948ab025cd9016f5af0a745b8e7a0f77be54a018cfd81fc0f2137",
+    "policy_snapshot_sha256": "d8043a6b25776c8e16b2c0324b17655684d5585cccd37fc5f4e585db78fd6da9",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "unit_id": "U-0a061a5b1e24",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 25559,
+      "end": 25843,
+      "start_line": 514,
+      "end_line": 518,
+      "source_span_sha256": "cd959e53fb53d45112d90027eb13c2bbbe0105f08b9274522a461f056707c0da",
+      "masked_text_sha256": "362a649c8c3ff5a5bf08610a1c37b38762e30da47281a4abb4e54c665d2e989c",
+      "chunk_binding_sha256": "337bafc22c47fa69c68ae7edd255eb8350cc49e5ecaa4fbfd737d9d79f51d0b9"
+    },
+    "scene_route": {
+      "requested_scene": "MODELING",
+      "resolved_scene": "MODELING",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "3e1d1431a67603ecef0bb5a43c5f7a20295dab73a94ed7f756631a31feb19ca5",
+      "routing_input_sha256": "918860a3e7d4e2da5c60b8154ce71d5b1f3766c29fb18fe8c30bcfaddd3478b2"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-modeling",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "MODELING",
+      "profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "da0e187d7fa726ed5c6823cd40cc27ce0240111531bfd9d02f7f85250cff0192"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00679:a5217c8a0750]]\n有限时间最大李雅普诺夫指数把轨道复杂化转化为可比较的数值判据。基准设置下，我们看到 [[PROTECTED:F00001-P00680:79ea035e4a4b]] 附近出现局部由负转正的跨越，短时间窗内对相邻步长和局部初值仍可复现。\n\n一旦将积分时长扩展至 150 和 200，正指数区间明显左移；75 组扩展测试中仅有 5 组保留 [[PROTECTED:F00001-P00681:fc0de2237c09]]。因此我们保留[[PROTECTED:F00001-P00682:afaebdb92289]]的判断，而不把 3.2186 写成唯一阈值。更精细的分岔定位仍需更长积分时长、致密网格与分岔图交叉验证。\n\n",
+  "rewrite_intent": {
+    "summary": "按冻结事实调整段落组织或词壳，并保留原有限定与判断关系",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_MODELING_PROSE",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "SCENE-MODELING-JUDGMENT-PRESERVE",
+          "RHYTHM-VARY-SECTION-ACTION"
+        ],
+        "summary": "按冻结事实调整段落组织或词壳，并保留原有限定与判断关系"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 2,
+        "end_line": 2,
+        "sha256": "deca6a49045d651405df899e94869f7ceb5c6f54151d8546f020594cbbb35c90"
+      }
+    ],
+    "target_signals": [
+      "SCENE-MODELING-JUDGMENT-PRESERVE",
+      "RHYTHM-VARY-SECTION-ACTION"
+    ]
+  }
+}

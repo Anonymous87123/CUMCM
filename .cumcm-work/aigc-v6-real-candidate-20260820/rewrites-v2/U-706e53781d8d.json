@@ -1,0 +1,129 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-706e53781d8d",
+  "chunk_binding_sha256": "c65983ac1f2c5a1681cba3a6dfbb10f0bed1c2c915550aea9cc8f0253c3f796b",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "842ae235d7ee9818",
+    "prepare_integrity_sha256": "95a9f9bd3349d3e3b19c9894822cd0006b7dceaf13e3f15289f22f530fa6e3e1",
+    "run_metadata_sha256": "3d0c006231a948ab025cd9016f5af0a745b8e7a0f77be54a018cfd81fc0f2137",
+    "policy_snapshot_sha256": "d8043a6b25776c8e16b2c0324b17655684d5585cccd37fc5f4e585db78fd6da9",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "unit_id": "U-706e53781d8d",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 19228,
+      "end": 20768,
+      "start_line": 399,
+      "end_line": 430,
+      "source_span_sha256": "765994976a40e48b21f507daf5c47111c551ef67e9dee7daeac08528d23159b5",
+      "masked_text_sha256": "f38f6572b5a1a2af346237e56b097822887fe785098476eb58cd5d78af53546b",
+      "chunk_binding_sha256": "c65983ac1f2c5a1681cba3a6dfbb10f0bed1c2c915550aea9cc8f0253c3f796b"
+    },
+    "scene_route": {
+      "requested_scene": "MODELING",
+      "resolved_scene": "MODELING",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "232dd3a410b33584445e4f6a725b6f665a1728bafc35d3709a2d40a6fc023f31",
+      "routing_input_sha256": "abeb8e9ada593e0cb72a379a8f83bc7ffc8ff28ff37ae7e0e033e8e06b622890"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-modeling",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "MODELING",
+      "profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "0d2aa8b546f90b4060f17527e0bf4f849199936f766c49a3b6f6dc0a6330e013"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00526:c45d26149862]]\n基准时间窗下，[[PROTECTED:F00001-P00527:9f29cf8b0723]]先在1.4--4.8粗网格上扫描，再在3.0--3.4加密。首个连续正区间位于[[PROTECTED:F00001-P00528:79ea035e4a4b]]附近，3.22--3.40保持为正。表[[PROTECTED:F00001-P00529:717636cdb304]]表明，在总积分时长固定为90的前提下，[[PROTECTED:F00001-P00530:1eb5f6b24dc1]]与[[PROTECTED:F00001-P00531:b01b2de0eb38]]之间的符号跨越在相邻步长和微扰初值下仍可保留。\n\n[[PROTECTED:F00001-P00532:bcdfe912634f]]\n[[PROTECTED:F00001-P00533:444090bde130]]\n[[PROTECTED:F00001-P00534:418549bd8483]]\n[[PROTECTED:F00001-P00535:e980e41e7e94]]\n[[PROTECTED:F00001-P00536:9bd6563a665b]]\n[[PROTECTED:F00001-P00537:cbb75ee2e022]]\n[[PROTECTED:F00001-P00538:3000c3bd47e8]]\n设置 & [[PROTECTED:F00001-P00539:a2e54a657be2]] & [[PROTECTED:F00001-P00540:47e45a172779]] & 判别 & 说明 [[PROTECTED:F00001-P00541:b11b4ca186c0]]\n[[PROTECTED:F00001-P00542:3f9db2ae5742]]\n基准步长 [[PROTECTED:F00001-P00543:a5e5cad14213]] & [[PROTECTED:F00001-P00544:53df707d7b60]] & [[PROTECTED:F00001-P00545:dd098d703a93]] & 符号跨越 & 3.22 附近进入正指数区间 [[PROTECTED:F00001-P00546:b11b4ca186c0]]\n较小步长 [[PROTECTED:F00001-P00547:c005e2821a21]] & [[PROTECTED:F00001-P00548:5f273591b370]] & [[PROTECTED:F00001-P00549:dd098d703a93]] & 符号跨越 & 结果与基准设置一致 [[PROTECTED:F00001-P00550:b11b4ca186c0]]\n较大步长 [[PROTECTED:F00001-P00551:fd4f16b19316]] & [[PROTECTED:F00001-P00552:92ed83789dfa]] & [[PROTECTED:F00001-P00553:33cc41a43322]] & 符号跨越 & 结果与基准设置一致 [[PROTECTED:F00001-P00554:b11b4ca186c0]]\n微扰初值 [[PROTECTED:F00001-P00555:3d198f62a310]] & [[PROTECTED:F00001-P00556:c4002c1cff4c]] & [[PROTECTED:F00001-P00557:92efcafec13a]] & 符号跨越 & 微扰后仍保留同样的符号关系 [[PROTECTED:F00001-P00558:b11b4ca186c0]]\n[[PROTECTED:F00001-P00559:76ac79294e9f]]\n[[PROTECTED:F00001-P00560:fce4e77a7146]]\n[[PROTECTED:F00001-P00561:a67d86cbf941]]\n[[PROTECTED:F00001-P00562:4cc1d10bd836]]\n\n积分时长改变后，短窗口给出的起点发生移动。时长150时，3.0--3.4加密区间全部为正；时长200时，连续正区间从3.11开始，[[PROTECTED:F00001-P00563:09e4c7b48116]]、[[PROTECTED:F00001-P00564:dd38aaeb36eb]]也都为正。由5组初值、5个步长和3个积分时长组成的75组测试中，仅5组（6.7[[PROTECTED:F00001-P00565:fed3f9917a84]]）保留[[PROTECTED:F00001-P00566:fc0de2237c09]]。该局部跨越在扩展设置下不具备统计稳健性。\n\n基准短时间窗下，[[PROTECTED:F00001-P00567:79ea035e4a4b]]附近出现局部跨越；积分时长和数值设置放宽后，这个跨越难以保持，不能说明起点固定，因此[[PROTECTED:F00001-P00568:79ea035e4a4b]]不能作为唯一临界点。本文据此只保留[[PROTECTED:F00001-P00569:e9e04c2a63fe]]的方向性判断；若要定位分岔值，仍须采用更长积分时长（[[PROTECTED:F00001-P00570:a2c261c51172]]）并配合分岔图。图[[PROTECTED:F00001-P00571:9ade67a4bf97]]给出不同积分时长下的有限时间指数。\n\n[[PROTECTED:F00001-P00572:8f99e6e4b5c2]]\n[[PROTECTED:F00001-P00573:444090bde130]]\n[[PROTECTED:F00001-P00574:bed7420d1ea2]]\n[[PROTECTED:F00001-P00575:c768e2aa931a]]\n[[PROTECTED:F00001-P00576:acf9f6504e88]]\n[[PROTECTED:F00001-P00577:b3664f89b860]]\n\n",
+  "rewrite_intent": {
+    "summary": "按冻结事实调整段落组织或词壳，并保留原有限定与判断关系",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_MODELING_PROSE",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "SCENE-MODELING-JUDGMENT-PRESERVE",
+          "RHYTHM-VARY-SECTION-ACTION"
+        ],
+        "summary": "按冻结事实调整段落组织或词壳，并保留原有限定与判断关系"
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_MODELING_PROSE",
+        "source_span_ids": [
+          "S2"
+        ],
+        "target_signals": [
+          "SCENE-MODELING-JUDGMENT-PRESERVE",
+          "RHYTHM-VARY-SECTION-ACTION"
+        ],
+        "summary": "按冻结事实调整段落组织或词壳，并保留原有限定与判断关系"
+      },
+      {
+        "id": "O3",
+        "kind": "REWRITE_MODELING_PROSE",
+        "source_span_ids": [
+          "S3"
+        ],
+        "target_signals": [
+          "SCENE-MODELING-JUDGMENT-PRESERVE",
+          "RHYTHM-VARY-SECTION-ACTION"
+        ],
+        "summary": "按冻结事实调整段落组织或词壳，并保留原有限定与判断关系"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 2,
+        "end_line": 2,
+        "sha256": "95ebba85898b75da28ae8b6c3abd845a2f16c9e7375e9ab665deba0de8aef129"
+      },
+      {
+        "id": "S2",
+        "start_line": 22,
+        "end_line": 22,
+        "sha256": "6917ec4691522860f22d9f89cda1c231c7c30b3499e32637b66f3ae4a11d20fb"
+      },
+      {
+        "id": "S3",
+        "start_line": 24,
+        "end_line": 24,
+        "sha256": "4dfecfec815485f530aa59421f60b8a690d054c831cc0927083c22d6ba2cb1a3"
+      }
+    ],
+    "target_signals": [
+      "SCENE-MODELING-JUDGMENT-PRESERVE",
+      "RHYTHM-VARY-SECTION-ACTION"
+    ]
+  }
+}

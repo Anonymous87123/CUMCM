@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "074c4feaadf74567cc3311d15b59bfdb324efa6a051899a69d9247e93b378252",
+    "before_sha256": "074c4feaadf74567cc3311d15b59bfdb324efa6a051899a69d9247e93b378252"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "95bdc77b631fabef1df20c7fb65a157c970ceb845efb2550cb11c49275b15f96",
+  "chunk_binding_sha256": "d740061ee9d42f4b848b3cb8d115c0531ba86b08ecc57730c64dedee7249ceb2",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-274fd3d47e04.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "40e9b4ef24b8d554f398a755b702e97afbad3046148fe2e9e108d4c359a27459",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 8,
+        "id": "S1",
+        "sha256": "623052899d5c30a5065f3aff46b2d65f2cca3faee959ddbcca6821825b47d551",
+        "start_line": 2
+      }
+    ],
+    "reason": "模型假设逐项限定时间尺度、功能群、扰动方式和归一化范围，列表承担边界声明。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "8177f6107b1a3d53161a4e01b89ec719449eb48f79dfd08ea445cb5a1e5dbb2b",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-274fd3d47e04"
+}

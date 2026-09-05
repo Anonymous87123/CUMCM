@@ -1,0 +1,93 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-ab841ce78d7e",
+  "chunk_binding_sha256": "723108ee17f060099d63f3f49979a7de3323324434695b42202eddae195fbc8d",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "842ae235d7ee9818",
+    "prepare_integrity_sha256": "95a9f9bd3349d3e3b19c9894822cd0006b7dceaf13e3f15289f22f530fa6e3e1",
+    "run_metadata_sha256": "3d0c006231a948ab025cd9016f5af0a745b8e7a0f77be54a018cfd81fc0f2137",
+    "policy_snapshot_sha256": "d8043a6b25776c8e16b2c0324b17655684d5585cccd37fc5f4e585db78fd6da9",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "unit_id": "U-ab841ce78d7e",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 9629,
+      "end": 10842,
+      "start_line": 189,
+      "end_line": 215,
+      "source_span_sha256": "981e2b6b27d1f1d0fb3c978b7e99a9f7e16bc43a0f58459ef7e83e40218931ce",
+      "masked_text_sha256": "854c7e57a3f9b4b697007bd1fa6c213592fd9b572db2ad870b992f2731142c65",
+      "chunk_binding_sha256": "723108ee17f060099d63f3f49979a7de3323324434695b42202eddae195fbc8d"
+    },
+    "scene_route": {
+      "requested_scene": "MODELING",
+      "resolved_scene": "MODELING",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "e5df72bd9f779f430810d639e6afbc5b7f35fc7089394bff27fb5b07dcab1d45",
+      "routing_input_sha256": "127d99f43c329bf375e83121b573de1348e2490fe5fe5080091dfd74ce82b803"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-modeling",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "MODELING",
+      "profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "ca83213268c57f56f0213fca1e23f3ae7abe217817d1fc5b1ccb56a9816a3758"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00227:ff7c71a6c970]]\n表 [[PROTECTED:F00001-P00228:1533aea25e15]] 给出了 2025 年的总量标定结果与局地对照结果。四大家鱼总量已较好对齐题目给出的恢复信息；[[PROTECTED:F00001-P00229:23f77b65545d]] 虽低于 2.2 的湖北段对照值，但恢复方向一致。\n[[PROTECTED:F00001-P00230:bcdfe912634f]]\n[[PROTECTED:F00001-P00231:444090bde130]]\n[[PROTECTED:F00001-P00232:5a9c9369c65b]]\n[[PROTECTED:F00001-P00233:3e2ca51f327b]]\n[[PROTECTED:F00001-P00234:17ac77618fb6]]\n[[PROTECTED:F00001-P00235:3000c3bd47e8]]\n指标 & 观测值 & 模拟值 & 相对误差 & 说明 [[PROTECTED:F00001-P00236:b11b4ca186c0]]\n[[PROTECTED:F00001-P00237:3f9db2ae5742]]\n四大家鱼总量倍率 & 1.800 & 1.805 & 0.26[[PROTECTED:F00001-P00238:fed3f9917a84]] & 对齐 [[PROTECTED:F00001-P00239:b11b4ca186c0]]\n[[PROTECTED:F00001-P00240:23f77b65545d]] 倍率 & 2.200 & 1.838 & 16.47[[PROTECTED:F00001-P00241:fed3f9917a84]] & 一致 [[PROTECTED:F00001-P00242:b11b4ca186c0]]\n[[PROTECTED:F00001-P00243:76ac79294e9f]]\n[[PROTECTED:F00001-P00244:fce4e77a7146]]\n[[PROTECTED:F00001-P00245:4cc1d10bd836]]\n\n这两项指标变化方向一致，但恢复幅度存在差异。尽管统计口径不同，二者均证实了禁渔后的资源回升趋势：四大家鱼总生物量与1.8倍的标定值几乎完全吻合，表明单区模型能够准确刻画全流域平均恢复水平；[[PROTECTED:F00001-P00246:23f77b65545d]]低于湖北江段实测的2.2倍，则反映出局地高捕捞效率条件下资源增幅可能更为显著。\n\n从动态过程来看，禁渔情景下四大家鱼总量与[[PROTECTED:F00001-P00247:23f77b65545d]]同步上升，但基础资源末值仅为初始值的0.204倍，且水草生物量最小值出现在禁渔第10年，说明鱼类资源恢复并未随基础资源状况一同改善。摄食压力指数从初始水平持续攀升至4.213，表明鱼群恢复程度与基础资源承压强度呈正相关。0.204与[[PROTECTED:F00001-P00248:0e3efde77bda]]均为归一化单区系统中的相对指标，不直接对应全流域实际生物量或能量金字塔的绝对比例。[[PROTECTED:F00001-P00249:0e3efde77bda]]的持续上升与基础资源的大幅下降共同表明，资源供给已无法满足消费者种群的快速增长；禁渔解除捕捞压力后，中层鱼类对基础资源的摄食压力与种间竞争显著增强，系统呈现出[[PROTECTED:F00001-P00250:93782f19b06a]]的特征。\n\n[[PROTECTED:F00001-P00251:8f99e6e4b5c2]]\n[[PROTECTED:F00001-P00252:444090bde130]]\n[[PROTECTED:F00001-P00253:39e863913a9e]]\n[[PROTECTED:F00001-P00254:f57352f9f99d]]\n[[PROTECTED:F00001-P00255:c1a928c1c2e2]]\n[[PROTECTED:F00001-P00256:b3664f89b860]]\n\n",
+  "rewrite_intent": {
+    "summary": "按冻结事实调整段落组织或词壳，并保留原有限定与判断关系",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_MODELING_PROSE",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "SCENE-MODELING-JUDGMENT-PRESERVE",
+          "RHYTHM-VARY-SECTION-ACTION"
+        ],
+        "summary": "按冻结事实调整段落组织或词壳，并保留原有限定与判断关系"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 19,
+        "end_line": 19,
+        "sha256": "03a1aeceeb6fbcf5d517840bd6e610083f97ad7f21b826072426538e4fdb5faf"
+      }
+    ],
+    "target_signals": [
+      "SCENE-MODELING-JUDGMENT-PRESERVE",
+      "RHYTHM-VARY-SECTION-ACTION"
+    ]
+  }
+}

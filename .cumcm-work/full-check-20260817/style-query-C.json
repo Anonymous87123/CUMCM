@@ -1,0 +1,174 @@
+﻿[
+  {
+    "id": "2024_C038_P6940",
+    "year": 2024,
+    "problem_type": "C",
+    "paper": "C038",
+    "page_start": 36,
+    "page_end": 36,
+    "section": "result",
+    "quality": "medium",
+    "median_confidence": 0.9285,
+    "han_chars": 198,
+    "sentence_count": 5,
+    "actions": [
+      "continuation",
+      "explanation",
+      "observation",
+      "statement"
+    ],
+    "action_sequence": [
+      "observation",
+      "explanation",
+      "statement",
+      "explanation",
+      "statement"
+    ],
+    "opening_family": "观察",
+    "closing_family": "条件",
+    "formula_nearby": true,
+    "visual_nearby": true,
+    "models": [],
+    "source_methods": [
+      "tesseract-chi_sim+eng-220dpi"
+    ],
+    "source": "2024/C038.pdf#page=36",
+    "text": "从图20中可以看出,部分农作物之间存在明显的负相关关系。例如,茎豆与黄豆之间表现出较为显著的负相关性,这表明在种植面积的分和瑟上,这两种作物可能存在一定的替代性。种植芝豆的面积增加时,黄豆的种植面积则会相应减少。类似地,菠菜与黑豆之间也呈现出负相关的趋势,说明这两类作物可能竞争有限的种植资源,形成葵代效应。这种茜代性通常与作物的种植条件和市场需求类似或存在竞争关系相关联,农户可以根据经济效益或气候条件在这类作物之间做出取爹。",
+    "retrieval_eligible": false,
+    "index_line": 6940,
+    "score": 7,
+    "source_type": "fulltext",
+    "index_source": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:6940",
+    "previous_context": [
+      {
+        "source": "2024/C038.pdf#page=35",
+        "section": "result",
+        "text": "接着,本小节基于问题二的求解得到的2024-2030年各类农作物的最优种植方案,计算出每一年各类农作物的总种植面积。随后,依据这七年时间序列的种植面积数据进行了相关性分析,并绘制了农作物相关性热力图,如图20所示。图中直观展示了不同农作物间的相关性,颜色从蓝色到红色,分别代表负相关和正相关,颜色越深表示相关性越强。"
+      }
+    ],
+    "next_context": [
+      {
+        "source": "2024/C038.pdf#page=36",
+        "section": "result",
+        "text": "另一方面,热力图显示,部分作物之间具有较强的正相关关系,表明它们具有一定的互补性。例如,包菜与红豆之间的正相关性较高,这意味着这些作物可能同时存在于同一片土地上,或者在农户的种植决策中常常被一同选择。黄心菜与谷子之间也呈现出正相关关系,说明它们在种植策略上可能具有互补效应,或在轮作、间作等农业活动中具有协同效应。"
+      }
+    ]
+  },
+  {
+    "id": "2021_C006_P2758",
+    "year": 2021,
+    "problem_type": "C",
+    "paper": "C006",
+    "page_start": 24,
+    "page_end": 24,
+    "section": "result",
+    "quality": "medium",
+    "median_confidence": 0.9478,
+    "han_chars": 335,
+    "sentence_count": 9,
+    "actions": [
+      "choice",
+      "continuation",
+      "explanation",
+      "observation",
+      "result",
+      "statement"
+    ],
+    "action_sequence": [
+      "choice",
+      "statement",
+      "explanation",
+      "statement",
+      "observation",
+      "result",
+      "continuation"
+    ],
+    "opening_family": "动作",
+    "closing_family": "其他",
+    "formula_nearby": true,
+    "visual_nearby": false,
+    "models": [],
+    "source_methods": [
+      "tesseract-chi_sim+eng-220dpi"
+    ],
+    "source": "2021/C006.pdf#page=24",
+    "text": "通过资料得知,供货链企业选择原材料时需要衡量采购成本、产能成本这两大方面。采购成本是购买材料的现金流开销,影响公司显性收益。虽然问题二的模型就此以“订单成本”为优化目标,得到采购成本最经济的方案。然而我们并未发现问题二所得结果中存在对某种原材料的偏向性。这是因为木质纤维材料的采购成本远大于材料的产能成本,而在问题二模型的求解过程中采购成本的下降往往会掩盖原材料的产能成本仍然虚高的现象。原材料的偏向性与其产能成本相关。经市场调研数据显示针,产能成本是一个公司或组织为提供或提高其大规模经营能力而发生的费用,衡量为企业实现单位产能需要支出的费用。由题干信息可知,该企业生产祖同单位产品所消耗的原材料A、原材料B、原材料C的比值为1:1.1:1.2,而相同单位原材料A、原材料B、原材料C的比值的价格比值为1.2:1.11。已知比例关系,进一步控据出不同材料的产能成",
+    "retrieval_eligible": false,
+    "index_line": 2758,
+    "score": 6,
+    "source_type": "fulltext",
+    "index_source": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:2758",
+    "previous_context": [
+      {
+        "source": "2021/C006.pdf#page=24",
+        "section": "model",
+        "text": "企业希望进一步加强供货链成本管理,本小问主要探究如何通过对原材料选购偏好,在未来的24周内分配对于原材料的更优的订单量,从而进一步降低转运和仓储成本。"
+      }
+    ],
+    "next_context": [
+      {
+        "source": "2021/C006.pdf#page=24",
+        "section": "model",
+        "text": "由上述公式可知,原材料A、C的采购费用并不区分两者的产能成本,均为0.72Cpurcnasei而对于生产单位产品所需转运、仓储的费用,单位原材料A的开销比单位原材料C更大。因此,用原材料A进行生产的成本更低。"
+      }
+    ]
+  },
+  {
+    "id": "2021_C006_P2769",
+    "year": 2021,
+    "problem_type": "C",
+    "paper": "C006",
+    "page_start": 26,
+    "page_end": 26,
+    "section": "result",
+    "quality": "high",
+    "median_confidence": 0.9324,
+    "han_chars": 238,
+    "sentence_count": 5,
+    "actions": [
+      "constraint",
+      "continuation",
+      "observation",
+      "reality_to_math",
+      "result",
+      "statement",
+      "validation"
+    ],
+    "action_sequence": [
+      "continuation",
+      "validation",
+      "statement",
+      "result",
+      "reality_to_math"
+    ],
+    "opening_family": "其他",
+    "closing_family": "其他",
+    "formula_nearby": false,
+    "visual_nearby": true,
+    "models": [],
+    "source_methods": [
+      "tesseract-chi_sim+eng-220dpi"
+    ],
+    "source": "2021/C006.pdf#page=26",
+    "text": "对于新的订购方案,在优化了原材料订购结构的情况下,理论上生产成本可以得到进一步的压缩。本文针对问题二和问题三的订购方案,对成本进行量化比较分析。如下图所示,通过对订购方案的成本进行量化估计,计算除了新方案相较于问题二方案的成本变化比率。其中成本最高减幅达到了5%左右,综合来看,新方案的平均成本缩减比例为0.956%左右。由此可见,新方案虽然对成本起到了压缩的效果,但效果并不显著,对此,本文认为,是由于可选供货商过少,供货商的供货能力也只是怡好满足每周的最大生产要求,因此该模型订购结构的可行域本身并不大,故而差异并不是非常显著。",
+    "retrieval_eligible": false,
+    "index_line": 2769,
+    "score": 6,
+    "source_type": "fulltext",
+    "index_source": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:2769",
+    "previous_context": [
+      {
+        "source": "2021/C006.pdf#page=26",
+        "section": "model",
+        "text": "如上图所示,模型再经过修正后,新的订购方案显然对原材料订购比例进行了调整,且调整结果较为显著,本文认为该结果达到了原材料的最优订购结"
+      }
+    ],
+    "next_context": [
+      {
+        "source": "2021/C006.pdf#page=26",
+        "section": "model",
+        "text": "问题四题干可知,该企业通过技术改造已具备了提高产能的潜力,可认为该企业的生产力可以满足一切产能需求。即该企业每周的产能已不再成为限制其订货总量的因素。同时,企业也不再存在存储问题,即每周消耗原材料等于各个供货商在当周的供货量。因此,本文考虑该公司产能提升的潜力,基于问题二的订购方案与转运方案模型,对模型进行一定的修正,以得到新的模型。"
+      }
+    ]
+  }
+]

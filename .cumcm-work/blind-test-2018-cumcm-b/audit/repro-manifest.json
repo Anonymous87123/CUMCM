@@ -1,0 +1,177 @@
+{
+  "test_id": "BTV-20260814-CUMCMB",
+  "run": {
+    "command": "python analysis/model_pipeline.py && python analysis/diagnostics.py",
+    "python_version": "3.13.7",
+    "random_seed": 20180915,
+    "generated_at": "2026-08-14T23:58:08.7432691+08:00",
+    "data_config": "repro-config.json",
+    "packages": {
+      "numpy": "2.3.2",
+      "pandas": "2.3.2",
+      "matplotlib": "3.10.6"
+    },
+    "verify_runtime": true
+  },
+  "required_roles": [
+    "input",
+    "analysis_script",
+    "result",
+    "figure",
+    "data_config",
+    "data_audit",
+    "audit_contract"
+  ],
+  "artifacts": [
+    {
+      "path": "../official/problem.doc",
+      "sha256": "8945f462be3fad94bf7750a86cd2fe3462b78ae0606bf606b8da143c997d50fe",
+      "role": "input"
+    },
+    {
+      "path": "../data/appendix1.doc",
+      "sha256": "84926364ac401fdf7aec325cf5c0bf7a92772f33a20135cb64bb15f09836d21f",
+      "role": "input"
+    },
+    {
+      "path": "../analysis/model_pipeline.py",
+      "sha256": "790f3bdedc8cf8ca0a64aed4a0c74b03459fa512b8e82e413fbd933bb8b578d7",
+      "role": "analysis_script"
+    },
+    {
+      "path": "../analysis/diagnostics.py",
+      "sha256": "95b676b481d6e39b4533136bfdca63793d5e95269fb453ffee25592e7a8cc739",
+      "role": "analysis_script"
+    },
+    {
+      "path": "../analysis/results/summary.json",
+      "sha256": "7f23d585c415aef4ae6563affb7b23f2dc085e20cc0a46376bd4057578238c6a",
+      "role": "result"
+    },
+    {
+      "path": "../analysis/results/diagnostics.json",
+      "sha256": "ec86261345c09e6905d240ce90c82715e413b602300705f90eb25ecc465df87c",
+      "role": "result"
+    },
+    {
+      "path": "../analysis/results/strategy_candidates.csv",
+      "sha256": "f2f00a001781ce2175911f2816a485c8a87dc7dcbd7e2da9c4c2e7c603be0c2d",
+      "role": "result"
+    },
+    {
+      "path": "../analysis/results/strategy_by_policy.csv",
+      "sha256": "bc688d372738e278dc746e8f5f833877df7f6dc50f1cf88a668564aa7ff4b15c",
+      "role": "result"
+    },
+    {
+      "path": "../analysis/results/failure_runs.csv",
+      "sha256": "7539d5d5aaa2f19e8532eae60853e062123fd241bae27502ba4a23434498ddef",
+      "role": "result"
+    },
+    {
+      "path": "../analysis/results/failure_loss_summary.csv",
+      "sha256": "39c89372a289533f4f9c29eff7e43978e9acad7cd9753a1658d79a143772f007",
+      "role": "result"
+    },
+    {
+      "path": "../analysis/results/capacity_bounds.csv",
+      "sha256": "235a698a07c1ee790006ebd917d3c4c28bac06247598a072e984af71759eca04",
+      "role": "result"
+    },
+    {
+      "path": "../analysis/results/schedule_diagnostics.csv",
+      "sha256": "983fbb1b7f3db901cacdd30ca1a97068fcb32c05f9c213baf5aeefc8bdb21dd3",
+      "role": "result"
+    },
+    {
+      "path": "../analysis/results/schedule_set1_one_stage.csv",
+      "sha256": "363e7ee150878487d9d7848e88ce7bb65b2d27486a306fd70777cda23b7d845a",
+      "role": "result"
+    },
+    {
+      "path": "../analysis/results/schedule_set1_two_stage.csv",
+      "sha256": "e7627633903069dc8259d97d88e92771346d6a7678d52c571fe7ecff3f4d47ea",
+      "role": "result"
+    },
+    {
+      "path": "../analysis/results/schedule_set2_one_stage.csv",
+      "sha256": "166ca5a6d5f123616edad4c2f29044f9b7dba9e95a7e3f4ababcb0dc9bfae6a8",
+      "role": "result"
+    },
+    {
+      "path": "../analysis/results/schedule_set2_two_stage.csv",
+      "sha256": "053c9c5e27fbba90ce5bcd1d743ff3b498fd3d310cd3932cf2ae16770c51e18a",
+      "role": "result"
+    },
+    {
+      "path": "../analysis/results/schedule_set3_one_stage.csv",
+      "sha256": "c65ae97318815ab6c9cd3fa74d3e094cbe498f7a1f5302399793f3dee168edf7",
+      "role": "result"
+    },
+    {
+      "path": "../analysis/results/schedule_set3_two_stage.csv",
+      "sha256": "2896f06032ce352dda97931606f36377c24db5d74a49175911a483c31b1e9b08",
+      "role": "result"
+    },
+    {
+      "path": "../paper/figures/allocation_landscape.pdf",
+      "sha256": "b4892eaa481ee0b022341cd977c2b4e0e0b9c08b6f3ef139a3aeb1d96c3d6920",
+      "role": "figure"
+    },
+    {
+      "path": "../paper/figures/completion_intervals.pdf",
+      "sha256": "55e5d090fc2befde0fecbd77f03e9d5fb5ba39e6057f3ad358c98ffbba768060",
+      "role": "figure"
+    },
+    {
+      "path": "../paper/figures/failure_distribution.pdf",
+      "sha256": "b1dc7c41de80127688664178ced9a3c21368c594edb85ff2d7f964060faa889e",
+      "role": "figure"
+    },
+    {
+      "path": "../paper/figures/failure_loss.pdf",
+      "sha256": "f74bbcfcad44919eccc073b3be6d90a53d17f40aa4a26d39c9318cb887ad5575",
+      "role": "figure"
+    },
+    {
+      "path": "../paper/figures/policy_comparison.pdf",
+      "sha256": "75b88d4f602612cd8a749090b284b5e535ece5dcc323cd50a0ef88a339839069",
+      "role": "figure"
+    },
+    {
+      "path": "../paper/figures/resource_utilization.pdf",
+      "sha256": "a815a1981fd4e20b16e11c08b9e9e9da6d3457073939c6c1b70347eba59455f4",
+      "role": "figure"
+    },
+    {
+      "path": "../paper/figures/schedule_first_hour.pdf",
+      "sha256": "8b07083edf22a944abf53b84df2f109a6c08e261e6d477e4443c66169a05c844",
+      "role": "figure"
+    },
+    {
+      "path": "../paper/figures/throughput.pdf",
+      "sha256": "80a81516c8557e7bb65e6b6860f877637a840265aa652fecf4edbec69bf459a8",
+      "role": "figure"
+    },
+    {
+      "path": "repro-config.json",
+      "sha256": "32de392ac900900d1fb851f92cd4f41646959b22c18b80d40a986a527e90b07f",
+      "role": "data_config"
+    },
+    {
+      "path": "data-audit.json",
+      "sha256": "41b889bd4831e7043d386e395f59c97a53a6fbbb51bc4dbf2e1a20b016ff0fd3",
+      "role": "data_audit"
+    },
+    {
+      "path": "result-manifest.json",
+      "sha256": "05ba47acee5eb14ef0323487241630d39232364488b9e1f7043ca77d5d288e8a",
+      "role": "audit_contract"
+    },
+    {
+      "path": "math-contract.json",
+      "sha256": "cfefa4047fd42242e3a20347d59866b80edfaddaea14a400159a0f915827f723",
+      "role": "audit_contract"
+    }
+  ]
+}

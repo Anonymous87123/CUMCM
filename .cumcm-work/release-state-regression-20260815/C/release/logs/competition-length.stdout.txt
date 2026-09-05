@@ -1,0 +1,34 @@
+{
+  "status": "fail",
+  "file": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\C\\release\\selected-source\\formal.tex",
+  "aux": "F:\\CUMCM\\.cumcm-work\\release-state-regression-20260815\\C\\release\\build\\formal.aux",
+  "coverage": "F:\\CUMCM\\.cumcm-work\\blind-test-2025-mcm-c\\paper\\formal-coverage.json",
+  "body_start_page": 1,
+  "body_end_page": 25,
+  "body_pages": 25,
+  "range": [
+    25,
+    30
+  ],
+  "errors": 3,
+  "findings": [
+    {
+      "severity": "error",
+      "code": "QUESTION_COVERAGE_MISSING",
+      "question": "Q1",
+      "field": "problem_data_basis"
+    },
+    {
+      "severity": "error",
+      "code": "QUESTION_COVERAGE_MISSING",
+      "question": "Q4",
+      "field": "interpretation"
+    },
+    {
+      "severity": "error",
+      "code": "QUESTION_COVERAGE_MISSING",
+      "question": "Q4",
+      "field": "boundary"
+    }
+  ]
+}

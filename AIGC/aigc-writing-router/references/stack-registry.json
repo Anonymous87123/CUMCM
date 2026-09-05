@@ -1,0 +1,131 @@
+{
+  "schema": "aigc-capability-portfolio/v5",
+  "version": 5,
+  "folder_utilization_catalog_sha256": "0879d0eae35b6efdb677d4285fdb25a62600c7c153bd5d1c5946aa63f3eee759",
+  "packages": [
+    {
+      "directory": "aigc-writing-router", "kind": "router", "skill_name": "aigc-writing-router",
+      "route": "portfolio_orchestrator", "status": "active",
+      "capabilities": ["scene-planning", "candidate-governance", "adapter-execution", "workbench-routing", "role-contract-audit", "stack-evaluation", "heldout-style-benchmark", "longform-ledger", "release-state-machine", "academic-style-release-gate", "source-bound-candidate-recovery", "portfolio-release-bridge", "blind-evaluation", "native-tier-audit", "invocation-policy", "embedded-folder-utilization", "workbench-capability-plan"],
+      "adapter": {"interfaces": ["audit", "workbench"], "offline_action": "audit", "document_formats": ["txt", "md", "tex", "json"], "native_entrypoints": ["SKILL.md", "scripts/route_aigc_tools.py", "scripts/audit_role_contracts.py", "scripts/audit_academic_candidate.py", "scripts/audit_reasoning_scaffold.py", "scripts/prepare_academic_recovery.py", "scripts/audit_portfolio_selection.py", "scripts/audit_folder_utilization.py", "scripts/prepare_stack_evaluation.py", "scripts/run_stack_evaluation.py", "scripts/run_style_benchmark.py", "scripts/run_longform_portfolio.py", "scripts/blind_pair_evaluation.py", "scripts/sample_tex_blind_pairs.py", "scripts/prepare_tex_blind_pairs.py", "scripts/render_style_benchmark_review.py", "scripts/merge_style_benchmark_ratings.py", "scripts/seal_tex_blind_holdout.py", "scripts/audit_tex_blind_holdout.py", "scripts/attach_legacy_blind_review.py", "scripts/test_blind_pair_evaluation.py", "scripts/test_sample_tex_blind_pairs.py", "scripts/test_prepare_tex_blind_pairs.py", "scripts/test_style_benchmark_review.py", "scripts/test_seal_tex_blind_holdout.py", "scripts/test_audit_tex_blind_holdout.py", "scripts/test_attach_legacy_blind_review.py", "scripts/test_academic_candidate.py", "scripts/test_reasoning_scaffold.py", "scripts/test_academic_recovery.py", "scripts/test_humanize_long_preamble.py", "scripts/test_role_contracts.py", "scripts/test_stack_evaluation.py", "scripts/test_style_benchmark.py", "scripts/test_longform_release.py", "scripts/test_native_integrations.py", "scripts/test_json_cli_encoding.py", "scripts/test_folder_utilization.py", "scripts/audit_invocation_policy.py"], "runtimes": ["python"], "network_for_generation": false, "native_command": "python scripts/route_aigc_tools.py --document-type TYPE --intent INTENT --format json", "safe_boundary": "orchestrates packages and contracts; never rewrites authority text"}
+    },
+    {
+      "directory": "humanize-academic-chinese", "kind": "skill", "skill_name": "humanize-academic-chinese",
+      "route": "academic_style_engine", "status": "active",
+      "capabilities": ["academic-diagnose", "protected-rewrite", "tex-long-document", "mechanical-evidence"],
+      "adapter": {"interfaces": ["audit", "candidate"], "offline_action": "audit", "document_formats": ["txt", "md", "tex"], "native_entrypoints": ["SKILL.md", "scripts/run_humanize_inline.py", "scripts/scan_humanize_chinese.py"], "runtimes": ["python"], "network_for_generation": false, "native_command": "read SKILL.md, scan source, produce one protected after-file, then run run_humanize_inline.py run/emit/attest", "native_audit_command": ["python", "scripts/scan_humanize_chinese.py", "{source}", "--scene", "AUTO", "--format", "json"], "native_audit_contract": {"stdout_format": "json", "required_keys": ["finding_count", "candidate_count", "findings", "coverage"], "fingerprint_keys": ["finding_count", "candidate_count", "findings", "coverage"], "timeout_seconds": 120}, "safe_boundary": "strong Chinese academic TeX protection; native scan is read-only and generation remains an agent edit under the full Skill"}
+    },
+    {
+      "directory": "baibaiAIGC", "kind": "skill", "skill_name": "baibai-aigc",
+      "route": "independent_academic_candidate", "status": "explicit_only",
+      "capabilities": ["same-source-candidate", "round-one", "candidate-checklist"],
+      "adapter": {"interfaces": ["audit", "candidate", "workbench"], "offline_action": "prepare-candidate", "document_formats": ["txt", "docx"], "native_entrypoints": ["SKILL.md", "scripts/run_aigc_round.py"], "runtimes": ["python"], "network_for_generation": true, "native_command": "python scripts/run_aigc_round.py DOC_ID 1 INPUT OUTPUT MANIFEST", "safe_boundary": "Round 1 only; restore and verify protected spans outside the native prompt pipeline"}
+    },
+    {
+      "directory": "humanizer", "kind": "skill", "skill_name": "humanizer",
+      "route": "primary_general_english_editor", "status": "active",
+      "capabilities": ["general-english", "pattern-catalog", "source-bound-edit"],
+      "adapter": {"interfaces": ["audit", "candidate"], "offline_action": "prepare-candidate", "document_formats": ["txt", "md"], "native_entrypoints": ["SKILL.md", "scripts/validate-package.py"], "runtimes": ["python"], "network_for_generation": false, "native_command": "invoke $humanizer with the protected source proxy and request diagnose or one candidate", "safe_boundary": "general English only; prompt-driven edits require adapter verification"}
+    },
+    {
+      "directory": "Humanizer-zh-main", "kind": "skill", "skill_name": "humanizer-zh",
+      "route": "primary_general_chinese_editor", "status": "active",
+      "capabilities": ["general-chinese", "informal-prose", "33-pattern-catalog"],
+      "adapter": {"interfaces": ["audit", "candidate"], "offline_action": "prepare-candidate", "document_formats": ["txt", "md"], "native_entrypoints": ["SKILL.md"], "runtimes": [], "network_for_generation": false, "native_command": "invoke $humanizer-zh on ordinary Chinese prose using its complete 33-pattern workflow", "safe_boundary": "ordinary Chinese only; academic and mathematical text must be rerouted"}
+    },
+    {
+      "directory": "academic-humanizer-main", "kind": "imported-skill", "route": "english_academic_style_engine", "status": "explicit_only",
+      "skill_entrypoints": [{"path": "SKILL.md", "skill_name": "academic-humanizer"}],
+      "capabilities": ["english-academic-audit", "claim-evidence-calibration", "proposal-feasibility"],
+      "adapter": {"interfaces": ["audit", "candidate"], "offline_action": "prepare-candidate", "document_formats": ["txt", "md", "tex"], "native_entrypoints": ["SKILL.md"], "runtimes": [], "network_for_generation": false, "native_command": "invoke $academic-humanizer and run its full audit, rewrite, invariant check, and change report", "safe_boundary": "English academic only; equations, citations, numbers, and terms require adapter verification"}
+    },
+    {
+      "directory": "humanizer_academic-main", "kind": "imported-skill", "route": "medical_english_academic_editor", "status": "explicit_only",
+      "skill_entrypoints": [{"path": "SKILL.md", "skill_name": "humanizer-medical-academic"}],
+      "capabilities": ["medical-english", "author-profile", "two-pass-academic-edit"],
+      "adapter": {"interfaces": ["audit", "candidate"], "offline_action": "prepare-candidate", "document_formats": ["txt", "md", "tex"], "native_entrypoints": ["SKILL.md"], "runtimes": [], "network_for_generation": false, "native_command": "invoke $humanizer-medical-academic with an explicit or default medical-English author profile", "safe_boundary": "medical English only; calibrate claim strength and verify all protected literals"}
+    },
+    {
+      "directory": "patina-7.0.0", "kind": "imported-skill", "route": "multilingual_semantic_auditor", "status": "explicit_only",
+      "skill_entrypoints": [{"path": "SKILL.md", "skill_name": "patina"}],
+      "capabilities": ["zh-en-ko-ja-audit", "semantic-anchors", "mps-fidelity", "deterministic-score"],
+      "adapter": {"interfaces": ["audit", "candidate", "workbench"], "offline_action": "audit", "document_formats": ["txt", "md", "prose-proxy"], "native_entrypoints": ["SKILL.md", "bin/patina.js", "src/features/index.js"], "runtimes": ["node"], "network_for_generation": true, "native_command": "node bin/patina.js --lang zh --score --offline --format json --quiet INPUT.txt", "native_audit_command": ["node", "bin/patina.js", "--lang", "zh", "--score", "--offline", "--format", "json", "--quiet", "{source}"], "native_audit_contract": {"stdout_format": "json", "required_keys": ["overall", "categories", "mps", "gateResult"], "fingerprint_keys": ["overall", "categories", "mps", "scores"], "timeout_seconds": 120}, "safe_boundary": "raw TeX is forbidden; use deterministic offline score or audit an extracted prose proxy and treat all scores as advisory"}
+    },
+    {
+      "directory": "humanizer-main(brandonwise)", "kind": "imported-skill", "route": "general_english_diagnostic_editor", "status": "explicit_only",
+      "skill_entrypoints": [{"path": "SKILL.md", "skill_name": "humanizer-brandonwise"}],
+      "capabilities": ["english-pattern-analysis", "cli-diagnostics", "statistical-style-report"],
+      "adapter": {"interfaces": ["audit", "candidate", "workbench"], "offline_action": "audit", "document_formats": ["txt", "md"], "native_entrypoints": ["SKILL.md", "src/cli.js", "src/humanizer.js"], "runtimes": ["node"], "network_for_generation": false, "native_command": "node src/cli.js analyze --json -f INPUT.txt", "native_audit_command": ["node", "src/cli.js", "analyze", "--json", "-f", "{source}"], "native_audit_contract": {"stdout_format": "json", "required_keys": ["score", "patternScore", "uniformityScore", "totalMatches", "findings", "summary"], "fingerprint_keys": ["score", "patternScore", "uniformityScore", "totalMatches", "stats", "categories", "findings"], "timeout_seconds": 120}, "safe_boundary": "English prose only; autofix is a candidate and cannot touch TeX authority"}
+    },
+    {
+      "directory": "humanizer-skill-0.1.0", "kind": "imported-skill", "route": "general_english_voice_candidate", "status": "explicit_only",
+      "skill_entrypoints": [{"path": "skills/humanizer/SKILL.md", "skill_name": "humanizer-voice-profile"}],
+      "capabilities": ["voice-profiles", "general-english-rewrite", "targeted-edit"],
+      "adapter": {"interfaces": ["audit", "candidate", "workbench"], "offline_action": "prepare-candidate", "document_formats": ["txt", "md"], "native_entrypoints": ["skills/humanizer/SKILL.md"], "runtimes": [], "network_for_generation": false, "native_command": "invoke $humanizer-voice-profile in detect or rewrite mode; never use implicit in-place edit", "safe_boundary": "general English only; author experience and first-person content may not be invented"}
+    },
+    {
+      "directory": "humanize-main", "kind": "imported-skill", "route": "general_copy_candidate_lab", "status": "explicit_only",
+      "skill_entrypoints": [{"path": "SKILL.md", "skill_name": "humanize-chinese-copy-lab"}, {"path": "ai-check/SKILL.md", "skill_name": "ai-check"}, {"path": "humanize/SKILL.md", "skill_name": "humanize-english-editor"}],
+      "capabilities": ["chinese-copy-candidate-pool", "evidence-style-report", "english-source-bound-editor"],
+      "adapter": {"interfaces": ["audit", "candidate", "workbench"], "offline_action": "audit", "document_formats": ["txt", "md"], "native_entrypoints": ["SKILL.md", "humanize.py", "scripts/scoring_core.py"], "runtimes": ["python"], "network_for_generation": true, "native_command": "python humanize.py --text TEXT --output-root RUNS", "safe_boundary": "ordinary Chinese copy only; BGE reranker score is not a human-authorship or academic-quality score"}
+    },
+    {
+      "directory": "AI-Cleaner", "kind": "application", "aliases": ["AI-Cleaner"], "route": "manual_external_app", "status": "adapted",
+      "capabilities": ["local-chinese-nlp", "heuristic-report", "diff-ui", "candidate-sandbox"],
+      "adapter": {"interfaces": ["audit", "candidate", "workbench"], "offline_action": "audit", "document_formats": ["txt"], "native_entrypoints": ["backend/app/main.py", "backend/app/aigc_detector.py", "backend/app/nlp/pipeline.py", "backend/app/nlp/humanize_chinese/scripts/detect_cn.py"], "runtimes": ["python", "pnpm"], "network_for_generation": true, "native_command": "uv run uvicorn backend.app.main:app --host 127.0.0.1 --port 8000", "native_audit_command": ["python", "backend/app/nlp/humanize_chinese/scripts/detect_cn.py", "{source}", "--json", "--rule-only"], "native_audit_contract": {"stdout_format": "json", "required_keys": ["score", "level", "metrics", "total_issues", "issues"], "fingerprint_keys": ["score", "level", "metrics", "total_issues", "issues", "worst_sentences"], "timeout_seconds": 120}, "safe_boundary": "use the read-only local Chinese detector offline; remote rewrite must receive protected text and return a candidate"}
+    },
+    {
+      "directory": "AI-content-detector-Humanizer-main", "kind": "application", "aliases": ["AI-content-detector"], "route": "manual_external_app", "status": "adapted",
+      "capabilities": ["english-pdf-sentence-analysis", "annotated-pdf", "citation-aware-text-candidate"],
+      "adapter": {"interfaces": ["audit", "candidate", "workbench"], "offline_action": "audit", "document_formats": ["pdf", "txt"], "native_entrypoints": ["main.py", "pages/ai_detection.py", "pages/humanize_text.py"], "runtimes": ["python"], "network_for_generation": true, "native_command": "streamlit run main.py", "safe_boundary": "English advisory sentence labels only; cached models are required offline and detector labels are not verdicts"}
+    },
+    {
+      "directory": "AI_paper", "kind": "application", "aliases": ["AI_paper"], "route": "manual_external_app", "status": "adapted",
+      "capabilities": ["grammar-format-review", "paragraph-annotation", "workspace-history", "docx-latex-export"],
+      "adapter": {"interfaces": ["audit", "candidate", "workbench"], "offline_action": "workbench-plan", "document_formats": ["docx", "txt", "tex", "pdf"], "native_entrypoints": ["main.py", "modules/api_client.py", "modules/ai_reducer.py"], "runtimes": ["python"], "network_for_generation": true, "native_command": "python main.py", "safe_boundary": "Windows manual workbench; fix invalid local config paths and verify formulas/numbers before adoption"}
+    },
+    {
+      "directory": "BypassAIGC", "kind": "application", "aliases": ["BypassAIGC"], "route": "manual_external_app", "status": "adapted",
+      "capabilities": ["legacy-two-stage-baseline", "docx-formatting", "session-history"],
+      "adapter": {"interfaces": ["audit", "candidate", "workbench"], "offline_action": "workbench-plan", "document_formats": ["txt", "md", "docx"], "native_entrypoints": ["package/main.py", "package/backend/app/models/models.py"], "runtimes": ["python", "node"], "network_for_generation": true, "native_command": "cd package; python main.py", "safe_boundary": "legacy comparison only; both polish and enhance outputs must re-enter candidate verification"}
+    },
+    {
+      "directory": "GankAIGC-2.1.0", "kind": "application", "aliases": ["GankAIGC"], "route": "manual_external_app", "status": "adapted",
+      "capabilities": ["multi-user-projects", "byok", "task-queue", "docx-markdown-export"],
+      "adapter": {"interfaces": ["audit", "candidate", "workbench"], "offline_action": "workbench-plan", "document_formats": ["pdf", "docx", "md", "txt"], "native_entrypoints": ["package/main.py", "package/requirements.txt"], "runtimes": ["python", "docker"], "network_for_generation": true, "native_command": "configure PostgreSQL, then run package/main.py or Docker Compose", "safe_boundary": "deployment workbench; external detector and MinerU results remain optional advisory artifacts"}
+    },
+    {
+      "directory": "fuck-your-ai-detection-rate-main", "kind": "application", "aliases": ["FYADR"], "route": "manual_external_app", "status": "adapted",
+      "capabilities": ["docx-body-map", "source-snapshot", "block-review", "recoverable-export"],
+      "adapter": {"interfaces": ["audit", "candidate", "workbench"], "offline_action": "workbench-plan", "document_formats": ["docx", "txt"], "native_entrypoints": ["scripts/web_app.py", "start_web.ps1"], "runtimes": ["python", "node", "docker"], "network_for_generation": true, "native_command": ".\\start_web.bat -Install; then .\\start_web.bat", "safe_boundary": "preferred long-DOCX governance workbench; generation needs API but mapping, diff, history, and export are local"}
+    },
+    {
+      "directory": "ai-humanizer-main", "kind": "application", "aliases": ["ai-humanizer"], "route": "manual_external_app", "status": "adapted",
+      "capabilities": ["raycast-ui", "external-rephrasy-api", "clipboard-workflow"],
+      "adapter": {"interfaces": ["candidate", "workbench"], "offline_action": "prepare-candidate", "document_formats": ["txt"], "native_entrypoints": ["src/index.tsx", "package.json"], "runtimes": ["node"], "network_for_generation": true, "native_command": "ray develop", "safe_boundary": "black-box remote candidate only; strip logs, add timeout, and never upload sensitive authority text"}
+    },
+    {
+      "directory": "humanize-text", "kind": "application", "aliases": ["humanize-text"], "route": "manual_external_app", "status": "adapted",
+      "capabilities": ["translation-chain", "multi-provider-client", "step-trace"],
+      "adapter": {"interfaces": ["candidate", "workbench"], "offline_action": "prepare-candidate", "document_formats": ["txt"], "native_entrypoints": ["src/standard/pipeline.py", "src/standard/llm_client.py"], "runtimes": ["python"], "network_for_generation": true, "native_command": "python -m src.standard.pipeline --input INPUT.txt --output OUTPUT.txt --verbose", "safe_boundary": "research baseline only; translation chain is forbidden for TeX, mathematics, citations, and fact-dense authority text"}
+    },
+    {
+      "directory": "humanize-ai-main", "kind": "library", "aliases": ["humanize-ai"], "route": "adapted_reference_implementation", "status": "adapted",
+      "capabilities": ["transformation-use-case", "low-confidence-filter", "change-trace", "cache-interface"],
+      "adapter": {"interfaces": ["audit", "candidate", "workbench"], "offline_action": "audit", "document_formats": ["txt"], "native_entrypoints": ["src/services/transformation/index.ts", "src/app/api/transform/route.ts"], "runtimes": ["node"], "network_for_generation": true, "native_command": "pnpm dev; POST /api/transform with explicit low-risk options", "safe_boundary": "English-oriented reference implementation; disable random Markov edits and protect structured content"}
+    },
+    {
+      "directory": "humanize-main(Tiany)", "kind": "imported-skill", "aliases": ["humanize-main-Tiany"], "route": "reconstructed_candidate_lab", "status": "explicit_only",
+      "skill_entrypoints": [{"path": "SKILL.md", "skill_name": "humanize-tiany-candidate-lab"}],
+      "capabilities": ["same-source-comparison", "protected-inventory", "deterministic-repair-evidence"],
+      "adapter": {"interfaces": ["audit", "candidate", "workbench"], "offline_action": "audit", "document_formats": ["txt", "md", "tex"], "native_entrypoints": ["SKILL.md", "scripts/compare_candidates.py"], "runtimes": ["python"], "network_for_generation": false, "native_command": "python scripts/compare_candidates.py SOURCE CANDIDATE... --format json", "safe_boundary": "independent reconstruction of README candidate governance; no original generator or BGE scorer is claimed"}
+    }
+  ],
+  "external_authorities": [
+    {"path": "../deai-academic-writing", "skill_name": "deai-academic-writing", "route": "academic_scene_orchestrator", "status": "active"},
+    {"path": "../deai-modeling-writing", "skill_name": "deai-modeling-writing", "route": "modeling_scene_owner", "status": "active"},
+    {"path": "../deai-research-writing", "skill_name": "deai-research-writing", "route": "research_scene_owner", "status": "active"},
+    {"path": "../deai-course-notes", "skill_name": "deai-course-notes", "route": "course_scene_owner", "status": "active"},
+    {"path": "../mcm-cup-standard-write", "skill_name": "mcm-cup-standard-write", "route": "cumcm_genre_owner", "status": "active"}
+  ]
+}

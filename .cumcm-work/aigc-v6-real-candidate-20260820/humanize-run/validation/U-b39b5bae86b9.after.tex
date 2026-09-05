@@ -1,0 +1,66 @@
+\subsection{模型建立}
+我们在问题一中采用流域平均单区框架。2025 年四大家鱼恢复约 1.8 倍用于约束总量尺度，湖北段单网次捕获量提升 120\% 保留为局地对照。当前能够约束模型的是全流域平均恢复事实，因此我们先在统一尺度下观测禁渔的直接效应。观测事实与模型变量的对应关系如表 \ref{tab:q1_anchor} 所示。
+\begin{table}[htbp]
+\centering
+\caption{问题一的观测约束与变量映射}
+\label{tab:q1_anchor}
+\begin{tabularx}{0.95\textwidth}{>{\raggedright\arraybackslash}p{2.2cm} >{\raggedright\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}p{3.2cm} >{\raggedright\arraybackslash}X}
+\toprule
+事实来源 & 观测口径 & 对应模型量 & 用途 \\
+\midrule
+题目与公报 & 2025 年四大家鱼恢复约 1.8 倍 & $B_{\text{carp}}(t)$ & 参数标定约束 \\
+题目与公报 & 湖北段单网次捕获量提升 120\% & $\mathrm{CPUE}^*(t)$ & 局地对照 \\
+附件 2 & 草鱼、鲢鱼、鳙鱼、青鱼食性分工 & $C_1,\dots,C_4$ 与 $R_1,\dots,R_4$ & 机理约束 \\
+附件 3 & 2022 年公报中的资源恢复事实 & 初值与时间基准 & 规模标定 \\
+\bottomrule
+\end{tabularx}
+\end{table}
+
+为识别不同资源层的承压差异，我们保留四类资源与四类鱼的功能群对应关系，而不把四大家鱼合并为单一消费者。草鱼摄食水草、鲢鱼滤食浮游植物、鳙鱼滤食浮游动物、青鱼摄食底栖饵料，因而底层资源不能压缩为单一总量。据此，我们采用资源--功能群配对模型，将每类鱼与对应资源一一耦合：
+\begin{equation}
+\frac{\mathrm{d}R_j}{\mathrm{d}t}
+=r_j R_j\left(1-\frac{R_j}{K_j}\right)-\alpha_j\frac{R_j C_j}{1+h_jR_j}-\eta_j u R_j,\quad j=1,\dots,4,
+\end{equation}
+\begin{equation}
+\frac{\mathrm{d}C_j}{\mathrm{d}t}
+=e_j\alpha_j\frac{R_j C_j}{1+h_jR_j}-(m_j+F)C_j.
+\end{equation}
+其中 $j=1,2,3,4$ 分别对应草鱼--水草、鲢鱼--浮游植物、鳙鱼--浮游动物、青鱼--底栖饵料。式中 $\eta_j u R_j$ 表示污染对底层资源的额外损失，$F$ 为捕捞死亡率（禁渔情景取 $F=0$，对照情景取 $F=F_0>0$）。为避免后文记号切换，统一记 $(R_1,R_2,R_3,R_4)=(W,Ph,Z,N)$，$(C_1,C_2,C_3,C_4)=(G,L,Y,Q)$。
+\begin{table}[htbp]
+\centering
+\caption{问题一模型参数的角色与来源说明}
+\label{tab:q1_param_role}
+\small
+\setlength{\tabcolsep}{4pt}
+\begin{tabularx}{0.95\textwidth}{>{\raggedright\arraybackslash}p{2.8cm} >{\raggedright\arraybackslash}p{2.0cm} X >{\raggedright\arraybackslash}p{2.2cm}}
+\toprule
+参数 & 数值 & 来源/依据 & 角色 \\
+\midrule
+\multicolumn{4}{l}{\textbf{结构参数（归一化单区设定）}} \\
+$r_1,r_2,r_3,r_4$ & \makecell[l]{$1.15,0.95,$\\$0.82,0.72$} & 表示四类资源的相对恢复快慢，用于保持营养级时间尺度分离。 & 时间尺度约束 \\
+$K_1,K_2,K_3,K_4$ & $(1,1,1,1)$ & 统一取归一化承载上界 1，作为资源层的尺度基准。 & 归一化基准 \\
+$\alpha_1,\alpha_2,\alpha_3,\alpha_4$ & \makecell[l]{$1.22,0.92,$\\$0.84,0.76$} & Holling II 型摄食耦合强度，依次对应水草--草鱼、浮游植物--鲢鱼、浮游动物--鳙鱼、底栖饵料--青鱼，保持摄食项与自增殖项同量级\cite{holling1959}。 & 结构耦合 \\
+$h_1,h_2,h_3,h_4$ & \makecell[l]{$0.55,0.50,$\\$0.48,0.45$} & 控制饱和摄食拐点，使响应保持有界。 & 饱和约束 \\
+$e_1,e_2,e_3,e_4$ & \makecell[l]{$0.43,0.35,$\\$0.33,0.30$} & 归一化转化效率，保证消费者收益不高于资源供给量级。 & 能量转化 \\
+$m_1,m_2,m_3,m_4$ & \makecell[l]{$0.16,0.14,$\\$0.13,0.12$} & 归一化自然损失系数，与转化效率共同维持平衡数量级。 & 背景损失 \\
+\midrule
+\multicolumn{4}{l}{\textbf{校准与情景参数（完整默认值见附录表 \ref{tab:q1_param_full}）}} \\
+$consumer\_scale$ & $0.60$ & 固定缩放四大家鱼初值，不参与 2025 年观测标定。 & 初值规范化 \\
+$gain\_scale$ & $1.45$ & 由 2025 年四大家鱼总量约束单参数标定得到。 & 唯一标定参数 \\
+$F_0$ & $0.25$ & 取区间 $[0.10,0.40]$ 中位值，仅用于“不禁渔”对照。 & 反事实对照 \\
+$\mathrm{CPUE}^*$ 权重 & $(1,1,1,0.7)$ & 青鱼在单网次指标中保守下调，不纳入参数估计。 & 对照指标 \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{table}
+完整默认参数、场景控制量与初值模板列于附录表 \ref{tab:q1_param_full}。
+为量化鱼类恢复对底层资源的累积压力，定义食压指数
+\begin{equation}
+\Phi(t)=\frac{C_1(t)+C_2(t)+C_3(t)+C_4(t)}{R_1(t)+R_2(t)+R_3(t)+R_4(t)}.
+\end{equation}
+同时定义四大家鱼总量 $B_{\text{carp}}(t)=\sum_{j=1}^4 C_j(t)$、底层资源总量 $R_{\text{basal}}(t)=\sum_{j=1}^4 R_j(t)$，以及可观测的单网次捕获量代理
+\begin{equation}
+\mathrm{CPUE}^*(t)=C_1(t)+C_2(t)+C_3(t)+0.7C_4(t),
+\end{equation}
+青鱼权重取 $0.7$，考虑其偏底栖，在单网次观测中的可见性通常低于草鱼、鲢鱼和鳙鱼。该权重仅作经验设定，不纳入参数估计。将其在 $[0.5,1.0]$ 范围内扫描后，2025 年 $\mathrm{CPUE}^*$ 倍率位于 $[1.805,1.862]$，主结论不变。$\Phi(t)$ 描述资源承压过程；$\mathrm{CPUE}^*(t)$ 用于对照湖北段“单网次捕获量提升 120\%”这一局地事实\cite{maunder2004,maunder2006}。
+

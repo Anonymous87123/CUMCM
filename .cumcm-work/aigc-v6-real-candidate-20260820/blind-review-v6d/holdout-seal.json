@@ -1,0 +1,113 @@
+{
+  "schema": "aigc-tex-blind-holdout-seal/v1",
+  "state": "SEALED_UNSCORED",
+  "release_id": "aigc-mcm-v6d-20260818",
+  "sealed_at_utc": "2026-08-18T07:25:39+00:00",
+  "pair_count": 10,
+  "sampling": {
+    "method": "seeded-section-round-robin/v1",
+    "seed": 20260820,
+    "eligible": 11,
+    "selected": 10,
+    "quality_labels_used": false,
+    "exclude_spec": null,
+    "exclude_specs": [
+      {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\tex-pair-spec.json",
+        "sha256": "cc29ae73d56fc852d3854b33d044e24d74127fa2806042fd94011cfec2257346"
+      },
+      {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v4\\holdout-v1\\holdout-spec.json",
+        "sha256": "680ec7e0380ca4e146719258bb61b50bac7ee30025ee388f2b374a5c5cab51bf"
+      },
+      {
+        "path": "F:\\CUMCM\\.cumcm-work\\aigc-recovery-20260817-v3\\blind-review-v6\\holdout-spec.json",
+        "sha256": "299131d9ff4cdd597bbd1263487d14f29adb848325355a4cd724cc98eecc2a38"
+      }
+    ]
+  },
+  "artifacts": {
+    "spec": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\blind-review-v6d\\holdout-spec.json",
+      "bytes": 5294,
+      "sha256": "5a94ba6e0b4812f996b1e479475d81e950d16984fea2bb1bf10e9229f45f5f42",
+      "schema": "aigc-tex-blind-pair-spec/v1"
+    },
+    "pairs": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\blind-review-v6d\\holdout-pairs.json",
+      "bytes": 14288,
+      "sha256": "db45d783dcd11bd2e7f7dcbb516d5955859cbd645a571b724b8a261b02b4bc9e",
+      "schema": "aigc-blind-pairs/v1"
+    },
+    "key": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\blind-review-v6d\\blind-run\\evaluation-key.json",
+      "bytes": 1672,
+      "sha256": "81a820a2272db0c9ce673ca00ff3cd8cb124b31a35a6be856463af2b8055035e",
+      "schema": "aigc-blind-key/v1"
+    },
+    "packet": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\blind-review-v6d\\blind-run\\evaluation-packet.json",
+      "bytes": 10066,
+      "sha256": "8335d5f6c38c086fc40f6b43b9087a6592c87822215a284ba32a281fac15cba4",
+      "schema": "aigc-blind-packet/v1"
+    },
+    "ratings_template": {
+      "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\blind-review-v6d\\blind-run\\ratings-template.csv",
+      "bytes": 404,
+      "sha256": "29175ddb7920f796557289387598bed1edcf70862a66dc3df1568f163a233af7"
+    }
+  },
+  "rule_snapshot": [
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\SKILL.md",
+      "bytes": 34551,
+      "sha256": "eb8542c8d37710811aef17719d7e6ced82c847eb5d6c736c49ba4a44d7d40367"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\route_aigc_tools.py",
+      "bytes": 25427,
+      "sha256": "e2052463b575f05cb05dbe5cef0513b116dd85f4fd1e2be8fbc1ffbd1298a084"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\adapter_core.py",
+      "bytes": 8710,
+      "sha256": "11037d85778242cdd72e9b2249ecdefdcccd8941e7688141ca234c8cbf9296cf"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\aigc-writing-router\\scripts\\run_stack_evaluation.py",
+      "bytes": 16229,
+      "sha256": "771f9377df6de74f60af9eece0d88bb415dbe5ce21b2285e05f3e92ee0ace4fc"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\SKILL.md",
+      "bytes": 26716,
+      "sha256": "bc962c3b8007a177788edca1bfd11d7819b1d6a53d3854fe92b175cf73996e9e"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\modeling-reasoning-preservation.md",
+      "bytes": 3258,
+      "sha256": "4bef51e2a4c0272d3a6c0b8ce75a0f4200e0dfe48f2f42cee679183dd3ecba74"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\AIGC\\humanize-academic-chinese\\references\\generator-projection-policy.json",
+      "bytes": 4955,
+      "sha256": "5c48cc5c0193075052b0b648231540f5a0c3e0c5d16879fdc948679074d79c4e"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\SKILL.md",
+      "bytes": 30381,
+      "sha256": "82a847645631e6f2d236048cb701bf01061a3833853d24c6770add0389438934"
+    },
+    {
+      "path": "C:\\Users\\Lenovo\\.codex\\skills\\mcm-cup-standard-write\\scripts\\audit_content_density.py",
+      "bytes": 26714,
+      "sha256": "64304d373789d7199145e3ea944a48461f0aaca2377e70517f62b51f7eba408b"
+    }
+  ],
+  "release_requirements": {
+    "minimum_human_raters_per_pair": 2,
+    "model_ratings_are_diagnostic_only": true,
+    "mapping_key_visibility": "private-until-ratings-frozen",
+    "current_rules_must_not_be_tuned_from_holdout_results": true
+  }
+}

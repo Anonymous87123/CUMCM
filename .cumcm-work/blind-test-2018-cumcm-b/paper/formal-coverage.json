@@ -1,0 +1,69 @@
+{
+  "max_manual_page_breaks": 0,
+  "questions": [
+    {
+      "id": "Q1",
+      "start_label": "mcm-q1-start",
+      "end_label": "mcm-q1-end",
+      "section_titles": ["任务一模型的建立与求解"],
+      "evidence": {
+        "problem_data_basis": ["清洗时间"],
+        "variables_scope": ["完整系统状态记为"],
+        "mathematical_relation": ["到达、等待与服务必须分开记账"],
+        "solver_implementation": ["每个决策时刻取"],
+        "result": ["保存访问起止时刻"],
+        "interpretation": ["两个时钟因此分开更新"],
+        "validation": ["资源占比来自截断到"],
+        "boundary": ["班次末仍在加工"]
+      }
+    },
+    {
+      "id": "Q2",
+      "start_label": "mcm-q2-start",
+      "end_label": "mcm-q2-end",
+      "section_titles": ["任务二（一）模型的建立与求解"],
+      "evidence": {
+        "problem_data_basis": ["班次开始时八台 CNC 均为空闲"],
+        "variables_scope": ["候选集合写成"],
+        "mathematical_relation": ["加工松弛上界"],
+        "solver_implementation": ["正式方案保留就近优先"],
+        "result": ["356"],
+        "interpretation": ["这并不与.*矛盾"],
+        "validation": ["动作数与成品数相差"],
+        "boundary": ["不能把本次选择写成一道工序的一般定理"]
+      }
+    },
+    {
+      "id": "Q3",
+      "start_label": "mcm-q3-start",
+      "end_label": "mcm-q3-end",
+      "section_titles": ["任务二（二）模型的建立与求解"],
+      "evidence": {
+        "problem_data_basis": ["第一、第二工序时间"],
+        "variables_scope": ["z_i="],
+        "mathematical_relation": ["携带状态改变候选集合"],
+        "solver_implementation": ["枚举"],
+        "result": ["235"],
+        "interpretation": ["这里策略差异已经进入最终产量"],
+        "validation": ["动作日志的闭合计数"],
+        "boundary": ["不能再以实现简单为由保留就近规则"]
+      }
+    },
+    {
+      "id": "Q4",
+      "start_label": "mcm-q4-start",
+      "end_label": "mcm-q4-end",
+      "section_titles": ["任务二（三）模型的建立与求解"],
+      "evidence": {
+        "problem_data_basis": ["故障概率按"],
+        "variables_scope": ["T_f"],
+        "mathematical_relation": ["本次加工被标记为故障"],
+        "solver_implementation": ["独立运行 200 次"],
+        "result": ["350.595"],
+        "interpretation": ["原因是故障除了"],
+        "validation": ["相对无故障基线"],
+        "boundary": ["不能据此推出真实工厂"]
+      }
+    }
+  ]
+}

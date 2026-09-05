@@ -1,0 +1,70 @@
+{
+  "test_id": "BTV-20260814-CUMCMA",
+  "run": {
+    "command": "python analysis/model_pipeline.py && python analysis/diagnostics.py",
+    "python_version": "3.13.7",
+    "random_seed": 20190913,
+    "generated_at": "2026-08-14T23:06:33+08:00",
+    "data_config": "repro-config.json",
+    "packages": {
+      "numpy": "2.3.2",
+      "pandas": "2.3.2",
+      "scipy": "1.16.1",
+      "matplotlib": "3.10.6",
+      "numba": "0.65.0"
+    },
+    "verify_runtime": false
+  },
+  "artifacts": [
+    {
+      "path": "../analysis/model_pipeline.py",
+      "sha256": "6c8d55678d9c6185fb9484c9e1e85b2501bd26150f441e9137c0f4dff7fe4870",
+      "role": "analysis_script"
+    },
+    {
+      "path": "../analysis/diagnostics.py",
+      "sha256": "31b0116b429cad40eee2af7b1956e329f8bc33d22ccb6ebac8d297f0f7d56edc",
+      "role": "analysis_script"
+    },
+    {
+      "path": "../analysis/results/summary.json",
+      "sha256": "406ed86f25417d0b871743134bd5d42c3f6326d9bb411f0b9e900d3fbdf84537",
+      "role": "result"
+    },
+    {
+      "path": "../analysis/results/diagnostics.json",
+      "sha256": "3131d6d179f587f7610eca4e1caf2e6a496a1a94c7645ad171869f244e921e5c",
+      "role": "result"
+    },
+    {
+      "path": "../analysis/results/step_convergence.csv",
+      "sha256": "10c5b65e750094fdd9f19e42e1880491056d7edf82d1fb7ccf853baa3f9d2337",
+      "role": "result"
+    },
+    {
+      "path": "../paper/figures/q23_pressure.pdf",
+      "sha256": "963b7f26cc254c014589f102c0f17c05c7d504d60fd7bbd175e7442575d62ede",
+      "role": "figure"
+    },
+    {
+      "path": "../paper/figures/step_convergence.pdf",
+      "sha256": "2f6d6cbe67560377159dd4ab71a1a215c15aaf9c56c628258a1d65429edfccb9",
+      "role": "figure"
+    },
+    {
+      "path": "repro-config.json",
+      "sha256": "72189bc887943203567c979fce12d1c83c2e289c4804195e9a4982cc6d70de5c",
+      "role": "data_config"
+    },
+    {
+      "path": "data-audit.json",
+      "sha256": "ffc9538784eb5709a4c14cd1f50d3ee7954aba88e4f21e18d3f8e15279997003",
+      "role": "data_audit"
+    },
+    {
+      "path": "math-contract.json",
+      "sha256": "8c18d6c8354d0eb66ccac2e8d224bece14e78c26656bc80497a0613743e4df92",
+      "role": "audit_contract"
+    }
+  ]
+}

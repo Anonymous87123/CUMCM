@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "b9f69dd3d298c51f10bdaa022e46032e00082a10372570969cbec804ec7248a7",
+    "before_sha256": "b9f69dd3d298c51f10bdaa022e46032e00082a10372570969cbec804ec7248a7"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "fa9b70c6a7b6e81a5ef5404a19d33487d151dafc8953349bca623f0e6896dcae",
+  "chunk_binding_sha256": "1ff933597d9f4447063f55d3d589f73457a22be1e854de4300b40a0c63bd85b2",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-b8766a969759.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "b9cd393274b556cc434518842c537cef8216b0fb4eacdbeb2ebd946a097eac59",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 33,
+        "id": "S1",
+        "sha256": "1ad0cfb76b1c4e3168c2c35b0264cc0854f234509b4f89b9e4818d6d67dc0cb7",
+        "start_line": 10
+      }
+    ],
+    "reason": "参数附表按来源、默认值和角色逐项列示，表格结构承担复现查询职责。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "aacdfe4de6812b3bdaec174f7f848e17fd0a01a8188e8ca4decae0f8448ea5ee",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-b8766a969759"
+}

@@ -1,0 +1,51 @@
+{
+  "schema": "aigc-style-benchmark-suite/v1",
+  "suite_id": "cumcm-v2-dev",
+  "version": "2026-08-20",
+  "split": "dev",
+  "benchmark_goal": "preservation",
+  "providers": ["humanize-academic-chinese"],
+  "required_trials": 3,
+  "purpose": "Development-only regression for source-inherited technical lexical KEEP and visible modeling judgment preservation.",
+  "cases": [
+    {
+      "id": "a-shadow-intersection",
+      "scene": {"document_type": "mcm", "document_format": "plain", "scope": "local"},
+      "source": "cumcm-v2-dev/sources/a-shadow-intersection.txt",
+      "challenge_tags": ["public-judgment", "specificity", "math-protection", "paragraph-rhythm"],
+      "provenance": {
+        "record_id": "2023_A0175_P4541",
+        "paper": "2023/A0175.pdf",
+        "page": 8,
+        "section": "model",
+        "index": "mcm-cup-standard-write/references/fulltext-style-index.jsonl:4541"
+      }
+    },
+    {
+      "id": "b-symmetry-reduction",
+      "scene": {"document_type": "mcm", "document_format": "plain", "scope": "local"},
+      "source": "cumcm-v2-dev/sources/b-symmetry-reduction.txt",
+      "challenge_tags": ["public-judgment", "boundary-conditions", "specificity", "content-density"],
+      "provenance": {
+        "record_id": "2022_B030_P3574",
+        "paper": "2022/B030.pdf",
+        "page": 6,
+        "section": "model",
+        "index": "mcm-cup-standard-write/references/fulltext-style-index.jsonl:3574"
+      }
+    },
+    {
+      "id": "c-classifier-validation",
+      "scene": {"document_type": "mcm", "document_format": "plain", "scope": "local"},
+      "source": "cumcm-v2-dev/sources/c-classifier-validation.txt",
+      "challenge_tags": ["public-judgment", "specificity", "result-explanation", "causal-calibration"],
+      "provenance": {
+        "record_id": "2020_C227_P1659",
+        "paper": "2020/C227.pdf",
+        "page": 9,
+        "section": "validation",
+        "index": "mcm-cup-standard-write/references/fulltext-style-index.jsonl:1659"
+      }
+    }
+  ]
+}

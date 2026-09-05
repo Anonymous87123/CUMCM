@@ -1,0 +1,19 @@
+{
+  "schema": "aigc-candidate-task/v1",
+  "provider": "baibai-aigc",
+  "source_sha256": "393e338e6cfcc5efeda221107fccc09bce608e484bda6e6182e1fec6897a29c6",
+  "source_snapshot": "F:\\CUMCM\\.cumcm-work\\cet6-aigc-portfolio-run-v5\\branches\\B1\\prepare\\source.snapshot.txt",
+  "protected_proxy": "F:\\CUMCM\\.cumcm-work\\cet6-aigc-portfolio-run-v5\\branches\\B1\\prepare\\source.protected-proxy.txt",
+  "protected_spans": "F:\\CUMCM\\.cumcm-work\\cet6-aigc-portfolio-run-v5\\branches\\B1\\prepare\\protected-spans.json",
+  "native_command": "python scripts/run_aigc_round.py DOC_ID 1 INPUT OUTPUT MANIFEST",
+  "rules": [
+    "Run the package's complete native workflow, not a borrowed phrase list.",
+    "Generate one candidate directly from this frozen source branch.",
+    "Do not resolve or rewrite AIGC_LOCK tokens.",
+    "Do not add facts, citations, results, author experiences, or causal claims.",
+    "Restore protected spans byte-for-byte before candidate verification.",
+    "Do not overwrite the source snapshot."
+  ],
+  "required_next_action": "verify-candidate",
+  "human_review_required": true
+}

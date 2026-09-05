@@ -1,0 +1,18 @@
+{
+  "pipeline": "../analysis/model_pipeline.py",
+  "data_directory": "../data/2025_Problem_C_Data",
+  "input_files": [
+    "summerOly_athletes.csv",
+    "summerOly_hosts.csv",
+    "summerOly_medal_counts.csv",
+    "summerOly_programs.csv"
+  ],
+  "encoding_fallback": ["utf-8-sig", "cp1252", "latin1"],
+  "random_seed": 20250814,
+  "pseudo_nocs_excluded_from_forecast": ["AIN", "EOR", "IOA", "IOP", "MIX", "ROC", "WIF", "ZZX"],
+  "athlete_medal_dedup_key": ["Year", "NOC", "SportC", "Event", "Medal"],
+  "missing_medal_counts": "fill with zero after country-year panel alignment",
+  "infinite_sport_shares": "replace with missing, then fill with zero",
+  "negative_predictions": "clip at zero",
+  "generated_result": "../analysis/results/summary.json"
+}

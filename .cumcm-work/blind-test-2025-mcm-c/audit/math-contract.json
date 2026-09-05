@@ -1,0 +1,51 @@
+{
+  "symbols": [
+    {
+      "name": "L^T_{i,t}",
+      "definition_pattern": "记最近一届总牌和金牌为\\s*\\$L\\^T_\\{i,t\\}\\$",
+      "use_pattern": "L\\^T_\\{i,t\\}"
+    }
+  ],
+  "units": [
+    {
+      "name": "medal_count",
+      "manuscript_patterns": ["124\\.27\\s*枚", "5\\.08\\s*个国家"],
+      "forbidden_patterns": ["124\\.27\\s*(?:cm|厘米)"]
+    }
+  ],
+  "objectives": [
+    {
+      "name": "rolling_mae_selection",
+      "manuscript_patterns": ["平均绝对误差", "候选方案相对持续性基线的综合值低于\\s*0\\.98"],
+      "code_path": "../analysis/model_pipeline.py",
+      "code_patterns": ["mean_absolute_error\\(actual, pred\\)"]
+    }
+  ],
+  "constraints": [
+    {
+      "name": "gold_not_above_total",
+      "manuscript_patterns": ["金牌不超过总牌"],
+      "code_path": "../analysis/model_pipeline.py",
+      "code_patterns": ["forecast\\[\"pred_gold\"\\]\\s*=\\s*np\\.minimum\\(forecast\\.pred_gold,\\s*forecast\\.pred_total\\)"]
+    }
+  ],
+  "code_map": [
+    {
+      "name": "rolling_validation",
+      "manuscript_patterns": ["每次验证只用目标届以前的样本训练"],
+      "code_path": "../analysis/model_pipeline.py",
+      "code_patterns": ["def\\s+rolling_validation\\(", "train\\s*=\\s*model_panel\\.loc\\[\\(model_panel\\.Year\\s*<\\s*val_year\\)"]
+    }
+  ],
+  "rechecks": [
+    {
+      "name": "expected_first_medal_countries",
+      "source": "../analysis/results/first_medal_probabilities.csv",
+      "csv_column": "probability",
+      "operation": "sum",
+      "expected": 5.0781,
+      "tolerance": 0.000001,
+      "manuscript_literal": "5.0781"
+    }
+  ]
+}

@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "8eccfe0249291e20e12cec7fc0580b0d72eaeb1e31e05b68da6c91da54448464",
+    "before_sha256": "8eccfe0249291e20e12cec7fc0580b0d72eaeb1e31e05b68da6c91da54448464"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "80e433938f3efce277513379ba4f462e37bb4467ceda2604a065d9dddfad8dab",
+  "chunk_binding_sha256": "e274d81a149b5d1ab61fd2025d2df452f41cd4dfc6435d38c61a1d929c5b3345",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-70772ee7e6a7.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "1e303fee24aa0d0c06621e6e17797f11a9c8cf1d6bcbaf60ee13e7c80f71be24",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 4,
+        "id": "S1",
+        "sha256": "af5c9728eeee40b98037498bdf998b79bc84aee1a95bc39313dc31055fb9806a",
+        "start_line": 2
+      }
+    ],
+    "reason": "长期行为评价区分营养级映射和河段阈值，原段承担适用范围限定。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "2f177eadfc1ecaab0e0a32c096d6f6dd8957aecae54d854a23d35fd41e10e10e",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-70772ee7e6a7"
+}

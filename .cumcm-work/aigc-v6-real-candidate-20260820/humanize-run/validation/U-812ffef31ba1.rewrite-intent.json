@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "568148e35af00f966df43ccd17114c03c50cee114bf2a57d77e35a247282c05d",
+    "before_sha256": "568148e35af00f966df43ccd17114c03c50cee114bf2a57d77e35a247282c05d"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "0dc760602d32672bf1c8f256b354a7693d4ca263253e323499387543646e0ad9",
+  "chunk_binding_sha256": "792edf16b2e1b60d9b97d758f19f67d795b3defd33c0ad832a994b32d5d2fea0",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-812ffef31ba1.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "ef8edb7a87a7bc564a9d43444250d59783186851cc1b393e3c97ad4c0efb8470",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 23,
+        "id": "S1",
+        "sha256": "6f972f1e8de7ff380bd26383c07bce4f182ea9894a2beab4aadf7680107a7f53",
+        "start_line": 2
+      }
+    ],
+    "reason": "问题三结果按时间窗、统计表和轨道解释展开，现有顺序承担数值比较职责。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "d1062cddeae9179d4fd5d446671d427c45ce73153fa69a1f3867286c7388c2f6",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-812ffef31ba1"
+}

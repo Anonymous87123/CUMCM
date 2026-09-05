@@ -1,0 +1,31 @@
+\subsection{求解与结果}
+参数 $K$ 表示三级食物链的综合承载条件。固定当前参数组并取代表点后，$K\approx 1.8$ 附近对应规则有界振荡，$K\approx 2.7$ 附近对应明显周期振荡；更高 $K$ 下轨道会呈现更不规则的波动，但严格的混沌识别留到问题四通过最大李雅普诺夫指数完成。后期统计量统一在积分后期时间窗 $t\in[90,180]$ 上提取，包括 $X_1$ 的峰谷差 $\Delta X_1$、平均峰间隔 $\bar T$ 和峰间隔变异系数 $\mathrm{CV}_T$，如表 \ref{tab:q3traj} 所示。
+
+统计量限定在积分后期时间窗内计算，以滤除初值诱发的瞬态影响。由此得到的 $\sigma(X_1)$、$\Delta X_1$ 与 $\mathrm{CV}_T$ 才能用于不同 $K$ 之间的轨道比较。
+
+\begin{table}[htbp]
+\centering
+\caption{问题三代表轨道的积分后期描述量}
+\label{tab:q3traj}
+\small
+\begin{tabularx}{0.95\textwidth}{>{\raggedright\arraybackslash}p{2.9cm} >{\centering\arraybackslash}p{1.2cm} >{\centering\arraybackslash}p{1.4cm} >{\centering\arraybackslash}p{1.4cm} >{\centering\arraybackslash}p{1.3cm} >{\centering\arraybackslash}p{1.5cm} >{\centering\arraybackslash}p{1.4cm}}
+\toprule
+类型 & $K$ & $\sigma(X_1)$ & $\Delta X_1$ & $N_{\text{peak}}$ & $\bar T$ & $\mathrm{CV}_T$ \\
+\midrule
+规则有界振荡 & 1.795 & 0.261 & 0.991 & 4 & 20.720 & 0.004 \\
+明显周期振荡 & 2.665 & 0.502 & 2.092 & 3 & 34.178 & 0.014 \\
+复杂非线性波动 & 4.800 & 0.885 & 4.093 & 13 & 4.298 & 2.746 \\
+\bottomrule
+\end{tabularx}
+\normalsize
+\end{table}
+
+随着 $K$ 增大，$X_1$ 的标准差由 0.261 升至 0.885，峰谷差由 0.991 扩大到 4.093，而峰间隔变异系数由 0.004 升至 2.746，说明系统从规则振荡逐步走向更复杂的长期行为。第三行仅作为复杂非线性波动样本展示，不在问题三中单独给出混沌判断；相关判据仍由问题四的李雅普诺夫扫描提供。图 \ref{fig:q3} 给出三类代表轨道。
+
+\begin{figure}[htbp]
+\centering
+\includegraphics[width=0.96\textwidth]{fig03_q3_hastings_powell.png}
+\caption{问题三代表轨道示意}
+\label{fig:q3}
+\end{figure}
+

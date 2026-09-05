@@ -1,0 +1,374 @@
+{
+  "artifact": {
+    "after_sha256": "c6c926bf6f3a9f9f1566c34362c34171bffb6d5d172ff1c42c1b2c2eabd0107f",
+    "before_sha256": "9191f6c40d7e5741f32c2e937f11581b46c49f91582de8d5d39a88761c9a2f6c"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "226fdbcab620685e35dd3f6abbf6e160a957ea66b9010c7894c91a4ecc1ce29f",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "tex",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "RESEARCH",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_NEGATION_CHANGED",
+      "details": {
+        "after": {
+          "不能": 1,
+          "无": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0002",
+            "column": 82,
+            "end": 83,
+            "end_column": 84,
+            "end_line": 1,
+            "line": 1,
+            "marker": "不能",
+            "sentence_context": "实际后果不能只由映射本身推出，先检查最简单的可精确验证情形",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 81
+          },
+          {
+            "category": "negation",
+            "claim_id": "C0007",
+            "column": 164,
+            "end": 164,
+            "end_column": 165,
+            "end_line": 1,
+            "line": 1,
+            "marker": "无",
+            "sentence_context": "F1 是对角椭球型函数，其 Hessian 呈严格对角形，因此每个组的条件数恰好等于组内最大与最小曲率尺度之比，无需任何采样近似",
+            "sentence_id": "T0003",
+            "side": "after",
+            "start": 163
+          }
+        ],
+        "before": {
+          "无": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "negation",
+            "claim_id": "C0007",
+            "column": 188,
+            "end": 188,
+            "end_column": 189,
+            "end_line": 1,
+            "line": 1,
+            "marker": "无",
+            "sentence_context": "F1 是对角椭球型函数，其 Hessian 呈严格对角形，因此每个组的条件数恰好等于组内最大与最小曲率尺度之比，无需任何采样近似",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 187
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "不能": 1
+          },
+          "removed": {}
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "不能": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0002",
+                "column": 82,
+                "end": 83,
+                "end_column": 84,
+                "end_line": 1,
+                "line": 1,
+                "marker": "不能",
+                "sentence_context": "实际后果不能只由映射本身推出，先检查最简单的可精确验证情形",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 81
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [],
+            "removed": {},
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'negation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "464dae374c8c2e5a247ce807727a30c194c0fd4fa36a1013e6357f75e64a4377"
+    },
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "仅": 2,
+          "只": 1,
+          "可": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0002",
+            "column": 84,
+            "end": 84,
+            "end_column": 85,
+            "end_line": 1,
+            "line": 1,
+            "marker": "只",
+            "sentence_context": "实际后果不能只由映射本身推出，先检查最简单的可精确验证情形",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 83
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0003",
+            "column": 100,
+            "end": 100,
+            "end_column": 101,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可",
+            "sentence_context": "实际后果不能只由映射本身推出，先检查最简单的可精确验证情形",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 99
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0009",
+            "column": 215,
+            "end": 215,
+            "end_column": 216,
+            "end_line": 1,
+            "line": 1,
+            "marker": "仅",
+            "sentence_context": "表~ 汇总了在目标函数完全固定的前提下，仅改变分组所产生的条件数与终点差异",
+            "sentence_id": "T0004",
+            "side": "after",
+            "start": 214
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0011",
+            "column": 250,
+            "end": 250,
+            "end_column": 251,
+            "end_line": 1,
+            "line": 1,
+            "marker": "仅",
+            "sentence_context": "为紧凑起见，condition 列仅报告各诱导子问题条件数的均值",
+            "sentence_id": "T0005",
+            "side": "after",
+            "start": 249
+          }
+        ],
+        "before": {
+          "仅": 2,
+          "可": 2,
+          "需要": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0002",
+            "column": 108,
+            "end": 108,
+            "end_column": 109,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可",
+            "sentence_context": "前文在数学层面建立了 的映射（式~ -- ），但这一映射是否在实际优化中产生可观测的后果，需要从最简单的可精确验证情形开始",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 107
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0003",
+            "column": 115,
+            "end": 116,
+            "end_column": 117,
+            "end_line": 1,
+            "line": 1,
+            "marker": "需要",
+            "sentence_context": "前文在数学层面建立了 的映射（式~ -- ），但这一映射是否在实际优化中产生可观测的后果，需要从最简单的可精确验证情形开始",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 114
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0003",
+            "column": 122,
+            "end": 122,
+            "end_column": 123,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可",
+            "sentence_context": "前文在数学层面建立了 的映射（式~ -- ），但这一映射是否在实际优化中产生可观测的后果，需要从最简单的可精确验证情形开始",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 121
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0009",
+            "column": 239,
+            "end": 239,
+            "end_column": 240,
+            "end_line": 1,
+            "line": 1,
+            "marker": "仅",
+            "sentence_context": "表~ 汇总了在目标函数完全固定的前提下，仅改变分组所产生的条件数与终点差异",
+            "sentence_id": "T0003",
+            "side": "before",
+            "start": 238
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0011",
+            "column": 274,
+            "end": 274,
+            "end_column": 275,
+            "end_line": 1,
+            "line": 1,
+            "marker": "仅",
+            "sentence_context": "为紧凑起见，condition 列仅报告各诱导子问题条件数的均值",
+            "sentence_id": "T0004",
+            "side": "before",
+            "start": 273
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "只": 1
+          },
+          "removed": {
+            "可": 1,
+            "需要": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "只": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 84,
+                "end": 84,
+                "end_column": 85,
+                "end_line": 1,
+                "line": 1,
+                "marker": "只",
+                "sentence_context": "实际后果不能只由映射本身推出，先检查最简单的可精确验证情形",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 83
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0003",
+                "column": 100,
+                "end": 100,
+                "end_column": 101,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "实际后果不能只由映射本身推出，先检查最简单的可精确验证情形",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 99
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0002",
+                "column": 108,
+                "end": 108,
+                "end_column": 109,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "前文在数学层面建立了 的映射（式~ -- ），但这一映射是否在实际优化中产生可观测的后果，需要从最简单的可精确验证情形开始",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 107
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0003",
+                "column": 115,
+                "end": 116,
+                "end_column": 117,
+                "end_line": 1,
+                "line": 1,
+                "marker": "需要",
+                "sentence_context": "前文在数学层面建立了 的映射（式~ -- ），但这一映射是否在实际优化中产生可观测的后果，需要从最简单的可精确验证情形开始",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 114
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0003",
+                "column": 122,
+                "end": 122,
+                "end_column": 123,
+                "end_line": 1,
+                "line": 1,
+                "marker": "可",
+                "sentence_context": "前文在数学层面建立了 的映射（式~ -- ），但这一映射是否在实际优化中产生可观测的后果，需要从最简单的可精确验证情形开始",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 121
+              }
+            ],
+            "removed": {
+              "可": 1,
+              "需要": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "9175a220c7473917f8b2d38e50b61516db96b16db33d5262a694c7a1c26878cd"
+    }
+  ]
+}

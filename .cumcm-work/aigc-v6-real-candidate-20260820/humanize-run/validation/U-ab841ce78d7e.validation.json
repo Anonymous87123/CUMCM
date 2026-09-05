@@ -1,0 +1,834 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "candidate_assembly_exit_code": 0,
+  "candidate_assembly_status": "PASS",
+  "delivery_gate_exit_code": 2,
+  "delivery_gate_status": "REVIEW",
+  "draft_surface_source_check": {
+    "details": {},
+    "scope": [],
+    "semantic_entailment_certified": false,
+    "status": "N/A"
+  },
+  "evidence": {
+    "after_path": "validation/U-ab841ce78d7e.after.tex",
+    "after_sha256": "94f044f0cd4480908be43a258567d6c869981e5478566aaa17bb389d5345b8cc",
+    "before_path": "validation/U-ab841ce78d7e.before.tex",
+    "before_sha256": "981e2b6b27d1f1d0fb3c978b7e99a9f7e16bc43a0f58459ef7e83e40218931ce",
+    "checker_executed": true,
+    "document_format": "tex",
+    "document_scope": "FRAGMENT",
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "03ba9601430e17a4c71cb21f9134e69273284d4dc15295cbfb3235737ed778bd",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "source_path_archived": false
+  },
+  "exit_code": 2,
+  "hard_invariant_layer_status": "PASS",
+  "humanize_quality_claim_allowed": false,
+  "introduced_findings": [],
+  "invariants": {
+    "advisories": [],
+    "errors": [],
+    "evidence": {
+      "document_scope": "FRAGMENT",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "speech_act_audit": {
+        "categories": {
+          "assumption": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "attribution_source": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "condition": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "definition_naming": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "focus_scope": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "logical_relation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "modality_scope": {
+            "after": {
+              "仅": 1,
+              "可能": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0025",
+                "column": 144,
+                "end": 739,
+                "end_column": 146,
+                "end_line": 17,
+                "line": 17,
+                "marker": "可能",
+                "sentence_context": "低于湖北江段实测的2.2倍，则反映出局地高捕捞效率条件下资源增幅可能更为显著",
+                "sentence_id": "T0019",
+                "side": "after",
+                "start": 737
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0028",
+                "column": 50,
+                "end": 796,
+                "end_column": 51,
+                "end_line": 19,
+                "line": 19,
+                "marker": "仅",
+                "sentence_context": "从动态过程来看，禁渔情景下四大家鱼总量与 同步上升，但基础资源末值仅为初始值的0.204倍，且水草生物量最小值出现在禁渔第10年，说明鱼类资源恢复并未随基础资源状况一同改善",
+                "sentence_id": "T0020",
+                "side": "after",
+                "start": 795
+              }
+            ],
+            "before": {
+              "仅": 1,
+              "可能": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0025",
+                "column": 144,
+                "end": 739,
+                "end_column": 146,
+                "end_line": 17,
+                "line": 17,
+                "marker": "可能",
+                "sentence_context": "低于湖北江段实测的2.2倍，则反映出局地高捕捞效率条件下资源增幅可能更为显著",
+                "sentence_id": "T0019",
+                "side": "before",
+                "start": 737
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0028",
+                "column": 50,
+                "end": 796,
+                "end_column": 51,
+                "end_line": 19,
+                "line": 19,
+                "marker": "仅",
+                "sentence_context": "从动态过程来看，禁渔情景下四大家鱼总量与 同步上升，但基础资源末值仅为初始值的0.204倍，且水草生物量最小值出现在禁渔第10年，说明鱼类资源恢复并未同步改善基础资源状况",
+                "sentence_id": "T0020",
+                "side": "before",
+                "start": 795
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "negation": {
+            "after": {
+              "不": 2,
+              "无": 1,
+              "未": 1
+            },
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0020",
+                "column": 29,
+                "end": 623,
+                "end_column": 30,
+                "end_line": 17,
+                "line": 17,
+                "marker": "不",
+                "sentence_context": "尽管统计口径不同，二者均证实了禁渔后的资源回升趋势：四大家鱼总生物量与1.8倍的标定值几乎完全吻合，表明单区模型能够准确刻画全流域平均恢复水平",
+                "sentence_id": "T0018",
+                "side": "after",
+                "start": 622
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0030",
+                "column": 91,
+                "end": 837,
+                "end_column": 92,
+                "end_line": 19,
+                "line": 19,
+                "marker": "未",
+                "sentence_context": "从动态过程来看，禁渔情景下四大家鱼总量与 同步上升，但基础资源末值仅为初始值的0.204倍，且水草生物量最小值出现在禁渔第10年，说明鱼类资源恢复并未随基础资源状况一同改善",
+                "sentence_id": "T0020",
+                "side": "after",
+                "start": 836
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0034",
+                "column": 176,
+                "end": 922,
+                "end_column": 177,
+                "end_line": 19,
+                "line": 19,
+                "marker": "不",
+                "sentence_context": "0.204与 均为归一化单区系统中的相对指标，不直接对应全流域实际生物量或能量金字塔的绝对比例",
+                "sentence_id": "T0022",
+                "side": "after",
+                "start": 921
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0036",
+                "column": 232,
+                "end": 978,
+                "end_column": 233,
+                "end_line": 19,
+                "line": 19,
+                "marker": "无",
+                "sentence_context": "的持续上升与基础资源的大幅下降共同表明，资源供给已无法满足消费者种群的快速增长",
+                "sentence_id": "T0023",
+                "side": "after",
+                "start": 977
+              }
+            ],
+            "before": {
+              "不": 2,
+              "无": 1,
+              "未": 1
+            },
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0020",
+                "column": 29,
+                "end": 623,
+                "end_column": 30,
+                "end_line": 17,
+                "line": 17,
+                "marker": "不",
+                "sentence_context": "尽管统计口径不同，二者均证实了禁渔后的资源回升趋势：四大家鱼总生物量与1.8倍的标定值几乎完全吻合，表明单区模型能够准确刻画全流域平均恢复水平",
+                "sentence_id": "T0018",
+                "side": "before",
+                "start": 622
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0030",
+                "column": 91,
+                "end": 837,
+                "end_column": 92,
+                "end_line": 19,
+                "line": 19,
+                "marker": "未",
+                "sentence_context": "从动态过程来看，禁渔情景下四大家鱼总量与 同步上升，但基础资源末值仅为初始值的0.204倍，且水草生物量最小值出现在禁渔第10年，说明鱼类资源恢复并未同步改善基础资源状况",
+                "sentence_id": "T0020",
+                "side": "before",
+                "start": 836
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0035",
+                "column": 182,
+                "end": 928,
+                "end_column": 183,
+                "end_line": 19,
+                "line": 19,
+                "marker": "不",
+                "sentence_context": "需要说明的是，0.204与 均为归一化单区系统中的相对指标，不直接对应全流域实际生物量或能量金字塔的绝对比例",
+                "sentence_id": "T0022",
+                "side": "before",
+                "start": 927
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0037",
+                "column": 238,
+                "end": 984,
+                "end_column": 239,
+                "end_line": 19,
+                "line": 19,
+                "marker": "无",
+                "sentence_context": "的持续上升与基础资源的大幅下降共同表明，资源供给已无法满足消费者种群的快速增长",
+                "sentence_id": "T0023",
+                "side": "before",
+                "start": 983
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "reporting_observation": {
+            "after": {
+              "表明": 3
+            },
+            "after_occurrences": [
+              {
+                "category": "reporting_observation",
+                "claim_id": "C0023",
+                "column": 73,
+                "end": 668,
+                "end_column": 75,
+                "end_line": 17,
+                "line": 17,
+                "marker": "表明",
+                "sentence_context": "尽管统计口径不同，二者均证实了禁渔后的资源回升趋势：四大家鱼总生物量与1.8倍的标定值几乎完全吻合，表明单区模型能够准确刻画全流域平均恢复水平",
+                "sentence_id": "T0018",
+                "side": "after",
+                "start": 666
+              },
+              {
+                "category": "reporting_observation",
+                "claim_id": "C0032",
+                "column": 126,
+                "end": 873,
+                "end_column": 128,
+                "end_line": 19,
+                "line": 19,
+                "marker": "表明",
+                "sentence_context": "摄食压力指数从初始水平持续攀升至4.213，表明鱼群恢复程度与基础资源承压强度呈正相关",
+                "sentence_id": "T0021",
+                "side": "after",
+                "start": 871
+              },
+              {
+                "category": "reporting_observation",
+                "claim_id": "C0035",
+                "column": 224,
+                "end": 971,
+                "end_column": 226,
+                "end_line": 19,
+                "line": 19,
+                "marker": "表明",
+                "sentence_context": "的持续上升与基础资源的大幅下降共同表明，资源供给已无法满足消费者种群的快速增长",
+                "sentence_id": "T0023",
+                "side": "after",
+                "start": 969
+              }
+            ],
+            "before": {
+              "表明": 3
+            },
+            "before_occurrences": [
+              {
+                "category": "reporting_observation",
+                "claim_id": "C0023",
+                "column": 73,
+                "end": 668,
+                "end_column": 75,
+                "end_line": 17,
+                "line": 17,
+                "marker": "表明",
+                "sentence_context": "尽管统计口径不同，二者均证实了禁渔后的资源回升趋势：四大家鱼总生物量与1.8倍的标定值几乎完全吻合，表明单区模型能够准确刻画全流域平均恢复水平",
+                "sentence_id": "T0018",
+                "side": "before",
+                "start": 666
+              },
+              {
+                "category": "reporting_observation",
+                "claim_id": "C0032",
+                "column": 125,
+                "end": 872,
+                "end_column": 127,
+                "end_line": 19,
+                "line": 19,
+                "marker": "表明",
+                "sentence_context": "摄食压力指数从初始水平持续攀升至4.213，表明鱼群恢复程度与基础资源承压强度呈正相关",
+                "sentence_id": "T0021",
+                "side": "before",
+                "start": 870
+              },
+              {
+                "category": "reporting_observation",
+                "claim_id": "C0036",
+                "column": 230,
+                "end": 977,
+                "end_column": 232,
+                "end_line": 19,
+                "line": 19,
+                "marker": "表明",
+                "sentence_context": "的持续上升与基础资源的大幅下降共同表明，资源供给已无法满足消费者种群的快速增长",
+                "sentence_id": "T0023",
+                "side": "before",
+                "start": 975
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          }
+        },
+        "claim_pairing": {
+          "after_claims": 44,
+          "before_claims": 45,
+          "unique_exact_pairs": 41,
+          "unpaired_after_claims": 3,
+          "unpaired_before_claims": 4
+        },
+        "protection": {
+          "after_ranges": 11,
+          "before_ranges": 11,
+          "line_column_basis": "NORMALIZED_LF_1_BASED_UNICODE_CODEPOINT",
+          "masking": "LENGTH_PRESERVING"
+        }
+      }
+    },
+    "hard_failure": false,
+    "status": "pass",
+    "summary": {
+      "advisories": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    "warnings": []
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 2,
+    "introduced_candidates": 0,
+    "unexplained_high_candidates": 0
+  },
+  "mechanical_validation_exit_code": 0,
+  "mechanical_validation_status": "PASS",
+  "mode": "REWRITE",
+  "paired_quality_clearance_granted": false,
+  "paired_quality_review_local_clearance_supported": false,
+  "paired_quality_review_request": {
+    "artifact": {
+      "after_sha256": "94f044f0cd4480908be43a258567d6c869981e5478566aaa17bb389d5345b8cc",
+      "before_sha256": "981e2b6b27d1f1d0fb3c978b7e99a9f7e16bc43a0f58459ef7e83e40218931ce"
+    },
+    "changes": [
+      {
+        "after": {
+          "end_line": 19,
+          "han_chars": 244,
+          "line_count": 1,
+          "sha256": "309b329158823940f852df2e88700a9de7f8d2fc3279b098c582952517239c46",
+          "start_line": 19
+        },
+        "before": {
+          "end_line": 19,
+          "han_chars": 249,
+          "line_count": 1,
+          "sha256": "047be946eb848d10cd306292aab548a8f57214dc74756407789ae6e3014f68e2",
+          "start_line": 19
+        },
+        "change_id": "QCH-4e4e234b0c79869a17c8",
+        "operation": "REPLACE",
+        "ordinal": 1
+      }
+    ],
+    "limitations": {
+      "academic_correctness": "NOT_EVALUATED",
+      "authorship": "NOT_EVALUATED",
+      "quality_clearance_granted": false
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "03ba9601430e17a4c71cb21f9134e69273284d4dc15295cbfb3235737ed778bd",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "request_sha256": "58b75b0f28dfabe8bb5e6846c5df8f8441fde52b09cff7aaf0b1f4355caad65c",
+    "review_contract": {
+      "empty_or_generic_benefit_is_clearance": false,
+      "local_model_or_caller_assertion_is_clearance": false,
+      "required_dimensions": [
+        "actionable_pathology_remaining",
+        "no_change_is_best_available_decision",
+        "problem_span_binding",
+        "independent_reading_benefit",
+        "subject_and_modifier_alignment",
+        "verb_object_collocation",
+        "logical_relation_preservation",
+        "template_field_role_and_authorization",
+        "information_density_and_rhythm",
+        "author_voice_non_regression"
+      ],
+      "required_per_change_verdicts": [
+        "ACCEPT",
+        "REVISE",
+        "REVERT"
+      ],
+      "validator_pass_is_quality_clearance": false
+    },
+    "schema": "humanize-paired-quality-review-request/v1",
+    "status": "PENDING_EXTERNAL_REVIEW",
+    "template_field_changes": [],
+    "validation_context": {
+      "artifact_relation": "CHANGED",
+      "decision": "REWRITE",
+      "decision_eligible": true,
+      "document_format": "tex",
+      "document_scope": "FRAGMENT",
+      "mechanical_validation_status": "PASS",
+      "mode": "REWRITE",
+      "scene": "MODELING"
+    }
+  },
+  "paired_quality_review_status": "PENDING_EXTERNAL_REVIEW",
+  "paired_style_delta_findings": [],
+  "paired_style_delta_layer_status": "NOT_APPLICABLE",
+  "paired_style_delta_summary": {
+    "authorship_inference": false,
+    "finding_count": 0,
+    "scope": "PAIRED_COURSE_VOICE_NON_REGRESSION_CANDIDATE",
+    "status": "NOT_APPLICABLE"
+  },
+  "pending_warnings": [],
+  "proposed_warning_resolutions": [],
+  "report_scope_check": {
+    "editable_range_count": 0,
+    "editable_ranges": [],
+    "extractor_replay_match": null,
+    "fragment_count": 0,
+    "outside_selection_unchanged": null,
+    "report_sha256": null,
+    "scope_path": null,
+    "scope_semantic_sha256": null,
+    "scope_sha256": null,
+    "source_sha256": null,
+    "status": "N/A"
+  },
+  "review_reasons": [
+    "paired_quality_not_evaluated"
+  ],
+  "scene": "MODELING",
+  "semantic_source_check": "N/A",
+  "speech_act_diagnostics": [],
+  "speech_act_layer_status": "PASS",
+  "status": "REVIEW",
+  "strict_corpus_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 1,
+    "clean_allowed_by_strict_layer": true,
+    "enabled": true,
+    "no_change_allowed": true,
+    "unexplained_candidates": 0
+  },
+  "structural_plan_check": {
+    "actual_content_changed": true,
+    "change_applied": false,
+    "invariant_baseline_sha256": "854c7e57a3f9b4b697007bd1fa6c213592fd9b572db2ad870b992f2731142c65",
+    "limitations": "non-STRUCTURAL run",
+    "non_structural_paragraph_order_check": {
+      "author_paragraphs_after": 3,
+      "author_paragraphs_before": 3,
+      "authorized_topology_operations": 0,
+      "detected_paragraph_merges": [],
+      "detected_paragraph_splits": [],
+      "light_sentence_reorder": false,
+      "match_evidence": [
+        {
+          "after_index": 0,
+          "before_index": 0,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00227"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 1,
+          "before_index": 1,
+          "before_sha256": "b6fff706dfe227c53dfb2eee634b8716cc0a9762c054f9a1e48ed797aef6b800",
+          "kind": "AUTHOR",
+          "method": "EXACT",
+          "protected_ids": [],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 2,
+          "before_index": 2,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00230"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 3,
+          "before_index": 3,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00231"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 4,
+          "before_index": 4,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00232"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 5,
+          "before_index": 5,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00233"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 6,
+          "before_index": 6,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00234"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 7,
+          "before_index": 7,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00235"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 8,
+          "before_index": 8,
+          "before_sha256": "7363801df35edd51523fcd90397ad2f5907baa5fe9ff02725717e11ca86a801c",
+          "kind": "AUTHOR",
+          "method": "EXACT",
+          "protected_ids": [],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 9,
+          "before_index": 9,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00237"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 10,
+          "before_index": 10,
+          "before_sha256": "d94313539cc2b0d9e2ca00c754b3c3b05040293b58c6efdc865fee63ece99630",
+          "kind": "AUTHOR",
+          "method": "EXACT",
+          "protected_ids": [],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 11,
+          "before_index": 11,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00243"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 12,
+          "before_index": 12,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00244"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 13,
+          "before_index": 13,
+          "before_sha256": "",
+          "kind": "PROTECTED",
+          "method": "EXACT",
+          "protected_ids": [
+            "F00001-P00245"
+          ],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 14,
+          "before_index": 14,
+          "before_sha256": "4432810994abf777352fd52220340b83eb72ea2894f3c3ca17166cb56679a760",
+          "kind": "AUTHOR",
+          "method": "EXACT",
+          "protected_ids": [],
+          "similarity": 1.0
+        },
+        {
+          "after_index": 15,
+          "before_index": 15,
+          "before_sha256": "093a325527df8a9f0511f7320c2475fa11ad2c87008ff68b0169b5b3f5388544",
+          "kind": "AUTHOR",
+          "method": "NEAR_EXACT",
+          "protected_ids": [],
+          "similarity": 0.981087
+        }
+      ],
+      "matched_author_paragraphs": 5,
+      "matched_elements": 22,
+      "matched_protected_anchors": 17,
+      "moved_paragraph_sha256": [],
+      "near_exact_reordered": false,
+      "paragraph_topology_changed": false,
+      "protected_anchor_reordered": false,
+      "reordered": false,
+      "scope": "NON_STRUCTURAL_PARAGRAPH_TOPOLOGY_AND_ORDER",
+      "status": "PASS",
+      "topology_authorization_error": "",
+      "topology_authorization_status": "NOT_REQUIRED",
+      "topology_operation_evidence": []
+    },
+    "semantic_review_status": "NOT_ISSUED",
+    "status": "NOT_APPLICABLE"
+  },
+  "style_signal_layer_status": "PASS",
+  "template_field_edit_scope_check": {
+    "authorized_edit_count": 0,
+    "authorized_edits": [],
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "provided": false,
+    "schema_version": null,
+    "scope_sha256": null,
+    "source_sha256": "981e2b6b27d1f1d0fb3c978b7e99a9f7e16bc43a0f58459ef7e83e40218931ce",
+    "status": "N/A"
+  },
+  "template_field_findings": [],
+  "template_field_layer_status": "PASS",
+  "template_field_summary": {
+    "authorized_edit_count": 0,
+    "finding_count": 0,
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "review_finding_count": 0,
+    "status": "PASS"
+  },
+  "unaccepted_warnings": [],
+  "unexplained_high_findings": [],
+  "unexplained_strict_findings": [],
+  "warning_proposal_state": {
+    "attestation_status": "NOT_PROVIDED",
+    "cross_record_reviewer_linkability": "NOT_RECORDED",
+    "identity_verified": false,
+    "proposal_source": "NOT_PROVIDED",
+    "proposed_warning_fingerprints": [],
+    "review_clearance_granted": false,
+    "reviewer_identifier_collected": false,
+    "stable_reviewer_pseudonym_recorded": false,
+    "warning_review_request_sha256": null
+  },
+  "warning_resolutions": {},
+  "warning_review_request": null,
+  "warnings_without_resolution_proposal": []
+}

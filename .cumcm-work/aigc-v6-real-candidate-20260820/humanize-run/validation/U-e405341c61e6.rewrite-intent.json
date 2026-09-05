@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "2b1199af3d39741911b65ea76e22cb88ee38f0d240b7a083782b4dcdfb0ca7c3",
+    "before_sha256": "2b1199af3d39741911b65ea76e22cb88ee38f0d240b7a083782b4dcdfb0ca7c3"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "9c0f6c2e1500af53b907d202378591d0ad6984ca887a6a473a7fd38180ed8257",
+  "chunk_binding_sha256": "89c40c9dabc580171cb499701b760f52b6961736f74213238b6c98c6022cf2a6",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-e405341c61e6.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "40868d4b512f072026f68fdae32f20216a9378cbb504cf0015dfb6a5207aa4b0",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 22,
+        "id": "S1",
+        "sha256": "a2dda6cec48a9d2c041bce249d23d0dde40b82baec5c6cdacb6e840e3a2faf98",
+        "start_line": 2
+      }
+    ],
+    "reason": "敏感性段落紧邻参数表解释响应对象和幅度，现有结构承担数值结果读取。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "50cc21a6b587a659992e4b517c56c788c71dd6c10e81daeef2ba5fd1938c077e",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-e405341c61e6"
+}

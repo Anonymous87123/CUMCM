@@ -1,0 +1,111 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-c530201b41a9",
+  "chunk_binding_sha256": "c1081574d47b068444274d0ebd59f0225d9d152e891b025a4badc9a089826c92",
+  "decision": "REWRITE",
+  "voice_profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "842ae235d7ee9818",
+    "prepare_integrity_sha256": "95a9f9bd3349d3e3b19c9894822cd0006b7dceaf13e3f15289f22f530fa6e3e1",
+    "run_metadata_sha256": "3d0c006231a948ab025cd9016f5af0a745b8e7a0f77be54a018cfd81fc0f2137",
+    "policy_snapshot_sha256": "d8043a6b25776c8e16b2c0324b17655684d5585cccd37fc5f4e585db78fd6da9",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "unit_id": "U-c530201b41a9",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 3036,
+      "end": 3414,
+      "start_line": 56,
+      "end_line": 60,
+      "source_span_sha256": "4e6042c171e7f2d38f5648fc2340249fff711739bd9ede2fe2bcb98029d2054e",
+      "masked_text_sha256": "0230f52d8c81395a3366332bae876871e738a5b76d18534d02f276f7ead2c974",
+      "chunk_binding_sha256": "c1081574d47b068444274d0ebd59f0225d9d152e891b025a4badc9a089826c92"
+    },
+    "scene_route": {
+      "requested_scene": "MODELING",
+      "resolved_scene": "MODELING",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "665fdb7b62a4f341651cd02782096f1b21653f79c2c6ece467aa12ce8ebc034b",
+      "routing_input_sha256": "19968531b8c5f570d53d9fd794cc07ffba225beead69241bbfd89b1b9ff2dbf9"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-modeling",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "MODELING",
+      "profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "4d2a002b9862df7f3501c602c1da0839e5ae7e7a25fcb4d741cfd5a8e721fdc6"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "masked_text": "[[PROTECTED:F00001-P00051:339f7e013385]]\n2025年的1.8倍总量即使由单一消费者模型也能拟合，问题在于这种合并会抹去[[PROTECTED:F00001-P00053:db1a17b596e9]]和[[PROTECTED:F00001-P00054:85bcf7648871]]之间的差别，也无法解释[[PROTECTED:F00001-P00055:63ff7ce174e2]]为何会与[[PROTECTED:F00001-P00052:58402c67cc2e]]同时出现。草鱼、鲢鱼、鳙鱼和青鱼所依赖的基础资源并不相同，故模型保留四组食性配对，用各自的资源轨迹判断哪一层较早承压。\n\n两类观测数据的空间口径不同：2025年四大家鱼1.8倍恢复量用于约束全流域总量，湖北江段单网次渔获量提升120[[PROTECTED:F00001-P00056:46c5de803c68]]\n\n",
+  "rewrite_intent": {
+    "summary": "依据本节事实与数值重组论述，保留已有判断节点并减少模板化衔接",
+    "operations": [
+      {
+        "id": "O1",
+        "kind": "REWRITE_MODELING_PROSE",
+        "source_span_ids": [
+          "S1"
+        ],
+        "target_signals": [
+          "SCENE-MODELING-JUDGMENT-PRESERVE",
+          "RHYTHM-VARY-SECTION-ACTION"
+        ],
+        "summary": "依据本节事实与数值重组论述，保留已有判断节点并减少模板化衔接"
+      },
+      {
+        "id": "O2",
+        "kind": "REWRITE_MODELING_PROSE",
+        "source_span_ids": [
+          "S2"
+        ],
+        "target_signals": [
+          "SCENE-MODELING-JUDGMENT-PRESERVE",
+          "RHYTHM-VARY-SECTION-ACTION"
+        ],
+        "summary": "依据本节事实与数值重组论述，保留已有判断节点并减少模板化衔接"
+      }
+    ],
+    "source_spans": [
+      {
+        "id": "S1",
+        "start_line": 2,
+        "end_line": 2,
+        "sha256": "6cd364da1cc2d4f619c7b602add344815ea6d2bcbcd3d62d70837710d6ba0715"
+      },
+      {
+        "id": "S2",
+        "start_line": 4,
+        "end_line": 4,
+        "sha256": "777b6651fb303315a98b01ad3e50a03146caa59bdc18fdcd078c322ea71005ca"
+      }
+    ],
+    "target_signals": [
+      "SCENE-MODELING-JUDGMENT-PRESERVE",
+      "RHYTHM-VARY-SECTION-ACTION"
+    ]
+  }
+}

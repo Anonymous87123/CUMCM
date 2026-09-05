@@ -1,0 +1,49 @@
+{
+  "test_id": "BTV-20260814-MCMC",
+  "run": {
+    "command": "python analysis/model_pipeline.py",
+    "python_version": "3.13.7",
+    "random_seed": 20250814,
+    "generated_at": "2026-08-14T16:52:08+08:00",
+    "data_config": "repro-config.json",
+    "packages": {
+      "numpy": "2.3.2",
+      "pandas": "2.3.2",
+      "scikit-learn": "1.7.1",
+      "matplotlib": "3.10.6"
+    },
+    "verify_runtime": false
+  },
+  "artifacts": [
+    {
+      "path": "../analysis/model_pipeline.py",
+      "sha256": "214cfc7af4489c77139f938f5e1a9922f39a05002d588ee5545fdad4ff2fe09f",
+      "role": "analysis_script"
+    },
+    {
+      "path": "../analysis/results/summary.json",
+      "sha256": "51be299f4faa941ddcd5185a84a089d519a1cdf4d60fddbaed12f0c798ba02ae",
+      "role": "result"
+    },
+    {
+      "path": "../paper/figures/validation_mae.pdf",
+      "sha256": "0b96cf659bfd36970c9be70c055b62f9848061fdaae351a5df27ce56d638c79e",
+      "role": "figure"
+    },
+    {
+      "path": "repro-config.json",
+      "sha256": "49334c719e2f4446011adbead651133358e73ebcbf22869b3d562677fd35db97",
+      "role": "data_config"
+    },
+    {
+      "path": "data_audit.json",
+      "sha256": "498801c8313632a9ca7f371a8100517130d2c287929ea2d78334c71fe2d93f48",
+      "role": "data_audit"
+    },
+    {
+      "path": "math-contract.json",
+      "sha256": "f6b72d193edc2199fb4bb843fb8b0eea0579ecf92203667a10faf0cd38746ed7",
+      "role": "audit_contract"
+    }
+  ]
+}

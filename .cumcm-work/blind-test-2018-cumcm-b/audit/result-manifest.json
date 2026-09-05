@@ -1,0 +1,40 @@
+{
+  "test_id": "BTV-20260814-CUMCMB",
+  "sources": [
+    {
+      "path": "../analysis/results/summary.json",
+      "sha256": "7f23d585c415aef4ae6563affb7b23f2dc085e20cc0a46376bd4057578238c6a"
+    },
+    {
+      "path": "../analysis/results/diagnostics.json",
+      "sha256": "ec86261345c09e6905d240ce90c82715e413b602300705f90eb25ecc465df87c"
+    },
+    {
+      "path": "../analysis/results/strategy_candidates.csv",
+      "sha256": "f2f00a001781ce2175911f2816a485c8a87dc7dcbd7e2da9c4c2e7c603be0c2d"
+    },
+    {
+      "path": "../analysis/results/failure_runs.csv",
+      "sha256": "7539d5d5aaa2f19e8532eae60853e062123fd241bae27502ba4a23434498ddef"
+    }
+  ],
+  "claims": [
+    {"id": "set1_one_stage", "literal": "356", "min_occurrences": 5},
+    {"id": "set1_two_stage", "literal": "235", "min_occurrences": 10},
+    {"id": "set3_two_stage", "literal": "239", "min_occurrences": 8},
+    {"id": "set1_failure_mean", "literal": "350.595", "min_occurrences": 3},
+    {"id": "set3_two_failure_mean", "literal": "220.990", "min_occurrences": 3},
+    {"id": "set3_allocation", "literal": "21112121", "min_occurrences": 5},
+    {
+      "id": "set1_one_busy_fraction",
+      "literal": "0.8493",
+      "min_occurrences": 1,
+      "forbidden": ["0.8507", "0.850729"]
+    },
+    {
+      "id": "set3_two_busy_fraction",
+      "literal": "0.9903",
+      "min_occurrences": 2
+    }
+  ]
+}

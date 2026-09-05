@@ -1,0 +1,19 @@
+{
+  "schema_version": 1,
+  "file": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\humanize-run\\rendered_review\\main.tex",
+  "source": {
+    "path": "F:\\CUMCM\\.cumcm-work\\aigc-v6-real-candidate-20260820\\humanize-run\\rendered_review\\main.tex",
+    "sha256": "5d5fe72a74a03a92a5a669333affc9cafe1447151440f2bcf2e3ec6b91aa8a6b"
+  },
+  "problem_type": "A",
+  "status": "PASS",
+  "errors": 0,
+  "warnings": 0,
+  "findings": [],
+  "limitations": [
+    "规则审计只检查结构和可定位写作信号，不证明模型、数据、公式或结论正确。",
+    "逐问首次方法检查只寻找公开可复核的局部依据，不要求也不能推断作者的隐藏思维链；直接列式或沿用前问的分问可以没有候选模型比较。",
+    "已声明且可解析的 .bib 会检查引用键；动态生成的章节、标签和编译期行为仍需结合最终日志核验。",
+    "训练集回代、求解后变量修改、按行号标签、模型名--拟合接口、重复特征列、预处理拟合域、首次预测调用、参数名、硬标签 AUC、嵌套极值方向、循环索引、蒙特卡洛协议、部分硬约束通过、未求解模型、经验系数和稳定性表述采用保守静态匹配，命中后仍须结合目标方向、索引角色、数据角色、库版本、单位与约束日志人工裁决。"
+  ]
+}

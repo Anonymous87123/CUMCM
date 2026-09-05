@@ -1,0 +1,125 @@
+{
+  "schema": "aigc-content-role-contracts/v1",
+  "version": 1,
+  "evidence_types": [
+    "authority-map",
+    "whole-argument-map",
+    "scene-dispatch",
+    "fact-lock",
+    "rule-findings",
+    "gate-summary",
+    "problem-fact-map",
+    "modeling-workbench",
+    "reasoning-preflight",
+    "style-retrieval-plan",
+    "section-authoring-brief",
+    "section-drafting-packets",
+    "section-drafting-usage",
+    "judgment-ledger",
+    "content-density-report",
+    "manuscript-audit",
+    "claim-ledger",
+    "parameter-ledger",
+    "protocol-ledger",
+    "equation-code-ledger",
+    "quantitative-reconciliation",
+    "novelty-ledger",
+    "claim-evidence-matrix",
+    "proof-citation-version-gates",
+    "source-segment-map",
+    "fact-symbol-lock",
+    "teaching-spine",
+    "mathematics-answer-gates",
+    "teaching-readthrough"
+  ],
+  "roles": [
+    {
+      "provider": "deai-academic-writing",
+      "scenes": ["mcm", "modeling", "research", "course-notes", "academic-mixed"],
+      "deliverables": [
+        "确定权威版本、来源身份、事实与符号锁",
+        "通读完整论证并分派唯一场景责任",
+        "按规则 ID 给出文档、论证、段落和句子层发现及最终门"
+      ],
+      "required_evidence": [
+        "authority-map",
+        "whole-argument-map",
+        "scene-dispatch",
+        "fact-lock",
+        "rule-findings",
+        "gate-summary"
+      ]
+    },
+    {
+      "provider": "mcm-cup-standard-write",
+      "scenes": ["mcm"],
+      "deliverables": [
+        "把题面事实、数据、约束、前问接口和代码结果落到真实建模路线",
+        "保留题型差异、公开可写的思考桥、获奖论文语料和内容密度",
+        "完成逐问预审、判断依据、结构、数学、结果、复现和篇幅检查"
+      ],
+      "required_evidence": [
+        "problem-fact-map",
+        "modeling-workbench",
+        "reasoning-preflight",
+        "style-retrieval-plan",
+        "section-authoring-brief",
+        "section-drafting-packets",
+        "judgment-ledger",
+        "content-density-report",
+        "manuscript-audit"
+      ]
+    },
+    {
+      "provider": "deai-modeling-writing",
+      "scenes": ["mcm", "modeling", "academic-mixed"],
+      "deliverables": [
+        "核对论断、参数、协议以及公式与代码的对应关系",
+        "区分观测、拟合、假设、仿真、推导和外部验证",
+        "完成定量对账、数值稳健性和模型代码结果门"
+      ],
+      "required_evidence": [
+        "claim-ledger",
+        "parameter-ledger",
+        "protocol-ledger",
+        "equation-code-ledger",
+        "quantitative-reconciliation",
+        "gate-summary"
+      ]
+    },
+    {
+      "provider": "deai-research-writing",
+      "scenes": ["research", "academic-mixed", "academic-en", "medical-en"],
+      "deliverables": [
+        "锁定权威版本、事实、符号、端点、预算、引文和负结果",
+        "建立创新差量和逐项论断证据矩阵",
+        "完成证明、引文对齐、版本和论断强度门"
+      ],
+      "required_evidence": [
+        "authority-map",
+        "fact-lock",
+        "novelty-ledger",
+        "claim-evidence-matrix",
+        "proof-citation-version-gates",
+        "gate-summary"
+      ]
+    },
+    {
+      "provider": "deai-course-notes",
+      "scenes": ["course-notes", "academic-mixed"],
+      "deliverables": [
+        "区分题干、OCR、官方答案、重建解答、讲解和笔记",
+        "锁定对象、定义域、分支、答案身份并突出决定性教学步骤",
+        "完成数学、来源、答案身份、教学结构和通读门"
+      ],
+      "required_evidence": [
+        "source-segment-map",
+        "fact-symbol-lock",
+        "teaching-spine",
+        "mathematics-answer-gates",
+        "teaching-readthrough",
+        "gate-summary"
+      ]
+    }
+  ]
+}

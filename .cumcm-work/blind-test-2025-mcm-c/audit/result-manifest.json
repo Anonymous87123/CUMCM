@@ -1,0 +1,71 @@
+{
+  "test_id": "BTV-20260814-MCMC",
+  "sources": [
+    {
+      "path": "../analysis/results/summary.json",
+      "sha256": "51be299f4faa941ddcd5185a84a089d519a1cdf4d60fddbaed12f0c798ba02ae"
+    },
+    {
+      "path": "../analysis/results/forecast_2028.csv",
+      "sha256": "0e2b2e55fdc9c5d8447aacd47759fae237ee02701aaea7baf2b1f9bdadf2b19a"
+    },
+    {
+      "path": "../analysis/results/first_medal_probabilities.csv",
+      "sha256": "135a3ec715bc345a9d937d3d901586f36b7cb5d0ebf6e24d4ad4ca7bab88fc64"
+    },
+    {
+      "path": "../analysis/results/coach_investment_candidates.csv",
+      "sha256": "b47453904fb7dbeca53b2d59d9b7ac589112e44cf50e769f9ac26a249881bf9a"
+    }
+  ],
+  "claims": [
+    {
+      "id": "first_medal_expected",
+      "literal": "5.08",
+      "min_occurrences": 4,
+      "forbidden": ["5.89"]
+    },
+    {
+      "id": "first_medal_interval",
+      "literal": "2--9",
+      "min_occurrences": 3,
+      "forbidden": ["2--10"]
+    },
+    {
+      "id": "first_medal_raw_probability",
+      "literal": "0.281",
+      "min_occurrences": 2,
+      "forbidden": ["0.332"]
+    },
+    {
+      "id": "first_medal_prevalence",
+      "literal": "0.071",
+      "min_occurrences": 2,
+      "forbidden": ["0.080"]
+    },
+    {
+      "id": "coach_third_candidate",
+      "literal": "埃及",
+      "min_occurrences": 3,
+      "forbidden": ["加拿大关注自行车", "加拿大自行车的当前转化率"]
+    },
+    {
+      "id": "coach_third_gain",
+      "literal": "3.56",
+      "min_occurrences": 3,
+      "forbidden": ["2.97 枚"]
+    },
+    {
+      "id": "rolling_total_mae",
+      "literal": "1.441",
+      "min_occurrences": 1,
+      "forbidden": ["1.433 和 1.439"]
+    },
+    {
+      "id": "rolling_gold_mae",
+      "literal": "0.627",
+      "min_occurrences": 1,
+      "forbidden": ["0.614 和 0.607"]
+    }
+  ]
+}

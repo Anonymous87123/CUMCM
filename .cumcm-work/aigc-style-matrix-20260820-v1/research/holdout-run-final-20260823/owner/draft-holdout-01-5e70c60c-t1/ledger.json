@@ -1,0 +1,25 @@
+{
+  "schema": "aigc-benchmark-owner-ledger/v1",
+  "document_type": "research",
+  "provider": "deai-research-writing",
+  "mode": "REWRITE",
+  "source_sha256": "6e8f21723e4243b3b929b7a177288771b50cd721d13d4d3cad7c0f079a9f495a",
+  "candidate_sha256": "3a81887e4c5f03e4b4cd44068cc28ef2fbd6dfaf152fe074aff504f4a4a3e3a0",
+  "decisions": [
+    {
+      "source_anchor": "draft-holdout-01-5e70c60c.tex; frozen excerpt: 有了这些分组方案，我们还需要一组能直接反映子问题局部几何特性且与前述研究问题形成严格对应的诊断指标。我们先考虑 Hessian 矩阵可以解析写出或精确获取的情形。以对角椭球函数 F1 为例，其 Hessian 呈严格对角形，此时一个变量组 …",
+      "action": "REWRITE local prose candidate draft-holdout-01-5e70c60c-t1.tex; no second humanizer pass",
+      "claim": "Retain the existing research claim and expose its comparison or design implication without adding a new result.",
+      "evidence_boundary": "No experiment, citation, theorem, causal claim, or evidence grade is added; the candidate remains bounded by the frozen excerpt.",
+      "claim_strength": "The source modality, negation, comparison direction, scope qualifier, and empirical/theoretical status are unchanged.",
+      "preserved_objects": [
+        "All equations, references, algorithm names, result labels, condition qualifiers, and claim objects in the frozen source."
+      ]
+    }
+  ],
+  "unresolved": [],
+  "claims": {
+    "hidden_reasoning_recorded": false,
+    "academic_correctness_proven": false
+  }
+}

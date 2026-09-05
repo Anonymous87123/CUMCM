@@ -1,0 +1,1355 @@
+{
+    "schema_version": 2,
+    "purpose": "Audited source-action index for the humanize workflow. It records only abstract writing actions and source locations. It must never store source excerpts, facts, quotations, formulas, numerical results, or reusable sentence templates.",
+    "global_copy_limit": {
+        "max_contiguous_han_chars": 7,
+        "rule": "Source material may inform an editing action only. Do not reuse eight or more contiguous Chinese characters from a source in a candidate rewrite."
+    },
+    "sources": [
+        {
+            "id": "SOURCE-MAIN-TEX",
+            "source_tier": "A1",
+            "origin_class": "MODEL_GENERATED",
+            "scene_scope": [
+                "RESEARCH"
+            ],
+            "role": "negative_template_reference",
+            "path": "C:\\Users\\Lenovo\\Documents\\xwechat_files\\wxid_kngort9edhrs22_6b6f\\msg\\file\\2026-05\\main.tex",
+            "provenance": "User identified this document as GPT-generated.",
+            "use_limit": "Use only as a model-generated negative style source. Detect repeated meta-question contrasts and automatic self-validating closures; never use it as positive prose, an author Voice sample, or evidence for a positive action card."
+        },
+        {
+            "id": "SOURCE-PHYSICS2-TEX",
+            "source_tier": "B",
+            "origin_class": "UNKNOWN",
+            "scene_scope": [
+                "COURSE"
+            ],
+            "role": "positive_action_reference",
+            "path": "D:\\code LateX\\elegantbook\\physics\\physics2.tex",
+            "provenance": "Readable supporting course material, but its GPT authorship is not closed by the current source ledger.",
+            "use_limit": "Use only for course-note actions. Do not treat it as evidence of a general GPT voice or transfer its instructional wording into research prose."
+        },
+        {
+            "id": "SOURCE-PHYSICS1-TEX",
+            "source_tier": "B",
+            "origin_class": "UNKNOWN",
+            "scene_scope": [
+                "COURSE"
+            ],
+            "role": "positive_action_reference",
+            "path": "D:\\code LateX\\elegantbook\\physics\\physics1.tex",
+            "provenance": "Readable supporting course material recorded in the manual reading ledger; authorship provenance is weaker than A1 sources.",
+            "use_limit": "Use only for object distinction, condition-first explanation, and formula-to-meaning transitions in course notes. Do not treat it as general GPT voice evidence or transfer its instructional wording into research prose."
+        },
+        {
+            "id": "SOURCE-CET6-REPORT-EARLY",
+            "source_tier": "A1",
+            "origin_class": "MODEL_GENERATED",
+            "scene_scope": [
+                "REPORT"
+            ],
+            "role": "negative_template_reference",
+            "path": "D:\\code LateX\\elegantbook\\cet6\\cet 6\\_analysis_output\\section_b_final_conclusions_report.tex",
+            "provenance": "User identified the CET6 TeX set, except cet6.tex, as GPT-generated.",
+            "use_limit": "Use only as a model-generated negative source for list-heavy report and instruction patterns. Never use it as positive prose, an author Voice sample, or evidence for a positive action card."
+        },
+        {
+            "id": "SOURCE-CET6-REPORT-CANONICAL",
+            "source_tier": "A1",
+            "origin_class": "MODEL_GENERATED",
+            "scene_scope": [
+                "REPORT"
+            ],
+            "role": "canonical_version_reference",
+            "path": "D:\\code LateX\\elegantbook\\cet6\\cet 6\\_analysis_output\\section_b_final_conclusions_report_unified59.tex",
+            "provenance": "User identified the CET6 TeX set, except cet6.tex, as GPT-generated. This is the retained canonical member of its report version family.",
+            "use_limit": "Keep for version-family audit only in this action index. Do not double-count it with near-duplicate report versions."
+        },
+        {
+            "id": "SOURCE-CET6-REPORT-V2",
+            "source_tier": "A1",
+            "origin_class": "MODEL_GENERATED",
+            "scene_scope": [
+                "REPORT"
+            ],
+            "role": "version_duplicate_excluded",
+            "path": "D:\\code LateX\\elegantbook\\cet6\\cet 6\\_analysis_output\\section_b_final_conclusions_report_v2.tex",
+            "duplicate_of": "SOURCE-CET6-REPORT-CANONICAL",
+            "provenance": "The reading ledger records this as a near-duplicate report version (Chinese 4-gram Jaccard 0.977).",
+            "exclude_reason": "Version-family duplicate: retain only for audit and do not create action cards from it."
+        },
+        {
+            "id": "SOURCE-CET6-TEMPLATE-NEGATIVE",
+            "source_tier": "A1",
+            "origin_class": "MODEL_GENERATED",
+            "scene_scope": [
+                "ALL"
+            ],
+            "role": "negative_template_reference",
+            "path": "D:\\code LateX\\elegantbook\\cet6\\test.tex",
+            "provenance": "User identified the CET6 TeX set, except cet6.tex, as GPT-generated.",
+            "use_limit": "Use only to identify fixed argument slots, synonym rotation, forced contrast, and automatic aspirational endings. Never use it as positive prose material."
+        },
+        {
+            "id": "SOURCE-CET6-DAMAGED",
+            "source_tier": "A1",
+            "origin_class": "MODEL_GENERATED",
+            "scene_scope": [
+                "ALL"
+            ],
+            "role": "unreadable_excluded",
+            "path": "D:\\code LateX\\elegantbook\\cet6\\CET6.source-damaged.backup.tex",
+            "provenance": "The reading ledger identified substantial Chinese mojibake; the user instructed that unreadable material be skipped.",
+            "exclude_reason": "Known damaged source. Do not attempt recovery, infer language features, or generate action cards from it."
+        },
+        {
+            "id": "SOURCE-CET6-USER-EXCLUDED",
+            "source_tier": "EXCLUDED",
+            "origin_class": "UNKNOWN",
+            "scene_scope": [
+                "ALL"
+            ],
+            "role": "user_excluded",
+            "path": "D:\\code LateX\\elegantbook\\cet6\\cet6.tex",
+            "provenance": "The user explicitly excluded cet6.tex from the corpus.",
+            "exclude_reason": "User exclusion. Do not read or use this file."
+        },
+        {
+            "id": "SOURCE-MODELING-METRIC-NOTES",
+            "source_tier": "B",
+            "origin_class": "UNKNOWN",
+            "scene_scope": [
+                "MODELING"
+            ],
+            "role": "positive_action_reference",
+            "path": "D:\\LSGO-platform\\docs\\metric_screening_notes.md",
+            "provenance": "Manually audited project decision notes. They are evidence-control material, not natural paper prose or a personal voice sample.",
+            "use_limit": "Use only for metric roles, scope updates, and structure-to-cost explanation. Do not migrate metric names, values, governance terms, or project conclusions."
+        },
+        {
+            "id": "SOURCE-MODELING-CAG-DRAFT",
+            "source_tier": "B",
+            "origin_class": "UNKNOWN",
+            "scene_scope": [
+                "MODELING"
+            ],
+            "role": "positive_action_reference",
+            "path": "D:\\2026-BYI\\history\\curvature_grouping\\docs\\conditioning_aware_grouping_algorithm.md",
+            "provenance": "Manually audited method-design draft recorded in the source ledger. It is not a verified algorithm or an author voice sample.",
+            "use_limit": "Use only for problem contracts, idealized-to-proxy boundaries, and minimum-test scoping. Do not migrate formulas, complexity claims, method names, results, or project-manager phrasing."
+        },
+        {
+            "id": "SOURCE-MODELING-METHOD-SECTION",
+            "source_tier": "B",
+            "origin_class": "MODEL_ORIGIN_UNRESOLVED",
+            "scene_scope": [
+                "MODELING"
+            ],
+            "role": "origin_unresolved_excluded",
+            "path": "D:\\2026-BYI\\history\\curvature_grouping\\docs\\method_section_cn_cag_sort_v1.md",
+            "provenance": "Path-level assistant output evidence only; this does not establish sentence-level authorship or a personal voice.",
+            "exclude_reason": "Path-level assistant output evidence leaves model origin unresolved; this source cannot support a positive action until sentence-level human authorship is established.",
+            "use_limit": "Audit record only. Do not read for action extraction or use as positive prose while origin remains unresolved."
+        },
+        {
+            "id": "SOURCE-MODELING-README-CSG",
+            "source_tier": "B",
+            "origin_class": "UNKNOWN",
+            "scene_scope": [
+                "MODELING"
+            ],
+            "role": "positive_action_reference",
+            "composition_family_id": "LSGO-ALGORITHM-README-FAMILY",
+            "path": "D:\\LSGO-platform\\baseline\\cc\\vil\\csg\\README.zh-CN.md",
+            "provenance": "Manually audited member of one repeated Chinese algorithm README composition family.",
+            "use_limit": "Use only for content-bearing stage descriptions. The whole README template counts as one composition family and is not a prose voice sample."
+        },
+        {
+            "id": "SOURCE-MODELING-README-EADG",
+            "source_tier": "B",
+            "origin_class": "UNKNOWN",
+            "scene_scope": [
+                "MODELING"
+            ],
+            "role": "positive_action_reference",
+            "composition_family_id": "LSGO-ALGORITHM-README-FAMILY",
+            "path": "D:\\LSGO-platform\\baseline\\cc\\vil\\eadg\\README.zh-CN.md",
+            "provenance": "Manually audited member of one repeated Chinese algorithm README composition family.",
+            "use_limit": "Use only for state-reuse explanations. Do not migrate formulas, FE counts, zero-cost claims, algorithm facts, or the README shell."
+        },
+        {
+            "id": "SOURCE-MODELING-README-OEDG",
+            "source_tier": "B",
+            "origin_class": "UNKNOWN",
+            "scene_scope": [
+                "MODELING"
+            ],
+            "role": "positive_action_reference",
+            "composition_family_id": "LSGO-ALGORITHM-README-FAMILY",
+            "path": "D:\\LSGO-platform\\baseline\\cc\\vil\\oedg\\README.zh-CN.md",
+            "provenance": "Manually audited member of one repeated Chinese algorithm README composition family.",
+            "use_limit": "Use only for trigger-candidate-action-update refinement descriptions. Do not migrate formulas, facts, advantages, or the README shell."
+        },
+        {
+            "id": "SOURCE-MODELING-PAPER-MAIN",
+            "source_tier": "A2_PATH_ONLY_B",
+            "origin_class": "MODEL_ORIGIN_UNRESOLVED",
+            "scene_scope": [
+                "MODELING"
+            ],
+            "role": "origin_unresolved_excluded",
+            "path": "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\solution\\paper\\main.tex",
+            "provenance": "Path-level assistant output evidence; sentence-level authorship is not established, so this source is capped below a personal voice sample.",
+            "exclude_reason": "Assistant-output provenance is unresolved at sentence level; the source remains auditable but cannot back positive actions.",
+            "use_limit": "Audit record only. Do not read for action extraction or use as positive prose while sentence-level origin remains unresolved."
+        },
+        {
+            "id": "SOURCE-MODELING-RESULTS-NOTES",
+            "source_tier": "B",
+            "origin_class": "UNKNOWN",
+            "scene_scope": [
+                "MODELING"
+            ],
+            "role": "positive_action_reference",
+            "path": "D:\\2026-BYI\\history\\sccd\\docs\\notes\\paper_results_conclusions.md",
+            "provenance": "Manually audited evidence-control notes, not natural manuscript prose or a personal voice sample.",
+            "use_limit": "Use only for evidence layers, conflicting metrics, and correlation boundaries. Do not migrate file paths, values, project labels, algorithm conclusions, or review-response phrasing."
+        },
+        {
+            "id": "SOURCE-MODELING-PAPER-CN",
+            "source_tier": "A2_PATH_ONLY_B",
+            "origin_class": "MODEL_ORIGIN_UNRESOLVED",
+            "scene_scope": [
+                "MODELING"
+            ],
+            "role": "origin_unresolved_excluded",
+            "path": "D:\\2026-BYI\\history\\sccd\\papers\\paper\\paper_CN.tex",
+            "provenance": "Path-level assistant output evidence only; it is not a sentence-level personal voice sample.",
+            "exclude_reason": "Path-level assistant output evidence does not establish human authorship; positive action use is disabled while provenance remains unresolved.",
+            "use_limit": "Audit record only. Do not read for action extraction or use as positive prose while sentence-level origin remains unresolved."
+        },
+        {
+            "id": "SOURCE-NEG-MODELING-README-SHELL",
+            "source_tier": "B",
+            "origin_class": "UNKNOWN",
+            "scene_scope": [
+                "ALL",
+                "MODELING"
+            ],
+            "role": "negative_template_reference",
+            "path": "D:\\LSGO-platform\\baseline\\cc\\vil\\csg\\README.zh-CN.md",
+            "provenance": "Negative-only view of the repeated algorithm README family; it must not be counted as an independent positive source.",
+            "use_limit": "Use only to reject the fixed definition-features-stages-advantages-mechanism-complexity shell and ungrounded promotional adjectives."
+        },
+        {
+            "id": "SOURCE-NEG-MODELING-CONSTRUCTION-PLAN",
+            "source_tier": "A2_PATH_ONLY_B",
+            "origin_class": "MODEL_ORIGIN_UNRESOLVED",
+            "scene_scope": [
+                "ALL",
+                "MODELING"
+            ],
+            "role": "negative_template_reference",
+            "path": "D:\\【赛题相关】2026 广州高校数学建模邀请赛题相关\\2026A-长江流域人类活动对长江渔业生态的影响\\gpt思路.md",
+            "provenance": "User-scoped path-level assistant output used only as a negative construction-plan example, not as paper prose.",
+            "use_limit": "Use only to block project-plan, implementation-order, and chief-editor construction language from entering manuscript prose."
+        },
+        {
+            "id": "SOURCE-NEG-GENERAL-GOVERNANCE",
+            "source_tier": "B",
+            "origin_class": "UNKNOWN",
+            "scene_scope": [
+                "ALL",
+                "GENERAL"
+            ],
+            "role": "negative_template_reference",
+            "path": "D:\\LSGO-platform\\report.md",
+            "provenance": "Project governance and handoff report. It is not ordinary academic prose and is admitted only as a negative source-role example.",
+            "use_limit": "Block closure, main-chain, completion, risk-register, and repeated final-judgment voice. Do not turn its useful state distinctions into governance syntax."
+        },
+        {
+            "id": "SOURCE-NEG-GENERAL-JOURNAL-OVERFIT",
+            "source_tier": "B",
+            "origin_class": "UNKNOWN",
+            "scene_scope": [
+                "ALL",
+                "GENERAL"
+            ],
+            "role": "negative_template_reference",
+            "path": "D:\\2026-BYI\\history\\sccd\\papers\\paper\\paper_CN.tex",
+            "provenance": "Research-journal manuscript reused only to show that a valid research genre can still be the wrong template for GENERAL prose.",
+            "use_limit": "Block automatic abstract-contribution-defense-future-work shells in GENERAL. Do not treat the source as a general personal voice."
+        },
+        {
+            "id": "SOURCE-NEG-GENERAL-PROMOTIONAL",
+            "source_tier": "C",
+            "origin_class": "MODEL_ORIGIN_UNRESOLVED",
+            "scene_scope": [
+                "ALL",
+                "GENERAL"
+            ],
+            "role": "negative_template_reference",
+            "path": "D:\\project-costrict\\Project_Documentation\\Xiaomi_MiMo问卷填写建议.md",
+            "provenance": "Product application draft, not academic prose and not a sentence-level personal voice sample.",
+            "use_limit": "Block dense problem-feature-scale-efficiency-deliverable claim stacks and application-style hard-information repetition."
+        },
+        {
+            "id": "SOURCE-NEG-GENERAL-OPINION",
+            "source_tier": "D_THIRD_PARTY",
+            "origin_class": "THIRD_PARTY",
+            "scene_scope": [
+                "ALL",
+                "GENERAL"
+            ],
+            "role": "negative_template_reference",
+            "path": "D:\\高中时期资料\\世间再无张居正\\2024年数学高考前瞻.md",
+            "provenance": "Third-party public-account commentary. It is not GPT-attributed and is included only to show that human-written text can still be unsuitable academic evidence.",
+            "use_limit": "Block rumor-as-evidence, opinion-to-fact jumps, unsupported universal claims, mobilizing commands, and blessing-style endings. Never label this source as AI-generated."
+        },
+        {
+            "id": "SOURCE-NEG-GENERAL-OCR-TEXTBOOK",
+            "source_tier": "D_OCR_INHERITED",
+            "origin_class": "OCR_INHERITED",
+            "scene_scope": [
+                "ALL",
+                "GENERAL"
+            ],
+            "role": "negative_template_reference",
+            "path": "D:\\code LateX\\elegantbook\\道德与法治\\ocr.tex",
+            "provenance": "Third-party textbook OCR draft with recognition damage. Encoding is readable, but source role and text integrity exclude it from positive prose use.",
+            "use_limit": "Block OCR repair guessing, exam-answer enumeration, memorization couplets, and textbook Q&A structure. Never treat it as GPT style or positive legal prose."
+        },
+        {
+            "id": "SOURCE-NEG-GENERAL-API",
+            "source_tier": "C",
+            "origin_class": "UNKNOWN",
+            "scene_scope": [
+                "ALL",
+                "GENERAL"
+            ],
+            "role": "negative_template_reference",
+            "path": "D:\\LSGO-platform\\docs\\zh\\api\\algorithms.md",
+            "provenance": "Bilingual API documentation whose structure is determined by documentation templates, not ordinary academic prose.",
+            "use_limit": "Block mirrored bilingual headings, API-reference columns, navigation endings, and table-completeness substitutions for continuous argument."
+        }
+    ],
+    "action_cards": [
+        {
+            "id": "NEGATIVE-RESEARCH-MAIN-META-SHELL-01",
+            "scene": "RESEARCH",
+            "kind": "negative_guard",
+            "action": "Reject repeated model-generated meta-question contrasts and self-validating closures that narrate what a section should prove instead of letting the evidence carry the paragraph.",
+            "requires": [
+                "repeated meta-question contrast or automatic closure"
+            ],
+            "required_anchor_roles": [
+                "template"
+            ],
+            "forbids": [
+                "repeated 不是/而是 section framing",
+                "automatic 这样处理 closure",
+                "using model-generated prose as a positive action source"
+            ],
+            "detector": {
+                "minimum_groups": 1,
+                "pattern_groups": [
+                    {
+                        "id": "repeated_meta_answer",
+                        "regex": "(?:真正要回答的不是|核心不是|更关注[^。；！？!?]{0,40}而不是)",
+                        "minimum_occurrences": 2
+                    },
+                    {
+                        "id": "repeated_self_validating_close",
+                        "regex": "(?:这样处理(?:后)?|也正因为如此|这样一来)[^。；！？!?]{0,80}(?:更符合|就会|才能|足以|完成)",
+                        "minimum_occurrences": 2
+                    }
+                ]
+            },
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-MAIN-TEX",
+                    "line_start": 50,
+                    "line_end": 77
+                }
+            ]
+        },
+        {
+            "id": "COURSE-DECISION-01",
+            "scene": "COURSE",
+            "kind": "positive_action",
+            "action": "Organize an explanation as object identification, applicable condition, tool choice, and a final domain-specific check.",
+            "requires": [
+                "problem object",
+                "condition",
+                "tool or method",
+                "check"
+            ],
+            "required_anchor_roles": [
+                "object",
+                "condition",
+                "method",
+                "check"
+            ],
+            "forbids": [
+                "generic motivational scaffolding",
+                "research-paper transfer",
+                "formula-first explanation without object or condition"
+            ],
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-PHYSICS2-TEX",
+                    "line_start": 674,
+                    "line_end": 680
+                }
+            ]
+        },
+        {
+            "id": "COURSE-ERROR-01",
+            "scene": "COURSE",
+            "kind": "positive_action",
+            "action": "Tie each warning to a specific mistaken reading and correct that reading with the relevant local distinction.",
+            "requires": [
+                "specific misconception",
+                "specific correction"
+            ],
+            "required_anchor_roles": [
+                "misconception",
+                "correction"
+            ],
+            "forbids": [
+                "vague warning",
+                "rhetorical question chain",
+                "unrelated conclusion"
+            ],
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-PHYSICS2-TEX",
+                    "line_start": 691,
+                    "line_end": 694
+                }
+            ]
+        },
+        {
+            "id": "COURSE-DERIVATION-01",
+            "scene": "COURSE",
+            "kind": "positive_action",
+            "action": "Explain a derivation through the dependency order of its stated conditions, then identify which step controls the result.",
+            "requires": [
+                "given condition",
+                "derivation order",
+                "result relation"
+            ],
+            "required_anchor_roles": [
+                "condition",
+                "method",
+                "result"
+            ],
+            "forbids": [
+                "changed formula",
+                "new assumption",
+                "formula deletion"
+            ],
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-PHYSICS2-TEX",
+                    "line_start": 1020,
+                    "line_end": 1028
+                }
+            ]
+        },
+        {
+            "id": "COURSE-MEANING-01",
+            "scene": "COURSE",
+            "kind": "positive_action",
+            "action": "After a formula or rule, add only the local physical or conceptual meaning needed to prevent a direction, unit, or object-level misreading.",
+            "requires": [
+                "stated formula or rule",
+                "specific likely misreading",
+                "local meaning or check"
+            ],
+            "required_anchor_roles": [
+                "formula",
+                "meaning"
+            ],
+            "forbids": [
+                "symbol-by-symbol narration",
+                "new formula",
+                "generic motivational close"
+            ],
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-PHYSICS1-TEX",
+                    "line_start": 70,
+                    "line_end": 86
+                }
+            ]
+        },
+        {
+            "id": "NEGATIVE-TEMPLATE-01",
+            "scene": "ALL",
+            "kind": "negative_guard",
+            "action": "Reject a repeated fixed chain that forces a surface explanation, deeper mechanism, balanced limitation, and aspirational closure into unrelated paragraphs.",
+            "requires": [
+                "repeated paragraph-level structural pattern"
+            ],
+            "required_anchor_roles": [
+                "template"
+            ],
+            "forbids": [
+                "automatic escalation",
+                "forced contrast",
+                "automatic future bridge",
+                "synonym-only variation"
+            ],
+            "detector": {
+                "minimum_groups": 1,
+                "pattern_groups": [
+                    {
+                        "id": "future_bridge",
+                        "regex": "(?:为|给|供)(?:后续|未来)(?:研究|分析|检验|工作|探索)?.{0,12}(?:提供|奠定|打下|形成).{0,12}(?:基础|支撑|线索|参考|依据|方向)",
+                        "minimum_occurrences": 1
+                    },
+                    {
+                        "id": "repeated_forced_contrast",
+                        "regex": "不是[^。；！？!?]{1,80}?而是",
+                        "minimum_occurrences": 2
+                    }
+                ]
+            },
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-CET6-TEMPLATE-NEGATIVE",
+                    "line_start": 226,
+                    "line_end": 226
+                }
+            ]
+        },
+        {
+            "id": "NEGATIVE-REPORT-REPEATED-RECAP-LISTS-01",
+            "scene": "ALL",
+            "kind": "negative_guard",
+            "action": "Reject repeated report recap blocks that restate the same long checklist under summary or final-reminder headings instead of assigning each block a distinct reporting role.",
+            "requires": [
+                "at least three matching recap-list blocks",
+                "at least six items in each matching block",
+                "a shared Han anchor across the matching blocks"
+            ],
+            "required_anchor_roles": [
+                "template"
+            ],
+            "forbids": [
+                "repeating the same recap checklist under multiple summary headings",
+                "counting one block more than once",
+                "joining evidence across documents or resolved scenes"
+            ],
+            "detector": {
+                "type": "structured_repeated_list/v1",
+                "block_role": {
+                    "heading_leaf_regex": "^(?:摘要|4[.]6 最短执行版|5[.]3 最后只记这几句话)$"
+                },
+                "thresholds": {
+                    "minimum_blocks": 3,
+                    "minimum_items_per_block": 6
+                },
+                "shared_anchor": {
+                    "mode": "MAXIMAL_HAN_NGRAM",
+                    "minimum_han_chars": 5,
+                    "maximum_han_chars": 12,
+                    "minimum_block_coverage": 3
+                }
+            },
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-CET6-REPORT-EARLY",
+                    "line_start": 73,
+                    "line_end": 83
+                },
+                {
+                    "source_id": "SOURCE-CET6-REPORT-EARLY",
+                    "line_start": 844,
+                    "line_end": 859
+                },
+                {
+                    "source_id": "SOURCE-CET6-REPORT-EARLY",
+                    "line_start": 964,
+                    "line_end": 979
+                }
+            ]
+        },
+        {
+            "id": "MODELING-METRIC-ROLE-01",
+            "scene": "MODELING",
+            "kind": "positive_action",
+            "action": "Decide a metric's manuscript role from cross-configuration comparability, reader-facing meaning, and decision responsibility before deciding where to report it.",
+            "requires": [
+                "metric definition",
+                "comparison object",
+                "intended use"
+            ],
+            "required_anchor_roles": [
+                "metric",
+                "comparison",
+                "purpose"
+            ],
+            "forbids": [
+                "treating a logged field as a valid paper metric",
+                "treating audit integrity as algorithm performance",
+                "migration of source metric names or values"
+            ],
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-MODELING-METRIC-NOTES",
+                    "line_start": 192,
+                    "line_end": 214
+                }
+            ]
+        },
+        {
+            "id": "MODELING-METRIC-PLACEMENT-01",
+            "scene": "MODELING",
+            "kind": "positive_action",
+            "action": "Separate outcome metrics, process-analysis metrics, and record-audit quantities so that they do not share one conclusion outlet.",
+            "requires": [
+                "named metric",
+                "explicit analytical role"
+            ],
+            "required_anchor_roles": [
+                "metric",
+                "evidence_role"
+            ],
+            "forbids": [
+                "mechanical three-layer headings",
+                "role-free metric lists",
+                "migration of source values"
+            ],
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-MODELING-METRIC-NOTES",
+                    "line_start": 218,
+                    "line_end": 225
+                },
+                {
+                    "source_id": "SOURCE-MODELING-METRIC-NOTES",
+                    "line_start": 316,
+                    "line_end": 322
+                },
+                {
+                    "source_id": "SOURCE-MODELING-METRIC-NOTES",
+                    "line_start": 405,
+                    "line_end": 410
+                }
+            ]
+        },
+        {
+            "id": "MODELING-STRUCTURE-COST-01",
+            "scene": "MODELING",
+            "kind": "positive_action",
+            "action": "Report the structural output first, then state the specific consequence it has for scheduling space, stage cost, or interpretability under the stated setting.",
+            "requires": [
+                "structural output",
+                "specific operational consequence",
+                "active setting"
+            ],
+            "required_anchor_roles": [
+                "structure",
+                "consequence",
+                "condition"
+            ],
+            "forbids": [
+                "universal mechanism invented from one structure",
+                "raw value migration",
+                "generic efficiency praise"
+            ],
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-MODELING-METRIC-NOTES",
+                    "line_start": 282,
+                    "line_end": 304
+                },
+                {
+                    "source_id": "SOURCE-MODELING-METRIC-NOTES",
+                    "line_start": 324,
+                    "line_end": 367
+                }
+            ]
+        },
+        {
+            "id": "MODELING-SCOPE-UPDATE-01",
+            "scene": "MODELING",
+            "kind": "positive_action",
+            "action": "When a new check changes an earlier judgment, state the revision and enumerate the benchmark, object, configuration, and budget actually covered by the new evidence.",
+            "requires": [
+                "earlier judgment",
+                "new check",
+                "explicit coverage"
+            ],
+            "required_anchor_roles": [
+                "prior_claim",
+                "evidence",
+                "scope"
+            ],
+            "forbids": [
+                "generalization to all algorithms or problems",
+                "project-status language in manuscript prose",
+                "migration of source configuration facts"
+            ],
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-MODELING-METRIC-NOTES",
+                    "line_start": 511,
+                    "line_end": 546
+                }
+            ]
+        },
+        {
+            "id": "MODELING-PROBLEM-CONTRACT-01",
+            "scene": "MODELING",
+            "kind": "positive_action",
+            "action": "Expand a method concept into inputs, intermediate quantities, objective, constraints, output, and computational cost before making a contribution claim.",
+            "requires": [
+                "method concept",
+                "available contract fields"
+            ],
+            "required_anchor_roles": [
+                "input",
+                "objective",
+                "constraint",
+                "output",
+                "cost"
+            ],
+            "forbids": [
+                "copied formulas or complexity",
+                "claiming contribution from field completeness alone",
+                "invented algorithm facts"
+            ],
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-MODELING-CAG-DRAFT",
+                    "line_start": 90,
+                    "line_end": 132
+                },
+                {
+                    "source_id": "SOURCE-MODELING-CAG-DRAFT",
+                    "line_start": 198,
+                    "line_end": 232
+                }
+            ]
+        },
+        {
+            "id": "MODELING-IDEALIZED-BRIDGE-01",
+            "scene": "MODELING",
+            "kind": "positive_action",
+            "action": "State the idealized model under which a relation holds, then identify the proxy used by the actual method and preserve the boundary between them.",
+            "requires": [
+                "idealized relation already present",
+                "actual proxy",
+                "boundary"
+            ],
+            "required_anchor_roles": [
+                "idealized_model",
+                "proxy",
+                "boundary"
+            ],
+            "forbids": [
+                "unconditional transfer to a general nonlinear problem",
+                "formula migration",
+                "renaming a proxy as the exact quantity"
+            ],
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-MODELING-CAG-DRAFT",
+                    "line_start": 53,
+                    "line_end": 79
+                }
+            ]
+        },
+        {
+            "id": "MODELING-MINIMUM-TEST-01",
+            "scene": "MODELING",
+            "kind": "positive_action",
+            "action": "Separate the smallest currently testable method from a more complex extension, and let the main experiment answer only the question supported by the current design.",
+            "requires": [
+                "current method",
+                "testable question",
+                "scope boundary"
+            ],
+            "required_anchor_roles": [
+                "method",
+                "research_question",
+                "scope"
+            ],
+            "forbids": [
+                "automatic future work",
+                "project-manager closure language",
+                "claiming an untested extension"
+            ],
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-MODELING-CAG-DRAFT",
+                    "line_start": 236,
+                    "line_end": 270
+                }
+            ]
+        },
+        {
+            "id": "MODELING-ALGORITHM-STAGE-01",
+            "scene": "MODELING",
+            "kind": "positive_action",
+            "action": "For every algorithm stage, name the object being handled, the criterion or tool applied, and the resulting classification or state update.",
+            "requires": [
+                "stage object",
+                "criterion or tool",
+                "state result"
+            ],
+            "required_anchor_roles": [
+                "object",
+                "method",
+                "update"
+            ],
+            "forbids": [
+                "empty stage-one-stage-two skeleton",
+                "algorithm fact migration",
+                "advantage lists without comparison"
+            ],
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-MODELING-README-CSG",
+                    "line_start": 14,
+                    "line_end": 21
+                }
+            ]
+        },
+        {
+            "id": "MODELING-STATE-REUSE-01",
+            "scene": "MODELING",
+            "kind": "positive_action",
+            "action": "Ground a resource-saving claim in the exact prior state that is reused and the new computation thereby avoided.",
+            "requires": [
+                "reused state",
+                "avoided computation",
+                "efficiency claim already present"
+            ],
+            "required_anchor_roles": [
+                "state",
+                "avoided_computation",
+                "claim"
+            ],
+            "forbids": [
+                "new zero-cost claim",
+                "formula or evaluation-count migration",
+                "generic high-efficiency praise"
+            ],
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-MODELING-README-EADG",
+                    "line_start": 79,
+                    "line_end": 99
+                }
+            ]
+        },
+        {
+            "id": "MODELING-REFINEMENT-TRIGGER-01",
+            "scene": "MODELING",
+            "kind": "positive_action",
+            "action": "Describe iterative refinement through a trigger condition, candidate selection, transformation, and state update.",
+            "requires": [
+                "trigger",
+                "candidate",
+                "transformation",
+                "state update"
+            ],
+            "required_anchor_roles": [
+                "trigger",
+                "candidate",
+                "action",
+                "update"
+            ],
+            "forbids": [
+                "continuous optimization without a trigger",
+                "dynamic adjustment as filler",
+                "algorithm fact migration"
+            ],
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-MODELING-README-OEDG",
+                    "line_start": 67,
+                    "line_end": 100
+                }
+            ]
+        },
+        {
+            "id": "MODELING-EVIDENCE-LAYERS-01",
+            "scene": "MODELING",
+            "kind": "positive_action",
+            "action": "Separate primary, supporting, and boundary evidence, and require boundary cases to remain in the final interpretation.",
+            "requires": [
+                "claim",
+                "evidence roles",
+                "boundary case"
+            ],
+            "required_anchor_roles": [
+                "claim",
+                "evidence_role",
+                "boundary_case"
+            ],
+            "forbids": [
+                "project labels in manuscript prose",
+                "removing counterexamples",
+                "migration of source results or paths"
+            ],
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-MODELING-RESULTS-NOTES",
+                    "line_start": 28,
+                    "line_end": 105
+                }
+            ]
+        },
+        {
+            "id": "MODELING-CONFLICTING-METRICS-01",
+            "scene": "MODELING",
+            "kind": "positive_action",
+            "action": "When metrics rank methods differently, state which stage each metric observes and narrow the conclusion to the predeclared primary endpoint.",
+            "requires": [
+                "conflicting metrics",
+                "metric stages",
+                "primary endpoint"
+            ],
+            "required_anchor_roles": [
+                "metric_a",
+                "metric_b",
+                "endpoint",
+                "claim"
+            ],
+            "forbids": [
+                "selective deletion of an unfavorable metric",
+                "overall-better claim",
+                "source result migration"
+            ],
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-MODELING-RESULTS-NOTES",
+                    "line_start": 146,
+                    "line_end": 164
+                },
+                {
+                    "source_id": "SOURCE-MODELING-RESULTS-NOTES",
+                    "line_start": 192,
+                    "line_end": 201
+                }
+            ]
+        },
+        {
+            "id": "MODELING-MECHANISM-CORRELATION-01",
+            "scene": "MODELING",
+            "kind": "positive_action",
+            "action": "Assign different proof duties to mechanism evidence, controlled contrasts, and cross-sample correlation; retain correlation only as consistency support.",
+            "requires": [
+                "mechanism evidence",
+                "controlled contrast",
+                "correlation",
+                "claim"
+            ],
+            "required_anchor_roles": [
+                "mechanism_evidence",
+                "controlled_contrast",
+                "correlation",
+                "claim"
+            ],
+            "forbids": [
+                "correlation written as causation",
+                "merging evidence roles",
+                "source statistic migration"
+            ],
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-MODELING-RESULTS-NOTES",
+                    "line_start": 229,
+                    "line_end": 241
+                }
+            ]
+        },
+        {
+            "id": "NEGATIVE-MODELING-README-SHELL-01",
+            "scene": "MODELING",
+            "kind": "negative_guard",
+            "action": "Reject a repeated algorithm README shell that substitutes headings and promotional advantages for a manuscript argument.",
+            "requires": [
+                "repeated README-like heading family or promotional claim cluster"
+            ],
+            "required_anchor_roles": [
+                "template"
+            ],
+            "forbids": [
+                "definition-features-stages-advantages-mechanism-complexity shell",
+                "ungrounded efficiency or robustness adjectives"
+            ],
+            "detector": {
+                "minimum_groups": 1,
+                "pattern_groups": [
+                    {
+                        "id": "readme_headings",
+                        "regex": "(?m)^(?:#{1,6}|\\\\(?:sub)*section\\{)[^\\n}]*(?:核心特点|分组流程|主要优势|机制说明|复杂度)[^\\n}]*\\}?",
+                        "minimum_occurrences": 3
+                    },
+                    {
+                        "id": "promotional_adjectives",
+                        "regex": "(?:高效|准确|全面|显著降低|鲁棒|无参数自适应)",
+                        "minimum_occurrences": 3
+                    }
+                ]
+            },
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-NEG-MODELING-README-SHELL",
+                    "line_start": 5,
+                    "line_end": 21
+                }
+            ]
+        },
+        {
+            "id": "NEGATIVE-MODELING-CONSTRUCTION-PLAN-01",
+            "scene": "MODELING",
+            "kind": "negative_guard",
+            "action": "Reject construction-plan and implementation-order language when it appears in finished modeling prose.",
+            "requires": [
+                "planning-language cluster"
+            ],
+            "required_anchor_roles": [
+                "template"
+            ],
+            "forbids": [
+                "chief-editor construction voice",
+                "code implementation order in manuscript prose",
+                "data-anchor task list as a result section"
+            ],
+            "detector": {
+                "minimum_groups": 1,
+                "pattern_groups": [
+                    {
+                        "id": "construction_plan_terms",
+                        "regex": "(?:总编施工图|数据锚点|最终模型结构|代码实现顺序|论文写法|先读结论)",
+                        "minimum_occurrences": 3
+                    }
+                ]
+            },
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-NEG-MODELING-CONSTRUCTION-PLAN",
+                    "line_start": 3,
+                    "line_end": 55
+                }
+            ]
+        },
+        {
+            "id": "GENERAL-NEG-GOVERNANCE-VOICE",
+            "scene": "GENERAL",
+            "kind": "negative_guard",
+            "action": "Reject governance, acceptance, and repeated final-judgment voice in ordinary academic prose.",
+            "requires": [
+                "at least two governance-voice clusters"
+            ],
+            "required_anchor_roles": [
+                "template"
+            ],
+            "forbids": [
+                "closure and main-chain language",
+                "risk-register substitution for argument",
+                "repeated final acceptance judgment"
+            ],
+            "detector": {
+                "minimum_groups": 2,
+                "pattern_groups": [
+                    {
+                        "id": "governance_state",
+                        "regex": "(?:收口|闭环|主链路|完成度)",
+                        "minimum_occurrences": 2
+                    },
+                    {
+                        "id": "final_judgment",
+                        "regex": "(?:最终(?:强化判断|自检|结论)|最后一句(?:总)?判断|最值得记住的一句话)",
+                        "minimum_occurrences": 1
+                    },
+                    {
+                        "id": "risk_register",
+                        "regex": "(?:风险项|风险\\s*[A-ZＡ-Ｚ一二三四五六七八九十])",
+                        "minimum_occurrences": 2
+                    }
+                ]
+            },
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-NEG-GENERAL-GOVERNANCE",
+                    "line_start": 983,
+                    "line_end": 1075
+                },
+                {
+                    "source_id": "SOURCE-NEG-GENERAL-GOVERNANCE",
+                    "line_start": 1378,
+                    "line_end": 1406
+                },
+                {
+                    "source_id": "SOURCE-NEG-GENERAL-GOVERNANCE",
+                    "line_start": 1561,
+                    "line_end": 1573
+                }
+            ]
+        },
+        {
+            "id": "GENERAL-NEG-RESEARCH-JOURNAL-OVERFIT",
+            "scene": "GENERAL",
+            "kind": "negative_guard",
+            "action": "Reject automatic promotion of GENERAL prose into a journal-defense shell with contribution lists and routine future work.",
+            "requires": [
+                "at least two journal-shell clusters"
+            ],
+            "required_anchor_roles": [
+                "template"
+            ],
+            "forbids": [
+                "abstract-contribution-defense-future-work shell",
+                "automatic reviewer-defense contrast",
+                "routine three-item outlook"
+            ],
+            "detector": {
+                "minimum_groups": 2,
+                "pattern_groups": [
+                    {
+                        "id": "contribution_heading",
+                        "regex": "(?:主要贡献如下|本文的主要贡献)",
+                        "minimum_occurrences": 1
+                    },
+                    {
+                        "id": "future_work",
+                        "regex": "(?:未来|后续)(?:研究|工作)(?:可|将|需要|可以)?进一步",
+                        "minimum_occurrences": 1
+                    },
+                    {
+                        "id": "defensive_contrast",
+                        "regex": "不是[^。；！？!?]{1,80}?而是",
+                        "minimum_occurrences": 2
+                    }
+                ]
+            },
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-NEG-GENERAL-JOURNAL-OVERFIT",
+                    "line_start": 47,
+                    "line_end": 82
+                },
+                {
+                    "source_id": "SOURCE-NEG-GENERAL-JOURNAL-OVERFIT",
+                    "line_start": 500,
+                    "line_end": 502
+                },
+                {
+                    "source_id": "SOURCE-NEG-GENERAL-JOURNAL-OVERFIT",
+                    "line_start": 537,
+                    "line_end": 541
+                },
+                {
+                    "source_id": "SOURCE-NEG-GENERAL-JOURNAL-OVERFIT",
+                    "line_start": 569,
+                    "line_end": 578
+                }
+            ]
+        },
+        {
+            "id": "GENERAL-NEG-PROMOTIONAL-CLAIM-STACK",
+            "scene": "GENERAL",
+            "kind": "negative_guard",
+            "action": "Reject product-application claim stacks that compress problems, features, scale, efficiency, and deliverables into promotional density.",
+            "requires": [
+                "at least two promotional clusters"
+            ],
+            "required_anchor_roles": [
+                "template"
+            ],
+            "forbids": [
+                "core-logic marketing shell",
+                "dense unsupported scale numbers",
+                "hard-information repetition after prose"
+            ],
+            "detector": {
+                "minimum_groups": 2,
+                "pattern_groups": [
+                    {
+                        "id": "core_claim",
+                        "regex": "(?:核心是解决|核心逻辑流|核心在于解决)",
+                        "minimum_occurrences": 1
+                    },
+                    {
+                        "id": "promotional_metrics",
+                        "regex": "(?:\\d+(?:\\.\\d+)?(?:\\+|%|％)|\\d+\\s*[-–—]\\s*\\d+%)",
+                        "minimum_occurrences": 3
+                    },
+                    {
+                        "id": "application_labels",
+                        "regex": "(?:硬信息|深度参与|完整闭环|效率提升)",
+                        "minimum_occurrences": 2
+                    }
+                ]
+            },
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-NEG-GENERAL-PROMOTIONAL",
+                    "line_start": 23,
+                    "line_end": 31
+                },
+                {
+                    "source_id": "SOURCE-NEG-GENERAL-PROMOTIONAL",
+                    "line_start": 59,
+                    "line_end": 68
+                }
+            ]
+        },
+        {
+            "id": "GENERAL-NEG-OPINION-AS-EVIDENCE",
+            "scene": "GENERAL",
+            "kind": "negative_guard",
+            "action": "Reject rumor, emotional judgment, or mobilizing commands when they substitute for academic evidence.",
+            "requires": [
+                "unsupported-attribution, emotional-judgment, or command cluster"
+            ],
+            "required_anchor_roles": [
+                "template"
+            ],
+            "forbids": [
+                "rumor as evidence",
+                "opinion stated as universal fact",
+                "mobilizing or blessing-style close"
+            ],
+            "detector": {
+                "minimum_groups": 1,
+                "pattern_groups": [
+                    {
+                        "id": "rumor_or_certainty",
+                        "regex": "(?:据说|半官方消息|不争的事实|大概率)",
+                        "minimum_occurrences": 1
+                    },
+                    {
+                        "id": "emotional_judgment",
+                        "regex": "(?:危害无穷|令人心痛|必须淘汰)",
+                        "minimum_occurrences": 1
+                    },
+                    {
+                        "id": "mobilizing_command",
+                        "regex": "(?:(?:考生|学生|大家|我们|你|读者)[^。！？\\n]{0,12}?(?:必须|务必|一定要)|(?:必须|务必|一定要)[^。！？\\n]{0,12}?(?:牢记|记住|掌握|坚持|做到|避免|警惕|高度重视|积极行动))",
+                        "minimum_occurrences": 2
+                    }
+                ]
+            },
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-NEG-GENERAL-OPINION",
+                    "line_start": 24,
+                    "line_end": 37
+                },
+                {
+                    "source_id": "SOURCE-NEG-GENERAL-OPINION",
+                    "line_start": 41,
+                    "line_end": 54
+                },
+                {
+                    "source_id": "SOURCE-NEG-GENERAL-OPINION",
+                    "line_start": 58,
+                    "line_end": 69
+                },
+                {
+                    "source_id": "SOURCE-NEG-GENERAL-OPINION",
+                    "line_start": 71,
+                    "line_end": 88
+                }
+            ]
+        },
+        {
+            "id": "GENERAL-NEG-OCR-AND-TEXTBOOK",
+            "scene": "GENERAL",
+            "kind": "negative_guard",
+            "action": "Reject OCR-damaged textbook Q&A and memorization-note structure as a positive academic prose model.",
+            "requires": [
+                "dense enumeration plus Q&A marker cluster"
+            ],
+            "required_anchor_roles": [
+                "template"
+            ],
+            "forbids": [
+                "OCR repair guessing",
+                "exam-answer enumeration",
+                "textbook memorization couplets as continuous argument"
+            ],
+            "detector": {
+                "minimum_groups": 2,
+                "pattern_groups": [
+                    {
+                        "id": "dense_enumeration",
+                        "regex": "(?m)^\\s*(?:\\d+[.、]|[（(]\\d+[）)])",
+                        "minimum_occurrences": 5
+                    },
+                    {
+                        "id": "question_answer_markers",
+                        "regex": "(?:答[:：]|为什么|如何理解|怎样做)",
+                        "minimum_occurrences": 3
+                    }
+                ]
+            },
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-NEG-GENERAL-OCR-TEXTBOOK",
+                    "line_start": 54,
+                    "line_end": 70
+                },
+                {
+                    "source_id": "SOURCE-NEG-GENERAL-OCR-TEXTBOOK",
+                    "line_start": 109,
+                    "line_end": 162
+                }
+            ]
+        },
+        {
+            "id": "GENERAL-NEG-API-TEMPLATE",
+            "scene": "GENERAL",
+            "kind": "negative_guard",
+            "action": "Reject API-documentation columns and navigation structure when they replace continuous academic explanation.",
+            "requires": [
+                "dense API heading family"
+            ],
+            "required_anchor_roles": [
+                "template"
+            ],
+            "forbids": [
+                "bilingual heading mirror",
+                "API reference skeleton",
+                "navigation ending in academic prose"
+            ],
+            "detector": {
+                "minimum_groups": 1,
+                "pattern_groups": [
+                    {
+                        "id": "api_heading_family",
+                        "regex": "(?m)^#{1,6}\\s*(?:概述|API\\s*参考|使用示例|高级用法|参考文献|下一页)",
+                        "minimum_occurrences": 3
+                    }
+                ]
+            },
+            "source_refs": [
+                {
+                    "source_id": "SOURCE-NEG-GENERAL-API",
+                    "line_start": 1,
+                    "line_end": 34
+                },
+                {
+                    "source_id": "SOURCE-NEG-GENERAL-API",
+                    "line_start": 43,
+                    "line_end": 85
+                },
+                {
+                    "source_id": "SOURCE-NEG-GENERAL-API",
+                    "line_start": 303,
+                    "line_end": 372
+                }
+            ]
+        }
+    ]
+}

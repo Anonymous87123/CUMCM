@@ -1,0 +1,41 @@
+{
+  "artifact": {
+    "after_sha256": "d71a43536ef67f493fd614f5cddf875187878c5b2a4e6e6787a6f7416957ab9c",
+    "before_sha256": "d71a43536ef67f493fd614f5cddf875187878c5b2a4e6e6787a6f7416957ab9c"
+  },
+  "bundle_schema_version": "humanize-unit-rewrite-bundle/v4",
+  "bundle_sha256": "3e2c43ab7c6790783c26d05ee30023b8d2fb1e73f31107f1738d04ba2fb69138",
+  "chunk_binding_sha256": "965a3b947853859ab2fb6b1e92721d42aa9f123557b4115a54100a133c0d3f10",
+  "decision": "NO_CHANGE",
+  "diff": {
+    "path": "diffs/U-7da5048ae9fc.diff",
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  "evidence_sha256": "22bf9f7bd29ae4d69a222956c71509a2f6f674b15c4c8aa883460a27794e8064",
+  "intent": {
+    "evidence_spans": [
+      {
+        "end_line": 4,
+        "id": "S1",
+        "sha256": "8b257a4b8c4847fa697b8283bf3d30a40bd139a20f86e698230725ab020a0fec",
+        "start_line": 2
+      }
+    ],
+    "reason": "珍稀物种评价同时给出参数响应和结构限制，原段承担归因边界说明。"
+  },
+  "intent_diff_binding": {
+    "changed_source_ranges": [],
+    "reason": "NO_CHANGE",
+    "status": "NOT_APPLICABLE"
+  },
+  "limitations": {
+    "academic_correctness": "NOT_EVALUATED",
+    "independent_reading_benefit_verified": false,
+    "intent_truthfulness_verified": false
+  },
+  "paired_quality_review_request_sha256": "f8952aac0628fb23ecf64c7db9d1db31da64acd83392dc0e7f8f86aafc2dc26f",
+  "reason_code": "BOUND_INTENT_PRESENT",
+  "schema_version": "humanize-rewrite-intent-evidence/v1",
+  "status": "PASS",
+  "unit_id": "U-7da5048ae9fc"
+}

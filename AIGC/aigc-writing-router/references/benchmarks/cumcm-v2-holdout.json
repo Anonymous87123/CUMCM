@@ -1,0 +1,55 @@
+{
+  "schema": "aigc-style-benchmark-suite/v1",
+  "suite_id": "cumcm-v2-holdout",
+  "version": "2026-08-20",
+  "split": "holdout",
+  "benchmark_goal": "preservation",
+  "providers": ["humanize-academic-chinese"],
+  "required_trials": 3,
+  "holdout_policy": {
+    "curator": "CUMCM team maintainer",
+    "release_id": "cumcm-style-stack-v2"
+  },
+  "purpose": "Sealed A/B/C holdout for the v2 source-inherited KEEP bridge. Do not use its passages or ratings to tune this release.",
+  "cases": [
+    {
+      "id": "a-reflection-boundary",
+      "scene": {"document_type": "mcm", "document_format": "plain", "scope": "local"},
+      "source": "cumcm-v2-holdout/sources/a-reflection-boundary.txt",
+      "challenge_tags": ["public-judgment", "boundary-conditions", "math-protection", "semantic-fidelity"],
+      "provenance": {
+        "record_id": "2020_A212_P0338",
+        "paper": "2020/A212.pdf",
+        "page": 13,
+        "section": "solve",
+        "index": "mcm-cup-standard-write/references/fulltext-style-index.jsonl:338"
+      }
+    },
+    {
+      "id": "b-resource-constraint",
+      "scene": {"document_type": "mcm", "document_format": "plain", "scope": "local"},
+      "source": "cumcm-v2-holdout/sources/b-resource-constraint.txt",
+      "challenge_tags": ["public-judgment", "specificity", "boundary-conditions", "semantic-fidelity"],
+      "provenance": {
+        "record_id": "2024_B195_P6543",
+        "paper": "2024/B195.pdf",
+        "page": 3,
+        "section": "analysis",
+        "index": "mcm-cup-standard-write/references/fulltext-style-index.jsonl:6543"
+      }
+    },
+    {
+      "id": "c-model-comparison",
+      "scene": {"document_type": "mcm", "document_format": "plain", "scope": "local"},
+      "source": "cumcm-v2-holdout/sources/c-model-comparison.txt",
+      "challenge_tags": ["public-judgment", "specificity", "result-explanation", "semantic-fidelity"],
+      "provenance": {
+        "record_id": "2021_C169_P3092",
+        "paper": "2021/C169.pdf",
+        "page": 29,
+        "section": "analysis",
+        "index": "mcm-cup-standard-write/references/fulltext-style-index.jsonl:3092"
+      }
+    }
+  ]
+}

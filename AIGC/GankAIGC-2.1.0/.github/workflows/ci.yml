@@ -1,0 +1,113 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  backend:
+    runs-on: ubuntu-latest
+    services:
+      postgres:
+        image: postgres:16-alpine
+        env:
+          POSTGRES_DB: gankaigc_test
+          POSTGRES_USER: ai_polish
+          POSTGRES_PASSWORD: postgres
+        ports:
+          - 5432:5432
+        options: >-
+          --health-cmd "pg_isready -U ai_polish -d gankaigc_test"
+          --health-interval 10s
+          --health-timeout 5s
+          --health-retries 5
+    env:
+      GANKAIGC_TEST_DATABASE_URL: postgresql://ai_polish:postgres@127.0.0.1:5432/gankaigc_test
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+          cache: pip
+          cache-dependency-path: package/requirements.txt
+
+      - name: Install backend dependencies
+        working-directory: package
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r requirements.txt
+
+      - name: Run backend tests
+        run: python -m pytest package/backend/tests -q
+
+  frontend:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: npm
+          cache-dependency-path: package/frontend/package-lock.json
+
+      - name: Install frontend dependencies
+        working-directory: package/frontend
+        run: npm ci
+
+      - name: Build frontend
+        working-directory: package/frontend
+        run: npm run build
+
+      - name: Test browser extension quota sync
+        run: |
+          node --check browser-extension/zhuque-quota.js
+          node --check browser-extension/background.js
+          node --check browser-extension/content-zhuque.js
+          node --check browser-extension/injected-zhuque.js
+          node --test browser-extension/tests/*.test.cjs
+
+      - name: Upload frontend dist
+        uses: actions/upload-artifact@v4
+        with:
+          name: frontend-dist
+          path: package/frontend/dist
+          if-no-files-found: error
+
+  docker:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate Docker Compose config
+        run: |
+          cp .env.docker.example .env.docker
+          touch .env.runtime
+          chmod 600 .env.runtime
+          mkdir -p .ci-secrets
+          for name in postgres_password bootstrap_database_url migrator_database_url app_database_url \
+            migrator_password app_password backup_password secret_key admin_password encryption_key \
+            openai_api_key polish_api_key enhance_api_key emotion_api_key compression_api_key restic_password; do
+            printf 'ci-placeholder-not-a-real-secret\n' > ".ci-secrets/$name"
+            chmod 600 ".ci-secrets/$name"
+          done
+          docker compose --env-file .env.docker config --quiet
+          GANKAIGC_SECRETS_DIR=.ci-secrets \
+            GANKAIGC_IMAGE=ghcr.io/example/gankaigc@sha256:aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa \
+            docker compose --env-file .env.docker \
+            -f docker-compose.yml -f docker-compose.prod.yml config --quiet
+
+      - name: Build Docker image
+        run: docker build --build-arg DOCKER_IMAGE_PREFIX= -t gankaigc:ci .

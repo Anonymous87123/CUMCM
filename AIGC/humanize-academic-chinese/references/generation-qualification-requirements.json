@@ -1,0 +1,196 @@
+{
+  "schema_version": "humanize-generation-qualification-requirements/v1",
+  "requirements_version": "2.14.0",
+  "contract_version": "2026-07-24.1",
+  "contract_file": "references/evaluation-contract.md",
+  "contract_matrices": {
+    "MODE": {
+      "first": 1,
+      "last": 6,
+      "minimum_evidence": "E3",
+      "severity": "P1",
+      "severity_overrides": {
+        "MODE-01": "P0",
+        "MODE-06": "P0"
+      }
+    },
+    "INT": {
+      "first": 1,
+      "last": 7,
+      "minimum_evidence": "E3",
+      "severity": "P1",
+      "severity_overrides": {
+        "INT-05": "P0",
+        "INT-06": "P0"
+      }
+    },
+    "OUT": {
+      "first": 1,
+      "last": 6,
+      "minimum_evidence": "E3",
+      "severity": "P1",
+      "severity_overrides": {
+        "OUT-06": "P0"
+      }
+    },
+    "DEC": {
+      "first": 1,
+      "last": 9,
+      "minimum_evidence": "E3",
+      "severity": "P1"
+    },
+    "ROUTE": {
+      "first": 1,
+      "last": 14,
+      "minimum_evidence": "E3",
+      "severity": "P1",
+      "severity_overrides": {
+        "ROUTE-12": "P0",
+        "ROUTE-14": "P0"
+      }
+    },
+    "VOICE": {
+      "first": 1,
+      "last": 14,
+      "minimum_evidence": "E3",
+      "severity": "P1"
+    },
+    "ROLE": {
+      "first": 1,
+      "last": 17,
+      "minimum_evidence": "E3",
+      "severity": "P0"
+    },
+    "LONG": {
+      "first": 1,
+      "last": 28,
+      "minimum_evidence": "E3",
+      "severity": "P0"
+    }
+  },
+  "pathology_matrix": {
+    "prefix": "PATH",
+    "first": 1,
+    "last": 16,
+    "variants": [
+      "positive",
+      "negative",
+      "conflict"
+    ],
+    "minimum_evidence": "E3",
+    "severity": "P1"
+  },
+  "scene_matrix": {
+    "scenes": [
+      "COURSE",
+      "MODELING",
+      "RESEARCH",
+      "GENERAL"
+    ],
+    "variants": [
+      "positive",
+      "negative",
+      "conflict"
+    ],
+    "minimum_evidence": "E3",
+    "severity": "P1"
+  },
+  "report_informed_matrix": {
+    "variants": [
+      "unique-mapping",
+      "duplicate-mapping",
+      "unmappable",
+      "score-only",
+      "malicious-html",
+      "mixed-evasion-request"
+    ],
+    "minimum_evidence": "E3",
+    "severity": "P1",
+    "severity_overrides": {
+      "REPORT/malicious-html": "P0",
+      "REPORT/mixed-evasion-request": "P0"
+    }
+  },
+  "repeated_evaluations": {
+    "idempotency": {
+      "atom_prefix": "IDEMPOTENCY",
+      "scenes": [
+        "COURSE",
+        "MODELING",
+        "RESEARCH",
+        "GENERAL"
+      ],
+      "cases_per_scene": 3,
+      "minimum_evidence": "E3",
+      "severity": "P1"
+    },
+    "blind_review": {
+      "atom_prefix": "BLIND_REVIEW",
+      "scenes": [
+        "COURSE",
+        "MODELING",
+        "RESEARCH",
+        "GENERAL"
+      ],
+      "cases_per_scene": 3,
+      "minimum_evidence": "E4",
+      "severity": "P1",
+      "minimum_distinct_human_reviewers": 2,
+      "identity_verified": false
+    }
+  },
+  "global_atoms": [
+    {
+      "id": "STABILITY/route-owner-three-runs",
+      "kind": "route_stability",
+      "minimum_runs": 3,
+      "minimum_evidence": "E3",
+      "severity": "P1"
+    },
+    {
+      "id": "PROTECTED/hash-zero",
+      "kind": "protected_hash",
+      "minimum_spans": 1,
+      "minimum_evidence": "E2",
+      "severity": "P0"
+    }
+  ],
+  "evidence_levels": {
+    "E0": "CLAIM_ONLY",
+    "E1": "ARCHIVED_ARTIFACT",
+    "E2": "DETERMINISTIC_REPLAY",
+    "E3": "BLIND_FORWARD",
+    "E4": "BLIND_HUMAN_REVIEW"
+  },
+  "status_mapping": {
+    "PASS": 0,
+    "FAIL": 1,
+    "REVIEW": 2
+  },
+  "qualification_exit_codes": {
+    "PASS": 0,
+    "FAIL": 1,
+    "NOT_EVALUATED": 2
+  },
+  "evidence_binding_contract": {
+    "generation_run_record_schema": "humanize-generation-run-record/v2",
+    "qualification_manifest_schema": "humanize-generation-qualification-manifest/v2",
+    "oracle_catalog_schema": "humanize-generation-oracle-catalog/v2",
+    "route_observation_schema": "humanize-route-observation/v1",
+    "blindness_attestation": "CALLER_ATTESTED_STAGED_CONTEXT",
+    "independence_attestation": "CALLER_ATTESTED_DISTINCT_RUN_RECORDS",
+    "required_run_artifact_roles": [
+      "input",
+      "output",
+      "prompt",
+      "context"
+    ],
+    "required_current_bindings": [
+      "skill_snapshot_sha256",
+      "contract_sha256",
+      "requirements_sha256",
+      "oracle_catalog_sha256",
+      "trust_policy_sha256"
+    ]
+  }
+}

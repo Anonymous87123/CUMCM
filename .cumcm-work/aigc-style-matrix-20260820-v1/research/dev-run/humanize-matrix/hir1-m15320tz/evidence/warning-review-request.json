@@ -1,0 +1,344 @@
+{
+  "artifact": {
+    "after_sha256": "a88c708588b49ffc00b0b82644bd102d7facd7b977f6bdf82724b6e2bfd1d267",
+    "before_sha256": "f43ffb1e27fad66352ed729fb5e8aa71244ab419b8b41b67351feb8730d7a998"
+  },
+  "policy_hashes": {
+    "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+    "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+    "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+    "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+    "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+    "runtime_contract_sha256": "0c47be90824fe7cd20b1205f672fd50b59100979e18f297597c44cfc26b82f8a",
+    "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+    "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+  },
+  "request_sha256": "1a1f4dec8e131b735b659860c8667c8408c54cf268a1c6e8a9f4e907adc5e990",
+  "schema": "humanize-warning-review-request/v1",
+  "validation_context": {
+    "document_format": "tex",
+    "document_scope": "DOCUMENT",
+    "mode": "REWRITE",
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "scene": "RESEARCH",
+    "strict_speech_acts": false
+  },
+  "warnings": [
+    {
+      "code": "SPEECH_ACT_MODALITY_SCOPE_CHANGED",
+      "details": {
+        "after": {
+          "仅": 2,
+          "可能": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0006",
+            "column": 69,
+            "end": 69,
+            "end_column": 70,
+            "end_line": 1,
+            "line": 1,
+            "marker": "仅",
+            "sentence_context": "Q1--Q3 的结果显示，仅改变分组就会改变局部条件性",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 68
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0014",
+            "column": 178,
+            "end": 179,
+            "end_column": 180,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可能",
+            "sentence_context": "Q4 进一步表明，结构纯度并不是终点表现的充分预测因子：在选定的病态情形下，曲率感知分组即使结构纯度更低，也仍可能在终点上优于交互优先基线 DG2",
+            "sentence_id": "T0004",
+            "side": "after",
+            "start": 177
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0020",
+            "column": 287,
+            "end": 287,
+            "end_column": 288,
+            "end_line": 1,
+            "line": 1,
+            "marker": "仅",
+            "sentence_context": "综合来看，本文在特定设定下给出的经验判断是明确的：分组质量不能仅靠交互保持来刻画，诱导子问题的局部条件性是另一条与最终性能直接相关的解释维度",
+            "sentence_id": "T0006",
+            "side": "after",
+            "start": 286
+          }
+        ],
+        "before": {
+          "仅": 2,
+          "可能": 1,
+          "必须": 1
+        },
+        "before_occurrences": [
+          {
+            "category": "modality_scope",
+            "claim_id": "C0003",
+            "column": 31,
+            "end": 32,
+            "end_column": 33,
+            "end_line": 1,
+            "line": 1,
+            "marker": "必须",
+            "sentence_context": "本文的核心判断是：协同进化中的变量组不仅是交互集合，也是后端必须实际求解的诱导子问题",
+            "sentence_id": "T0001",
+            "side": "before",
+            "start": 30
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0006",
+            "column": 77,
+            "end": 77,
+            "end_column": 78,
+            "end_line": 1,
+            "line": 1,
+            "marker": "仅",
+            "sentence_context": "在本文固定的 CC+CMA-ES 设定下，Q1--Q3 共同表明，仅改变分组就足以改写局部条件性",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 76
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0013",
+            "column": 192,
+            "end": 193,
+            "end_column": 194,
+            "end_line": 1,
+            "line": 1,
+            "marker": "可能",
+            "sentence_context": "Q4 进一步表明，结构纯度并不是终点表现的充分预测因子：在选定的病态情形下，曲率感知分组即使结构纯度更低，也仍可能在终点上优于交互优先基线 DG2",
+            "sentence_id": "T0005",
+            "side": "before",
+            "start": 191
+          },
+          {
+            "category": "modality_scope",
+            "claim_id": "C0019",
+            "column": 301,
+            "end": 301,
+            "end_column": 302,
+            "end_line": 1,
+            "line": 1,
+            "marker": "仅",
+            "sentence_context": "综合来看，本文在特定设定下给出的经验判断是明确的：分组质量不能仅靠交互保持来刻画，诱导子问题的局部条件性是另一条与最终性能直接相关的解释维度",
+            "sentence_id": "T0007",
+            "side": "before",
+            "start": 300
+          }
+        ],
+        "raw_delta": {
+          "added": {},
+          "removed": {
+            "必须": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {},
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0006",
+                "column": 69,
+                "end": 69,
+                "end_column": 70,
+                "end_line": 1,
+                "line": 1,
+                "marker": "仅",
+                "sentence_context": "Q1--Q3 的结果显示，仅改变分组就会改变局部条件性",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 68
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0003",
+                "column": 31,
+                "end": 32,
+                "end_column": 33,
+                "end_line": 1,
+                "line": 1,
+                "marker": "必须",
+                "sentence_context": "本文的核心判断是：协同进化中的变量组不仅是交互集合，也是后端必须实际求解的诱导子问题",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 30
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0006",
+                "column": 77,
+                "end": 77,
+                "end_column": 78,
+                "end_line": 1,
+                "line": 1,
+                "marker": "仅",
+                "sentence_context": "在本文固定的 CC+CMA-ES 设定下，Q1--Q3 共同表明，仅改变分组就足以改写局部条件性",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 76
+              }
+            ],
+            "removed": {
+              "必须": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'modality_scope'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "de20317cd414d80dd9c095445ddb203efbfbaef687acda07f982752c5b388cfc"
+    },
+    {
+      "code": "SPEECH_ACT_REPORTING_OBSERVATION_CHANGED",
+      "details": {
+        "after": {
+          "结果显示": 1,
+          "表明": 1
+        },
+        "after_occurrences": [
+          {
+            "category": "reporting_observation",
+            "claim_id": "C0005",
+            "column": 64,
+            "end": 67,
+            "end_column": 68,
+            "end_line": 1,
+            "line": 1,
+            "marker": "结果显示",
+            "sentence_context": "Q1--Q3 的结果显示，仅改变分组就会改变局部条件性",
+            "sentence_id": "T0002",
+            "side": "after",
+            "start": 63
+          },
+          {
+            "category": "reporting_observation",
+            "claim_id": "C0010",
+            "column": 129,
+            "end": 130,
+            "end_column": 131,
+            "end_line": 1,
+            "line": 1,
+            "marker": "表明",
+            "sentence_context": "Q4 进一步表明，结构纯度并不是终点表现的充分预测因子：在选定的病态情形下，曲率感知分组即使结构纯度更低，也仍可能在终点上优于交互优先基线 DG2",
+            "sentence_id": "T0004",
+            "side": "after",
+            "start": 128
+          }
+        ],
+        "before": {
+          "表明": 2
+        },
+        "before_occurrences": [
+          {
+            "category": "reporting_observation",
+            "claim_id": "C0005",
+            "column": 74,
+            "end": 75,
+            "end_column": 76,
+            "end_line": 1,
+            "line": 1,
+            "marker": "表明",
+            "sentence_context": "在本文固定的 CC+CMA-ES 设定下，Q1--Q3 共同表明，仅改变分组就足以改写局部条件性",
+            "sentence_id": "T0002",
+            "side": "before",
+            "start": 73
+          },
+          {
+            "category": "reporting_observation",
+            "claim_id": "C0009",
+            "column": 143,
+            "end": 144,
+            "end_column": 145,
+            "end_line": 1,
+            "line": 1,
+            "marker": "表明",
+            "sentence_context": "Q4 进一步表明，结构纯度并不是终点表现的充分预测因子：在选定的病态情形下，曲率感知分组即使结构纯度更低，也仍可能在终点上优于交互优先基线 DG2",
+            "sentence_id": "T0005",
+            "side": "before",
+            "start": 142
+          }
+        ],
+        "raw_delta": {
+          "added": {
+            "结果显示": 1
+          },
+          "removed": {
+            "表明": 1
+          }
+        },
+        "residual_delta": [
+          {
+            "added": {
+              "结果显示": 1
+            },
+            "after_claim_id": null,
+            "after_occurrences": [
+              {
+                "category": "reporting_observation",
+                "claim_id": "C0005",
+                "column": 64,
+                "end": 67,
+                "end_column": 68,
+                "end_line": 1,
+                "line": 1,
+                "marker": "结果显示",
+                "sentence_context": "Q1--Q3 的结果显示，仅改变分组就会改变局部条件性",
+                "sentence_id": "T0002",
+                "side": "after",
+                "start": 63
+              }
+            ],
+            "before_claim_id": null,
+            "before_occurrences": [
+              {
+                "category": "reporting_observation",
+                "claim_id": "C0005",
+                "column": 74,
+                "end": 75,
+                "end_column": 76,
+                "end_line": 1,
+                "line": 1,
+                "marker": "表明",
+                "sentence_context": "在本文固定的 CC+CMA-ES 设定下，Q1--Q3 共同表明，仅改变分组就足以改写局部条件性",
+                "sentence_id": "T0002",
+                "side": "before",
+                "start": 73
+              }
+            ],
+            "removed": {
+              "表明": 1
+            },
+            "scope": "UNALIGNED_POOL"
+          }
+        ],
+        "safe_compression_allowances": []
+      },
+      "message": "Speech-act markers changed in category 'reporting_observation'; review semantic force manually.",
+      "severity": "warning",
+      "warning_fingerprint": "123682acfa0bc5c73ae3cdc1bd8f84ae867ae817585c11547df59cbe537ebd7a"
+    }
+  ]
+}

@@ -1,0 +1,1028 @@
+import { describe, it, before, after } from 'node:test';
+import assert from 'node:assert';
+import { EventEmitter } from 'node:events';
+import { createServer } from 'node:http';
+import { main, resolvePromptMode } from '../../src/cli.js';
+import { setBrowserDiffRuntimeForTests, resetBrowserDiffRuntimeForTests } from '../../src/browser-diff.js';
+import { setOcrRuntimeForTests, resetOcrRuntimeForTests } from '../../src/ocr.js';
+import { startMockServer } from './helpers/mock-server.js';
+import { fileURLToPath, pathToFileURL } from 'node:url';
+import { mkdtempSync, rmSync, writeFileSync } from 'node:fs';
+import { tmpdir } from 'node:os';
+import { dirname, join, resolve } from 'node:path';
+
+const __dirname = dirname(fileURLToPath(import.meta.url));
+const REPO_ROOT = resolve(__dirname, '../..');
+
+let mock;
+let mockApiKeyPath;
+let keyDir;
+
+async function captureConsole(fn) {
+  const logs = [];
+  const errors = [];
+  const originalLog = console.log;
+  const originalError = console.error;
+  console.log = (...args) => logs.push(args.join(' '));
+  console.error = (...args) => errors.push(args.join(' '));
+  try {
+    await fn();
+  } finally {
+    console.log = originalLog;
+    console.error = originalError;
+  }
+  return { logs, errors };
+}
+
+function makeFakeSpawn(onSpawn) {
+  return (command, args) => {
+    const child = new EventEmitter();
+    child.unref = () => {};
+    onSpawn?.({ command, args, child });
+    return child;
+  };
+}
+
+async function withEnv(envOverrides, fn) {
+  const original = {};
+  for (const key of Object.keys(envOverrides)) {
+    original[key] = process.env[key];
+    if (envOverrides[key] === undefined) delete process.env[key];
+    else process.env[key] = envOverrides[key];
+  }
+  try {
+    return await fn();
+  } finally {
+    for (const key of Object.keys(original)) {
+      if (original[key] === undefined) delete process.env[key];
+      else process.env[key] = original[key];
+    }
+  }
+}
+
+describe('CLI End-to-End with Mock API', () => {
+  before(async () => {
+    mock = await startMockServer('This is the humanized result.');
+    keyDir = mkdtempSync(join(tmpdir(), 'patina-api-key-'));
+    mockApiKeyPath = resolve(keyDir, 'key.txt');
+    writeFileSync(mockApiKeyPath, 'test-key\n');
+  });
+
+  after(async () => {
+    await mock.stop();
+    if (keyDir) rmSync(keyDir, { recursive: true, force: true });
+  });
+
+  it('should call LLM API with correct prompt structure', async () => {
+    mock.callCount = 0;
+    mock.lastRequestBody = null;
+
+    const testFile = resolve(REPO_ROOT, 'tests/e2e/test-input-en.txt');
+
+    await main([
+      '--lang', 'en',
+      '--document-type', 'default',
+      '--api-key-file', mockApiKeyPath,
+      '--base-url', `http://127.0.0.1:${mock.port}`,
+      '--model', 'gpt-5',
+      testFile,
+    ]);
+
+    assert.strictEqual(mock.callCount, 1, 'Should make exactly one API call');
+    assert.ok(mock.lastRequestBody, 'Request body should be captured');
+    assert.strictEqual(mock.lastRequestBody.model, 'gpt-5');
+    assert.ok(mock.lastRequestBody.messages[0].content.includes('Pattern Packs'));
+    assert.ok(mock.lastRequestBody.messages[0].content.includes('Input Text'));
+  });
+
+  it('uses the compact rewrite prompt internally for gemini models', async () => {
+    mock.callCount = 0;
+    mock.lastRequestBody = null;
+
+    const testFile = resolve(REPO_ROOT, 'tests/e2e/test-input-en.txt');
+
+    await main([
+      '--lang', 'en',
+      '--backend', 'openai-http',
+      '--api-key-file', mockApiKeyPath,
+      '--base-url', `http://127.0.0.1:${mock.port}`,
+      '--model', 'gemini-3-flash-preview',
+      testFile,
+    ]);
+
+    const prompt = mock.lastRequestBody.messages[0].content;
+    assert.ok(prompt.includes('AI signal words (reference)'));
+    assert.ok(!prompt.includes('Follow the 3-Phase pipeline'));
+  });
+
+  it('uses compact prompt mode for local agent CLI backends', () => {
+    assert.strictEqual(resolvePromptMode({ backend: 'claude-cli' }), 'minimal');
+    assert.strictEqual(resolvePromptMode({ backend: 'kimi-cli' }), 'minimal');
+    assert.strictEqual(resolvePromptMode({ backend: 'gemini-cli' }), 'minimal');
+    assert.strictEqual(resolvePromptMode({ backend: 'openai-http', model: 'gpt-5' }), 'strict');
+  });
+
+  it('should pass correct temperature', async () => {
+    mock.callCount = 0;
+    mock.lastRequestBody = null;
+
+    const testFile = resolve(REPO_ROOT, 'tests/e2e/test-input-en.txt');
+
+    await main([
+      '--lang', 'en',
+      '--api-key-file', mockApiKeyPath,
+      '--base-url', `http://127.0.0.1:${mock.port}`,
+      '--model', 'gpt-5',
+      testFile,
+    ]);
+
+    assert.strictEqual(mock.lastRequestBody.temperature, 0.7);
+  });
+
+  it('uses OPENAI_API_KEY for the default HTTP backend when no key file flag is passed', async () => {
+    mock.callCount = 0;
+    mock.lastRequestBody = null;
+    mock.lastAuthorization = null;
+
+    const testFile = resolve(REPO_ROOT, 'tests/e2e/test-input-en.txt');
+
+    await withEnv({
+      PATINA_API_KEY: undefined,
+      PATINA_API_KEY_FILE: undefined,
+      OPENAI_API_KEY: 'openai-env-key',
+      GEMINI_API_KEY: undefined,
+      GROQ_API_KEY: undefined,
+      TOGETHER_API_KEY: undefined,
+      KIMI_API_KEY: undefined,
+      MOONSHOT_API_KEY: undefined,
+    }, async () => {
+      await main([
+        '--lang', 'en',
+        '--base-url', `http://127.0.0.1:${mock.port}`,
+        '--model', 'gpt-5',
+        testFile,
+      ]);
+    });
+
+    assert.strictEqual(mock.callCount, 1, 'Should make exactly one API call');
+    assert.strictEqual(mock.lastAuthorization, 'Bearer openai-env-key');
+  });
+
+  it('keeps selected provider env keys ahead of generic PATINA_API_KEY', async () => {
+    mock.callCount = 0;
+    mock.lastRequestBody = null;
+    mock.lastAuthorization = null;
+
+    const testFile = resolve(REPO_ROOT, 'tests/e2e/test-input-en.txt');
+
+    await withEnv({
+      PATINA_API_KEY: 'patina-env-key',
+      PATINA_API_KEY_FILE: undefined,
+      OPENAI_API_KEY: 'openai-env-key',
+      GEMINI_API_KEY: 'gemini-env-key',
+      GROQ_API_KEY: undefined,
+      TOGETHER_API_KEY: undefined,
+      KIMI_API_KEY: undefined,
+      MOONSHOT_API_KEY: undefined,
+    }, async () => {
+      await main([
+        '--lang', 'en',
+        '--provider', 'gemini',
+        '--backend', 'openai-http',
+        '--base-url', `http://127.0.0.1:${mock.port}`,
+        '--model', 'provider-test',
+        testFile,
+      ]);
+    });
+
+    assert.strictEqual(mock.callCount, 1, 'Should make exactly one API call');
+    assert.strictEqual(mock.lastAuthorization, 'Bearer gemini-env-key');
+  });
+
+  it('should handle --audit mode', async () => {
+    mock.callCount = 0;
+    mock.lastRequestBody = null;
+    await mock.stop();
+    mock = await startMockServer('Audit result: patterns detected.');
+
+    const testFile = resolve(REPO_ROOT, 'tests/e2e/test-input-en.txt');
+
+    await main([
+      '--lang', 'en',
+      '--audit',
+      '--api-key-file', mockApiKeyPath,
+      '--base-url', `http://127.0.0.1:${mock.port}`,
+      testFile,
+    ]);
+
+    assert.ok(mock.lastRequestBody.messages[0].content.includes('audit'));
+    await mock.stop();
+    mock = await startMockServer('This is the humanized result.');
+  });
+
+  it('should handle --score mode', async () => {
+    mock.callCount = 0;
+    mock.lastRequestBody = null;
+    await mock.stop();
+    mock = await startMockServer('{ "overall": 23, "interpretation": "mostly human" }');
+
+    const testFile = resolve(REPO_ROOT, 'tests/e2e/test-input-en.txt');
+
+    await main([
+      '--lang', 'en',
+      '--score',
+      '--api-key-file', mockApiKeyPath,
+      '--base-url', `http://127.0.0.1:${mock.port}`,
+      testFile,
+    ]);
+
+    assert.ok(mock.lastRequestBody.messages[0].content.includes('score'));
+    await mock.stop();
+    mock = await startMockServer('This is the humanized result.');
+  });
+
+  it('keeps stdout pure and reports the temp path on stderr when browser open fails', async () => {
+    const rewriteResponse = '[BODY]\nFirst paragraph rewritten by the mock backend for the preview test.\n[/BODY]';
+    const diffResponse = 'Pattern: 1. Generic polish\nRemoved: old\nAdded: new\nWhy: reason';
+    const dir = mkdtempSync(join(tmpdir(), 'patina-preview-openfail-'));
+    const htmlPath = join(dir, 'page.html');
+    writeFileSync(htmlPath, [
+      '<html><head><title>local</title></head><body>',
+      '<p>The first paragraph is long enough to be rewritten by the preview flow.</p>',
+      '</body></html>',
+    ].join('\n'));
+
+    setBrowserDiffRuntimeForTests({
+      tmpdir: () => '/tmp',
+      mkdtemp: () => '/tmp/patina-preview-456',
+      writeFile: () => {},
+      chmod: () => {},
+      now: () => 456,
+      platform: 'linux',
+      spawn: makeFakeSpawn(({ child }) => {
+        process.nextTick(() => child.emit('close', 1));
+      }),
+    });
+
+    mock.callCount = 0;
+    mock.requestBodies = [];
+    try {
+      await mock.stop();
+      mock = await startMockServer([
+        { responseText: rewriteResponse },
+        { responseText: diffResponse },
+      ]);
+
+      const previewRun = await captureConsole(() => main([
+        '--preview',
+        '--lang', 'en',
+        '--api-key-file', mockApiKeyPath,
+        '--base-url', `http://127.0.0.1:${mock.port}`,
+        htmlPath,
+      ]));
+
+      assert.ok(previewRun.logs.join('\n').includes('First paragraph rewritten by the mock backend'));
+      assert.strictEqual(mock.callCount, 2);
+      assert.ok(previewRun.errors.some((line) => line.includes('Preview page saved at /tmp/patina-preview-456/browser-diff-456.html')));
+      assert.ok(previewRun.errors.some((line) => line.includes('Browser open failed: browser opener exited with code 1')));
+    } finally {
+      resetBrowserDiffRuntimeForTests();
+      rmSync(dir, { recursive: true, force: true });
+      await mock.stop();
+      mock = await startMockServer('This is the humanized result.');
+    }
+  });
+
+  it('keeps rewrite success and writes an HTML warning when the secondary diff call fails', async () => {
+    const rewriteResponse = '[BODY]\nFirst paragraph rewritten by the mock backend for the preview test.\n[/BODY]';
+    const dir = mkdtempSync(join(tmpdir(), 'patina-preview-difffail-'));
+    const htmlPath = join(dir, 'page.html');
+    writeFileSync(htmlPath, [
+      '<html><head><title>local</title></head><body>',
+      '<p>The first paragraph is long enough to be rewritten by the preview flow.</p>',
+      '</body></html>',
+    ].join('\n'));
+    const writes = [];
+
+    setBrowserDiffRuntimeForTests({
+      tmpdir: () => '/tmp',
+      mkdtemp: () => '/tmp/patina-preview-789',
+      writeFile: (_path, data) => {
+        writes.push(data);
+      },
+      chmod: () => {},
+      now: () => 789,
+      platform: 'linux',
+      spawn: makeFakeSpawn(({ child }) => {
+        process.nextTick(() => child.emit('close', 0));
+      }),
+    });
+
+    mock.callCount = 0;
+    mock.requestBodies = [];
+    try {
+      await mock.stop();
+      mock = await startMockServer([
+        { responseText: rewriteResponse },
+        { responseText: 'backend failed', statusCode: 500 },
+      ]);
+
+      const previewRun = await captureConsole(() => main([
+        '--preview',
+        '--lang', 'en',
+        '--max-retries',
+        '0',
+        '--api-key-file', mockApiKeyPath,
+        '--base-url', `http://127.0.0.1:${mock.port}`,
+        htmlPath,
+      ]));
+
+      assert.match(previewRun.logs.join('\n'), /First paragraph rewritten by the mock backend/);
+      assert.strictEqual(mock.callCount, 2);
+      assert.ok(previewRun.errors.some((line) => line.includes('preview explanation failed')));
+      // No explanation and no image findings: the notes panel is omitted
+      // entirely rather than rendered empty.
+      assert.ok(!writes[0].includes('<details class="ptna-notes">'));
+      assert.ok(writes[0].includes('<span class="ptna-after">First paragraph rewritten by the mock backend for the preview test.</span>'));
+    } finally {
+      resetBrowserDiffRuntimeForTests();
+      rmSync(dir, { recursive: true, force: true });
+      await mock.stop();
+      mock = await startMockServer('This is the humanized result.');
+    }
+  });
+
+  it('serves the preview page at a token URL with --preview --serve and stops when idle', async () => {
+    const rewriteResponse = '[BODY]\nFirst paragraph rewritten by the mock backend for the preview test.\n[/BODY]';
+    const diffResponse = 'Pattern: 1. Generic polish\nRemoved: old\nAdded: new\nWhy: reason';
+    const dir = mkdtempSync(join(tmpdir(), 'patina-preview-serve-'));
+    const htmlPath = join(dir, 'page.html');
+    writeFileSync(htmlPath, [
+      '<html><head><title>local</title></head><body>',
+      '<p>The first paragraph is long enough to be rewritten by the preview flow.</p>',
+      '</body></html>',
+    ].join('\n'));
+
+    const spawns = [];
+    setBrowserDiffRuntimeForTests({
+      tmpdir: () => '/tmp',
+      mkdtemp: () => '/tmp/patina-preview-serve',
+      writeFile: () => {},
+      chmod: () => {},
+      now: () => 999,
+      platform: 'linux',
+      spawn: makeFakeSpawn(({ command, args }) => {
+        spawns.push({ command, args });
+      }),
+      randomToken: () => 'e2etoken',
+      idleTimeoutMs: 750,
+    });
+
+    mock.callCount = 0;
+    mock.requestBodies = [];
+    const logs = [];
+    const errors = [];
+    const originalLog = console.log;
+    const originalError = console.error;
+    console.log = (...args) => logs.push(args.join(' '));
+    console.error = (...args) => errors.push(args.join(' '));
+    try {
+      await mock.stop();
+      mock = await startMockServer([
+        { responseText: rewriteResponse },
+        { responseText: diffResponse },
+      ]);
+
+      const mainPromise = main([
+        '--preview',
+        '--serve',
+        '--lang', 'en',
+        '--api-key-file', mockApiKeyPath,
+        '--base-url', `http://127.0.0.1:${mock.port}`,
+        htmlPath,
+      ]);
+
+      const deadline = Date.now() + 5000;
+      let serveLine;
+      while (!(serveLine = errors.find((line) => line.includes('Serving preview at')))) {
+        if (Date.now() > deadline) throw new Error('serve URL never appeared on stderr');
+        await new Promise((r) => setTimeout(r, 10));
+      }
+      const url = serveLine.match(/http:\/\/127\.0\.0\.1:\d+\/e2etoken\//)?.[0];
+      assert.ok(url, `expected token URL in: ${serveLine}`);
+
+      const page = await fetch(url);
+      assert.strictEqual(page.status, 200);
+      const body = await page.text();
+      assert.ok(body.includes('First paragraph rewritten by the mock backend for the preview test.'));
+      assert.ok(body.includes('Pattern: 1. Generic polish'));
+
+      await mainPromise;
+
+      assert.deepStrictEqual(spawns, [], 'serve mode must not spawn a window opener');
+      assert.ok(errors.some((line) => line.includes('Preview page saved at /tmp/patina-preview-serve/browser-diff-999.html')));
+      assert.ok(errors.some((line) => line.includes('Stops after 10 idle minutes')));
+      assert.ok(logs.join('\n').includes('First paragraph rewritten by the mock backend'));
+      assert.strictEqual(mock.callCount, 2);
+    } finally {
+      console.log = originalLog;
+      console.error = originalError;
+      resetBrowserDiffRuntimeForTests();
+      rmSync(dir, { recursive: true, force: true });
+      await mock.stop();
+      mock = await startMockServer('This is the humanized result.');
+    }
+  });
+
+  it('rewrites a fetched page in place with --preview', async () => {
+    const pageHtml = [
+      '<html><head><title>page</title>',
+      '<link rel="stylesheet" href="/site.css">',
+      '</head><body>',
+      '<script>window.__DATA__ = {"p": "<p>serialized markup that must never be rewritten</p>"}</script>',
+      '<nav><li><a href="/about">a navigation item with nested markup stays untouched</a></li></nav>',
+      '<p>The first paragraph is long enough to be rewritten by the preview flow.</p>',
+      '<p>The second paragraph also clears the minimum length threshold easily.</p>',
+      '</body></html>',
+    ].join('\n');
+    const pageCss = '@font-face{font-family:t;src:url(./media/t.woff2)format("woff2")}body{color:#111}';
+    const pageFont = Buffer.from('E2EFONT');
+    const pageServer = createServer((req, res) => {
+      if (req.url === '/site.css') {
+        res.writeHead(200, { 'content-type': 'text/css' });
+        res.end(pageCss);
+        return;
+      }
+      if (req.url === '/media/t.woff2') {
+        res.writeHead(200, { 'content-type': 'font/woff2' });
+        res.end(pageFont);
+        return;
+      }
+      res.writeHead(200, { 'content-type': 'text/html; charset=utf-8' });
+      res.end(pageHtml);
+    });
+    await new Promise((resolveListen) => pageServer.listen(0, '127.0.0.1', resolveListen));
+    const pageUrl = `http://127.0.0.1:${pageServer.address().port}/article`;
+
+    const rewriteResponse = [
+      '[BODY]',
+      'First paragraph rewritten by the mock backend for the preview test.',
+      '',
+      'Second paragraph rewritten as well, still two paragraphs total.',
+      '[/BODY]',
+    ].join('\n');
+
+    const writes = [];
+    const spawns = [];
+    setBrowserDiffRuntimeForTests({
+      tmpdir: () => '/tmp',
+      mkdtemp: (prefix) => {
+        assert.match(prefix, /patina-preview-/);
+        return '/tmp/patina-preview-77';
+      },
+      writeFile: (path, data) => {
+        writes.push({ path, data });
+      },
+      chmod: () => {},
+      now: () => 77,
+      platform: 'linux',
+      spawn: makeFakeSpawn(({ command, args, child }) => {
+        spawns.push({ command, args });
+        process.nextTick(() => child.emit('close', 0));
+      }),
+    });
+
+    mock.callCount = 0;
+    mock.requestBodies = [];
+    try {
+      await mock.stop();
+      mock = await startMockServer([
+        { responseText: rewriteResponse },
+        { responseText: 'Pattern: 1. Generic polish\nRemoved: `old`\nAdded: `new`\nWhy: reason' },
+      ]);
+
+      const previewRun = await captureConsole(() => main([
+        '--preview',
+        '--lang', 'en',
+        '--api-key-file', mockApiKeyPath,
+        '--base-url', `http://127.0.0.1:${mock.port}`,
+        pageUrl,
+      ]));
+
+      assert.strictEqual(mock.callCount, 2);
+      // Document-brief stage: the rewrite request primes a global frame.
+      assert.ok(mock.requestBodies[0].messages[0].content.includes('Phase 0: Document Brief'));
+      assert.ok(previewRun.logs.join('\n').includes('First paragraph rewritten by the mock backend'));
+      assert.ok(previewRun.errors.some((line) => line.includes('Preview page saved at /tmp/patina-preview-77/browser-diff-77.html (2 of 2 blocks rewritten)')));
+      assert.deepStrictEqual(spawns, [{ command: 'xdg-open', args: ['/tmp/patina-preview-77/browser-diff-77.html'] }]);
+
+      const page = writes[0].data;
+      assert.ok(page.includes('<span class="ptna-after">First paragraph rewritten by the mock backend for the preview test.</span>'));
+      assert.ok(page.includes('<span class="ptna-before">The first paragraph is long enough to be rewritten by the preview flow.</span>'));
+      assert.ok(page.includes(`<base href="${pageUrl}">`));
+      // Asset freezing (#428): the same-origin stylesheet is inlined, its
+      // relative font url() embedded as a data URI.
+      assert.ok(page.includes('data-ptna-frozen='));
+      assert.ok(!page.includes('<link rel="stylesheet" href="/site.css">'));
+      assert.ok(page.includes(`url(data:font/woff2;base64,${pageFont.toString('base64')})`));
+      assert.ok(page.includes('2 of 2 blocks rewritten'));
+      assert.ok(page.includes('id="ptna-v-both"'));
+      assert.ok(page.includes('<details class="ptna-notes">'));
+      assert.ok(page.includes('Pattern: 1. Generic polish'));
+      assert.ok(page.includes('a navigation item with nested markup stays untouched'));
+      assert.ok(!page.includes('<script'));
+      assert.ok(!page.includes('serialized markup'));
+    } finally {
+      resetBrowserDiffRuntimeForTests();
+      await new Promise((resolveClose) => pageServer.close(resolveClose));
+      await mock.stop();
+      mock = await startMockServer('This is the humanized result.');
+    }
+  });
+
+  it('previews a local .html file through the snapshot pipeline', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'patina-html-preview-'));
+    const htmlPath = join(dir, 'page.html');
+    writeFileSync(htmlPath, [
+      '<html><head><title>local</title></head><body>',
+      '<div class="hero">',
+      '<p>The first paragraph is long enough to be rewritten by the preview flow.</p>',
+      '</div>',
+      '</body></html>',
+    ].join('\n'));
+
+    const rewriteResponse = '[BODY]\nFirst paragraph rewritten by the mock backend for the preview test.\n[/BODY]';
+    const writes = [];
+    setBrowserDiffRuntimeForTests({
+      tmpdir: () => '/tmp',
+      mkdtemp: () => '/tmp/patina-preview-99',
+      writeFile: (path, data) => {
+        writes.push({ path, data });
+      },
+      chmod: () => {},
+      now: () => 99,
+      platform: 'linux',
+      spawn: makeFakeSpawn(({ child }) => {
+        process.nextTick(() => child.emit('close', 0));
+      }),
+    });
+
+    mock.callCount = 0;
+    try {
+      await mock.stop();
+      mock = await startMockServer([
+        { responseText: rewriteResponse },
+        { responseText: 'Pattern: 1. Generic polish\nRemoved: old\nAdded: new\nWhy: reason' },
+      ]);
+
+      const previewRun = await captureConsole(() => main([
+        '--preview',
+        '--lang', 'en',
+        '--api-key-file', mockApiKeyPath,
+        '--base-url', `http://127.0.0.1:${mock.port}`,
+        htmlPath,
+      ]));
+
+      assert.strictEqual(mock.callCount, 2);
+      assert.ok(previewRun.errors.some((line) => line.includes('(1 of 1 blocks rewritten)')));
+      const page = writes[0].data;
+      // Snapshot pipeline, not the reading-document shell: host markup kept.
+      assert.ok(page.includes('<div class="hero">'));
+      assert.ok(!page.includes('ptna-doc'));
+      assert.ok(page.includes('<span class="ptna-after">First paragraph rewritten by the mock backend for the preview test.</span>'));
+      assert.ok(page.includes(`<base href="${pathToFileURL(htmlPath).href}">`));
+    } finally {
+      resetBrowserDiffRuntimeForTests();
+      rmSync(dir, { recursive: true, force: true });
+      await mock.stop();
+      mock = await startMockServer('This is the humanized result.');
+    }
+  });
+
+  it('annotates image text findings with --preview --ocr', async () => {
+    const dir = mkdtempSync(join(tmpdir(), 'patina-ocr-e2e-'));
+    const htmlPath = join(dir, 'page.html');
+    writeFileSync(join(dir, 'banner.png'), Buffer.from('fake-png-bytes'));
+    writeFileSync(htmlPath, [
+      '<html><head><title>ocr</title></head><body>',
+      '<p>The first paragraph is long enough to be rewritten by the preview flow.</p>',
+      '<img src="banner.png" alt="배너">',
+      '</body></html>',
+    ].join('\n'));
+
+    // Rewrite returns 2 paragraphs: the DOM block + the OCR block, both changed.
+    const rewriteResponse = [
+      '[BODY]',
+      'First paragraph rewritten by the mock backend for the preview test.',
+      '',
+      '이미지 문구를 사람답게 고쳐 쓴 결과입니다',
+      '[/BODY]',
+    ].join('\n');
+
+    const writes = [];
+    setBrowserDiffRuntimeForTests({
+      tmpdir: () => '/tmp',
+      mkdtemp: () => '/tmp/patina-preview-ocr',
+      writeFile: (path, data) => {
+        writes.push({ path, data });
+      },
+      chmod: () => {},
+      now: () => 11,
+      platform: 'linux',
+      spawn: makeFakeSpawn(({ child }) => {
+        process.nextTick(() => child.emit('close', 0));
+      }),
+    });
+    setOcrRuntimeForTests({
+      runOcr: async () => '혁신적인 솔루션으로 생산성을 극대화하세요',
+    });
+
+    mock.callCount = 0;
+    try {
+      await mock.stop();
+      mock = await startMockServer([
+        { responseText: rewriteResponse },
+        { responseText: 'Pattern: 1. Marketing puffery\nRemoved: old\nAdded: new\nWhy: reason' },
+      ]);
+
+      const previewRun = await captureConsole(() => main([
+        '--preview',
+        '--ocr',
+        '--lang', 'ko',
+        '--api-key-file', mockApiKeyPath,
+        '--base-url', `http://127.0.0.1:${mock.port}`,
+        htmlPath,
+      ]));
+
+      assert.strictEqual(mock.callCount, 2);
+      assert.ok(previewRun.errors.some((line) => line.includes('1 image(s) flagged')));
+      // stdout stays pipe-safe: the page's own text only, no OCR block.
+      const stdout = previewRun.logs.join('\n');
+      assert.ok(stdout.includes('First paragraph rewritten by the mock backend'));
+      assert.ok(!stdout.includes('이미지 문구를 사람답게'));
+
+      const page = writes[0].data;
+      // The <img> gets an on-page badge, and the finding card embeds the
+      // extracted text + suggestion (+ a thumbnail of the OCR'd image).
+      assert.ok(page.includes('<span class="ptna-img" data-n="I1">'));
+      assert.ok(page.includes('id="ptna-img-1"'));
+      assert.ok(page.includes('혁신적인 솔루션으로 생산성을 극대화하세요'));
+      assert.ok(page.includes('이미지 문구를 사람답게 고쳐 쓴 결과입니다'));
+      assert.ok(page.includes('ptna-img-thumb'));
+      assert.ok(page.includes('href="#ptna-img-1"'));
+      assert.ok(page.includes('1 image(s)'));
+      // The notes panel auto-opens so image findings aren't hidden.
+      assert.ok(/<details class="ptna-notes" open>/.test(page));
+    } finally {
+      resetBrowserDiffRuntimeForTests();
+      resetOcrRuntimeForTests();
+      rmSync(dir, { recursive: true, force: true });
+      await mock.stop();
+      mock = await startMockServer('This is the humanized result.');
+    }
+  });
+
+  it('rejects unsupported --preview inputs before any backend call', async () => {
+    const first = resolve(REPO_ROOT, 'tests/e2e/test-input-en.txt');
+    const second = first;
+    const cases = [
+      { args: ['--serve', first], pattern: /--serve requires --preview/ },
+      { args: ['--preview'], pattern: /--preview requires exactly one input/ },
+      { args: ['--preview', first, second], pattern: /--preview requires exactly one input/ },
+      { args: ['--preview', '--diff', 'https://example.test'], pattern: /only works in rewrite mode/ },
+      { args: ['--preview', 'draft.pdf'], pattern: /--preview supports http\(s\) URLs and local \.html files only/ },
+      { args: ['--preview', 'draft.md'], pattern: /--preview supports http\(s\) URLs and local \.html files only/ },
+      { args: ['--preview', first], pattern: /--preview supports http\(s\) URLs and local \.html files only/ },
+      { args: ['--ocr', first], pattern: /--ocr requires --preview/ },
+      { args: ['--preview', '--batch', 'https://example.test'], pattern: /does not support --batch/ },
+    ];
+
+    for (const testCase of cases) {
+      mock.callCount = 0;
+      mock.requestBodies = [];
+      await assert.rejects(() => main(testCase.args), testCase.pattern);
+      assert.strictEqual(mock.callCount, 0, testCase.args.join(' '));
+      assert.strictEqual(mock.requestBodies.length, 0, testCase.args.join(' '));
+    }
+  });
+
+
+  it('should group help output and list current backend names', async () => {
+    const { logs } = await captureConsole(() => main(['--help']));
+    const help = logs.join('\n');
+
+    assert.ok(help.includes('MODES'), 'help should group modes');
+    assert.ok(help.includes('--document-type'), 'Help should document --document-type');
+    assert.ok(help.includes('DOCUMENT & VOICE'), 'help should group document and voice options');
+    assert.ok(help.includes('MODEL & AUTH'), 'help should group backend options');
+    assert.ok(help.includes('ADVANCED'), 'help should group advanced options');
+    assert.ok(help.includes('EXAMPLES'), 'help should include examples');
+    assert.ok(help.includes('--exit-on <n>'), 'help should document score gate');
+    assert.ok(help.includes('--offline'), 'help should document deterministic offline scoring');
+    assert.ok(help.includes('--format <fmt>'), 'help should document output format');
+    assert.ok(help.includes('--quiet'), 'help should document quiet logs');
+    assert.ok(!help.includes('--json-logs'), 'help should not document removed structured stderr logs');
+    assert.ok(!help.includes('--list-providers'), 'help should not document removed provider listing');
+    assert.ok(!/\n\s*--json\s+Alias for --format json/.test(help), 'help should not document removed json alias');
+    assert.ok(help.includes('--no-color'), 'help should document diff color opt-out');
+    assert.ok(help.includes('--preview'), 'help should document the preview mode');
+    assert.ok(!help.includes('--browser'), 'help should not document the removed browser alias');
+    assert.ok(
+      help.includes('openai-http, codex-cli, claude-cli, gemini-cli, kimi-cli'),
+      'help should list every backend name'
+    );
+  });
+
+  it('should wrap score output in documented JSON when --format json is used', async () => {
+    mock.callCount = 0;
+    mock.lastRequestBody = null;
+    await mock.stop();
+    mock = await startMockServer('{ "overall": 23, "categories": { "style": { "score": 10 } }, "interpretation": "mostly human" }');
+
+    const testFile = resolve(REPO_ROOT, 'tests/e2e/test-input-en.txt');
+    const { logs } = await captureConsole(() => main([
+      '--lang', 'en',
+      '--score',
+      '--exit-on', '30',
+      '--format', 'json',
+      '--api-key-file', mockApiKeyPath,
+      '--base-url', `http://127.0.0.1:${mock.port}`,
+      testFile,
+    ]));
+
+    const parsed = JSON.parse(logs.join('\n'));
+    assert.strictEqual(parsed.mode, 'score');
+    assert.strictEqual(parsed.format, 'json');
+    assert.strictEqual(parsed.overall, 23);
+    assert.deepStrictEqual(parsed.gateResult, {
+      threshold: 30,
+      overall: 23,
+      passed: true,
+      exitCode: 0,
+    });
+    assert.strictEqual(parsed.categories[0].name, 'style');
+    assert.strictEqual(parsed.register, null);
+    await mock.stop();
+    mock = await startMockServer('This is the humanized result.');
+  });
+
+  it('scores offline without resolving or calling a backend', async () => {
+    mock.callCount = 0;
+    mock.lastRequestBody = null;
+    const testFile = resolve(REPO_ROOT, 'tests/e2e/test-input-en.txt');
+    const { logs } = await captureConsole(() => main([
+      '--lang', 'en',
+      '--score',
+      '--offline',
+      '--exit-on', '100',
+      '--format', 'json',
+      testFile,
+    ]));
+
+    assert.strictEqual(mock.callCount, 0);
+    assert.strictEqual(mock.lastRequestBody, null);
+    const parsed = JSON.parse(logs.join('\n'));
+    assert.strictEqual(parsed.mode, 'score');
+    assert.strictEqual(parsed.overall, 100);
+    assert.deepStrictEqual(parsed.categories, []);
+    assert.strictEqual(parsed.scores.llm, null);
+    assert.strictEqual(parsed.scores.preference, 'deterministic-only');
+    assert.strictEqual(parsed.scores.deterministic.overall, 100);
+    assert.match(parsed.output, /LLM-judged categories unavailable/);
+    assert.deepStrictEqual(parsed.gateResult, {
+      threshold: 100,
+      overall: 100,
+      passed: true,
+      exitCode: 0,
+    });
+  });
+
+  it('fails offline scoring when deterministic analysis has no numeric score', async () => {
+    mock.callCount = 0;
+    mock.lastRequestBody = null;
+    const configPath = resolve(keyDir, 'offline-language-disabled.yaml');
+    writeFileSync(configPath, 'stylometry:\n  languages: [ko]\n');
+    const testFile = resolve(REPO_ROOT, 'tests/e2e/test-input-en.txt');
+
+    await assert.rejects(
+      () => main([
+        '--lang', 'en',
+        '--score',
+        '--offline',
+        '--config', configPath,
+        testFile,
+      ]),
+      /offline score is unavailable/,
+    );
+    assert.strictEqual(mock.callCount, 0);
+    assert.strictEqual(mock.lastRequestBody, null);
+  });
+
+  it('rejects --list-backends before offline scoring dispatch', async () => {
+    const testFile = resolve(REPO_ROOT, 'tests/e2e/test-input-en.txt');
+    await assert.rejects(
+      () => main(['--score', '--offline', '--list-backends', testFile]),
+      /--list-backends cannot be combined with --offline/,
+    );
+  });
+
+  it('should validate score weights before wrapping --format json output', async () => {
+    mock.callCount = 0;
+    mock.lastRequestBody = null;
+    await mock.stop();
+    mock = await startMockServer([
+      '| Category | Weight | Detected | Raw Score | Weighted |',
+      '|---|---:|---:|---:|---:|',
+      '| content | 0.20 | 0 | 0 | 0 |',
+      '| language | 0.20 | 0 | 0 | 0 |',
+      '| style | 0.20 | 0 | 0 | 0 |',
+      '| communication | 0.12 | 0 | 0 | 0 |',
+      '| filler | 0.08 | 0 | 0 | 0 |',
+      '| structure | 0.10 | 0 | 0 | 0 |',
+      '| viral-hook | 0.10 | 0 | 0 | 0 |',
+      '| Overall | - | - | - | 23 |',
+    ].join('\n'));
+
+    const testFile = resolve(REPO_ROOT, 'tests/e2e/test-input-en.txt');
+    const { errors, logs } = await captureConsole(() => main([
+      '--lang', 'en',
+      '--score',
+      '--format', 'json',
+      '--api-key-file', mockApiKeyPath,
+      '--base-url', `http://127.0.0.1:${mock.port}`,
+      testFile,
+    ]));
+
+    assert.strictEqual(JSON.parse(logs.join('\n')).overall, 23);
+    assert.ok(!errors.some((line) => line.includes('weight check')), errors.join('\n'));
+    await mock.stop();
+    mock = await startMockServer('This is the humanized result.');
+  });
+
+
+  it('should suppress stderr status and warnings with --quiet', async () => {
+    mock.callCount = 0;
+    mock.lastRequestBody = null;
+
+    const testFile = resolve(REPO_ROOT, 'tests/e2e/test-input-en.txt');
+    const { errors, logs } = await captureConsole(() => main([
+      '--lang', 'en',
+      '--quiet',
+      '--api-key-file', mockApiKeyPath,
+      '--base-url', `http://127.0.0.1:${mock.port}`,
+      testFile,
+    ]));
+
+    assert.strictEqual(mock.callCount, 1, 'Should make exactly one API call');
+    assert.deepStrictEqual(errors, []);
+    assert.match(logs.join('\n'), /This is the humanized result\./);
+    assert.doesNotMatch(logs.join('\n'), /register_source:/);
+  });
+
+  it('should keep --format text to the rewritten body without register metadata', async () => {
+    mock.callCount = 0;
+    mock.lastRequestBody = null;
+
+    const testFile = resolve(REPO_ROOT, 'tests/e2e/test-input-en.txt');
+    const { logs } = await captureConsole(() => main([
+      '--lang', 'en',
+      '--format', 'text',
+      '--api-key-file', mockApiKeyPath,
+      '--base-url', `http://127.0.0.1:${mock.port}`,
+      testFile,
+    ]));
+
+    assert.strictEqual(mock.callCount, 1, 'Should make exactly one API call');
+    assert.strictEqual(logs.join('\n'), 'This is the humanized result.');
+  });
+
+
+  it('should set exit code 3 when --score gate fails', async () => {
+    mock.callCount = 0;
+    mock.lastRequestBody = null;
+    await mock.stop();
+    mock = await startMockServer('{ "overall": 42, "interpretation": "mixed" }');
+
+    const oldExitCode = process.exitCode;
+    process.exitCode = undefined;
+    const testFile = resolve(REPO_ROOT, 'tests/e2e/test-input-en.txt');
+    try {
+      const { errors } = await captureConsole(() => main([
+        '--lang', 'en',
+        '--score',
+        '--exit-on', '30',
+        '--api-key-file', mockApiKeyPath,
+        '--base-url', `http://127.0.0.1:${mock.port}`,
+        testFile,
+      ]));
+
+      assert.strictEqual(process.exitCode, 3);
+      assert.ok(errors.some((line) => line.includes('score gate failed')));
+    } finally {
+      process.exitCode = oldExitCode;
+    }
+    await mock.stop();
+    mock = await startMockServer('This is the humanized result.');
+  });
+
+
+  it('should accept --exit-on as the CI score gate', async () => {
+    mock.callCount = 0;
+    mock.lastRequestBody = null;
+    await mock.stop();
+    mock = await startMockServer('{ "overall": 42, "interpretation": "mixed" }');
+
+    const oldExitCode = process.exitCode;
+    process.exitCode = undefined;
+    const testFile = resolve(REPO_ROOT, 'tests/e2e/test-input-en.txt');
+    try {
+      await captureConsole(() => main([
+        '--lang', 'en',
+        '--score',
+        '--exit-on', '30',
+        '--api-key-file', mockApiKeyPath,
+        '--base-url', `http://127.0.0.1:${mock.port}`,
+        testFile,
+      ]));
+
+      assert.strictEqual(process.exitCode, 3);
+    } finally {
+      process.exitCode = oldExitCode;
+    }
+    await mock.stop();
+    mock = await startMockServer('This is the humanized result.');
+  });
+
+  it('should reject --exit-on outside score mode', async () => {
+    const testFile = resolve(REPO_ROOT, 'tests/e2e/test-input-en.txt');
+
+    await assert.rejects(
+      () => main([
+        '--exit-on', '30',
+        '--api-key-file', mockApiKeyPath,
+        '--base-url', `http://127.0.0.1:${mock.port}`,
+        testFile,
+      ]),
+      /--exit-on can only be used with --score/
+    );
+  });
+
+
+
+  it('stops batch mode after the configured failure budget', async () => {
+    mock.callCount = 0;
+    mock.lastRequestBody = null;
+    await mock.stop();
+    mock = await startMockServer('Error occurred', 500);
+
+    const dir = mkdtempSync(join(tmpdir(), 'patina-batch-breaker-'));
+    const first = resolve(dir, 'first.txt');
+    const second = resolve(dir, 'second.txt');
+    const third = resolve(dir, 'third.txt');
+    writeFileSync(first, 'This is the first draft.', 'utf8');
+    writeFileSync(second, 'This is the second draft.', 'utf8');
+    writeFileSync(third, 'This is the third draft.', 'utf8');
+
+    await assert.rejects(
+      () => captureConsole(() => main([
+        '--lang', 'en',
+        '--batch',
+        '--max-retries', '0',
+        '--max-failures', '2',
+        '--api-key-file', mockApiKeyPath,
+        '--base-url', `http://127.0.0.1:${mock.port}`,
+        first,
+        second,
+        third,
+      ])),
+      /batch circuit breaker stopped the run/
+    );
+
+    assert.strictEqual(mock.callCount, 2, 'Should stop before the third file');
+    await mock.stop();
+    mock = await startMockServer('This is the humanized result.');
+  });
+  it('should handle API errors gracefully', async () => {
+    mock.callCount = 0;
+    mock.lastRequestBody = null;
+    await mock.stop();
+    mock = await startMockServer('Error occurred', 500);
+
+    const testFile = resolve(REPO_ROOT, 'tests/e2e/test-input-en.txt');
+
+    try {
+      await main([
+        '--lang', 'en',
+        '--api-key-file', mockApiKeyPath,
+        '--base-url', `http://127.0.0.1:${mock.port}`,
+        testFile,
+      ]);
+      assert.fail('Should have thrown an error');
+    } catch (err) {
+      assert.ok(err.message.includes('500') || err.message.includes('failed after'));
+    }
+
+    await mock.stop();
+    mock = await startMockServer('This is the humanized result.');
+  });
+});

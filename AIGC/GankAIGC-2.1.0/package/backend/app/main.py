@@ -1,0 +1,452 @@
+from fastapi import FastAPI, Request, HTTPException, Response
+from fastapi.middleware.gzip import GZipMiddleware
+from fastapi.responses import HTMLResponse
+from fastapi.staticfiles import StaticFiles
+from starlette.middleware.base import BaseHTTPMiddleware
+from contextlib import asynccontextmanager
+import os
+import sys
+import json
+from datetime import datetime
+from typing import Optional
+
+# 先导入 config 以便加载环境变量
+from app.config import (
+    ensure_runtime_secrets_safe,
+    is_server_deployment,
+    is_placeholder_admin_password,
+    is_placeholder_secret,
+    settings,
+)
+from app.schema import prepare_database, verify_database_schema
+from app.routes import admin, auth, browser_agent, prompts, optimization, user
+from app.runtime import refresh_cors_middleware
+from app.services.rate_limit import SlidingWindowLimiter
+from app.services.update_service import get_current_app_version
+from app.utils.avatar_upload import get_uploads_mount_dir
+from app.utils.security_headers import (
+    add_docs_security_headers,
+    add_security_headers,
+    csp_hash_for_inline_script,
+    update_security_headers,
+)
+from app.utils.client_ip import (
+    reset_current_client_ip,
+    resolve_request_client_ip,
+    set_current_client_ip,
+)
+from app.utils.log_redaction import install_uvicorn_access_log_redaction
+from app.models.models import CustomPrompt
+from app.database import SessionLocal
+from app.services.ai_service import get_default_polish_prompt, get_default_enhance_prompt
+
+install_uvicorn_access_log_redaction()
+
+
+# 响应缓存头中间件 - 优化浏览器缓存
+class CacheControlMiddleware(BaseHTTPMiddleware):
+    """添加缓存控制头，优化浏览器缓存"""
+
+    # 可缓存的静态资源路径
+    CACHEABLE_PATHS = {
+        "/api/prompts/system": 300,  # 系统提示词缓存5分钟
+        "/api/health/models": 60,    # 模型健康检查缓存1分钟
+        "/health": 30,               # 健康检查缓存30秒
+    }
+
+    async def dispatch(self, request: Request, call_next):
+        response = await call_next(request)
+
+        # 只对 GET 请求添加缓存头
+        if request.method == "GET":
+            path = request.url.path
+            # 检查是否是可缓存的路径
+            for cacheable_path, max_age in self.CACHEABLE_PATHS.items():
+                if path.endswith(cacheable_path):
+                    response.headers["Cache-Control"] = f"public, max-age={max_age}"
+                    break
+            else:
+                # 默认不缓存动态内容
+                if "/api/" in path:
+                    response.headers["Cache-Control"] = "no-cache, no-store, must-revalidate"
+
+        return response
+
+# 检查默认密钥 - 仅警告，不退出（允许开发环境使用）
+if is_placeholder_secret(settings.SECRET_KEY):
+    print("\n" + "="*60)
+    print("⚠️  安全警告: 检测到默认 SECRET_KEY!")
+    print("="*60)
+    print("生产环境必须修改 SECRET_KEY,否则 JWT token 可被伪造!")
+    print("请在 .env 文件中设置强密钥:")
+    print("  python -c \"import secrets; print(secrets.token_urlsafe(32))\"")
+    print("="*60 + "\n")
+    # 仅警告,不强制退出 (开发环境可能需要)
+
+if is_placeholder_admin_password(settings.ADMIN_PASSWORD):
+    print("\n" + "="*60)
+    print("⚠️  安全警告: 检测到默认管理员密码!")
+    print("="*60)
+    print("生产环境必须修改 ADMIN_PASSWORD!")
+    print("请在 .env 文件中设置强密码 (建议12位以上)")
+    print("="*60 + "\n")
+    # 仅警告,不强制退出 (开发环境可能需要)
+
+ensure_runtime_secrets_safe()
+
+auth_rate_limiter = SlidingWindowLimiter()
+redeem_rate_limiter = SlidingWindowLimiter()
+
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    await startup_event()
+    try:
+        yield
+    finally:
+        await shutdown_event()
+
+
+app = FastAPI(
+    title="GankAIGC",
+    description="高质量论文润色与原创性学术表达增强",
+    version=get_current_app_version(),
+    lifespan=lifespan,
+    docs_url=None if is_server_deployment() else "/docs",
+    redoc_url=None if is_server_deployment() else "/redoc",
+    openapi_url=None if is_server_deployment() else "/openapi.json",
+)
+
+# 添加 Gzip 压缩中间件以减少响应体积
+app.add_middleware(GZipMiddleware, minimum_size=1000)
+
+
+@app.middleware("http")
+async def capture_trusted_client_ip(request: Request, call_next):
+    token = set_current_client_ip(resolve_request_client_ip(request))
+    try:
+        return await call_next(request)
+    finally:
+        reset_current_client_ip(token)
+
+# 添加缓存控制中间件
+app.add_middleware(CacheControlMiddleware)
+
+# CORS 配置
+refresh_cors_middleware(app)
+
+
+@app.middleware("http")
+async def add_browser_security_headers(request: Request, call_next):
+    response = await call_next(request)
+    if request.url.path in {"/docs", "/redoc", "/docs/oauth2-redirect"}:
+        return add_docs_security_headers(response)
+    return add_security_headers(response)
+
+
+# 注册路由（添加 /api 前缀，与 backend/app/main.py 保持一致）
+app.include_router(admin.router, prefix="/api")
+app.include_router(auth.router, prefix="/api")
+app.include_router(user.router, prefix="/api")
+app.include_router(browser_agent.router, prefix="/api")
+app.include_router(prompts.router, prefix="/api")
+app.include_router(optimization.router, prefix="/api")
+if settings.WORD_FORMATTER_ENABLED:
+    from app.word_formatter import router as word_formatter_router
+
+    app.include_router(word_formatter_router, prefix="/api")
+
+
+app.mount("/uploads", StaticFiles(directory=str(get_uploads_mount_dir()), check_dir=False), name="uploads")
+
+
+def _get_rate_limit_key(request: Request, scope: str) -> str:
+    client_host = request.client.host if request.client else ""
+    return f"{scope}:{client_host or 'unknown'}"
+
+
+@app.middleware("http")
+async def enforce_sensitive_endpoint_rate_limits(request: Request, call_next):
+    limiter = None
+    scope = ""
+    limit = 0
+
+    if request.method == "POST" and request.url.path in {
+        "/api/admin/login",
+        "/api/auth/login",
+        "/api/auth/register",
+    }:
+        limiter = auth_rate_limiter
+        scope = "auth"
+        limit = settings.AUTH_RATE_LIMIT_PER_MINUTE
+    elif request.method == "POST" and request.url.path in {
+        "/api/user/redeem-code",
+    }:
+        limiter = redeem_rate_limiter
+        scope = "redeem"
+        limit = settings.REDEEM_RATE_LIMIT_PER_MINUTE
+
+    if limiter and limit > 0:
+        key = _get_rate_limit_key(request, scope)
+        if not limiter.check(key, limit):
+            return add_security_headers(Response(
+                status_code=429,
+                content='{"detail":"请求过于频繁，请稍后再试"}',
+                media_type="application/json",
+            ))
+
+    return await call_next(request)
+
+
+async def startup_event():
+    """启动时初始化"""
+    # Docker/VPS 生产环境只校验 Alembic revision；DDL 由 migrate 服务独占。
+    prepare_database()
+
+    # 创建系统默认提示词
+    db = SessionLocal()
+    try:
+        # 检查是否已存在系统提示词
+        polish_prompt = db.query(CustomPrompt).filter(
+            CustomPrompt.is_system.is_(True),
+            CustomPrompt.stage == "polish"
+        ).first()
+
+        if not polish_prompt:
+            polish_prompt = CustomPrompt(
+                name="默认润色提示词",
+                stage="polish",
+                content=get_default_polish_prompt(),
+                is_default=True,
+                is_system=True
+            )
+            db.add(polish_prompt)
+
+        enhance_prompt = db.query(CustomPrompt).filter(
+            CustomPrompt.is_system.is_(True),
+            CustomPrompt.stage == "enhance"
+        ).first()
+
+        if not enhance_prompt:
+            enhance_prompt = CustomPrompt(
+                name="默认增强提示词",
+                stage="enhance",
+                content=get_default_enhance_prompt(),
+                is_default=True,
+                is_system=True
+            )
+            db.add(enhance_prompt)
+
+        db.commit()
+    finally:
+        db.close()
+
+
+async def shutdown_event():
+    """关闭时清理资源"""
+    from app.services.stream_manager import stream_manager
+    from app.services.zhuque_service import zhuque_service
+
+    await stream_manager.close()
+    await zhuque_service.close()
+    if settings.WORD_FORMATTER_ENABLED:
+        from app.word_formatter.services import get_job_manager
+
+        job_manager = get_job_manager()
+        await job_manager.shutdown()
+
+
+@app.get("/")
+async def root():
+    """根路径"""
+    return {
+        "message": "GankAIGC API",
+        "version": get_current_app_version(),
+        "docs": "/docs"
+    }
+
+
+@app.head("/")
+async def head_root():
+    """允许 curl -I / 这类 VPS 可达性探测。"""
+    return Response(status_code=200)
+
+
+@app.get("/health")
+async def health_check():
+    """健康检查"""
+    return {"status": "healthy"}
+
+
+@app.get("/live")
+async def liveness_check():
+    return {"status": "live"}
+
+
+@app.get("/ready")
+async def readiness_check():
+    try:
+        revision = verify_database_schema()
+        upload_root = get_uploads_mount_dir()
+        if not upload_root.is_dir() or not os.access(upload_root, os.W_OK):
+            raise RuntimeError(f"上传目录不可写: {upload_root}")
+    except Exception as exc:
+        raise HTTPException(status_code=503, detail=f"服务未就绪: {exc}") from exc
+    return {"status": "ready", "schema_revision": revision}
+
+
+def _runtime_bootstrap_script_content() -> str:
+    payload = {
+        "appVersion": get_current_app_version(),
+    }
+    return f"window.__GANKAIGC_RUNTIME__ = {json.dumps(payload, ensure_ascii=False)};"
+
+
+def _runtime_bootstrap_script() -> str:
+    return f"<script>{_runtime_bootstrap_script_content()}</script>"
+
+
+def serve_runtime_index(index_file: str) -> HTMLResponse:
+    with open(index_file, encoding="utf-8") as file:
+        text = file.read()
+    runtime_script = _runtime_bootstrap_script()
+    text = text.replace("</head>", runtime_script + "</head>", 1)
+    headers = {
+        "Cache-Control": "no-cache, no-store, must-revalidate",
+        "Pragma": "no-cache",
+        "Expires": "0",
+    }
+    update_security_headers(
+        headers,
+        [csp_hash_for_inline_script(_runtime_bootstrap_script_content())],
+    )
+    return HTMLResponse(
+        text,
+        headers=headers,
+    )
+
+
+def _check_url_format(base_url: Optional[str]) -> tuple:
+    """检查 URL 格式是否正确
+    
+    Returns:
+        tuple: (is_valid, error_message)
+    """
+    from app.utils.url_security import validate_model_base_url
+
+    try:
+        validate_model_base_url(base_url or "")
+    except ValueError as exc:
+        return False, str(exc)
+    return True, None
+
+
+# 缓存已检查的 URL 结果，避免重复检查
+_url_check_cache: dict = {}
+
+
+async def _check_model_health(model_name: str, model: str, api_key: Optional[str], base_url: Optional[str]) -> dict:
+    """检查单个模型的健康状态 - 只验证URL格式，不测试实际连接"""
+    
+    try:
+        # 检查必需的配置项
+        if not model or not model.strip():
+            return {
+                "status": "unavailable",
+                "model": model,
+                "base_url": base_url,
+                "error": "模型名称未配置"
+            }
+        
+        # 先检查 URL 格式是否有效
+        is_valid, error_msg = _check_url_format(base_url)
+        
+        if not is_valid:
+            return {
+                "status": "unavailable",
+                "model": model,
+                "base_url": base_url,
+                "error": error_msg
+            }
+        
+        # URL 有效时才检查缓存（此时 base_url 不为 None）
+        if base_url in _url_check_cache:
+            cached_result = _url_check_cache[base_url]
+            result = {
+                "status": cached_result["status"],
+                "model": model,
+                "base_url": base_url
+            }
+            if cached_result["status"] == "unavailable":
+                result["error"] = cached_result.get("error")
+            return result
+        
+        # URL 格式正确，认为配置有效
+        result = {
+            "status": "available",
+            "model": model,
+            "base_url": base_url
+        }
+        # 缓存检查结果
+        _url_check_cache[base_url] = {"status": "available"}
+        return result
+        
+    except Exception as e:
+        error_msg = str(e) if str(e) else "未知错误"
+        return {
+            "status": "unavailable",
+            "model": model,
+            "base_url": base_url,
+            "error": error_msg
+        }
+
+
+@app.get("/api/health/models")
+async def check_models_health():
+    """检查 AI 模型可用性 - 只验证URL格式，如果URL相同则只检查一次"""
+    global _url_check_cache
+    # 清空缓存以确保每次请求都重新检查
+    _url_check_cache = {}
+    
+    results = {
+        "overall_status": "healthy",
+        "models": {}
+    }
+    
+    # 检查润色模型
+    results["models"]["polish"] = await _check_model_health(
+        "polish",
+        settings.POLISH_MODEL,
+        settings.POLISH_API_KEY,
+        settings.POLISH_BASE_URL
+    )
+    if results["models"]["polish"]["status"] == "unavailable":
+        results["overall_status"] = "degraded"
+    
+    # 检查增强模型
+    results["models"]["enhance"] = await _check_model_health(
+        "enhance",
+        settings.ENHANCE_MODEL,
+        settings.ENHANCE_API_KEY,
+        settings.ENHANCE_BASE_URL
+    )
+    if results["models"]["enhance"]["status"] == "unavailable":
+        results["overall_status"] = "degraded"
+    
+    # 检查感情润色模型（如果配置了）
+    if settings.EMOTION_MODEL:
+        results["models"]["emotion"] = await _check_model_health(
+            "emotion",
+            settings.EMOTION_MODEL,
+            settings.EMOTION_API_KEY,
+            settings.EMOTION_BASE_URL
+        )
+        if results["models"]["emotion"]["status"] == "unavailable":
+            results["overall_status"] = "degraded"
+    
+    return results
+
+
+if __name__ == "__main__":
+    import uvicorn
+    uvicorn.run(app, host=settings.SERVER_HOST, port=settings.SERVER_PORT)

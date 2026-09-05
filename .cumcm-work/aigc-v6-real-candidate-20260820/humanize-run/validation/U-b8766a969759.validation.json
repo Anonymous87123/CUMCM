@@ -1,0 +1,790 @@
+{
+  "academic_correctness": "NOT_EVALUATED",
+  "accepted_findings": [],
+  "accepted_warning_reasons": {},
+  "accepted_warnings": [],
+  "candidate_assembly_exit_code": 0,
+  "candidate_assembly_status": "PASS",
+  "delivery_gate_exit_code": 2,
+  "delivery_gate_status": "REVIEW",
+  "draft_surface_source_check": {
+    "details": {},
+    "scope": [],
+    "semantic_entailment_certified": false,
+    "status": "N/A"
+  },
+  "evidence": {
+    "after_path": "validation/U-b8766a969759.after.tex",
+    "after_sha256": "b9f69dd3d298c51f10bdaa022e46032e00082a10372570969cbec804ec7248a7",
+    "before_path": "validation/U-b8766a969759.before.tex",
+    "before_sha256": "b9f69dd3d298c51f10bdaa022e46032e00082a10372570969cbec804ec7248a7",
+    "checker_executed": true,
+    "document_format": "tex",
+    "document_scope": "FRAGMENT",
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "03ba9601430e17a4c71cb21f9134e69273284d4dc15295cbfb3235737ed778bd",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "protected_terms": {
+      "count": 0,
+      "sha256": null,
+      "status": "NOT_PROVIDED"
+    },
+    "source_path_archived": false
+  },
+  "exit_code": 2,
+  "hard_invariant_layer_status": "PASS",
+  "humanize_quality_claim_allowed": false,
+  "introduced_findings": [],
+  "invariants": {
+    "advisories": [],
+    "errors": [],
+    "evidence": {
+      "document_scope": "FRAGMENT",
+      "protected_terms": {
+        "count": 0,
+        "sha256": null,
+        "status": "NOT_PROVIDED"
+      },
+      "speech_act_audit": {
+        "categories": {
+          "assumption": {
+            "after": {
+              "设": 3
+            },
+            "after_occurrences": [
+              {
+                "category": "assumption",
+                "claim_id": "C0030",
+                "column": 109,
+                "end": 1108,
+                "end_column": 110,
+                "end_line": 21,
+                "line": 21,
+                "marker": "设",
+                "sentence_context": "沿 顺序设置为递减，避免消费者收益超过资源层可供给量级",
+                "sentence_id": "T0026",
+                "side": "after",
+                "start": 1107
+              },
+              {
+                "category": "assumption",
+                "claim_id": "C0047",
+                "column": 62,
+                "end": 1526,
+                "end_column": 63,
+                "end_line": 27,
+                "line": 27,
+                "marker": "设",
+                "sentence_context": "& 基线政策设定 \\\\",
+                "sentence_id": "T0038",
+                "side": "after",
+                "start": 1525
+              },
+              {
+                "category": "assumption",
+                "claim_id": "C0054",
+                "column": 47,
+                "end": 1657,
+                "end_column": 48,
+                "end_line": 29,
+                "line": 29,
+                "marker": "设",
+                "sentence_context": "& 基线环境设定 \\\\",
+                "sentence_id": "T0042",
+                "side": "after",
+                "start": 1656
+              }
+            ],
+            "before": {
+              "设": 3
+            },
+            "before_occurrences": [
+              {
+                "category": "assumption",
+                "claim_id": "C0030",
+                "column": 109,
+                "end": 1108,
+                "end_column": 110,
+                "end_line": 21,
+                "line": 21,
+                "marker": "设",
+                "sentence_context": "沿 顺序设置为递减，避免消费者收益超过资源层可供给量级",
+                "sentence_id": "T0026",
+                "side": "before",
+                "start": 1107
+              },
+              {
+                "category": "assumption",
+                "claim_id": "C0047",
+                "column": 62,
+                "end": 1526,
+                "end_column": 63,
+                "end_line": 27,
+                "line": 27,
+                "marker": "设",
+                "sentence_context": "& 基线政策设定 \\\\",
+                "sentence_id": "T0038",
+                "side": "before",
+                "start": 1525
+              },
+              {
+                "category": "assumption",
+                "claim_id": "C0054",
+                "column": 47,
+                "end": 1657,
+                "end_column": 48,
+                "end_line": 29,
+                "line": 29,
+                "marker": "设",
+                "sentence_context": "& 基线环境设定 \\\\",
+                "sentence_id": "T0042",
+                "side": "before",
+                "start": 1656
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "attribution_source": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "condition": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "definition_naming": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "focus_scope": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "logical_relation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "modality_scope": {
+            "after": {
+              "可": 2,
+              "默认": 4
+            },
+            "after_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0001",
+                "column": 15,
+                "end": 16,
+                "end_column": 17,
+                "end_line": 1,
+                "line": 1,
+                "marker": "默认",
+                "sentence_context": "\\section{问题一完整默认参数附表}",
+                "sentence_id": "T0001",
+                "side": "after",
+                "start": 14
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0004",
+                "column": 15,
+                "end": 69,
+                "end_column": 17,
+                "end_line": 4,
+                "line": 4,
+                "marker": "默认",
+                "sentence_context": "\\caption{问题一完整默认参数附表}",
+                "sentence_id": "T0004",
+                "side": "after",
+                "start": 67
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0009",
+                "column": 6,
+                "end": 342,
+                "end_column": 8,
+                "end_line": 10,
+                "line": 10,
+                "marker": "默认",
+                "sentence_context": "参数 & 默认值 & 依据/说明 & 角色 \\\\",
+                "sentence_id": "T0009",
+                "side": "after",
+                "start": 340
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0031",
+                "column": 127,
+                "end": 1126,
+                "end_column": 128,
+                "end_line": 21,
+                "line": 21,
+                "marker": "可",
+                "sentence_context": "沿 顺序设置为递减，避免消费者收益超过资源层可供给量级",
+                "sentence_id": "T0026",
+                "side": "after",
+                "start": 1125
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0052",
+                "column": 21,
+                "end": 1632,
+                "end_column": 23,
+                "end_line": 29,
+                "line": 29,
+                "marker": "默认",
+                "sentence_context": "& & 问题一中污染强度默认取零，避免与问题五的污染情景混用",
+                "sentence_id": "T0041",
+                "side": "after",
+                "start": 1630
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0058",
+                "column": 61,
+                "end": 1774,
+                "end_column": 62,
+                "end_line": 32,
+                "line": 32,
+                "marker": "可",
+                "sentence_context": "青鱼因偏底栖、单网次可见性较低而保守下调",
+                "sentence_id": "T0046",
+                "side": "after",
+                "start": 1773
+              }
+            ],
+            "before": {
+              "可": 2,
+              "默认": 4
+            },
+            "before_occurrences": [
+              {
+                "category": "modality_scope",
+                "claim_id": "C0001",
+                "column": 15,
+                "end": 16,
+                "end_column": 17,
+                "end_line": 1,
+                "line": 1,
+                "marker": "默认",
+                "sentence_context": "\\section{问题一完整默认参数附表}",
+                "sentence_id": "T0001",
+                "side": "before",
+                "start": 14
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0004",
+                "column": 15,
+                "end": 69,
+                "end_column": 17,
+                "end_line": 4,
+                "line": 4,
+                "marker": "默认",
+                "sentence_context": "\\caption{问题一完整默认参数附表}",
+                "sentence_id": "T0004",
+                "side": "before",
+                "start": 67
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0009",
+                "column": 6,
+                "end": 342,
+                "end_column": 8,
+                "end_line": 10,
+                "line": 10,
+                "marker": "默认",
+                "sentence_context": "参数 & 默认值 & 依据/说明 & 角色 \\\\",
+                "sentence_id": "T0009",
+                "side": "before",
+                "start": 340
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0031",
+                "column": 127,
+                "end": 1126,
+                "end_column": 128,
+                "end_line": 21,
+                "line": 21,
+                "marker": "可",
+                "sentence_context": "沿 顺序设置为递减，避免消费者收益超过资源层可供给量级",
+                "sentence_id": "T0026",
+                "side": "before",
+                "start": 1125
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0052",
+                "column": 21,
+                "end": 1632,
+                "end_column": 23,
+                "end_line": 29,
+                "line": 29,
+                "marker": "默认",
+                "sentence_context": "& & 问题一中污染强度默认取零，避免与问题五的污染情景混用",
+                "sentence_id": "T0041",
+                "side": "before",
+                "start": 1630
+              },
+              {
+                "category": "modality_scope",
+                "claim_id": "C0058",
+                "column": 61,
+                "end": 1774,
+                "end_column": 62,
+                "end_line": 32,
+                "line": 32,
+                "marker": "可",
+                "sentence_context": "青鱼因偏底栖、单网次可见性较低而保守下调",
+                "sentence_id": "T0046",
+                "side": "before",
+                "start": 1773
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "negation": {
+            "after": {
+              "不": 4,
+              "非": 2
+            },
+            "after_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0017",
+                "column": 48,
+                "end": 594,
+                "end_column": 49,
+                "end_line": 14,
+                "line": 14,
+                "marker": "不",
+                "sentence_context": "& & 统一固定为归一化承载上界，不对应河段实测承载量",
+                "sentence_id": "T0015",
+                "side": "after",
+                "start": 593
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0034",
+                "column": 90,
+                "end": 1232,
+                "end_column": 91,
+                "end_line": 22,
+                "line": 22,
+                "marker": "非",
+                "sentence_context": "& \\makecell[l]{ \\\\ } & 归一化自然损失系数，与转化效率共同维持消费者层在禁渔和非禁渔情景下的数量级稳定",
+                "sentence_id": "T0028",
+                "side": "after",
+                "start": 1231
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0040",
+                "column": 50,
+                "end": 1358,
+                "end_column": 51,
+                "end_line": 25,
+                "line": 25,
+                "marker": "不",
+                "sentence_context": "& & 固定缩放四大家鱼初值，保留既有物种占比，不由 2025 年观测标定估计",
+                "sentence_id": "T0032",
+                "side": "after",
+                "start": 1357
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0046",
+                "column": 47,
+                "end": 1511,
+                "end_column": 48,
+                "end_line": 27,
+                "line": 27,
+                "marker": "非",
+                "sentence_context": "这里给出的是场景取值，而非新增独立参数",
+                "sentence_id": "T0037",
+                "side": "after",
+                "start": 1510
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0048",
+                "column": 18,
+                "end": 1549,
+                "end_column": 19,
+                "end_line": 28,
+                "line": 28,
+                "marker": "不",
+                "sentence_context": "& & 不禁渔反事实情景的固定共同捕捞压力，取自区间 的中位值，不参与观测校准",
+                "sentence_id": "T0039",
+                "side": "after",
+                "start": 1548
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0050",
+                "column": 60,
+                "end": 1591,
+                "end_column": 61,
+                "end_line": 28,
+                "line": 28,
+                "marker": "不",
+                "sentence_context": "& & 不禁渔反事实情景的固定共同捕捞压力，取自区间 的中位值，不参与观测校准",
+                "sentence_id": "T0039",
+                "side": "after",
+                "start": 1590
+              }
+            ],
+            "before": {
+              "不": 4,
+              "非": 2
+            },
+            "before_occurrences": [
+              {
+                "category": "negation",
+                "claim_id": "C0017",
+                "column": 48,
+                "end": 594,
+                "end_column": 49,
+                "end_line": 14,
+                "line": 14,
+                "marker": "不",
+                "sentence_context": "& & 统一固定为归一化承载上界，不对应河段实测承载量",
+                "sentence_id": "T0015",
+                "side": "before",
+                "start": 593
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0034",
+                "column": 90,
+                "end": 1232,
+                "end_column": 91,
+                "end_line": 22,
+                "line": 22,
+                "marker": "非",
+                "sentence_context": "& \\makecell[l]{ \\\\ } & 归一化自然损失系数，与转化效率共同维持消费者层在禁渔和非禁渔情景下的数量级稳定",
+                "sentence_id": "T0028",
+                "side": "before",
+                "start": 1231
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0040",
+                "column": 50,
+                "end": 1358,
+                "end_column": 51,
+                "end_line": 25,
+                "line": 25,
+                "marker": "不",
+                "sentence_context": "& & 固定缩放四大家鱼初值，保留既有物种占比，不由 2025 年观测标定估计",
+                "sentence_id": "T0032",
+                "side": "before",
+                "start": 1357
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0046",
+                "column": 47,
+                "end": 1511,
+                "end_column": 48,
+                "end_line": 27,
+                "line": 27,
+                "marker": "非",
+                "sentence_context": "这里给出的是场景取值，而非新增独立参数",
+                "sentence_id": "T0037",
+                "side": "before",
+                "start": 1510
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0048",
+                "column": 18,
+                "end": 1549,
+                "end_column": 19,
+                "end_line": 28,
+                "line": 28,
+                "marker": "不",
+                "sentence_context": "& & 不禁渔反事实情景的固定共同捕捞压力，取自区间 的中位值，不参与观测校准",
+                "sentence_id": "T0039",
+                "side": "before",
+                "start": 1548
+              },
+              {
+                "category": "negation",
+                "claim_id": "C0050",
+                "column": 60,
+                "end": 1591,
+                "end_column": 61,
+                "end_line": 28,
+                "line": 28,
+                "marker": "不",
+                "sentence_context": "& & 不禁渔反事实情景的固定共同捕捞压力，取自区间 的中位值，不参与观测校准",
+                "sentence_id": "T0039",
+                "side": "before",
+                "start": 1590
+              }
+            ],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          },
+          "reporting_observation": {
+            "after": {},
+            "after_occurrences": [],
+            "before": {},
+            "before_occurrences": [],
+            "raw_delta": {
+              "added": {},
+              "removed": {}
+            },
+            "residual_delta": [],
+            "safe_compression_allowances": []
+          }
+        },
+        "claim_pairing": {
+          "after_claims": 67,
+          "before_claims": 67,
+          "unique_exact_pairs": 62,
+          "unpaired_after_claims": 5,
+          "unpaired_before_claims": 5
+        },
+        "protection": {
+          "after_ranges": 40,
+          "before_ranges": 40,
+          "line_column_basis": "NORMALIZED_LF_1_BASED_UNICODE_CODEPOINT",
+          "masking": "LENGTH_PRESERVING"
+        }
+      }
+    },
+    "hard_failure": false,
+    "status": "pass",
+    "summary": {
+      "advisories": 0,
+      "errors": 0,
+      "warnings": 0
+    },
+    "warnings": []
+  },
+  "keep_reasons": {},
+  "lexical_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 0,
+    "introduced_candidates": 0,
+    "unexplained_high_candidates": 0
+  },
+  "mechanical_validation_exit_code": 0,
+  "mechanical_validation_status": "PASS",
+  "mode": "REWRITE",
+  "paired_quality_clearance_granted": false,
+  "paired_quality_review_local_clearance_supported": false,
+  "paired_quality_review_request": {
+    "artifact": {
+      "after_sha256": "b9f69dd3d298c51f10bdaa022e46032e00082a10372570969cbec804ec7248a7",
+      "before_sha256": "b9f69dd3d298c51f10bdaa022e46032e00082a10372570969cbec804ec7248a7"
+    },
+    "changes": [],
+    "limitations": {
+      "academic_correctness": "NOT_EVALUATED",
+      "authorship": "NOT_EVALUATED",
+      "quality_clearance_granted": false
+    },
+    "policy_hashes": {
+      "invariant_checker_sha256": "e396da9880c63b4716da9b7542674382d549ddcdd43cd72d41f52c9f335f9064",
+      "lexicon_sha256": "c4d4977614c0e1ec3606475de647de9eee01efa22237d5f29e03eca14c444b04",
+      "paired_quality_contract_sha256": "4a178b504b07a0f09eeeb1b9ce295787a0e92a7b8c61c80a70ee658bbdfd428d",
+      "paired_quality_verifier_sha256": "8061431be618397df2f2ff6f6713304f17a31399460d16c98056c69c6beec069",
+      "report_extractor_sha256": "a07abd1204641fb80ba8491780ee29acb2824fdc292f4b126aab6e617a11df54",
+      "runtime_contract_sha256": "03ba9601430e17a4c71cb21f9134e69273284d4dc15295cbfb3235737ed778bd",
+      "scanner_sha256": "35f7bc46986055b77a0b97f388cc57d9e953062060ec5ac3b9faaab2c8fccc26",
+      "validator_sha256": "52faaf25539923132487ca966c5f5720f086ff05a3fcbb107c199927d9f97aaa"
+    },
+    "request_sha256": "aacdfe4de6812b3bdaec174f7f848e17fd0a01a8188e8ca4decae0f8448ea5ee",
+    "review_contract": {
+      "empty_or_generic_benefit_is_clearance": false,
+      "local_model_or_caller_assertion_is_clearance": false,
+      "required_dimensions": [
+        "actionable_pathology_remaining",
+        "no_change_is_best_available_decision",
+        "problem_span_binding",
+        "independent_reading_benefit",
+        "subject_and_modifier_alignment",
+        "verb_object_collocation",
+        "logical_relation_preservation",
+        "template_field_role_and_authorization",
+        "information_density_and_rhythm",
+        "author_voice_non_regression"
+      ],
+      "required_per_change_verdicts": [
+        "ACCEPT",
+        "REVISE",
+        "REVERT"
+      ],
+      "validator_pass_is_quality_clearance": false
+    },
+    "schema": "humanize-paired-quality-review-request/v1",
+    "status": "PENDING_EXTERNAL_REVIEW",
+    "template_field_changes": [],
+    "validation_context": {
+      "artifact_relation": "UNCHANGED",
+      "decision": "NO_CHANGE",
+      "decision_eligible": true,
+      "document_format": "tex",
+      "document_scope": "FRAGMENT",
+      "mechanical_validation_status": "PASS",
+      "mode": "REWRITE",
+      "scene": "MODELING"
+    }
+  },
+  "paired_quality_review_status": "PENDING_EXTERNAL_REVIEW",
+  "paired_style_delta_findings": [],
+  "paired_style_delta_layer_status": "NOT_APPLICABLE",
+  "paired_style_delta_summary": {
+    "authorship_inference": false,
+    "finding_count": 0,
+    "scope": "PAIRED_COURSE_VOICE_NON_REGRESSION_CANDIDATE",
+    "status": "NOT_APPLICABLE"
+  },
+  "pending_warnings": [],
+  "proposed_warning_resolutions": [],
+  "report_scope_check": {
+    "editable_range_count": 0,
+    "editable_ranges": [],
+    "extractor_replay_match": null,
+    "fragment_count": 0,
+    "outside_selection_unchanged": null,
+    "report_sha256": null,
+    "scope_path": null,
+    "scope_semantic_sha256": null,
+    "scope_sha256": null,
+    "source_sha256": null,
+    "status": "N/A"
+  },
+  "review_reasons": [
+    "paired_quality_not_evaluated"
+  ],
+  "scene": "MODELING",
+  "semantic_source_check": "N/A",
+  "speech_act_diagnostics": [],
+  "speech_act_layer_status": "PASS",
+  "status": "REVIEW",
+  "strict_corpus_summary": {
+    "accepted_candidates": 0,
+    "after_candidates": 0,
+    "before_candidates": 0,
+    "clean_allowed_by_strict_layer": true,
+    "enabled": true,
+    "no_change_allowed": true,
+    "unexplained_candidates": 0
+  },
+  "structural_plan_check": {
+    "change_applied": false,
+    "decision": "NO_CHANGE",
+    "semantic_mapping": "NOT_APPLICABLE",
+    "semantic_review_status": "NOT_REQUIRED",
+    "status": "NOT_APPLICABLE"
+  },
+  "style_signal_layer_status": "PASS",
+  "template_field_edit_scope_check": {
+    "authorized_edit_count": 0,
+    "authorized_edits": [],
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "provided": false,
+    "schema_version": null,
+    "scope_sha256": null,
+    "source_sha256": "b9f69dd3d298c51f10bdaa022e46032e00082a10372570969cbec804ec7248a7",
+    "status": "N/A"
+  },
+  "template_field_findings": [],
+  "template_field_layer_status": "PASS",
+  "template_field_summary": {
+    "authorized_edit_count": 0,
+    "finding_count": 0,
+    "local_clearance_supported": false,
+    "permission_boundary": "PAYLOAD_ONLY",
+    "review_finding_count": 0,
+    "status": "PASS"
+  },
+  "unaccepted_warnings": [],
+  "unexplained_high_findings": [],
+  "unexplained_strict_findings": [],
+  "warning_proposal_state": {
+    "attestation_status": "NOT_PROVIDED",
+    "cross_record_reviewer_linkability": "NOT_RECORDED",
+    "identity_verified": false,
+    "proposal_source": "NOT_PROVIDED",
+    "proposed_warning_fingerprints": [],
+    "review_clearance_granted": false,
+    "reviewer_identifier_collected": false,
+    "stable_reviewer_pseudonym_recorded": false,
+    "warning_review_request_sha256": null
+  },
+  "warning_resolutions": {},
+  "warning_review_request": null,
+  "warnings_without_resolution_proposal": []
+}

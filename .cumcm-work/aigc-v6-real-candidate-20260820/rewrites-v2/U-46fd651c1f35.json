@@ -1,0 +1,72 @@
+{
+  "schema_version": "humanize-unit-rewrite-bundle/v4",
+  "unit_id": "U-46fd651c1f35",
+  "chunk_binding_sha256": "12f2a15c7a6032a929647d12f504d5549751676dc3576989b27c1ab70bd7c1a3",
+  "decision": "NO_CHANGE",
+  "voice_profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01",
+  "authoring_binding": {
+    "schema_version": "humanize-long-authoring-binding/v1",
+    "integrity_scope": "CALLER_CONTROLLED_SELF_CONSISTENCY_ONLY",
+    "snapshot_id": "842ae235d7ee9818",
+    "prepare_integrity_sha256": "95a9f9bd3349d3e3b19c9894822cd0006b7dceaf13e3f15289f22f530fa6e3e1",
+    "run_metadata_sha256": "3d0c006231a948ab025cd9016f5af0a745b8e7a0f77be54a018cfd81fc0f2137",
+    "policy_snapshot_sha256": "d8043a6b25776c8e16b2c0324b17655684d5585cccd37fc5f4e585db78fd6da9",
+    "source_binding": {
+      "file_id": "F00001",
+      "source_file_sha256": "bfa75f15c8be10efdb2fac73656ebc6949c6285b23e9b6c7e3b08668fe195609",
+      "unit_id": "U-46fd651c1f35",
+      "offset_unit": "PYTHON_UNICODE_CODEPOINT_INDEX",
+      "start": 8984,
+      "end": 9629,
+      "start_line": 182,
+      "end_line": 188,
+      "source_span_sha256": "459685933a67648953df5497d320befc852b3c77fbace3dd1b8f290bef24aba0",
+      "masked_text_sha256": "4f95e6ab7c96785b8d668ecebd67078d08a40f38d104da2cb4233aac0c4fbbae",
+      "chunk_binding_sha256": "12f2a15c7a6032a929647d12f504d5549751676dc3576989b27c1ab70bd7c1a3"
+    },
+    "scene_route": {
+      "requested_scene": "MODELING",
+      "resolved_scene": "MODELING",
+      "status": "EXPLICIT",
+      "reason_code": "USER_EXPLICIT_SCENE",
+      "document_prior_scene": "",
+      "scores": {
+        "COURSE": 0,
+        "MODELING": 0,
+        "RESEARCH": 0
+      },
+      "top_score": 0,
+      "margin": 0,
+      "ambiguous_scenes": [],
+      "evidence": [],
+      "policy_sha256": "7f4919b7df6aee03bb93b0f9f20cfe5d7a5724e2297e404dcfa0980fe474cebb",
+      "policy_revision": 5,
+      "heading_path_sha256": "c02a053ccda704349797269785ae18de85f56999f3af8a7ac4514ad8f1fcc5bd",
+      "routing_input_sha256": "238ae0216a1e04ea9ba5b39873980d883df86cb96c0df0534f805721b6b21983"
+    },
+    "voice_binding": {
+      "profile_id": "scene-default-modeling",
+      "profile_revision": 1,
+      "profile_kind": "DEFAULT",
+      "binding_scene": "MODELING",
+      "profile_sha256": "9e19a368d6cc11f3f05259e3fa2662c867ba99d15bcd320a4853d72a41190a01"
+    },
+    "mode": "REWRITE",
+    "intensity": "BALANCED",
+    "authoring_allowed": true,
+    "completion_claim_allowed": false,
+    "humanize_quality_claim_allowed": false,
+    "authoring_binding_sha256": "dd08e1d1f11d300b3765d5df96609d99c524b9190224dcb107df6ed9095085d9"
+  },
+  "keep_reasons": {},
+  "template_field_edit_scope": null,
+  "reason": "该段落区分观测约束、反事实参数和局地对照，保留参数说明职责与反事实条件。",
+  "evidence_spans": [
+    {
+      "id": "S1",
+      "start_line": 2,
+      "end_line": 6,
+      "sha256": "e33909a1dbf0a64634296101dbe43c6f27337347bd00612a2089b9eda919be59"
+    }
+  ]
+}

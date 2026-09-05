@@ -1,0 +1,20 @@
+{
+  "test_id": "BTV-20260814-CUMCMB",
+  "inputs": [
+    {
+      "path": "../official/problem.doc",
+      "sha256": "8945f462be3fad94bf7750a86cd2fe3462b78ae0606bf606b8da143c997d50fe",
+      "role": "official_problem_and_three_parameter_sets",
+      "extraction": "read-only Microsoft Word text extraction; numerical parameters independently entered in model_pipeline.py"
+    },
+    {
+      "path": "../data/appendix1.doc",
+      "sha256": "84926364ac401fdf7aec325cf5c0bf7a92772f33a20135cb64bb15f09836d21f",
+      "role": "official_system_layout_and_action_order",
+      "extraction": "read-only Microsoft Word text extraction; concurrency rules manually mapped to event transitions"
+    }
+  ],
+  "parameter_sets_checked": 3,
+  "official_solution_or_award_paper_used": false,
+  "boundary": "The blind test verifies the independent implementation against the supplied problem and attachment, not against an external answer."
+}

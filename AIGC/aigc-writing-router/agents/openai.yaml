@@ -1,0 +1,6 @@
+interface:
+  display_name: "AIGC Writing Portfolio"
+  short_description: "Rewrite an MCM draft through one protected, evidence-gated AIGC workflow"
+  default_prompt: "Use $aigc-writing-router. When an MCM TeX draft is provided or was just identified, execute MCM_COMPETITION_REWRITE end to end: freeze the source, make a content-first source-grounded revision, use one protected language pass only on mechanical prose, compare source and candidate, run semantic and document gates, compile the candidate PDF, and report concrete gains and unresolved items. Do not stop at a route plan or promise detector outcomes."
+policy:
+  allow_implicit_invocation: true
