@@ -151,42 +151,50 @@
    {
     "path": "lexicon-provenance/section-b-cet6-20260816/$out/section_b_final_conclusions_report_v2.aigc-candidate.aux",
     "bytes": 21912,
-    "sha256": "8CAC757DF00882E0527266B4A58B9D63B8B242E7A69D1A14957EF2A60D413D8F"
+    "sha256": "8CAC757DF00882E0527266B4A58B9D63B8B242E7A69D1A14957EF2A60D413D8F",
+    "git_tracked": false
    },
    {
     "path": "lexicon-provenance/section-b-cet6-20260816/$out/section_b_final_conclusions_report_v2.aigc-candidate.fdb_latexmk",
     "bytes": 18312,
-    "sha256": "B1A64DB6DEBA0F22E46923C60B282FF39ACBB01924B4876B912DA9A87FFD5A5A"
+    "sha256": "B1A64DB6DEBA0F22E46923C60B282FF39ACBB01924B4876B912DA9A87FFD5A5A",
+    "git_tracked": false
    },
    {
     "path": "lexicon-provenance/section-b-cet6-20260816/$out/section_b_final_conclusions_report_v2.aigc-candidate.fls",
     "bytes": 22654,
-    "sha256": "DA0169343189F555E375C4B343A599C1FE6B62F6D82A634C92499F6CCECFE3FA"
+    "sha256": "DA0169343189F555E375C4B343A599C1FE6B62F6D82A634C92499F6CCECFE3FA",
+    "git_tracked": false
    },
    {
     "path": "lexicon-provenance/section-b-cet6-20260816/$out/section_b_final_conclusions_report_v2.aigc-candidate.log",
     "bytes": 35814,
-    "sha256": "E702B3CA6F9467480DDB06844896C6F1596D0E83D3BEC387A49F946449CC68A0"
+    "sha256": "E702B3CA6F9467480DDB06844896C6F1596D0E83D3BEC387A49F946449CC68A0",
+    "git_tracked": false
    },
    {
     "path": "lexicon-provenance/section-b-cet6-20260816/$out/section_b_final_conclusions_report_v2.aigc-candidate.out",
     "bytes": 24849,
-    "sha256": "8711158FA83822A762407DF73910A862F0FDBA95FDA77102112D330CE2FA5389"
+    "sha256": "8711158FA83822A762407DF73910A862F0FDBA95FDA77102112D330CE2FA5389",
+    "git_tracked": false
    },
    {
     "path": "lexicon-provenance/section-b-cet6-20260816/$out/section_b_final_conclusions_report_v2.aigc-candidate.pdf",
     "bytes": 690591,
-    "sha256": "836132F4EDA4E4A7CD7CE31778A9AB9D92547E581FCB62230744801A91A3B34B"
+    "sha256": "836132F4EDA4E4A7CD7CE31778A9AB9D92547E581FCB62230744801A91A3B34B",
+    "git_tracked": true
    },
    {
     "path": "lexicon-provenance/section-b-cet6-20260816/$out/section_b_final_conclusions_report_v2.aigc-candidate.toc",
     "bytes": 12194,
-    "sha256": "D63692F9C05AFAD1A379EB39F5A5B819B680424D4DFDEFF1B528BC68B6DBE017"
+    "sha256": "D63692F9C05AFAD1A379EB39F5A5B819B680424D4DFDEFF1B528BC68B6DBE017",
+    "git_tracked": false
    },
    {
     "path": "lexicon-provenance/section-b-cet6-20260816/$out/section_b_final_conclusions_report_v2.aigc-candidate.xdv",
     "bytes": 675548,
-    "sha256": "93CC0ED43A2D34A5CC3E17A5AFB51CF76E0315AB79F256237D8EF592E98989F8"
+    "sha256": "93CC0ED43A2D34A5CC3E17A5AFB51CF76E0315AB79F256237D8EF592E98989F8",
+    "git_tracked": false
    }
   ],
   "frozen_source_left_in_place": {
@@ -210,7 +218,8 @@
      "sha256": "28D64C6351ED7BD138A96EB27D62BDC36D6195FF68F6567253ADBEE49C067F08"
     }
    }
-  }
+  },
+  "build_products_note": "7 个 LaTeX 中间产物被仓库 .gitignore 的 *.aux/*.log/*.fls/*.fdb_latexmk/*.out/*.toc/*.xdv 规则排除，只存在于本地磁盘。它们可由候选 TeX 重新编译，没有独立证据价值；被引用的候选 TeX 与 PDF 已入库。"
  },
  "closure_verifier": {
   "path": "lexicon-provenance/verify_aigc_closure.py",
