@@ -1,0 +1,2068 @@
+{
+  "schema": "mcm-section-drafting-packet/v1",
+  "target": {
+    "id": "T02",
+    "title": "问题重述",
+    "line": 24,
+    "role": "restatement",
+    "question_id": null,
+    "section_job": "Preserve the task objects, conditions, and requested outputs without importing solution claims."
+  },
+  "current_draft": "问题重述",
+  "current_draft_tex": "\\section{问题重述}\n\n\n\n",
+  "current_draft_tex_sha256": "276840cfe5c9f1a13d46cf0760c1ea2bcde5dacbe608317f97f3cc3e7265a29e",
+  "current_problem": {
+    "scope": "all-approved-questions",
+    "question_ids": [
+      "1",
+      "2",
+      "3"
+    ],
+    "question_plans": [
+      {
+        "question_id": "1",
+        "current_problem_sources": [
+          {
+            "id": "problem",
+            "role": "problem",
+            "path": "inputs/problem-restatement.txt",
+            "sha256": "29d51f1ef84f9442fcb7c614b01c4352b214d2f73fb69f3f86b995252d37bdbe"
+          },
+          {
+            "id": "attachment",
+            "role": "data",
+            "path": "inputs/attachment.xlsx",
+            "sha256": "2026d561054055516d5fbcc3fa22f8add5d786eba2b16c4f76636ae08794c2b3"
+          },
+          {
+            "id": "solver",
+            "role": "code",
+            "path": "solver/simulator.py",
+            "sha256": "e2cab80c2a8b5e9af5ecfbaa155752e05eb787f0a94830dd4b18bef721303eb5"
+          },
+          {
+            "id": "run",
+            "role": "result",
+            "path": "results/run-report.json",
+            "sha256": "2daab7b127123a519139b7f6acd2d05d3ef24a1411906fbc9b6001c7dee4b30d"
+          }
+        ],
+        "fact_anchors": [
+          {
+            "id": "layer-properties",
+            "kind": "data",
+            "terms": [
+              "密度",
+              "比热",
+              "热传导率"
+            ],
+            "source_ref": "附件1 第 I--IV 层 rho/c/lambda 与厚度",
+            "source_ids": [
+              "attachment"
+            ]
+          },
+          {
+            "id": "measured-plateau",
+            "kind": "data",
+            "terms": [
+              "实测温度",
+              "平台"
+            ],
+            "source_ref": "附件2 0..5400s 共 5401 点，t=0 为 37.00, 末值 48.08, 末 10min 波动 0.000",
+            "source_ids": [
+              "attachment"
+            ]
+          },
+          {
+            "id": "given-scenario",
+            "kind": "relation",
+            "terms": [
+              "环境温度",
+              "工作时间"
+            ],
+            "source_ref": "题面问题 (1)：75C、II 层 6mm、IV 层 5mm、90 分钟",
+            "source_ids": [
+              "problem"
+            ]
+          },
+          {
+            "id": "air-layer-diffusivity",
+            "kind": "boundary",
+            "terms": [
+              "扩散系数",
+              "空气层"
+            ],
+            "source_ref": "附件1 IV 层 rho=1.18 -> a=2.361e-05，比其余三层大两个量级",
+            "source_ids": [
+              "attachment",
+              "run"
+            ]
+          },
+          {
+            "id": "plateau-below-ambient",
+            "kind": "result",
+            "terms": [
+              "散热"
+            ],
+            "source_ref": "附件2 平台 48.08C 远低于环境 75C",
+            "source_ids": [
+              "attachment"
+            ]
+          }
+        ],
+        "mathematical_targets": [
+          {
+            "id": "layered-pde",
+            "terms": [
+              "一维热传导",
+              "界面条件"
+            ],
+            "source_ref": "四层介质内的瞬态方程与界面温度、热流连续"
+          },
+          {
+            "id": "skin-boundary",
+            "terms": [
+              "边界条件",
+              "散热系数"
+            ],
+            "source_ref": "皮肤侧边界形式；唯一未知参数 h_skin"
+          },
+          {
+            "id": "time-stepping",
+            "terms": [
+              "时间步长",
+              "稳定性"
+            ],
+            "source_ref": "空气层扩散系数决定推进方式的可行性"
+          },
+          {
+            "id": "grid-allocation",
+            "terms": [
+              "空间步长",
+              "分层网格"
+            ],
+            "source_ref": "最薄层 0.6mm 与最厚层的格数分配"
+          }
+        ],
+        "selected_route": {
+          "id": "fv-implicit-robin",
+          "name": "有限体积 + 调和平均界面导度 + 后向 Euler，皮肤侧 Robin 双路线标定",
+          "status": "selected",
+          "terms": [
+            "有限体积",
+            "后向 Euler",
+            "调和平均"
+          ],
+          "anchor_ids": [
+            "layer-properties",
+            "measured-plateau",
+            "given-scenario",
+            "air-layer-diffusivity",
+            "plateau-below-ambient"
+          ],
+          "target_ids": [
+            "layered-pde",
+            "skin-boundary",
+            "time-stepping",
+            "grid-allocation"
+          ],
+          "evidence_ids": [
+            "solver",
+            "run"
+          ],
+          "evidence_ref": "solver/simulator.py Simulator.run 与 calibrate_skin_coefficient；results/run-report.json calibration"
+        },
+        "recorded_alternative_routes": [
+          {
+            "id": "forward-euler",
+            "name": "向前 Euler 显式格式",
+            "status": "rejected",
+            "terms": [
+              "向前 Euler"
+            ],
+            "anchor_ids": [
+              "air-layer-diffusivity"
+            ],
+            "target_ids": [
+              "time-stepping"
+            ],
+            "evidence_ids": [
+              "run"
+            ],
+            "evidence_ref": "results/run-report.json diffusivity_m2_s",
+            "reason": "空气层 a=2.361e-05 使稳定域 r=a*tau/h^2<=1/2 把时间步长压到远小于 1s；同一格式在系数被误取为 lambda 时反而稳定，稳定不能证明系数正确。"
+          },
+          {
+            "id": "adiabatic-skin",
+            "name": "皮肤侧绝热",
+            "status": "rejected",
+            "terms": [
+              "绝热"
+            ],
+            "anchor_ids": [
+              "plateau-below-ambient"
+            ],
+            "target_ids": [
+              "skin-boundary"
+            ],
+            "evidence_ids": [
+              "attachment"
+            ],
+            "evidence_ref": "inputs/attachment.xlsx 附件2 末段",
+            "reason": "绝热时全场最终趋于环境温度 75C，与附件2 的 48.08C 平台矛盾。"
+          }
+        ],
+        "declared_checks": [
+          {
+            "id": "steady-limit",
+            "kind": "derivation",
+            "terms": [
+              "解析稳态解"
+            ],
+            "result": "瞬态终点 47.934716682627 与解析稳态 47.934716682526 相差 1e-10",
+            "result_terms": [
+              "解析稳态解"
+            ],
+            "artifact": {
+              "path": "results/run-report.json",
+              "sha256": "2daab7b127123a519139b7f6acd2d05d3ef24a1411906fbc9b6001c7dee4b30d"
+            }
+          },
+          {
+            "id": "mesh-convergence",
+            "kind": "implementation",
+            "terms": [
+              "空间步长",
+              "时间步长"
+            ],
+            "result": "格数 10->80、步长 4s->1s，终点温度最大偏差 2.7e-09 C",
+            "result_terms": [
+              "空间步长"
+            ],
+            "artifact": {
+              "path": "results/run-report.json",
+              "sha256": "2daab7b127123a519139b7f6acd2d05d3ef24a1411906fbc9b6001c7dee4b30d"
+            }
+          },
+          {
+            "id": "residual-structure",
+            "kind": "residual",
+            "terms": [
+              "残差"
+            ],
+            "result": "全程 RMSE 0.4517C；末 30min 0.1453C；前 10min 1.2798C",
+            "result_terms": [
+              "残差"
+            ],
+            "artifact": {
+              "path": "results/run-report.json",
+              "sha256": "2daab7b127123a519139b7f6acd2d05d3ef24a1411906fbc9b6001c7dee4b30d"
+            }
+          },
+          {
+            "id": "diffusivity-units",
+            "kind": "unit",
+            "terms": [
+              "扩散系数"
+            ],
+            "result": "逐层 a=lambda/(rho*c) 与附件1 预置列逐位一致，含空气层 2.361e-05",
+            "result_terms": [
+              "扩散系数"
+            ],
+            "artifact": {
+              "path": "inputs/attachment.xlsx",
+              "sha256": "2026d561054055516d5fbcc3fa22f8add5d786eba2b16c4f76636ae08794c2b3"
+            }
+          }
+        ],
+        "result_interpretations": [
+          {
+            "id": "why-robin",
+            "kind": "mechanism",
+            "observation_terms": [
+              "平台"
+            ],
+            "explanation_terms": [
+              "散热"
+            ],
+            "source_ids": [
+              "attachment",
+              "run"
+            ],
+            "source_ref": "附件2 平台 48.08C 低于环境 75C，需要皮肤侧持续取走热量"
+          },
+          {
+            "id": "early-transient-gap",
+            "kind": "boundary",
+            "observation_terms": [
+              "残差"
+            ],
+            "explanation_terms": [
+              "边界条件"
+            ],
+            "source_ids": [
+              "run"
+            ],
+            "source_ref": "前 10min 残差 1.2798C 远大于末 30min 的 0.1453C，题面「表面瞬间达到环境温度」在升温初段过强"
+          }
+        ],
+        "drafting_mode": {
+          "mode": "relation_then_method",
+          "public_route_id": "fv-implicit-robin",
+          "keep_out_of_manuscript": "三对角求解与 solve_banded 的常规实现细节"
+        },
+        "human_preflight": {
+          "reviewer": "本机使用者（彩排整体放行）",
+          "reviewer_kind": "human",
+          "basis_confirmation": "附件2 的实测温度出现平台：末值 48.08C 明显低于环境温度 75C，说明皮肤侧一直在散热；附件1 的密度、比热、热传导率又使空气层扩散系数比其余三层大两个量级。",
+          "transition_confirmation": "把散热写成皮肤侧边界条件后未知量收敛到一个散热系数；空气层的扩散系数决定时间步长不能由显式稳定域控制，因此用有限体积离散、界面导度取调和平均保证热流连续，时间推进用后向 Euler，空间步长按分层网格分配。",
+          "change_trigger": "若附件2 换成另一环境温度下的实测曲线，或题面改写第Ⅰ层表面的升温假设，应重新标定散热系数并重审边界条件形式。",
+          "decision": "approve"
+        }
+      },
+      {
+        "question_id": "2",
+        "current_problem_sources": [
+          {
+            "id": "problem",
+            "role": "problem",
+            "path": "inputs/problem-restatement.txt",
+            "sha256": "29d51f1ef84f9442fcb7c614b01c4352b214d2f73fb69f3f86b995252d37bdbe"
+          },
+          {
+            "id": "attachment",
+            "role": "data",
+            "path": "inputs/attachment.xlsx",
+            "sha256": "2026d561054055516d5fbcc3fa22f8add5d786eba2b16c4f76636ae08794c2b3"
+          },
+          {
+            "id": "solver",
+            "role": "code",
+            "path": "solver/simulator.py",
+            "sha256": "e2cab80c2a8b5e9af5ecfbaa155752e05eb787f0a94830dd4b18bef721303eb5"
+          },
+          {
+            "id": "run",
+            "role": "result",
+            "path": "results/run-report.json",
+            "sha256": "2daab7b127123a519139b7f6acd2d05d3ef24a1411906fbc9b6001c7dee4b30d"
+          },
+          {
+            "id": "conclusions",
+            "role": "result",
+            "path": "results/conclusions.json",
+            "sha256": "ba8f795fc94e573cb24686940aaac5c663cb08b9ea954680ddb19e44533d1e31"
+          }
+        ],
+        "fact_anchors": [
+          {
+            "id": "q2-constraint",
+            "kind": "relation",
+            "terms": [
+              "工作时间",
+              "上限",
+              "累计时长"
+            ],
+            "source_ref": "题面问题 (2)：65C、IV 层 5.5mm、60 分钟内皮肤外侧不超过 47C 且超过 44C 不超过 5 分钟",
+            "source_ids": [
+              "problem"
+            ]
+          },
+          {
+            "id": "q2-frozen-interface",
+            "kind": "interface",
+            "terms": [
+              "仿真器",
+              "散热系数"
+            ],
+            "source_ref": "冻结问一的仿真器与标定的 h_skin=8.7739；本问新开放量只有 II 层厚度",
+            "source_ids": [
+              "solver",
+              "run"
+            ]
+          },
+          {
+            "id": "q2-bounds",
+            "kind": "constraint",
+            "terms": [
+              "厚度范围"
+            ],
+            "source_ref": "附件1 II 层厚度 0.6--25 mm",
+            "source_ids": [
+              "attachment"
+            ]
+          },
+          {
+            "id": "q2-monotone",
+            "kind": "trial",
+            "terms": [
+              "单调"
+            ],
+            "source_ref": "实测 d2=0.6->25mm 时峰值 44.991->43.240C 单调不增",
+            "source_ids": [
+              "conclusions"
+            ]
+          }
+        ],
+        "mathematical_targets": [
+          {
+            "id": "transient-criteria",
+            "terms": [
+              "瞬态判据"
+            ],
+            "source_ref": "把两条约束写成逐时刻上限与越阈累计时长，而不是稳态温度"
+          },
+          {
+            "id": "search-layer",
+            "terms": [
+              "搜索层",
+              "二分"
+            ],
+            "source_ref": "单调性决定搜索层只需一维二分"
+          }
+        ],
+        "selected_route": {
+          "id": "simulator-bisection",
+          "name": "调用问一仿真器 + 一维二分求最小可行厚度",
+          "status": "selected",
+          "terms": [
+            "二分",
+            "最小可行"
+          ],
+          "anchor_ids": [
+            "q2-constraint",
+            "q2-frozen-interface",
+            "q2-bounds",
+            "q2-monotone"
+          ],
+          "target_ids": [
+            "transient-criteria",
+            "search-layer"
+          ],
+          "evidence_ids": [
+            "solver",
+            "conclusions"
+          ],
+          "evidence_ref": "solver/simulator.py minimal_feasible_d2 与 constraint_metrics；results/conclusions.json q2_result"
+        },
+        "recorded_alternative_routes": [
+          {
+            "id": "steady-algebra",
+            "name": "稳态串联界面方程组定厚度",
+            "status": "rejected",
+            "terms": [
+              "稳态"
+            ],
+            "anchor_ids": [
+              "q2-constraint",
+              "q2-bounds"
+            ],
+            "target_ids": [
+              "transient-criteria"
+            ],
+            "evidence_ids": [
+              "review"
+            ],
+            "evidence_ref": "results/prior-review.json findings F2 与 F4",
+            "reason": "该式 4 个方程对 theta2/theta3/theta4/q/d2 共 5 个未知量，扫描 d2=0.6..25mm 每个都有自洽解，以 min d2 为目标会落到下界 0.6mm；且稳态无时间维，无法表达 5 分钟这个量。"
+          },
+          {
+            "id": "metaheuristic",
+            "name": "遗传算法等元启发式",
+            "status": "rejected",
+            "terms": [
+              "遗传算法"
+            ],
+            "anchor_ids": [
+              "q2-monotone"
+            ],
+            "target_ids": [
+              "search-layer"
+            ],
+            "evidence_ids": [
+              "conclusions"
+            ],
+            "evidence_ref": "results/conclusions.json q2_result.monotonicity_verified",
+            "reason": "峰值随厚度单调不增已实测确认，一维二分即可给出最小可行厚度并保留可复算性；元启发式在此既无精度收益也给不出最优性界。"
+          }
+        ],
+        "declared_checks": [
+          {
+            "id": "q2-monotonicity",
+            "kind": "feasibility",
+            "terms": [
+              "单调"
+            ],
+            "result": "d2=0.6/3/6/10/14/18.161/22/25mm 峰值 44.991/44.864/44.710/44.513/44.318/44.045/43.649/43.240C，单调不增",
+            "result_terms": [
+              "单调"
+            ],
+            "artifact": {
+              "path": "results/conclusions.json",
+              "sha256": "ba8f795fc94e573cb24686940aaac5c663cb08b9ea954680ddb19e44533d1e31"
+            }
+          },
+          {
+            "id": "q2-binding",
+            "kind": "boundary",
+            "terms": [
+              "紧约束"
+            ],
+            "result": "最优点峰值 44.045C 未触 47C 上限，紧约束是 5 分钟预算",
+            "result_terms": [
+              "紧约束"
+            ],
+            "artifact": {
+              "path": "results/conclusions.json",
+              "sha256": "ba8f795fc94e573cb24686940aaac5c663cb08b9ea954680ddb19e44533d1e31"
+            }
+          },
+          {
+            "id": "q2-parameter-sensitivity",
+            "kind": "sensitivity",
+            "terms": [
+              "散热系数"
+            ],
+            "result": "h_skin 变动 -2%/+2% 时 d2* 为 19.19/17.04mm；-5%/+5% 为 20.52/14.90mm；-20% 整区间不可行、+20% 下界即可行",
+            "result_terms": [
+              "散热系数"
+            ],
+            "artifact": {
+              "path": "results/conclusions.json",
+              "sha256": "ba8f795fc94e573cb24686940aaac5c663cb08b9ea954680ddb19e44533d1e31"
+            }
+          }
+        ],
+        "result_interpretations": [
+          {
+            "id": "q2-active",
+            "kind": "active_constraint",
+            "observation_terms": [
+              "紧约束"
+            ],
+            "explanation_terms": [
+              "累计时长"
+            ],
+            "source_ids": [
+              "conclusions"
+            ],
+            "source_ref": "results/conclusions.json q2_result.binding_constraint"
+          },
+          {
+            "id": "q2-crossing",
+            "kind": "event_switch",
+            "observation_terms": [
+              "穿越时刻"
+            ],
+            "explanation_terms": [
+              "累计时长"
+            ],
+            "source_ids": [
+              "conclusions"
+            ],
+            "source_ref": "首次超过 44C 在 t=55.0min，正是 60-5 的紧致条件"
+          },
+          {
+            "id": "q2-illcond",
+            "kind": "uncertainty",
+            "observation_terms": [
+              "散热系数"
+            ],
+            "explanation_terms": [
+              "可辨识区间"
+            ],
+            "source_ids": [
+              "conclusions"
+            ],
+            "source_ref": "最优点平台 44.14C 仅高于阈值 0.14C，t=55min 斜率 0.0112 C/min，故交付区间而非点值"
+          }
+        ],
+        "drafting_mode": {
+          "mode": "interface_extension",
+          "public_route_id": "simulator-bisection",
+          "keep_out_of_manuscript": "二分的迭代次数与容差调参过程"
+        },
+        "human_preflight": {
+          "reviewer": "本机使用者（彩排整体放行）",
+          "reviewer_kind": "human",
+          "basis_confirmation": "题面把工作时间 60 分钟、47C 上限和超过 44C 的累计时长不超过 5 分钟同时给出，附件1 又把 II 层厚度范围限定在 0.6 至 25mm。",
+          "transition_confirmation": "两条约束必须落到逐时刻上限与越阈累计时长这组瞬态判据；实测峰值随厚度单调不增，搜索层因此收缩为一维二分，取最小可行厚度。",
+          "change_trigger": "若工作时间或阈值改变，紧约束可能从 5 分钟预算换成 47C 上限，需重判搜索目标。",
+          "decision": "approve"
+        }
+      },
+      {
+        "question_id": "3",
+        "current_problem_sources": [
+          {
+            "id": "problem",
+            "role": "problem",
+            "path": "inputs/problem-restatement.txt",
+            "sha256": "29d51f1ef84f9442fcb7c614b01c4352b214d2f73fb69f3f86b995252d37bdbe"
+          },
+          {
+            "id": "attachment",
+            "role": "data",
+            "path": "inputs/attachment.xlsx",
+            "sha256": "2026d561054055516d5fbcc3fa22f8add5d786eba2b16c4f76636ae08794c2b3"
+          },
+          {
+            "id": "solver",
+            "role": "code",
+            "path": "solver/simulator.py",
+            "sha256": "e2cab80c2a8b5e9af5ecfbaa155752e05eb787f0a94830dd4b18bef721303eb5"
+          },
+          {
+            "id": "run",
+            "role": "result",
+            "path": "results/run-report.json",
+            "sha256": "2daab7b127123a519139b7f6acd2d05d3ef24a1411906fbc9b6001c7dee4b30d"
+          },
+          {
+            "id": "conclusions",
+            "role": "result",
+            "path": "results/conclusions.json",
+            "sha256": "ba8f795fc94e573cb24686940aaac5c663cb08b9ea954680ddb19e44533d1e31"
+          },
+          {
+            "id": "review",
+            "role": "prior-output",
+            "path": "results/prior-review.json",
+            "sha256": "842451a0a3ebb995b49427eec0e195c63484281305fa4e5a1fa45006749a358a"
+          }
+        ],
+        "fact_anchors": [
+          {
+            "id": "q3-constraint",
+            "kind": "relation",
+            "terms": [
+              "工作时间",
+              "上限",
+              "累计时长"
+            ],
+            "source_ref": "题面问题 (3)：80C、30 分钟内皮肤外侧不超过 47C 且超过 44C 不超过 5 分钟",
+            "source_ids": [
+              "problem"
+            ]
+          },
+          {
+            "id": "q3-frozen-interface",
+            "kind": "interface",
+            "terms": [
+              "仿真器",
+              "散热系数"
+            ],
+            "source_ref": "沿用同一仿真器与 h_skin；本问同时开放 II 层与 IV 层厚度",
+            "source_ids": [
+              "solver",
+              "run"
+            ]
+          },
+          {
+            "id": "q3-bounds",
+            "kind": "constraint",
+            "terms": [
+              "厚度范围"
+            ],
+            "source_ref": "附件1 II 层 0.6--25mm、IV 层 0.6--6.4mm",
+            "source_ids": [
+              "attachment"
+            ]
+          },
+          {
+            "id": "q3-opposed-objectives",
+            "kind": "structure",
+            "terms": [
+              "双目标"
+            ],
+            "source_ref": "降低成本要求 II 层薄，隔热要求 IV 层厚，两个方向相反",
+            "source_ids": [
+              "problem"
+            ]
+          }
+        ],
+        "mathematical_targets": [
+          {
+            "id": "bi-objective-handling",
+            "terms": [
+              "双目标",
+              "前沿"
+            ],
+            "source_ref": "两目标的处理方式：保留前沿还是标量化"
+          },
+          {
+            "id": "feasibility-frontier",
+            "terms": [
+              "可行性边界"
+            ],
+            "source_ref": "IV 层厚度低于某值时整个 II 层区间是否还有可行解"
+          }
+        ],
+        "selected_route": {
+          "id": "front-by-d4",
+          "name": "对每个 IV 层厚度求最小可行 II 层厚度，报告前沿",
+          "status": "selected",
+          "terms": [
+            "前沿",
+            "最小可行"
+          ],
+          "anchor_ids": [
+            "q3-constraint",
+            "q3-frozen-interface",
+            "q3-bounds",
+            "q3-opposed-objectives"
+          ],
+          "target_ids": [
+            "bi-objective-handling",
+            "feasibility-frontier"
+          ],
+          "evidence_ids": [
+            "solver",
+            "conclusions"
+          ],
+          "evidence_ref": "solver/simulator.py pareto_d2_d4；results/conclusions.json q3_result"
+        },
+        "recorded_alternative_routes": [
+          {
+            "id": "difference-scalarization",
+            "name": "min(d2 - d4) 相减标量化",
+            "status": "rejected",
+            "terms": [
+              "标量化"
+            ],
+            "anchor_ids": [
+              "q3-opposed-objectives"
+            ],
+            "target_ids": [
+              "bi-objective-handling"
+            ],
+            "evidence_ids": [
+              "review"
+            ],
+            "evidence_ref": "results/prior-review.json traceability 问三行",
+            "reason": "两目标量纲相同但偏好含义未定义，相减等于规定 II 层减薄 1mm 与 IV 层增厚 1mm 等价，题面没有给出这个交换率。"
+          }
+        ],
+        "declared_checks": [
+          {
+            "id": "q3-infeasible-region",
+            "kind": "feasibility",
+            "terms": [
+              "可行性边界"
+            ],
+            "result": "IV 层 <=3.6mm 时 II 层取遍 0.6--25mm 均不可行；边界约在 3.8mm",
+            "result_terms": [
+              "可行性边界"
+            ],
+            "artifact": {
+              "path": "results/conclusions.json",
+              "sha256": "ba8f795fc94e573cb24686940aaac5c663cb08b9ea954680ddb19e44533d1e31"
+            }
+          },
+          {
+            "id": "q3-front-endpoints",
+            "kind": "boundary",
+            "terms": [
+              "前沿"
+            ],
+            "result": "IV 层 3.8->6.4mm 对应 II 层最小可行 24.99->21.19mm，总厚最小点 21.188+6.4mm",
+            "result_terms": [
+              "前沿"
+            ],
+            "artifact": {
+              "path": "results/conclusions.json",
+              "sha256": "ba8f795fc94e573cb24686940aaac5c663cb08b9ea954680ddb19e44533d1e31"
+            }
+          }
+        ],
+        "result_interpretations": [
+          {
+            "id": "q3-boundary",
+            "kind": "boundary",
+            "observation_terms": [
+              "可行性边界"
+            ],
+            "explanation_terms": [
+              "前沿"
+            ],
+            "source_ids": [
+              "conclusions"
+            ],
+            "source_ref": "results/conclusions.json q3_result.feasibility_boundary_d4_mm"
+          },
+          {
+            "id": "q3-vs-paper",
+            "kind": "comparison",
+            "observation_terms": [
+              "峰值"
+            ],
+            "explanation_terms": [
+              "上限"
+            ],
+            "source_ids": [
+              "conclusions",
+              "review"
+            ],
+            "source_ref": "参考论文两组报告值在本模型下峰值 48.97C 与 48.01C，均越过 47C 上限"
+          }
+        ],
+        "drafting_mode": {
+          "mode": "interface_extension",
+          "public_route_id": "front-by-d4",
+          "keep_out_of_manuscript": "前沿扫描的步长选择过程"
+        },
+        "human_preflight": {
+          "reviewer": "本机使用者（彩排整体放行）",
+          "reviewer_kind": "human",
+          "basis_confirmation": "题面在 80C、工作时间 30 分钟下同时开放 II 层与 IV 层厚度，附件1 给出的厚度范围分别是0.6--25mm 与 0.6--6.4mm；降低成本要求 II 层薄、隔热要求 IV 层厚，构成方向相反的双目标。",
+          "transition_confirmation": "题面没有给出两者的交换率，因此保留双目标不做标量化：对每个 IV 层厚度求最小可行 II 层厚度，落到前沿与可行性边界这两个数学对象。",
+          "change_trigger": "若题面给出成本与厚度的具体折算，才可以把前沿收缩成单目标。",
+          "decision": "approve"
+        }
+      }
+    ]
+  },
+  "public_judgment_contract": {
+    "schema": "mcm-section-public-judgment-contract/v1",
+    "role": "restatement",
+    "section_local": true,
+    "required": false,
+    "questions": [
+      {
+        "question_id": "1",
+        "drafting_mode": "relation_then_method",
+        "basis_nodes": [
+          {
+            "id": "layer-properties",
+            "kind": "data",
+            "terms": [
+              "密度",
+              "比热",
+              "热传导率"
+            ],
+            "source_ref": "附件1 第 I--IV 层 rho/c/lambda 与厚度",
+            "source_ids": [
+              "attachment"
+            ]
+          },
+          {
+            "id": "measured-plateau",
+            "kind": "data",
+            "terms": [
+              "实测温度",
+              "平台"
+            ],
+            "source_ref": "附件2 0..5400s 共 5401 点，t=0 为 37.00, 末值 48.08, 末 10min 波动 0.000",
+            "source_ids": [
+              "attachment"
+            ]
+          },
+          {
+            "id": "given-scenario",
+            "kind": "relation",
+            "terms": [
+              "环境温度",
+              "工作时间"
+            ],
+            "source_ref": "题面问题 (1)：75C、II 层 6mm、IV 层 5mm、90 分钟",
+            "source_ids": [
+              "problem"
+            ]
+          },
+          {
+            "id": "air-layer-diffusivity",
+            "kind": "boundary",
+            "terms": [
+              "扩散系数",
+              "空气层"
+            ],
+            "source_ref": "附件1 IV 层 rho=1.18 -> a=2.361e-05，比其余三层大两个量级",
+            "source_ids": [
+              "attachment",
+              "run"
+            ]
+          },
+          {
+            "id": "plateau-below-ambient",
+            "kind": "result",
+            "terms": [
+              "散热"
+            ],
+            "source_ref": "附件2 平台 48.08C 远低于环境 75C",
+            "source_ids": [
+              "attachment"
+            ]
+          }
+        ],
+        "mathematical_change_nodes": [
+          {
+            "id": "layered-pde",
+            "terms": [
+              "一维热传导",
+              "界面条件"
+            ],
+            "source_ref": "四层介质内的瞬态方程与界面温度、热流连续"
+          },
+          {
+            "id": "skin-boundary",
+            "terms": [
+              "边界条件",
+              "散热系数"
+            ],
+            "source_ref": "皮肤侧边界形式；唯一未知参数 h_skin"
+          },
+          {
+            "id": "time-stepping",
+            "terms": [
+              "时间步长",
+              "稳定性"
+            ],
+            "source_ref": "空气层扩散系数决定推进方式的可行性"
+          },
+          {
+            "id": "grid-allocation",
+            "terms": [
+              "空间步长",
+              "分层网格"
+            ],
+            "source_ref": "最薄层 0.6mm 与最厚层的格数分配"
+          }
+        ],
+        "selected_route": {
+          "id": "fv-implicit-robin",
+          "name": "有限体积 + 调和平均界面导度 + 后向 Euler，皮肤侧 Robin 双路线标定",
+          "terms": [
+            "有限体积",
+            "后向 Euler",
+            "调和平均"
+          ],
+          "anchor_ids": [
+            "layer-properties",
+            "measured-plateau",
+            "given-scenario",
+            "air-layer-diffusivity",
+            "plateau-below-ambient"
+          ],
+          "target_ids": [
+            "layered-pde",
+            "skin-boundary",
+            "time-stepping",
+            "grid-allocation"
+          ],
+          "evidence_ids": [
+            "solver",
+            "run"
+          ],
+          "evidence_ref": "solver/simulator.py Simulator.run 与 calibrate_skin_coefficient；results/run-report.json calibration"
+        },
+        "recorded_alternative_routes": [
+          {
+            "id": "forward-euler",
+            "name": "向前 Euler 显式格式",
+            "status": "rejected",
+            "terms": [
+              "向前 Euler"
+            ],
+            "anchor_ids": [
+              "air-layer-diffusivity"
+            ],
+            "target_ids": [
+              "time-stepping"
+            ],
+            "evidence_ids": [
+              "run"
+            ],
+            "evidence_ref": "results/run-report.json diffusivity_m2_s",
+            "reason": "空气层 a=2.361e-05 使稳定域 r=a*tau/h^2<=1/2 把时间步长压到远小于 1s；同一格式在系数被误取为 lambda 时反而稳定，稳定不能证明系数正确。"
+          },
+          {
+            "id": "adiabatic-skin",
+            "name": "皮肤侧绝热",
+            "status": "rejected",
+            "terms": [
+              "绝热"
+            ],
+            "anchor_ids": [
+              "plateau-below-ambient"
+            ],
+            "target_ids": [
+              "skin-boundary"
+            ],
+            "evidence_ids": [
+              "attachment"
+            ],
+            "evidence_ref": "inputs/attachment.xlsx 附件2 末段",
+            "reason": "绝热时全场最终趋于环境温度 75C，与附件2 的 48.08C 平台矛盾。"
+          }
+        ],
+        "result_interpretations": [
+          {
+            "id": "why-robin",
+            "kind": "mechanism",
+            "observation_terms": [
+              "平台"
+            ],
+            "explanation_terms": [
+              "散热"
+            ],
+            "source_ids": [
+              "attachment",
+              "run"
+            ],
+            "source_ref": "附件2 平台 48.08C 低于环境 75C，需要皮肤侧持续取走热量"
+          },
+          {
+            "id": "early-transient-gap",
+            "kind": "boundary",
+            "observation_terms": [
+              "残差"
+            ],
+            "explanation_terms": [
+              "边界条件"
+            ],
+            "source_ids": [
+              "run"
+            ],
+            "source_ref": "前 10min 残差 1.2798C 远大于末 30min 的 0.1453C，题面「表面瞬间达到环境温度」在升温初段过强"
+          }
+        ],
+        "actual_checks": [
+          {
+            "id": "steady-limit",
+            "kind": "derivation",
+            "terms": [
+              "解析稳态解"
+            ],
+            "result": "瞬态终点 47.934716682627 与解析稳态 47.934716682526 相差 1e-10",
+            "result_terms": [
+              "解析稳态解"
+            ],
+            "artifact": {
+              "path": "results/run-report.json",
+              "sha256": "2daab7b127123a519139b7f6acd2d05d3ef24a1411906fbc9b6001c7dee4b30d"
+            }
+          },
+          {
+            "id": "mesh-convergence",
+            "kind": "implementation",
+            "terms": [
+              "空间步长",
+              "时间步长"
+            ],
+            "result": "格数 10->80、步长 4s->1s，终点温度最大偏差 2.7e-09 C",
+            "result_terms": [
+              "空间步长"
+            ],
+            "artifact": {
+              "path": "results/run-report.json",
+              "sha256": "2daab7b127123a519139b7f6acd2d05d3ef24a1411906fbc9b6001c7dee4b30d"
+            }
+          },
+          {
+            "id": "residual-structure",
+            "kind": "residual",
+            "terms": [
+              "残差"
+            ],
+            "result": "全程 RMSE 0.4517C；末 30min 0.1453C；前 10min 1.2798C",
+            "result_terms": [
+              "残差"
+            ],
+            "artifact": {
+              "path": "results/run-report.json",
+              "sha256": "2daab7b127123a519139b7f6acd2d05d3ef24a1411906fbc9b6001c7dee4b30d"
+            }
+          },
+          {
+            "id": "diffusivity-units",
+            "kind": "unit",
+            "terms": [
+              "扩散系数"
+            ],
+            "result": "逐层 a=lambda/(rho*c) 与附件1 预置列逐位一致，含空气层 2.361e-05",
+            "result_terms": [
+              "扩散系数"
+            ],
+            "artifact": {
+              "path": "inputs/attachment.xlsx",
+              "sha256": "2026d561054055516d5fbcc3fa22f8add5d786eba2b16c4f76636ae08794c2b3"
+            }
+          }
+        ],
+        "human_confirmation": {
+          "reviewer": "本机使用者（彩排整体放行）",
+          "reviewer_kind": "human",
+          "basis_confirmation": "附件2 的实测温度出现平台：末值 48.08C 明显低于环境温度 75C，说明皮肤侧一直在散热；附件1 的密度、比热、热传导率又使空气层扩散系数比其余三层大两个量级。",
+          "transition_confirmation": "把散热写成皮肤侧边界条件后未知量收敛到一个散热系数；空气层的扩散系数决定时间步长不能由显式稳定域控制，因此用有限体积离散、界面导度取调和平均保证热流连续，时间推进用后向 Euler，空间步长按分层网格分配。",
+          "change_trigger": "若附件2 换成另一环境温度下的实测曲线，或题面改写第Ⅰ层表面的升温假设，应重新标定散热系数并重审边界条件形式。",
+          "decision": "approve"
+        },
+        "local_requirements": {
+          "basis_term_required": false,
+          "mathematical_change_term_required": false,
+          "selected_route_term_required": false,
+          "bridge_required_if_route_named": false,
+          "order_rule": "route-cannot-precede-both-basis-and-mathematical-change",
+          "minimum_basis_groups": 0,
+          "minimum_target_groups": 0,
+          "result_interpretation_required": false,
+          "validation_conclusion_required": false,
+          "model_comparison_guard": false
+        }
+      },
+      {
+        "question_id": "2",
+        "drafting_mode": "interface_extension",
+        "basis_nodes": [
+          {
+            "id": "q2-constraint",
+            "kind": "relation",
+            "terms": [
+              "工作时间",
+              "上限",
+              "累计时长"
+            ],
+            "source_ref": "题面问题 (2)：65C、IV 层 5.5mm、60 分钟内皮肤外侧不超过 47C 且超过 44C 不超过 5 分钟",
+            "source_ids": [
+              "problem"
+            ]
+          },
+          {
+            "id": "q2-frozen-interface",
+            "kind": "interface",
+            "terms": [
+              "仿真器",
+              "散热系数"
+            ],
+            "source_ref": "冻结问一的仿真器与标定的 h_skin=8.7739；本问新开放量只有 II 层厚度",
+            "source_ids": [
+              "solver",
+              "run"
+            ]
+          },
+          {
+            "id": "q2-bounds",
+            "kind": "constraint",
+            "terms": [
+              "厚度范围"
+            ],
+            "source_ref": "附件1 II 层厚度 0.6--25 mm",
+            "source_ids": [
+              "attachment"
+            ]
+          },
+          {
+            "id": "q2-monotone",
+            "kind": "trial",
+            "terms": [
+              "单调"
+            ],
+            "source_ref": "实测 d2=0.6->25mm 时峰值 44.991->43.240C 单调不增",
+            "source_ids": [
+              "conclusions"
+            ]
+          }
+        ],
+        "mathematical_change_nodes": [
+          {
+            "id": "transient-criteria",
+            "terms": [
+              "瞬态判据"
+            ],
+            "source_ref": "把两条约束写成逐时刻上限与越阈累计时长，而不是稳态温度"
+          },
+          {
+            "id": "search-layer",
+            "terms": [
+              "搜索层",
+              "二分"
+            ],
+            "source_ref": "单调性决定搜索层只需一维二分"
+          }
+        ],
+        "selected_route": {
+          "id": "simulator-bisection",
+          "name": "调用问一仿真器 + 一维二分求最小可行厚度",
+          "terms": [
+            "二分",
+            "最小可行"
+          ],
+          "anchor_ids": [
+            "q2-constraint",
+            "q2-frozen-interface",
+            "q2-bounds",
+            "q2-monotone"
+          ],
+          "target_ids": [
+            "transient-criteria",
+            "search-layer"
+          ],
+          "evidence_ids": [
+            "solver",
+            "conclusions"
+          ],
+          "evidence_ref": "solver/simulator.py minimal_feasible_d2 与 constraint_metrics；results/conclusions.json q2_result"
+        },
+        "recorded_alternative_routes": [
+          {
+            "id": "steady-algebra",
+            "name": "稳态串联界面方程组定厚度",
+            "status": "rejected",
+            "terms": [
+              "稳态"
+            ],
+            "anchor_ids": [
+              "q2-constraint",
+              "q2-bounds"
+            ],
+            "target_ids": [
+              "transient-criteria"
+            ],
+            "evidence_ids": [
+              "review"
+            ],
+            "evidence_ref": "results/prior-review.json findings F2 与 F4",
+            "reason": "该式 4 个方程对 theta2/theta3/theta4/q/d2 共 5 个未知量，扫描 d2=0.6..25mm 每个都有自洽解，以 min d2 为目标会落到下界 0.6mm；且稳态无时间维，无法表达 5 分钟这个量。"
+          },
+          {
+            "id": "metaheuristic",
+            "name": "遗传算法等元启发式",
+            "status": "rejected",
+            "terms": [
+              "遗传算法"
+            ],
+            "anchor_ids": [
+              "q2-monotone"
+            ],
+            "target_ids": [
+              "search-layer"
+            ],
+            "evidence_ids": [
+              "conclusions"
+            ],
+            "evidence_ref": "results/conclusions.json q2_result.monotonicity_verified",
+            "reason": "峰值随厚度单调不增已实测确认，一维二分即可给出最小可行厚度并保留可复算性；元启发式在此既无精度收益也给不出最优性界。"
+          }
+        ],
+        "result_interpretations": [
+          {
+            "id": "q2-active",
+            "kind": "active_constraint",
+            "observation_terms": [
+              "紧约束"
+            ],
+            "explanation_terms": [
+              "累计时长"
+            ],
+            "source_ids": [
+              "conclusions"
+            ],
+            "source_ref": "results/conclusions.json q2_result.binding_constraint"
+          },
+          {
+            "id": "q2-crossing",
+            "kind": "event_switch",
+            "observation_terms": [
+              "穿越时刻"
+            ],
+            "explanation_terms": [
+              "累计时长"
+            ],
+            "source_ids": [
+              "conclusions"
+            ],
+            "source_ref": "首次超过 44C 在 t=55.0min，正是 60-5 的紧致条件"
+          },
+          {
+            "id": "q2-illcond",
+            "kind": "uncertainty",
+            "observation_terms": [
+              "散热系数"
+            ],
+            "explanation_terms": [
+              "可辨识区间"
+            ],
+            "source_ids": [
+              "conclusions"
+            ],
+            "source_ref": "最优点平台 44.14C 仅高于阈值 0.14C，t=55min 斜率 0.0112 C/min，故交付区间而非点值"
+          }
+        ],
+        "actual_checks": [
+          {
+            "id": "q2-monotonicity",
+            "kind": "feasibility",
+            "terms": [
+              "单调"
+            ],
+            "result": "d2=0.6/3/6/10/14/18.161/22/25mm 峰值 44.991/44.864/44.710/44.513/44.318/44.045/43.649/43.240C，单调不增",
+            "result_terms": [
+              "单调"
+            ],
+            "artifact": {
+              "path": "results/conclusions.json",
+              "sha256": "ba8f795fc94e573cb24686940aaac5c663cb08b9ea954680ddb19e44533d1e31"
+            }
+          },
+          {
+            "id": "q2-binding",
+            "kind": "boundary",
+            "terms": [
+              "紧约束"
+            ],
+            "result": "最优点峰值 44.045C 未触 47C 上限，紧约束是 5 分钟预算",
+            "result_terms": [
+              "紧约束"
+            ],
+            "artifact": {
+              "path": "results/conclusions.json",
+              "sha256": "ba8f795fc94e573cb24686940aaac5c663cb08b9ea954680ddb19e44533d1e31"
+            }
+          },
+          {
+            "id": "q2-parameter-sensitivity",
+            "kind": "sensitivity",
+            "terms": [
+              "散热系数"
+            ],
+            "result": "h_skin 变动 -2%/+2% 时 d2* 为 19.19/17.04mm；-5%/+5% 为 20.52/14.90mm；-20% 整区间不可行、+20% 下界即可行",
+            "result_terms": [
+              "散热系数"
+            ],
+            "artifact": {
+              "path": "results/conclusions.json",
+              "sha256": "ba8f795fc94e573cb24686940aaac5c663cb08b9ea954680ddb19e44533d1e31"
+            }
+          }
+        ],
+        "human_confirmation": {
+          "reviewer": "本机使用者（彩排整体放行）",
+          "reviewer_kind": "human",
+          "basis_confirmation": "题面把工作时间 60 分钟、47C 上限和超过 44C 的累计时长不超过 5 分钟同时给出，附件1 又把 II 层厚度范围限定在 0.6 至 25mm。",
+          "transition_confirmation": "两条约束必须落到逐时刻上限与越阈累计时长这组瞬态判据；实测峰值随厚度单调不增，搜索层因此收缩为一维二分，取最小可行厚度。",
+          "change_trigger": "若工作时间或阈值改变，紧约束可能从 5 分钟预算换成 47C 上限，需重判搜索目标。",
+          "decision": "approve"
+        },
+        "local_requirements": {
+          "basis_term_required": false,
+          "mathematical_change_term_required": false,
+          "selected_route_term_required": false,
+          "bridge_required_if_route_named": false,
+          "order_rule": "route-cannot-precede-both-basis-and-mathematical-change",
+          "minimum_basis_groups": 0,
+          "minimum_target_groups": 0,
+          "result_interpretation_required": false,
+          "validation_conclusion_required": false,
+          "model_comparison_guard": false
+        }
+      },
+      {
+        "question_id": "3",
+        "drafting_mode": "interface_extension",
+        "basis_nodes": [
+          {
+            "id": "q3-constraint",
+            "kind": "relation",
+            "terms": [
+              "工作时间",
+              "上限",
+              "累计时长"
+            ],
+            "source_ref": "题面问题 (3)：80C、30 分钟内皮肤外侧不超过 47C 且超过 44C 不超过 5 分钟",
+            "source_ids": [
+              "problem"
+            ]
+          },
+          {
+            "id": "q3-frozen-interface",
+            "kind": "interface",
+            "terms": [
+              "仿真器",
+              "散热系数"
+            ],
+            "source_ref": "沿用同一仿真器与 h_skin；本问同时开放 II 层与 IV 层厚度",
+            "source_ids": [
+              "solver",
+              "run"
+            ]
+          },
+          {
+            "id": "q3-bounds",
+            "kind": "constraint",
+            "terms": [
+              "厚度范围"
+            ],
+            "source_ref": "附件1 II 层 0.6--25mm、IV 层 0.6--6.4mm",
+            "source_ids": [
+              "attachment"
+            ]
+          },
+          {
+            "id": "q3-opposed-objectives",
+            "kind": "structure",
+            "terms": [
+              "双目标"
+            ],
+            "source_ref": "降低成本要求 II 层薄，隔热要求 IV 层厚，两个方向相反",
+            "source_ids": [
+              "problem"
+            ]
+          }
+        ],
+        "mathematical_change_nodes": [
+          {
+            "id": "bi-objective-handling",
+            "terms": [
+              "双目标",
+              "前沿"
+            ],
+            "source_ref": "两目标的处理方式：保留前沿还是标量化"
+          },
+          {
+            "id": "feasibility-frontier",
+            "terms": [
+              "可行性边界"
+            ],
+            "source_ref": "IV 层厚度低于某值时整个 II 层区间是否还有可行解"
+          }
+        ],
+        "selected_route": {
+          "id": "front-by-d4",
+          "name": "对每个 IV 层厚度求最小可行 II 层厚度，报告前沿",
+          "terms": [
+            "前沿",
+            "最小可行"
+          ],
+          "anchor_ids": [
+            "q3-constraint",
+            "q3-frozen-interface",
+            "q3-bounds",
+            "q3-opposed-objectives"
+          ],
+          "target_ids": [
+            "bi-objective-handling",
+            "feasibility-frontier"
+          ],
+          "evidence_ids": [
+            "solver",
+            "conclusions"
+          ],
+          "evidence_ref": "solver/simulator.py pareto_d2_d4；results/conclusions.json q3_result"
+        },
+        "recorded_alternative_routes": [
+          {
+            "id": "difference-scalarization",
+            "name": "min(d2 - d4) 相减标量化",
+            "status": "rejected",
+            "terms": [
+              "标量化"
+            ],
+            "anchor_ids": [
+              "q3-opposed-objectives"
+            ],
+            "target_ids": [
+              "bi-objective-handling"
+            ],
+            "evidence_ids": [
+              "review"
+            ],
+            "evidence_ref": "results/prior-review.json traceability 问三行",
+            "reason": "两目标量纲相同但偏好含义未定义，相减等于规定 II 层减薄 1mm 与 IV 层增厚 1mm 等价，题面没有给出这个交换率。"
+          }
+        ],
+        "result_interpretations": [
+          {
+            "id": "q3-boundary",
+            "kind": "boundary",
+            "observation_terms": [
+              "可行性边界"
+            ],
+            "explanation_terms": [
+              "前沿"
+            ],
+            "source_ids": [
+              "conclusions"
+            ],
+            "source_ref": "results/conclusions.json q3_result.feasibility_boundary_d4_mm"
+          },
+          {
+            "id": "q3-vs-paper",
+            "kind": "comparison",
+            "observation_terms": [
+              "峰值"
+            ],
+            "explanation_terms": [
+              "上限"
+            ],
+            "source_ids": [
+              "conclusions",
+              "review"
+            ],
+            "source_ref": "参考论文两组报告值在本模型下峰值 48.97C 与 48.01C，均越过 47C 上限"
+          }
+        ],
+        "actual_checks": [
+          {
+            "id": "q3-infeasible-region",
+            "kind": "feasibility",
+            "terms": [
+              "可行性边界"
+            ],
+            "result": "IV 层 <=3.6mm 时 II 层取遍 0.6--25mm 均不可行；边界约在 3.8mm",
+            "result_terms": [
+              "可行性边界"
+            ],
+            "artifact": {
+              "path": "results/conclusions.json",
+              "sha256": "ba8f795fc94e573cb24686940aaac5c663cb08b9ea954680ddb19e44533d1e31"
+            }
+          },
+          {
+            "id": "q3-front-endpoints",
+            "kind": "boundary",
+            "terms": [
+              "前沿"
+            ],
+            "result": "IV 层 3.8->6.4mm 对应 II 层最小可行 24.99->21.19mm，总厚最小点 21.188+6.4mm",
+            "result_terms": [
+              "前沿"
+            ],
+            "artifact": {
+              "path": "results/conclusions.json",
+              "sha256": "ba8f795fc94e573cb24686940aaac5c663cb08b9ea954680ddb19e44533d1e31"
+            }
+          }
+        ],
+        "human_confirmation": {
+          "reviewer": "本机使用者（彩排整体放行）",
+          "reviewer_kind": "human",
+          "basis_confirmation": "题面在 80C、工作时间 30 分钟下同时开放 II 层与 IV 层厚度，附件1 给出的厚度范围分别是0.6--25mm 与 0.6--6.4mm；降低成本要求 II 层薄、隔热要求 IV 层厚，构成方向相反的双目标。",
+          "transition_confirmation": "题面没有给出两者的交换率，因此保留双目标不做标量化：对每个 IV 层厚度求最小可行 II 层厚度，落到前沿与可行性边界这两个数学对象。",
+          "change_trigger": "若题面给出成本与厚度的具体折算，才可以把前沿收缩成单目标。",
+          "decision": "approve"
+        },
+        "local_requirements": {
+          "basis_term_required": false,
+          "mathematical_change_term_required": false,
+          "selected_route_term_required": false,
+          "bridge_required_if_route_named": false,
+          "order_rule": "route-cannot-precede-both-basis-and-mathematical-change",
+          "minimum_basis_groups": 0,
+          "minimum_target_groups": 0,
+          "result_interpretation_required": false,
+          "validation_conclusion_required": false,
+          "model_comparison_guard": false
+        }
+      }
+    ],
+    "policy": {
+      "use_current_problem_terms_not_stock_model_praise": true,
+      "unrecorded_model_comparison_story_forbidden": true,
+      "recorded_alternative_must_be_named_when_comparison_is_claimed": true,
+      "hidden_chain_of_thought_not_requested": true,
+      "fixed_sentence_order_forbidden": true,
+      "verbatim_human_confirmation_not_required": true
+    },
+    "instruction": "Expose only the local, fact-backed relation needed by this section. Before a model name appears, the prose must already expose either the problem fact or a mathematical relation derived for this question; the other node may occur where the actual explanation needs it. If no alternative route is recorded, do not invent a comparison story. Preserve the actual evidence order without rendering these fields as a fixed prose sequence."
+  },
+  "human_style": {
+    "language_action_profile": {
+      "primary_anchor_id": "2021_A115_P1999",
+      "primary_action_sequence": [
+        "statement",
+        "result"
+      ],
+      "primary_opening_family": "直接陈述",
+      "primary_closing_family": "其他",
+      "primary_ending_action": "result",
+      "primary_han_chars": 104,
+      "primary_sentence_count": 2,
+      "primary_cadence_band": "two-sentence:long",
+      "primary_selection": {
+        "policy": "relevance-bounded-low-reuse",
+        "score_tolerance": 2,
+        "best_score": 11,
+        "selected_score": 11,
+        "selected_original_rank": 1,
+        "eligible_anchor_ids": [
+          "2021_A115_P1999",
+          "2020_A212_P0286",
+          "2023_A092_P4604"
+        ],
+        "prior_anchor_use_count": 0,
+        "prior_sequence_use_count": 0,
+        "same_as_previous_primary": false,
+        "same_sequence_as_previous_primary": false,
+        "prior_opening_use_count": 0,
+        "prior_closing_use_count": 1,
+        "prior_ending_action_use_count": 0,
+        "prior_cadence_use_count": 0,
+        "prior_paper_use_count": 0,
+        "same_opening_as_previous_primary": false,
+        "same_closing_as_previous_primary": true,
+        "same_ending_action_as_previous_primary": false,
+        "same_cadence_as_previous_primary": false,
+        "same_paper_as_previous_primary": false,
+        "rule": "Choose only among already retrieved anchors within the score tolerance; reduce reuse when relevance permits, but never import a less relevant paragraph merely for variety."
+      },
+      "supporting_anchor_ids": [
+        "2020_A212_P0286",
+        "2024_A178_P6140",
+        "2023_A092_P4604"
+      ],
+      "observed_action_sequences": [
+        [
+          "statement",
+          "result"
+        ],
+        [
+          "result",
+          "continuation",
+          "statement"
+        ],
+        [
+          "result",
+          "statement"
+        ],
+        [
+          "statement"
+        ]
+      ],
+      "opening_families": {
+        "其他": 2,
+        "对象": 1,
+        "直接陈述": 1
+      },
+      "closing_families": {
+        "其他": 4
+      },
+      "ending_actions": {
+        "result": 1,
+        "statement": 3
+      },
+      "cadence_bands": {
+        "multi-sentence:medium": 1,
+        "one-sentence:long": 1,
+        "two-sentence:long": 1,
+        "two-sentence:medium": 1
+      },
+      "formula_interface_anchor_ids": [
+        "2021_A115_P1999"
+      ],
+      "visual_interface_anchor_ids": [
+        "2021_A115_P1999"
+      ],
+      "paragraph_character_counts": [
+        104,
+        94,
+        75,
+        172
+      ],
+      "sentence_counts": [
+        2,
+        3,
+        2,
+        1
+      ],
+      "supporting_variations": [
+        {
+          "id": "2020_A212_P0286",
+          "different_on": [
+            "action_sequence",
+            "opening_family",
+            "ending_action",
+            "cadence_band",
+            "paper",
+            "formula_nearby",
+            "visual_nearby"
+          ]
+        },
+        {
+          "id": "2024_A178_P6140",
+          "different_on": [
+            "action_sequence",
+            "opening_family",
+            "ending_action",
+            "cadence_band",
+            "paper",
+            "formula_nearby",
+            "visual_nearby"
+          ]
+        },
+        {
+          "id": "2023_A092_P4604",
+          "different_on": [
+            "action_sequence",
+            "opening_family",
+            "ending_action",
+            "cadence_band",
+            "paper",
+            "formula_nearby",
+            "visual_nearby"
+          ]
+        }
+      ],
+      "context_anchor_ids": [
+        "2021_A115_P1999",
+        "2020_A212_P0286",
+        "2024_A178_P6140",
+        "2023_A092_P4604"
+      ],
+      "use_rule": "Read every bound paragraph in the style plan. Use the primary anchor for the section's main rhetorical motion and the others only to check variation, interfaces, and stopping points. Select actions supported by current-problem evidence; do not blend every observed sequence."
+    },
+    "style_portfolio_summary": {
+      "selection": "relevance-bounded-style-portfolio",
+      "score_tolerance": 8,
+      "anchors": 4,
+      "best_score": 11,
+      "score_deltas": [
+        0,
+        2,
+        3,
+        2
+      ],
+      "outside_score_tolerance": 0,
+      "distinct_papers": 4,
+      "distinct_action_sequences": 4,
+      "distinct_opening_families": 3,
+      "distinct_closing_families": 1,
+      "distinct_ending_actions": 2,
+      "distinct_cadence_bands": 4,
+      "shapes": [
+        {
+          "id": "2021_A115_P1999",
+          "action_sequence": [
+            "statement",
+            "result"
+          ],
+          "opening_family": "直接陈述",
+          "closing_family": "其他",
+          "ending_action": "result",
+          "cadence_band": "two-sentence:long",
+          "paper": "A115",
+          "formula_nearby": true,
+          "visual_nearby": true
+        },
+        {
+          "id": "2020_A212_P0286",
+          "action_sequence": [
+            "result",
+            "continuation",
+            "statement"
+          ],
+          "opening_family": "其他",
+          "closing_family": "其他",
+          "ending_action": "statement",
+          "cadence_band": "multi-sentence:medium",
+          "paper": "A212",
+          "formula_nearby": false,
+          "visual_nearby": false
+        },
+        {
+          "id": "2024_A178_P6140",
+          "action_sequence": [
+            "result",
+            "statement"
+          ],
+          "opening_family": "对象",
+          "closing_family": "其他",
+          "ending_action": "statement",
+          "cadence_band": "two-sentence:medium",
+          "paper": "A178",
+          "formula_nearby": false,
+          "visual_nearby": false
+        },
+        {
+          "id": "2023_A092_P4604",
+          "action_sequence": [
+            "statement"
+          ],
+          "opening_family": "其他",
+          "closing_family": "其他",
+          "ending_action": "statement",
+          "cadence_band": "one-sentence:long",
+          "paper": "A092",
+          "formula_nearby": false,
+          "visual_nearby": false
+        }
+      ]
+    },
+    "reading_order": [
+      "2021_A115_P1999",
+      "2020_A212_P0286",
+      "2024_A178_P6140",
+      "2023_A092_P4604"
+    ],
+    "passages": [
+      {
+        "reading_role": "primary",
+        "id": "2021_A115_P1999",
+        "year": 2021,
+        "problem_type": "A",
+        "paper": "A115",
+        "page_start": 3,
+        "page_end": 3,
+        "section": "restatement",
+        "source": "2021/A115.pdf#page=3",
+        "index_source": "F:\\CUMCM\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:1999",
+        "quality": "high",
+        "score": 11,
+        "actions": [
+          "result",
+          "statement"
+        ],
+        "action_sequence": [
+          "statement",
+          "result"
+        ],
+        "opening_family": "直接陈述",
+        "closing_family": "其他",
+        "ending_action": "result",
+        "han_chars": 104,
+        "sentence_count": 2,
+        "cadence_band": "two-sentence:long",
+        "style_portfolio_rank": 1,
+        "variation_from_primary": [],
+        "formula_nearby": true,
+        "visual_nearby": true,
+        "models": [],
+        "previous_context": [
+          {
+            "source": "2021/A115.pdf#page=2",
+            "section": "restatement",
+            "text": "问题一:为保证反射面板移动时与邻近的反射面板不会互相挤压、拉扯,在设计安装反射面板时就使得反射面板之间有一定的间隙。且规定,若主索点发生了径向调节,相邻节点之间的距离的变化范围不能超过0.07%,促动器的顶端径向伸缩范围为-0.6~+0.6米(基准状态下的伸缩量为0米)。如果需要观测位于基准球面正上方的待测天体(α=0°,β=90°见图5的坐标系),在考虑反射面板调节因素的前提下,确定理想的抛物面。FAST剖面示意图以及焦径比等参数见图6。"
+          }
+        ],
+        "text": "问题二:该问题要求待观测天体不在基准球面正上方时,确定理想的抛物面。若要考虑相关促动器的伸缩量,需要确定理想抛物面的顶点坐标、调节后的300米口径内主索节点的编号、位置坐标以及对应各个促动器的伸缩量,并将结果保存在电子表格文件中。",
+        "next_context": [
+          {
+            "source": "2021/A115.pdf#page=3",
+            "section": "restatement",
+            "text": "问题三:在问题二建立的主动反射面调节方案的基础之上,计算调节后馈源舱的电磁波信号接收比(即馈源舱的一米直径的圆盘上接收到的反射电磁波信号与照明区主动反射面反射信号之比),并且与未通过主动反射面调节之前的基础球面的反射电磁波信号接收比作比较。"
+          }
+        ]
+      },
+      {
+        "reading_role": "supporting",
+        "id": "2020_A212_P0286",
+        "year": 2020,
+        "problem_type": "A",
+        "paper": "A212",
+        "page_start": 2,
+        "page_end": 2,
+        "section": "restatement",
+        "source": "2020/A212.pdf#page=2",
+        "index_source": "F:\\CUMCM\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:286",
+        "quality": "high",
+        "score": 9,
+        "actions": [
+          "continuation",
+          "result",
+          "statement"
+        ],
+        "action_sequence": [
+          "result",
+          "continuation",
+          "statement"
+        ],
+        "opening_family": "其他",
+        "closing_family": "其他",
+        "ending_action": "statement",
+        "han_chars": 94,
+        "sentence_count": 3,
+        "cadence_band": "multi-sentence:medium",
+        "style_portfolio_rank": 2,
+        "variation_from_primary": [
+          "action_sequence",
+          "opening_family",
+          "ending_action",
+          "cadence_band",
+          "paper",
+          "formula_nearby",
+          "visual_nearby"
+        ],
+        "formula_nearby": false,
+        "visual_nearby": false,
+        "models": [],
+        "previous_context": [
+          {
+            "source": "2020/A212.pdf#page=2",
+            "section": "restatement",
+            "text": "实际过程中焊接区域中心的温度不能太长时间均处于217°C以上,峰值温度也不能设的太高。理论上超过217°C到峰值温度所覆盖的面积越小,炉温曲线越理想。确定满足此要求的最优炉温曲线,给出各温区的设定温度值以及传送带的过炉速度,给出面积"
+          }
+        ],
+        "text": "焊接过程中希望炉温曲线满足制程界限的同时,尽量使得炉温曲线以峰值温度为中心线的两侧超过217°C的部分对称。在问题三的基础上,进一步给出最优炉温曲线。给出各温区的设定温度值以及传送带的过炉速度,和对应的指标值。",
+        "next_context": [
+          {
+            "source": "2020/A212.pdf#page=3",
+            "section": "analysis",
+            "text": "对于问题一,我们需要首先根据题目中给出的各个小温区的设定温度值,来计算稳定状态下回焊炉中各个温区、温区之间的间隙以及炉前区域、炉后区域等的温度分布。通过傅里叶定律推导一维稳态传热过程,确定在温区之间间隙的温度分布以及炉前区域的温度分布等。由题中已给出的区域长度信息,以及传送带的过炉速度,我们可以计算出在每个小温区和每个间隙经过的时间。"
+          }
+        ]
+      },
+      {
+        "reading_role": "supporting",
+        "id": "2024_A178_P6140",
+        "year": 2024,
+        "problem_type": "A",
+        "paper": "A178",
+        "page_start": 2,
+        "page_end": 2,
+        "section": "restatement",
+        "source": "2024/A178.pdf#page=2",
+        "index_source": "F:\\CUMCM\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:6140",
+        "quality": "high",
+        "score": 8,
+        "actions": [
+          "result",
+          "statement"
+        ],
+        "action_sequence": [
+          "result",
+          "statement"
+        ],
+        "opening_family": "对象",
+        "closing_family": "其他",
+        "ending_action": "statement",
+        "han_chars": 75,
+        "sentence_count": 2,
+        "cadence_band": "two-sentence:medium",
+        "style_portfolio_rank": 3,
+        "variation_from_primary": [
+          "action_sequence",
+          "opening_family",
+          "ending_action",
+          "cadence_band",
+          "paper",
+          "formula_nearby",
+          "visual_nearby"
+        ],
+        "formula_nearby": false,
+        "visual_nearby": false,
+        "models": [],
+        "previous_context": [
+          {
+            "source": "2024/A178.pdf#page=2",
+            "section": "restatement",
+            "text": "针对问题二,在确保“板凳龙”不发生碰撞的情况下,计算能够盘入的最晚时刻并计算此时刻龙头及龙身各关键节点(同问题一)的前把手、龙尾后把手的位置和速"
+          }
+        ],
+        "text": "针对问题三,在“板凳龙”表演中,盘入后需要进行调头,调头空间为以螺线中心为圆心、直径为9米的圆形区域。确定最小螺距,使得龙头前把手能够沿着相应的螺线盘入到调头空间的边界。",
+        "next_context": [
+          {
+            "source": "2024/A178.pdf#page=2",
+            "section": "restatement",
+            "text": "针对问题四,“板凳龙”沿螺距为1.7m的螺线盘入和盘出,调头空间为直径9m的圆形区域,调头路径为由两段圆弧相切连接而成的S形曲线。确定是否可以调整圆弧,仍保持各部分相切,使得调头曲线变短。给出从-100s开始到100s为止,每秒“板凳龙”各把手的位置和速度,将结果存放到文件result4.xlsx中,同时提供-100s、-50s、0s、50s、100s时,龙头及龙身各关键节点(同问题一)的前把手、龙尾后把手的位置和速度。"
+          }
+        ]
+      },
+      {
+        "reading_role": "supporting",
+        "id": "2023_A092_P4604",
+        "year": 2023,
+        "problem_type": "A",
+        "paper": "A092",
+        "page_start": 2,
+        "page_end": 2,
+        "section": "restatement",
+        "source": "2023/A092.pdf#page=2",
+        "index_source": "F:\\CUMCM\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:4604",
+        "quality": "high",
+        "score": 9,
+        "actions": [
+          "statement"
+        ],
+        "action_sequence": [
+          "statement"
+        ],
+        "opening_family": "其他",
+        "closing_family": "其他",
+        "ending_action": "statement",
+        "han_chars": 172,
+        "sentence_count": 1,
+        "cadence_band": "one-sentence:long",
+        "style_portfolio_rank": 4,
+        "variation_from_primary": [
+          "action_sequence",
+          "opening_family",
+          "ending_action",
+          "cadence_band",
+          "paper",
+          "formula_nearby",
+          "visual_nearby"
+        ],
+        "formula_nearby": false,
+        "visual_nearby": false,
+        "models": [],
+        "previous_context": [
+          {
+            "source": "2023/A092.pdf#page=1",
+            "section": "abstract",
+            "text": "针对问题三,我们构建了定日镜场非统一优化设计的单目标优化模型。相较于问题二,问题三中各个定日镜的尺寸和安装高度并不统一,决策变量的数量进一步增多,为了简化模型,我们参考问题二中求得的结论,认为在问题三中定日镜仍按照同心圆的方式进行排布,又因为同心圆具有各项同性,所以我们可以假设每一圈同心圆上的所有定日镜的尺寸和安装高度相同,因此新增的决策变量减少为每一圈同心圆对应的定日镜的尺寸和安装高度,其余目标函数和约束条件均与第二问相同。在求解时,我们在同心圆排布的基础上采用变步长的方式进行遍历求解,最终求得了单位镜面面积年平均输出热功率最大为0.7551Wm2,此时年平均输出热功率为60.359MW,定日镜的整体分布近似为一个抛物面,其余定日镜场的最优设计参数详见表6及"
+          }
+        ],
+        "text": "随着全球能源问题和环境问题日益严峻,人们迫切需要开发一种新能源来替代传来源最稳定以及储量最大的新能源受到了人们的密切关注,而其中塔式太阳能光热发电是一种较为理想的、技术发展相对成熟的大规模利用太阳能发电的技术,定日镜是其收集太阳能的重要基本组件,如何通过数学建模对定日镜场的各项参数进行优化设计使得单位镜面面积年平均输出热功率最大成为了我们驱待解决的问题。",
+        "next_context": [
+          {
+            "source": "2023/A092.pdf#page=2",
+            "section": "restatement",
+            "text": "定日镜的底座包括水平转轴和纵向转轴,水平转轴上安装了平面反射镜。其中,水平转轴可以控制反射镜的俯仰角,纵向转轴可以控制反射镜的方位角,随着太阳位置的改变,定日镜的法向也跟着改变,使得定日镜中心反射的锥形太阳光线可以指向集热器中心。定日镜场内排列了大量的定日镜以及一个吸收塔,集热器位于吸收塔的顶端,其以热能的形式储存吸收得到的太阳能,然后再进一步将热能转换成电能。"
+          }
+        ]
+      }
+    ],
+    "selection_rule": "Choose one evidence-compatible rhetorical motion for this section. Use supporting passages to see real alternatives in opening, action order, cadence, interfaces, or stopping point; do not average their surfaces into a composite paragraph."
+  },
+  "drafting_contract": {
+    "facts_from_current_problem_only": true,
+    "read_primary_passage_and_context_before_writing": true,
+    "read_supporting_passages_for_variation_not_blending": true,
+    "choose_one_evidence_compatible_motion": true,
+    "copy_surface_mix_from_multiple_passages_forbidden": true,
+    "edit_against_current_draft_tex": true,
+    "preserve_tex_commands_math_labels_citations": true,
+    "preserve_actual_evidence_order": true,
+    "fixed_step_template_forbidden": true,
+    "invented_comparison_trial_or_failure_forbidden": true,
+    "copy_corpus_sentence_forbidden": true,
+    "import_corpus_fact_model_number_or_conclusion_forbidden": true,
+    "public_judgment_bridge_required_when_declared": true,
+    "unrecorded_model_comparison_story_forbidden": true,
+    "model_name_before_all_local_precursors_forbidden": true,
+    "hidden_chain_of_thought_not_requested": true,
+    "output_scope": "target-section-only",
+    "instruction": "Read this packet completely. Treat current_draft_tex as the exact structural authority and use current_problem as the only factual authority. Use the primary passage to observe one human rhetorical motion and the supporting passages to check alternatives and stopping points. Draft or revise only the target section in the actual TeX source. Do not translate packet field order into prose, and do not force basis, mathematical change, method, result, and check into one repeated order."
+  },
+  "inputs": {
+    "main_tex": {
+      "path": "F:\\CUMCM\\.cumcm-work\\paper-2018-cumcm-a\\main.tex",
+      "sha256": "2559a72a62cabdf98cf91a814353c684af47d5da09f86990891e96769d367bb0",
+      "bytes": 2817
+    },
+    "brief": {
+      "path": "F:\\CUMCM\\.cumcm-work\\paper-2018-cumcm-a\\section-authoring-brief.json",
+      "sha256": "b957dd9fbe5718489d1b816b628c6078169813fc8ccc200ca0227697b98c1ab3",
+      "bytes": 1414459
+    },
+    "style_plan": {
+      "path": "F:\\CUMCM\\.cumcm-work\\paper-2018-cumcm-a\\style-retrieval-plan.json",
+      "sha256": "c72f9e9dd898495d50ea42cbda503e13e4aa36af5678c94e15b34212505944ba",
+      "bytes": 373127
+    },
+    "workbench": {
+      "path": "F:\\CUMCM\\.cumcm-work\\paper-2018-cumcm-a\\modeling-workbench.json",
+      "sha256": "490f43c8c7378977702f175104397ae6d05641c53a8dc5552d2ef36367603531",
+      "bytes": 18491
+    },
+    "preflight": {
+      "path": "F:\\CUMCM\\.cumcm-work\\paper-2018-cumcm-a\\reasoning-preflight.json",
+      "sha256": "e4fa15937c32c88980b77dc46854a5aed1c848480f420833247168be182c3367",
+      "bytes": 4605
+    },
+    "builder": {
+      "path": "F:\\CUMCM\\mcm-cup-standard-write\\scripts\\prepare_section_drafting_packets.py",
+      "sha256": "44648707f47fbcc272670afc2cf51baaf56dbd14754ff89990bdb57e1fc063f8",
+      "bytes": 12350
+    }
+  }
+}

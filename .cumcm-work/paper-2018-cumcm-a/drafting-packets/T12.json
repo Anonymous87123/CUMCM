@@ -1,0 +1,1065 @@
+{
+  "schema": "mcm-section-drafting-packet/v1",
+  "target": {
+    "id": "T12",
+    "title": "约束的瞬态表达",
+    "line": 49,
+    "role": "model",
+    "question_id": "2",
+    "section_job": "Move from the attached current-problem anchors to mathematical targets and then to the selected route in the order the work actually requires."
+  },
+  "current_draft": "约束的瞬态表达",
+  "current_draft_tex": "\\subsubsection{约束的瞬态表达}\n\n",
+  "current_draft_tex_sha256": "992d1dbedaf9ca4ac559a554f186a7c51189cfbcdeabb6b3f196b12c2bbd2f61",
+  "current_problem": {
+    "scope": "question",
+    "question_ids": [
+      "2"
+    ],
+    "question_plans": [
+      {
+        "question_id": "2",
+        "current_problem_sources": [
+          {
+            "id": "problem",
+            "role": "problem",
+            "path": "inputs/problem-restatement.txt",
+            "sha256": "29d51f1ef84f9442fcb7c614b01c4352b214d2f73fb69f3f86b995252d37bdbe"
+          },
+          {
+            "id": "attachment",
+            "role": "data",
+            "path": "inputs/attachment.xlsx",
+            "sha256": "2026d561054055516d5fbcc3fa22f8add5d786eba2b16c4f76636ae08794c2b3"
+          },
+          {
+            "id": "solver",
+            "role": "code",
+            "path": "solver/simulator.py",
+            "sha256": "e2cab80c2a8b5e9af5ecfbaa155752e05eb787f0a94830dd4b18bef721303eb5"
+          },
+          {
+            "id": "run",
+            "role": "result",
+            "path": "results/run-report.json",
+            "sha256": "2daab7b127123a519139b7f6acd2d05d3ef24a1411906fbc9b6001c7dee4b30d"
+          },
+          {
+            "id": "conclusions",
+            "role": "result",
+            "path": "results/conclusions.json",
+            "sha256": "ba8f795fc94e573cb24686940aaac5c663cb08b9ea954680ddb19e44533d1e31"
+          }
+        ],
+        "fact_anchors": [
+          {
+            "id": "q2-constraint",
+            "kind": "relation",
+            "terms": [
+              "工作时间",
+              "上限",
+              "累计时长"
+            ],
+            "source_ref": "题面问题 (2)：65C、IV 层 5.5mm、60 分钟内皮肤外侧不超过 47C 且超过 44C 不超过 5 分钟",
+            "source_ids": [
+              "problem"
+            ]
+          },
+          {
+            "id": "q2-frozen-interface",
+            "kind": "interface",
+            "terms": [
+              "仿真器",
+              "散热系数"
+            ],
+            "source_ref": "冻结问一的仿真器与标定的 h_skin=8.7739；本问新开放量只有 II 层厚度",
+            "source_ids": [
+              "solver",
+              "run"
+            ]
+          },
+          {
+            "id": "q2-bounds",
+            "kind": "constraint",
+            "terms": [
+              "厚度范围"
+            ],
+            "source_ref": "附件1 II 层厚度 0.6--25 mm",
+            "source_ids": [
+              "attachment"
+            ]
+          },
+          {
+            "id": "q2-monotone",
+            "kind": "trial",
+            "terms": [
+              "单调"
+            ],
+            "source_ref": "实测 d2=0.6->25mm 时峰值 44.991->43.240C 单调不增",
+            "source_ids": [
+              "conclusions"
+            ]
+          }
+        ],
+        "mathematical_targets": [
+          {
+            "id": "transient-criteria",
+            "terms": [
+              "瞬态判据"
+            ],
+            "source_ref": "把两条约束写成逐时刻上限与越阈累计时长，而不是稳态温度"
+          },
+          {
+            "id": "search-layer",
+            "terms": [
+              "搜索层",
+              "二分"
+            ],
+            "source_ref": "单调性决定搜索层只需一维二分"
+          }
+        ],
+        "selected_route": {
+          "id": "simulator-bisection",
+          "name": "调用问一仿真器 + 一维二分求最小可行厚度",
+          "status": "selected",
+          "terms": [
+            "二分",
+            "最小可行"
+          ],
+          "anchor_ids": [
+            "q2-constraint",
+            "q2-frozen-interface",
+            "q2-bounds",
+            "q2-monotone"
+          ],
+          "target_ids": [
+            "transient-criteria",
+            "search-layer"
+          ],
+          "evidence_ids": [
+            "solver",
+            "conclusions"
+          ],
+          "evidence_ref": "solver/simulator.py minimal_feasible_d2 与 constraint_metrics；results/conclusions.json q2_result"
+        },
+        "recorded_alternative_routes": [
+          {
+            "id": "steady-algebra",
+            "name": "稳态串联界面方程组定厚度",
+            "status": "rejected",
+            "terms": [
+              "稳态"
+            ],
+            "anchor_ids": [
+              "q2-constraint",
+              "q2-bounds"
+            ],
+            "target_ids": [
+              "transient-criteria"
+            ],
+            "evidence_ids": [
+              "review"
+            ],
+            "evidence_ref": "results/prior-review.json findings F2 与 F4",
+            "reason": "该式 4 个方程对 theta2/theta3/theta4/q/d2 共 5 个未知量，扫描 d2=0.6..25mm 每个都有自洽解，以 min d2 为目标会落到下界 0.6mm；且稳态无时间维，无法表达 5 分钟这个量。"
+          },
+          {
+            "id": "metaheuristic",
+            "name": "遗传算法等元启发式",
+            "status": "rejected",
+            "terms": [
+              "遗传算法"
+            ],
+            "anchor_ids": [
+              "q2-monotone"
+            ],
+            "target_ids": [
+              "search-layer"
+            ],
+            "evidence_ids": [
+              "conclusions"
+            ],
+            "evidence_ref": "results/conclusions.json q2_result.monotonicity_verified",
+            "reason": "峰值随厚度单调不增已实测确认，一维二分即可给出最小可行厚度并保留可复算性；元启发式在此既无精度收益也给不出最优性界。"
+          }
+        ],
+        "declared_checks": [
+          {
+            "id": "q2-monotonicity",
+            "kind": "feasibility",
+            "terms": [
+              "单调"
+            ],
+            "result": "d2=0.6/3/6/10/14/18.161/22/25mm 峰值 44.991/44.864/44.710/44.513/44.318/44.045/43.649/43.240C，单调不增",
+            "result_terms": [
+              "单调"
+            ],
+            "artifact": {
+              "path": "results/conclusions.json",
+              "sha256": "ba8f795fc94e573cb24686940aaac5c663cb08b9ea954680ddb19e44533d1e31"
+            }
+          },
+          {
+            "id": "q2-binding",
+            "kind": "boundary",
+            "terms": [
+              "紧约束"
+            ],
+            "result": "最优点峰值 44.045C 未触 47C 上限，紧约束是 5 分钟预算",
+            "result_terms": [
+              "紧约束"
+            ],
+            "artifact": {
+              "path": "results/conclusions.json",
+              "sha256": "ba8f795fc94e573cb24686940aaac5c663cb08b9ea954680ddb19e44533d1e31"
+            }
+          },
+          {
+            "id": "q2-parameter-sensitivity",
+            "kind": "sensitivity",
+            "terms": [
+              "散热系数"
+            ],
+            "result": "h_skin 变动 -2%/+2% 时 d2* 为 19.19/17.04mm；-5%/+5% 为 20.52/14.90mm；-20% 整区间不可行、+20% 下界即可行",
+            "result_terms": [
+              "散热系数"
+            ],
+            "artifact": {
+              "path": "results/conclusions.json",
+              "sha256": "ba8f795fc94e573cb24686940aaac5c663cb08b9ea954680ddb19e44533d1e31"
+            }
+          }
+        ],
+        "result_interpretations": [
+          {
+            "id": "q2-active",
+            "kind": "active_constraint",
+            "observation_terms": [
+              "紧约束"
+            ],
+            "explanation_terms": [
+              "累计时长"
+            ],
+            "source_ids": [
+              "conclusions"
+            ],
+            "source_ref": "results/conclusions.json q2_result.binding_constraint"
+          },
+          {
+            "id": "q2-crossing",
+            "kind": "event_switch",
+            "observation_terms": [
+              "穿越时刻"
+            ],
+            "explanation_terms": [
+              "累计时长"
+            ],
+            "source_ids": [
+              "conclusions"
+            ],
+            "source_ref": "首次超过 44C 在 t=55.0min，正是 60-5 的紧致条件"
+          },
+          {
+            "id": "q2-illcond",
+            "kind": "uncertainty",
+            "observation_terms": [
+              "散热系数"
+            ],
+            "explanation_terms": [
+              "可辨识区间"
+            ],
+            "source_ids": [
+              "conclusions"
+            ],
+            "source_ref": "最优点平台 44.14C 仅高于阈值 0.14C，t=55min 斜率 0.0112 C/min，故交付区间而非点值"
+          }
+        ],
+        "drafting_mode": {
+          "mode": "interface_extension",
+          "public_route_id": "simulator-bisection",
+          "keep_out_of_manuscript": "二分的迭代次数与容差调参过程"
+        },
+        "human_preflight": {
+          "reviewer": "本机使用者（彩排整体放行）",
+          "reviewer_kind": "human",
+          "basis_confirmation": "题面把工作时间 60 分钟、47C 上限和超过 44C 的累计时长不超过 5 分钟同时给出，附件1 又把 II 层厚度范围限定在 0.6 至 25mm。",
+          "transition_confirmation": "两条约束必须落到逐时刻上限与越阈累计时长这组瞬态判据；实测峰值随厚度单调不增，搜索层因此收缩为一维二分，取最小可行厚度。",
+          "change_trigger": "若工作时间或阈值改变，紧约束可能从 5 分钟预算换成 47C 上限，需重判搜索目标。",
+          "decision": "approve"
+        }
+      }
+    ]
+  },
+  "public_judgment_contract": {
+    "schema": "mcm-section-public-judgment-contract/v1",
+    "role": "model",
+    "section_local": true,
+    "required": true,
+    "questions": [
+      {
+        "question_id": "2",
+        "drafting_mode": "interface_extension",
+        "basis_nodes": [
+          {
+            "id": "q2-constraint",
+            "kind": "relation",
+            "terms": [
+              "工作时间",
+              "上限",
+              "累计时长"
+            ],
+            "source_ref": "题面问题 (2)：65C、IV 层 5.5mm、60 分钟内皮肤外侧不超过 47C 且超过 44C 不超过 5 分钟",
+            "source_ids": [
+              "problem"
+            ]
+          },
+          {
+            "id": "q2-frozen-interface",
+            "kind": "interface",
+            "terms": [
+              "仿真器",
+              "散热系数"
+            ],
+            "source_ref": "冻结问一的仿真器与标定的 h_skin=8.7739；本问新开放量只有 II 层厚度",
+            "source_ids": [
+              "solver",
+              "run"
+            ]
+          },
+          {
+            "id": "q2-bounds",
+            "kind": "constraint",
+            "terms": [
+              "厚度范围"
+            ],
+            "source_ref": "附件1 II 层厚度 0.6--25 mm",
+            "source_ids": [
+              "attachment"
+            ]
+          },
+          {
+            "id": "q2-monotone",
+            "kind": "trial",
+            "terms": [
+              "单调"
+            ],
+            "source_ref": "实测 d2=0.6->25mm 时峰值 44.991->43.240C 单调不增",
+            "source_ids": [
+              "conclusions"
+            ]
+          }
+        ],
+        "mathematical_change_nodes": [
+          {
+            "id": "transient-criteria",
+            "terms": [
+              "瞬态判据"
+            ],
+            "source_ref": "把两条约束写成逐时刻上限与越阈累计时长，而不是稳态温度"
+          },
+          {
+            "id": "search-layer",
+            "terms": [
+              "搜索层",
+              "二分"
+            ],
+            "source_ref": "单调性决定搜索层只需一维二分"
+          }
+        ],
+        "selected_route": {
+          "id": "simulator-bisection",
+          "name": "调用问一仿真器 + 一维二分求最小可行厚度",
+          "terms": [
+            "二分",
+            "最小可行"
+          ],
+          "anchor_ids": [
+            "q2-constraint",
+            "q2-frozen-interface",
+            "q2-bounds",
+            "q2-monotone"
+          ],
+          "target_ids": [
+            "transient-criteria",
+            "search-layer"
+          ],
+          "evidence_ids": [
+            "solver",
+            "conclusions"
+          ],
+          "evidence_ref": "solver/simulator.py minimal_feasible_d2 与 constraint_metrics；results/conclusions.json q2_result"
+        },
+        "recorded_alternative_routes": [
+          {
+            "id": "steady-algebra",
+            "name": "稳态串联界面方程组定厚度",
+            "status": "rejected",
+            "terms": [
+              "稳态"
+            ],
+            "anchor_ids": [
+              "q2-constraint",
+              "q2-bounds"
+            ],
+            "target_ids": [
+              "transient-criteria"
+            ],
+            "evidence_ids": [
+              "review"
+            ],
+            "evidence_ref": "results/prior-review.json findings F2 与 F4",
+            "reason": "该式 4 个方程对 theta2/theta3/theta4/q/d2 共 5 个未知量，扫描 d2=0.6..25mm 每个都有自洽解，以 min d2 为目标会落到下界 0.6mm；且稳态无时间维，无法表达 5 分钟这个量。"
+          },
+          {
+            "id": "metaheuristic",
+            "name": "遗传算法等元启发式",
+            "status": "rejected",
+            "terms": [
+              "遗传算法"
+            ],
+            "anchor_ids": [
+              "q2-monotone"
+            ],
+            "target_ids": [
+              "search-layer"
+            ],
+            "evidence_ids": [
+              "conclusions"
+            ],
+            "evidence_ref": "results/conclusions.json q2_result.monotonicity_verified",
+            "reason": "峰值随厚度单调不增已实测确认，一维二分即可给出最小可行厚度并保留可复算性；元启发式在此既无精度收益也给不出最优性界。"
+          }
+        ],
+        "result_interpretations": [
+          {
+            "id": "q2-active",
+            "kind": "active_constraint",
+            "observation_terms": [
+              "紧约束"
+            ],
+            "explanation_terms": [
+              "累计时长"
+            ],
+            "source_ids": [
+              "conclusions"
+            ],
+            "source_ref": "results/conclusions.json q2_result.binding_constraint"
+          },
+          {
+            "id": "q2-crossing",
+            "kind": "event_switch",
+            "observation_terms": [
+              "穿越时刻"
+            ],
+            "explanation_terms": [
+              "累计时长"
+            ],
+            "source_ids": [
+              "conclusions"
+            ],
+            "source_ref": "首次超过 44C 在 t=55.0min，正是 60-5 的紧致条件"
+          },
+          {
+            "id": "q2-illcond",
+            "kind": "uncertainty",
+            "observation_terms": [
+              "散热系数"
+            ],
+            "explanation_terms": [
+              "可辨识区间"
+            ],
+            "source_ids": [
+              "conclusions"
+            ],
+            "source_ref": "最优点平台 44.14C 仅高于阈值 0.14C，t=55min 斜率 0.0112 C/min，故交付区间而非点值"
+          }
+        ],
+        "actual_checks": [
+          {
+            "id": "q2-monotonicity",
+            "kind": "feasibility",
+            "terms": [
+              "单调"
+            ],
+            "result": "d2=0.6/3/6/10/14/18.161/22/25mm 峰值 44.991/44.864/44.710/44.513/44.318/44.045/43.649/43.240C，单调不增",
+            "result_terms": [
+              "单调"
+            ],
+            "artifact": {
+              "path": "results/conclusions.json",
+              "sha256": "ba8f795fc94e573cb24686940aaac5c663cb08b9ea954680ddb19e44533d1e31"
+            }
+          },
+          {
+            "id": "q2-binding",
+            "kind": "boundary",
+            "terms": [
+              "紧约束"
+            ],
+            "result": "最优点峰值 44.045C 未触 47C 上限，紧约束是 5 分钟预算",
+            "result_terms": [
+              "紧约束"
+            ],
+            "artifact": {
+              "path": "results/conclusions.json",
+              "sha256": "ba8f795fc94e573cb24686940aaac5c663cb08b9ea954680ddb19e44533d1e31"
+            }
+          },
+          {
+            "id": "q2-parameter-sensitivity",
+            "kind": "sensitivity",
+            "terms": [
+              "散热系数"
+            ],
+            "result": "h_skin 变动 -2%/+2% 时 d2* 为 19.19/17.04mm；-5%/+5% 为 20.52/14.90mm；-20% 整区间不可行、+20% 下界即可行",
+            "result_terms": [
+              "散热系数"
+            ],
+            "artifact": {
+              "path": "results/conclusions.json",
+              "sha256": "ba8f795fc94e573cb24686940aaac5c663cb08b9ea954680ddb19e44533d1e31"
+            }
+          }
+        ],
+        "human_confirmation": {
+          "reviewer": "本机使用者（彩排整体放行）",
+          "reviewer_kind": "human",
+          "basis_confirmation": "题面把工作时间 60 分钟、47C 上限和超过 44C 的累计时长不超过 5 分钟同时给出，附件1 又把 II 层厚度范围限定在 0.6 至 25mm。",
+          "transition_confirmation": "两条约束必须落到逐时刻上限与越阈累计时长这组瞬态判据；实测峰值随厚度单调不增，搜索层因此收缩为一维二分，取最小可行厚度。",
+          "change_trigger": "若工作时间或阈值改变，紧约束可能从 5 分钟预算换成 47C 上限，需重判搜索目标。",
+          "decision": "approve"
+        },
+        "local_requirements": {
+          "basis_term_required": true,
+          "mathematical_change_term_required": true,
+          "selected_route_term_required": true,
+          "bridge_required_if_route_named": true,
+          "order_rule": "route-cannot-precede-both-basis-and-mathematical-change",
+          "minimum_basis_groups": 1,
+          "minimum_target_groups": 1,
+          "result_interpretation_required": false,
+          "validation_conclusion_required": false,
+          "model_comparison_guard": true
+        }
+      }
+    ],
+    "policy": {
+      "use_current_problem_terms_not_stock_model_praise": true,
+      "unrecorded_model_comparison_story_forbidden": true,
+      "recorded_alternative_must_be_named_when_comparison_is_claimed": true,
+      "hidden_chain_of_thought_not_requested": true,
+      "fixed_sentence_order_forbidden": true,
+      "verbatim_human_confirmation_not_required": true
+    },
+    "instruction": "Expose only the local, fact-backed relation needed by this section. Before a model name appears, the prose must already expose either the problem fact or a mathematical relation derived for this question; the other node may occur where the actual explanation needs it. If no alternative route is recorded, do not invent a comparison story. Preserve the actual evidence order without rendering these fields as a fixed prose sequence."
+  },
+  "human_style": {
+    "language_action_profile": {
+      "primary_anchor_id": "2023_A0127_P4319",
+      "primary_action_sequence": [
+        "constraint",
+        "statement",
+        "continuation",
+        "algorithm",
+        "statement"
+      ],
+      "primary_opening_family": "其他",
+      "primary_closing_family": "其他",
+      "primary_ending_action": "statement",
+      "primary_han_chars": 152,
+      "primary_sentence_count": 5,
+      "primary_cadence_band": "multi-sentence:long",
+      "primary_selection": {
+        "policy": "relevance-bounded-low-reuse",
+        "score_tolerance": 2,
+        "best_score": 11,
+        "selected_score": 11,
+        "selected_original_rank": 1,
+        "eligible_anchor_ids": [
+          "2023_A0127_P4319",
+          "2025_A196_P7551"
+        ],
+        "prior_anchor_use_count": 0,
+        "prior_sequence_use_count": 0,
+        "same_as_previous_primary": false,
+        "same_sequence_as_previous_primary": false,
+        "prior_opening_use_count": 4,
+        "prior_closing_use_count": 8,
+        "prior_ending_action_use_count": 2,
+        "prior_cadence_use_count": 6,
+        "prior_paper_use_count": 1,
+        "same_opening_as_previous_primary": true,
+        "same_closing_as_previous_primary": true,
+        "same_ending_action_as_previous_primary": false,
+        "same_cadence_as_previous_primary": false,
+        "same_paper_as_previous_primary": false,
+        "rule": "Choose only among already retrieved anchors within the score tolerance; reduce reuse when relevance permits, but never import a less relevant paragraph merely for variety."
+      },
+      "supporting_anchor_ids": [
+        "2025_A196_P7551",
+        "2023_A092_P4713",
+        "2021_A028_P1959"
+      ],
+      "observed_action_sequences": [
+        [
+          "constraint",
+          "statement",
+          "continuation",
+          "algorithm",
+          "statement"
+        ],
+        [
+          "reality_to_math"
+        ],
+        [
+          "result",
+          "choice"
+        ],
+        [
+          "statement",
+          "result"
+        ]
+      ],
+      "opening_families": {
+        "依据": 1,
+        "其他": 2,
+        "直接陈述": 1
+      },
+      "closing_families": {
+        "其他": 4
+      },
+      "ending_actions": {
+        "choice": 1,
+        "reality_to_math": 1,
+        "result": 1,
+        "statement": 1
+      },
+      "cadence_bands": {
+        "multi-sentence:long": 1,
+        "one-sentence:medium": 1,
+        "two-sentence:long": 1,
+        "two-sentence:medium": 1
+      },
+      "formula_interface_anchor_ids": [
+        "2025_A196_P7551",
+        "2021_A028_P1959"
+      ],
+      "visual_interface_anchor_ids": [
+        "2021_A028_P1959"
+      ],
+      "paragraph_character_counts": [
+        152,
+        67,
+        210,
+        63
+      ],
+      "sentence_counts": [
+        5,
+        1,
+        2,
+        2
+      ],
+      "supporting_variations": [
+        {
+          "id": "2025_A196_P7551",
+          "different_on": [
+            "action_sequence",
+            "opening_family",
+            "ending_action",
+            "cadence_band",
+            "paper",
+            "formula_nearby"
+          ]
+        },
+        {
+          "id": "2023_A092_P4713",
+          "different_on": [
+            "action_sequence",
+            "opening_family",
+            "ending_action",
+            "cadence_band",
+            "paper"
+          ]
+        },
+        {
+          "id": "2021_A028_P1959",
+          "different_on": [
+            "action_sequence",
+            "ending_action",
+            "cadence_band",
+            "paper",
+            "formula_nearby",
+            "visual_nearby"
+          ]
+        }
+      ],
+      "context_anchor_ids": [
+        "2023_A0127_P4319",
+        "2025_A196_P7551",
+        "2023_A092_P4713",
+        "2021_A028_P1959"
+      ],
+      "use_rule": "Read every bound paragraph in the style plan. Use the primary anchor for the section's main rhetorical motion and the others only to check variation, interfaces, and stopping points. Select actions supported by current-problem evidence; do not blend every observed sequence."
+    },
+    "style_portfolio_summary": {
+      "selection": "relevance-bounded-style-portfolio",
+      "score_tolerance": 8,
+      "anchors": 4,
+      "best_score": 11,
+      "score_deltas": [
+        0,
+        2,
+        3,
+        7
+      ],
+      "outside_score_tolerance": 0,
+      "distinct_papers": 4,
+      "distinct_action_sequences": 4,
+      "distinct_opening_families": 3,
+      "distinct_closing_families": 1,
+      "distinct_ending_actions": 4,
+      "distinct_cadence_bands": 4,
+      "shapes": [
+        {
+          "id": "2023_A0127_P4319",
+          "action_sequence": [
+            "constraint",
+            "statement",
+            "continuation",
+            "algorithm",
+            "statement"
+          ],
+          "opening_family": "其他",
+          "closing_family": "其他",
+          "ending_action": "statement",
+          "cadence_band": "multi-sentence:long",
+          "paper": "A0127",
+          "formula_nearby": false,
+          "visual_nearby": false
+        },
+        {
+          "id": "2025_A196_P7551",
+          "action_sequence": [
+            "reality_to_math"
+          ],
+          "opening_family": "依据",
+          "closing_family": "其他",
+          "ending_action": "reality_to_math",
+          "cadence_band": "one-sentence:medium",
+          "paper": "A196",
+          "formula_nearby": true,
+          "visual_nearby": false
+        },
+        {
+          "id": "2023_A092_P4713",
+          "action_sequence": [
+            "result",
+            "choice"
+          ],
+          "opening_family": "直接陈述",
+          "closing_family": "其他",
+          "ending_action": "choice",
+          "cadence_band": "two-sentence:long",
+          "paper": "A092",
+          "formula_nearby": false,
+          "visual_nearby": false
+        },
+        {
+          "id": "2021_A028_P1959",
+          "action_sequence": [
+            "statement",
+            "result"
+          ],
+          "opening_family": "其他",
+          "closing_family": "其他",
+          "ending_action": "result",
+          "cadence_band": "two-sentence:medium",
+          "paper": "A028",
+          "formula_nearby": true,
+          "visual_nearby": true
+        }
+      ]
+    },
+    "reading_order": [
+      "2023_A0127_P4319",
+      "2025_A196_P7551",
+      "2023_A092_P4713",
+      "2021_A028_P1959"
+    ],
+    "passages": [
+      {
+        "reading_role": "primary",
+        "id": "2023_A0127_P4319",
+        "year": 2023,
+        "problem_type": "A",
+        "paper": "A0127",
+        "page_start": 22,
+        "page_end": 22,
+        "section": "model",
+        "source": "2023/A0127.pdf#page=22",
+        "index_source": "F:\\CUMCM\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:4319",
+        "quality": "high",
+        "score": 11,
+        "actions": [
+          "algorithm",
+          "constraint",
+          "continuation",
+          "statement"
+        ],
+        "action_sequence": [
+          "constraint",
+          "statement",
+          "continuation",
+          "algorithm",
+          "statement"
+        ],
+        "opening_family": "其他",
+        "closing_family": "其他",
+        "ending_action": "statement",
+        "han_chars": 152,
+        "sentence_count": 5,
+        "cadence_band": "multi-sentence:long",
+        "style_portfolio_rank": 1,
+        "variation_from_primary": [],
+        "formula_nearby": false,
+        "visual_nearby": false,
+        "models": [],
+        "previous_context": [
+          {
+            "source": "2023/A0127.pdf#page=22",
+            "section": "result",
+            "text": "从图16中可以看出,本问最终采用的混合部署策略有着更高的平均光学效率、余弦效率、截断效率及阴影遮挡效率,策略优势明显。"
+          }
+        ],
+        "text": "相较于问题二,在问题三中定日镜场参数的约束条件发生改变,定日镜尺寸和安装高度可以根据定日镜所处的位置而做出调整。首先,制定“定日镜规格分区域规划策略”在每个区域内定日镜尺寸和安装高度相等。接着,根据文献,确定定日镜的宽高比。然后,建立改进定日镜平均输出热功率优化模型,并通过二分法和变步长搜索遍历法完成模型的求解。最后,进行结果分析。",
+        "next_context": [
+          {
+            "source": "2023/A0127.pdf#page=22",
+            "section": "model",
+            "text": "根据分区域同心圆规划策略,通过绘制同心圆将圆形定日镜场划分为z个区域。在每个区域内安装的定日镜与集热器中心的距离大致相等"
+          }
+        ]
+      },
+      {
+        "reading_role": "supporting",
+        "id": "2025_A196_P7551",
+        "year": 2025,
+        "problem_type": "A",
+        "paper": "A196",
+        "page_start": 25,
+        "page_end": 25,
+        "section": "model",
+        "source": "2025/A196.pdf#page=25",
+        "index_source": "F:\\CUMCM\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:7551",
+        "quality": "high",
+        "score": 9,
+        "actions": [
+          "constraint",
+          "reality_to_math"
+        ],
+        "action_sequence": [
+          "reality_to_math"
+        ],
+        "opening_family": "依据",
+        "closing_family": "其他",
+        "ending_action": "reality_to_math",
+        "han_chars": 67,
+        "sentence_count": 1,
+        "cadence_band": "one-sentence:medium",
+        "style_portfolio_rank": 2,
+        "variation_from_primary": [
+          "action_sequence",
+          "opening_family",
+          "ending_action",
+          "cadence_band",
+          "paper",
+          "formula_nearby"
+        ],
+        "formula_nearby": true,
+        "visual_nearby": false,
+        "models": [],
+        "previous_context": [
+          {
+            "source": "2025/A196.pdf#page=25",
+            "section": "model",
+            "text": "其中,布尔函数的定义需要进行调整,无人机FY1投下的第k个有效云团C(P)应该变为第j架无人机投下的云团C(P)即:"
+          }
+        ],
+        "text": "由于三架无人机投放烟幕弹同样需要满足物理约束以及烟幕弹爆炸产生的云团的有效期的约束,这与上文的模型中的分析并无太大差别,这里不再赞述。即满足:",
+        "next_context": [
+          {
+            "source": "2025/A196.pdf#page=26",
+            "section": "solve",
+            "text": "问题4的优化模型涉及3个无人机,决策变量较多,如果直接进行求解会导致效率"
+          }
+        ]
+      },
+      {
+        "reading_role": "supporting",
+        "id": "2023_A092_P4713",
+        "year": 2023,
+        "problem_type": "A",
+        "paper": "A092",
+        "page_start": 20,
+        "page_end": 20,
+        "section": "model",
+        "source": "2023/A092.pdf#page=20",
+        "index_source": "F:\\CUMCM\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:4713",
+        "quality": "high",
+        "score": 8,
+        "actions": [
+          "choice",
+          "constraint",
+          "problem_translation",
+          "result"
+        ],
+        "action_sequence": [
+          "result",
+          "choice"
+        ],
+        "opening_family": "直接陈述",
+        "closing_family": "其他",
+        "ending_action": "choice",
+        "han_chars": 210,
+        "sentence_count": 2,
+        "cadence_band": "two-sentence:long",
+        "style_portfolio_rank": 3,
+        "variation_from_primary": [
+          "action_sequence",
+          "opening_family",
+          "ending_action",
+          "cadence_band",
+          "paper"
+        ],
+        "formula_nearby": false,
+        "visual_nearby": false,
+        "models": [
+          "遗传算法"
+        ],
+        "previous_context": [
+          {
+            "source": "2023/A092.pdf#page=20",
+            "section": "validation",
+            "text": "此外,我们发现当定日镜宽度增加了3米时,单位镜面面积年平均输出功率减少了0.12千瓦每平方米,年平均输出功率增加了30兆瓦,均存在较大的变化幅度,说明单位镜面面积年平均输出功率和年平均输出功率对镜面宽度敏感,证明了我们模型的灵敏性。"
+          }
+        ],
+        "text": "问题二要求我们对定日镜场的布局进行优化设计,使得定日镜场的年平均输出热功率在达到额定功率60MV的条件下,单位镜面面积的年平均输出热功率尽可能大,因此,我们以单位镜面面积的年平均输出热功率最大为目标函数,以定日镜场中的吸收塔位置坐标,定日镜的统一尺寸,统一安装高度,定日镜的个数以及定日镜的位置等定日镜场的分布参数为决策变量,并根据题意确定了多个约束条件,以此建立起单目标规划模型。由于决策变量的数量很多,因此我们采用遗传算法对该单目标优化模型进行求解。",
+        "next_context": [
+          {
+            "source": "2023/A092.pdf#page=20",
+            "section": "model",
+            "text": "在第一问中,我们给出了单位镜面面积年平均输出热功率E,的计算公式,我们的目标是使得单位镜面面积年平均输出热功率E,尽可能大,因此目标函数可以写成如下形式:"
+          }
+        ]
+      },
+      {
+        "reading_role": "supporting",
+        "id": "2021_A028_P1959",
+        "year": 2021,
+        "problem_type": "A",
+        "paper": "A028",
+        "page_start": 18,
+        "page_end": 19,
+        "section": "model",
+        "source": "2021/A028.pdf#page=18",
+        "index_source": "F:\\CUMCM\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:1959",
+        "quality": "high",
+        "score": 4,
+        "actions": [
+          "result",
+          "statement"
+        ],
+        "action_sequence": [
+          "statement",
+          "result"
+        ],
+        "opening_family": "其他",
+        "closing_family": "其他",
+        "ending_action": "result",
+        "han_chars": 63,
+        "sentence_count": 2,
+        "cadence_band": "two-sentence:medium",
+        "style_portfolio_rank": 4,
+        "variation_from_primary": [
+          "action_sequence",
+          "ending_action",
+          "cadence_band",
+          "paper",
+          "formula_nearby",
+          "visual_nearby"
+        ],
+        "formula_nearby": true,
+        "visual_nearby": true,
+        "models": [],
+        "previous_context": [
+          {
+            "source": "2021/A028.pdf#page=18",
+            "section": "model",
+            "text": "由于球面是旋转对称的,基准球面接收比在方位角为0度,仰角为90度的情况下讨论即可,如图。"
+          }
+        ],
+        "text": "对入射到M点的电磁波信号,设反射电磁波信号与馈源舱所在平面的交点为E,与过球心电磁波信号的交点为F。对于口径300m,半径300.4m的球面,讨论范围约为0<9<30°。各点坐标:",
+        "next_context": [
+          {
+            "source": "2021/A028.pdf#page=19",
+            "section": "model",
+            "text": "可以求出满足该条件的的范围,从而求解出反射信号能被馈源舱接收的点的范围。设基准反射球面接收比为nbasic,则:"
+          }
+        ]
+      }
+    ],
+    "selection_rule": "Choose one evidence-compatible rhetorical motion for this section. Use supporting passages to see real alternatives in opening, action order, cadence, interfaces, or stopping point; do not average their surfaces into a composite paragraph."
+  },
+  "drafting_contract": {
+    "facts_from_current_problem_only": true,
+    "read_primary_passage_and_context_before_writing": true,
+    "read_supporting_passages_for_variation_not_blending": true,
+    "choose_one_evidence_compatible_motion": true,
+    "copy_surface_mix_from_multiple_passages_forbidden": true,
+    "edit_against_current_draft_tex": true,
+    "preserve_tex_commands_math_labels_citations": true,
+    "preserve_actual_evidence_order": true,
+    "fixed_step_template_forbidden": true,
+    "invented_comparison_trial_or_failure_forbidden": true,
+    "copy_corpus_sentence_forbidden": true,
+    "import_corpus_fact_model_number_or_conclusion_forbidden": true,
+    "public_judgment_bridge_required_when_declared": true,
+    "unrecorded_model_comparison_story_forbidden": true,
+    "model_name_before_all_local_precursors_forbidden": true,
+    "hidden_chain_of_thought_not_requested": true,
+    "output_scope": "target-section-only",
+    "instruction": "Read this packet completely. Treat current_draft_tex as the exact structural authority and use current_problem as the only factual authority. Use the primary passage to observe one human rhetorical motion and the supporting passages to check alternatives and stopping points. Draft or revise only the target section in the actual TeX source. Do not translate packet field order into prose, and do not force basis, mathematical change, method, result, and check into one repeated order."
+  },
+  "inputs": {
+    "main_tex": {
+      "path": "F:\\CUMCM\\.cumcm-work\\paper-2018-cumcm-a\\main.tex",
+      "sha256": "2559a72a62cabdf98cf91a814353c684af47d5da09f86990891e96769d367bb0",
+      "bytes": 2817
+    },
+    "brief": {
+      "path": "F:\\CUMCM\\.cumcm-work\\paper-2018-cumcm-a\\section-authoring-brief.json",
+      "sha256": "b957dd9fbe5718489d1b816b628c6078169813fc8ccc200ca0227697b98c1ab3",
+      "bytes": 1414459
+    },
+    "style_plan": {
+      "path": "F:\\CUMCM\\.cumcm-work\\paper-2018-cumcm-a\\style-retrieval-plan.json",
+      "sha256": "c72f9e9dd898495d50ea42cbda503e13e4aa36af5678c94e15b34212505944ba",
+      "bytes": 373127
+    },
+    "workbench": {
+      "path": "F:\\CUMCM\\.cumcm-work\\paper-2018-cumcm-a\\modeling-workbench.json",
+      "sha256": "490f43c8c7378977702f175104397ae6d05641c53a8dc5552d2ef36367603531",
+      "bytes": 18491
+    },
+    "preflight": {
+      "path": "F:\\CUMCM\\.cumcm-work\\paper-2018-cumcm-a\\reasoning-preflight.json",
+      "sha256": "e4fa15937c32c88980b77dc46854a5aed1c848480f420833247168be182c3367",
+      "bytes": 4605
+    },
+    "builder": {
+      "path": "F:\\CUMCM\\mcm-cup-standard-write\\scripts\\prepare_section_drafting_packets.py",
+      "sha256": "44648707f47fbcc272670afc2cf51baaf56dbd14754ff89990bdb57e1fc063f8",
+      "bytes": 12350
+    }
+  }
+}

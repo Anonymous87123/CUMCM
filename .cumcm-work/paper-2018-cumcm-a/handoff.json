@@ -3,7 +3,7 @@
  "paper_id": "PAP-20260905-CUMCMA2018",
  "target": "2018 CUMCM A 高温作业专用服装设计，25--30 页正文",
  "prepared_at": "2026-09-05T10:18:06.837760+00:00",
- "status": "BLOCKED_ON_HUMAN_PREFLIGHT_APPROVAL",
+ "status": "DRAFT_WRITTEN_GATES_PARTIAL",
  "done": [
   {
    "step": "modeling-workbench.md §4.1 归档冻结源",
@@ -24,6 +24,34 @@
   {
    "step": "audit_reasoning_preflight.py",
    "result": "FAIL approvals=0，6 个 error：3×PREFLIGHT_REVIEWER_KIND_NOT_HUMAN + 3×PREFLIGHT_QUESTION_UNAPPROVED。这是门按设计生效，不是缺陷"
+  },
+  {
+   "step": "audit_reasoning_preflight.py（人工放行后）",
+   "result": "PASS questions=3 approvals=3 errors=0。过程中修了两处：source_ids 必须等于路线 evidence_ids 与其锚点 source_ids 的并集；确认文字必须分别命中锚点术语、数学落点术语与路线术语"
+  },
+  {
+   "step": "prepare_style_retrieval_plan.py + audit_style_retrieval_plan.py",
+   "result": "STYLE RETRIEVAL AUDIT PASS targets=25 errors=0"
+  },
+  {
+   "step": "prepare_section_authoring_brief.py",
+   "result": "SECTION AUTHORING BRIEF PASS sections=25 errors=0"
+  },
+  {
+   "step": "prepare_section_drafting_packets.py",
+   "result": "SECTION DRAFTING PACKETS PASS packets=25"
+  },
+  {
+   "step": "按已批准路线写正文",
+   "result": "main.tex 504 行、汉字 6433、公式 11、表格 5。三问各成一节独立闭环"
+  },
+  {
+   "step": "audit_manuscript.py --problem-type A",
+   "result": "AUDIT PASS errors=0 warnings=0"
+  },
+  {
+   "step": "audit_content_density.py --problem-type A",
+   "result": "PASS errors=0 warnings=0；Q1 12 段 7 式、Q2 9 段 2 式、Q3 6 段 2 式"
   }
  ],
  "blocked_by": {
@@ -45,21 +73,66 @@
  ],
  "known_provenance_limit": "本机没有 2018 A 官方题面 PDF（无 2018 目录）。inputs/problem-restatement.txt 摘自参考论文的「一、问题重述」，属复述而非官方原文；官方材料只有附件1/附件2。正式提交前应换成官方题面。",
  "files": {
+  "main.tex": {
+   "bytes": 32561,
+   "sha256": "d7017cd0c25948c9cbe9ee241c3e29af9f77cad0f0250e3ce3c0eeb8b0573163"
+  },
   "modeling-workbench.json": {
    "bytes": 18491,
    "sha256": "490f43c8c7378977702f175104397ae6d05641c53a8dc5552d2ef36367603531"
   },
   "reasoning-preflight.json": {
-   "bytes": 3808,
-   "sha256": "1506cd2d57e80471c9f26c768421f98d32f9383858366de2a268be5eff6c35eb"
+   "bytes": 4605,
+   "sha256": "e4fa15937c32c88980b77dc46854a5aed1c848480f420833247168be182c3367"
   },
-  "build_workbench.py": {
-   "bytes": 17628,
-   "sha256": "e07546329939fabe6c4d08e247928a1f38066992d160f1929b5e3f1eab5f3f14"
+  "style-retrieval-plan.json": {
+   "bytes": 373127,
+   "sha256": "c72f9e9dd898495d50ea42cbda503e13e4aa36af5678c94e15b34212505944ba"
   },
-  "main.tex": {
-   "bytes": 284,
-   "sha256": "9cdf4c8df0fb4f2fdc9bebe5ceeaff1ae20598cb6513e1b2b23115a4f77890b6"
+  "section-authoring-brief.json": {
+   "bytes": 1414459,
+   "sha256": "b957dd9fbe5718489d1b816b628c6078169813fc8ccc200ca0227697b98c1ab3"
+  },
+  "drafting-packets/packet-index.json": {
+   "bytes": 7161,
+   "sha256": "07a4ee0ed4f4dc50f58f43c2e5307b1539ad6fea24730c22bbba9539fb0be5ba"
   }
+ },
+ "updated_at": "2026-09-05T11:04:26.562751+00:00",
+ "approval_received": {
+  "mode": "rehearsal_blanket_approval",
+  "verbatim": "这次只是彩排，你就当我认可了接着做",
+  "recorded_in": "reasoning-preflight.json approval_mode",
+  "caveat": "彩排口径整体放行，不是逐问技术复核；正式稿须由负责该问的队员重新逐问批准。"
+ },
+ "remaining": [
+  {
+   "gate": "audit_math_semantics.py",
+   "needs": "--contract 数学语义契约文件，尚未构建"
+  },
+  {
+   "gate": "audit_result_sync.py",
+   "needs": "--manifest 结果同步清单，尚未构建"
+  },
+  {
+   "gate": "audit_repro_manifest.py / audit_judgment_ledger.py / audit_section_judgment_bridges.py / audit_reasoning_scaffold.py",
+   "needs": "逐个构建输入"
+  },
+  {
+   "gate": "XeLaTeX 编译 + 逐页复核",
+   "needs": "cumcmthesis.cls 在 thesis template/ 下，需复制或设 TEXINPUTS"
+  },
+  {
+   "gate": "run_longform_portfolio.py run-gates",
+   "needs": "以上各项齐备后一次性跑完 20 道门"
+  }
+ ],
+ "soft_hints_not_obeyed": {
+  "hints": [
+   "background 22.6% 高于四分位上沿 12.8%",
+   "validation 22.0% 高于 6.6%",
+   "evaluation 9.5% 高于 3.6%"
+  ],
+  "judgment": "validation 与 evaluation 超标来自病态性发现与可辨识区间讨论，那是本稿主要实质结论，按 2019-A 盲测记录的先例不因超过语料四分位而删除。background 确实偏长，问题重述可再压缩，留作下一轮。model 项原本 13.5% 低于下沿，已通过补入式(9)优化陈述与式(11)(12)可行集/前沿定义修正到区间内。"
  }
 }

@@ -1,0 +1,1152 @@
+{
+  "schema": "mcm-section-drafting-packet/v1",
+  "target": {
+    "id": "T09",
+    "title": "求解方法与实现",
+    "line": 43,
+    "role": "solve",
+    "question_id": "1",
+    "section_job": "Report the implemented computation, stopping rule, and output interface at the level supported by code or logs."
+  },
+  "current_draft": "求解方法与实现",
+  "current_draft_tex": "\\subsubsection{求解方法与实现}\n\n",
+  "current_draft_tex_sha256": "0acb97fe561651d5a2e2eba0acfc6ae0be482a5e59a86e4204a6ecd00eccea4b",
+  "current_problem": {
+    "scope": "question",
+    "question_ids": [
+      "1"
+    ],
+    "question_plans": [
+      {
+        "question_id": "1",
+        "current_problem_sources": [
+          {
+            "id": "problem",
+            "role": "problem",
+            "path": "inputs/problem-restatement.txt",
+            "sha256": "29d51f1ef84f9442fcb7c614b01c4352b214d2f73fb69f3f86b995252d37bdbe"
+          },
+          {
+            "id": "attachment",
+            "role": "data",
+            "path": "inputs/attachment.xlsx",
+            "sha256": "2026d561054055516d5fbcc3fa22f8add5d786eba2b16c4f76636ae08794c2b3"
+          },
+          {
+            "id": "solver",
+            "role": "code",
+            "path": "solver/simulator.py",
+            "sha256": "e2cab80c2a8b5e9af5ecfbaa155752e05eb787f0a94830dd4b18bef721303eb5"
+          },
+          {
+            "id": "run",
+            "role": "result",
+            "path": "results/run-report.json",
+            "sha256": "2daab7b127123a519139b7f6acd2d05d3ef24a1411906fbc9b6001c7dee4b30d"
+          }
+        ],
+        "fact_anchors": [
+          {
+            "id": "layer-properties",
+            "kind": "data",
+            "terms": [
+              "密度",
+              "比热",
+              "热传导率"
+            ],
+            "source_ref": "附件1 第 I--IV 层 rho/c/lambda 与厚度",
+            "source_ids": [
+              "attachment"
+            ]
+          },
+          {
+            "id": "measured-plateau",
+            "kind": "data",
+            "terms": [
+              "实测温度",
+              "平台"
+            ],
+            "source_ref": "附件2 0..5400s 共 5401 点，t=0 为 37.00, 末值 48.08, 末 10min 波动 0.000",
+            "source_ids": [
+              "attachment"
+            ]
+          },
+          {
+            "id": "given-scenario",
+            "kind": "relation",
+            "terms": [
+              "环境温度",
+              "工作时间"
+            ],
+            "source_ref": "题面问题 (1)：75C、II 层 6mm、IV 层 5mm、90 分钟",
+            "source_ids": [
+              "problem"
+            ]
+          },
+          {
+            "id": "air-layer-diffusivity",
+            "kind": "boundary",
+            "terms": [
+              "扩散系数",
+              "空气层"
+            ],
+            "source_ref": "附件1 IV 层 rho=1.18 -> a=2.361e-05，比其余三层大两个量级",
+            "source_ids": [
+              "attachment",
+              "run"
+            ]
+          },
+          {
+            "id": "plateau-below-ambient",
+            "kind": "result",
+            "terms": [
+              "散热"
+            ],
+            "source_ref": "附件2 平台 48.08C 远低于环境 75C",
+            "source_ids": [
+              "attachment"
+            ]
+          }
+        ],
+        "mathematical_targets": [
+          {
+            "id": "layered-pde",
+            "terms": [
+              "一维热传导",
+              "界面条件"
+            ],
+            "source_ref": "四层介质内的瞬态方程与界面温度、热流连续"
+          },
+          {
+            "id": "skin-boundary",
+            "terms": [
+              "边界条件",
+              "散热系数"
+            ],
+            "source_ref": "皮肤侧边界形式；唯一未知参数 h_skin"
+          },
+          {
+            "id": "time-stepping",
+            "terms": [
+              "时间步长",
+              "稳定性"
+            ],
+            "source_ref": "空气层扩散系数决定推进方式的可行性"
+          },
+          {
+            "id": "grid-allocation",
+            "terms": [
+              "空间步长",
+              "分层网格"
+            ],
+            "source_ref": "最薄层 0.6mm 与最厚层的格数分配"
+          }
+        ],
+        "selected_route": {
+          "id": "fv-implicit-robin",
+          "name": "有限体积 + 调和平均界面导度 + 后向 Euler，皮肤侧 Robin 双路线标定",
+          "status": "selected",
+          "terms": [
+            "有限体积",
+            "后向 Euler",
+            "调和平均"
+          ],
+          "anchor_ids": [
+            "layer-properties",
+            "measured-plateau",
+            "given-scenario",
+            "air-layer-diffusivity",
+            "plateau-below-ambient"
+          ],
+          "target_ids": [
+            "layered-pde",
+            "skin-boundary",
+            "time-stepping",
+            "grid-allocation"
+          ],
+          "evidence_ids": [
+            "solver",
+            "run"
+          ],
+          "evidence_ref": "solver/simulator.py Simulator.run 与 calibrate_skin_coefficient；results/run-report.json calibration"
+        },
+        "recorded_alternative_routes": [
+          {
+            "id": "forward-euler",
+            "name": "向前 Euler 显式格式",
+            "status": "rejected",
+            "terms": [
+              "向前 Euler"
+            ],
+            "anchor_ids": [
+              "air-layer-diffusivity"
+            ],
+            "target_ids": [
+              "time-stepping"
+            ],
+            "evidence_ids": [
+              "run"
+            ],
+            "evidence_ref": "results/run-report.json diffusivity_m2_s",
+            "reason": "空气层 a=2.361e-05 使稳定域 r=a*tau/h^2<=1/2 把时间步长压到远小于 1s；同一格式在系数被误取为 lambda 时反而稳定，稳定不能证明系数正确。"
+          },
+          {
+            "id": "adiabatic-skin",
+            "name": "皮肤侧绝热",
+            "status": "rejected",
+            "terms": [
+              "绝热"
+            ],
+            "anchor_ids": [
+              "plateau-below-ambient"
+            ],
+            "target_ids": [
+              "skin-boundary"
+            ],
+            "evidence_ids": [
+              "attachment"
+            ],
+            "evidence_ref": "inputs/attachment.xlsx 附件2 末段",
+            "reason": "绝热时全场最终趋于环境温度 75C，与附件2 的 48.08C 平台矛盾。"
+          }
+        ],
+        "declared_checks": [
+          {
+            "id": "steady-limit",
+            "kind": "derivation",
+            "terms": [
+              "解析稳态解"
+            ],
+            "result": "瞬态终点 47.934716682627 与解析稳态 47.934716682526 相差 1e-10",
+            "result_terms": [
+              "解析稳态解"
+            ],
+            "artifact": {
+              "path": "results/run-report.json",
+              "sha256": "2daab7b127123a519139b7f6acd2d05d3ef24a1411906fbc9b6001c7dee4b30d"
+            }
+          },
+          {
+            "id": "mesh-convergence",
+            "kind": "implementation",
+            "terms": [
+              "空间步长",
+              "时间步长"
+            ],
+            "result": "格数 10->80、步长 4s->1s，终点温度最大偏差 2.7e-09 C",
+            "result_terms": [
+              "空间步长"
+            ],
+            "artifact": {
+              "path": "results/run-report.json",
+              "sha256": "2daab7b127123a519139b7f6acd2d05d3ef24a1411906fbc9b6001c7dee4b30d"
+            }
+          },
+          {
+            "id": "residual-structure",
+            "kind": "residual",
+            "terms": [
+              "残差"
+            ],
+            "result": "全程 RMSE 0.4517C；末 30min 0.1453C；前 10min 1.2798C",
+            "result_terms": [
+              "残差"
+            ],
+            "artifact": {
+              "path": "results/run-report.json",
+              "sha256": "2daab7b127123a519139b7f6acd2d05d3ef24a1411906fbc9b6001c7dee4b30d"
+            }
+          },
+          {
+            "id": "diffusivity-units",
+            "kind": "unit",
+            "terms": [
+              "扩散系数"
+            ],
+            "result": "逐层 a=lambda/(rho*c) 与附件1 预置列逐位一致，含空气层 2.361e-05",
+            "result_terms": [
+              "扩散系数"
+            ],
+            "artifact": {
+              "path": "inputs/attachment.xlsx",
+              "sha256": "2026d561054055516d5fbcc3fa22f8add5d786eba2b16c4f76636ae08794c2b3"
+            }
+          }
+        ],
+        "result_interpretations": [
+          {
+            "id": "why-robin",
+            "kind": "mechanism",
+            "observation_terms": [
+              "平台"
+            ],
+            "explanation_terms": [
+              "散热"
+            ],
+            "source_ids": [
+              "attachment",
+              "run"
+            ],
+            "source_ref": "附件2 平台 48.08C 低于环境 75C，需要皮肤侧持续取走热量"
+          },
+          {
+            "id": "early-transient-gap",
+            "kind": "boundary",
+            "observation_terms": [
+              "残差"
+            ],
+            "explanation_terms": [
+              "边界条件"
+            ],
+            "source_ids": [
+              "run"
+            ],
+            "source_ref": "前 10min 残差 1.2798C 远大于末 30min 的 0.1453C，题面「表面瞬间达到环境温度」在升温初段过强"
+          }
+        ],
+        "drafting_mode": {
+          "mode": "relation_then_method",
+          "public_route_id": "fv-implicit-robin",
+          "keep_out_of_manuscript": "三对角求解与 solve_banded 的常规实现细节"
+        },
+        "human_preflight": {
+          "reviewer": "本机使用者（彩排整体放行）",
+          "reviewer_kind": "human",
+          "basis_confirmation": "附件2 的实测温度出现平台：末值 48.08C 明显低于环境温度 75C，说明皮肤侧一直在散热；附件1 的密度、比热、热传导率又使空气层扩散系数比其余三层大两个量级。",
+          "transition_confirmation": "把散热写成皮肤侧边界条件后未知量收敛到一个散热系数；空气层的扩散系数决定时间步长不能由显式稳定域控制，因此用有限体积离散、界面导度取调和平均保证热流连续，时间推进用后向 Euler，空间步长按分层网格分配。",
+          "change_trigger": "若附件2 换成另一环境温度下的实测曲线，或题面改写第Ⅰ层表面的升温假设，应重新标定散热系数并重审边界条件形式。",
+          "decision": "approve"
+        }
+      }
+    ]
+  },
+  "public_judgment_contract": {
+    "schema": "mcm-section-public-judgment-contract/v1",
+    "role": "solve",
+    "section_local": true,
+    "required": false,
+    "questions": [
+      {
+        "question_id": "1",
+        "drafting_mode": "relation_then_method",
+        "basis_nodes": [
+          {
+            "id": "layer-properties",
+            "kind": "data",
+            "terms": [
+              "密度",
+              "比热",
+              "热传导率"
+            ],
+            "source_ref": "附件1 第 I--IV 层 rho/c/lambda 与厚度",
+            "source_ids": [
+              "attachment"
+            ]
+          },
+          {
+            "id": "measured-plateau",
+            "kind": "data",
+            "terms": [
+              "实测温度",
+              "平台"
+            ],
+            "source_ref": "附件2 0..5400s 共 5401 点，t=0 为 37.00, 末值 48.08, 末 10min 波动 0.000",
+            "source_ids": [
+              "attachment"
+            ]
+          },
+          {
+            "id": "given-scenario",
+            "kind": "relation",
+            "terms": [
+              "环境温度",
+              "工作时间"
+            ],
+            "source_ref": "题面问题 (1)：75C、II 层 6mm、IV 层 5mm、90 分钟",
+            "source_ids": [
+              "problem"
+            ]
+          },
+          {
+            "id": "air-layer-diffusivity",
+            "kind": "boundary",
+            "terms": [
+              "扩散系数",
+              "空气层"
+            ],
+            "source_ref": "附件1 IV 层 rho=1.18 -> a=2.361e-05，比其余三层大两个量级",
+            "source_ids": [
+              "attachment",
+              "run"
+            ]
+          },
+          {
+            "id": "plateau-below-ambient",
+            "kind": "result",
+            "terms": [
+              "散热"
+            ],
+            "source_ref": "附件2 平台 48.08C 远低于环境 75C",
+            "source_ids": [
+              "attachment"
+            ]
+          }
+        ],
+        "mathematical_change_nodes": [
+          {
+            "id": "layered-pde",
+            "terms": [
+              "一维热传导",
+              "界面条件"
+            ],
+            "source_ref": "四层介质内的瞬态方程与界面温度、热流连续"
+          },
+          {
+            "id": "skin-boundary",
+            "terms": [
+              "边界条件",
+              "散热系数"
+            ],
+            "source_ref": "皮肤侧边界形式；唯一未知参数 h_skin"
+          },
+          {
+            "id": "time-stepping",
+            "terms": [
+              "时间步长",
+              "稳定性"
+            ],
+            "source_ref": "空气层扩散系数决定推进方式的可行性"
+          },
+          {
+            "id": "grid-allocation",
+            "terms": [
+              "空间步长",
+              "分层网格"
+            ],
+            "source_ref": "最薄层 0.6mm 与最厚层的格数分配"
+          }
+        ],
+        "selected_route": {
+          "id": "fv-implicit-robin",
+          "name": "有限体积 + 调和平均界面导度 + 后向 Euler，皮肤侧 Robin 双路线标定",
+          "terms": [
+            "有限体积",
+            "后向 Euler",
+            "调和平均"
+          ],
+          "anchor_ids": [
+            "layer-properties",
+            "measured-plateau",
+            "given-scenario",
+            "air-layer-diffusivity",
+            "plateau-below-ambient"
+          ],
+          "target_ids": [
+            "layered-pde",
+            "skin-boundary",
+            "time-stepping",
+            "grid-allocation"
+          ],
+          "evidence_ids": [
+            "solver",
+            "run"
+          ],
+          "evidence_ref": "solver/simulator.py Simulator.run 与 calibrate_skin_coefficient；results/run-report.json calibration"
+        },
+        "recorded_alternative_routes": [
+          {
+            "id": "forward-euler",
+            "name": "向前 Euler 显式格式",
+            "status": "rejected",
+            "terms": [
+              "向前 Euler"
+            ],
+            "anchor_ids": [
+              "air-layer-diffusivity"
+            ],
+            "target_ids": [
+              "time-stepping"
+            ],
+            "evidence_ids": [
+              "run"
+            ],
+            "evidence_ref": "results/run-report.json diffusivity_m2_s",
+            "reason": "空气层 a=2.361e-05 使稳定域 r=a*tau/h^2<=1/2 把时间步长压到远小于 1s；同一格式在系数被误取为 lambda 时反而稳定，稳定不能证明系数正确。"
+          },
+          {
+            "id": "adiabatic-skin",
+            "name": "皮肤侧绝热",
+            "status": "rejected",
+            "terms": [
+              "绝热"
+            ],
+            "anchor_ids": [
+              "plateau-below-ambient"
+            ],
+            "target_ids": [
+              "skin-boundary"
+            ],
+            "evidence_ids": [
+              "attachment"
+            ],
+            "evidence_ref": "inputs/attachment.xlsx 附件2 末段",
+            "reason": "绝热时全场最终趋于环境温度 75C，与附件2 的 48.08C 平台矛盾。"
+          }
+        ],
+        "result_interpretations": [
+          {
+            "id": "why-robin",
+            "kind": "mechanism",
+            "observation_terms": [
+              "平台"
+            ],
+            "explanation_terms": [
+              "散热"
+            ],
+            "source_ids": [
+              "attachment",
+              "run"
+            ],
+            "source_ref": "附件2 平台 48.08C 低于环境 75C，需要皮肤侧持续取走热量"
+          },
+          {
+            "id": "early-transient-gap",
+            "kind": "boundary",
+            "observation_terms": [
+              "残差"
+            ],
+            "explanation_terms": [
+              "边界条件"
+            ],
+            "source_ids": [
+              "run"
+            ],
+            "source_ref": "前 10min 残差 1.2798C 远大于末 30min 的 0.1453C，题面「表面瞬间达到环境温度」在升温初段过强"
+          }
+        ],
+        "actual_checks": [
+          {
+            "id": "steady-limit",
+            "kind": "derivation",
+            "terms": [
+              "解析稳态解"
+            ],
+            "result": "瞬态终点 47.934716682627 与解析稳态 47.934716682526 相差 1e-10",
+            "result_terms": [
+              "解析稳态解"
+            ],
+            "artifact": {
+              "path": "results/run-report.json",
+              "sha256": "2daab7b127123a519139b7f6acd2d05d3ef24a1411906fbc9b6001c7dee4b30d"
+            }
+          },
+          {
+            "id": "mesh-convergence",
+            "kind": "implementation",
+            "terms": [
+              "空间步长",
+              "时间步长"
+            ],
+            "result": "格数 10->80、步长 4s->1s，终点温度最大偏差 2.7e-09 C",
+            "result_terms": [
+              "空间步长"
+            ],
+            "artifact": {
+              "path": "results/run-report.json",
+              "sha256": "2daab7b127123a519139b7f6acd2d05d3ef24a1411906fbc9b6001c7dee4b30d"
+            }
+          },
+          {
+            "id": "residual-structure",
+            "kind": "residual",
+            "terms": [
+              "残差"
+            ],
+            "result": "全程 RMSE 0.4517C；末 30min 0.1453C；前 10min 1.2798C",
+            "result_terms": [
+              "残差"
+            ],
+            "artifact": {
+              "path": "results/run-report.json",
+              "sha256": "2daab7b127123a519139b7f6acd2d05d3ef24a1411906fbc9b6001c7dee4b30d"
+            }
+          },
+          {
+            "id": "diffusivity-units",
+            "kind": "unit",
+            "terms": [
+              "扩散系数"
+            ],
+            "result": "逐层 a=lambda/(rho*c) 与附件1 预置列逐位一致，含空气层 2.361e-05",
+            "result_terms": [
+              "扩散系数"
+            ],
+            "artifact": {
+              "path": "inputs/attachment.xlsx",
+              "sha256": "2026d561054055516d5fbcc3fa22f8add5d786eba2b16c4f76636ae08794c2b3"
+            }
+          }
+        ],
+        "human_confirmation": {
+          "reviewer": "本机使用者（彩排整体放行）",
+          "reviewer_kind": "human",
+          "basis_confirmation": "附件2 的实测温度出现平台：末值 48.08C 明显低于环境温度 75C，说明皮肤侧一直在散热；附件1 的密度、比热、热传导率又使空气层扩散系数比其余三层大两个量级。",
+          "transition_confirmation": "把散热写成皮肤侧边界条件后未知量收敛到一个散热系数；空气层的扩散系数决定时间步长不能由显式稳定域控制，因此用有限体积离散、界面导度取调和平均保证热流连续，时间推进用后向 Euler，空间步长按分层网格分配。",
+          "change_trigger": "若附件2 换成另一环境温度下的实测曲线，或题面改写第Ⅰ层表面的升温假设，应重新标定散热系数并重审边界条件形式。",
+          "decision": "approve"
+        },
+        "local_requirements": {
+          "basis_term_required": false,
+          "mathematical_change_term_required": false,
+          "selected_route_term_required": false,
+          "bridge_required_if_route_named": false,
+          "order_rule": "route-cannot-precede-both-basis-and-mathematical-change",
+          "minimum_basis_groups": 0,
+          "minimum_target_groups": 0,
+          "result_interpretation_required": false,
+          "validation_conclusion_required": false,
+          "model_comparison_guard": false
+        }
+      }
+    ],
+    "policy": {
+      "use_current_problem_terms_not_stock_model_praise": true,
+      "unrecorded_model_comparison_story_forbidden": true,
+      "recorded_alternative_must_be_named_when_comparison_is_claimed": true,
+      "hidden_chain_of_thought_not_requested": true,
+      "fixed_sentence_order_forbidden": true,
+      "verbatim_human_confirmation_not_required": true
+    },
+    "instruction": "Expose only the local, fact-backed relation needed by this section. Before a model name appears, the prose must already expose either the problem fact or a mathematical relation derived for this question; the other node may occur where the actual explanation needs it. If no alternative route is recorded, do not invent a comparison story. Preserve the actual evidence order without rendering these fields as a fixed prose sequence."
+  },
+  "human_style": {
+    "language_action_profile": {
+      "primary_anchor_id": "2023_A0175_P4573",
+      "primary_action_sequence": [
+        "statement",
+        "algorithm",
+        "choice",
+        "algorithm"
+      ],
+      "primary_opening_family": "动作",
+      "primary_closing_family": "结果",
+      "primary_ending_action": "algorithm",
+      "primary_han_chars": 204,
+      "primary_sentence_count": 4,
+      "primary_cadence_band": "multi-sentence:long",
+      "primary_selection": {
+        "policy": "relevance-bounded-low-reuse",
+        "score_tolerance": 2,
+        "best_score": 6,
+        "selected_score": 4,
+        "selected_original_rank": 2,
+        "eligible_anchor_ids": [
+          "2023_A0165_P4494",
+          "2023_A0175_P4573"
+        ],
+        "prior_anchor_use_count": 0,
+        "prior_sequence_use_count": 0,
+        "same_as_previous_primary": false,
+        "same_sequence_as_previous_primary": false,
+        "prior_opening_use_count": 0,
+        "prior_closing_use_count": 0,
+        "prior_ending_action_use_count": 1,
+        "prior_cadence_use_count": 4,
+        "prior_paper_use_count": 0,
+        "same_opening_as_previous_primary": false,
+        "same_closing_as_previous_primary": false,
+        "same_ending_action_as_previous_primary": false,
+        "same_cadence_as_previous_primary": true,
+        "same_paper_as_previous_primary": false,
+        "rule": "Choose only among already retrieved anchors within the score tolerance; reduce reuse when relevance permits, but never import a less relevant paragraph merely for variety."
+      },
+      "supporting_anchor_ids": [
+        "2023_A0165_P4494",
+        "2021_A028_P1914",
+        "2021_A115_P2058"
+      ],
+      "observed_action_sequences": [
+        [
+          "choice",
+          "statement",
+          "algorithm",
+          "statement"
+        ],
+        [
+          "statement",
+          "algorithm",
+          "choice",
+          "algorithm"
+        ],
+        [
+          "validation"
+        ],
+        [
+          "statement",
+          "result",
+          "definition"
+        ]
+      ],
+      "opening_families": {
+        "依据": 1,
+        "其他": 1,
+        "前问": 1,
+        "动作": 1
+      },
+      "closing_families": {
+        "其他": 3,
+        "结果": 1
+      },
+      "ending_actions": {
+        "algorithm": 1,
+        "definition": 1,
+        "statement": 1,
+        "validation": 1
+      },
+      "cadence_bands": {
+        "multi-sentence:long": 2,
+        "multi-sentence:medium": 1,
+        "two-sentence:medium": 1
+      },
+      "formula_interface_anchor_ids": [
+        "2023_A0165_P4494",
+        "2021_A028_P1914"
+      ],
+      "visual_interface_anchor_ids": [
+        "2023_A0165_P4494",
+        "2021_A028_P1914"
+      ],
+      "paragraph_character_counts": [
+        210,
+        204,
+        57,
+        99
+      ],
+      "sentence_counts": [
+        4,
+        4,
+        2,
+        3
+      ],
+      "supporting_variations": [
+        {
+          "id": "2023_A0165_P4494",
+          "different_on": [
+            "action_sequence",
+            "opening_family",
+            "closing_family",
+            "ending_action",
+            "paper",
+            "formula_nearby",
+            "visual_nearby"
+          ]
+        },
+        {
+          "id": "2021_A028_P1914",
+          "different_on": [
+            "action_sequence",
+            "opening_family",
+            "closing_family",
+            "ending_action",
+            "cadence_band",
+            "paper",
+            "formula_nearby",
+            "visual_nearby"
+          ]
+        },
+        {
+          "id": "2021_A115_P2058",
+          "different_on": [
+            "action_sequence",
+            "opening_family",
+            "closing_family",
+            "ending_action",
+            "cadence_band",
+            "paper"
+          ]
+        }
+      ],
+      "context_anchor_ids": [
+        "2023_A0165_P4494",
+        "2023_A0175_P4573",
+        "2021_A028_P1914",
+        "2021_A115_P2058"
+      ],
+      "use_rule": "Read every bound paragraph in the style plan. Use the primary anchor for the section's main rhetorical motion and the others only to check variation, interfaces, and stopping points. Select actions supported by current-problem evidence; do not blend every observed sequence."
+    },
+    "style_portfolio_summary": {
+      "selection": "relevance-bounded-style-portfolio",
+      "score_tolerance": 8,
+      "anchors": 4,
+      "best_score": 6,
+      "score_deltas": [
+        0,
+        2,
+        3,
+        3
+      ],
+      "outside_score_tolerance": 0,
+      "distinct_papers": 4,
+      "distinct_action_sequences": 4,
+      "distinct_opening_families": 4,
+      "distinct_closing_families": 2,
+      "distinct_ending_actions": 4,
+      "distinct_cadence_bands": 3,
+      "shapes": [
+        {
+          "id": "2023_A0165_P4494",
+          "action_sequence": [
+            "choice",
+            "statement",
+            "algorithm",
+            "statement"
+          ],
+          "opening_family": "前问",
+          "closing_family": "其他",
+          "ending_action": "statement",
+          "cadence_band": "multi-sentence:long",
+          "paper": "A0165",
+          "formula_nearby": true,
+          "visual_nearby": true
+        },
+        {
+          "id": "2023_A0175_P4573",
+          "action_sequence": [
+            "statement",
+            "algorithm",
+            "choice",
+            "algorithm"
+          ],
+          "opening_family": "动作",
+          "closing_family": "结果",
+          "ending_action": "algorithm",
+          "cadence_band": "multi-sentence:long",
+          "paper": "A0175",
+          "formula_nearby": false,
+          "visual_nearby": false
+        },
+        {
+          "id": "2021_A028_P1914",
+          "action_sequence": [
+            "validation"
+          ],
+          "opening_family": "依据",
+          "closing_family": "其他",
+          "ending_action": "validation",
+          "cadence_band": "two-sentence:medium",
+          "paper": "A028",
+          "formula_nearby": true,
+          "visual_nearby": true
+        },
+        {
+          "id": "2021_A115_P2058",
+          "action_sequence": [
+            "statement",
+            "result",
+            "definition"
+          ],
+          "opening_family": "其他",
+          "closing_family": "其他",
+          "ending_action": "definition",
+          "cadence_band": "multi-sentence:medium",
+          "paper": "A115",
+          "formula_nearby": false,
+          "visual_nearby": false
+        }
+      ]
+    },
+    "reading_order": [
+      "2023_A0175_P4573",
+      "2023_A0165_P4494",
+      "2021_A028_P1914",
+      "2021_A115_P2058"
+    ],
+    "passages": [
+      {
+        "reading_role": "primary",
+        "id": "2023_A0175_P4573",
+        "year": 2023,
+        "problem_type": "A",
+        "paper": "A0175",
+        "page_start": 17,
+        "page_end": 17,
+        "section": "solve",
+        "source": "2023/A0175.pdf#page=17",
+        "index_source": "F:\\CUMCM\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:4573",
+        "quality": "high",
+        "score": 4,
+        "actions": [
+          "algorithm",
+          "choice",
+          "continuation",
+          "result",
+          "statement"
+        ],
+        "action_sequence": [
+          "statement",
+          "algorithm",
+          "choice",
+          "algorithm"
+        ],
+        "opening_family": "动作",
+        "closing_family": "结果",
+        "ending_action": "algorithm",
+        "han_chars": 204,
+        "sentence_count": 4,
+        "cadence_band": "multi-sentence:long",
+        "style_portfolio_rank": 2,
+        "variation_from_primary": [],
+        "formula_nearby": false,
+        "visual_nearby": false,
+        "models": [
+          "蒙特卡洛"
+        ],
+        "previous_context": [
+          {
+            "source": "2023/A0175.pdf#page=16",
+            "section": "solve",
+            "text": "考虑Eed与第i块面板的光学效率和面积有关。而我们认为在时刻变化时,光学效率基本变化不大。因此,为了首先满足题中的额定功率60MW,在满足约束条件的情况下,首先需要给定宽度使得定日镜场内排列的定日镜面积尽量大,从而确定定日镜的尺寸、数目和位置。即在内径r=100m,外径R=350m的圆环中尽可能多的排列定日镜,以下我们采用蜂窝排列法,使得每个定日镜与其相邻的定日镜成为正去角形,如下布局。根据蜂窝排列法,按照约束条件,得到正六边形边长的限制范围为大于W+5≤K。一行行进行考虑,对于第一、二行:根据上式给出蜂窝排列法的正六边形顶点及中心点的坐标,将坐标与圆环范围判断:最后得到定日镜的位置坐标,类似于附件。"
+          }
+        ],
+        "text": "通过蜂窝排列法确定了圆环内能排列下符合要求的镜面全面积,蜂窝中正六边形的顶点和中心点安排定日镜。因此,确定了定日镜的数目、位置和数量后,接着寻优高度和吸收塔的位置坐标,此时计算量为N×N×h×w×350×350,计算量大,难以全局遍历寻优。因此,我们采用蒙特卡洛模拟的方法,对N块定日镜进行随机抽样,随机选取10%的定日镜进行光学效率、单位面积输出热功率等计算,计算10次,来预测决策变量的粗略值使得尸最大,以此来减少计算量。之后,再进一步减少步长,计算额定功率是否达到60MW即可,作为局部最优解。",
+        "next_context": [
+          {
+            "source": "2023/A0175.pdf#page=17",
+            "section": "solve",
+            "text": "不同的定日镜位置会影响太阳光的光学效率,因此通过蜂窝排列法得到的定日镜排列是一种初始排列方案。通过二维旋转,将定日镜的位置坐标统一进行旋转μ,坐标变换后的坐标与原坐标的关系如下,其中μe[0,元/6]:通过蜂窝排列法确定粗排列,且定日镜为正方形,之后通过旋转确定定日镜的位置。"
+          }
+        ]
+      },
+      {
+        "reading_role": "supporting",
+        "id": "2023_A0165_P4494",
+        "year": 2023,
+        "problem_type": "A",
+        "paper": "A0165",
+        "page_start": 21,
+        "page_end": 21,
+        "section": "solve",
+        "source": "2023/A0165.pdf#page=21",
+        "index_source": "F:\\CUMCM\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:4494",
+        "quality": "high",
+        "score": 6,
+        "actions": [
+          "algorithm",
+          "choice",
+          "continuation",
+          "result",
+          "statement"
+        ],
+        "action_sequence": [
+          "choice",
+          "statement",
+          "algorithm",
+          "statement"
+        ],
+        "opening_family": "前问",
+        "closing_family": "其他",
+        "ending_action": "statement",
+        "han_chars": 210,
+        "sentence_count": 4,
+        "cadence_band": "multi-sentence:long",
+        "style_portfolio_rank": 1,
+        "variation_from_primary": [
+          "action_sequence",
+          "opening_family",
+          "closing_family",
+          "ending_action",
+          "paper",
+          "formula_nearby",
+          "visual_nearby"
+        ],
+        "formula_nearby": true,
+        "visual_nearby": true,
+        "models": [
+          "蒙特卡洛"
+        ],
+        "previous_context": [
+          {
+            "source": "2023/A0165.pdf#page=20",
+            "section": "model",
+            "text": "为确定该模型的约束条件,首先设吸收塔的平面坐标为(ze,yc),第;块定日镜位置为(ziai大)。由于吸收塔周围100m以内不设置定日镜,故有:由于镜面宽度不小于镜面高度,故有:镜面边长在Im到8m之间,且定日镜的安装高度在2m至6mZI,HA:定日镜的安装高度必须保证镜面在绕水平转轴旋转时不会触及地面,故有:AQAA.FADEAREPZTEESSm以上,故有:此外定日镜均位于半径350m的范围内,故有:定日镜场的额定年平均输出热功率还需要达到60MW,故有:"
+          }
+        ],
+        "text": "在问题二的基础上,我们在本问题中可以自由的选择每一块定日镜的尺寸和高度。在问题二的两个单峰曲线已经证明并求出了使得目标范数,即定日镜场额定年平均得出热功率Py较大的定日镜宽度W和吸收塔向南的位移万,因此为简化对定日镜的调节,本问题不再改变夏和万,以及定日镜场的各个定日镜的位置分布,而是将重心放在定日镜安装高度上。利用蒙特卡洛方法,随机生成每一转定日镜的高度,并求得这组高度下的目标函数值,循环进行上述操作并更新较优和解。得到定日镜场中的定日镜排布图:",
+        "next_context": [
+          {
+            "source": "2023/A0165.pdf#page=22",
+            "section": "solve",
+            "text": "年平均年平均年平均阴影年平均年平均得出单位面积镜面平均输出光学效率余弦效率URC截断效率热功率(MW)。”热功率kWim2)"
+          }
+        ]
+      },
+      {
+        "reading_role": "supporting",
+        "id": "2021_A028_P1914",
+        "year": 2021,
+        "problem_type": "A",
+        "paper": "A028",
+        "page_start": 11,
+        "page_end": 11,
+        "section": "solve",
+        "source": "2021/A028.pdf#page=11",
+        "index_source": "F:\\CUMCM\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:1914",
+        "quality": "high",
+        "score": 3,
+        "actions": [
+          "limitation",
+          "validation"
+        ],
+        "action_sequence": [
+          "validation"
+        ],
+        "opening_family": "依据",
+        "closing_family": "其他",
+        "ending_action": "validation",
+        "han_chars": 57,
+        "sentence_count": 2,
+        "cadence_band": "two-sentence:medium",
+        "style_portfolio_rank": 3,
+        "variation_from_primary": [
+          "action_sequence",
+          "opening_family",
+          "closing_family",
+          "ending_action",
+          "cadence_band",
+          "paper",
+          "formula_nearby",
+          "visual_nearby"
+        ],
+        "formula_nearby": true,
+        "visual_nearby": true,
+        "models": [],
+        "previous_context": [
+          {
+            "source": "2021/A028.pdf#page=10",
+            "section": "solve",
+            "text": "设各统计点为X,,连接球心0与统计点,与理想抛物面交于X则均方根误差的计算"
+          }
+        ],
+        "text": "由于主索节点都在理想抛物面上,因此拟合误差来源于圆弧中点。通过微调主索节点位置,可能可以减小RMS,提高拟合优度,其大致示意图如下:",
+        "next_context": [
+          {
+            "source": "2021/A028.pdf#page=11",
+            "section": "solve",
+            "text": "据此设计调整方案如下对于每一个主索节点,其微调距离由自身和连接该主索节点圆弧的中点决定。"
+          }
+        ]
+      },
+      {
+        "reading_role": "supporting",
+        "id": "2021_A115_P2058",
+        "year": 2021,
+        "problem_type": "A",
+        "paper": "A115",
+        "page_start": 15,
+        "page_end": 15,
+        "section": "solve",
+        "source": "2021/A115.pdf#page=15",
+        "index_source": "F:\\CUMCM\\mcm-cup-standard-write\\references\\fulltext-style-index.jsonl:2058",
+        "quality": "high",
+        "score": 3,
+        "actions": [
+          "definition",
+          "problem_translation",
+          "result",
+          "statement"
+        ],
+        "action_sequence": [
+          "statement",
+          "result",
+          "definition"
+        ],
+        "opening_family": "其他",
+        "closing_family": "其他",
+        "ending_action": "definition",
+        "han_chars": 99,
+        "sentence_count": 3,
+        "cadence_band": "multi-sentence:medium",
+        "style_portfolio_rank": 4,
+        "variation_from_primary": [
+          "action_sequence",
+          "opening_family",
+          "closing_family",
+          "ending_action",
+          "cadence_band",
+          "paper"
+        ],
+        "formula_nearby": false,
+        "visual_nearby": false,
+        "models": [],
+        "previous_context": [
+          {
+            "source": "2021/A115.pdf#page=15",
+            "section": "solve",
+            "text": "基于模型I求解,第二问的模型求解建立在模型一结果之上,-其处理过程运用了问题一的优化算法。具体的算法步骤如下;"
+          }
+        ],
+        "text": "加载数据附件1和附件3。进行数据预处理,将附件1和附件3中主索节点编号进行转化,4、巨、C、刀、五分别转化为1、2、3、4、5,例如编号“40\"转化为10”。求出出主索节点距离理想抛物面项点的距离dl与此主索节点调节至理想抛物面后与坐标原点的径向距离4之间的关系记为ZZZ。",
+        "next_context": [
+          {
+            "source": "2021/A115.pdf#page=16",
+            "section": "result",
+            "text": "理想抛物面顶点z坐标变化量为dup=0.2913、归=0.316。设置理想抛物面顶点到焦点的距离了=0.466XR+dap+dF。通过程序计算得到理想扫物面顶点坐标为"
+          }
+        ]
+      }
+    ],
+    "selection_rule": "Choose one evidence-compatible rhetorical motion for this section. Use supporting passages to see real alternatives in opening, action order, cadence, interfaces, or stopping point; do not average their surfaces into a composite paragraph."
+  },
+  "drafting_contract": {
+    "facts_from_current_problem_only": true,
+    "read_primary_passage_and_context_before_writing": true,
+    "read_supporting_passages_for_variation_not_blending": true,
+    "choose_one_evidence_compatible_motion": true,
+    "copy_surface_mix_from_multiple_passages_forbidden": true,
+    "edit_against_current_draft_tex": true,
+    "preserve_tex_commands_math_labels_citations": true,
+    "preserve_actual_evidence_order": true,
+    "fixed_step_template_forbidden": true,
+    "invented_comparison_trial_or_failure_forbidden": true,
+    "copy_corpus_sentence_forbidden": true,
+    "import_corpus_fact_model_number_or_conclusion_forbidden": true,
+    "public_judgment_bridge_required_when_declared": true,
+    "unrecorded_model_comparison_story_forbidden": true,
+    "model_name_before_all_local_precursors_forbidden": true,
+    "hidden_chain_of_thought_not_requested": true,
+    "output_scope": "target-section-only",
+    "instruction": "Read this packet completely. Treat current_draft_tex as the exact structural authority and use current_problem as the only factual authority. Use the primary passage to observe one human rhetorical motion and the supporting passages to check alternatives and stopping points. Draft or revise only the target section in the actual TeX source. Do not translate packet field order into prose, and do not force basis, mathematical change, method, result, and check into one repeated order."
+  },
+  "inputs": {
+    "main_tex": {
+      "path": "F:\\CUMCM\\.cumcm-work\\paper-2018-cumcm-a\\main.tex",
+      "sha256": "2559a72a62cabdf98cf91a814353c684af47d5da09f86990891e96769d367bb0",
+      "bytes": 2817
+    },
+    "brief": {
+      "path": "F:\\CUMCM\\.cumcm-work\\paper-2018-cumcm-a\\section-authoring-brief.json",
+      "sha256": "b957dd9fbe5718489d1b816b628c6078169813fc8ccc200ca0227697b98c1ab3",
+      "bytes": 1414459
+    },
+    "style_plan": {
+      "path": "F:\\CUMCM\\.cumcm-work\\paper-2018-cumcm-a\\style-retrieval-plan.json",
+      "sha256": "c72f9e9dd898495d50ea42cbda503e13e4aa36af5678c94e15b34212505944ba",
+      "bytes": 373127
+    },
+    "workbench": {
+      "path": "F:\\CUMCM\\.cumcm-work\\paper-2018-cumcm-a\\modeling-workbench.json",
+      "sha256": "490f43c8c7378977702f175104397ae6d05641c53a8dc5552d2ef36367603531",
+      "bytes": 18491
+    },
+    "preflight": {
+      "path": "F:\\CUMCM\\.cumcm-work\\paper-2018-cumcm-a\\reasoning-preflight.json",
+      "sha256": "e4fa15937c32c88980b77dc46854a5aed1c848480f420833247168be182c3367",
+      "bytes": 4605
+    },
+    "builder": {
+      "path": "F:\\CUMCM\\mcm-cup-standard-write\\scripts\\prepare_section_drafting_packets.py",
+      "sha256": "44648707f47fbcc272670afc2cf51baaf56dbd14754ff89990bdb57e1fc063f8",
+      "bytes": 12350
+    }
+  }
+}
