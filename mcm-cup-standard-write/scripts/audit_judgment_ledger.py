@@ -373,14 +373,22 @@ def audit(tex_path: Path, ledger_path: Path, workbench_path: Path | None = None)
         _finding(findings, "LEDGER_METHOD_QUESTION_UNDECLARED", question_id=question_id)
     for question_id in sorted(declared_ids - set(scopes)):
         _finding(findings, "LEDGER_DECLARED_QUESTION_NOT_IN_MANUSCRIPT", question_id=question_id)
-    return _report(findings, len(scopes), validated_questions, inputs)
+    return _report(findings, len(scopes), validated_questions, inputs,
+                   workbench_linked=workbench_path is not None)
 
 
-def _report(findings: list[dict], manuscript_questions: int, ledger_questions: int, inputs: dict) -> dict:
+def _report(findings: list[dict], manuscript_questions: int, ledger_questions: int, inputs: dict,
+            workbench_linked: bool = False) -> dict:
     errors = sum(item["severity"] == "error" for item in findings)
     return {
         "schema": "mcm-public-judgment-ledger-audit/v1",
         "status": "pass" if errors == 0 else "fail",
+        "coverage": "full" if workbench_linked else "partial",
+        "skipped_checks": ([] if workbench_linked else [{
+            "check": "workbench-anchor-link",
+            "reason": "缺少 --workbench；未核对账本分问与工作台锚点的对应",
+            "consequence": "本次运行没有检查公开依据是否绑回冻结源，PASS 不代表依据可追溯",
+        }]),
         "errors": errors,
         "warnings": 0,
         "inputs": inputs,
@@ -406,7 +414,7 @@ def main() -> int:
         print(json.dumps(report, ensure_ascii=False, indent=2))
     else:
         print(
-            f"JUDGMENT LEDGER {report['status'].upper()} questions="
+            f"JUDGMENT LEDGER {report['status'].upper()} coverage={report['coverage']} questions="
             f"{report['ledger_questions']}/{report['manuscript_questions']} errors={report['errors']}"
         )
         for finding in report["findings"]:
@@ -415,6 +423,8 @@ def main() -> int:
                 if key not in {"severity", "code"}
             )
             print(f"[{finding['severity'].upper()}] {finding['code']}: {detail}")
+        for item in report["skipped_checks"]:
+            print(f"[SKIPPED] {item['check']}: {item['reason']}；{item['consequence']}")
     return 0 if report["status"] == "pass" else 1
 
 

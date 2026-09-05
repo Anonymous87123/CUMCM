@@ -132,6 +132,15 @@ python scripts/audit_content_density.py main.tex \
 - 附录不计入正文页数，完整代码和全量表格仍然存在；
 - 结构审计、结果同步、编译日志和 PDF 抽查全部通过。
 
+上述每一条都必须由带全部参数的审计器给出。`audit_content_density.py` 缺 `--aux` 时
+不读页码、缺 `--coverage` 时不核对逐问接口，两种情况下报告写 `coverage=partial`
+并逐条列出 `[SKIPPED]`；此时的 `errors=0` 只说明它检查过的那部分没问题，不能当作
+页数或覆盖达标。同理，只跑其中几道门不构成长稿验收：`run_longform_portfolio.py
+run-gates` 会按 `REQUIRED_RELEASE_GATES` 全集判定，缺任一门即 `GATES_FAILED`。
+先启用本模式、放好 `mcm-body-start` 与 `mcm-body-end`、建好覆盖清单，再谈页数；
+跳过这三步时 `audit_competition_length.py` 根本无法运行，而其余审计器仍会给出
+看起来正常的 `PASS`。
+
 59 篇语料全篇中位数为 45 页，附录跨度中位数为 16 页，正文约 29 页只是解释 25--30 页为何可实现，不是要求每篇复制相同章节比例。`audit_content_density.py` 读取 `fulltext-style-stats.json` 给出的章节四分位只作方向性软提示：它可以提醒背景偏长、求解偏薄等异常，但不能变成固定比例或自动扩写指令。具体统计仍以 [paper-structure.md](paper-structure.md) 和 [fulltext-language-analysis.md](fulltext-language-analysis.md) 为准。
 
 ## 7. 已完成长稿前向样例

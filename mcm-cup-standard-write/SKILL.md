@@ -340,6 +340,15 @@ python scripts/audit_content_density.py <main.tex> \
 
 TeX 可在正文起止处写 `\label{mcm-body-start}` 与 `\label{mcm-body-end}`，每问另设唯一且互不重叠的起止标签；若模板未提供这些可选标签，`audit_content_density.py` 会退回识别标准 `\begin{document}`/`\end{document}`，并在报告中记录边界来源，不把普通可编译稿误报为缺正文。页数不足时只按覆盖清单补真实接口；页数超限时优先把完整代码、全量表格、中间日志和重复定义移到附录。内容密度报告中的语料四分位只作软性提示，不能据此机械配比。不得用 `\newpage`、空白、字号/行距放大、背景、题面复述或算法百科凑页。
 
+单独运行审计器不构成验收，报告里的 `coverage` 字段决定这次结果能不能被引用。缺
+`--aux` 时没有读任何页码，缺 `--coverage` 时没有核对逐问接口，缺 `--terms` 或
+`--workbench` 时对应的术语与锚点检查同样没有发生；这些情况报告会给出
+`coverage=partial` 与逐条 `[SKIPPED]`，此时即便 `errors=0` 也不得写成“该门通过”。
+25--30 页模式的发布判断只以 `run_longform_portfolio.py run-gates` 的
+`REQUIRED_RELEASE_GATES` 全集为准，它会补齐全部参数并在缺任一门时把状态记为
+`GATES_FAILED`。以下三种叙述都属于流程错误：把 `coverage=partial` 的 `PASS` 当
+门通过；把 `pages=null` 当页数达标；把跑过的少数门当成整份长稿的验收结论。
+
 长文发布器还会自动记录 AIGC 路由器的 `voice-mode` 与 `style-rhythm` 两个只读审阅门。
 它们把研究正文、证据清单和操作附录分开判断，发现正文卡片链或重复节奏时只生成
 `review_only` 提醒，不把证据列表误判为 AI 腔，也不以文风信号替代事实、数学、复现和编译门。

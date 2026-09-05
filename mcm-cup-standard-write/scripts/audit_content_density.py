@@ -689,8 +689,29 @@ def audit(
         if not questions:
             findings.append({"severity": "warning", "code": "QUESTION_SECTIONS_UNLOCATED"})
     corpus_hints_list = corpus_hints(metrics, corpus_stats_path, problem_type)
+    skipped: list[dict[str, str]] = []
+    if aux_path is None or not aux_path.is_file():
+        skipped.append({
+            "check": "question-page-span",
+            "reason": "缺少 --aux；未读取编译页码，每问 pages 为 null",
+            "consequence": "本次运行没有检查任何页数，PASS 不代表页数达标",
+        })
+    if coverage_path is None or not coverage_path.is_file():
+        skipped.append({
+            "check": "question-coverage-checklist",
+            "reason": "缺少 --coverage；逐问八类接口未核对，分问区间由标题推断",
+            "consequence": "本次运行没有检查接口覆盖，PASS 不代表每问接口齐全",
+        })
+    if problem_type is None:
+        skipped.append({
+            "check": "corpus-soft-hints",
+            "reason": "缺少 --problem-type；未加载题型四分位",
+            "consequence": "本次运行没有给出篇幅分布提示",
+        })
     return {
         "status": "pass" if not any(item["severity"] == "error" for item in findings) else "fail",
+        "coverage": "full" if not skipped else "partial",
+        "skipped_checks": skipped,
         "file": str(main_tex.resolve()),
         "source": {
             "path": str(main_tex.resolve()),
@@ -735,7 +756,8 @@ def main() -> int:
     else:
         body = report["body"]
         print(
-            f"CONTENT DENSITY {report['status'].upper()} errors={report['errors']} warnings={report['warnings']} "
+            f"CONTENT DENSITY {report['status'].upper()} coverage={report['coverage']} "
+            f"errors={report['errors']} warnings={report['warnings']} "
             f"paragraphs={body['paragraphs']} han_chars={body['han_chars']} formulas={body['formulas']} "
             f"figures={body['figures']} table_floats={body['tables']} tabular_blocks={body['tabular_blocks']} "
             f"result_explanations={body['result_explanations']}"
@@ -759,6 +781,13 @@ def main() -> int:
             print(f"[{item['severity'].upper()}] {item['code']}: " + ", ".join(f"{k}={v}" for k, v in item.items() if k not in {"severity", "code"}))
         for hint in report["soft_hints"]:
             print(f"[SOFT] {hint}")
+        for item in report["skipped_checks"]:
+            print(f"[SKIPPED] {item['check']}: {item['reason']}；{item['consequence']}")
+        if report["skipped_checks"]:
+            print(
+                "[SKIPPED] 本次为 coverage=partial 运行，不能作为 25--30 页模式的验收依据；"
+                "发布判断以 run_longform_portfolio.py run-gates 的 REQUIRED_RELEASE_GATES 全集为准。"
+            )
     return 0 if report["status"] == "pass" else 1
 
 

@@ -406,6 +406,12 @@ def audit(
     warnings = sum(item["severity"] == "warning" for item in findings)
     return {
         "status": "pass" if errors == 0 else "fail",
+        "coverage": "full" if terms_path else "partial",
+        "skipped_checks": ([] if terms_path else [{
+            "check": "protected-term-inventory",
+            "reason": "缺少 --terms；未按词表核对受保护术语",
+            "consequence": "本次运行没有检查术语保留，PASS 不代表专有名词未被改动",
+        }]),
         "before": str(before_path.resolve()),
         "after": str(after_path.resolve()),
         "scene": scene.upper(),
@@ -431,12 +437,14 @@ def main() -> int:
     if args.format == "json":
         print(json.dumps(report, ensure_ascii=False, indent=2))
     else:
-        print(f"REWRITE CONTRACT {report['status'].upper()} errors={report['errors']}")
+        print(f"REWRITE CONTRACT {report['status'].upper()} coverage={report['coverage']} errors={report['errors']}")
         print(f"before={report['before']}")
         print(f"after={report['after']}")
         for item in report["findings"]:
             detail = ", ".join(f"{key}={value}" for key, value in item.items() if key not in {"severity", "code"})
             print(f"[{item['severity'].upper()}] {item['code']}: {detail}")
+        for item in report["skipped_checks"]:
+            print(f"[SKIPPED] {item['check']}: {item['reason']}；{item['consequence']}")
     return 0 if report["status"] == "pass" else 1
 
 
