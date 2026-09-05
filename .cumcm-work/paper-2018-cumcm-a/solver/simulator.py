@@ -131,6 +131,30 @@ class Simulator:
             skin[step + 1] = self._skin_face(temp[-1], h_skin)
         return np.arange(steps + 1) * dt_s, skin
 
+    def run_field(self, env_c: float, h_skin: float, duration_s: float, dt_s: float = 1.0,
+                  initial_c: float = BODY_CORE_C) -> np.ndarray:
+        """Same march as run(), but return the final cell-centred field for profile plots."""
+        from scipy.linalg import solve_banded
+        steps = int(round(duration_s / dt_s))
+        temp = np.full(self.n, float(initial_c))
+        skin_conductance = 1.0 / (self.skin_half + 1.0 / h_skin)
+        diag = np.zeros(self.n)
+        diag[:-1] += self.face
+        diag[1:] += self.face
+        diag[0] += self.outer_face
+        diag[-1] += skin_conductance
+        alpha = self.capacity / dt_s
+        matrix = np.zeros((3, self.n))
+        matrix[0, 1:] = -self.face
+        matrix[1] = diag + alpha
+        matrix[2, :-1] = -self.face
+        constant = np.zeros(self.n)
+        constant[0] = self.outer_face * env_c
+        constant[-1] = skin_conductance * BODY_CORE_C
+        for _ in range(steps):
+            temp = solve_banded((1, 1), matrix, alpha * temp + constant)
+        return temp
+
     def _skin_face(self, last_cell_c: float, h_skin: float) -> float:
         conductance = 1.0 / self.skin_half
         return (conductance * last_cell_c + h_skin * BODY_CORE_C) / (conductance + h_skin)
